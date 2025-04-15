@@ -1,0 +1,24 @@
+/target/
+
+# Eclipse
+*.launch
+.settings/
+.project
+.classpath
+
+#Java
+*.class
+*.jar
+*.war
+*.ear
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# IDE
+*.iml
+.idea/
