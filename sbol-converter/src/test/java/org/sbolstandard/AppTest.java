@@ -78,11 +78,16 @@ public class AppTest {
 	}
 
 	@Test
-	public void TestSuiteComponent() throws Exception {
-		testTestSuiteFile(new File("../SBOLTestSuite/sbol2/ComponentDefinitionOutput.xml"));		
+	public void TestSBOL2ComponentDefinition() throws Exception {
+		runTestSuiteFile(new File("../SBOLTestSuite/sbol2/ComponentDefinitionOutput.xml"));		
+	}
+	
+	@Test
+	public void TestSBOL2Model() throws Exception {
+		runTestSuiteFile(new File("../SBOLTestSuite/sbol2/ModelOutput.xml"));		
 	}
 		
-	public void testTestSuiteFile(File file) throws Exception {
+	public void runTestSuiteFile(File file) throws Exception {
 		Configuration.getInstance().setValidateBeforeSaving(false);
 
 		org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
