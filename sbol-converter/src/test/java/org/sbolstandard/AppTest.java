@@ -24,11 +24,10 @@ import org.sbolstandard.core3.vocabulary.Role;
  */
 public class AppTest {
 
-    /**
-     * Rigorous Test :-)
-     */
+ 
     @Test
-    public void ComponentCreation() throws Exception {
+    public void SBOL3ComponentConversion() throws Exception {
+    	//https://uriprefix.com/foo/B0034
     	URI base=URI.create("https://synbiohub.org/public/igem/");
     	org.sbolstandard.core3.entity.SBOLDocument doc=new org.sbolstandard.core3.entity.SBOLDocument(base);
     	//Create the RBS component
@@ -38,12 +37,18 @@ public class AppTest {
     	rbs.setRoles(Arrays.asList(Role.RBS));
     	String output=SBOLIO.write(doc, SBOLFormat.TURTLE);	
     	System.out.println(output);
+    	
+    	org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter converter = new org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter();
+    	SBOLDocument sbol2Doc = converter.convert(doc);
+    	ByteArrayOutputStream stream = new ByteArrayOutputStream();
+    	sbol2Doc.write(stream);
+    	String result = stream.toString("UTF-8");
+    	System.out.println(result);
         assertTrue(true);
     }
     
-	@Test
-    public void ComponentDefinitionConversion() throws Exception {
-    	
+	//@Test
+    public void SBOL2ComponentDefinitionConversion() throws Exception {
     	//URI base=URI.create("https://synbiohub.org/public/igem/");
     	SBOLDocument sbol2Doc=new SBOLDocument();
     	String prURI="https://synbiohub.org/public/igem/";		
@@ -68,4 +73,6 @@ public class AppTest {
         System.out.println(result);
         assertTrue(true);
     }
+	
+	
 }

@@ -16,7 +16,7 @@ public class ComponentConverter implements EntityConverter<Component, ComponentD
     @Override
     public ComponentDefinition convert(SBOLDocument doc, Component input) throws SBOLGraphException, SBOLValidationException {  
     	ComponentDefinition comp;
-		comp = doc.createComponentDefinition("https://uriprefix.com/foo/", input.getDisplayId(), "1",
+		comp = doc.createComponentDefinition(Util.extractURIPrefix(input.getUri().toString()), input.getDisplayId(), "1",
 				Util.toSet(input.getTypes()));
     	comp.setName(input.getName());
         comp.setDescription(input.getDescription());
