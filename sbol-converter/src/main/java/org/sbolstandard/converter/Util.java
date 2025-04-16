@@ -5,6 +5,7 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.TopLevel;
 import org.sbolstandard.core3.util.SBOLGraphException;
@@ -37,6 +38,7 @@ public class Util {
 	    String lastSegment = uri.substring(lastSlash + 1);
 	    if (!lastSegment.equals(displayId)) return "";
 	    lastSlash = collection.lastIndexOf('/');
+	    if (lastSlash == -1) return "";
 	    collection = collection.substring(0, lastSlash);
 	    if (isVersionValid(collection)) return "";
 	    if (!collection.equals("")) collection = "/" + collection;
@@ -51,6 +53,7 @@ public class Util {
 	    String lastSegment = uri.substring(lastSlash + 1);
 	    if (!lastSegment.equals(displayId)) return "";
 	    lastSlash = collection.lastIndexOf('/');
+	    if (lastSlash == -1) return "";
 	    collection = collection.substring(0, lastSlash);
 	    if (isVersionValid(collection)) return collection;
 	    return "";
@@ -129,6 +132,25 @@ public class Util {
 
 	public static URI getNamespace(org.sbolstandard.core2.Identified input) {
 		return URI.create(Util.extractURIPrefix(input.getIdentity().toString()));
+	}
+	
+	public static void copyIdentified(org.sbolstandard.core2.Identified input, Identified output) throws SBOLGraphException {
+		output.setName(input.getName());
+		output.setDescription(input.getDescription());
+		output.setWasDerivedFrom(toList(input.getWasDerivedFroms()));
+		// TODO: FIX ME
+		// output.setWasGeneratedBy(toList(input.getWasGeneratedBys()));
+	}
+
+	public static void copyIdentified(Identified input, org.sbolstandard.core2.Identified output) throws SBOLGraphException, SBOLValidationException {
+		output.setName(input.getName());
+		output.setDescription(input.getDescription());
+		// TODO: Fix, should NEVER be NULL
+		if (input.getWasDerivedFrom()!=null) {
+			output.setWasDerivedFroms(toSet(input.getWasDerivedFrom()));
+		}
+		// TODO: FIX ME
+		// output.setWasGeneratedBy(toSet(input.getWasGeneratedBys()));
 	}
 	
 	public static List<URI> convertRoles(Set<URI> roles) {

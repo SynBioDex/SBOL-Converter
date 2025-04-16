@@ -13,8 +13,7 @@ public class ComponentConverter implements EntityConverter<Component, ComponentD
     public ComponentDefinition convert(SBOLDocument doc, Component input) throws SBOLGraphException, SBOLValidationException {  
     	ComponentDefinition comp;
 		comp = doc.createComponentDefinition(Util.getURIPrefix(input),input.getDisplayId(),Util.getVersion(input),Util.toSet(input.getTypes()));
-    	comp.setName(input.getName());
-        comp.setDescription(input.getDescription());
+    	Util.copyIdentified(input, comp);
 //        comp.setRoles(Util.convertRoles(input.getRoles()));
         return comp;
     }
