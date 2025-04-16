@@ -2,14 +2,58 @@ package org.sbolstandard.converter;
 
 import java.net.URI;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.sbolstandard.core3.entity.Identified;
+import org.sbolstandard.core3.entity.TopLevel;
+import org.sbolstandard.core3.util.SBOLGraphException;
 
 public class Util {
+	private static final String versionPattern = "[0-9]+[\\p{L}0-9_\\.-]*"; 
+	
+	private static final Pattern versionPatternPat = Pattern.compile(versionPattern);
+	
 	public static <T> List<T> toList(Set<T> set) {
 		return new ArrayList<>(set);
 	}
 
 	public static <T> Set<T> toSet(List<T> list) {
 		return new HashSet<>(list);
+	}
+	
+	static boolean isVersionValid(String version) {
+		if (version.equals("")) return true;
+		Matcher m = versionPatternPat.matcher(version);
+		return m.matches();
+	}
+	
+	// TODO: what if the collection is a collection + version
+	public static String extractCollection(String uri, String namespace, String displayId) {
+		String collection;
+		collection = uri.replace(namespace+"/","");
+	    int lastSlash = uri.lastIndexOf('/');
+	    if (lastSlash == -1) return "";
+	    String lastSegment = uri.substring(lastSlash + 1);
+	    if (!lastSegment.equals(displayId)) return "";
+	    lastSlash = collection.lastIndexOf('/');
+	    collection = collection.substring(0, lastSlash);
+	    if (isVersionValid(collection)) return "";
+	    if (!collection.equals("")) collection = "/" + collection;
+	    return collection;
+	}
+	
+	public static String extractVersion(String uri, String namespace, String displayId) {
+		String collection;
+		collection = uri.replace(namespace+"/","");
+	    int lastSlash = uri.lastIndexOf('/');
+	    if (lastSlash == -1) return "";
+	    String lastSegment = uri.substring(lastSlash + 1);
+	    if (!lastSegment.equals(displayId)) return "";
+	    lastSlash = collection.lastIndexOf('/');
+	    collection = collection.substring(0, lastSlash);
+	    if (isVersionValid(collection)) return collection;
+	    return "";
 	}
 	
 	public static String extractURIPrefix(String uri)
@@ -32,10 +76,10 @@ public class Util {
 	    if (isNumber) {
 	        int secondLastSlash = uri.lastIndexOf('/', lastSlash - 1);
 	        if (secondLastSlash == -1) return uri;
-	        return uri.substring(0, secondLastSlash + 1);
+	        return uri.substring(0, secondLastSlash);
 	    } else {
 	        // Remove the display id
-	        return uri.substring(0, lastSlash + 1);
+	        return uri.substring(0, lastSlash);
 	    }
 	}
 	
@@ -59,7 +103,34 @@ public class Util {
 			return null;
 		}
 	}
+	
+	public static URI createSBOL3Uri(org.sbolstandard.core2.Identified input) {
+		String sbol3Uri = "";
+		
+		sbol3Uri = Util.extractURIPrefix(input.getIdentity().toString());
+		if (input.isSetVersion()) {
+			sbol3Uri += "/" + input.getVersion();
+		}
+		if (input.isSetDisplayId()) {
+			sbol3Uri += "/" + input.getDisplayId();
+		}
+			
+		return URI.create(sbol3Uri);
+	}
+	
+	public static String getURIPrefix(TopLevel input) throws SBOLGraphException {
+		return input.getNamespace().toString()
+				+Util.extractCollection(input.getUri().toString(), input.getNamespace().toString(), input.getDisplayId());
+	}
+	
+	public static String getVersion(TopLevel input) throws SBOLGraphException {
+		return extractVersion(input.getUri().toString(), input.getNamespace().toString(), input.getDisplayId());
+	}
 
+	public static URI getNamespace(org.sbolstandard.core2.Identified input) {
+		return URI.create(Util.extractURIPrefix(input.getIdentity().toString()));
+	}
+	
 	public static List<URI> convertRoles(Set<URI> roles) {
 		List<URI> convertedRoles = new ArrayList<URI>();
 		for (URI role : roles) {

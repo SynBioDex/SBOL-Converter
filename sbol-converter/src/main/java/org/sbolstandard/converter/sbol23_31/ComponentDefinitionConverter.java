@@ -1,9 +1,8 @@
 package org.sbolstandard.converter.sbol23_31;
 
 
-import java.util.Arrays;
+import java.net.URI;
 
-import org.sbolstandard.converter.sbol23_31.EntityConverter;
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core3.entity.Component;
@@ -14,7 +13,7 @@ public class ComponentDefinitionConverter implements EntityConverter<ComponentDe
 
     @Override
     public Component convert(SBOLDocument doc, ComponentDefinition input) throws SBOLGraphException {  
-        Component comp = doc.createComponent(input.getIdentity(), Util.getNameSpace(input.getIdentity()), Util.toList(input.getTypes()));
+        Component comp = doc.createComponent(Util.createSBOL3Uri(input),Util.getNamespace(input),Util.toList(input.getTypes()));
         comp.setName(input.getName());
         comp.setDescription(input.getDescription());
         comp.setRoles(Util.convertRoles(input.getRoles()));

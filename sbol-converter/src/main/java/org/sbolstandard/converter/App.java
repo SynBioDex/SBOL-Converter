@@ -6,7 +6,8 @@ import java.net.URI;
 import org.sbolstandard.converter.sbol23_31.SBOLDocumentConverter;
 import org.sbolstandard.core2.SBOLConversionException;
 import org.sbolstandard.core2.SBOLReader;
-import org.sbolstandard.core2.SBOLValidationException;	
+import org.sbolstandard.core2.SBOLValidationException;
+import org.sbolstandard.core2.SBOLWriter;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.io.SBOLFormat;
 import org.sbolstandard.core3.io.SBOLIO;
@@ -22,10 +23,16 @@ public class App {
         Configuration.getInstance().setValidateBeforeSaving(false);
         SBOLDocument doc3 = new SBOLDocument();
         doc3.setBaseURI(URI.create("http://dummy.org"));
-        org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read("/Users/myers/git/SBOLTestSuite/sbol2/toggle.xml");
+        org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read("/Users/myers/git/SBOLTestSuite/sbol2/sequence2.xml");
     	SBOLDocumentConverter converter = new SBOLDocumentConverter();
     	org.sbolstandard.core3.entity.SBOLDocument sbol3Doc = converter.convert(doc);
-        String result=SBOLIO.write(sbol3Doc, SBOLFormat.RDFXML);
-        System.out.println(result);
+    	
+    	org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter converter3_2 = new org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter();
+    	org.sbolstandard.core2.SBOLDocument sbol2Doc = converter3_2.convert(sbol3Doc);
+
+    	SBOLWriter.write(sbol2Doc, System.out);
+    	
+        //String result=SBOLIO.write(sbol3Doc, SBOLFormat.RDFXML);
+        //System.out.println(result);
     }
 }
