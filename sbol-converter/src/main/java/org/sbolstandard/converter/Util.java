@@ -73,7 +73,7 @@ public class Util {
 	    if (lastSlash == -1) return null;
 
 	    String lastSegment = uri.substring(lastSlash + 1);
-	    boolean isNumber = lastSegment.matches("\\d+");
+	    boolean isNumber = isVersionValid(lastSegment);
 
 	    // Remove the number and the display id
 	    if (isNumber) {
@@ -119,6 +119,20 @@ public class Util {
 		}
 			
 		return URI.create(sbol3Uri);
+	}
+	
+	public static URI createSBOL2Uri(TopLevel input) throws SBOLGraphException {
+		String sbol2Uri = "";
+		
+		String version = getVersion(input);
+		
+		sbol2Uri = getURIPrefix(input) + "/" + input.getDisplayId();
+		
+		if (!version.equals("")) {
+			sbol2Uri += "/" + version;
+		}
+			
+		return URI.create(sbol2Uri);
 	}
 	
 	public static String getURIPrefix(TopLevel input) throws SBOLGraphException {
