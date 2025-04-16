@@ -1,4 +1,4 @@
-package org.sbolstandard.converter;
+package org.sbolstandard.converter.sbol23_31;
 
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.util.SBOLGraphException;

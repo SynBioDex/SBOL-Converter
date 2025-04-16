@@ -8,6 +8,10 @@ public class Util {
 		return new ArrayList<>(set);
 	}
 
+	public static <T> Set<T> toSet(List<T> list) {
+		return new HashSet<>(list);
+	}
+	
 	public static URI getNameSpace(URI uri) {
 		try {
 			java.net.URL parsedUrl = new java.net.URL(uri.toString());
