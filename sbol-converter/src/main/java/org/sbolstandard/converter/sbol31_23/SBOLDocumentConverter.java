@@ -6,6 +6,8 @@ import org.sbolstandard.core3.entity.Sequence;
 import org.sbolstandard.core3.entity.Model;
 import org.sbolstandard.core3.util.SBOLGraphException;
 import org.sbolstandard.core3.entity.Component;
+import org.sbolstandard.core3.entity.Experiment;
+import org.sbolstandard.core3.entity.ExperimentalData;
 
 public class SBOLDocumentConverter {
 
@@ -32,6 +34,22 @@ public class SBOLDocumentConverter {
         		mConverter.convert(sbol2Doc, m);
         	}
         }
-        return sbol2Doc;
+        
+		if (sbol3Doc.getExperimentalData() != null) {
+			ExperimentalDataConverter edConverter = new ExperimentalDataConverter();
+			for (ExperimentalData ed : sbol3Doc.getExperimentalData()) {
+				edConverter.convert(sbol2Doc, ed);
+
+			}
+		}
+
+		if (sbol3Doc.getExperiments() != null) {
+			ExperimentConverter eConverter = new ExperimentConverter();
+			for (Experiment cd : sbol3Doc.getExperiments()) {
+				eConverter.convert(sbol2Doc, cd);
+			}
+		}
+		
+		return sbol2Doc;
 	}
 }
