@@ -12,6 +12,7 @@ import org.sbolstandard.core3.entity.Collection;
 import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Experiment;
 import org.sbolstandard.core3.entity.ExperimentalData;
+import org.sbolstandard.core3.entity.Implementation;
 
 public class SBOLDocumentConverter {
 
@@ -65,6 +66,13 @@ public class SBOLDocumentConverter {
 			AttachmentConverter attConverter = new AttachmentConverter();
 			for (Attachment col : sbol3Doc.getAttachments()) {
 				attConverter.convert(sbol2Doc, col);
+			}
+		}
+		
+		if (sbol3Doc.getImplementations() != null) {
+			ImplementationConverter implConverter = new ImplementationConverter();
+			for (Implementation impl : sbol3Doc.getImplementations()) {
+				implConverter.convert(sbol2Doc, impl);
 			}
 		}
 		

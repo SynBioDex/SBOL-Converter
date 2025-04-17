@@ -96,5 +96,10 @@ public class AppTest {
 	public void TestSBOL2Attachment() throws Exception {
 		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/sbol2/attachment.xml"));		
 	}
+	
+	@Test
+	public void TestSBOL2Implementation() throws Exception {
+		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/sbol2/implementation_example.xml"));		
+	}
 
 }
