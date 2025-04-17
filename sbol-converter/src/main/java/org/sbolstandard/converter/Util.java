@@ -264,6 +264,13 @@ public class Util {
 		output.setWasDerivedFrom(toList(input.getWasDerivedFroms()));
 		// TODO: FIX ME
 		// output.setWasGeneratedBy(toList(input.getWasGeneratedBys()));
+		for (org.sbolstandard.core2.Annotation annotation : input.getAnnotations()) {
+			// TODO: need to add other annotation types
+			if (annotation.isStringValue()) {
+				output.addAnnotion(URI.create(annotation.getQName().getNamespaceURI()+annotation.getQName().getLocalPart()), 
+						annotation.getStringValue());
+			}
+		}
 	}
 
 	public static void copyIdentified(Identified input, org.sbolstandard.core2.Identified output) throws SBOLGraphException, SBOLValidationException {
