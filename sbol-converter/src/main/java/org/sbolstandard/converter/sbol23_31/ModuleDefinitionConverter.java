@@ -17,7 +17,7 @@ public class ModuleDefinitionConverter implements EntityConverter<ModuleDefiniti
 
     @Override
     public Component convert(SBOLDocument doc, ModuleDefinition input) throws SBOLGraphException { 
-    	System.out.println("Component:"+Util.createSBOL3Uri(input));
+    	//System.out.println("Component:"+Util.createSBOL3Uri(input));
     	List<URI> types = new ArrayList<URI>();
     	types.add(URI.create("https://identifiers.org/SBO:0000241"));
     	Component comp = doc.createComponent(Util.createSBOL3Uri(input),Util.getNamespace(input),types);

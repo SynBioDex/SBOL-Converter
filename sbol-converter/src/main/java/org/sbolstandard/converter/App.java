@@ -24,7 +24,7 @@ public class App {
         Configuration.getInstance().setValidateBeforeSaving(false);
         SBOLDocument doc3 = new SBOLDocument();
         doc3.setBaseURI(URI.create("http://dummy.org"));
-        org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read("/Users/myers/git/SBOLTestSuite/sbol2/RepressionModel.xml");
+        org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read("../SBOLTestSuite/sbol2/RepressionModel.xml");
         
     	SBOLDocumentConverter converter = new SBOLDocumentConverter();
     	org.sbolstandard.core3.entity.SBOLDocument sbol3Doc = converter.convert(doc);
