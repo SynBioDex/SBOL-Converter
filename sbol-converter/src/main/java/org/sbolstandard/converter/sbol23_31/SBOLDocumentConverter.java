@@ -1,5 +1,8 @@
 package org.sbolstandard.converter.sbol23_31;
 
+import java.util.Set;
+
+import org.sbolstandard.core2.Collection;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.Experiment;
 import org.sbolstandard.core2.ExperimentalData;
@@ -37,6 +40,14 @@ public class SBOLDocumentConverter {
         for (Experiment cd : sbol2Doc.getExperiments()) {
             eConverter.convert(sbol3Doc, cd);            
         }
+        
+        CollectionConverter collectionConverter = new CollectionConverter();        
+        Set<Collection> collections= sbol2Doc.getCollections();
+        if (collections != null) {
+			for (Collection collection : collections) {
+				collectionConverter.convert(sbol3Doc, collection);
+			}
+		}
         return sbol3Doc;
 	}
 }

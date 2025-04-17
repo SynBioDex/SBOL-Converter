@@ -1,10 +1,13 @@
 package org.sbolstandard.converter.sbol31_23;
 
+import java.util.List;
+
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.Sequence;
 import org.sbolstandard.core3.entity.Model;
 import org.sbolstandard.core3.util.SBOLGraphException;
+import org.sbolstandard.core3.entity.Collection;
 import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Experiment;
 import org.sbolstandard.core3.entity.ExperimentalData;
@@ -49,6 +52,15 @@ public class SBOLDocumentConverter {
 				eConverter.convert(sbol2Doc, cd);
 			}
 		}
+
+		List<Collection>  collections=sbol3Doc.getCollections();
+		if (collections != null) {
+			CollectionConverter collectionConverter = new CollectionConverter();
+			for (Collection collection : collections) {
+				collectionConverter.convert(sbol2Doc, collection);
+			}
+		}
+
 		
 		return sbol2Doc;
 	}
