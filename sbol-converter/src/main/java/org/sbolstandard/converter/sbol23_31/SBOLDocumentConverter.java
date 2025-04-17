@@ -8,6 +8,7 @@ import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.Experiment;
 import org.sbolstandard.core2.ExperimentalData;
 import org.sbolstandard.core2.Model;
+import org.sbolstandard.core2.ModuleDefinition;
 import org.sbolstandard.core2.Sequence;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.util.SBOLGraphException;
@@ -31,7 +32,12 @@ public class SBOLDocumentConverter {
         for (Model mod : sbol2Doc.getModels()) {
         	mConverter.convert(sbol3Doc, mod);
         }
-        
+
+        ModuleDefinitionConverter mdConverter = new ModuleDefinitionConverter();
+        for (ModuleDefinition md : sbol2Doc.getModuleDefinitions()) {
+            mdConverter.convert(sbol3Doc, md);            
+        }
+                
         ExperimentalDataConverter edConverter = new ExperimentalDataConverter();
         for (ExperimentalData ed : sbol2Doc.getExperimentalData()) {
         	edConverter.convert(sbol3Doc, ed);            
