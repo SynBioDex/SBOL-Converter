@@ -45,14 +45,7 @@ public class SBOLDocumentConverter {
         for (Collection col : sbol2Doc.getCollections()) {
             colConverter.convert(sbol3Doc, col);            
         }
-        
-        CollectionConverter collectionConverter = new CollectionConverter();        
-        Set<Collection> collections= sbol2Doc.getCollections();
-        if (collections != null) {
-			for (Collection collection : collections) {
-				collectionConverter.convert(sbol3Doc, collection);
-			}
-		}
+  
         return sbol3Doc;
 	}
 }
