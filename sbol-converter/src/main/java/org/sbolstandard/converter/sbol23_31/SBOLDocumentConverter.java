@@ -7,6 +7,7 @@ import org.sbolstandard.core2.Collection;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.Experiment;
 import org.sbolstandard.core2.ExperimentalData;
+import org.sbolstandard.core2.Implementation;
 import org.sbolstandard.core2.Model;
 import org.sbolstandard.core2.ModuleDefinition;
 import org.sbolstandard.core2.Sequence;
@@ -56,6 +57,11 @@ public class SBOLDocumentConverter {
         AttachmentConverter attConverter = new AttachmentConverter();
         for (Attachment att : sbol2Doc.getAttachments()) {
         	attConverter.convert(sbol3Doc, att);            
+        }
+        
+        ImplementationConverter implConverter = new ImplementationConverter();
+        for (Implementation impl : sbol2Doc.getImplementations()) {
+        	implConverter.convert(sbol3Doc, impl);            
         }
   
         return sbol3Doc;
