@@ -7,6 +7,7 @@ import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.Sequence;
 import org.sbolstandard.core3.entity.Model;
 import org.sbolstandard.core3.util.SBOLGraphException;
+import org.sbolstandard.core3.entity.Attachment;
 import org.sbolstandard.core3.entity.Collection;
 import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Experiment;
@@ -57,6 +58,13 @@ public class SBOLDocumentConverter {
 			CollectionConverter colConverter = new CollectionConverter();
 			for (Collection col : sbol3Doc.getCollections()) {
 				colConverter.convert(sbol2Doc, col);
+			}
+		}
+		
+		if (sbol3Doc.getAttachments() != null) {
+			AttachmentConverter attConverter = new AttachmentConverter();
+			for (Attachment col : sbol3Doc.getAttachments()) {
+				attConverter.convert(sbol2Doc, col);
 			}
 		}
 		

@@ -2,6 +2,7 @@ package org.sbolstandard.converter.sbol23_31;
 
 import java.util.Set;
 
+import org.sbolstandard.core2.Attachment;
 import org.sbolstandard.core2.Collection;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.Experiment;
@@ -44,6 +45,11 @@ public class SBOLDocumentConverter {
         CollectionConverter colConverter = new CollectionConverter();
         for (Collection col : sbol2Doc.getCollections()) {
             colConverter.convert(sbol3Doc, col);            
+        }
+        
+        AttachmentConverter attConverter = new AttachmentConverter();
+        for (Attachment att : sbol2Doc.getAttachments()) {
+        	attConverter.convert(sbol3Doc, att);            
         }
   
         return sbol3Doc;
