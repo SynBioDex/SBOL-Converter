@@ -85,8 +85,11 @@ public class AppTest {
 	@Test
 	public void TestSBOL2Model() throws Exception {
 		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/sbol2/ModelOutput.xml"));		
-	}	
-
-	
+	}
+		
+	@Test
+	public void TestSBOL2Experiment() throws Exception {
+		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/sbol2/test_Experiment_ExperimentData.xml"));		
+	}
 
 }
