@@ -1,5 +1,7 @@
 package org.sbolstandard.converter.sbol31_23;
 
+import java.util.List;
+
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.Sequence;

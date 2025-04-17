@@ -79,36 +79,17 @@ public class AppTest {
 
 	@Test
 	public void TestSBOL2ComponentDefinition() throws Exception {
-		runTestSuiteFile(new File("../SBOLTestSuite/sbol2/ComponentDefinitionOutput.xml"));		
+		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/sbol2/ComponentDefinitionOutput.xml"));		
 	}
 	
 	@Test
 	public void TestSBOL2Model() throws Exception {
-		runTestSuiteFile(new File("../SBOLTestSuite/sbol2/ModelOutput.xml"));		
+		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/sbol2/ModelOutput.xml"));		
 	}
 		
-	public void runTestSuiteFile(File file) throws Exception {
-		Configuration.getInstance().setValidateBeforeSaving(false);
-
-		org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
-
-		SBOLDocumentConverter converter = new SBOLDocumentConverter();
-		org.sbolstandard.core3.entity.SBOLDocument sbol3Doc = converter.convert(doc);
-
-		org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter converter3_2 = new org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter();
-		org.sbolstandard.core2.SBOLDocument sbol2Doc = converter3_2.convert(sbol3Doc);
-
-		SBOLWriter.write(sbol2Doc, System.out);
-
-		SBOLValidate.compareDocuments("SBOL2in", doc, "SBOL2out", sbol2Doc);
-		int numOfErros=0;
-		for (String error : SBOLValidate.getErrors()) {
-			System.out.println(error);
-			numOfErros++;
-		}
-		assertTrue(numOfErros==0, "Errors in conversion from" + file.getName());
+	@Test
+	public void TestSBOL2Experiment() throws Exception {
+		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/sbol2/test_Experiment_ExperimentData.xml"));		
 	}
-	
-	
 
 }
