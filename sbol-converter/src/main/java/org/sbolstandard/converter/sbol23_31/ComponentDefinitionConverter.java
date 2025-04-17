@@ -16,11 +16,11 @@ public class ComponentDefinitionConverter implements EntityConverter<ComponentDe
 
     @Override
     public Component convert(SBOLDocument doc, ComponentDefinition input) throws SBOLGraphException { 
-    	System.out.println("Component:"+Util.createSBOL3Uri(input));
+    	//System.out.println("Component:"+Util.createSBOL3Uri(input));
     	// TODO: there are duplicates in the list
     	if (doc.getComponents()!=null) {
     		for (Component c : doc.getComponents()) {
-    			System.out.println("Check:"+c.getUri());
+    			//System.out.println("Check:"+c.getUri());
     			if (c.getUri().toString().equals(Util.createSBOL3Uri(input).toString())) {
     				return null;
     			}
@@ -38,8 +38,8 @@ public class ComponentDefinitionConverter implements EntityConverter<ComponentDe
         for (org.sbolstandard.core2.Component c : input.getComponents()) {
         	// TODO: need method to create subComponent with URI for instanceOf
         	//comp.createSubComponent(null, comp)
-        	System.out.println("Sub:"+Util.createSBOL3Uri(c).toString());
-        	System.out.println("Def:"+Util.createSBOL3Uri(c.getDefinition()).toString());
+        	//System.out.println("Sub:"+Util.createSBOL3Uri(c).toString());
+        	//System.out.println("Def:"+Util.createSBOL3Uri(c.getDefinition()).toString());
         	//comp.createSubComponent(Util.createSBOL3Uri(c), Util.createSBOL3Uri(c.getDefinition()));
         }
         for (SequenceConstraint sc : input.getSequenceConstraints()) {

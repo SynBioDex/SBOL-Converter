@@ -28,8 +28,11 @@ public class SBOLDocumentConverter {
         
         if (sbol3Doc.getComponents()!=null) {
         	ComponentConverter cConverter = new ComponentConverter();
+        	ModuleConverter mConverter = new ModuleConverter();
         	for (Component c : sbol3Doc.getComponents()) {
-        		cConverter.convert(sbol2Doc, c);            
+        		if (cConverter.convert(sbol2Doc, c)==null) {
+        			mConverter.convert(sbol2Doc, c);
+        		}
         	}
         }
         
