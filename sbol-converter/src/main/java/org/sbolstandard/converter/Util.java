@@ -28,9 +28,67 @@ public class Util {
 		Matcher m = versionPatternPat.matcher(version);
 		return m.matches();
 	}
+
+	public static String extractDisplayIdSBOL3Uri(String uri) {
+	    int lastSlash = uri.lastIndexOf('/');
+	    if (lastSlash == -1) return "";
+	    String displayId = uri.substring(lastSlash + 1);
+	    //if (isDisplayIdValid(version)) 
+	    return displayId;
+	    // return "";
+	}
+
+	public static String extractVersionSBOL3Uri(String uri) {
+	    int lastSlash = uri.lastIndexOf('/');
+	    if (lastSlash == -1) return "";
+	    String firstSegment = uri.substring(lastSlash);
+	    //String lastSegment = uri.substring(lastSlash + 1);
+	    int secondLastSlash = firstSegment.lastIndexOf('/');
+	    if (secondLastSlash == -1) return "";
+	    String version = uri.substring(secondLastSlash,lastSlash);
+	    if (isVersionValid(version)) return version;
+	    return "";
+	}
 	
+	// TODO: should configure whether you want minimal or maximal
+	public static String extractNameSpaceSBOL3Uri(String uri) {
+		String displayId = extractDisplayIdSBOL3Uri(uri);
+		String version = extractDisplayIdSBOL3Uri(uri);
+	    int lastSlash = uri.lastIndexOf('/');
+	    if (lastSlash == -1) return "";
+	    String namespace = uri.substring(0,lastSlash);
+	    if (version.equals("")) {
+		    lastSlash = namespace.lastIndexOf('/');
+		    if (lastSlash == -1) return "";
+	    	namespace = namespace.substring(0,lastSlash);
+	    }
+	    return namespace;
+	}
+		
+	// TODO: should configure whether you want minimal or maximal
+	public static URI extractNameSpaceSBOL3Uri(URI uri) {
+		try {
+			java.net.URL parsedUrl = new java.net.URL(uri.toString());
+			String protocol = parsedUrl.getProtocol();
+			String namespace = uri.toString().replaceFirst(protocol + "://", "");
+
+			int slashIndex = namespace.lastIndexOf('/');
+
+			if (slashIndex == -1) {
+				//TODO:
+				return uri;
+			}
+
+			return URI.create(protocol + "://" + namespace.substring(0, slashIndex));
+
+		} catch (Exception e) {
+			// TODO:
+			return null;
+		}
+	}
+		
 	// TODO: what if the collection is a collection + version
-	public static String extractCollection(String uri, String namespace, String displayId) {
+	public static String extractCollectionSBOL3Uri(String uri, String namespace, String displayId) {
 		String collection;
 		collection = uri.replace(namespace+"/","");
 	    int lastSlash = uri.lastIndexOf('/');
@@ -45,7 +103,7 @@ public class Util {
 	    return collection;
 	}
 	
-	public static String extractVersion(String uri, String namespace, String displayId) {
+	public static String extractVersionSBOL3Uri(String uri, String namespace, String displayId) {
 		String collection;
 		collection = uri.replace(namespace+"/","");
 	    int lastSlash = uri.lastIndexOf('/');
@@ -59,9 +117,50 @@ public class Util {
 	    return "";
 	}
 	
-	public static String extractURIPrefix(String uri)
-	{
+	public static String extractVersionSBOL2Uri(String uri) {
+		if (uri == null || uri.isEmpty()) {
+			return null;
+		}
+		else if (uri.endsWith("/")) {
+	        return null;
+	    }
+
+	    int lastSlash = uri.lastIndexOf('/');
+	    if (lastSlash == -1) return null;
+
+	    String lastSegment = uri.substring(lastSlash + 1);
+	    if (isVersionValid(lastSegment)) {
+	    	return lastSegment;
+	    } else {
+	    	return "";
+	    }
+	}
+	
+	public static String extractDisplayIdSBOL2Uri(String uri) {
+		if (uri == null || uri.isEmpty()) {
+			return null;
+		}
+		else if (uri.endsWith("/")) {
+	        return null;
+	    }
+
+	    int lastSlash = uri.lastIndexOf('/');
+	    if (lastSlash == -1) return null;
+
+	    String lastSegment = uri.substring(lastSlash + 1);
+	    boolean isNumber = isVersionValid(lastSegment);
+
+	    if (isNumber) {
+	        int secondLastSlash = uri.lastIndexOf('/', lastSlash - 1);
+	        if (secondLastSlash == -1) return uri;
+	        return uri.substring(secondLastSlash+1,lastSlash);
+	    } else {
+	        return uri.substring(lastSlash+1);
+	    }
 		
+	}
+	
+	public static String extractURIPrefixSBOL2Uri(String uri) {
 		if (uri == null || uri.isEmpty()) {
 			return null;
 		}
@@ -85,32 +184,27 @@ public class Util {
 	        return uri.substring(0, lastSlash);
 	    }
 	}
-	
-	public static URI getNameSpace(URI uri) {
-		try {
-			java.net.URL parsedUrl = new java.net.URL(uri.toString());
-			String protocol = parsedUrl.getProtocol();
-			String namespace = uri.toString().replaceFirst(protocol + "://", "");
 
-			int slashIndex = namespace.lastIndexOf('/');
-
-			if (slashIndex == -1) {
-				//TODO:
-				return uri;
-			}
-
-			return URI.create(protocol + "://" + namespace.substring(0, slashIndex));
-
-		} catch (Exception e) {
-			// TODO:
-			return null;
+	public static URI createSBOL3Uri(URI inputUri) {
+		String sbol3Uri = "";
+		
+		sbol3Uri = Util.extractURIPrefixSBOL2Uri(inputUri.toString());
+		String version = extractVersionSBOL2Uri(inputUri.toString());
+		String displayId = extractDisplayIdSBOL2Uri(inputUri.toString());
+		if (!version.equals("")) {
+			sbol3Uri += "/" + version;
 		}
+		if (!displayId.equals("")) {
+			sbol3Uri += "/" + displayId;
+		}
+			
+		return URI.create(sbol3Uri);
 	}
-	
+
 	public static URI createSBOL3Uri(org.sbolstandard.core2.Identified input) {
 		String sbol3Uri = "";
 		
-		sbol3Uri = Util.extractURIPrefix(input.getIdentity().toString());
+		sbol3Uri = Util.extractURIPrefixSBOL2Uri(input.getIdentity().toString());
 		if (input.isSetVersion()) {
 			sbol3Uri += "/" + input.getVersion();
 		}
@@ -120,6 +214,22 @@ public class Util {
 			
 		return URI.create(sbol3Uri);
 	}
+	
+	public static URI createSBOL2Uri(String inputUri) throws SBOLGraphException {
+		String sbol2Uri = "";
+		
+		String version = extractVersionSBOL3Uri(inputUri);
+		
+		sbol2Uri = extractNameSpaceSBOL3Uri(inputUri) + "/" //+ extractVersionCollectionSBOL3Uri(inputUri)
+			+ extractDisplayIdSBOL3Uri(inputUri);
+		
+		if (!version.equals("")) {
+			sbol2Uri += "/" + version;
+		}
+			
+		return URI.create(sbol2Uri);
+	}
+	
 	
 	public static URI createSBOL2Uri(TopLevel input) throws SBOLGraphException {
 		String sbol2Uri = "";
@@ -137,15 +247,15 @@ public class Util {
 	
 	public static String getURIPrefix(TopLevel input) throws SBOLGraphException {
 		return input.getNamespace().toString()
-				+Util.extractCollection(input.getUri().toString(), input.getNamespace().toString(), input.getDisplayId());
+				+Util.extractCollectionSBOL3Uri(input.getUri().toString(), input.getNamespace().toString(), input.getDisplayId());
 	}
 	
 	public static String getVersion(TopLevel input) throws SBOLGraphException {
-		return extractVersion(input.getUri().toString(), input.getNamespace().toString(), input.getDisplayId());
+		return extractVersionSBOL3Uri(input.getUri().toString(), input.getNamespace().toString(), input.getDisplayId());
 	}
 
 	public static URI getNamespace(org.sbolstandard.core2.Identified input) {
-		return URI.create(Util.extractURIPrefix(input.getIdentity().toString()));
+		return URI.create(Util.extractURIPrefixSBOL2Uri(input.getIdentity().toString()));
 	}
 	
 	public static void copyIdentified(org.sbolstandard.core2.Identified input, Identified output) throws SBOLGraphException {
