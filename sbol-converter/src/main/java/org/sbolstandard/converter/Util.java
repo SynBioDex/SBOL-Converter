@@ -191,12 +191,17 @@ public class Util {
 		sbol3Uri = Util.extractURIPrefixSBOL2Uri(inputUri.toString());
 		String version = extractVersionSBOL2Uri(inputUri.toString());
 		String displayId = extractDisplayIdSBOL2Uri(inputUri.toString());
-		if (!version.equals("")) {
+		if (version != null && !version.equals("")) {
 			sbol3Uri += "/" + version;
 		}
-		if (!displayId.equals("")) {
+		if (displayId != null && !displayId.equals("")) {
 			sbol3Uri += "/" + displayId;
 		}
+		
+		//In case of URI of type "dynamic_measurement.mdx"
+		//TODO: better check
+		if (sbol3Uri == null)
+			return URI.create(inputUri.toString());
 			
 		return URI.create(sbol3Uri);
 	}
@@ -226,7 +231,12 @@ public class Util {
 		if (!version.equals("")) {
 			sbol2Uri += "/" + version;
 		}
-			
+		
+		//In case of URI of type "dynamic_measurement.mdx"
+		//TODO: better check
+		if (sbol2Uri.equals("/"))
+			return URI.create(inputUri.toString());
+		
 		return URI.create(sbol2Uri);
 	}
 	
