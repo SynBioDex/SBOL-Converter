@@ -87,6 +87,11 @@ public class AppTest {
 		runTestSuiteFile(new File("../SBOLTestSuite/sbol2/ModelOutput.xml"));		
 	}
 		
+	@Test
+	public void TestSBOL2Experiment() throws Exception {
+		runTestSuiteFile(new File("../SBOLTestSuite/sbol2/test_Experiment_ExperimentData.xml"));		
+	}
+	
 	public void runTestSuiteFile(File file) throws Exception {
 		Configuration.getInstance().setValidateBeforeSaving(false);
 
