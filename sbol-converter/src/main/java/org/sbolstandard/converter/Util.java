@@ -41,11 +41,11 @@ public class Util {
 	public static String extractVersionSBOL3Uri(String uri) {
 	    int lastSlash = uri.lastIndexOf('/');
 	    if (lastSlash == -1) return "";
-	    String firstSegment = uri.substring(lastSlash);
+	    String firstSegment = uri.substring(0,lastSlash);
 	    //String lastSegment = uri.substring(lastSlash + 1);
 	    int secondLastSlash = firstSegment.lastIndexOf('/');
 	    if (secondLastSlash == -1) return "";
-	    String version = uri.substring(secondLastSlash,lastSlash);
+	    String version = uri.substring(secondLastSlash+1,lastSlash);
 	    if (isVersionValid(version)) return version;
 	    return "";
 	}
@@ -53,11 +53,11 @@ public class Util {
 	// TODO: should configure whether you want minimal or maximal
 	public static String extractNameSpaceSBOL3Uri(String uri) {
 		String displayId = extractDisplayIdSBOL3Uri(uri);
-		String version = extractDisplayIdSBOL3Uri(uri);
+		String version = extractVersionSBOL3Uri(uri);
 	    int lastSlash = uri.lastIndexOf('/');
 	    if (lastSlash == -1) return "";
 	    String namespace = uri.substring(0,lastSlash);
-	    if (version.equals("")) {
+	    if (!version.equals("")) {
 		    lastSlash = namespace.lastIndexOf('/');
 		    if (lastSlash == -1) return "";
 	    	namespace = namespace.substring(0,lastSlash);
@@ -215,13 +215,13 @@ public class Util {
 		return URI.create(sbol3Uri);
 	}
 	
-	public static URI createSBOL2Uri(String inputUri) throws SBOLGraphException {
+	public static URI createSBOL2Uri(URI inputUri) throws SBOLGraphException {
 		String sbol2Uri = "";
 		
-		String version = extractVersionSBOL3Uri(inputUri);
+		String version = extractVersionSBOL3Uri(inputUri.toString());
 		
-		sbol2Uri = extractNameSpaceSBOL3Uri(inputUri) + "/" //+ extractVersionCollectionSBOL3Uri(inputUri)
-			+ extractDisplayIdSBOL3Uri(inputUri);
+		sbol2Uri = extractNameSpaceSBOL3Uri(inputUri.toString()) + "/" //+ extractVersionCollectionSBOL3Uri(inputUri)
+			+ extractDisplayIdSBOL3Uri(inputUri.toString());
 		
 		if (!version.equals("")) {
 			sbol2Uri += "/" + version;

@@ -18,8 +18,8 @@ public class ExperimentConverter implements EntityConverter<org.sbolstandard.cor
 		Util.copyIdentified(input, exp);
 		List<URI> members = new ArrayList<URI>();
 		if (input.getExperimentalData() != null) {
-			for (ExperimentalData expData : input.getExperimentalData()) {
-				members.add(Util.createSBOL3Uri(expData));
+			for (URI expDataUri : input.getExperimentalDataURIs()) {
+				members.add(Util.createSBOL3Uri(expDataUri));
 			}
 		}
 		exp.setMembers(members);
