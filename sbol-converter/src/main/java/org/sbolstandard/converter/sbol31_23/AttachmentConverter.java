@@ -13,10 +13,12 @@ public class AttachmentConverter implements EntityConverter<Attachment, org.sbol
     	org.sbolstandard.core2.Attachment att = doc.createAttachment(Util.getURIPrefix(input), input.getDisplayId(), Util.getVersion(input), Util.createSBOL2Uri(input.getSource()));
 		Util.copyIdentified(input, att);
 		att.setHash(input.getHash());
-		if (input.getSize() != null && input.getSize().isPresent())
+		if (input.getSize() != null && input.getSize().isPresent()) {
 			att.setSize(input.getSize().getAsLong());
-		if (input.getFormat() != null)
+		}
+		if (input.getFormat() != null) {
 			att.setFormat(Util.createSBOL3Uri(input.getFormat()));
+		}
 		return att;
 	}
 }
