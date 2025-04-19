@@ -33,7 +33,6 @@ public class ComponentDefinitionConverter implements EntityConverter<ComponentDe
         
         // TODO: refactor later
         // TODO: need method to set the list of Sequence URIs
-
         //comp.setSequences(Util.toList(input.getSequenceURIs()));
         for (org.sbolstandard.core2.Component c : input.getComponents()) {
         	// TODO: need method to create subComponent with URI for instanceOf
