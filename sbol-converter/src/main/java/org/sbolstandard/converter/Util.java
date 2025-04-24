@@ -7,8 +7,11 @@ import java.util.regex.Pattern;
 
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core3.entity.Identified;
+import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.TopLevel;
 import org.sbolstandard.core3.util.SBOLGraphException;
+
+import org.sbolstandard.core3.entity.Component;
 
 public class Util {
 	private static final String versionPattern = "[0-9]+[\\p{L}0-9_\\.-]*"; 
@@ -286,7 +289,6 @@ public class Util {
 	public static void copyIdentified(Identified input, org.sbolstandard.core2.Identified output) throws SBOLGraphException, SBOLValidationException {
 		output.setName(input.getName());
 		output.setDescription(input.getDescription());
-		// TODO: Fix, should NEVER be NULL
 		if (input.getWasDerivedFrom()!=null) {
 			output.setWasDerivedFroms(toSet(input.getWasDerivedFrom()));
 		}
