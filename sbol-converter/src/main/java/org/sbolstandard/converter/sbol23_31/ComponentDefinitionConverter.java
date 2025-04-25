@@ -11,6 +11,8 @@ import org.sbolstandard.core2.SequenceConstraint;
 import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.SubComponent;
+import org.sbolstandard.core3.io.SBOLFormat;
+import org.sbolstandard.core3.io.SBOLIO;
 import org.sbolstandard.core3.util.SBOLGraphException;
 
 public class ComponentDefinitionConverter implements EntityConverter<ComponentDefinition, Component>  {
@@ -27,23 +29,22 @@ public class ComponentDefinitionConverter implements EntityConverter<ComponentDe
     			}
     		}
     	}
-    	
-    	Component comp = doc.createComponent(Util.createSBOL3Uri(input),Util.getNamespace(input),Util.toList(input.getTypes()));
+    	    	
+    	Component comp = doc.createComponent(Util.createSBOL3Uri(input),
+    			Util.getNamespace(input),
+    			Util.toSBOL3ComponentDefinitionTypes(Util.toList(input.getTypes())));
+    	    	
         Util.copyIdentified(input, comp);
-        comp.setRoles(Util.convertRoles(input.getRoles()));
+        comp.setRoles(Util.convertRoles2_to_3(input.getRoles()));
         
-        // TODO: refactor later
         // TODO: need method to set the list of Sequence URIs
         //comp.setSequences(Util.toList(input.getSequenceURIs()));
+        
+        ComponentConverter converter = new ComponentConverter();        
         for (org.sbolstandard.core2.Component c : input.getComponents()) {
-        	ComponentConverter converter = new ComponentConverter();
-            converter.convert(doc, comp, c);
-        	// TODO: need method to create subComponent with URI for instanceOf
-        	//comp.createSubComponent(null, comp)
-        	//System.out.println("Sub:"+Util.createSBOL3Uri(c).toString());
-        	//System.out.println("Def:"+Util.createSBOL3Uri(c.getDefinition()).toString());
-        	//comp.createSubComponent(Util.createSBOL3Uri(c), Util.createSBOL3Uri(c.getDefinition()));
+        	converter.convert(doc, comp, c);
         }
+        
         for (SequenceAnnotation sa : input.getSequenceAnnotations()) {
         	if (sa.isSetComponent()) {
         		// TODO: add location to subComponent
@@ -51,10 +52,10 @@ public class ComponentDefinitionConverter implements EntityConverter<ComponentDe
         		// TODO: create a SequenceFeature
         	}
         }
+        SequenceConstraintConverter seqconstConverter = new SequenceConstraintConverter();
         
         for (SequenceConstraint sc : input.getSequenceConstraints()) {
-        	SequenceConstraintConverter converter = new SequenceConstraintConverter();
-            converter.convert(doc, comp, sc);
+        	seqconstConverter.convert(doc, comp, sc);
         }
 
         return comp;

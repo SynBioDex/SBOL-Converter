@@ -5,12 +5,19 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.sbolstandard.core2.ComponentDefinition;
+import org.sbolstandard.core2.RestrictionType;
 import org.sbolstandard.core2.SBOLValidationException;
+
 import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.TopLevel;
 import org.sbolstandard.core3.util.SBOLGraphException;
-
+import org.sbolstandard.core3.vocabulary.ComponentType;
+import org.sbolstandard.core3.vocabulary.RestrictionType.ConstraintRestriction;
+import org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction;
+import org.sbolstandard.core3.vocabulary.RestrictionType.OrientationRestriction;
+import org.sbolstandard.core3.vocabulary.RestrictionType.SequentialRestriction;
 import org.sbolstandard.core3.entity.Component;
 
 public class Util {
@@ -296,7 +303,7 @@ public class Util {
 		// output.setWasGeneratedBy(toSet(input.getWasGeneratedBys()));
 	}
 	
-	public static List<URI> convertRoles(Set<URI> roles) {
+	public static List<URI> convertRoles2_to_3(Set<URI> roles) {
 		List<URI> convertedRoles = new ArrayList<URI>();
 		for (URI role : roles) {
 			String roleString = role.toString().replace("so/", "");
@@ -305,5 +312,135 @@ public class Util {
 		}
 		return convertedRoles;
 	}
-
+	
+	public static Set<URI> convertRoles3_to_2(List<URI> roles) {
+		Set<URI> convertedRoles = new HashSet<URI>();
+		for (URI role : roles) {
+			String roleString = role.toString().replace("SO:", "so/SO:");
+			roleString = roleString.replace("https", "http");
+			convertedRoles.add(URI.create(roleString));
+		}
+		return convertedRoles;
+	}
+	
+	public static ConstraintRestriction toSBOL3RestrictionType(URI sbol2RestrictionType) throws SBOLGraphException {
+		if (sbol2RestrictionType.equals(getSBOL2RestrictionURI(RestrictionType.DIFFERENT_FROM.toString()))){
+			return IdentityRestriction.differentFrom;
+		} 
+		else if (sbol2RestrictionType.equals(getSBOL2RestrictionURI(RestrictionType.OPPOSITE_ORIENTATION_AS.toString()))) {
+			return OrientationRestriction.oppositeOrientationAs;
+		} 
+		else if (sbol2RestrictionType.equals(getSBOL2RestrictionURI(RestrictionType.SAME_ORIENTATION_AS.toString()))) {
+			return OrientationRestriction.sameOrientationAs;
+		} 
+		else if (sbol2RestrictionType.equals(getSBOL2RestrictionURI(RestrictionType.PRECEDES.toString()))) {
+			return SequentialRestriction.precedes;
+		}		
+		else		
+		{
+			throw new SBOLGraphException("Unknown SBOL2 RestrictionType: " + sbol2RestrictionType);
+		}		
+	}
+	
+	private static URI getSBOL2RestrictionURI(String RestrictionType) {
+        return URI.create(org.sbolstandard.examples.Sbol2Terms.sbol2.getNamespaceURI() + RestrictionType);
+    }
+	
+	public static RestrictionType toSBOL2RestrictionType(URI sbol3RestrictionType) {
+		
+		if (sbol3RestrictionType.equals(IdentityRestriction.differentFrom.getUri())) {
+			return RestrictionType.DIFFERENT_FROM;
+		} 
+		else if (sbol3RestrictionType.equals(OrientationRestriction.oppositeOrientationAs.getUri())) {
+			return RestrictionType.OPPOSITE_ORIENTATION_AS;
+		} 
+		else if (sbol3RestrictionType.equals(OrientationRestriction.sameOrientationAs.getUri())) {
+			return RestrictionType.SAME_ORIENTATION_AS;
+		} 
+		else if (sbol3RestrictionType.equals(SequentialRestriction.precedes.getUri())) {
+			return RestrictionType.PRECEDES;
+		}		
+		return null;
+	}
+	
+	public static List<URI> toSBOL3ComponentDefinitionTypes(List<URI> sbol2Types) throws SBOLGraphException {
+		List<URI> sbol3Types = new ArrayList<URI>();
+		for (URI sbol2Type : sbol2Types) {
+			sbol3Types.add(toSBOL3ComponentType(sbol2Type));
+		}
+		return sbol3Types;
+	}
+		
+	
+	public static URI toSBOL3ComponentType(URI sbol2Type) throws SBOLGraphException {
+				
+		if (sbol2Type.equals(ComponentDefinition.DNA_REGION)){
+			return ComponentType.DNA.getUri();
+		}
+		else if (sbol2Type.equals(ComponentDefinition.DNA)){
+			return ComponentType.DNA.getUri();
+		}
+		else if (sbol2Type.equals(ComponentDefinition.DNA_MOLECULE)){
+			return ComponentType.DNA.getUri();
+		}
+		else if (sbol2Type.equals(ComponentDefinition.RNA_REGION)){
+			return ComponentType.RNA.getUri();
+		}
+		else if (sbol2Type.equals(ComponentDefinition.RNA)){
+			return ComponentType.RNA.getUri();
+		}
+		else if (sbol2Type.equals(ComponentDefinition.RNA_MOLECULE)){
+			return ComponentType.RNA.getUri();
+		}
+		else if (sbol2Type.equals(ComponentDefinition.PROTEIN)){
+			return ComponentType.Protein.getUri();
+		}
+		else if (sbol2Type.equals(ComponentDefinition.SMALL_MOLECULE)){
+			return ComponentType.SimpleChemical.getUri();
+		}
+		else if (sbol2Type.equals(ComponentDefinition.EFFECTOR)){
+			return ComponentType.SimpleChemical.getUri();
+		}
+		else if (sbol2Type.equals(ComponentDefinition.COMPLEX)){
+			return ComponentType.NoncovalentComplex.getUri();
+		}
+		else
+		{
+			throw new SBOLGraphException("Unknown SBOL2 ComponentDefinition type: " + sbol2Type);
+		}		
+	}
+	
+	public static List<URI> toSBOL2ComponentDefinitionTypes(List<URI> sbol3Types) throws SBOLGraphException {
+		List<URI> sbol2Types = new ArrayList<URI>();
+		for (URI type : sbol3Types) {
+			sbol2Types.add(toSBOL2ComponentDefinitionType(type));
+		}
+		return sbol2Types;
+	}
+	
+	public static URI toSBOL2ComponentDefinitionType(URI sbol3Type) throws SBOLGraphException {
+		
+		if (sbol3Type.equals(ComponentType.DNA.getUri())){
+			return ComponentDefinition.DNA_REGION;
+		}
+		else if (sbol3Type.equals(ComponentType.RNA.getUri())){
+			return ComponentDefinition.RNA_REGION;
+		}
+		else if (sbol3Type.equals(ComponentType.Protein.getUri())){
+			return ComponentDefinition.PROTEIN;
+		}
+		else if (sbol3Type.equals(ComponentType.SimpleChemical.getUri())){
+			return ComponentDefinition.SMALL_MOLECULE;
+		}
+		else if (sbol3Type.equals(ComponentType.NoncovalentComplex.getUri())){
+			return ComponentDefinition.COMPLEX;
+		}
+		else if (sbol3Type.equals(ComponentType.FunctionalEntity.getUri())){
+			return ComponentDefinition.COMPLEX;
+		}		
+		else
+		{
+			throw new SBOLGraphException("Unknown SBOL3 Component type: " + sbol3Type);
+		}
+	}
 }

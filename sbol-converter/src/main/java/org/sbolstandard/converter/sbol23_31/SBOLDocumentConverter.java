@@ -1,7 +1,10 @@
 package org.sbolstandard.converter.sbol23_31;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
+import org.apache.jena.sparql.function.library.leviathan.e;
 import org.sbolstandard.core2.Attachment;
 import org.sbolstandard.core2.Collection;
 import org.sbolstandard.core2.ComponentDefinition;
@@ -12,6 +15,8 @@ import org.sbolstandard.core2.Model;
 import org.sbolstandard.core2.ModuleDefinition;
 import org.sbolstandard.core2.Sequence;
 import org.sbolstandard.core3.entity.SBOLDocument;
+import org.sbolstandard.core3.io.SBOLFormat;
+import org.sbolstandard.core3.io.SBOLIO;
 import org.sbolstandard.core3.util.SBOLGraphException;
 
 public class SBOLDocumentConverter {
@@ -28,6 +33,18 @@ public class SBOLDocumentConverter {
         for (ComponentDefinition cd : sbol2Doc.getComponentDefinitions()) {
             cdConverter.convert(sbol3Doc, cd);            
         }
+        /*List<ComponentDefinition> comp=new ArrayList(sbol2Doc.getComponentDefinitions());
+        cdConverter.convert(sbol3Doc, comp.get(0));
+        cdConverter.convert(sbol3Doc, comp.get(1));
+        try {
+        	SBOLIO.write(sbol3Doc, System.out, SBOLFormat.TURTLE);
+        }
+        catch (Exception e){}
+        cdConverter.convert(sbol3Doc, comp.get(2));
+        */
+        
+        
+          
         
         ModelConverter mConverter = new ModelConverter();
         for (Model mod : sbol2Doc.getModels()) {

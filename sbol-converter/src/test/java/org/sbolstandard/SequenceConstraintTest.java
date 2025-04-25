@@ -32,14 +32,10 @@ public class SequenceConstraintTest {
 
 	
 	@Test
-	public void TestSBOL2Collection() throws Exception {
-		//runTestSuiteFile(new File("../SBOLTestSuite/sbol2/Collection.xml"));
-		TestUtil.runTestSuiteFile2_to_3(new File("../SBOLTestSuite/SBOL2/SequenceConstraintOutput.xml"));
+	public void TestSBOL2SequenceConstraint() throws Exception {
+		//TestUtil.runTestSuiteFile2_to_3(new File("../SBOLTestSuite/SBOL2/SequenceConstraintOutput.xml"));
+		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/SBOL2/SequenceConstraintOutput.xml"));
 		
 	}
-		
-	
-	
-	
 
 }

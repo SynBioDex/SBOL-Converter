@@ -24,12 +24,13 @@ public class SequenceConstraintConverter implements ChildEntityConverter<org.sbo
     	// SBOL2 parent componentdefinition converted to SBOL3 component
     	URI SBOL3SubjectUri=Util.createSBOL3Uri(input.getSubjectURI());
     	URI SBOL3ObjectUri=Util.createSBOL3Uri(input.getObjectURI());
-    	Feature subjectFeature=doc.getIdentified(SBOL3SubjectUri, Feature.class);
-    	Feature objectFeature=doc.getIdentified(SBOL3ObjectUri, Feature.class);
+    	Feature subjectFeature=doc.getIdentified(SBOL3SubjectUri, Feature.getSubClassTypes());
+    	Feature objectFeature=doc.getIdentified(SBOL3ObjectUri, Feature.getSubClassTypes());
         Component parentComponent = (Component) parent;
-    	Constraint constraint = parentComponent.createConstraint(input.getRestrictionURI(), subjectFeature, objectFeature);
-    	Util.copyIdentified(input, constraint);
-        return constraint;
+        URI sbol3RestrictionUri = Util.toSBOL3RestrictionType(input.getRestrictionURI()).getUri();        
+        Constraint constraint = parentComponent.createConstraint(Util.createSBOL3Uri(input.getIdentity()), sbol3RestrictionUri, subjectFeature, objectFeature);
+    	Util.copyIdentified(input, constraint);		
+    	return constraint;
     	
     
     }

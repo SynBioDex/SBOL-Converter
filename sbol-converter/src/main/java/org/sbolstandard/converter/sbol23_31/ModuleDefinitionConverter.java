@@ -22,7 +22,7 @@ public class ModuleDefinitionConverter implements EntityConverter<ModuleDefiniti
     	types.add(URI.create("https://identifiers.org/SBO:0000241"));
     	Component comp = doc.createComponent(Util.createSBOL3Uri(input),Util.getNamespace(input),types);
         Util.copyIdentified(input, comp);
-        comp.setRoles(Util.convertRoles(input.getRoles()));
+        comp.setRoles(Util.convertRoles2_to_3(input.getRoles()));
         return comp;
     }
 }

@@ -15,45 +15,39 @@ import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Feature;
 import org.sbolstandard.core3.entity.Identified;
 
-public class ComponentConverter implements ChildEntityConverter<org.sbolstandard.core2.Component,Feature>  {
+public class ComponentConverter implements ChildEntityConverter<org.sbolstandard.core2.Component, Feature> {
 
-    @Override
-    public Feature convert(SBOLDocument doc, Identified parent, org.sbolstandard.core2.Component input) throws SBOLGraphException {
+	@Override
+	public Feature convert(SBOLDocument doc, Identified parent, org.sbolstandard.core2.Component input) throws SBOLGraphException {
 		Component parentComponent = (Component) parent;
-    	Feature result=null;
-        if (input.getMapsTos()!=null && !input.getMapsTos().isEmpty()){
-			//TODO
-        	throw new SBOLGraphException("Component with mapsTo not supported yet");
-		} else {
-			
-			try {
-				System.out.println(SBOLIO.write(doc, SBOLFormat.TURTLE));
-			}catch (Exception e) {}
-			
-			URI sbol3URI = Util.createSBOL3Uri(input.getDefinitionURI());
-			SubComponent resultSC = parentComponent.createSubComponent(sbol3URI);
-			//TODO: Check for the Access Type
-			//TODO Add measures
+		Feature result = null;
+		if (input.getMapsTos() != null && !input.getMapsTos().isEmpty()) {
+			// TODO
+			throw new SBOLGraphException("Component with mapsTo not supported yet");
+		} 
+		else {	//Create an SBOL3 SubComponent		
+			URI sbol3URI = Util.createSBOL3Uri(input.getIdentity());
+			URI sbol3InstanceOfUri = Util.createSBOL3Uri(input.getDefinitionURI());
+			SubComponent resultSC = parentComponent.createSubComponent(sbol3URI, sbol3InstanceOfUri);
+			// TODO: Check for the Access Type
+			// TODO Add measures
 			resultSC.setRoles(Util.toList(input.getRoles()));
-			
-			RoleIntegrationType ri= input.getRoleIntegration();
-			if (ri!=null){
-				RoleIntegration risbol3= RoleIntegration.mergeRoles;
-				
+
+			RoleIntegrationType ri = input.getRoleIntegration();
+			if (ri != null) {
+				RoleIntegration risbol3 = RoleIntegration.mergeRoles;
+
 				if (ri.equals(RoleIntegrationType.MERGEROLES)) {
-					risbol3= RoleIntegration.mergeRoles;
+					risbol3 = RoleIntegration.mergeRoles;
 				} else if (ri.equals(RoleIntegrationType.OVERRIDEROLES)) {
-					risbol3= RoleIntegration.overrideRoles;
-				}	
+					risbol3 = RoleIntegration.overrideRoles;
+				}
 				resultSC.setRoleIntegration(risbol3);
-			
 			}
 			result = resultSC;
-			
 		}
+		Util.copyIdentified(input, result);
+		return result;
 
-        Util.copyIdentified(input, result);
-        return result;
-    	
-    }
+	}
 }
