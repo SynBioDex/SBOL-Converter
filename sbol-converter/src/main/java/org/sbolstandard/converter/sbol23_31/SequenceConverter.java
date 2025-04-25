@@ -11,7 +11,11 @@ public class SequenceConverter implements EntityConverter<org.sbolstandard.core2
     public Sequence convert(SBOLDocument doc, org.sbolstandard.core2.Sequence input) throws SBOLGraphException {  
         Sequence seq = doc.createSequence(Util.createSBOL3Uri(input),Util.getNamespace(input));
         Util.copyIdentified(input, seq);
-        seq.setElements(input.getElements());
+        String elements=" ";
+		if (input.getElements() != null && !input.getElements().isEmpty()) {
+			elements = input.getElements();
+		} 
+        seq.setElements(elements);
         seq.setEncoding(input.getEncoding());
         return seq;
     }
