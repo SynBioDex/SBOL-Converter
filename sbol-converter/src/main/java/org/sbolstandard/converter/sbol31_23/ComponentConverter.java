@@ -4,12 +4,15 @@ import java.net.URI;
 import java.util.List;
 
 import org.sbolstandard.converter.Util;
+import org.sbolstandard.converter.sbol23_31.SequenceAnnotationToFeatureConverter;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Constraint;
+import org.sbolstandard.core3.entity.SequenceFeature;
 import org.sbolstandard.core3.entity.SubComponent;
 import org.sbolstandard.core2.SBOLDocument;
 import org.sbolstandard.core2.SBOLValidationException;
+import org.sbolstandard.core2.SequenceAnnotation;
 import org.sbolstandard.core3.util.SBOLGraphException;
 
 public class ComponentConverter implements EntityConverter<Component, ComponentDefinition>  {
@@ -48,6 +51,12 @@ public class ComponentConverter implements EntityConverter<Component, ComponentD
 				converter.convert(sbol2Doc, compDef, constraint);
 			}
     	}
+    	
+    	for (SequenceFeature sf : component.getSequenceFeatures()) {
+        	
+    		SequenceFeatureToAnnotationConverter sfConverter = new SequenceFeatureToAnnotationConverter ();
+    		sfConverter.convert(sbol2Doc, compDef, sf);
+        }
     	
     	
         return compDef;

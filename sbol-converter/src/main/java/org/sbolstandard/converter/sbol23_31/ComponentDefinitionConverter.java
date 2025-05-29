@@ -49,9 +49,13 @@ public class ComponentDefinitionConverter implements EntityConverter<ComponentDe
         	if (sa.isSetComponent()) {
         		// TODO: add location to subComponent
         	} else {
-        		// TODO: create a SequenceFeature
+    			// If the SequenceAnnotation is not a subComponent, convert it to a Feature
+        		SequenceAnnotationToFeatureConverter saConverter = new SequenceAnnotationToFeatureConverter();
+        		saConverter.convert(doc, comp, sa);
+        
         	}
         }
+        
         SequenceConstraintConverter seqconstConverter = new SequenceConstraintConverter();
         
         for (SequenceConstraint sc : input.getSequenceConstraints()) {
