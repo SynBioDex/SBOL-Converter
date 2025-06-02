@@ -58,6 +58,12 @@ public class ComponentConverter implements EntityConverter<Component, ComponentD
     		sfConverter.convert(sbol2Doc, compDef, sf);
         }
     	
+    	// TODO: LOOK BELOW AND CHANGE
+    	for (SubComponent sc : component.getSubComponents()) {
+			// If the SubComponent is a SequenceAnnotation, convert it to a SequenceAnnotation
+    		System.out.println("THIS IS NOT IMPLEMENTED YET");
+    	}
+    	
     	
         return compDef;
     }
