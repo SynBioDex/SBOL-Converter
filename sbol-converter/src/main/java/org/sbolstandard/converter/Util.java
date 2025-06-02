@@ -478,17 +478,17 @@ public class Util {
 	}
 	
 	//TO DO: 
-	//	public static URI getSBOL3SequenceType(Component sbol3Component) throws SBOLGraphException {
-	//		if (sbol3Component.getTypes().contains(ComponentType.DNA)) {
-	//			return IUPAC_DNA .;
-	//		} else if (sbol3Component.getTypes().contains(ComponentType.RNA)) {
-	//			return org.sbolstandard.core3.vocabulary.Sequence.IUPAC_RNA;
-	//		} else if (sbol3Component.getTypes().contains(ComponentType.Protein)) {
-	//			return org.sbolstandard.core3.vocabulary.Sequence.IUPAC_PROTEIN;
-	//		} else if (sbol3Component.getTypes().contains(ComponentType.SimpleChemical)) {
-	//			return org.sbolstandard.core3.vocabulary.Sequence.SMILES;
-	//		} else {
-	//			throw new SBOLGraphException("Unknown SBOL3 Sequence type for Component: " + sbol3Component.getUri());
-	//		}
-	//	}
+//		public static URI getSBOL3SequenceType(Component sbol3Component) throws SBOLGraphException {
+//			if (sbol3Component.getTypes().contains(ComponentType.DNA)) {
+//				return org.sbolstandard.core3.vocabulary.Encoding.NucleicAcid.getUri();
+//			} else if (sbol3Component.getTypes().contains(ComponentType.RNA)) {
+//				return org.sbolstandard.core3.vocabulary.Encoding.;
+//			} else if (sbol3Component.getTypes().contains(ComponentType.Protein)) {
+//				return org.sbolstandard.core3.vocabulary.Sequence.IUPAC_PROTEIN;
+//			} else if (sbol3Component.getTypes().contains(ComponentType.SimpleChemical)) {
+//				return org.sbolstandard.core3.vocabulary.Sequence.SMILES;
+//			} else {
+//				throw new SBOLGraphException("Unknown SBOL3 Sequence type for Component: " + sbol3Component.getUri());
+//			}
+//		}
 }
