@@ -13,7 +13,7 @@ import org.sbolstandard.core3.entity.Identified;
 public class SequenceConstraintConverter implements ChildEntityConverter<org.sbolstandard.core2.SequenceConstraint,Constraint>  {
 
     @Override
-    public Constraint convert(SBOLDocument doc, Identified parent, org.sbolstandard.core2.SequenceConstraint input) throws SBOLGraphException {
+    public Constraint convert(SBOLDocument doc, Identified parent, org.sbolstandard.core2.Identified inputParent, org.sbolstandard.core2.SequenceConstraint input) throws SBOLGraphException {
 		// SBOL 2 SequenceConstraint maps to SBOL3 Constraint
 
     	// Trying to reach parent  component since there is no way to create a SequenceConstraint in SBOL2

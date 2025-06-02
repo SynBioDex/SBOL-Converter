@@ -443,4 +443,52 @@ public class Util {
 			throw new SBOLGraphException("Unknown SBOL3 Component type: " + sbol3Type);
 		}
 	}
+	
+	public static org.sbolstandard.core3.vocabulary.Orientation toSBOL3Orientation(org.sbolstandard.core2.OrientationType sbol2Orientation) throws SBOLGraphException{
+		if (sbol2Orientation == org.sbolstandard.core2.OrientationType.INLINE) {
+			return org.sbolstandard.core3.vocabulary.Orientation.inline;
+		} else if (sbol2Orientation == org.sbolstandard.core2.OrientationType.REVERSECOMPLEMENT) {
+			return org.sbolstandard.core3.vocabulary.Orientation.reverseComplement;
+		} else {
+			throw new SBOLGraphException("Unknown SBOL3 Component type: " + sbol2Orientation);
+		}
+	}
+	
+	public static org.sbolstandard.core2.OrientationType toSBOL2OrientationType(org.sbolstandard.core3.vocabulary.Orientation sbol3Orientation) throws SBOLGraphException{
+		if (sbol3Orientation == org.sbolstandard.core3.vocabulary.Orientation.inline) {
+			return org.sbolstandard.core2.OrientationType.INLINE;
+		} else if (sbol3Orientation == org.sbolstandard.core3.vocabulary.Orientation.reverseComplement) {
+			return org.sbolstandard.core2.OrientationType.REVERSECOMPLEMENT;
+		} else {
+			throw new SBOLGraphException("Unknown SBOL2 OrientationType: " + sbol3Orientation);
+		}
+	}
+	public static URI getSBOL2SequenceType(ComponentDefinition sbol2CompDef) throws SBOLGraphException {
+		if (sbol2CompDef.getTypes().contains(ComponentDefinition.DNA_REGION)) {
+			return org.sbolstandard.core2.Sequence.IUPAC_DNA;
+		} else if (sbol2CompDef.getTypes().contains(ComponentDefinition.RNA_REGION)) {
+			return org.sbolstandard.core2.Sequence.IUPAC_RNA;
+		} else if (sbol2CompDef.getTypes().contains(ComponentDefinition.PROTEIN)) {
+			return org.sbolstandard.core2.Sequence.IUPAC_PROTEIN;
+		} else if (sbol2CompDef.getTypes().contains(ComponentDefinition.SMALL_MOLECULE)) {
+			return org.sbolstandard.core2.Sequence.SMILES;
+		} else {
+			throw new SBOLGraphException("Unknown SBOL2 Sequence type for ComponentDefinition: " + sbol2CompDef.getIdentity());
+		}
+	}
+	
+	//TO DO: 
+//		public static URI getSBOL3SequenceType(Component sbol3Component) throws SBOLGraphException {
+//			if (sbol3Component.getTypes().contains(ComponentType.DNA)) {
+//				return org.sbolstandard.core3.vocabulary.Encoding.NucleicAcid.getUri();
+//			} else if (sbol3Component.getTypes().contains(ComponentType.RNA)) {
+//				return org.sbolstandard.core3.vocabulary.Encoding.;
+//			} else if (sbol3Component.getTypes().contains(ComponentType.Protein)) {
+//				return org.sbolstandard.core3.vocabulary.Sequence.IUPAC_PROTEIN;
+//			} else if (sbol3Component.getTypes().contains(ComponentType.SimpleChemical)) {
+//				return org.sbolstandard.core3.vocabulary.Sequence.SMILES;
+//			} else {
+//				throw new SBOLGraphException("Unknown SBOL3 Sequence type for Component: " + sbol3Component.getUri());
+//			}
+//		}
 }
