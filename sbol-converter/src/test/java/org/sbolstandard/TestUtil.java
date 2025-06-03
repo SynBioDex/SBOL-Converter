@@ -19,7 +19,7 @@ import org.sbolstandard.core3.validation.IdentifiedValidator;
 public class TestUtil {
 
 	public static void runTestSuiteFile(File file) throws Exception {
-		Configuration.getInstance().setValidateBeforeSaving(false);
+		//Configuration.getInstance().setValidateBeforeSaving(false);
 
 		org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
 
