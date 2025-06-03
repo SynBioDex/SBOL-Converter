@@ -6,6 +6,7 @@ import java.net.URI;
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.Model;
+import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core2.SequenceAnnotation;
 import org.sbolstandard.core2.SequenceConstraint;
 import org.sbolstandard.core3.entity.Component;
@@ -18,7 +19,7 @@ import org.sbolstandard.core3.util.SBOLGraphException;
 public class ComponentDefinitionConverter implements EntityConverter<ComponentDefinition, Component>  {
 
     @Override
-    public Component convert(SBOLDocument doc, ComponentDefinition input) throws SBOLGraphException { 
+    public Component convert(SBOLDocument doc, ComponentDefinition input) throws SBOLGraphException, SBOLValidationException { 
     	//System.out.println("Component:"+Util.createSBOL3Uri(input));
     	// TODO: there are duplicates in the list
     	if (doc.getComponents()!=null) {
@@ -47,14 +48,14 @@ public class ComponentDefinitionConverter implements EntityConverter<ComponentDe
         
         for (SequenceAnnotation sa : input.getSequenceAnnotations()) {
         	if (sa.isSetComponent()) {
-        		// TODO: add location to subComponent
-        		
-        		
+        		// If the SequenceAnnotation is a subComponent, convert it to a SubComponent
+        		SequenceAnnotationToSubComponentConverter satoscConverter = new SequenceAnnotationToSubComponentConverter();
+        		satoscConverter.convert(doc, comp, input, sa);
         		
         	} else {
     			// If the SequenceAnnotation is not a subComponent, convert it to a Feature
-        		SequenceAnnotationToFeatureConverter saConverter = new SequenceAnnotationToFeatureConverter();
-        		saConverter.convert(doc, comp, input,sa);
+        		SequenceAnnotationToFeatureConverter satosfConverter = new SequenceAnnotationToFeatureConverter();
+        		satosfConverter.convert(doc, comp, input,sa);
         
         	}
         }

@@ -8,6 +8,7 @@ import org.sbolstandard.converter.sbol23_31.SequenceAnnotationToFeatureConverter
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Constraint;
+import org.sbolstandard.core3.entity.Location;
 import org.sbolstandard.core3.entity.SequenceFeature;
 import org.sbolstandard.core3.entity.SubComponent;
 import org.sbolstandard.core2.SBOLDocument;
@@ -38,9 +39,19 @@ public class ComponentConverter implements EntityConverter<Component, ComponentD
     	    	
     	List<SubComponent> subComponents= component.getSubComponents();
     	if (subComponents!=null) {
-    		SubComponentConverter subCompConverter = new SubComponentConverter();
+    		SubComponentToComponentConverter subCompConverter = new SubComponentToComponentConverter();
 			for (SubComponent subComp : subComponents) {
+				
 				subCompConverter.convert(sbol2Doc, compDef, subComp);
+				// If the SubComponent is a SequenceAnnotation, convert it to a SequenceAnnotation
+    			List<Location> locations = subComp.getLocations();
+    			if (locations != null && !locations.isEmpty()) {
+    				//TODO: this is not implemented yet
+    				
+    				SubComponentToAnnotationConverter subcToAnnoConverter = new SubComponentToAnnotationConverter();
+    				subcToAnnoConverter.convert(sbol2Doc, compDef, subComp);
+    				System.out.println("THIS IS NOT IMPLEMENTED YET");
+    			}
 			}
     	}
     	
@@ -52,11 +63,17 @@ public class ComponentConverter implements EntityConverter<Component, ComponentD
 			}
     	}
     	
-    	for (SequenceFeature sf : component.getSequenceFeatures()) {
-        	
-    		SequenceFeatureToAnnotationConverter sfConverter = new SequenceFeatureToAnnotationConverter ();
-    		sfConverter.convert(sbol2Doc, compDef, sf);
-        }
+    	List<SequenceFeature> sequenceFeatures = component.getSequenceFeatures();
+    	if (sequenceFeatures != null && !sequenceFeatures.isEmpty()) {
+    		for (SequenceFeature sf : sequenceFeatures) {
+        		SequenceFeatureToAnnotationConverter sfConverter = new SequenceFeatureToAnnotationConverter ();
+        		sfConverter.convert(sbol2Doc, compDef, sf);
+            }
+    	
+    	
+    	
+    	
+    	}
     	
     	
         return compDef;
