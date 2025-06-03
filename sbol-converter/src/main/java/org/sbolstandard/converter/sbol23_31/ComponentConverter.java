@@ -18,7 +18,7 @@ import org.sbolstandard.core3.entity.Identified;
 public class ComponentConverter implements ChildEntityConverter<org.sbolstandard.core2.Component, Feature> {
 
 	@Override
-	public Feature convert(SBOLDocument doc, Identified parent, org.sbolstandard.core2.Component input) throws SBOLGraphException {
+	public Feature convert(SBOLDocument doc, Identified parent, org.sbolstandard.core2.Identified inputParent, org.sbolstandard.core2.Component input) throws SBOLGraphException {
 		Component parentComponent = (Component) parent;
 		Feature result = null;
 		if (input.getMapsTos() != null && !input.getMapsTos().isEmpty()) {

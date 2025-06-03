@@ -13,6 +13,7 @@ import org.sbolstandard.core2.ExperimentalData;
 import org.sbolstandard.core2.Implementation;
 import org.sbolstandard.core2.Model;
 import org.sbolstandard.core2.ModuleDefinition;
+import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core2.Sequence;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.io.SBOLFormat;
@@ -21,7 +22,7 @@ import org.sbolstandard.core3.util.SBOLGraphException;
 
 public class SBOLDocumentConverter {
 
-	public SBOLDocument convert(org.sbolstandard.core2.SBOLDocument sbol2Doc) throws SBOLGraphException {
+	public SBOLDocument convert(org.sbolstandard.core2.SBOLDocument sbol2Doc) throws SBOLGraphException, SBOLValidationException {
         SBOLDocument sbol3Doc = new SBOLDocument();
 
         SequenceConverter seqConverter = new SequenceConverter();

@@ -6,6 +6,7 @@ import java.io.File;
 import java.util.List;
 
 import org.sbolstandard.converter.sbol23_31.SBOLDocumentConverter;
+import org.sbolstandard.core2.SBOLDocument;
 import org.sbolstandard.core2.SBOLReader;
 import org.sbolstandard.core2.SBOLValidate;
 import org.sbolstandard.core2.SBOLWriter;
@@ -19,7 +20,21 @@ import org.sbolstandard.core3.validation.IdentifiedValidator;
 public class TestUtil {
 
 	public static void runTestSuiteFile(File file) throws Exception {
-		//Configuration.getInstance().setValidateBeforeSaving(false);
+
+		int numOfErros = 0;
+		List<String> errors=roundTripConvert(file);
+		
+		for (String error : errors) {
+			System.out.println(error);
+			numOfErros++;
+		}
+		assertTrue(numOfErros == 0, "Errors in conversion from" + file.getName());
+		System.out.println("--------");
+
+	}
+	
+	public static List<String> roundTripConvert(File file) throws Exception {
+		Configuration.getInstance().setValidateBeforeSaving(false);
 
 		org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
 
@@ -37,16 +52,9 @@ public class TestUtil {
 		System.out.println("Converted from SBOL3 to SBOL2:");
 
 		SBOLWriter.write(sbol2Doc, System.out);
-
 		SBOLValidate.compareDocuments("SBOL2in", doc, "SBOL2out", sbol2Doc);
-		int numOfErros = 0;
-		for (String error : SBOLValidate.getErrors()) {
-			System.out.println(error);
-			numOfErros++;
-		}
-		assertTrue(numOfErros == 0, "Errors in conversion from" + file.getName());
-		System.out.println("--------");
-
+		
+		return SBOLValidate.getErrors();		
 	}
 
 	public static void runTestSuiteFile2_to_3(File file) throws Exception {
