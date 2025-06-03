@@ -1,120 +1,77 @@
 package org.sbolstandard.converter.sbol23_31;
 
 import org.sbolstandard.core2.ComponentDefinition;
+import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core2.SequenceAnnotation;
 import org.sbolstandard.core3.entity.Identified;
-import org.sbolstandard.core3.entity.Location;
+import org.sbolstandard.core3.entity.Range;
 import org.sbolstandard.core3.entity.SBOLDocument;
-import org.sbolstandard.core3.entity.SequenceFeature;
 import org.sbolstandard.core3.entity.SubComponent;
 import org.sbolstandard.core3.util.SBOLGraphException;
-import org.sbolstandard.core3.entity.Component;
+import org.sbolstandard.core3.entity.Cut;
+import org.sbolstandard.core3.entity.EntireSequence;
 import org.sbolstandard.core3.entity.Sequence;
-
-import java.net.URI;
-import java.util.Set;
 
 import org.sbolstandard.converter.Util;
 
-public class SequenceAnnotationToSubComponentConverter implements ChildEntityConverter<org.sbolstandard.core2.SequenceAnnotation,SubComponent>{
+public class SequenceAnnotationToSubComponentConverter
+		implements ChildEntityConverter<org.sbolstandard.core2.SequenceAnnotation, SubComponent> {
 
 	@Override
-	public SubComponent convert(SBOLDocument document, Identified parent, org.sbolstandard.core2.Identified seqaParent, SequenceAnnotation seqa)
-	        throws SBOLGraphException {
-	    
-		
-	    // Cast the parent object to a Component (SBOL3).
-	    Component parentComponent = (Component) parent;
-	    
-	    SubComponent subComponent = parentComponent.createSubComponent(seqa.getIdentity());
-	    
-	    
-	    // TODO: LOOK BELOW AND CHANGE
-	    // TODO: LOOK BELOW AND CHANGE
-	    ComponentDefinition parentCompDef = (ComponentDefinition) seqaParent;
-	    
-	    // Get the SBOL2 Sequence associated with the ComponentDefinition of the SequenceAnnotation.
-	    URI seqType = Util.getSBOL2SequenceType(parentCompDef);
-	    System.out.println("SBOL2 Sequence Type: " + seqType);
-	    org.sbolstandard.core2.Sequence sbol2seq =
-	    		parentCompDef.getSequenceByEncoding(seqType);
-	    
-	    Set<org.sbolstandard.core2.Sequence> sequences = parentCompDef.getSequences();
-	    System.out.println("SEQUENCES"+parentCompDef.getSequences());
-	   
-	    
-	    // Create the corresponding SBOL3 URI for the SBOL2 Sequence.
-	    URI SBOL3ObjectUri = Util.createSBOL3Uri(sbol2seq.getIdentity());
-	    
-	    // Retrieve the SBOL3 Sequence object from the document using its URI.
-	    Sequence sbol3seq = document.getIdentified(SBOL3ObjectUri, Sequence.class);
-	    
-	    // Will hold the resulting SBOL3 SequenceFeature object.
-	    SequenceFeature seqFeature = null;
-	    
-	    // Iterate over all locations defined in the SBOL2 SequenceAnnotation.
-	    for (org.sbolstandard.core2.Location sbol2Loc: seqa.getLocations()) {
-	    	Location sbol3Location=null;		    
-	    	// Convert the SBOL2 orientation to SBOL3 orientation vocabulary.
-	    	org.sbolstandard.core2.OrientationType sbol2Orientation = sbol2Loc.getOrientation();
-	        org.sbolstandard.core3.vocabulary.Orientation sbol3Orientation = Util.toSBOL3Orientation(sbol2Loc.getOrientation());
-	        
-	        // Handle Range location type (start and end positions).
-	        if (sbol2Loc instanceof org.sbolstandard.core2.Range) {
-	            org.sbolstandard.core2.Range sbol2range = (org.sbolstandard.core2.Range) sbol2Loc;
-	            if (seqFeature == null) {
-	            	
-	                // For the first location, create a new SequenceFeature in the parent Component.
-	                seqFeature = parentComponent.createSequenceFeature(sbol2range.getStart(), sbol2range.getEnd(), sbol3seq);
-	                sbol3Location=seqFeature.getLocations().get(seqFeature.getLocations().size()-1);	
-	                
-	                //seqFeature.setOrientation(null); // Orientation will be set below.
-	            } else {
-	                // For additional locations, add another range to the existing SequenceFeature.
-	                sbol3Location=seqFeature.createRange(sbol2range.getStart(), sbol2range.getEnd(), sbol3seq);
-	            }
-	        }
-	        // Handle Cut location type (single cut site).
-	        else if (sbol2Loc instanceof org.sbolstandard.core2.Cut) {
-	            org.sbolstandard.core2.Cut sbol2cut = (org.sbolstandard.core2.Cut) sbol2Loc;
-	            if (seqFeature == null) {
-	                // Create SequenceFeature for the cut location.
-	                seqFeature = parentComponent.createSequenceFeature(sbol2cut.getAt(), sbol3seq);
-	                sbol3Location=seqFeature.getLocations().get(seqFeature.getLocations().size()-1);	
-		         } else {
-	                // Add additional cut location to the SequenceFeature.
-	                sbol3Location=seqFeature.createCut(sbol2cut.getAt(), sbol3seq);
-	            }
-	        }
-	        // Handle GenericLocation type (whole sequence or undefined region).
-	        else if (sbol2Loc instanceof org.sbolstandard.core2.GenericLocation) {
-	            if (seqFeature == null) {
-	                // Create SequenceFeature for the whole sequence.
-	                seqFeature = parentComponent.createSequenceFeature(sbol3seq);
-	                sbol3Location=seqFeature.getLocations().get(seqFeature.getLocations().size()-1);	
-	            } else {
-	                // Add the entire sequence as another location.
-	                sbol3Location=seqFeature.createEntireSequence(sbol3seq);
-	                
-	            }
-	        }
-	        // Set the orientation for the SequenceFeature after each location is processed.
-	        if (sbol3Location != null) {
-	        	sbol3Location.setOrientation(sbol3Orientation);
-	        	Util.copyIdentified(sbol2Loc, sbol3Location);
-	      	   
-	        }
-	    }
-	    
-	    // Copy common identified properties (displayId, version, etc.) from the SBOL2 SequenceAnnotation to the SBOL3 SequenceFeature.
-	    Util.copyIdentified(seqa, seqFeature);
-	    
-	    // Return the created SBOL3 SequenceFeature object.
-	    return null;
-	    
-	    // TODO: LOOK ABOVE AND CHANGE
-	    // TODO: LOOK ABOVE AND CHANGE
-	}
+	public SubComponent convert(SBOLDocument document, Identified sbol3Parent,
+			org.sbolstandard.core2.Identified sbol2ParentSeqAnno, SequenceAnnotation sbol2SeqAnno)
+			throws SBOLGraphException, SBOLValidationException {
+	
+		ComponentDefinition sbol2ParentCompDef = (ComponentDefinition) sbol2ParentSeqAnno;
+		// org.sbolstandard.core2.Component sbol2Component=seqa.getComponent();
 
+		SubComponent sbol3SubComponent = document
+				.getIdentified(Util.createSBOL3Uri(sbol2SeqAnno.getComponent().getIdentity()), SubComponent.class);
+		// sbol3SubComponent.setInstanceOf(Util.createSBOL3Uri(sbol2Component.getDefinitionURI()));
+
+		Sequence sbol3Sequence = Util.getSBOL3SequenceFromSBOl2Parent(document, sbol2ParentCompDef);
+		
+		if (sbol3Sequence!=null) {
+			for (org.sbolstandard.core2.Location sbol2Location : sbol2SeqAnno.getLocations()) {
+	
+				// Location sbol3Location = null;
+	
+				org.sbolstandard.core3.vocabulary.Orientation sbol3Orientation = Util
+						.toSBOL3Orientation(sbol2Location.getOrientation());
+	
+				// Handle Range location type (start and end positions).
+				if (sbol2Location instanceof org.sbolstandard.core2.Range) {
+					org.sbolstandard.core2.Range sbol2Range = (org.sbolstandard.core2.Range) sbol2Location;
+					Range sbol3Range = sbol3SubComponent.createRange(sbol2Range.getStart(), sbol2Range.getEnd(),
+							sbol3Sequence);
+					sbol3Range.setOrientation(sbol3Orientation);
+	
+					// TODO:LOOK BELOW AND CHECK
+					Util.copyIdentified(sbol2Location, sbol3Range);
+	
+				} else if (sbol2Location instanceof org.sbolstandard.core2.Cut) {
+					org.sbolstandard.core2.Cut sbol2Cut = (org.sbolstandard.core2.Cut) sbol2Location;
+					Cut sbol3Cut = sbol3SubComponent.createCut(sbol2Cut.getAt(), sbol3Sequence);
+					sbol3Cut.setOrientation(sbol3Orientation);
+	
+					// TODO:LOOK BELOW AND CHECK
+					Util.copyIdentified(sbol2Location, sbol3Cut);
+				} else if (sbol2Location instanceof org.sbolstandard.core2.GenericLocation) {
+					// org.sbolstandard.core2.GenericLocation sbol2GenericLocation =
+					// (org.sbolstandard.core2.GenericLocation) sbol2Location;
+					EntireSequence sbol3EntireSequence = sbol3SubComponent.createEntireSequence(sbol3Sequence);
+					sbol3EntireSequence.setOrientation(sbol3Orientation);
+	
+					// TODO:LOOK BELOW AND CHECK
+					Util.copyIdentified(sbol2Location, sbol3EntireSequence);
+				}
+	
+			}
+		}
+		Util.copyIdentified(sbol2SeqAnno, sbol3SubComponent);
+
+		return sbol3SubComponent;
+
+	}
 
 }

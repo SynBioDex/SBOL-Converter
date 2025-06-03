@@ -29,19 +29,20 @@ import org.sbolstandard.core3.vocabulary.Role;
 /**
  * Unit test for simple App.
  */
-public class SequenceAnnotationToFeatureTest {
+public class SequenceAnnotationToSubComponentTest {
 
 
 	
 	@Test
 	public void TestSBOL2SequenceAnnotation() throws Exception {
 		
+		File file = new File("output/fromTestSuite/ComponentDefinitionOutput_modified.xml");
+		org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
+		SBOLValidate.validateSBOL(doc, true, true, true);
 		
-		org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(new File("output/fromTestSuite/CD_SA_Range_Example_modified.xml"));
+		Sequence seq=doc.createSequence("http://partsregistry.org","test", "1",  "tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcacaaagaggagaaaatgaaaaacataaatgccgacgacacatacagaataattaataaaattaaagcttgtagaagcaataatgatattaatcaatgcttatctgatatgactaaaatggtacattgtgaatattatttactcgcgatcatttatcctcattctatggttaaatctgatatttcaatcctagataattaccctaaaaaatggaggcaatattatgatgacgctaatttaataaaatatgatcctatagtagattattctaactccaatcattcaccaattaattggaatatatttgaaaacaatgctgtaaataaaaaatctccaaatgtaattaaagaagcgaaaacatcaggtcttatcactgggtttagtttccctattcatacggctaacaatggcttcggaatgcttagttttgcacattcagaaaaagacaactatatagatagtttatttttacatgcgtgtatgaacataccattaattgttccttctctagttgataattatcgaaaaataaatatagcaaataataaatcaaacaacgatttaaccaaaagagaaaaagaatgtttagcgtgggcatgcgaaggaaaaagctcttgggatatttcaaaaatattaggttgcagtgagcgtactgtcactttccatttaaccaatgcgcaaatgaaactcaatacaacaaaccgctgccaaagtatttctaaagcaattttaacaggagcaattgattgcccatactttaaaaattaataacactgatagtgctagtgtagatcacccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctcacactggctcaccttcgggtgggcctttctgcgtttataacctgtaggatcgtacaggtttacgcaagaaaatggtttgttatagtcgaataaa", Sequence.IUPAC_DNA);
 		
-		Sequence seq=doc.createSequence("http://partsregistry.org","test", "1",  "AAAAATTTTTTTTTTTTCCCCCCCCCCCCCCGGGGGGGGGGGGGGGG", Sequence.IUPAC_DNA);
-		
-		ComponentDefinition cd= doc.getComponentDefinition(URI.create("http://partsregistry.org/cd/BBa_J23119"));
+		ComponentDefinition cd = doc.getComponentDefinition(URI.create("http://partsregistry.org/cd/BBa_F2620"));
 		cd.addSequence(seq);
 		File newFile= new File("output/SequenceAnnotationToSubComponentTest.xml");
 		SBOLWriter.write(doc, newFile);
@@ -50,6 +51,8 @@ public class SequenceAnnotationToFeatureTest {
 		SBOLWriter.write(doc, System.out);
 
 		List<String> errors=TestUtil.roundTripConvert(newFile);
+		
+		//List<String> errors=TestUtil.roundTripConvert(file);
 		
 		if (errors.size()>0) {
 			for (String error : errors) {
