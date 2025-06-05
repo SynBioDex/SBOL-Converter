@@ -1,8 +1,6 @@
 package org.sbolstandard.converter.sbol31_23;
 
 import org.sbolstandard.converter.Util;
-import org.sbolstandard.core2.ComponentDefinition;
-import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Sequence;
 import org.sbolstandard.core2.SBOLDocument;
 import org.sbolstandard.core2.SBOLValidationException;
@@ -15,7 +13,9 @@ public class SequenceConverter implements EntityConverter<Sequence, org.sbolstan
     	org.sbolstandard.core2.Sequence seq;
     	// TODO: FIX ME - elements / encoding optional in 3, but required in 2, so need defaults
 		seq = doc.createSequence(Util.getURIPrefix(input),input.getDisplayId(),Util.getVersion(input),
-				input.getElements(),input.getEncoding());
+				input.getElements(),Util.getSBOL2SequenceEncodingType(input.getEncoding()));
+		
+		
     	Util.copyIdentified(input, seq);
         return seq;
     }

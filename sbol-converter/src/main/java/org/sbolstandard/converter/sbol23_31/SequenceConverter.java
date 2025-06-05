@@ -16,7 +16,7 @@ public class SequenceConverter implements EntityConverter<org.sbolstandard.core2
 			elements = input.getElements();
 		} 
         seq.setElements(elements);
-        seq.setEncoding(input.getEncoding());
+        seq.setEncoding(Util.getSBOL3SequenceEncodingType(input.getEncoding()));
         return seq;
     }
 }
