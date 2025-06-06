@@ -511,6 +511,30 @@ public class Util {
 		}
 		return convertedTypes;
 	}
+	public static Set<URI> convertToSBOL2_SBO_URIs(List<URI> types) throws SBOLGraphException {
+		Set<URI> convertedTypes = new HashSet<URI>();
+		for (URI type : types) {
+			if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.Inhibition.getUri())) {
+				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000169"));
+			} else if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.Stimulation.getUri())) {
+				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000170"));
+			} else if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.BiochemicalReaction.getUri())) {
+				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000176"));
+			} else if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.NonCovalentBinding.getUri())) {
+				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000177"));
+			} else if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.Degradation.getUri())) {
+				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000179"));
+			} else if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.GeneticProduction.getUri())) {
+				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000589"));
+			} else if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.Control.getUri())) {
+				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000168"));
+			} else {
+				throw new SBOLGraphException("Unknown SBOL3 Interaction type: " + type);
+				
+			}
+		}
+		return convertedTypes;
+	}
 	
 	public static URI getSBOL3SequenceEncodingType(URI sbol2EncodingType) throws SBOLGraphException {
 		if (sbol2EncodingType.equals(org.sbolstandard.core2.Sequence.IUPAC_DNA)) {

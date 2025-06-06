@@ -1,6 +1,5 @@
 package org.sbolstandard.converter.sbol31_23;
 
-import java.util.List;
 
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.core2.SBOLValidationException;
@@ -28,16 +27,22 @@ public class SBOLDocumentConverter {
         }
         
         if (sbol3Doc.getComponents()!=null) {
-        	ComponentConverter cConverter = new ComponentConverter();
+        	ComponentConverter comConverter = new ComponentConverter();
         	ModuleConverter mConverter = new ModuleConverter();
+        	
+        	ComponentToModuleDefinitionConverter comToModuleConverter = new ComponentToModuleDefinitionConverter();
+        	
+        	
         	for (Component c : sbol3Doc.getComponents()) {
         		if(Util.isModelDefinition(c))
         		{
-        			if (cConverter.convert(sbol2Doc, c)==null) {
+        			if (comConverter.convert(sbol2Doc, c)==null) {
             			mConverter.convert(sbol2Doc, c);
             		}
         		} else {
         			// TODO: CREATE A COMPONENT TO MODULE DEFINITION CONVERTER
+        			comToModuleConverter.convert(sbol2Doc, c);
+        			
         			//
         			//
         			//
