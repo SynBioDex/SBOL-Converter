@@ -2,6 +2,7 @@ package org.sbolstandard.converter.sbol31_23;
 
 import java.util.List;
 
+import org.sbolstandard.converter.Util;
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.Sequence;
@@ -30,8 +31,17 @@ public class SBOLDocumentConverter {
         	ComponentConverter cConverter = new ComponentConverter();
         	ModuleConverter mConverter = new ModuleConverter();
         	for (Component c : sbol3Doc.getComponents()) {
-        		if (cConverter.convert(sbol2Doc, c)==null) {
-        			mConverter.convert(sbol2Doc, c);
+        		if(Util.isModelDefinition(c))
+        		{
+        			if (cConverter.convert(sbol2Doc, c)==null) {
+            			mConverter.convert(sbol2Doc, c);
+            		}
+        		} else {
+        			// TODO: CREATE A COMPONENT TO MODULE DEFINITION CONVERTER
+        			//
+        			//
+        			//
+        			//
         		}
         	}
         }

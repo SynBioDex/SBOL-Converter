@@ -6,9 +6,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.sbolstandard.core2.ComponentDefinition;
+import org.sbolstandard.core2.EDAMOntology;
+import org.sbolstandard.core2.Model;
 import org.sbolstandard.core2.RestrictionType;
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core2.SequenceAnnotation;
+import org.sbolstandard.core2.SystemsBiologyOntology;
 import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.Location;
 import org.sbolstandard.core3.entity.SBOLDocument;
@@ -17,10 +20,12 @@ import org.sbolstandard.core3.entity.SequenceFeature;
 import org.sbolstandard.core3.entity.TopLevel;
 import org.sbolstandard.core3.util.SBOLGraphException;
 import org.sbolstandard.core3.vocabulary.ComponentType;
+import org.sbolstandard.core3.vocabulary.Encoding;
 import org.sbolstandard.core3.vocabulary.RestrictionType.ConstraintRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.OrientationRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.SequentialRestriction;
+import org.sbolstandard.examples.Sbol2Terms.model;
 import org.sbolstandard.core3.entity.Component;
 
 public class Util {
@@ -492,6 +497,93 @@ public class Util {
 		}
 
 		return sbol3seq;
+	}
+
+	public static List<URI> convertToSBOL3_SBO_URIs(Set<URI> types) {
+		// TODO Auto-generated method stub
+		List<URI> convertedTypes = new ArrayList<URI>();
+		for (URI type : types) {
+			String typeString = type.toString().replace("/biomodels.sbo", "");
+			
+			// WARNING! BELOW IS SHOULD NOT BE NECESSARY ACCORDING TO SBOL3 SPECIFICATION
+			typeString = typeString.replace("http", "https");
+			convertedTypes.add(URI.create(typeString));
+		}
+		return convertedTypes;
+	}
+	
+	public static URI getSBOL3SequenceEncodingType(URI sbol2EncodingType) throws SBOLGraphException {
+		if (sbol2EncodingType.equals(org.sbolstandard.core2.Sequence.IUPAC_DNA)) {
+			return Encoding.NucleicAcid.getUri();
+		} else if (sbol2EncodingType.equals(org.sbolstandard.core2.Sequence.IUPAC_RNA)) {
+			return Encoding.NucleicAcid.getUri();
+		} else if (sbol2EncodingType.equals(org.sbolstandard.core2.Sequence.IUPAC_PROTEIN)) {
+			return Encoding.AminoAcid.getUri();
+		} else if (sbol2EncodingType.equals(org.sbolstandard.core2.Sequence.SMILES)) {
+			return Encoding.SMILES.getUri();
+		} else {
+			throw new SBOLGraphException("Unknown SBOL2 Sequence encoding type: " + sbol2EncodingType);
+		}		
+	}
+	
+	public static URI getSBOL2SequenceEncodingType(URI sbol3EncodingType) throws SBOLGraphException {
+		if (sbol3EncodingType.equals(Encoding.NucleicAcid.getUri())) {
+			return org.sbolstandard.core2.Sequence.IUPAC_DNA;
+		} else if (sbol3EncodingType.equals(Encoding.AminoAcid.getUri())) {
+			return org.sbolstandard.core2.Sequence.IUPAC_PROTEIN;
+		} else if (sbol3EncodingType.equals(Encoding.SMILES.getUri())) {
+			return org.sbolstandard.core2.Sequence.SMILES;
+		} else {
+			throw new SBOLGraphException("Unknown SBOL3 Sequence encoding type: " + sbol3EncodingType);
+		}
+	}
+	public static URI getSBOL3ModelLanguage(URI sbol2Language) throws SBOLGraphException {
+		if (sbol2Language.equals(EDAMOntology.SBML)) {
+			return org.sbolstandard.core3.vocabulary.ModelLanguage.SBML;}
+		else if (sbol2Language.equals(EDAMOntology.CELLML)) {
+			return org.sbolstandard.core3.vocabulary.ModelLanguage.CellML;
+		} else if (sbol2Language.equals(EDAMOntology.BIOPAX)) {
+			return org.sbolstandard.core3.vocabulary.ModelLanguage.BioPAX;
+		} else {
+			throw new SBOLGraphException("Unknown SBOL2 Model language: " + sbol2Language);
+		}
+	}
+	public static URI getSBOL2ModelLanguage(URI sbol3Language) throws SBOLGraphException {
+		if (sbol3Language.equals(org.sbolstandard.core3.vocabulary.ModelLanguage.SBML)) {
+			return EDAMOntology.SBML;
+		} else if (sbol3Language.equals(org.sbolstandard.core3.vocabulary.ModelLanguage.CellML)) {
+			return EDAMOntology.CELLML;
+		} else if (sbol3Language.equals(org.sbolstandard.core3.vocabulary.ModelLanguage.BioPAX)) {
+			return EDAMOntology.BIOPAX;
+		} else {
+			throw new SBOLGraphException("Unknown SBOL3 Model language: " + sbol3Language);
+		}
+	}
+	public static URI getSBOL2ModelFramework(URI sbol3Framework) throws SBOLGraphException {
+		if (sbol3Framework.equals(org.sbolstandard.core3.vocabulary.ModelFramework.Continuous)) {
+			return SystemsBiologyOntology.CONTINUOUS_FRAMEWORK;
+		} else if (sbol3Framework.equals(org.sbolstandard.core3.vocabulary.ModelFramework.Discrete)) {
+			return SystemsBiologyOntology.DISCRETE_FRAMEWORK;
+		} else {
+			throw new SBOLGraphException("Unknown SBOL3 Model framework: " + sbol3Framework);
+		}
+	}
+	public static URI getSBOL3ModelFramework(URI sbol2Framework) throws SBOLGraphException {
+		if (sbol2Framework.equals(SystemsBiologyOntology.CONTINUOUS_FRAMEWORK)) {
+			return org.sbolstandard.core3.vocabulary.ModelFramework.Continuous;
+		} else if (sbol2Framework.equals(SystemsBiologyOntology.DISCRETE_FRAMEWORK)) {
+			return org.sbolstandard.core3.vocabulary.ModelFramework.Discrete;
+		} else {
+			throw new SBOLGraphException("Unknown SBOL2 Model framework: " + sbol2Framework);
+		}
+	}
+	public static boolean isModelDefinition(Component component) throws SBOLGraphException {
+		if(component.getInteractions() != null && !component.getInteractions().isEmpty()) {
+			return true;
+		} else if (component.getTypes().contains(org.sbolstandard.core3.vocabulary.ComponentType.FunctionalEntity)) {
+			return true;
+		}
+		return false;
 	}
 
 }

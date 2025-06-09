@@ -34,7 +34,7 @@ public class TestUtil {
 	}
 	
 	public static List<String> roundTripConvert(File file) throws Exception {
-		Configuration.getInstance().setValidateBeforeSaving(false);
+		Configuration.getInstance().setValidateBeforeSaving(true);
 
 		org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
 
@@ -44,6 +44,7 @@ public class TestUtil {
 
 		System.out.println("Converted from SBOL2 to SBOL3:");
 		System.out.println(SBOLIO.write(sbol3Doc, SBOLFormat.TURTLE));
+		SBOLIO.write(sbol3Doc, new File("output/currentSBOL3File.xml"), SBOLFormat.RDFXML);
 
 		org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter converter3_2 = new org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter();
 		org.sbolstandard.core2.SBOLDocument sbol2Doc = converter3_2.convert(sbol3Doc);

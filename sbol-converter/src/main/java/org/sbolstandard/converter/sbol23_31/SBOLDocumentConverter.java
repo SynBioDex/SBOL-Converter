@@ -52,7 +52,7 @@ public class SBOLDocumentConverter {
         	mConverter.convert(sbol3Doc, mod);
         }
 
-        ModuleDefinitionConverter mdConverter = new ModuleDefinitionConverter();
+        ModuleDefinitionToComponentConverter mdConverter = new ModuleDefinitionToComponentConverter();
         for (ModuleDefinition md : sbol2Doc.getModuleDefinitions()) {
             mdConverter.convert(sbol3Doc, md);            
         }
