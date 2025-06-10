@@ -36,14 +36,49 @@ public class SequenceAnnotationToSubComponentTest {
 	@Test
 	public void TestSBOL2SequenceAnnotation() throws Exception {
 		
-		File file = new File("output/fromTestSuite/ComponentDefinitionOutput_modified.xml");
-		org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
+		//File file = new File("output/fromTestSuite/ComponentDefinitionOutput_modified.xml");
+		//org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
+		org.sbolstandard.core2.SBOLDocument doc = ComponentDefinitionOutput.createComponentDefinitionOutput();
+		
 		SBOLValidate.validateSBOL(doc, true, true, true);
 		
-		Sequence seq=doc.createSequence("http://partsregistry.org","test", "1",  "tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcacaaagaggagaaaatgaaaaacataaatgccgacgacacatacagaataattaataaaattaaagcttgtagaagcaataatgatattaatcaatgcttatctgatatgactaaaatggtacattgtgaatattatttactcgcgatcatttatcctcattctatggttaaatctgatatttcaatcctagataattaccctaaaaaatggaggcaatattatgatgacgctaatttaataaaatatgatcctatagtagattattctaactccaatcattcaccaattaattggaatatatttgaaaacaatgctgtaaataaaaaatctccaaatgtaattaaagaagcgaaaacatcaggtcttatcactgggtttagtttccctattcatacggctaacaatggcttcggaatgcttagttttgcacattcagaaaaagacaactatatagatagtttatttttacatgcgtgtatgaacataccattaattgttccttctctagttgataattatcgaaaaataaatatagcaaataataaatcaaacaacgatttaaccaaaagagaaaaagaatgtttagcgtgggcatgcgaaggaaaaagctcttgggatatttcaaaaatattaggttgcagtgagcgtactgtcactttccatttaaccaatgcgcaaatgaaactcaatacaacaaaccgctgccaaagtatttctaaagcaattttaacaggagcaattgattgcccatactttaaaaattaataacactgatagtgctagtgtagatcacccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctcacactggctcaccttcgggtgggcctttctgcgtttataacctgtaggatcgtacaggtttacgcaagaaaatggtttgttatagtcgaataaa", Sequence.IUPAC_DNA);
+		System.out.println("*******************");
 		
+		//String na=doc.getSequence(URI.create("http://partsregistry.org/seq/BBa_R0040")).getElements();
+		//na=na + "g";		
+		//Sequence pTetRSeq=doc.getSequence(URI.create("http://partsregistry.org/seq/BBa_R0040"));
+		//pTetRSeq.setElements(na);
+		
+		String na=doc.getSequence(URI.create("http://partsregistry.org/seq/BBa_R0040")).getElements();		
+		System.out.println(na.length());
+		na=na + doc.getSequence(URI.create("http://partsregistry.org/seq/BBa_B0034")).getElements();
+		System.out.println(na.length());
+		na=na + doc.getSequence(URI.create("http://partsregistry.org/seq/BBa_C0062")).getElements();
+		System.out.println(na.length());
+		na=na + doc.getSequence(URI.create("http://partsregistry.org/seq/BBa_B0015")).getElements();
+		System.out.println(na.length());
+		na=na + doc.getSequence(URI.create("http://partsregistry.org/seq/BBa_R0062")).getElements();
+		System.out.println("*******************");
+		System.out.println(na);
+		System.out.println(na.length());
+		
+		System.out.print("*******************");
+		
+
+
+		
+		
+		
+//tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcacaaagaggagaaaatgaaaaacataaatgccgacgacacatacagaataattaataaaattaaagcttgtagaagcaataatgatattaatcaatgcttatctgatatgactaaaatggtacattgtgaatattatttactcgcgatcatttatcctcattctatggttaaatctgatatttcaatcctagataattaccctaaaaaatggaggcaatattatgatgacgctaatttaataaaatatgatcctatagtagattattctaactccaatcattcaccaattaattggaatatatttgaaaacaatgctgtaaataaaaaatctccaaatgtaattaaagaagcgaaaacatcaggtcttatcactgggtttagtttccctattcatacggctaacaatggcttcggaatgcttagttttgcacattcagaaaaagacaactatatagatagtttatttttacatgcgtgtatgaacataccattaattgttccttctctagttgataattatcgaaaaataaatatagcaaataataaatcaaacaacgatttaaccaaaagagaaaaagaatgtttagcgtgggcatgcgaaggaaaaagctcttgggatatttcaaaaatattaggttgcagtgagcgtactgtcactttccatttaaccaatgcgcaaatgaaactcaatacaacaaaccgctgccaaagtatttctaaagcaattttaacaggagcaattgattgcccatactttaaaaattaataacactgatagtgctagtgtagatcacccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctcacactggctcaccttcgggtgggcctttctgcgtttataacctgtaggatcgtacaggtttacgcaagaaaatggtttgttatagtcgaataaa
+//tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcacaaagaggagaaaatgcttatctgatatgactaaaatggtacattgtgaatattatttactcgcgatcatttatcctcattctatggttaaatctgatatttcaatcctagataattaccctaaaaaatggaggcaatattatgatgacgctaatttaataaaatatgatcctatagtagattattctaactccaatcattcaccaattaattggaatatatttgaaaacaatgctgtaaataaaaaatctccaaatgtaattaaagaagcgaaaacatcaggtcttatcactgggtttagtttccctattcatacggctaacaatggcttcggaatgcttagttttgcacattcagaaaaagacaactatatagatagtttatttttacatgcgtgtatgaacataccattaattgttccttctctagttgataattatcgaaaaataaatatagcaaataataaatcaaacaacgatttaaccaaaagagaaaaagaatgtttagcgtgggcatgcgaaggaaaaagctcttgggatatttcaaaaatattaggttgcagtgagcgtactgtcactttccatttaaccaatgcgcaaatgaaactcaatacaacaaaccgctgccaaagtatttctaaagcaattttaacaggagcaattgattgcccatactttaaaaattaataacactgatagtgctagtgtagatcacccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctactagagtcacactggctcaccttcgggtgggcctttctgcgtttataacctgtaggatcgtacaggtttacgcaagaaaatggtttgttatagtcgaataaa
+
+		//atgcttatctgatatgactaaaatggtacattgtgaatattatttactcgcgatcatttatcctcattctatggttaaatctgatatttcaatcctagataattaccctaaaaaatggaggcaatattatgatgacgctaatttaataaaatatgatcctatagtagattattctaactccaatcattcaccaattaattggaatatatttgaaaacaatgctgtaaataaaaaatctccaaatgtaattaaagaagcgaaaacatcaggtcttatcactgggtttagtttccctattcatacggctaacaatggcttcggaatgcttagttttgcacattcagaaaaagacaactatatagatagtttatttttacatgcgtgtatgaacataccattaattgttccttctctagttgataattatcgaaaaataaatatagcaaataataaatcaaacaacgatttaaccaaaagagaaaaagaatgtttagcgtgggcatgcgaaggaaaaagctcttgggatatttcaaaaatattaggttgcagtgagcgtactgtcactttccatttaaccaatgcgcaaatgaaactcaatacaacaaaccgctgccaaagtatttctaaagcaattttaacaggagcaattgattgcccatactttaaaaattaataacactgatagtgctagtgtagatcac
+//acctgtaggatcgtacaggtttacgcaagaaaatggtttgttatagtcgaataaa
+//tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcacg
+		
+		/*Sequence seq=doc.createSequence("http://partsregistry.org","test", "1",  na, Sequence.IUPAC_DNA);
 		ComponentDefinition cd = doc.getComponentDefinition(URI.create("http://partsregistry.org/cd/BBa_F2620"));
-		cd.addSequence(seq);
+		cd.addSequence(seq);*/
 		File newFile= new File("output/SequenceAnnotationToSubComponentTest.xml");
 		SBOLWriter.write(doc, newFile);
 		

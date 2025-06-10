@@ -2,6 +2,10 @@ package org.sbolstandard.converter.sbol23_31;
 
 
 import java.net.URI;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.sound.midi.Sequence;
 
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.core2.ComponentDefinition;
@@ -38,8 +42,17 @@ public class ComponentDefinitionConverter implements EntityConverter<ComponentDe
         Util.copyIdentified(input, comp);
         comp.setRoles(Util.convertRoles2_to_3(input.getRoles()));
         
-        // TODO: need method to set the list of Sequence URIs
-        //comp.setSequences(Util.toList(input.getSequenceURIs()));
+        if (input.getSequenceURIs()!= null && input.getSequenceURIs().size() > 0) {
+        	List<org.sbolstandard.core3.entity.Sequence> sequences= new ArrayList<>();
+        	for (URI uri:input.getSequenceURIs())
+        	{
+        		URI sbol3URI=Util.createSBOL3Uri(uri);
+        		org.sbolstandard.core3.entity.Sequence sbol3Seq=doc.getIdentified(sbol3URI, org.sbolstandard.core3.entity.Sequence.class);
+        		sequences.add(sbol3Seq);        		
+        	}
+        	comp.setSequences(sequences);        	 
+        }
+       
         
         ComponentConverter converter = new ComponentConverter();        
         for (org.sbolstandard.core2.Component c : input.getComponents()) {

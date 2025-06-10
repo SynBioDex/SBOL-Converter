@@ -8,424 +8,148 @@
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:GO="https://identifiers.org/GO:"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
-   <sbol:Model rdf:about="http://sbolstandard.org/example/toogleswicth">
-      <sbol:language rdf:resource="https://identifiers.org/edam:format_2585"/>
-      <sbol:framework rdf:resource="https://identifiers.org/SBO:0000062"/>
-      <sbol:source rdf:resource="http://virtualparts.org/part/pIKE_Toggle_1"/>
-      <sbol:hasNamespace rdf:resource="http://sbolstandard.org/example"/>
-      <sbol:displayId>toogleswicth</sbol:displayId>
-   </sbol:Model>
-   <sbol:Component rdf:about="http://www.partsregistry.org/ECK120033736">
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000141"/>
-      <sbol:description>Terminator2</sbol:description>
-      <sbol:name>ECK120033736</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://www.partsregistry.org"/>
+   <sbol:Collection rdf:about="http://www.async.ece.utah.edu/Bacillus_subtilis">
+      <sbol:member>
+         <sbol:Component rdf:about="http://www.async.ece.utah.edu/AmpR_promoter_009"/>
+      </sbol:member>
+      <sbol:displayId>Bacillus_subtilis</sbol:displayId>
+      <sbol:member>
+         <sbol:Component rdf:about="http://www.async.ece.utah.edu/repB"/>
+      </sbol:member>
+      <sbol:member>
+         <sbol:Component rdf:about="http://www.async.ece.utah.edu/TcR_006"/>
+      </sbol:member>
+      <sbol:member>
+         <sbol:Component rdf:about="http://www.async.ece.utah.edu/AmpR_017"/>
+      </sbol:member>
+      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
+      <sbol:description>This is a collection of features that have been associated with Bacillus subtilis plasmids downloaded from the SnapGene Resources repository (http://www.snapgene.com).</sbol:description>
+      <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Collection:Bacillus_subtilis"/>
+      <sbol:member>
+         <sbol:Component rdf:about="http://www.async.ece.utah.edu/p15A_ori_001"/>
+      </sbol:member>
+      <sbol:member>
+         <sbol:Component rdf:about="http://www.async.ece.utah.edu/MCS_220"/>
+      </sbol:member>
+      <sbol:name>Collection of Bacillus subtilis features</sbol:name>
+   </sbol:Collection>
+   <sbol:Component rdf:about="http://www.async.ece.utah.edu/p15A_ori_001">
+      <sbol:role rdf:resource="https://identifiers.org/SO:0000296"/>
+      <sbol:name>p15A ori-001</sbol:name>
+      <sbol:displayId>p15A_ori_001</sbol:displayId>
+      <sbol:hasSequence>
+         <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_p15A_ori_001_seq"/>
+      </sbol:hasSequence>
+      <sbol:description>Plasmids containing the medium-copy-number p15A origin of replication can be propagated in E. coli cells</sbol:description>
+      <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
+      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>ECK120033736</sbol:displayId>
+      <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:p15A_ori-001"/>
    </sbol:Component>
-   <sbol:Component rdf:about="http://sbolstandard.org/example/tetr_inverter">
-      <sbol:hasInteraction>
-         <sbol:Interaction rdf:about="http://sbolstandard.org/example/tetr_inverter/Interaction1">
-            <sbol:hasParticipation>
-               <sbol:Participation rdf:about="http://sbolstandard.org/example/tetr_inverter/Interaction1/Participation2">
-                  <sbol:participant>
-                     <sbol:SubComponent rdf:about="http://sbolstandard.org/example/tetr_inverter/SubComponent2">
-                        <sbol:displayId>promoter</sbol:displayId>
-                        <sbol:instanceOf>
-                           <sbol:Component rdf:about="http://www.partsregistry.org/BBa_R0040"/>
-                        </sbol:instanceOf>
-                     </sbol:SubComponent>
-                  </sbol:participant>
-                  <sbol:role rdf:resource="https://identifiers.org/SBO:0000598"/>
-                  <sbol:displayId>Participation2</sbol:displayId>
-               </sbol:Participation>
-            </sbol:hasParticipation>
-            <sbol:hasParticipation>
-               <sbol:Participation rdf:about="http://sbolstandard.org/example/tetr_inverter/Interaction1/Participation1">
-                  <sbol:participant>
-                     <sbol:SubComponent rdf:about="http://sbolstandard.org/example/tetr_inverter/SubComponent1">
-                        <sbol:displayId>TF</sbol:displayId>
-                        <sbol:instanceOf>
-                           <sbol:Component rdf:about="http://identifiers.org/uniprot/Q6QR72"/>
-                        </sbol:instanceOf>
-                     </sbol:SubComponent>
-                  </sbol:participant>
-                  <sbol:role rdf:resource="https://identifiers.org/SBO:0000020"/>
-                  <sbol:displayId>Participation1</sbol:displayId>
-               </sbol:Participation>
-            </sbol:hasParticipation>
-            <sbol:type rdf:resource="https://identifiers.org/SBO:0000169"/>
-            <sbol:displayId>Interaction1</sbol:displayId>
-         </sbol:Interaction>
-      </sbol:hasInteraction>
-      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/tetr_inverter/SubComponent2"/>
-      <sbol:hasInterface>
-         <sbol:Interface rdf:about="http://sbolstandard.org/example/tetr_inverter/Interface1">
-            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/tetr_inverter/SubComponent2"/>
-            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/tetr_inverter/SubComponent1"/>
-            <sbol:displayId>Interface1</sbol:displayId>
-         </sbol:Interface>
-      </sbol:hasInterface>
-      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/tetr_inverter/SubComponent1"/>
-      <sbol:role rdf:resource="https://parts.igem.org/cgi/partsdb/pgroup.cgi?pgroup=inverter"/>
-      <sbol:hasNamespace rdf:resource="http://sbolstandard.org/example"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
-      <sbol:displayId>tetr_inverter</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://www.virtualparts.org/part/pIKE_Toggle_1">
-      <sbol:name>LacI/TetR Toggle Swicth</sbol:name>
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000280"/>
-      <sbol:hasInterface>
-         <sbol:Interface rdf:about="http://www.virtualparts.org/part/pIKE_Toggle_1/Interface1">
-            <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKE_Toggle_1/pIKERightCassette_1">
-                  <sbol:instanceOf>
-                     <sbol:Component rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1"/>
-                  </sbol:instanceOf>
-                  <sbol:displayId>pIKERightCassette_1</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKE_Toggle_1/pIKELeftCassette_1">
-                  <sbol:instanceOf>
-                     <sbol:Component rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1"/>
-                  </sbol:instanceOf>
-                  <sbol:displayId>pIKELeftCassette_1</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:displayId>Interface1</sbol:displayId>
-         </sbol:Interface>
-      </sbol:hasInterface>
-      <sbol:hasNamespace rdf:resource="http://www.virtualparts.org/part"/>
-      <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/pIKERightCassette_1"/>
-      <sbol:displayId>pIKE_Toggle_1</sbol:displayId>
-      <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/pIKELeftCassette_1"/>
-      <sbol:description>LacI/TetR Toggle Swicth</sbol:description>
+   <sbol:Component rdf:about="http://www.async.ece.utah.edu/repB">
+      <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
+      <sbol:hasSequence>
+         <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_repB_seq"/>
+      </sbol:hasSequence>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://www.partsregistry.org/BBa_C0040">
+      <sbol:description>from Enterococcus faecalis plasmid pAM-alpha-1</sbol:description>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
-      <sbol:description>tetR coding sequence</sbol:description>
-      <sbol:name>tetR</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://www.partsregistry.org"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>BBa_C0040</sbol:displayId>
+      <sbol:displayId>repB</sbol:displayId>
+      <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:repB"/>
+      <sbol:name>repB</sbol:name>
+      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
    </sbol:Component>
-   <sbol:Component rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1">
-      <sbol:hasFeature>
-         <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_E0040">
-            <sbol:instanceOf>
-               <sbol:Component rdf:about="http://www.partsregistry.org/BBa_E0040"/>
-            </sbol:instanceOf>
-            <sbol:displayId>BBa_E0040</sbol:displayId>
-         </sbol:SubComponent>
-      </sbol:hasFeature>
-      <sbol:name>LacI Inverter</sbol:name>
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000280"/>
-      <sbol:hasFeature>
-         <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_R0010">
-            <sbol:instanceOf>
-               <sbol:Component rdf:about="http://www.partsregistry.org/BBa_R0010"/>
-            </sbol:instanceOf>
-            <sbol:displayId>BBa_R0010</sbol:displayId>
-         </sbol:SubComponent>
-      </sbol:hasFeature>
-      <sbol:hasNamespace rdf:resource="http://www.virtualparts.org/part"/>
-      <sbol:description>LacI Inverter</sbol:description>
-      <sbol:hasInterface>
-         <sbol:Interface rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/Interface1">
-            <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61130">
-                  <sbol:instanceOf>
-                     <sbol:Component rdf:about="http://www.partsregistry.org/BBa_J61130"/>
-                  </sbol:instanceOf>
-                  <sbol:displayId>BBa_J61130</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_R0010"/>
-            <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040">
-                  <sbol:instanceOf rdf:resource="http://www.partsregistry.org/BBa_C0040"/>
-                  <sbol:displayId>BBa_C0040</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/ECK120033736">
-                  <sbol:instanceOf rdf:resource="http://www.partsregistry.org/ECK120033736"/>
-                  <sbol:displayId>ECK120033736</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_E0040"/>
-            <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120">
-                  <sbol:instanceOf>
-                     <sbol:Component rdf:about="http://www.partsregistry.org/BBa_J61120"/>
-                  </sbol:instanceOf>
-                  <sbol:displayId>BBa_J61120</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:displayId>Interface1</sbol:displayId>
-         </sbol:Interface>
-      </sbol:hasInterface>
-      <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/ECK120033736"/>
-      <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120"/>
-      <sbol:displayId>pIKERightCassette_1</sbol:displayId>
-      <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61130"/>
-      <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040"/>
+   <sbol:Component rdf:about="http://www.async.ece.utah.edu/MCS_220">
+      <sbol:name>MCS-220</sbol:name>
+      <sbol:role rdf:resource="https://identifiers.org/SO:0000001"/>
+      <sbol:description>multiple cloning site</sbol:description>
+      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:MCS-220"/>
+      <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
+      <sbol:displayId>MCS_220</sbol:displayId>
+      <sbol:hasSequence>
+         <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_MCS_220_seq"/>
+      </sbol:hasSequence>
    </sbol:Component>
-   <sbol:Component rdf:about="http://www.partsregistry.org/BBa_E0040">
+   <sbol:Component rdf:about="http://www.async.ece.utah.edu/AmpR_017">
+      <sbol:displayId>AmpR_017</sbol:displayId>
+      <sbol:name>AmpR-017</sbol:name>
+      <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
+      <sbol:hasSequence>
+         <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_AmpR_017_seq"/>
+      </sbol:hasSequence>
+      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
+      <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:AmpR-017"/>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
-      <sbol:description>gfp coding sequence</sbol:description>
-      <sbol:name>gfp</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://www.partsregistry.org"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>BBa_E0040</sbol:displayId>
+      <sbol:description>confers resistance to ampicillin, carbenicillin, and related antibiotics</sbol:description>
    </sbol:Component>
-   <sbol:Component rdf:about="http://www.partsregistry.org/BBa_R0010">
+   <sbol:Component rdf:about="http://www.async.ece.utah.edu/TcR_006">
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <sbol:hasSequence>
+         <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_TcR_006_seq"/>
+      </sbol:hasSequence>
+      <sbol:name>TcR-006</sbol:name>
+      <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
+      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
+      <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+      <sbol:description>confers resistance to tetracycline</sbol:description>
+      <sbol:displayId>TcR_006</sbol:displayId>
+      <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:TcR-006"/>
+   </sbol:Component>
+   <sbol:Component rdf:about="http://www.async.ece.utah.edu/AmpR_promoter_009">
+      <sbol:hasSequence>
+         <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_AmpR_promoter_009_seq"/>
+      </sbol:hasSequence>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
-      <sbol:description>pLacI promoter</sbol:description>
-      <sbol:name>pLacI</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://www.partsregistry.org"/>
+      <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:AmpR_promoter-009"/>
+      <sbol:name>AmpR promoter-009</sbol:name>
+      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
+      <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>BBa_R0010</sbol:displayId>
+      <sbol:displayId>AmpR_promoter_009</sbol:displayId>
    </sbol:Component>
-   <sbol:Component rdf:about="http://www.partsregistry.org/BBa_R0040">
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
-      <sbol:description>pTet promoter</sbol:description>
-      <sbol:name>pTetR</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://www.partsregistry.org"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>BBa_R0040</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://www.partsregistry.org/ECK120029600">
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000141"/>
-      <sbol:description>Terminator1</sbol:description>
-      <sbol:name>ECK120029600</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://www.partsregistry.org"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>ECK120029600</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://www.partsregistry.org/BBa_C0012">
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
-      <sbol:description>lacI coding sequence</sbol:description>
-      <sbol:name>lacI</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://www.partsregistry.org"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>BBa_C0012</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://identifiers.org/uniprot/Q6QR72">
-      <sbol:role rdf:resource="https://identifiers.org/biomodels.sbo/SBO:0000020"/>
-      <sbol:description>TetR protein</sbol:description>
-      <sbol:name>TetR</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://identifiers.org/uniprot"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000252"/>
-      <sbol:displayId>Q6QR72</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://sbolstandard.org/example/toggle_switch">
-      <sbol:role rdf:resource="https://sbolstandard.org/example/module_role/toggle_switch"/>
-      <sbol:hasNamespace rdf:resource="http://sbolstandard.org/example"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
-      <sbol:displayId>toggle_switch</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://www.partsregistry.org/BBa_J61130">
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000139"/>
-      <sbol:description>RBS2</sbol:description>
-      <sbol:name>BBa_J61101 RBS</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://www.partsregistry.org"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>BBa_J61130</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://sbolstandard.org/example/laci_inverter">
-      <sbol:hasInteraction>
-         <sbol:Interaction rdf:about="http://sbolstandard.org/example/laci_inverter/Interaction1">
-            <sbol:hasParticipation>
-               <sbol:Participation rdf:about="http://sbolstandard.org/example/laci_inverter/Interaction1/Participation2">
-                  <sbol:participant>
-                     <sbol:SubComponent rdf:about="http://sbolstandard.org/example/laci_inverter/SubComponent2">
-                        <sbol:displayId>promoter</sbol:displayId>
-                        <sbol:instanceOf rdf:resource="http://www.partsregistry.org/BBa_R0010"/>
-                     </sbol:SubComponent>
-                  </sbol:participant>
-                  <sbol:role rdf:resource="https://identifiers.org/SBO:0000598"/>
-                  <sbol:displayId>Participation2</sbol:displayId>
-               </sbol:Participation>
-            </sbol:hasParticipation>
-            <sbol:hasParticipation>
-               <sbol:Participation rdf:about="http://sbolstandard.org/example/laci_inverter/Interaction1/Participation1">
-                  <sbol:participant>
-                     <sbol:SubComponent rdf:about="http://sbolstandard.org/example/laci_inverter/SubComponent1">
-                        <sbol:displayId>TF</sbol:displayId>
-                        <sbol:instanceOf>
-                           <sbol:Component rdf:about="http://identifiers.org/uniprot/P03023"/>
-                        </sbol:instanceOf>
-                     </sbol:SubComponent>
-                  </sbol:participant>
-                  <sbol:role rdf:resource="https://identifiers.org/SBO:0000020"/>
-                  <sbol:displayId>Participation1</sbol:displayId>
-               </sbol:Participation>
-            </sbol:hasParticipation>
-            <sbol:type rdf:resource="https://identifiers.org/SBO:0000169"/>
-            <sbol:displayId>Interaction1</sbol:displayId>
-         </sbol:Interaction>
-      </sbol:hasInteraction>
-      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/laci_inverter/SubComponent2"/>
-      <sbol:hasInterface>
-         <sbol:Interface rdf:about="http://sbolstandard.org/example/laci_inverter/Interface1">
-            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/laci_inverter/SubComponent2"/>
-            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/laci_inverter/SubComponent1"/>
-            <sbol:displayId>Interface1</sbol:displayId>
-         </sbol:Interface>
-      </sbol:hasInterface>
-      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/laci_inverter/SubComponent1"/>
-      <sbol:role rdf:resource="https://parts.igem.org/cgi/partsdb/pgroup.cgi?pgroup=inverter"/>
-      <sbol:hasNamespace rdf:resource="http://sbolstandard.org/example"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
-      <sbol:displayId>laci_inverter</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://www.partsregistry.org/BBa_J61120">
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000139"/>
-      <sbol:description>RBS2</sbol:description>
-      <sbol:name>BBa_J61101 RBS</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://www.partsregistry.org"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>BBa_J61120</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://identifiers.org/uniprot/P03023">
-      <sbol:role rdf:resource="https://identifiers.org/biomodels.sbo/SBO:0000020"/>
-      <sbol:description>LacI protein</sbol:description>
-      <sbol:name>LacI</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://identifiers.org/uniprot"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000252"/>
-      <sbol:displayId>P03023</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://www.partsregistry.org/BBa_J61101">
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000139"/>
-      <sbol:description>RBS1</sbol:description>
-      <sbol:name>BBa_J61101 RBS</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://www.partsregistry.org"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>BBa_J61101</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://identifiers.org/uniprot/P42212">
-      <sbol:role rdf:resource="https://identifiers.org/biomodels.sbo/SBO:0000011"/>
-      <sbol:description>GFP protein</sbol:description>
-      <sbol:name>GFP</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://identifiers.org/uniprot"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000252"/>
-      <sbol:displayId>P42212</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1">
-      <sbol:hasInterface>
-         <sbol:Interface rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/Interface1">
-            <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/ECK120029600">
-                  <sbol:instanceOf rdf:resource="http://www.partsregistry.org/ECK120029600"/>
-                  <sbol:displayId>ECK120029600</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_C0012">
-                  <sbol:instanceOf rdf:resource="http://www.partsregistry.org/BBa_C0012"/>
-                  <sbol:displayId>BBa_C0012</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_J61101">
-                  <sbol:instanceOf rdf:resource="http://www.partsregistry.org/BBa_J61101"/>
-                  <sbol:displayId>BBa_J61101</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_R0040">
-                  <sbol:instanceOf rdf:resource="http://www.partsregistry.org/BBa_R0040"/>
-                  <sbol:displayId>BBa_R0040</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:displayId>Interface1</sbol:displayId>
-         </sbol:Interface>
-      </sbol:hasInterface>
-      <sbol:description>TetR Inverter</sbol:description>
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000280"/>
-      <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/ECK120029600"/>
-      <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_R0040"/>
-      <sbol:hasNamespace rdf:resource="http://www.virtualparts.org/part"/>
-      <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_C0012"/>
-      <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_J61101"/>
-      <sbol:displayId>pIKELeftCassette_1</sbol:displayId>
-      <sbol:name>TetR Inverter</sbol:name>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-   </sbol:Component>
-   <sbol:Sequence rdf:about="http://www.virtualparts.org/part/ECK120033736">
+   <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_p15A_ori_001_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
-      <sbol:elements>ttcagccaaaaaacttaagaccgccggtcttgtccactaccttgcagtaatgcggtggacaggatcggcggttttcttttctcttctcaa</sbol:elements>
-      <sbol:hasNamespace rdf:resource="http://www.virtualparts.org/part"/>
-      <sbol:displayId>ECK120033736</sbol:displayId>
+      <sbol:elements>ttgagatcgttttggtctgcgcgtaatctcttgctctgaaaacgaaaaaaccgccttgcagggaggtttttcgaaggttctctgagctaccaactctttgaaccgaggtaactggcttgcaggagcgcagtcaccaaaacttgtcctttcagtttagccttaaccggcgcatgacttcaagactaactcctctaaatcaattaccagtggctgctgccagtggtgcttttgcatgtctttccgggttggactcaagacgatagttaccggataaggcgcagcggtcggactgaacggggggttcgtgcatacagtccagcttggagcgaactgcctacccggaactgagtgtcaggcgtggaatgagacaaacgcggccataacagcggaatgacaccggtaaaccgaaaggcaggaacaggagagcgcacgagggagccgccagggggaaacgcctggtatctttatagtcctgtcgggtttcgccaccactgatttgagcgtcagatttcgtgatgcttgtcagggggcggagcctatggaaa</sbol:elements>
+      <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:p15A_ori-001#seq"/>
+      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
+      <sbol:displayId>Part_p15A_ori_001_seq</sbol:displayId>
    </sbol:Sequence>
-   <sbol:Sequence rdf:about="http://www.virtualparts.org/part/BBa_J61120">
+   <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_MCS_220_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
-      <sbol:elements>aaagacaggacc</sbol:elements>
-      <sbol:hasNamespace rdf:resource="http://www.virtualparts.org/part"/>
-      <sbol:displayId>BBa_J61120</sbol:displayId>
+      <sbol:elements>aagcttctagagatctgcaggtcgacggatccccgggaattc</sbol:elements>
+      <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:MCS-220#seq"/>
+      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
+      <sbol:displayId>Part_MCS_220_seq</sbol:displayId>
    </sbol:Sequence>
-   <sbol:Sequence rdf:about="http://www.virtualparts.org/part/BBa_R0010">
+   <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_AmpR_017_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
-      <sbol:elements>tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcac</sbol:elements>
-      <sbol:hasNamespace rdf:resource="http://www.virtualparts.org/part"/>
-      <sbol:displayId>BBa_R0010</sbol:displayId>
+      <sbol:elements>atgagtattcaacatttccgtgtcgcccttattcccttttttgcggcattttgccttcctgtttttgctcacccagaaacgctggtgaaagtaaaagatgctgaagatcagttgggtgcacgagtgggttacatcgaactggatctcaacagcggtaagatccttgagagttttcgccccgaagaacgttttccaatgatgagcacttttaaagttctgctatgtggcgcggtattatcccgtgttgacgccgggcaagagcaactcggtcgccgcatacactattctcagaatgacttggttgagtactcaccagtcacagaaaagcatcttacggatggcatgacagtaagagaattatgcagtgctgccataaccatgagtgataacactgcggccaacttacttctgacaacgatcggaggaccgaaggagctaaccgcttttttgcacaacatgggggatcatgtaactcgccttgatcgttgggaaccggagctgaatgaagccataccaaacgacgagcgtgacaccacgatgcctgcagcaatggcaacaacgttgcgcaaactattaactggcgaactacttactctagcttcccggcaacaattaatagactggatggaggcggataaagttgcaggaccacttctgcgctcggcccttccggctggctggtttattgctgataaatctggagccggtgagcgtgggtctcgcggtatcattgcagcactggggccagatggtaagccctcccgtatcgtagttatctacacgacggggagtcaggcaactatggatgaacgaaatagacagatcgctgagataggtgcctcactgattaagcattggtaa</sbol:elements>
+      <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:AmpR-017#seq"/>
+      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
+      <sbol:displayId>Part_AmpR_017_seq</sbol:displayId>
    </sbol:Sequence>
-   <sbol:Sequence rdf:about="http://www.virtualparts.org/part/BBa_J61101">
+   <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_repB_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
-      <sbol:elements>aaagacaggacc</sbol:elements>
-      <sbol:hasNamespace rdf:resource="http://www.virtualparts.org/part"/>
-      <sbol:displayId>BBa_J61101</sbol:displayId>
+      <sbol:elements>atgggggtttcttttaatattatgtgtcctaatagtagcatttattcagatgaaaaatcaagggttttagtggacaagacaaaaagtggaaaagtgagaccatggagagaaaagaaaatcgctaatgttgattactttgaacttctgcatattcttgaatttaaaaaggctgaaagagtaaaagattgtgctgaaatattagagtataaacaaaatcgtgaaacaggcgaaagaaagttgtatcgagtgtggttttgtaaatccaggctttgtccaatgtgcaactggaggagagcaatgaaacatggcattcagtcacaaaaggttgttgctgaagttattaaacaaaagccaacagttcgttggttgtttctcacattaacagttaaaaatgtttatgatggcgaagaattaaataagagtttgtcagatatggctcaaggatttcgccgaatgatgcaatataaaaaaattaataaaaatcttgttggttttatgcgtgcaacggaagtgacaataaataataaagataattcttataatcagcacatgcatgtattggtatgtgtggaaccaacttattttaagaatacagaaaactacgtgaatcaaaaacaatggattcaattttggaaaaaggcaatgaaattagactatgatccaaatgtaaaagttcaaatgattcgaccgaaaaataaatataaatcggatatacaatcggcaattgacgaaactgcaaaatatcctgtaaaggatacggattttatgaccgatgatgaagaaaagaatttgaaacgtttgtctgatttggaggaaggtttacaccgtaaaaggttaatctcctatggtggtttgttaaaagaaatacataaaaaattaaaccttgatgacacagaagaaggcgatttgattcatacagatgatgacgaaaaagccgatgaagatggattttctattattgcaatgtggaattgggaacggaaaaattattttattaaagagtag</sbol:elements>
+      <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:repB#seq"/>
+      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
+      <sbol:displayId>Part_repB_seq</sbol:displayId>
    </sbol:Sequence>
-   <sbol:Sequence rdf:about="http://www.virtualparts.org/part/BBa_C0040">
+   <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_TcR_006_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
-      <sbol:elements>atgtccagattagataaaagtaaagtgattaacagcgcattagagctgcttaatgaggtcggaatcgaaggtttaacaacccgtaaactcgcccagaagctaggtgtagagcagcctacattgtattggcatgtaaaaaataagcgggctttgctcgacgccttagccattgagatgttagataggcaccatactcacttttgccctttagaaggggaaagctggcaagattttttacgtaataacgctaaaagttttagatgtgctttactaagtcatcgcgatggagcaaaagtacatttaggtacacggcctacagaaaaacagtatgaaactctcgaaaatcaattagcctttttatgccaacaaggtttttcactagagaatgcattatatgcactcagcgctgtggggcattttactttaggttgcgtattggaagatcaagagcatcaagtcgctaaagaagaaagggaaacacctactactgatagtatgccgccattattacgacaagctatcgaattatttgatcaccaaggtgcagagccagccttcttattcggccttgaattgatcatatgcggattagaaaaacaacttaaatgtgaaagtgggtccgctgcaaacgacgaaaactacgctttagtagcttaataa</sbol:elements>
-      <sbol:hasNamespace rdf:resource="http://www.virtualparts.org/part"/>
-      <sbol:displayId>BBa_C0040</sbol:displayId>
+      <sbol:elements>gtgaatacatcctattcacaatcgaatttacgacacaaccaaattttaatttggctttgcattttatctttttttagcgtattaaatgaaatggttttgaacgtctcattacctgatattgcaaatgattttaataaaccacctgcgagtacaaactgggtgaacacagcctttatgttaaccttttccattggaacagctgtatatggaaagctatctgatcaattaggcatcaaaaggttactcctatttggaattataataaattgtttcgggtcggtaattgggtttgttggccattctttcttttccttacttattatggctcgttttattcaaggggctggtgcagctgcatttccagcactcgtaatggttgtagttgcgcgctatattccaaaggaaaataggggtaaagcatttggtcttattggatcgatagtagccatgggagaaggagtcggtccagcgattggtggaatgatagcccattatattcattggtcctatcttctactcattcctatgataacaattatcactgttccgtttcttatgaaattattaaagaaagaagtaaggataaaaggtcattttgatatcaaaggaattatactaatgtctgtaggcattgtattttttatgttgtttacaacatcatatagcatttcttttcttatcgttagcgtgctgtcattcctgatatttgtaaaacatatcaggaaagtaacagatccttttgttgatcccggattagggaaaaatataccttttatgattggagttctttgtgggggaattatatttggaacagtagcagggtttgtctctatggttccttatatgatgaaagatgttcaccagctaagtactgccgaaatcggaagtgtaattattttccctggaacaatgagtgtcattattttcggctacattggtgggatacttgttgatagaagaggtcctttatacgtgttaaacatcggagttacatttctttctgttagctttttaactgcttcctttcttttagaaacaacatcatggttcatgacaattataatcgtatttgttttaggtgggctttcgttcaccaaaacagttatatcaacaattgtttcaagtagcttgaaacagcaggaagctggtgctggaatgagtttgcttaactttaccagctttttatcagagggaacaggtattgcaattgtaggtggtttattatccatacccttacttgatcaaaggttgttacctatggaagttgatcagtcaacttatctgtatagtaatttgttattacttttttcaggaatcattgtcattagttggctggttaccttgaatgtatataaacattctcaaagggatttctaa</sbol:elements>
+      <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:TcR-006#seq"/>
+      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
+      <sbol:displayId>Part_TcR_006_seq</sbol:displayId>
    </sbol:Sequence>
-   <sbol:Sequence rdf:about="http://www.virtualparts.org/part/ECK120029600">
+   <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_AmpR_promoter_009_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
-      <sbol:elements>ttcagccaaaaaacttaagaccgccggtcttgtccactaccttgcagtaatgcggtggacaggatcggcggttttcttttctcttctcaa</sbol:elements>
-      <sbol:hasNamespace rdf:resource="http://www.virtualparts.org/part"/>
-      <sbol:displayId>ECK120029600</sbol:displayId>
+      <sbol:elements>cgcggaacccctatttgtttatttttctaaatacattcaaatatgtatccgctcatgagacaataaccctgataaatgcttcaataatattgaaaaaggaagagt</sbol:elements>
+      <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:AmpR_promoter-009#seq"/>
+      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
+      <sbol:displayId>Part_AmpR_promoter_009_seq</sbol:displayId>
    </sbol:Sequence>
-   <sbol:Sequence rdf:about="http://www.virtualparts.org/part/BBa_C0012">
-      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
-      <sbol:elements>atggtgaatgtgaaaccagtaacgttatacgatgtcgcagagtatgccggtgtctcttatcagaccgtttcccgcgtggtgaaccaggccagccacgtttctgcgaaaacgcgggaaaaagtggaagcggcgatggcggagctgaattacattcccaaccgcgtggcacaacaactggcgggcaaacagtcgttgctgattggcgttgccacctccagtctggccctgcacgcgccgtcgcaaattgtcgcggcgattaaatctcgcgccgatcaactgggtgccagcgtggtggtgtcgatggtagaacgaagcggcgtcgaagcctgtaaagcggcggtgcacaatcttctcgcgcaacgcgtcagtgggctgatcattaactatccgctggatgaccaggatgccattgctgtggaagctgcctgcactaatgttccggcgttatttcttgatgtctctgaccagacacccatcaacagtattattttctcccatgaagacggtacgcgactgggcgtggagcatctggtcgcattgggtcaccagcaaatcgcgctgttagcgggcccattaagttctgtctcggcgcgtctgcgtctggctggctggcataaatatctcactcgcaatcaaattcagccgatagcggaacgggaaggcgactggagtgccatgtccggttttcaacaaaccatgcaaatgctgaatgagggcatcgttcccactgcgatgctggttgccaacgatcagatggcgctgggcgcaatgcgcgccattaccgagtccgggctgcgcgttggtgcggatatctcggtagtgggatacgacgataccgaagacagctcatgttatatcccgccgttaaccaccatcaaacaggattttcgcctgctggggcaaaccagcgtggaccgcttgctgcaactctctcagggccaggcggtgaagggcaatcagctgttgcccgtctcactggtgaaaagaaaaaccaccctggcgcccaatacgcaaaccgcctctccccgcgcgttggccgattcattaatgcagctggcacgacaggtttcccgactggaaagcgggcaggctgcaaacgacgaaaactacgctttagtagcttaataa</sbol:elements>
-      <sbol:hasNamespace rdf:resource="http://www.virtualparts.org/part"/>
-      <sbol:displayId>BBa_C0012</sbol:displayId>
-   </sbol:Sequence>
-   <sbol:Sequence rdf:about="http://www.virtualparts.org/part/BBa_R0040">
-      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
-      <sbol:elements>tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcac</sbol:elements>
-      <sbol:hasNamespace rdf:resource="http://www.virtualparts.org/part"/>
-      <sbol:displayId>BBa_R0040</sbol:displayId>
-   </sbol:Sequence>
-   <sbol:Sequence rdf:about="http://www.virtualparts.org/part/BBa_E0040">
-      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
-      <sbol:elements>atgcgtaaaggagaagaacttttcactggagttgtcccaattcttgttgaattagatggtgatgttaatgggcacaaattttctgtcagtggagagggtgaaggtgatgcaacatacggaaaacttacccttaaatttatttgcactactggaaaactacctgttccatggccaacacttgtcactactttcggttatggtgttcaatgctttgcgagatacccagatcatatgaaacagcatgactttttcaagagtgccatgcccgaaggttatgtacaggaaagaactatatttttcaaagatgacgggaactacaagacacgtgctgaagtcaagtttgaaggtgatacccttgttaatagaatcgagttaaaaggtattgattttaaagaagatggaaacattcttggacacaaattggaatacaactataactcacacaatgtatacatcatggcagacaaacaaaagaatggaatcaaagttaacttcaaaattagacacaacattgaagatggaagcgttcaactagcagaccattatcaacaaaatactccaattggcgatggccctgtccttttaccagacaaccattacctgtccacacaatctgccctttcgaaagatcccaacgaaaagagagaccacatggtccttcttgagtttgtaacagctgctgggattacacatggcatggatgaactatacaaataataa</sbol:elements>
-      <sbol:hasNamespace rdf:resource="http://www.virtualparts.org/part"/>
-      <sbol:displayId>BBa_E0040</sbol:displayId>
-   </sbol:Sequence>
-   <sbol:Sequence rdf:about="http://www.virtualparts.org/part/BBa_J61130">
-      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
-      <sbol:elements>aaagaaacgaca</sbol:elements>
-      <sbol:hasNamespace rdf:resource="http://www.virtualparts.org/part"/>
-      <sbol:displayId>BBa_J61130</sbol:displayId>
-   </sbol:Sequence>
-   <rdf:Description rdf:about="http://sbolstandard.org/example/tetr_inverter/TF">
-      <sbol:displayId>TF</sbol:displayId>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://sbolstandard.org/example/laci_inverter/promoter">
-      <sbol:displayId>promoter</sbol:displayId>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://sbolstandard.org/example/laci_inverter/TF">
-      <sbol:displayId>TF</sbol:displayId>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://sbolstandard.org/example/tetr_inverter/promoter">
-      <sbol:displayId>promoter</sbol:displayId>
-   </rdf:Description>
 </rdf:RDF>

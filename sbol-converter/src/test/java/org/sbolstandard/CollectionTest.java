@@ -34,7 +34,10 @@ public class CollectionTest {
 	@Test
 	public void TestSBOL2Collection() throws Exception {
 		//runTestSuiteFile(new File("../SBOLTestSuite/sbol2/Collection.xml"));
-		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/sbol2_ic/CollectionOutput.xml"));
+		//TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/sbol2_ic/CollectionOutput.xml"));
+		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/sbol2/labhost_Bacillus_subtilis.xml"));
+		
+		
 		
 	}
 		

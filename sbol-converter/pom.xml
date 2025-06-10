@@ -43,18 +43,18 @@
     		<dependency>
 			<groupId>org.sbolstandard</groupId>
 			<artifactId>libSBOLj3</artifactId>
-			<version>1.0.1-SNAPSHOT</version>
+			<version>1.0.2-SNAPSHOT</version>
 		</dependency>
 		
 <dependency>
 			<groupId>org.apache.jena</groupId>
 			<artifactId>jena-base</artifactId>
-			<version>4.7.0</version>
+			<version>5.4.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.jena</groupId>
 			<artifactId>jena-core</artifactId>
-			<version>4.7.0</version>
+			<version>5.4.0</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.jena/jena -->
 		<dependency>

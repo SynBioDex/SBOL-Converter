@@ -307,6 +307,7 @@ public class Util {
 			throws SBOLGraphException {
 		output.setName(input.getName());
 		output.setDescription(input.getDescription());
+		// TODO: Fix me: 
 		output.setWasDerivedFrom(toList(input.getWasDerivedFroms()));
 		// TODO: FIX ME
 		// output.setWasGeneratedBy(toList(input.getWasGeneratedBys()));
@@ -324,18 +325,24 @@ public class Util {
 			throws SBOLGraphException, SBOLValidationException {
 		output.setName(input.getName());
 		output.setDescription(input.getDescription());
-		if (input.getWasDerivedFrom() != null) {
+		/*TODO: FIX ME
+		 * if (input.getWasDerivedFrom() != null) {
 			output.setWasDerivedFroms(toSet(input.getWasDerivedFrom()));
-		}
+		}*/
 		// TODO: FIX ME
 		// output.setWasGeneratedBy(toSet(input.getWasGeneratedBys()));
 	}
 
+	private static String convertSOUri_2_to_3(String soUri)
+	{
+		String uriString = soUri.toString().toLowerCase().replace("so/", "").replace("so:", "SO:");
+		return uriString.replace("http", "https");
+	}
+	
 	public static List<URI> convertRoles2_to_3(Set<URI> roles) {
 		List<URI> convertedRoles = new ArrayList<URI>();
 		for (URI role : roles) {
-			String roleString = role.toString().replace("so/", "");
-			roleString = roleString.replace("http", "https");
+			String roleString=convertSOUri_2_to_3(role.toString());
 			convertedRoles.add(URI.create(roleString));
 		}
 		return convertedRoles;
@@ -344,7 +351,7 @@ public class Util {
 	public static Set<URI> convertRoles3_to_2(List<URI> roles) {
 		Set<URI> convertedRoles = new HashSet<URI>();
 		for (URI role : roles) {
-			String roleString = role.toString().replace("SO:", "so/SO:");
+			String roleString = role.toString().toLowerCase().replace("so:", "so/SO:");
 			roleString = roleString.replace("https", "http");
 			convertedRoles.add(URI.create(roleString));
 		}
@@ -416,7 +423,15 @@ public class Util {
 		} else if (sbol2Type.equals(ComponentDefinition.COMPLEX)) {
 			return ComponentType.NoncovalentComplex.getUri();
 		} else {
-			throw new SBOLGraphException("Unknown SBOL2 ComponentDefinition type: " + sbol2Type);
+			String sbol2TypeString = sbol2Type.toString().toLowerCase();
+			if (sbol2TypeString.contains("so/so:")) {
+				sbol2TypeString = convertSOUri_2_to_3(sbol2TypeString);
+				return URI.create(sbol2TypeString);
+			}
+			else
+			{
+				return sbol2Type; // return the original URI if it does not match any known type
+			}
 		}
 	}
 
@@ -503,7 +518,7 @@ public class Util {
 		// TODO Auto-generated method stub
 		List<URI> convertedTypes = new ArrayList<URI>();
 		for (URI type : types) {
-			String typeString = type.toString().replace("/biomodels.sbo", "");
+			String typeString = type.toString().toLowerCase().replace("/biomodels.sbo", "");
 			
 			// WARNING! BELOW IS SHOULD NOT BE NECESSARY ACCORDING TO SBOL3 SPECIFICATION
 			typeString = typeString.replace("http", "https");

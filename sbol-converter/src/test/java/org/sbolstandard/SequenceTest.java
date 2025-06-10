@@ -44,7 +44,8 @@ public class SequenceTest {
 		rbs.setRoles(Arrays.asList(Role.RBS));
 		
 		Sequence seq=doc.createSequence("B0034_seq");
-		seq.setEncoding(Encoding.NucleicAcid);		
+		seq.setEncoding(Encoding.NucleicAcid);
+		seq.setElements("AGGAGG");
 		String output = SBOLIO.write(doc, SBOLFormat.TURTLE);
 		System.out.println(output);
 
