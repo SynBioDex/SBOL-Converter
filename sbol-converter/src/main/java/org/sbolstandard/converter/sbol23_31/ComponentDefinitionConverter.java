@@ -1,26 +1,22 @@
 package org.sbolstandard.converter.sbol23_31;
 
 
+
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.sound.midi.Sequence;
-
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.core2.ComponentDefinition;
-import org.sbolstandard.core2.Model;
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core2.SequenceAnnotation;
 import org.sbolstandard.core2.SequenceConstraint;
 import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.SBOLDocument;
-import org.sbolstandard.core3.entity.SubComponent;
-import org.sbolstandard.core3.io.SBOLFormat;
-import org.sbolstandard.core3.io.SBOLIO;
 import org.sbolstandard.core3.util.SBOLGraphException;
 
-public class ComponentDefinitionConverter implements EntityConverter<ComponentDefinition, Component>  {
+public class ComponentDefinitionConverter implements EntityConverter<ComponentDefinition, Component> {
+
 
     @Override
     public Component convert(SBOLDocument doc, ComponentDefinition input) throws SBOLGraphException, SBOLValidationException { 
@@ -79,6 +75,6 @@ public class ComponentDefinitionConverter implements EntityConverter<ComponentDe
         	seqconstConverter.convert(doc, comp, input, sc);
         }
 
-        return comp;
-    }
+		return comp;
+	}
 }

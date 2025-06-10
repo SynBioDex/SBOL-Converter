@@ -12,6 +12,7 @@ import org.sbolstandard.core3.entity.Location;
 import org.sbolstandard.core3.entity.Range;
 import org.sbolstandard.core3.entity.Cut;
 import org.sbolstandard.core3.entity.EntireSequence;
+import org.sbolstandard.core3.entity.Identified;
 //import org.sbolstandard.core3.entity.Sequence;
 import org.sbolstandard.core3.entity.SequenceFeature;
 import org.sbolstandard.core3.util.SBOLGraphException;
@@ -21,7 +22,7 @@ import org.sbolstandard.core3.vocabulary.Orientation;
 public class SequenceFeatureToAnnotationConverter implements ChildEntityConverter<SequenceFeature, SequenceAnnotation>{
 
     @Override
-    public SequenceAnnotation convert(SBOLDocument doc, org.sbolstandard.core2.Identified parent, SequenceFeature seqf) throws SBOLGraphException, SBOLValidationException {    	
+    public SequenceAnnotation convert(SBOLDocument doc, org.sbolstandard.core2.Identified parent, Identified inputParent, SequenceFeature seqf) throws SBOLGraphException, SBOLValidationException {    	
     	
     	// SBOL3 SequenceFeature will be mapped to SBOL2 SequenceAnnotation
     	ComponentDefinition parentCompDef = (ComponentDefinition) parent;

@@ -1,5 +1,7 @@
 package org.sbolstandard.converter;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.net.URI;
 import java.util.*;
 import java.util.regex.Matcher;
@@ -7,16 +9,13 @@ import java.util.regex.Pattern;
 
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.EDAMOntology;
-import org.sbolstandard.core2.Model;
 import org.sbolstandard.core2.RestrictionType;
+import org.sbolstandard.core2.SBOLValidate;
 import org.sbolstandard.core2.SBOLValidationException;
-import org.sbolstandard.core2.SequenceAnnotation;
 import org.sbolstandard.core2.SystemsBiologyOntology;
 import org.sbolstandard.core3.entity.Identified;
-import org.sbolstandard.core3.entity.Location;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.Sequence;
-import org.sbolstandard.core3.entity.SequenceFeature;
 import org.sbolstandard.core3.entity.TopLevel;
 import org.sbolstandard.core3.util.SBOLGraphException;
 import org.sbolstandard.core3.vocabulary.ComponentType;
@@ -25,10 +24,12 @@ import org.sbolstandard.core3.vocabulary.RestrictionType.ConstraintRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.OrientationRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.SequentialRestriction;
-import org.sbolstandard.examples.Sbol2Terms.model;
 import org.sbolstandard.core3.entity.Component;
 
 public class Util {
+	
+	
+
 	private static final String versionPattern = "[0-9]+[\\p{L}0-9_\\.-]*";
 
 	private static final Pattern versionPatternPat = Pattern.compile(versionPattern);
@@ -526,6 +527,31 @@ public class Util {
 		}
 		return convertedTypes;
 	}
+	public static Set<URI> convertToSBOL2_SBO_URIs(List<URI> types) throws SBOLGraphException {
+		Set<URI> convertedTypes = new HashSet<URI>();
+		for (URI type : types) {
+			System.out.println(type.toString());
+			if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.Inhibition.getUri())) {
+				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000169"));
+			} else if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.Stimulation.getUri())) {
+				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000170"));
+			} else if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.BiochemicalReaction.getUri())) {
+				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000176"));
+			} else if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.NonCovalentBinding.getUri())) {
+				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000177"));
+			} else if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.Degradation.getUri())) {
+				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000179"));
+			} else if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.GeneticProduction.getUri())) {
+				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000589"));
+			} else if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.Control.getUri())) {
+				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000168"));
+			} else {
+				throw new SBOLGraphException("Unknown SBOL3 Interaction type: " + type);
+				
+			}
+		}
+		return convertedTypes;
+	}
 	
 	public static URI getSBOL3SequenceEncodingType(URI sbol2EncodingType) throws SBOLGraphException {
 		if (sbol2EncodingType.equals(org.sbolstandard.core2.Sequence.IUPAC_DNA)) {
@@ -600,5 +626,72 @@ public class Util {
 		}
 		return false;
 	}
+	public static boolean isSBOL2DocumentCompliant(String fileName) {
+		ByteArrayOutputStream baosOutput = new ByteArrayOutputStream();
+		PrintStream outputStream = new PrintStream(baosOutput);
+
+		ByteArrayOutputStream baosError = new ByteArrayOutputStream();
+		PrintStream errorStream = new PrintStream(baosError);
+		
+		
+		String URIPrefix = "";
+		Boolean complete = false;
+		Boolean compliant = true;
+		Boolean bestPractice = true;
+		Boolean typesInURI = false;
+		String version = null;
+		Boolean keepGoing = false;
+		String compareFile = "";
+		String compareFileName = null;
+		String mainFileName = null;
+		String topLevelURIStr = "";
+		boolean genBankOut = false;
+		boolean sbolV1out = false;
+		boolean fastaOut = false;
+		boolean snapGeneOut = false;
+		boolean gff3Out = false;
+		boolean csvOut = false;
+		String outputFile = "output/OUTPUT.xml";
+		boolean showDetail = false;
+		boolean noOutput = false;
+		boolean changeURIPrefix = false;
+		boolean enumerate = false;
+		
+		System.out.println("VALIDATING SBOLDocument...");
+
+		SBOLValidate.validate(outputStream, errorStream,
+				fileName, URIPrefix, null, complete, compliant, bestPractice,
+				typesInURI, version, keepGoing, compareFile, compareFileName, mainFileName, topLevelURIStr, genBankOut,
+				sbolV1out, fastaOut, snapGeneOut, gff3Out, csvOut, outputFile, showDetail, noOutput, changeURIPrefix,
+				enumerate);
+
+		//String outputStr= baosOutput.toString();
+		String errorStr = baosError.toString();
+		if(errorStr.isEmpty()) {
+			return true;
+		}
+		return false;
+		
+	}
+
+	// Helper method to find an Identified object by its displayId in a list
+	public static <T extends Identified> T getByDisplayId(List<T> list, String displayId) throws SBOLGraphException {
+		for (T item : list) {
+			if (item.getDisplayId().equals(displayId)) {
+				return item;
+			}
+		}
+		return null; // Return null if no item with the given displayId is found
+	}
+	
+	// Helper method to find an Identified object by its displayId in a list
+		public static <T extends Identified> T getByUri(List<T> list, URI uri) throws SBOLGraphException {
+			for (T item : list) {
+				if (item.getUri().equals(uri)) {
+					return item;
+				}
+			}
+			return null; // Return null if no item with the given displayId is found
+		}
 
 }

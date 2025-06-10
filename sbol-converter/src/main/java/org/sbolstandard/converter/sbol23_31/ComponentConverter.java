@@ -7,17 +7,14 @@ import java.util.List;
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.core2.AccessType;
 import org.sbolstandard.core2.RoleIntegrationType;
-import org.sbolstandard.core3.entity.Constraint;
-import org.sbolstandard.core3.entity.SBOLDocument;
-import org.sbolstandard.core3.entity.SubComponent;
-import org.sbolstandard.core3.io.SBOLFormat;
-import org.sbolstandard.core3.io.SBOLIO;
-import org.sbolstandard.core3.util.SBOLGraphException;
-import org.sbolstandard.core3.vocabulary.RoleIntegration;
 import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Feature;
 import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.Interface;
+import org.sbolstandard.core3.entity.SBOLDocument;
+import org.sbolstandard.core3.entity.SubComponent;
+import org.sbolstandard.core3.util.SBOLGraphException;
+import org.sbolstandard.core3.vocabulary.RoleIntegration;
 
 public class ComponentConverter implements ChildEntityConverter<org.sbolstandard.core2.Component, Feature> {
 
@@ -28,8 +25,8 @@ public class ComponentConverter implements ChildEntityConverter<org.sbolstandard
 		if (input.getMapsTos() != null && !input.getMapsTos().isEmpty()) {
 			// TODO
 			throw new SBOLGraphException("Component with mapsTo not supported yet");
-		} 
-		else {	//Create an SBOL3 SubComponent		
+		}
+		else {	//Create an SBOL3 SubComponent
 			URI sbol3URI = Util.createSBOL3Uri(input.getIdentity());
 			URI sbol3InstanceOfUri = Util.createSBOL3Uri(input.getDefinitionURI());
 			SubComponent resultSC = parentComponent.createSubComponent(sbol3URI, sbol3InstanceOfUri);
@@ -51,18 +48,18 @@ public class ComponentConverter implements ChildEntityConverter<org.sbolstandard
 			result = resultSC;
 		}
 		Util.copyIdentified(input, result);
-		
+
 		if (input.getAccess()==AccessType.PUBLIC)
 		{
 			Interface sbol3Interface = parentComponent.getInterface();
 			if(sbol3Interface == null) {
 				sbol3Interface=parentComponent.createInterface();
 			}
-			
+
 				List<Feature> features=sbol3Interface.getNonDirectionals();
 				if (features==null)
 				{
-					features=new ArrayList<Feature>();
+					features=new ArrayList<>();
 				}
 				features.add(result);
 				sbol3Interface.setNonDirectionals(features);
