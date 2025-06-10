@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.sbolstandard.converter.Util;
-import org.sbolstandard.core2.ExperimentalData;
 import org.sbolstandard.core3.entity.Experiment;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.util.SBOLGraphException;

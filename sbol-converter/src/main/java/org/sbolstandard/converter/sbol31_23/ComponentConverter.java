@@ -50,15 +50,14 @@ public class ComponentConverter implements EntityConverter<Component, ComponentD
 			SubComponentToComponentConverter subCompConverter = new SubComponentToComponentConverter();
 			for (SubComponent subComp : subComponents) {
 				// Convert each SubComponent to SBOL2
-				subCompConverter.convert(sbol2Doc, compDef, subComp);
+				subCompConverter.convert(sbol2Doc, compDef, component, subComp);
 
 				// If the SubComponent contains locations, try converting to SequenceAnnotation
-				// (not fully implemented)
 				List<Location> locations = subComp.getLocations();
 				if (locations != null && !locations.isEmpty()) {
 					SubComponentToAnnotationConverter subcToAnnoConverter = new SubComponentToAnnotationConverter();
-					subcToAnnoConverter.convert(sbol2Doc, compDef, subComp);
-					System.out.println("THIS IS NOT IMPLEMENTED YET");
+					subcToAnnoConverter.convert(sbol2Doc, compDef, component, subComp);
+					//System.out.println("THIS IS NOT IMPLEMENTED YET");
 				}
 			}
 		}
@@ -68,7 +67,7 @@ public class ComponentConverter implements EntityConverter<Component, ComponentD
 		if (constraints != null) {
 			ConstraintConverter converter = new ConstraintConverter();
 			for (Constraint constraint : constraints) {
-				converter.convert(sbol2Doc, compDef, constraint);
+				converter.convert(sbol2Doc, compDef, component, constraint);
 			}
 		}
 
@@ -77,7 +76,7 @@ public class ComponentConverter implements EntityConverter<Component, ComponentD
 		if (sequenceFeatures != null && !sequenceFeatures.isEmpty()) {
 			for (SequenceFeature sf : sequenceFeatures) {
 				SequenceFeatureToAnnotationConverter sfConverter = new SequenceFeatureToAnnotationConverter();
-				sfConverter.convert(sbol2Doc, compDef, sf);
+				sfConverter.convert(sbol2Doc, compDef, component, sf);
 			}
 		}
 

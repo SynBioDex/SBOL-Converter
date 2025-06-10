@@ -18,7 +18,7 @@ import org.sbolstandard.core3.entity.Constraint;
 public class ConstraintConverter implements ChildEntityConverter<Constraint, org.sbolstandard.core2.SequenceConstraint>  {
 
 	@Override
-	public SequenceConstraint convert(SBOLDocument document, Identified parent, Constraint input)
+	public SequenceConstraint convert(SBOLDocument document, Identified parent, org.sbolstandard.core3.entity.Identified constraintParent, Constraint input)
 			throws SBOLGraphException, SBOLValidationException, SBOLValidationException {
 				
 		ComponentDefinition sbol2CD = (ComponentDefinition) parent;
