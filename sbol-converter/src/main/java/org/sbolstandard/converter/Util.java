@@ -24,6 +24,7 @@ import org.sbolstandard.core3.vocabulary.RestrictionType.ConstraintRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.OrientationRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.SequentialRestriction;
+import org.sbolstandard.core3.api.SBOLAPI;
 import org.sbolstandard.core3.entity.Component;
 
 public class Util {
@@ -239,7 +240,18 @@ public class Util {
 		// In case of URI of type "dynamic_measurement.mdx"
 		// TODO: better check
 		if (sbol3Uri == null)
-			return URI.create(inputUri.toString());
+		{
+			String inputUriString = inputUri.toString();
+			if (!inputUriString.toLowerCase().startsWith("urn") && !inputUriString.contains("://"))
+			{
+				
+				return SBOLAPI.append("https://sbolstandard.org/SBOL3-Converter", inputUriString);
+			}
+			else
+			{
+				return URI.create(inputUri.toString());
+			}
+		}
 
 		return URI.create(sbol3Uri);
 	}
