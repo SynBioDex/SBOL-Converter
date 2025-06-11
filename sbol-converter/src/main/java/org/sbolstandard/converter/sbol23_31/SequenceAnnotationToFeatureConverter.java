@@ -41,7 +41,15 @@ public class SequenceAnnotationToFeatureConverter implements ChildEntityConverte
 
 		// Will hold the resulting SBOL3 SequenceFeature object.
 		SequenceFeature seqFeature = null;
-
+		if (SBOLDocumentConverter.isCompliant()){
+			// Create a new SequenceFeature in the parent Component.
+            seqFeature = sbol3ParentComp.createSequenceFeature(Util.createSBOL3Uri(seqa));
+        } else {
+            // For non-compliant SBOL3, create a SequenceFeature with no URI.
+            seqFeature = sbol3ParentComp.createSequenceFeature(seqa.getDisplayId());
+        }
+		
+		
 		// Iterate over all locations defined in the SBOL2 SequenceAnnotation.
 		for (org.sbolstandard.core2.Location sbol2Loc : seqa.getLocations()) {
 			Location sbol3Location = null;
@@ -54,42 +62,33 @@ public class SequenceAnnotationToFeatureConverter implements ChildEntityConverte
 			// Handle Range location type (start and end positions).
 			if (sbol2Loc instanceof org.sbolstandard.core2.Range) {
 				org.sbolstandard.core2.Range sbol2range = (org.sbolstandard.core2.Range) sbol2Loc;
-				if (seqFeature == null) {
-
-					// For the first location, create a new SequenceFeature in the parent Component.
-					seqFeature = sbol3ParentComp.createSequenceFeature(sbol2range.getStart(), sbol2range.getEnd(),
-							sbol3Sequence);
-					sbol3Location = seqFeature.getLocations().get(seqFeature.getLocations().size() - 1);
-
-					// seqFeature.setOrientation(null); // Orientation will be set below.
-				} else {
-					// For additional locations, add another range to the existing SequenceFeature.
-					sbol3Location = seqFeature.createRange(sbol2range.getStart(), sbol2range.getEnd(), sbol3Sequence);
+				
+				if (SBOLDocumentConverter.isCompliant()){
+					sbol3Location = seqFeature.createRange(Util.createSBOL3Uri(sbol2Loc), sbol2range.getStart(), sbol2range.getEnd(), sbol3Sequence);
 				}
+				else {
+					sbol3Location = seqFeature.createRange(sbol2Loc.getDisplayId(), sbol2range.getStart(), sbol2range.getEnd(), sbol3Sequence);								
+				}				
 			}
 			// Handle Cut location type (single cut site).
 			else if (sbol2Loc instanceof org.sbolstandard.core2.Cut) {
 				org.sbolstandard.core2.Cut sbol2cut = (org.sbolstandard.core2.Cut) sbol2Loc;
-				if (seqFeature == null) {
-					// Create SequenceFeature for the cut location.
-					seqFeature = sbol3ParentComp.createSequenceFeature(sbol2cut.getAt(), sbol3Sequence);
-					sbol3Location = seqFeature.getLocations().get(seqFeature.getLocations().size() - 1);
-				} else {
-					// Add additional cut location to the SequenceFeature.
-					sbol3Location = seqFeature.createCut(sbol2cut.getAt(), sbol3Sequence);
+				
+				if (SBOLDocumentConverter.isCompliant()){
+					sbol3Location = seqFeature.createCut(Util.createSBOL3Uri(sbol2Loc), sbol2cut.getAt(), sbol3Sequence);
 				}
+				else {
+					sbol3Location = seqFeature.createCut(sbol2Loc.getDisplayId(), sbol2cut.getAt(), sbol3Sequence);								
+				}								
 			}
 			// Handle GenericLocation type (whole sequence or undefined region).
 			else if (sbol2Loc instanceof org.sbolstandard.core2.GenericLocation) {
-				if (seqFeature == null) {
-					// Create SequenceFeature for the whole sequence.
-					seqFeature = sbol3ParentComp.createSequenceFeature(sbol3Sequence);
-					sbol3Location = seqFeature.getLocations().get(seqFeature.getLocations().size() - 1);
-				} else {
-					// Add the entire sequence as another location.
-					sbol3Location = seqFeature.createEntireSequence(sbol3Sequence);
-
+				if (SBOLDocumentConverter.isCompliant()){
+					sbol3Location = seqFeature.createEntireSequence(Util.createSBOL3Uri(sbol2Loc), sbol3Sequence);
 				}
+				else {
+					sbol3Location = seqFeature.createEntireSequence(sbol2Loc.getDisplayId(),  sbol3Sequence);								
+				}							
 			}
 			// Set the orientation for the SequenceFeature after each location is processed.
 			if (sbol3Location != null) {

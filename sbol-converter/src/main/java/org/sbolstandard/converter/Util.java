@@ -92,6 +92,7 @@ public class Util {
 	}
 
 	// TODO: should configure whether you want minimal or maximal
+	/* GM Commented on 2025-6-10
 	public static URI extractNameSpaceSBOL3Uri(URI uri) {
 		try {
 			java.net.URL parsedUrl = new java.net.URL(uri.toString());
@@ -112,7 +113,7 @@ public class Util {
 			return null;
 		}
 	}
-
+*/
 	// TODO: what if the collection is a collection + version
 	public static String extractCollectionSBOL3Uri(String uri, String namespace, String displayId) {
 		String collection;
@@ -326,25 +327,31 @@ public class Util {
 			throws SBOLGraphException, SBOLValidationException {
 		output.setName(input.getName());
 		output.setDescription(input.getDescription());
-		/*TODO: FIX ME
-		 * if (input.getWasDerivedFrom() != null) {
+		 if (input.getWasDerivedFrom() != null) {
 			output.setWasDerivedFroms(toSet(input.getWasDerivedFrom()));
-		}*/
+		}
 		// TODO: FIX ME
 		// output.setWasGeneratedBy(toSet(input.getWasGeneratedBys()));
 	}
 
-	private static String convertSOUri_2_to_3(String soUri)
+	private static URI convertSOUri_2_to_3(URI soUri)
 	{
 		String uriString = soUri.toString().toLowerCase().replace("so/", "").replace("so:", "SO:");
-		return uriString.replace("http", "https");
+		uriString= uriString.replace("http", "https");
+		return URI.create(uriString);
+	}
+	
+	private static URI convertSOUri_3_to_2(URI soUri)
+	{
+		String soUriString = soUri.toString().toLowerCase().replace("so:", "so/SO:");
+		soUriString= soUriString.replace("https", "http");
+		return URI.create(soUriString);
 	}
 	
 	public static List<URI> convertRoles2_to_3(Set<URI> roles) {
 		List<URI> convertedRoles = new ArrayList<URI>();
 		for (URI role : roles) {
-			String roleString=convertSOUri_2_to_3(role.toString());
-			convertedRoles.add(URI.create(roleString));
+			convertedRoles.add(convertSOUri_2_to_3(role));
 		}
 		return convertedRoles;
 	}
@@ -352,9 +359,7 @@ public class Util {
 	public static Set<URI> convertRoles3_to_2(List<URI> roles) {
 		Set<URI> convertedRoles = new HashSet<URI>();
 		for (URI role : roles) {
-			String roleString = role.toString().toLowerCase().replace("so:", "so/SO:");
-			roleString = roleString.replace("https", "http");
-			convertedRoles.add(URI.create(roleString));
+			convertedRoles.add(convertSOUri_3_to_2(role));
 		}
 		return convertedRoles;
 	}
@@ -424,10 +429,8 @@ public class Util {
 		} else if (sbol2Type.equals(ComponentDefinition.COMPLEX)) {
 			return ComponentType.NoncovalentComplex.getUri();
 		} else {
-			String sbol2TypeString = sbol2Type.toString().toLowerCase();
-			if (sbol2TypeString.contains("so/so:")) {
-				sbol2TypeString = convertSOUri_2_to_3(sbol2TypeString);
-				return URI.create(sbol2TypeString);
+			if (sbol2Type.toString().toLowerCase().contains("so/so:")) {
+				return convertSOUri_2_to_3(sbol2Type);
 			}
 			else
 			{
@@ -458,8 +461,15 @@ public class Util {
 			return ComponentDefinition.COMPLEX;
 		} else if (sbol3Type.equals(ComponentType.FunctionalEntity.getUri())) {
 			return ComponentDefinition.COMPLEX;
-		} else {
-			throw new SBOLGraphException("Unknown SBOL3 Component type: " + sbol3Type);
+		} 
+		else {
+			if (sbol3Type.toString().toLowerCase().contains("so:")) {
+				return convertSOUri_3_to_2(sbol3Type);
+			}
+			else
+			{
+				return sbol3Type; // return the original URI if it does not match any known type
+			}
 		}
 	}
 
@@ -515,11 +525,12 @@ public class Util {
 		return sbol3seq;
 	}
 
+	
 	public static List<URI> convertToSBOL3_SBO_URIs(Set<URI> types) {
 		// TODO Auto-generated method stub
 		List<URI> convertedTypes = new ArrayList<URI>();
 		for (URI type : types) {
-			String typeString = type.toString().toLowerCase().replace("/biomodels.sbo", "");
+			String typeString = type.toString().toLowerCase().replace("/biomodels.sbo", "").replace("sbo:", "SBO:");
 			
 			// WARNING! BELOW IS SHOULD NOT BE NECESSARY ACCORDING TO SBOL3 SPECIFICATION
 			typeString = typeString.replace("http", "https");

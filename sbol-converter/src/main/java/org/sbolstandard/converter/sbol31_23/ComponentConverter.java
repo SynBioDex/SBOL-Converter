@@ -1,6 +1,7 @@
 package org.sbolstandard.converter.sbol31_23;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.sbolstandard.converter.Util;
@@ -8,6 +9,7 @@ import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Constraint;
 import org.sbolstandard.core3.entity.Location;
+import org.sbolstandard.core3.entity.Sequence;
 import org.sbolstandard.core3.entity.SequenceFeature;
 import org.sbolstandard.core3.entity.SubComponent;
 import org.sbolstandard.core2.SBOLDocument;
@@ -80,6 +82,16 @@ public class ComponentConverter implements EntityConverter<Component, ComponentD
 			}
 		}
 
+		if (component.getSequences()!=null)
+		{
+			for (Sequence sequence: component.getSequences()) {
+				// Convert SBOL3 Sequence to SBOL2 Sequence
+	            URI sequenceURI = sequence.getUri();
+	            URI sbol2URI=Util.createSBOL2Uri(sequenceURI);
+	            compDef.addSequence(sbol2URI);
+	        
+			}	
+		}
 		// Return the final SBOL2 ComponentDefinition
 		return compDef;
 	}
