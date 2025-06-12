@@ -44,7 +44,10 @@ public class InteractionConverter implements ChildEntityConverter<Interaction, o
 			}
 
 			
-			Participation newSbol2Participation = sbol2Interaction.createParticipation(sbol2FuncCom.getDisplayId(), sbol2FuncCom.getIdentity(),
+			//Participation newSbol2Participation = sbol2Interaction.createParticipation(sbol2FuncCom.getDisplayId(), sbol2FuncCom.getIdentity(),
+			//		Util.convertRoles3_to_2(sbol3Participation.getRoles()));
+			
+			Participation newSbol2Participation = sbol2Interaction.createParticipation(sbol3Participation.getDisplayId(), sbol2FuncCom.getIdentity(),
 					Util.convertRoles3_to_2(sbol3Participation.getRoles()));
 			
 			

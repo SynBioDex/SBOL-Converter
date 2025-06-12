@@ -1,4 +1,4 @@
-package org.sbolstandard;
+package org.sbolstandard.converter.tests;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

@@ -1,4 +1,4 @@
-package org.sbolstandard;
+package org.sbolstandard.converter.tests;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -37,13 +37,16 @@ public class TestUtil {
 		Configuration.getInstance().setValidateBeforeSaving(true);
 
 		org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
-
+		System.out.println("Starting to convert the SBOL2 file below:");
+		
+		SBOLWriter.write(doc, System.out);
+		
 		SBOLDocumentConverter converter = new SBOLDocumentConverter();
 		org.sbolstandard.core3.entity.SBOLDocument sbol3Doc = converter.convert(doc);
 		System.out.println("--------");
 
 		System.out.println("Converted from SBOL2 to SBOL3:");
-		System.out.println(SBOLIO.write(sbol3Doc, SBOLFormat.TURTLE));
+		System.out.println(SBOLIO.write(sbol3Doc, SBOLFormat.RDFXML));
 		//SBOLIO.write(sbol3Doc, new File("output/currentSBOL3File.xml"), SBOLFormat.RDFXML);
 
 		org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter converter3_2 = new org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter();

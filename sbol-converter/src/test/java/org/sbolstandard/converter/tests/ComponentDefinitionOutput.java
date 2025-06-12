@@ -1,4 +1,4 @@
-package org.sbolstandard;
+package org.sbolstandard.converter.tests;
 
 import java.net.URI;
 import java.util.Arrays;
@@ -67,6 +67,17 @@ public class ComponentDefinitionOutput {
 				URI.create("http://www.chem.qmul.ac.uk/iubmb/misc/naseq.html")
 				);
 		
+		String deviceNA= seqpTetR.getElements() + seqRbs.getElements() + seqCds.getElements() + 
+				seqTer.getElements() + seqPluxR.getElements();
+		
+		Sequence device_seq=document.createSequence(
+				"BBa_F2620_seq",
+				"",
+				deviceNA, 
+				URI.create("http://www.chem.qmul.ac.uk/iubmb/misc/naseq.html")
+				);
+		
+		
 		ComponentDefinition pTetR = document.createComponentDefinition(
 				"BBa_R0040",
 				"",
@@ -120,6 +131,7 @@ public class ComponentDefinitionOutput {
 				device.addRole(URI.create("http://identifiers.org/so/SO:0001411"));//biological region							
 		device.setName("BBa_F2620");
 		device.setDescription("3OC6HSL -> PoPS Receiver");	
+		device.addSequence(device_seq);
 		
 		Component comPtetR=device.createComponent("pTetR", AccessType.PUBLIC, pTetR.getIdentity());
 		Component comRbs=device.createComponent("rbs", AccessType.PUBLIC,rbs.getIdentity());

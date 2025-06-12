@@ -103,9 +103,7 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 		// ModuleDefinition
 		return sbol3Component;
 	}
-
-	// --- Utility methods for this converter ---
-
+	
 	// Ensures the Component has an Interface. If not, creates one.
 	private Interface getInterface(Component sbol3Component) throws SBOLGraphException {
 		Interface sbol3Interface = sbol3Component.getInterface();

@@ -4,9 +4,11 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.net.URI;
 import java.util.*;
+import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.jena.rdf.model.Model;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.EDAMOntology;
 import org.sbolstandard.core2.RestrictionType;
@@ -18,6 +20,8 @@ import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.Sequence;
 import org.sbolstandard.core3.entity.TopLevel;
 import org.sbolstandard.core3.util.SBOLGraphException;
+import org.sbolstandard.core3.util.URINameSpace;
+import org.sbolstandard.core3.util.URINameSpace.SONameSpace;
 import org.sbolstandard.core3.vocabulary.ComponentType;
 import org.sbolstandard.core3.vocabulary.Encoding;
 import org.sbolstandard.core3.vocabulary.RestrictionType.ConstraintRestriction;
@@ -335,6 +339,65 @@ public class Util {
 		}
 	}
 
+	public static void copyNamespacesFrom2_to_3(org.sbolstandard.core2.SBOLDocument inputSbol2Doc,
+			SBOLDocument outputSbol3Doc) {
+		for (int i = 0; i < inputSbol2Doc.getNamespaces().size(); i++) {
+			String uri = inputSbol2Doc.getNamespaces().get(i).getNamespaceURI();
+			String prefix = inputSbol2Doc.getNamespaces().get(i).getPrefix();
+			
+			Model model=outputSbol3Doc.getRDFModel();
+			if (model.getNsPrefixURI(prefix)==null && model.getNsPrefixURI(prefix.toLowerCase())==null && 
+					model.getNsPrefixURI(prefix)==null && 
+					model.getNsURIPrefix(uri)==null &&
+					model.getNsURIPrefix(uri.toLowerCase())==null){
+			//if (!uri.toLowerCase().equals("http://sbols.org/v2#")) {
+				outputSbol3Doc.addNameSpacePrefixes(prefix, URI.create(uri));
+			}
+		}
+	}
+	
+	public static void copyNamespacesFrom3_to_2(SBOLDocument inputSbol3Doc, org.sbolstandard.core2.SBOLDocument outputSbol2Doc) throws SBOLValidationException 
+	{
+		Model model=inputSbol3Doc.getRDFModel();
+		for (Entry<String, String> ns:model.getNsPrefixMap().entrySet())
+		{
+			String prefixSBOL3=ns.getKey();
+			String namespaceSBOL3=ns.getValue();
+			if (namespaceSBOL3.equals(URINameSpace.CHEBI.getUri().toString()) ||
+				namespaceSBOL3.equals(URINameSpace.EDAM.getUri().toString()) ||
+				namespaceSBOL3.equals(URINameSpace.GO.getUri().toString()) ||
+				namespaceSBOL3.equals(URINameSpace.OM.getUri().toString()) ||
+				namespaceSBOL3.equals(URINameSpace.PROV.getUri().toString()) ||
+				namespaceSBOL3.equals(URINameSpace.RDFS.getUri().toString()) ||
+				namespaceSBOL3.equals(URINameSpace.SBO.getUri().toString()) ||
+				namespaceSBOL3.equals(URINameSpace.SO.getUri().toString()) ||
+				namespaceSBOL3.equals(URINameSpace.SBOL.getUri().toString())){					
+				continue;	
+			}
+			else
+			{	
+				boolean found=false;
+				for (int i = 0; i < outputSbol2Doc.getNamespaces().size(); i++) {
+					String namespaceSBOL2 = outputSbol2Doc.getNamespaces().get(i).getNamespaceURI();
+					String prefixSBOL2 = outputSbol2Doc.getNamespaces().get(i).getPrefix();
+					
+				    if (prefixSBOL2.toLowerCase().equals(prefixSBOL3)){
+				    	found=true;
+				    	break;
+				    }
+				    else if (namespaceSBOL2.toLowerCase().equals(namespaceSBOL3)){
+				    	found=true;
+				    	break;
+				    }			    					
+				}
+				if (!found)
+				{
+					outputSbol2Doc.addNamespace(URI.create(namespaceSBOL3), prefixSBOL3);	
+				}
+			}
+		}
+	}
+	 
 	public static void copyIdentified(Identified input, org.sbolstandard.core2.Identified output)
 			throws SBOLGraphException, SBOLValidationException {
 		output.setName(input.getName());
@@ -393,7 +456,7 @@ public class Util {
 	}
 
 	private static URI getSBOL2RestrictionURI(String RestrictionType) {
-		return URI.create(org.sbolstandard.examples.Sbol2Terms.sbol2.getNamespaceURI() + RestrictionType);
+		return URI.create("http://sbols.org/v2#" + RestrictionType);
 	}
 
 	public static RestrictionType toSBOL2RestrictionType(URI sbol3RestrictionType) {
@@ -649,6 +712,8 @@ public class Util {
 		}
 		return false;
 	}
+	
+
 	public static boolean isSBOL2DocumentCompliant(String fileName) {
 		ByteArrayOutputStream baosOutput = new ByteArrayOutputStream();
 		PrintStream outputStream = new PrintStream(baosOutput);
