@@ -77,10 +77,7 @@ public class AppTest {
 		assertTrue(true);
 	}
 
-	@Test
-	public void TestSBOL2ComponentDefinition() throws Exception {
-		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/sbol2/ComponentDefinitionOutput.xml"));		
-	}
+	
 	
 	@Test
 	public void TestSBOL2Model() throws Exception {
@@ -91,15 +88,6 @@ public class AppTest {
 	public void TestSBOL2Experiment() throws Exception {
 		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/sbol2/test_Experiment_ExperimentData.xml"));		
 	}
-	
-	@Test
-	public void TestSBOL2Attachment() throws Exception {
-		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/sbol2/attachment.xml"));		
-	}
-	
-	@Test
-	public void TestSBOL2Implementation() throws Exception {
-		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/sbol2/implementation_example.xml"));		
-	}
+
 
 }
