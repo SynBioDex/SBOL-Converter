@@ -38,20 +38,6 @@ public class CombinatorialDerivationTest {
 		
 		File file = new File("../SBOLTestSuite/SBOL2_ic/gfp_reporter_template.xml");
 		//File file = new File("output/fromTestSuite/ModuleDefinitionOutput_int_md_ann.xml");
-//		org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
-//		SBOLValidate.validateSBOL(doc, true, true, true);
-//		
-//		Sequence seq=doc.createSequence("http://partsregistry.org","test", "1",  "tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcacaaagaggagaaaatgaaaaacataaatgccgacgacacatacagaataattaataaaattaaagcttgtagaagcaataatgatattaatcaatgcttatctgatatgactaaaatggtacattgtgaatattatttactcgcgatcatttatcctcattctatggttaaatctgatatttcaatcctagataattaccctaaaaaatggaggcaatattatgatgacgctaatttaataaaatatgatcctatagtagattattctaactccaatcattcaccaattaattggaatatatttgaaaacaatgctgtaaataaaaaatctccaaatgtaattaaagaagcgaaaacatcaggtcttatcactgggtttagtttccctattcatacggctaacaatggcttcggaatgcttagttttgcacattcagaaaaagacaactatatagatagtttatttttacatgcgtgtatgaacataccattaattgttccttctctagttgataattatcgaaaaataaatatagcaaataataaatcaaacaacgatttaaccaaaagagaaaaagaatgtttagcgtgggcatgcgaaggaaaaagctcttgggatatttcaaaaatattaggttgcagtgagcgtactgtcactttccatttaaccaatgcgcaaatgaaactcaatacaacaaaccgctgccaaagtatttctaaagcaattttaacaggagcaattgattgcccatactttaaaaattaataacactgatagtgctagtgtagatcacccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctcacactggctcaccttcgggtgggcctttctgcgtttataacctgtaggatcgtacaggtttacgcaagaaaatggtttgttatagtcgaataaa", Sequence.IUPAC_DNA);
-//		
-//		ComponentDefinition cd = doc.getComponentDefinition(URI.create("http://partsregistry.org/cd/BBa_F2620"));
-//		cd.addSequence(seq);
-//		File newFile= new File("output/SequenceAnnotationToSubComponentTest.xml");
-//		SBOLWriter.write(doc, newFile);
-//		
-//		
-//		SBOLWriter.write(doc, System.out);
-//
-//		List<String> errors=TestUtil.roundTripConvert(newFile);
 		
 		List<String> errors=TestUtil.roundTripConvert(file);
 		
