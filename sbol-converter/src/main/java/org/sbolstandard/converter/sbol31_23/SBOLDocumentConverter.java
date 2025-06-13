@@ -19,6 +19,7 @@ public class SBOLDocumentConverter {
 			throws SBOLGraphException, SBOLValidationException {
 		org.sbolstandard.core2.SBOLDocument sbol2Doc = new org.sbolstandard.core2.SBOLDocument();
 
+				
 		SequenceConverter seqConverter = new SequenceConverter();
 		if (sbol3Doc.getSequences() != null) {
 			for (Sequence seq : sbol3Doc.getSequences()) {
@@ -93,6 +94,8 @@ public class SBOLDocumentConverter {
 			}
 		}
 
+		Util.copyNamespacesFrom3_to_2(sbol3Doc, sbol2Doc);
+        
 		return sbol2Doc;
 	}
 }

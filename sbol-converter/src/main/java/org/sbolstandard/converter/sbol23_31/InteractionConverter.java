@@ -9,6 +9,7 @@ import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Feature;
 import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.Interaction;
+import org.sbolstandard.core3.entity.Participation;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.util.SBOLGraphException;
 
@@ -27,9 +28,14 @@ public class InteractionConverter implements ChildEntityConverter<org.sbolstanda
 		Component sbol3ParentComp = (Component) sbol3Parent;
 
 		// Create a new SBOL3 Interaction with converted SBO types from the SBOL2 Interaction
-		Interaction sbol3Interaction = sbol3ParentComp.createInteraction(
-			Util.convertToSBOL3_SBO_URIs(sbol2Interaction.getTypes())
-		);
+		//Interaction sbol3Interaction = sbol3ParentComp.createInteraction(Util.convertToSBOL3_SBO_URIs(sbol2Interaction.getTypes()));
+		Interaction sbol3Interaction =null;
+		if (SBOLDocumentConverter.isCompliant()){
+			sbol3Interaction= sbol3ParentComp.createInteraction(sbol2Interaction.getIdentity(), Util.convertToSBOL3_SBO_URIs(sbol2Interaction.getTypes()));			
+		}
+		else{
+			sbol3Interaction= sbol3ParentComp.createInteraction(sbol2Interaction.getDisplayId(), Util.convertToSBOL3_SBO_URIs(sbol2Interaction.getTypes()));						
+		}
 
 		// Convert each SBOL2 Participation to SBOL3 Participation
 		for (org.sbolstandard.core2.Participation sbol2Participation : sbol2Interaction.getParticipations()) {
@@ -52,10 +58,15 @@ public class InteractionConverter implements ChildEntityConverter<org.sbolstanda
 			}
 
 			// Create a Participation in the SBOL3 Interaction with the converted SBO roles and the Feature
-			sbol3Interaction.createParticipation(
-				Util.convertToSBOL3_SBO_URIs(sbol2Participation.getRoles()),
-				sbol3Feature
-			); // HOW TO GET FEATURES? (You already fetch it by displayId above)
+			//Participation sbol3Participation=sbol3Interaction.createParticipation( Util.convertToSBOL3_SBO_URIs(sbol2Participation.getRoles()),sbol3Feature);
+			Participation sbol3Participation=null;
+			if (SBOLDocumentConverter.isCompliant()){				
+				sbol3Participation = sbol3Interaction.createParticipation(sbol2Participation.getIdentity(), Util.convertToSBOL3_SBO_URIs(sbol2Participation.getRoles()),sbol3Feature);
+			}
+			else{
+				sbol3Participation = sbol3Interaction.createParticipation(sbol2Participation.getDisplayId(), Util.convertToSBOL3_SBO_URIs(sbol2Participation.getRoles()),sbol3Feature);
+			}
+			Util.copyIdentified(sbol2Participation, sbol3Participation);
 		}
 
 		// Copy common identified fields (displayId, version, etc.) from the SBOL2 Interaction to the SBOL3 Interaction

@@ -33,8 +33,16 @@ public class FunctionalComponentToSubComponentConverter
 			throw new SBOLGraphException("Could not find Component for FunctionalComponent: "
 					+ sbol2FunctionalComponent.getDefinition().getIdentity());
 		}
-		sbol3SubComponent = sbol3ParentComponent.createSubComponent(sbol3ChildComponent);
+		
+		//sbol3SubComponent = sbol3ParentComponent.createSubComponent(sbol3ChildComponent);
 
+		if (SBOLDocumentConverter.isCompliant()){
+			sbol3SubComponent = sbol3ParentComponent.createSubComponent(sbol2FunctionalComponent.getIdentity(), sbol3ChildComponent);
+		}
+		else{
+			sbol3SubComponent = sbol3ParentComponent.createSubComponent(sbol2FunctionalComponent.getDisplayId(), sbol3ChildComponent);
+			
+		}
 		sbol3SubComponent.setDisplayId(sbol2FunctionalComponent.getDisplayId());
 
 		Util.copyIdentified(sbol2FunctionalComponent, sbol3SubComponent);

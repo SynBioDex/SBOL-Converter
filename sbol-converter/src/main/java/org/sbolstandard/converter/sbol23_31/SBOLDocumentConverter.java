@@ -1,5 +1,9 @@
 package org.sbolstandard.converter.sbol23_31;
 
+import java.net.URI;
+import java.util.List;
+
+import org.sbolstandard.converter.Util;
 import org.sbolstandard.core2.Attachment;
 import org.sbolstandard.core2.Collection;
 import org.sbolstandard.core2.ComponentDefinition;
@@ -14,6 +18,7 @@ import org.sbolstandard.core2.Sequence;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.util.SBOLGraphException;
 
+
 public class SBOLDocumentConverter {
 
 	private static boolean isCompliant=false;
@@ -27,7 +32,7 @@ public class SBOLDocumentConverter {
         
         SBOLValidate.validateSBOL(sbol2Doc, false, true, true); 
         isCompliant=SBOLValidate.getNumErrors()==0;
-        
+                
         SequenceConverter seqConverter = new SequenceConverter();
         for (Sequence seq : sbol2Doc.getSequences()) {
         	seqConverter.convert(sbol3Doc, seq);
@@ -74,6 +79,8 @@ public class SBOLDocumentConverter {
         	implConverter.convert(sbol3Doc, impl);            
         }
   
+        Util.copyNamespacesFrom2_to_3(sbol2Doc, sbol3Doc);
+        
         return sbol3Doc;
 	}
 }

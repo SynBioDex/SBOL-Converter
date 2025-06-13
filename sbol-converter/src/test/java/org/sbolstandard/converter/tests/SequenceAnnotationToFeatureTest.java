@@ -1,4 +1,4 @@
-package org.sbolstandard;
+package org.sbolstandard.converter.tests;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -43,12 +43,15 @@ public class SequenceAnnotationToFeatureTest {
 		
 		ComponentDefinition cd= doc.getComponentDefinition(URI.create("http://partsregistry.org/cd/BBa_J23119"));
 		cd.addSequence(seq);
-		File newFile= new File("output/SequenceAnnotationToSubComponentTest.xml");
+		File newFile= new File("output/SequenceAnnotationToFeatureTest.xml");
 		SBOLWriter.write(doc, newFile);
 		
 		
 		SBOLWriter.write(doc, System.out);
 
+		TestUtil.runTestSuiteFile(newFile);
+		
+		/*
 		List<String> errors=TestUtil.roundTripConvert(newFile);
 		
 		if (errors.size()>0) {
@@ -62,7 +65,7 @@ public class SequenceAnnotationToFeatureTest {
 				}
 			}
 			
-		}
+		}*/
 		
 			
 		

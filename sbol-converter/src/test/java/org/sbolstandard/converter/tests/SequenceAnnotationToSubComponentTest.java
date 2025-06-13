@@ -1,4 +1,4 @@
-package org.sbolstandard;
+package org.sbolstandard.converter.tests;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -39,7 +39,7 @@ public class SequenceAnnotationToSubComponentTest {
 		//File file = new File("output/fromTestSuite/ComponentDefinitionOutput_modified.xml");
 		//org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
 		org.sbolstandard.core2.SBOLDocument doc = ComponentDefinitionOutput.createComponentDefinitionOutput();
-		
+/*		
 		SBOLValidate.validateSBOL(doc, true, true, true);
 		
 		System.out.println("*******************");
@@ -66,7 +66,7 @@ public class SequenceAnnotationToSubComponentTest {
 		
 
 
-		
+*/		
 		
 		
 //tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcacaaagaggagaaaatgaaaaacataaatgccgacgacacatacagaataattaataaaattaaagcttgtagaagcaataatgatattaatcaatgcttatctgatatgactaaaatggtacattgtgaatattatttactcgcgatcatttatcctcattctatggttaaatctgatatttcaatcctagataattaccctaaaaaatggaggcaatattatgatgacgctaatttaataaaatatgatcctatagtagattattctaactccaatcattcaccaattaattggaatatatttgaaaacaatgctgtaaataaaaaatctccaaatgtaattaaagaagcgaaaacatcaggtcttatcactgggtttagtttccctattcatacggctaacaatggcttcggaatgcttagttttgcacattcagaaaaagacaactatatagatagtttatttttacatgcgtgtatgaacataccattaattgttccttctctagttgataattatcgaaaaataaatatagcaaataataaatcaaacaacgatttaaccaaaagagaaaaagaatgtttagcgtgggcatgcgaaggaaaaagctcttgggatatttcaaaaatattaggttgcagtgagcgtactgtcactttccatttaaccaatgcgcaaatgaaactcaatacaacaaaccgctgccaaagtatttctaaagcaattttaacaggagcaattgattgcccatactttaaaaattaataacactgatagtgctagtgtagatcacccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctcacactggctcaccttcgggtgggcctttctgcgtttataacctgtaggatcgtacaggtttacgcaagaaaatggtttgttatagtcgaataaa
@@ -84,7 +84,9 @@ public class SequenceAnnotationToSubComponentTest {
 		
 		
 		SBOLWriter.write(doc, System.out);
-
+		
+	//	TestUtil.runTestSuiteFile(newFile);		
+		
 		List<String> errors=TestUtil.roundTripConvert(newFile);
 		
 		//List<String> errors=TestUtil.roundTripConvert(file);
@@ -103,7 +105,7 @@ public class SequenceAnnotationToSubComponentTest {
 		}
 		
 			
-		
+	
 	}
 
 }
