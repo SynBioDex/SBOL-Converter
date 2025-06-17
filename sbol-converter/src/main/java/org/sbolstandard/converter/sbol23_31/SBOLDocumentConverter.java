@@ -78,7 +78,25 @@ public class SBOLDocumentConverter {
         for (Implementation impl : sbol2Doc.getImplementations()) {
         	implConverter.convert(sbol3Doc, impl);            
         }
-  
+        
+        // TODO: MapsTo Conversion 
+        // One parameter: Source ComponentDefinition
+        // Look for SBOL2 Identities and find from document.get to find components and continue conversion
+        // TODO: CHECK THIS IF TRUE
+        for (ComponentDefinition sbol2CD : sbol2Doc.getComponentDefinitions()) {
+			// For each ComponentDefinition, look for MapsTo
+			MapstoToMainConverter.convertFromComponentDefinition(sbol3Doc, sbol2CD);
+		}
+        // TODO: CHECK THIS IF TRUE
+        for (ModuleDefinition sbol2MD : sbol2Doc.getModuleDefinitions()) {
+			// For each ComponentDefinition, look for MapsTo
+			MapstoToMainConverter.convertFromModuleDefinition(sbol3Doc, sbol2MD);
+		}
+        //////////////////////
+        
+        
+        
+        
         Util.copyNamespacesFrom2_to_3(sbol2Doc, sbol3Doc);
         
         return sbol3Doc;
