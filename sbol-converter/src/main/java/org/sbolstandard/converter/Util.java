@@ -781,5 +781,30 @@ public class Util {
 			}
 			return null; // Return null if no item with the given displayId is found
 		}
+		
+		public static <T extends Identified> T getSBOL3Entity(List<T> items, org.sbolstandard.core2.Identified sbol2Entity) throws SBOLGraphException
+		{
+			if (items != null) {
+				for (T item : items) {
+					if (item.getUri().equals(sbol2Entity.getIdentity())) {
+						return item;
+					}
+					else if (item.getDisplayId().equals(sbol2Entity.getDisplayId())) {
+						return item;
+					}
+					else
+					{
+						List<Object> annoItems=item.getAnnotion(URI.create("http//sbolstandard.org/sbol-converter/23_to_31"));
+						if (annoItems != null && !annoItems.isEmpty() && annoItems.get(0) instanceof URI) {
+							URI uri = (URI) annoItems.get(0);
+							if (uri.equals(sbol2Entity.getIdentity())) {
+								return item;
+							}
+						}
+					}
+				}
+			}
+			return null;
+		}
 
 }

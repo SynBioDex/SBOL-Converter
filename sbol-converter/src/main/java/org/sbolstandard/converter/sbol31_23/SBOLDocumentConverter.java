@@ -94,6 +94,8 @@ public class SBOLDocumentConverter {
 			}
 		}
 
+		
+
 		Util.copyNamespacesFrom3_to_2(sbol3Doc, sbol2Doc);
         
 		return sbol2Doc;

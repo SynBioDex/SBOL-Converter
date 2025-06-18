@@ -23,7 +23,7 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 	public Component convert(SBOLDocument doc, ModuleDefinition sbol2ModuleDefinition)
 			throws SBOLGraphException, SBOLValidationException {
 		// Create a list of types for the SBOL3 Component (here, always SBO:0000241 =
-		// "functional compartment")
+		// "functional component")
 		List<URI> types = new ArrayList<URI>();
 		types.add(URI.create("https://identifiers.org/SBO:0000241"));
 
@@ -41,14 +41,11 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 		// Set SBOL2 roles on the SBOL3 Component, converting format as needed
 		sbol3Component.setRoles(Util.convertRoles2_to_3(sbol2ModuleDefinition.getRoles()));
 		
-		// MODULES SHOULD BE CONVERTED INTO SUBCOMPONENTS
-		// --- Module to SubComponent conversion ---
-		// TODO: NOT IMPLEMENTED YET
-		ModuleToSubComponentConverter moduleToSubComponentConverter = new ModuleToSubComponentConverter();
-		for (org.sbolstandard.core2.Module sbol2Module: sbol2ModuleDefinition.getModules()) {
-			moduleToSubComponentConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2Module);
-		}
 		
+		
+		
+		
+		List<FunctionalComponent> sbol2ConvertedFuncComps = new ArrayList<FunctionalComponent>();
 
 		// --- Participation/Interface handling ---
 		// For every Interaction in the ModuleDefinition...
@@ -58,9 +55,9 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 				// Convert SBOL2 FunctionalComponent to SBOL3 SubComponent
 				FunctionalComponentToSubComponentConverter fcConverter = new FunctionalComponentToSubComponentConverter();
 				FunctionalComponent sbol2FuncCom = sbol2Participation.getParticipant();
-				SubComponent sbol3SubCom = fcConverter.convert(doc, sbol3Component, sbol2ModuleDefinition,
-						sbol2FuncCom);
-
+				sbol2ConvertedFuncComps.add(sbol2FuncCom);
+				SubComponent sbol3SubCom = fcConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2FuncCom);
+				
 				// Directional information determines SBOL3 interface placement (input, output,
 				// or non-directional)
 				if (sbol2Participation.getParticipant().getDirection() != org.sbolstandard.core2.DirectionType.NONE) {
@@ -88,17 +85,37 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 				}
 			}
 		}
+		
+		
 
 		// --- Interactions conversion ---
 		// For each SBOL2 Interaction, convert to SBOL3 and attach to the new component
 		for (org.sbolstandard.core2.Interaction sbol2Interaction : sbol2ModuleDefinition.getInteractions()) {
 			// Print the interaction (for debugging/logging)
-			System.out.println(sbol2Interaction);
+			//System.out.println(sbol2Interaction);
 			// Convert the interaction to SBOL3 and add to the component
 			InteractionConverter interactionConverter = new InteractionConverter();
 			interactionConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2Interaction);
 		}
-
+		
+		// TODO: Handle all the functional components
+		// --- Functional Components conversion ---
+		for(FunctionalComponent sbol2FuncCom : sbol2ModuleDefinition.getFunctionalComponents()) {
+			// Convert SBOL2 FunctionalComponent to SBOL3 SubComponent
+			//System.out.println("FUNC COMP" + sbol2FuncCom.getIdentity());
+			if(!sbol2ConvertedFuncComps.contains(sbol2FuncCom)) {
+				FunctionalComponentToSubComponentConverter fcConverter = new FunctionalComponentToSubComponentConverter();
+				fcConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2FuncCom);
+			}
+			
+		}
+		// MODULES SHOULD BE CONVERTED INTO SUBCOMPONENTS
+				// --- Module to SubComponent conversion ---
+		ModuleToSubComponentConverter moduleToSubComponentConverter = new ModuleToSubComponentConverter();
+		for (org.sbolstandard.core2.Module sbol2Module: sbol2ModuleDefinition.getModules()) {
+			moduleToSubComponentConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2Module);
+		}
+		
 		// Return the newly created SBOL3 Component representing the SBOL2
 		// ModuleDefinition
 		return sbol3Component;

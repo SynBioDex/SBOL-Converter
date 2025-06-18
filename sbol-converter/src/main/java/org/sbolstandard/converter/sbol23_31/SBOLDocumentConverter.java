@@ -53,6 +53,7 @@ public class SBOLDocumentConverter {
         for (ModuleDefinition md : sbol2Doc.getModuleDefinitions()) {
             mdConverter.convert(sbol3Doc, md);            
         }
+        
                 
         ExperimentalDataConverter edConverter = new ExperimentalDataConverter();
         for (ExperimentalData ed : sbol2Doc.getExperimentalData()) {
@@ -78,7 +79,19 @@ public class SBOLDocumentConverter {
         for (Implementation impl : sbol2Doc.getImplementations()) {
         	implConverter.convert(sbol3Doc, impl);            
         }
-  
+       
+        // MapsTo conversion from Component Definition
+        for (ComponentDefinition sbol2CD : sbol2Doc.getComponentDefinitions()) {
+			// For each ComponentDefinition, look for MapsTo
+			MapstoToMainConverter.convertFromComponentDefinition(sbol3Doc, sbol2CD);
+		}
+       
+        // MapsTo conversion from Module Definition
+        for (ModuleDefinition sbol2MD : sbol2Doc.getModuleDefinitions()) {
+			// For each ComponentDefinition, look for MapsTo
+			MapstoToMainConverter.convertFromModuleDefinition(sbol3Doc, sbol2MD);
+		}
+        
         Util.copyNamespacesFrom2_to_3(sbol2Doc, sbol3Doc);
         
         return sbol3Doc;

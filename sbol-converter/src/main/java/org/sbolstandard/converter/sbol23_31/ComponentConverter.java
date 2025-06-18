@@ -8,6 +8,8 @@ import org.sbolstandard.converter.Util;
 import org.sbolstandard.core2.AccessType;
 import org.sbolstandard.core2.RoleIntegrationType;
 import org.sbolstandard.core3.entity.Component;
+import org.sbolstandard.core3.entity.ComponentReference;
+import org.sbolstandard.core3.entity.Constraint;
 import org.sbolstandard.core3.entity.Feature;
 import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.Interface;
@@ -19,41 +21,38 @@ import org.sbolstandard.core3.vocabulary.RoleIntegration;
 public class ComponentConverter implements ChildEntityConverter<org.sbolstandard.core2.Component, Feature> {
 
 	@Override
-	public Feature convert(SBOLDocument doc, Identified parent, org.sbolstandard.core2.Identified inputParent, org.sbolstandard.core2.Component input) throws SBOLGraphException {
-		Component parentComponent = (Component) parent;
+	public Feature convert(SBOLDocument document, Identified parent, org.sbolstandard.core2.Identified inputParent, org.sbolstandard.core2.Component input) throws SBOLGraphException {
+		Component sbol3ParentComponent = (Component) parent;
 		Feature result = null;
-		if (input.getMapsTos() != null && !input.getMapsTos().isEmpty()) {
-			// TODO
-			throw new SBOLGraphException("Component with mapsTo not supported yet");
-		}
-		else {	//Create an SBOL3 SubComponent
-			URI sbol3URI = Util.createSBOL3Uri(input.getIdentity());
-			URI sbol3InstanceOfUri = Util.createSBOL3Uri(input.getDefinitionURI());
-			SubComponent resultSC = parentComponent.createSubComponent(sbol3URI, sbol3InstanceOfUri);
-			// TODO: Check for the Access Type
-			// TODO Add measures
-			resultSC.setRoles(Util.toList(input.getRoles()));
+		
+		//Create an SBOL3 SubComponent
+		URI sbol3URI = Util.createSBOL3Uri(input.getIdentity());
+		URI sbol3InstanceOfUri = Util.createSBOL3Uri(input.getDefinitionURI());
+		SubComponent resultSC = sbol3ParentComponent.createSubComponent(sbol3URI, sbol3InstanceOfUri);
+		// TODO: Check for the Access Type
+		// TODO Add measures
+		resultSC.setRoles(Util.toList(input.getRoles()));
 
-			RoleIntegrationType ri = input.getRoleIntegration();
-			if (ri != null) {
-				RoleIntegration risbol3 = RoleIntegration.mergeRoles;
+		RoleIntegrationType ri = input.getRoleIntegration();
+		if (ri != null) {
+			RoleIntegration risbol3 = RoleIntegration.mergeRoles;
 
-				if (ri.equals(RoleIntegrationType.MERGEROLES)) {
-					risbol3 = RoleIntegration.mergeRoles;
-				} else if (ri.equals(RoleIntegrationType.OVERRIDEROLES)) {
-					risbol3 = RoleIntegration.overrideRoles;
-				}
-				resultSC.setRoleIntegration(risbol3);
+			if (ri.equals(RoleIntegrationType.MERGEROLES)) {
+				risbol3 = RoleIntegration.mergeRoles;
+			} else if (ri.equals(RoleIntegrationType.OVERRIDEROLES)) {
+				risbol3 = RoleIntegration.overrideRoles;
 			}
-			result = resultSC;
+			resultSC.setRoleIntegration(risbol3);
 		}
+		result = resultSC;
+		
 		Util.copyIdentified(input, result);
 
 		if (input.getAccess()==AccessType.PUBLIC)
 		{
-			Interface sbol3Interface = parentComponent.getInterface();
+			Interface sbol3Interface = sbol3ParentComponent.getInterface();
 			if(sbol3Interface == null) {
-				sbol3Interface=parentComponent.createInterface();
+				sbol3Interface=sbol3ParentComponent.createInterface();
 			}
 
 				List<Feature> features=sbol3Interface.getNonDirectionals();
@@ -64,6 +63,32 @@ public class ComponentConverter implements ChildEntityConverter<org.sbolstandard
 				features.add(result);
 				sbol3Interface.setNonDirectionals(features);
 		}
+		if (input.getMapsTos() != null && !input.getMapsTos().isEmpty()) {
+			// TODO
+			//throw new SBOLGraphException("Component with mapsTo not supported yet");
+			System.out.println("Component mapsTos not supported yet. This is a temporary message.");
+//			SubComponent sbol3SubComponentForComponentInstance 
+//			// TODO: CHECK HERE IT IS WRONG FOR COMPONENT CONVERTER
+//			// TODO: MAKE IT GENERIC FOR ALL CONVERTERS
+//			for (org.sbolstandard.core2.MapsTo mapsTo : input.getMapsTos()) {
+//				// Convert MapsTo to ComponentReference
+//				ComponentReference sbol3CompRef = MapstoToComponentReferenceConverter.convertForComponent(document, sbol2Module,
+//						sbol3ParentComponent, mapsTo, sbol3SubComponentForComponentInstance);
+//
+//				Constraint sbol3Constraint = MapstoToConstraintConverter.convert(sbol3ParentComponent, mapsTo,
+//						sbol3CompRef);
+//
+//				if (sbol3Constraint == null) {
+//					// sbol3SubComponentForModule.addConstraint(sbol3Constraint);
+//					System.out.println("Constraint is null for " + mapsTo.getIdentity() + ". This should not happen.");
+//				}
+//				
+//			}
+			
+			
+		}
+		
+		
 		return result;
 
 	}
