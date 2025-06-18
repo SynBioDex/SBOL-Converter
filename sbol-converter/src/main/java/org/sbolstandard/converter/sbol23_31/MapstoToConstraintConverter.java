@@ -11,12 +11,13 @@ import org.sbolstandard.core3.entity.Constraint;
 import org.sbolstandard.core3.entity.SubComponent;
 import org.sbolstandard.core3.util.SBOLGraphException;
 
+
 public class MapstoToConstraintConverter {
 
-	public static Constraint convert(Component sbol3ParentComponent, MapsTo mapsTo, ComponentReference sbol3CompRef) throws SBOLGraphException, SBOLValidationException {
+	public static Constraint convert(Component sbol3ParentComponent, MapsTo mapsTo, ComponentReference sbol3CompRef, Parameters parameters) throws SBOLGraphException, SBOLValidationException {
 
 		Constraint sbol3Constraint = null;
-		SubComponent sbol3LocalSubComponent = Util.getSBOL3Entity(sbol3ParentComponent.getSubComponents(), mapsTo.getLocal());
+		SubComponent sbol3LocalSubComponent = Util.getSBOL3Entity(sbol3ParentComponent.getSubComponents(), mapsTo.getLocal(), parameters);
 
 		RefinementType refinementType = mapsTo.getRefinement();
 		if (refinementType.equals(org.sbolstandard.core2.RefinementType.USELOCAL)) {

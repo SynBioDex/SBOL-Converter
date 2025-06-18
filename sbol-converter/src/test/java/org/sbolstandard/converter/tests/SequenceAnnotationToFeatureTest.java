@@ -67,8 +67,11 @@ public class SequenceAnnotationToFeatureTest {
 			
 		}*/
 		
-			
+		
+		List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/EF587312.xml"));
+		TestUtil.DisplayErrors(errors);
 		
 	}
+	
 
 }

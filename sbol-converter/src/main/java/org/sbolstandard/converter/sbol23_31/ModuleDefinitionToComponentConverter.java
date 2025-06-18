@@ -20,7 +20,7 @@ import org.sbolstandard.core3.util.SBOLGraphException;
 public class ModuleDefinitionToComponentConverter implements EntityConverter<ModuleDefinition, Component> {
 
 	@Override
-	public Component convert(SBOLDocument doc, ModuleDefinition sbol2ModuleDefinition)
+	public Component convert(SBOLDocument doc, ModuleDefinition sbol2ModuleDefinition, Parameters parameters)
 			throws SBOLGraphException, SBOLValidationException {
 		// Create a list of types for the SBOL3 Component (here, always SBO:0000241 =
 		// "functional component")
@@ -29,21 +29,13 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 
 		// Create the SBOL3 Component for this module, using the module's URI and
 		// namespace
-		Component sbol3Component = doc.createComponent(Util.createSBOL3Uri(sbol2ModuleDefinition), // Unique SBOL3 URI
-																									// for this module
-				Util.getNamespace(sbol2ModuleDefinition), // Namespace
-				types // Type(s) list
-		);
+		Component sbol3Component = doc.createComponent(Util.createSBOL3Uri(sbol2ModuleDefinition), Util.getNamespace(sbol2ModuleDefinition), types);
 
 		// Copy generic metadata (displayId, name, description, etc.)
 		Util.copyIdentified(sbol2ModuleDefinition, sbol3Component);
 
 		// Set SBOL2 roles on the SBOL3 Component, converting format as needed
 		sbol3Component.setRoles(Util.convertRoles2_to_3(sbol2ModuleDefinition.getRoles()));
-		
-		
-		
-		
 		
 		List<FunctionalComponent> sbol2ConvertedFuncComps = new ArrayList<FunctionalComponent>();
 
@@ -55,9 +47,9 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 				// Convert SBOL2 FunctionalComponent to SBOL3 SubComponent
 				FunctionalComponentToSubComponentConverter fcConverter = new FunctionalComponentToSubComponentConverter();
 				FunctionalComponent sbol2FuncCom = sbol2Participation.getParticipant();
-				sbol2ConvertedFuncComps.add(sbol2FuncCom);
-				SubComponent sbol3SubCom = fcConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2FuncCom);
-				
+				sbol2ConvertedFuncComps.add(sbol2FuncCom);				
+				SubComponent sbol3SubCom = fcConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2FuncCom, parameters);
+
 				// Directional information determines SBOL3 interface placement (input, output,
 				// or non-directional)
 				if (sbol2Participation.getParticipant().getDirection() != org.sbolstandard.core2.DirectionType.NONE) {
@@ -68,19 +60,19 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 					// (inputs/outputs/non-directional) based on direction
 					if (sbol2FuncCom.getDirection() == org.sbolstandard.core2.DirectionType.IN) {
 						sbol3Interface.setInputs(toFeatureList(sbol3SubCom, sbol3Interface.getInputs()));
-					} else if (sbol2FuncCom.getDirection() == org.sbolstandard.core2.DirectionType.OUT) {
+					} 
+					else if (sbol2FuncCom.getDirection() == org.sbolstandard.core2.DirectionType.OUT) {
 						sbol3Interface.setOutputs(toFeatureList(sbol3SubCom, sbol3Interface.getOutputs()));
-					} else if (sbol2FuncCom.getDirection() == org.sbolstandard.core2.DirectionType.INOUT) {
-						sbol3Interface
-								.setNonDirectionals(toFeatureList(sbol3SubCom, sbol3Interface.getNonDirectionals()));
+					} 
+					else if (sbol2FuncCom.getDirection() == org.sbolstandard.core2.DirectionType.INOUT) {
+						sbol3Interface.setNonDirectionals(toFeatureList(sbol3SubCom, sbol3Interface.getNonDirectionals()));
 					}
 				} else {
 					// If direction is NONE, but access is PUBLIC, treat as non-directional
 					// interface
 					if (sbol2FuncCom.getAccess() == AccessType.PUBLIC) {
 						Interface sbol3Interface = getInterface(sbol3Component);
-						sbol3Interface
-								.setNonDirectionals(toFeatureList(sbol3SubCom, sbol3Interface.getNonDirectionals()));
+						sbol3Interface.setNonDirectionals(toFeatureList(sbol3SubCom, sbol3Interface.getNonDirectionals()));
 					}
 				}
 			}
@@ -95,7 +87,7 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 			//System.out.println(sbol2Interaction);
 			// Convert the interaction to SBOL3 and add to the component
 			InteractionConverter interactionConverter = new InteractionConverter();
-			interactionConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2Interaction);
+			interactionConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2Interaction, parameters);
 		}
 		
 		// TODO: Handle all the functional components
@@ -105,7 +97,7 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 			//System.out.println("FUNC COMP" + sbol2FuncCom.getIdentity());
 			if(!sbol2ConvertedFuncComps.contains(sbol2FuncCom)) {
 				FunctionalComponentToSubComponentConverter fcConverter = new FunctionalComponentToSubComponentConverter();
-				fcConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2FuncCom);
+				fcConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2FuncCom, parameters);
 			}
 			
 		}
@@ -113,7 +105,7 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 				// --- Module to SubComponent conversion ---
 		ModuleToSubComponentConverter moduleToSubComponentConverter = new ModuleToSubComponentConverter();
 		for (org.sbolstandard.core2.Module sbol2Module: sbol2ModuleDefinition.getModules()) {
-			moduleToSubComponentConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2Module);
+			moduleToSubComponentConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2Module, parameters);
 		}
 		
 		// Return the newly created SBOL3 Component representing the SBOL2

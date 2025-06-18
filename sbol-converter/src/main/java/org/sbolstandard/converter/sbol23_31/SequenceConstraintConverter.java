@@ -13,7 +13,7 @@ import org.sbolstandard.core3.entity.Identified;
 public class SequenceConstraintConverter implements ChildEntityConverter<org.sbolstandard.core2.SequenceConstraint,Constraint>  {
 
     @Override
-    public Constraint convert(SBOLDocument doc, Identified parent, org.sbolstandard.core2.Identified inputParent, org.sbolstandard.core2.SequenceConstraint input) throws SBOLGraphException {
+    public Constraint convert(SBOLDocument doc, Identified parent, org.sbolstandard.core2.Identified inputParent, org.sbolstandard.core2.SequenceConstraint input, Parameters parameters) throws SBOLGraphException {
 		// SBOL 2 SequenceConstraint maps to SBOL3 Constraint
 
     	// Trying to reach parent  component since there is no way to create a SequenceConstraint in SBOL2
@@ -22,14 +22,21 @@ public class SequenceConstraintConverter implements ChildEntityConverter<org.sbo
     	ComponentDefinitionConverter cdConverter = new ComponentDefinitionConverter();
     	
     	// SBOL2 parent componentdefinition converted to SBOL3 component
-    	URI SBOL3SubjectUri=Util.createSBOL3Uri(input.getSubjectURI());
-    	URI SBOL3ObjectUri=Util.createSBOL3Uri(input.getObjectURI());
+    	URI SBOL3SubjectUri= parameters.getMapping(input.getSubjectURI());    	
+    	URI SBOL3ObjectUri=parameters.getMapping(input.getObjectURI());
+    	
     	Feature subjectFeature=doc.getIdentified(SBOL3SubjectUri, Feature.getSubClassTypes());
     	Feature objectFeature=doc.getIdentified(SBOL3ObjectUri, Feature.getSubClassTypes());
         Component parentComponent = (Component) parent;
-        URI sbol3RestrictionUri = Util.toSBOL3RestrictionType(input.getRestrictionURI()).getUri();        
-        Constraint constraint = parentComponent.createConstraint(Util.createSBOL3Uri(input.getIdentity()), sbol3RestrictionUri, subjectFeature, objectFeature);
-    	Util.copyIdentified(input, constraint);		
+        URI sbol3RestrictionUri = Util.toSBOL3RestrictionType(input.getRestrictionURI()).getUri(); 
+        Constraint constraint =null;
+        if (input.getDisplayId()!=null){
+        	constraint= parentComponent.createConstraint(input.getDisplayId(), sbol3RestrictionUri, subjectFeature, objectFeature);
+        }
+        else{
+        	constraint= parentComponent.createConstraint(sbol3RestrictionUri, subjectFeature, objectFeature);
+        }
+        Util.copyIdentified(input, constraint);		
     	return constraint;
     	
     

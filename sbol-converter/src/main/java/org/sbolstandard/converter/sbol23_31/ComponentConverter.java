@@ -8,8 +8,6 @@ import org.sbolstandard.converter.Util;
 import org.sbolstandard.core2.AccessType;
 import org.sbolstandard.core2.RoleIntegrationType;
 import org.sbolstandard.core3.entity.Component;
-import org.sbolstandard.core3.entity.ComponentReference;
-import org.sbolstandard.core3.entity.Constraint;
 import org.sbolstandard.core3.entity.Feature;
 import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.Interface;
@@ -21,17 +19,23 @@ import org.sbolstandard.core3.vocabulary.RoleIntegration;
 public class ComponentConverter implements ChildEntityConverter<org.sbolstandard.core2.Component, Feature> {
 
 	@Override
-	public Feature convert(SBOLDocument document, Identified parent, org.sbolstandard.core2.Identified inputParent, org.sbolstandard.core2.Component input) throws SBOLGraphException {
+	public Feature convert(SBOLDocument doc, Identified parent, org.sbolstandard.core2.Identified inputParent, org.sbolstandard.core2.Component input, Parameters parameters) throws SBOLGraphException {
 		Component sbol3ParentComponent = (Component) parent;
 		Feature result = null;
-		
-		//Create an SBOL3 SubComponent
-		URI sbol3URI = Util.createSBOL3Uri(input.getIdentity());
-		URI sbol3InstanceOfUri = Util.createSBOL3Uri(input.getDefinitionURI());
-		SubComponent resultSC = sbol3ParentComponent.createSubComponent(sbol3URI, sbol3InstanceOfUri);
-		// TODO: Check for the Access Type
-		// TODO Add measures
-		resultSC.setRoles(Util.toList(input.getRoles()));
+			URI sbol3InstanceOfUri = Util.createSBOL3Uri(input.getDefinitionURI());
+			SubComponent resultSC=null;
+			if (input.getDisplayId()!=null)
+			{
+				resultSC= sbol3ParentComponent.createSubComponent(input.getDisplayId(), sbol3InstanceOfUri);
+			}
+			else
+			{
+				resultSC= sbol3ParentComponent.createSubComponent(sbol3InstanceOfUri);
+			}
+			parameters.addMapping(input.getIdentity(), resultSC.getUri());
+			// TODO: Check for the Access Type
+			// TODO Add measures
+			resultSC.setRoles(Util.toList(input.getRoles()));
 
 		RoleIntegrationType ri = input.getRoleIntegration();
 		if (ri != null) {

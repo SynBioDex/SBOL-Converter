@@ -13,6 +13,8 @@ import org.sbolstandard.core3.entity.Cut;
 import org.sbolstandard.core3.entity.EntireSequence;
 import org.sbolstandard.core3.entity.Sequence;
 
+import java.net.URI;
+
 import org.sbolstandard.converter.Util;
 
 public class SequenceAnnotationToSubComponentConverter
@@ -20,14 +22,16 @@ public class SequenceAnnotationToSubComponentConverter
 
 	@Override
 	public SubComponent convert(SBOLDocument document, Identified sbol3Parent,
-			org.sbolstandard.core2.Identified sbol2ParentSeqAnno, SequenceAnnotation sbol2SeqAnno)
+			org.sbolstandard.core2.Identified sbol2ParentSeqAnno, SequenceAnnotation sbol2SeqAnno, Parameters parameters)
 			throws SBOLGraphException, SBOLValidationException {
 	
 		ComponentDefinition sbol2ParentCompDef = (ComponentDefinition) sbol2ParentSeqAnno;
 		// org.sbolstandard.core2.Component sbol2Component=seqa.getComponent();
 
-		SubComponent sbol3SubComponent = document
-				.getIdentified(Util.createSBOL3Uri(sbol2SeqAnno.getComponent().getIdentity()), SubComponent.class);
+		
+		//SubComponent sbol3SubComponent = document.getIdentified(Util.createSBOL3Uri(sbol2SeqAnno.getComponent().getIdentity()), SubComponent.class);
+		URI sbol3ComponentURI=parameters.getMapping(sbol2SeqAnno.getComponent().getIdentity());
+		SubComponent sbol3SubComponent = document.getIdentified(sbol3ComponentURI, SubComponent.class);
 		// sbol3SubComponent.setInstanceOf(Util.createSBOL3Uri(sbol2Component.getDefinitionURI()));
 
 		Sequence sbol3Sequence = Util.getSBOL3SequenceFromSBOl2Parent(document, sbol2ParentCompDef);

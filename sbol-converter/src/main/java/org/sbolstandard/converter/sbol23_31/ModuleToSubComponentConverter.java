@@ -5,11 +5,8 @@ import java.net.URI;
 
 
 import org.sbolstandard.converter.Util;
-import org.sbolstandard.core2.MapsTo;
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core3.entity.Component;
-import org.sbolstandard.core3.entity.ComponentReference;
-import org.sbolstandard.core3.entity.Constraint;
 import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.SubComponent;
@@ -20,7 +17,7 @@ public class ModuleToSubComponentConverter
 
 	@Override
 	public SubComponent convert(SBOLDocument document, Identified sbol3Parent,
-			org.sbolstandard.core2.Identified sbol2Parent, org.sbolstandard.core2.Module sbol2Module)
+			org.sbolstandard.core2.Identified sbol2Parent, org.sbolstandard.core2.Module sbol2Module, Parameters parameters)
 			throws SBOLGraphException, SBOLValidationException {
 
 		// ModuleDefinition sbol2ParentModuleDefinition = (ModuleDefinition)
@@ -29,22 +26,21 @@ public class ModuleToSubComponentConverter
 
 		//System.out.println("ModuleToSubComponentConverter PARENT COMPONENT: " + sbol3ParentComponent.getUri());
 		
-		
+		for (Component comp: document.getComponents())
+		{
+			System.out.println(comp.getUri());
+		}
+
 		URI sbol3ChildComponentURI=Util.createSBOL3Uri(sbol2Module.getDefinition());
-		Component sbol3ChildComponent=document.getIdentified(sbol3ChildComponentURI, Component.class);
-		
-		
+				
 		SubComponent sbol3SubComponentForModule = null;
-		if (SBOLDocumentConverter.isCompliant()) {
-			sbol3SubComponentForModule = sbol3ParentComponent.createSubComponent(sbol2Module.getIdentity(),
-					sbol3ChildComponentURI);
-		} else if (sbol2Module.getDisplayId() != null) {
+		if (sbol2Module.getDisplayId() != null) {
 			sbol3SubComponentForModule = sbol3ParentComponent.createSubComponent(sbol2Module.getDisplayId(),
-					sbol3ChildComponent);
+					sbol3ChildComponentURI);
 		} else {
 			sbol3SubComponentForModule = sbol3ParentComponent.createSubComponent(sbol3ChildComponentURI);
-			sbol3SubComponentForModule.addAnnotion(URI.create("http//sbolstandard.org/sbol-converter/23_to_31"),
-					sbol2Module.getIdentity());
+			parameters.addMapping(sbol2Module.getIdentity(), sbol3SubComponentForModule.getUri());
+			//sbol3SubComponentForModule.addAnnotion(URI.create("http//sbolstandard.org/sbol-converter/23_to_31"),sbol2Module.getIdentity());
 		}
 		
 		//System.out.println("ModuleToSubComponentConverter SUBCOMPONENT " + sbol3SubComponentForModule.getUri());

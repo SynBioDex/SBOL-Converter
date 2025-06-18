@@ -17,7 +17,7 @@ public class AttachmentConverter implements EntityConverter<Attachment, org.sbol
 			att.setSize(input.getSize().getAsLong());
 		}
 		if (input.getFormat() != null) {
-			att.setFormat(Util.createSBOL3Uri(input.getFormat()));
+			att.setFormat(input.getFormat());
 		}
 		return att;
 	}

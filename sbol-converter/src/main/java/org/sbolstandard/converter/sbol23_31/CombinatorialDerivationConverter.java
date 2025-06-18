@@ -19,7 +19,7 @@ import org.sbolstandard.core3.vocabulary.VariableFeatureCardinality;
 public class CombinatorialDerivationConverter implements EntityConverter<org.sbolstandard.core2.CombinatorialDerivation, CombinatorialDerivation>  {
 
     @Override
-    public CombinatorialDerivation convert(SBOLDocument doc, org.sbolstandard.core2.CombinatorialDerivation input) throws SBOLGraphException { 
+    public CombinatorialDerivation convert(SBOLDocument doc, org.sbolstandard.core2.CombinatorialDerivation input, Parameters parameters) throws SBOLGraphException { 
     	CombinatorialDerivation cd = doc.createCombinatorialDerivation(Util.createSBOL3Uri(input), Util.getNamespace(input), null ); //TODO: need method with URI instead of Component
 		Util.copyIdentified(input, cd);
 		if (input.isSetStrategy()) {

@@ -30,6 +30,9 @@ import org.sbolstandard.core3.vocabulary.RestrictionType.OrientationRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.SequentialRestriction;
 import org.sbolstandard.core3.api.SBOLAPI;
 import org.sbolstandard.core3.entity.Component;
+import org.sbolstandard.core3.entity.Component;
+import org.sbolstandard.converter.sbol23_31.Parameters;
+
 
 public class Util {
 	
@@ -548,25 +551,40 @@ public class Util {
 		}
 	}
 
-	public static org.sbolstandard.core3.vocabulary.Orientation toSBOL3Orientation(
-			org.sbolstandard.core2.OrientationType sbol2Orientation) throws SBOLGraphException {
-		if (sbol2Orientation == org.sbolstandard.core2.OrientationType.INLINE) {
-			return org.sbolstandard.core3.vocabulary.Orientation.inline;
-		} else if (sbol2Orientation == org.sbolstandard.core2.OrientationType.REVERSECOMPLEMENT) {
-			return org.sbolstandard.core3.vocabulary.Orientation.reverseComplement;
-		} else {
-			throw new SBOLGraphException("Unknown SBOL3 Component type: " + sbol2Orientation);
+	public static org.sbolstandard.core3.vocabulary.Orientation toSBOL3Orientation(org.sbolstandard.core2.OrientationType sbol2Orientation) throws SBOLGraphException {
+		if (sbol2Orientation!=null)
+		{
+			if (sbol2Orientation == org.sbolstandard.core2.OrientationType.INLINE) {
+				return org.sbolstandard.core3.vocabulary.Orientation.inline;
+			} 
+			else if (sbol2Orientation == org.sbolstandard.core2.OrientationType.REVERSECOMPLEMENT) {
+				return org.sbolstandard.core3.vocabulary.Orientation.reverseComplement;
+			} 
+			else {
+				throw new SBOLGraphException("Unknown SBOL2 OrientationType: " + sbol2Orientation);
+			}
+		}
+		else
+		{
+			return null;
 		}
 	}
 
-	public static org.sbolstandard.core2.OrientationType toSBOL2OrientationType(
-			org.sbolstandard.core3.vocabulary.Orientation sbol3Orientation) throws SBOLGraphException {
-		if (sbol3Orientation == org.sbolstandard.core3.vocabulary.Orientation.inline) {
-			return org.sbolstandard.core2.OrientationType.INLINE;
-		} else if (sbol3Orientation == org.sbolstandard.core3.vocabulary.Orientation.reverseComplement) {
-			return org.sbolstandard.core2.OrientationType.REVERSECOMPLEMENT;
-		} else {
-			throw new SBOLGraphException("Unknown SBOL2 OrientationType: " + sbol3Orientation);
+	public static org.sbolstandard.core2.OrientationType toSBOL2OrientationType( org.sbolstandard.core3.vocabulary.Orientation sbol3Orientation) throws SBOLGraphException {
+		if (sbol3Orientation!=null){
+			if (sbol3Orientation == org.sbolstandard.core3.vocabulary.Orientation.inline) {
+				return org.sbolstandard.core2.OrientationType.INLINE;
+			} 
+			else if (sbol3Orientation == org.sbolstandard.core3.vocabulary.Orientation.reverseComplement) {
+				return org.sbolstandard.core2.OrientationType.REVERSECOMPLEMENT;
+			} 
+			else {
+				throw new SBOLGraphException("Unknown SBOL3 OrientationType: " + sbol3Orientation);
+			}
+		}
+		else
+		{
+			return null;
 		}
 	}
 
@@ -782,8 +800,9 @@ public class Util {
 			return null; // Return null if no item with the given displayId is found
 		}
 		
-		public static <T extends Identified> T getSBOL3Entity(List<T> items, org.sbolstandard.core2.Identified sbol2Entity) throws SBOLGraphException
+		public static <T extends Identified> T getSBOL3Entity(List<T> items, org.sbolstandard.core2.Identified sbol2Entity, Parameters parameters) throws SBOLGraphException
 		{
+			URI uri= parameters.getMapping(sbol2Entity.getIdentity());						
 			if (items != null) {
 				for (T item : items) {
 					if (item.getUri().equals(sbol2Entity.getIdentity())) {
@@ -794,13 +813,16 @@ public class Util {
 					}
 					else
 					{
-						List<Object> annoItems=item.getAnnotion(URI.create("http//sbolstandard.org/sbol-converter/23_to_31"));
+						if (uri!=null && item.getUri().equals(uri)) {
+							return item;
+						}
+						/*List<Object> annoItems=item.getAnnotion(URI.create("http//sbolstandard.org/sbol-converter/23_to_31"));
 						if (annoItems != null && !annoItems.isEmpty() && annoItems.get(0) instanceof URI) {
 							URI uri = (URI) annoItems.get(0);
 							if (uri.equals(sbol2Entity.getIdentity())) {
 								return item;
 							}
-						}
+						}*/
 					}
 				}
 			}

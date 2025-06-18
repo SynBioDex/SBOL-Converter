@@ -21,7 +21,7 @@ public class InteractionConverter implements ChildEntityConverter<org.sbolstanda
 		SBOLDocument document,
 		Identified sbol3Parent,
 		org.sbolstandard.core2.Identified sbol2Parent,
-		org.sbolstandard.core2.Interaction sbol2Interaction
+		org.sbolstandard.core2.Interaction sbol2Interaction, Parameters parameters
 	) throws SBOLGraphException, SBOLValidationException {
 
 		// Cast the SBOL3 parent to a Component (the owner of the interaction)
@@ -30,11 +30,12 @@ public class InteractionConverter implements ChildEntityConverter<org.sbolstanda
 		// Create a new SBOL3 Interaction with converted SBO types from the SBOL2 Interaction
 		//Interaction sbol3Interaction = sbol3ParentComp.createInteraction(Util.convertToSBOL3_SBO_URIs(sbol2Interaction.getTypes()));
 		Interaction sbol3Interaction =null;
-		if (SBOLDocumentConverter.isCompliant()){
-			sbol3Interaction= sbol3ParentComp.createInteraction(sbol2Interaction.getIdentity(), Util.convertToSBOL3_SBO_URIs(sbol2Interaction.getTypes()));			
+		if (sbol2Interaction.getDisplayId()!=null){
+			sbol3Interaction= sbol3ParentComp.createInteraction(sbol2Interaction.getDisplayId(), Util.convertToSBOL3_SBO_URIs(sbol2Interaction.getTypes()));			
 		}
 		else{
-			sbol3Interaction= sbol3ParentComp.createInteraction(sbol2Interaction.getDisplayId(), Util.convertToSBOL3_SBO_URIs(sbol2Interaction.getTypes()));						
+			sbol3Interaction= sbol3ParentComp.createInteraction(Util.convertToSBOL3_SBO_URIs(sbol2Interaction.getTypes()));	
+			parameters.addMapping(sbol2Interaction.getIdentity(), sbol3Interaction.getUri());					
 		}
 
 		// Convert each SBOL2 Participation to SBOL3 Participation
@@ -60,11 +61,12 @@ public class InteractionConverter implements ChildEntityConverter<org.sbolstanda
 			// Create a Participation in the SBOL3 Interaction with the converted SBO roles and the Feature
 			//Participation sbol3Participation=sbol3Interaction.createParticipation( Util.convertToSBOL3_SBO_URIs(sbol2Participation.getRoles()),sbol3Feature);
 			Participation sbol3Participation=null;
-			if (SBOLDocumentConverter.isCompliant()){				
-				sbol3Participation = sbol3Interaction.createParticipation(sbol2Participation.getIdentity(), Util.convertToSBOL3_SBO_URIs(sbol2Participation.getRoles()),sbol3Feature);
+			if (sbol2Participation.getDisplayId()!=null){				
+				sbol3Participation = sbol3Interaction.createParticipation(sbol2Participation.getDisplayId(), Util.convertToSBOL3_SBO_URIs(sbol2Participation.getRoles()),sbol3Feature);
 			}
 			else{
-				sbol3Participation = sbol3Interaction.createParticipation(sbol2Participation.getDisplayId(), Util.convertToSBOL3_SBO_URIs(sbol2Participation.getRoles()),sbol3Feature);
+				sbol3Participation = sbol3Interaction.createParticipation(Util.convertToSBOL3_SBO_URIs(sbol2Participation.getRoles()),sbol3Feature);
+				parameters.addMapping(sbol2Participation.getIdentity(), sbol3Participation.getUri());
 			}
 			Util.copyIdentified(sbol2Participation, sbol3Participation);
 		}

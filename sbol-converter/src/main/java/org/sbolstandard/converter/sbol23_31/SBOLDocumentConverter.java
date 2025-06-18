@@ -1,14 +1,12 @@
 package org.sbolstandard.converter.sbol23_31;
 
-import java.net.URI;
-import java.util.List;
-
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.core2.Attachment;
 import org.sbolstandard.core2.Collection;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.Experiment;
 import org.sbolstandard.core2.ExperimentalData;
+import org.sbolstandard.core2.GenericTopLevel;
 import org.sbolstandard.core2.Implementation;
 import org.sbolstandard.core2.Model;
 import org.sbolstandard.core2.ModuleDefinition;
@@ -21,75 +19,81 @@ import org.sbolstandard.core3.util.SBOLGraphException;
 
 public class SBOLDocumentConverter {
 
+    /* 
 	private static boolean isCompliant=false;
 	
-	public static boolean isCompliant() {
+	public static boolean isCompliantGM() {
 		return isCompliant;
 	}
+    */
 	
 	public SBOLDocument convert(org.sbolstandard.core2.SBOLDocument sbol2Doc) throws SBOLGraphException, SBOLValidationException {
         SBOLDocument sbol3Doc = new SBOLDocument();
-        
+        Parameters parameters=new Parameters();
         SBOLValidate.validateSBOL(sbol2Doc, false, true, true); 
-        isCompliant=SBOLValidate.getNumErrors()==0;
+        //isCompliant=SBOLValidate.getNumErrors()==0;
                 
         SequenceConverter seqConverter = new SequenceConverter();
         for (Sequence seq : sbol2Doc.getSequences()) {
-        	seqConverter.convert(sbol3Doc, seq);
+        	seqConverter.convert(sbol3Doc, seq, parameters);
         }
         
         ComponentDefinitionConverter cdConverter = new ComponentDefinitionConverter();
         for (ComponentDefinition cd : sbol2Doc.getComponentDefinitions()) {
-            cdConverter.convert(sbol3Doc, cd);            
+            cdConverter.convert(sbol3Doc, cd, parameters);            
         }
        
         
         ModelConverter mConverter = new ModelConverter();
         for (Model mod : sbol2Doc.getModels()) {
-        	mConverter.convert(sbol3Doc, mod);
+        	mConverter.convert(sbol3Doc, mod, parameters);
         }
 
         ModuleDefinitionToComponentConverter mdConverter = new ModuleDefinitionToComponentConverter();
         for (ModuleDefinition md : sbol2Doc.getModuleDefinitions()) {
-            mdConverter.convert(sbol3Doc, md);            
+            mdConverter.convert(sbol3Doc, md, parameters);            
         }
-        
                 
         ExperimentalDataConverter edConverter = new ExperimentalDataConverter();
         for (ExperimentalData ed : sbol2Doc.getExperimentalData()) {
-        	edConverter.convert(sbol3Doc, ed);            
+        	edConverter.convert(sbol3Doc, ed, parameters);            
         }
         
         ExperimentConverter eConverter = new ExperimentConverter();
         for (Experiment expt : sbol2Doc.getExperiments()) {
-            eConverter.convert(sbol3Doc, expt);            
+            eConverter.convert(sbol3Doc, expt,parameters);            
         }
         
         CollectionConverter colConverter = new CollectionConverter();
         for (Collection col : sbol2Doc.getCollections()) {
-            colConverter.convert(sbol3Doc, col);            
+            colConverter.convert(sbol3Doc, col,parameters);            
         }
         
         AttachmentConverter attConverter = new AttachmentConverter();
         for (Attachment att : sbol2Doc.getAttachments()) {
-        	attConverter.convert(sbol3Doc, att);            
+        	attConverter.convert(sbol3Doc, att,parameters);            
         }
         
         ImplementationConverter implConverter = new ImplementationConverter();
         for (Implementation impl : sbol2Doc.getImplementations()) {
-        	implConverter.convert(sbol3Doc, impl);            
+        	implConverter.convert(sbol3Doc, impl,parameters);            
+        }
+        
+        GenericTopLevelConverter gtlConverter = new GenericTopLevelConverter();
+        for (GenericTopLevel gtl : sbol2Doc.getGenericTopLevels()) {
+        	gtlConverter.convert(sbol3Doc, gtl,parameters);            
         }
        
         // MapsTo conversion from Component Definition
         for (ComponentDefinition sbol2CD : sbol2Doc.getComponentDefinitions()) {
 			// For each ComponentDefinition, look for MapsTo
-			MapstoToMainConverter.convertFromComponentDefinition(sbol3Doc, sbol2CD);
+			MapstoToMainConverter.convertFromComponentDefinition(sbol3Doc, sbol2CD,parameters);
 		}
        
         // MapsTo conversion from Module Definition
         for (ModuleDefinition sbol2MD : sbol2Doc.getModuleDefinitions()) {
 			// For each ComponentDefinition, look for MapsTo
-			MapstoToMainConverter.convertFromModuleDefinition(sbol3Doc, sbol2MD);
+			MapstoToMainConverter.convertFromModuleDefinition(sbol3Doc, sbol2MD,parameters);
 		}
         
         Util.copyNamespacesFrom2_to_3(sbol2Doc, sbol3Doc);

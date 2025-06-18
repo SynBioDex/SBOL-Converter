@@ -10,7 +10,7 @@ import org.sbolstandard.core3.util.SBOLGraphException;
 public class AttachmentConverter implements EntityConverter<org.sbolstandard.core2.Attachment, Attachment> {
 
 	@Override
-	public Attachment convert(SBOLDocument doc, org.sbolstandard.core2.Attachment input) throws SBOLGraphException {
+	public Attachment convert(SBOLDocument doc, org.sbolstandard.core2.Attachment input, Parameters parameters) throws SBOLGraphException {
 		Attachment att = doc.createAttachment(Util.createSBOL3Uri(input), Util.getNamespace(input),	Util.createSBOL3Uri(input.getSource()));
 		Util.copyIdentified(input, att);
 		att.setHash(input.getHash());
