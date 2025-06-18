@@ -23,7 +23,10 @@ public class FunctionalComponentToSubComponentConverter
 		SubComponent sbol3SubComponent = null;
 
 		Component sbol3ParentComponent = (Component) sbol3Parent;
-
+		
+		//System.out.println("FunctionalComponentToSubComponentConverter PARENT COMPONENT: " + sbol3ParentComponent.getUri());
+		//System.out.println("FunctionalComponentToSubComponentConverter CHILD FUNCTIONAL COMPONENT: " + sbol2FunctionalComponent.getIdentity());
+		
 		// ModuleDefinition sbol2ParentModuleDefinition = (ModuleDefinition)
 		// sbol2Parent;
 
@@ -37,13 +40,22 @@ public class FunctionalComponentToSubComponentConverter
 		//sbol3SubComponent = sbol3ParentComponent.createSubComponent(sbol3ChildComponent);
 
 		if (SBOLDocumentConverter.isCompliant()){
+			
 			sbol3SubComponent = sbol3ParentComponent.createSubComponent(sbol2FunctionalComponent.getIdentity(), sbol3ChildComponent);
+			
 		}
 		else{
 			sbol3SubComponent = sbol3ParentComponent.createSubComponent(sbol2FunctionalComponent.getDisplayId(), sbol3ChildComponent);
-			
 		}
 		sbol3SubComponent.setDisplayId(sbol2FunctionalComponent.getDisplayId());
+		
+		
+		//System.out.println("FunctionalComponentToSubComponentConverter PARENT COMPONENT: " + sbol3ParentComponent.getUri());
+		//System.out.println("FunctionalComponentToSubComponentConverter CHILD FUNCTIONAL COMPONENT: " + sbol2FunctionalComponent.getIdentity());
+		//System.out.println("FunctionalComponentToSubComponentConverter SUBCOMPONENT: " + sbol3SubComponent.getUri());
+		//System.out.println("FunctionalComponentToSubComponentConverter CHILD COMPONENT: " + sbol3ChildComponent.getUri());
+		//System.out.println("DISPLAY ID: " + sbol3SubComponent.getDisplayId());
+		//System.out.println("----------------------------------------------------");
 
 		Util.copyIdentified(sbol2FunctionalComponent, sbol3SubComponent);
 

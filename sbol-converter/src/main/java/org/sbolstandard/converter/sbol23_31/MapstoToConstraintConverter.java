@@ -28,6 +28,7 @@ public class MapstoToConstraintConverter {
 
 		} else if (refinementType.equals(org.sbolstandard.core2.RefinementType.USEREMOTE)) {
 			System.out.println("REFINEMENT TYPE IS USEREMOTE");
+			
 			sbol3Constraint = sbol3ParentComponent.createConstraint(
 					org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.replaces, sbol3CompRef,
 					sbol3LocalSubComponent);

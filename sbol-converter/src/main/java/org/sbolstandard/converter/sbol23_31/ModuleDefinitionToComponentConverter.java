@@ -23,7 +23,7 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 	public Component convert(SBOLDocument doc, ModuleDefinition sbol2ModuleDefinition)
 			throws SBOLGraphException, SBOLValidationException {
 		// Create a list of types for the SBOL3 Component (here, always SBO:0000241 =
-		// "functional compartment")
+		// "functional component")
 		List<URI> types = new ArrayList<URI>();
 		types.add(URI.create("https://identifiers.org/SBO:0000241"));
 
@@ -92,7 +92,7 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 		// For each SBOL2 Interaction, convert to SBOL3 and attach to the new component
 		for (org.sbolstandard.core2.Interaction sbol2Interaction : sbol2ModuleDefinition.getInteractions()) {
 			// Print the interaction (for debugging/logging)
-			System.out.println(sbol2Interaction);
+			//System.out.println(sbol2Interaction);
 			// Convert the interaction to SBOL3 and add to the component
 			InteractionConverter interactionConverter = new InteractionConverter();
 			interactionConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2Interaction);
@@ -102,7 +102,7 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 		// --- Functional Components conversion ---
 		for(FunctionalComponent sbol2FuncCom : sbol2ModuleDefinition.getFunctionalComponents()) {
 			// Convert SBOL2 FunctionalComponent to SBOL3 SubComponent
-			System.out.println("FUNC COMP" + sbol2FuncCom.getIdentity());
+			//System.out.println("FUNC COMP" + sbol2FuncCom.getIdentity());
 			if(!sbol2ConvertedFuncComps.contains(sbol2FuncCom)) {
 				FunctionalComponentToSubComponentConverter fcConverter = new FunctionalComponentToSubComponentConverter();
 				fcConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2FuncCom);
