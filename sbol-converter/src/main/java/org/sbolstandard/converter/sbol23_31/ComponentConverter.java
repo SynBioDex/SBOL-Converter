@@ -19,7 +19,7 @@ import org.sbolstandard.core3.vocabulary.RoleIntegration;
 public class ComponentConverter implements ChildEntityConverter<org.sbolstandard.core2.Component, Feature> {
 
 	@Override
-	public Feature convert(SBOLDocument doc, Identified parent, org.sbolstandard.core2.Identified inputParent, org.sbolstandard.core2.Component input) throws SBOLGraphException {
+	public Feature convert(SBOLDocument doc, Identified parent, org.sbolstandard.core2.Identified inputParent, org.sbolstandard.core2.Component input, Parameters parameters) throws SBOLGraphException {
 		Component parentComponent = (Component) parent;
 		Feature result = null;
 		if (input.getMapsTos() != null && !input.getMapsTos().isEmpty()) {
@@ -27,9 +27,17 @@ public class ComponentConverter implements ChildEntityConverter<org.sbolstandard
 			throw new SBOLGraphException("Component with mapsTo not supported yet");
 		}
 		else {	//Create an SBOL3 SubComponent
-			URI sbol3URI = Util.createSBOL3Uri(input.getIdentity());
 			URI sbol3InstanceOfUri = Util.createSBOL3Uri(input.getDefinitionURI());
-			SubComponent resultSC = parentComponent.createSubComponent(sbol3URI, sbol3InstanceOfUri);
+			SubComponent resultSC=null;
+			if (input.getDisplayId()!=null)
+			{
+				resultSC= parentComponent.createSubComponent(input.getDisplayId(), sbol3InstanceOfUri);
+			}
+			else
+			{
+				resultSC= parentComponent.createSubComponent(sbol3InstanceOfUri);
+			}
+			parameters.addMapping(input.getIdentity(), resultSC.getUri());
 			// TODO: Check for the Access Type
 			// TODO Add measures
 			resultSC.setRoles(Util.toList(input.getRoles()));

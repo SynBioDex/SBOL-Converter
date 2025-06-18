@@ -20,7 +20,7 @@ import org.sbolstandard.core3.util.SBOLGraphException;
 public class ModuleDefinitionToComponentConverter implements EntityConverter<ModuleDefinition, Component> {
 
 	@Override
-	public Component convert(SBOLDocument doc, ModuleDefinition sbol2ModuleDefinition)
+	public Component convert(SBOLDocument doc, ModuleDefinition sbol2ModuleDefinition, Parameters parameters)
 			throws SBOLGraphException, SBOLValidationException {
 		// Create a list of types for the SBOL3 Component (here, always SBO:0000241 =
 		// "functional compartment")
@@ -46,7 +46,7 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 		// TODO: NOT IMPLEMENTED YET
 		ModuleToSubComponentConverter moduleToSubComponentConverter = new ModuleToSubComponentConverter();
 		for (org.sbolstandard.core2.Module sbol2Module: sbol2ModuleDefinition.getModules()) {
-			moduleToSubComponentConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2Module);
+			moduleToSubComponentConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2Module, parameters);
 		}
 		
 
@@ -59,7 +59,7 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 				FunctionalComponentToSubComponentConverter fcConverter = new FunctionalComponentToSubComponentConverter();
 				FunctionalComponent sbol2FuncCom = sbol2Participation.getParticipant();
 				SubComponent sbol3SubCom = fcConverter.convert(doc, sbol3Component, sbol2ModuleDefinition,
-						sbol2FuncCom);
+						sbol2FuncCom, parameters);
 
 				// Directional information determines SBOL3 interface placement (input, output,
 				// or non-directional)
@@ -96,7 +96,7 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 			System.out.println(sbol2Interaction);
 			// Convert the interaction to SBOL3 and add to the component
 			InteractionConverter interactionConverter = new InteractionConverter();
-			interactionConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2Interaction);
+			interactionConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2Interaction, parameters);
 		}
 
 		// Return the newly created SBOL3 Component representing the SBOL2

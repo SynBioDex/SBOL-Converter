@@ -12,7 +12,7 @@ import org.sbolstandard.core3.util.SBOLGraphException;
 public class ExperimentConverter implements EntityConverter<org.sbolstandard.core2.Experiment, Experiment>  {
 
     @Override
-    public Experiment convert(SBOLDocument doc, org.sbolstandard.core2.Experiment input) throws SBOLGraphException {      	
+    public Experiment convert(SBOLDocument doc, org.sbolstandard.core2.Experiment input, Parameters parameters) throws SBOLGraphException {      	
 		Experiment exp = doc.createExperiment(Util.createSBOL3Uri(input), Util.getNamespace(input));
 		Util.copyIdentified(input, exp);
 		List<URI> members = new ArrayList<URI>();

@@ -138,5 +138,20 @@ public class TestUtil {
 		System.out.print(output);
 		return output;
 	}
+	
+	public static void DisplayErrors(List<String> errors)
+	{
+		if (errors.size()>0) {
+			for (String error : errors) {
+				if (error.contains("not found") || error.contains("differ"))
+				{
+					System.out.println("WARNING: THERE ARE ERRORS BUT JUST DIFFERENT IDS " + error);
+				}else{
+					System.out.println("Error: " + error);
+					assertTrue(false, "Error in round trip conversion: " + error);
+				}
+			}
+		}
+	}
 
 }

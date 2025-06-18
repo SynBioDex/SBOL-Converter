@@ -21,7 +21,7 @@ public class InteractionConverter implements ChildEntityConverter<org.sbolstanda
 		SBOLDocument document,
 		Identified sbol3Parent,
 		org.sbolstandard.core2.Identified sbol2Parent,
-		org.sbolstandard.core2.Interaction sbol2Interaction
+		org.sbolstandard.core2.Interaction sbol2Interaction, Parameters parameters
 	) throws SBOLGraphException, SBOLValidationException {
 
 		// Cast the SBOL3 parent to a Component (the owner of the interaction)

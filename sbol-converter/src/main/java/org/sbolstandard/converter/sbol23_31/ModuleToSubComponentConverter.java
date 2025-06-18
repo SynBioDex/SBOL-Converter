@@ -11,7 +11,7 @@ public class ModuleToSubComponentConverter
 
 	@Override
 	public SubComponent convert(SBOLDocument document, Identified sbol3Parent,
-			org.sbolstandard.core2.Identified sbol2Parent, org.sbolstandard.core2.Module sbol2Module)
+			org.sbolstandard.core2.Identified sbol2Parent, org.sbolstandard.core2.Module sbol2Module, Parameters parameters)
 			throws SBOLGraphException, SBOLValidationException {
 
 		// TODO:

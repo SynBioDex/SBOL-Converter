@@ -548,25 +548,40 @@ public class Util {
 		}
 	}
 
-	public static org.sbolstandard.core3.vocabulary.Orientation toSBOL3Orientation(
-			org.sbolstandard.core2.OrientationType sbol2Orientation) throws SBOLGraphException {
-		if (sbol2Orientation == org.sbolstandard.core2.OrientationType.INLINE) {
-			return org.sbolstandard.core3.vocabulary.Orientation.inline;
-		} else if (sbol2Orientation == org.sbolstandard.core2.OrientationType.REVERSECOMPLEMENT) {
-			return org.sbolstandard.core3.vocabulary.Orientation.reverseComplement;
-		} else {
-			throw new SBOLGraphException("Unknown SBOL3 Component type: " + sbol2Orientation);
+	public static org.sbolstandard.core3.vocabulary.Orientation toSBOL3Orientation(org.sbolstandard.core2.OrientationType sbol2Orientation) throws SBOLGraphException {
+		if (sbol2Orientation!=null)
+		{
+			if (sbol2Orientation == org.sbolstandard.core2.OrientationType.INLINE) {
+				return org.sbolstandard.core3.vocabulary.Orientation.inline;
+			} 
+			else if (sbol2Orientation == org.sbolstandard.core2.OrientationType.REVERSECOMPLEMENT) {
+				return org.sbolstandard.core3.vocabulary.Orientation.reverseComplement;
+			} 
+			else {
+				throw new SBOLGraphException("Unknown SBOL2 OrientationType: " + sbol2Orientation);
+			}
+		}
+		else
+		{
+			return null;
 		}
 	}
 
-	public static org.sbolstandard.core2.OrientationType toSBOL2OrientationType(
-			org.sbolstandard.core3.vocabulary.Orientation sbol3Orientation) throws SBOLGraphException {
-		if (sbol3Orientation == org.sbolstandard.core3.vocabulary.Orientation.inline) {
-			return org.sbolstandard.core2.OrientationType.INLINE;
-		} else if (sbol3Orientation == org.sbolstandard.core3.vocabulary.Orientation.reverseComplement) {
-			return org.sbolstandard.core2.OrientationType.REVERSECOMPLEMENT;
-		} else {
-			throw new SBOLGraphException("Unknown SBOL2 OrientationType: " + sbol3Orientation);
+	public static org.sbolstandard.core2.OrientationType toSBOL2OrientationType( org.sbolstandard.core3.vocabulary.Orientation sbol3Orientation) throws SBOLGraphException {
+		if (sbol3Orientation!=null){
+			if (sbol3Orientation == org.sbolstandard.core3.vocabulary.Orientation.inline) {
+				return org.sbolstandard.core2.OrientationType.INLINE;
+			} 
+			else if (sbol3Orientation == org.sbolstandard.core3.vocabulary.Orientation.reverseComplement) {
+				return org.sbolstandard.core2.OrientationType.REVERSECOMPLEMENT;
+			} 
+			else {
+				throw new SBOLGraphException("Unknown SBOL3 OrientationType: " + sbol3Orientation);
+			}
+		}
+		else
+		{
+			return null;
 		}
 	}
 

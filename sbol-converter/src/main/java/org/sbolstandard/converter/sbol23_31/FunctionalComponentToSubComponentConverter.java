@@ -17,7 +17,7 @@ public class FunctionalComponentToSubComponentConverter
 	@Override
 	public SubComponent convert(SBOLDocument document, Identified sbol3Parent,
 			org.sbolstandard.core2.Identified sbol2Parent,
-			org.sbolstandard.core2.FunctionalComponent sbol2FunctionalComponent)
+			org.sbolstandard.core2.FunctionalComponent sbol2FunctionalComponent, Parameters parameters)
 			throws SBOLGraphException, SBOLValidationException {
 
 		SubComponent sbol3SubComponent = null;
