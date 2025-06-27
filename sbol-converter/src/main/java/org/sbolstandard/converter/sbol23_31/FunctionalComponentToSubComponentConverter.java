@@ -41,6 +41,8 @@ public class FunctionalComponentToSubComponentConverter
 		
 		Util.copyIdentified(sbol2FunctionalComponent, sbol3SubComponent);
 
+		
+
 		return sbol3SubComponent;
 
 	}

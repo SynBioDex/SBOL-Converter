@@ -2,6 +2,7 @@ package org.sbolstandard.converter.sbol31_23;
 
 import java.net.URI;
 
+import org.apache.thrift.Option.None;
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.core2.AccessType;
 import org.sbolstandard.core2.DirectionType;
@@ -36,25 +37,27 @@ public class SubComponentToFunctionalComponentConverter
 		DirectionType sbol2DirectionType = DirectionType.NONE;
 		AccessType sbol2AccessType = AccessType.PRIVATE;
 
-		// Check if SubComponent is an output of the parent Component's interface
-		if (sbol3Interface.getOutputs() != null
-				&& Util.getByUri(sbol3Interface.getOutputs(), sbol3SubComponent.getUri()) != null) {
-			sbol2DirectionType = DirectionType.OUT; // Map to OUT direction in SBOL2
-			sbol2AccessType = AccessType.PUBLIC; // Make access PUBLIC
+		if (sbol3Interface != null) {
+			// Check if SubComponent is an output of the parent Component's interface
+			if (sbol3Interface.getOutputs() != null
+					&& Util.getByUri(sbol3Interface.getOutputs(), sbol3SubComponent.getUri()) != null) {
+				sbol2DirectionType = DirectionType.OUT; // Map to OUT direction in SBOL2
+				sbol2AccessType = AccessType.PUBLIC; // Make access PUBLIC
+			}
+			// Check if SubComponent is an input
+			else if (sbol3Interface.getInputs() != null
+					&& Util.getByUri(sbol3Interface.getInputs(), sbol3SubComponent.getUri()) != null) {
+				sbol2DirectionType = DirectionType.IN; // Map to IN direction
+				sbol2AccessType = AccessType.PUBLIC;
+			}
+			// Check if SubComponent is non-directional
+			else if (sbol3Interface.getNonDirectionals() != null
+					&& Util.getByUri(sbol3Interface.getNonDirectionals(), sbol3SubComponent.getUri()) != null) {
+				sbol2DirectionType = DirectionType.INOUT; // Map to INOUT
+				sbol2AccessType = AccessType.PUBLIC;
+			}
 		}
-		// Check if SubComponent is an input
-		else if (sbol3Interface.getInputs() != null
-				&& Util.getByUri(sbol3Interface.getInputs(), sbol3SubComponent.getUri()) != null) {
-			sbol2DirectionType = DirectionType.IN; // Map to IN direction
-			sbol2AccessType = AccessType.PUBLIC;
-		}
-		// Check if SubComponent is non-directional
-		else if (sbol3Interface.getNonDirectionals() != null
-				&& Util.getByUri(sbol3Interface.getNonDirectionals(), sbol3SubComponent.getUri()) != null) {
-			sbol2DirectionType = DirectionType.INOUT; // Map to INOUT
-			sbol2AccessType = AccessType.PUBLIC;
-		}
-
+		
 		// The SBOL2 FunctionalComponent must reference a ComponentDefinition, which
 		// comes from
 		// the "instanceOf" property of the SubComponent in SBOL3 (converted to SBOL2

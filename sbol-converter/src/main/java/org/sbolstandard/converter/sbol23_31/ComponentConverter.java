@@ -67,32 +67,8 @@ public class ComponentConverter implements ChildEntityConverter<org.sbolstandard
 				features.add(result);
 				sbol3Interface.setNonDirectionals(features);
 		}
-		if (input.getMapsTos() != null && !input.getMapsTos().isEmpty()) {
-			// TODO
-			//throw new SBOLGraphException("Component with mapsTo not supported yet");
-			System.out.println("Component mapsTos not supported yet. This is a temporary message.");
-//			SubComponent sbol3SubComponentForComponentInstance 
-//			// TODO: CHECK HERE IT IS WRONG FOR COMPONENT CONVERTER
-//			// TODO: MAKE IT GENERIC FOR ALL CONVERTERS
-//			for (org.sbolstandard.core2.MapsTo mapsTo : input.getMapsTos()) {
-//				// Convert MapsTo to ComponentReference
-//				ComponentReference sbol3CompRef = MapstoToComponentReferenceConverter.convertForComponent(document, sbol2Module,
-//						sbol3ParentComponent, mapsTo, sbol3SubComponentForComponentInstance);
-//
-//				Constraint sbol3Constraint = MapstoToConstraintConverter.convert(sbol3ParentComponent, mapsTo,
-//						sbol3CompRef);
-//
-//				if (sbol3Constraint == null) {
-//					// sbol3SubComponentForModule.addConstraint(sbol3Constraint);
-//					System.out.println("Constraint is null for " + mapsTo.getIdentity() + ". This should not happen.");
-//				}
-//				
-//			}
-			
-			
-		}
 		
-		
+			
 		return result;
 
 	}

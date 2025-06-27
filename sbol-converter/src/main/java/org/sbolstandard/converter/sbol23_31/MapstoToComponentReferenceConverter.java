@@ -27,7 +27,7 @@ public class MapstoToComponentReferenceConverter {
 		Component childComponent=document.getIdentified(sbol3ChildComponentURI, Component.class);
 						
 		SubComponent sbol3RemoteSubComponent=null;
-		 sbol3RemoteSubComponent = Util.getSBOL3Entity(childComponent.getSubComponents(), mapsTo.getRemote(), parameters);
+		sbol3RemoteSubComponent = Util.getSBOL3Entity(childComponent.getSubComponents(), mapsTo.getRemote(), parameters);
 		
 		//System.out.println("sbol3RemoteSubComponent: " + sbol3RemoteSubComponent.getUri());
 		//System.out.println("sbol3ParentComponent: " + sbol3ParentComponent.getUri());

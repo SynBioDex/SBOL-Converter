@@ -30,6 +30,7 @@ import org.sbolstandard.core3.vocabulary.RestrictionType.OrientationRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.SequentialRestriction;
 import org.sbolstandard.core3.api.SBOLAPI;
 import org.sbolstandard.core3.entity.Component;
+import org.sbolstandard.core3.entity.Constraint;
 import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.converter.sbol23_31.Parameters;
 
@@ -722,10 +723,10 @@ public class Util {
 			throw new SBOLGraphException("Unknown SBOL2 Model framework: " + sbol2Framework);
 		}
 	}
-	public static boolean isModelDefinition(Component component) throws SBOLGraphException {
+	public static boolean isModuleDefinition(Component component) throws SBOLGraphException {
 		if(component.getInteractions() != null && !component.getInteractions().isEmpty()) {
 			return true;
-		} else if (component.getTypes().contains(org.sbolstandard.core3.vocabulary.ComponentType.FunctionalEntity)) {
+		} else if (component.getTypes().contains(URI.create("https://identifiers.org/SBO:0000241"))) {
 			return true;
 		}
 		return false;
@@ -827,6 +828,24 @@ public class Util {
 				}
 			}
 			return null;
+		}
+
+		public static boolean isMapstoConstraint(Constraint constraint) throws SBOLGraphException {
+			// Check if the SBOL3 constraint is a SBOL2 mapsto type
+			if(constraint.getRestriction().equals(org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.differentFrom.getUri()))
+			{
+				return true;
+			} 
+			else if(constraint.getRestriction().equals(org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.verifyIdentical.getUri()))
+			{
+				return true;
+			}
+			else if(constraint.getRestriction().equals(org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.replaces.getUri()))
+			{
+				return true;
+			}
+
+			return false;
 		}
 
 }

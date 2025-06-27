@@ -29,28 +29,22 @@ public class SBOLDocumentConverter {
 
 		if (sbol3Doc.getComponents() != null) {
 			ComponentConverter comConverter = new ComponentConverter();
-			ModuleConverter mConverter = new ModuleConverter();
-
 			ComponentToModuleDefinitionConverter comToModuleConverter = new ComponentToModuleDefinitionConverter();
 
+			
 			for (Component c : sbol3Doc.getComponents()) {
-				if (Util.isModelDefinition(c)) {
-					// TODO: CREATE A COMPONENT TO MODULE DEFINITION CONVERTER
+				//System.out.println("Converting component: " + c.getDisplayId());
+				if (Util.isModuleDefinition(c)) 
+				{
+					System.out.println("Converting component: " + c.getDisplayId());
 					comToModuleConverter.convert(sbol2Doc, c);
-
-				} else {
-
-					if (comConverter.convert(sbol2Doc, c) == null) {
-						mConverter.convert(sbol2Doc, c);
-					}
-					//
-					//
-					//
-					//
+				} 
+				else 
+				{
+					comConverter.convert(sbol2Doc, c);
 				}
 			}
 		}
-
 		if (sbol3Doc.getModels() != null) {
 			ModelConverter mConverter = new ModelConverter();
 			for (Model m : sbol3Doc.getModels()) {
@@ -93,6 +87,26 @@ public class SBOLDocumentConverter {
 				implConverter.convert(sbol2Doc, impl);
 			}
 		}
+
+		// Mapsto conversion
+		
+		for (Component component : sbol3Doc.getComponents()) {
+			//Component References 
+
+			// TODO: WE NEED TO CHECK IF THIS IS A MODULE DEFINITION OR COMPONENT DEFINITION
+			if (Util.isModuleDefinition(component)) {
+				// Module Definition
+
+				MapsToMainConverter.convertForModuleDefinition(sbol2Doc, component);
+				
+			} else {
+				// Component Definition 
+				MapsToMainConverter.convertForComponentDefinition(sbol2Doc, component);
+			}
+			
+		}
+
+		
 
 		
 

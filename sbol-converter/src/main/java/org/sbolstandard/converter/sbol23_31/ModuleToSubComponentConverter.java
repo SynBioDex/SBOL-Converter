@@ -20,19 +20,12 @@ public class ModuleToSubComponentConverter
 			org.sbolstandard.core2.Identified sbol2Parent, org.sbolstandard.core2.Module sbol2Module, Parameters parameters)
 			throws SBOLGraphException, SBOLValidationException {
 
-		// ModuleDefinition sbol2ParentModuleDefinition = (ModuleDefinition)
-		// sbol2Parent;
+		
 		org.sbolstandard.core3.entity.Component sbol3ParentComponent = (org.sbolstandard.core3.entity.Component) sbol3Parent;
 
-		//System.out.println("ModuleToSubComponentConverter PARENT COMPONENT: " + sbol3ParentComponent.getUri());
-		
-		for (Component comp: document.getComponents())
-		{
-			System.out.println(comp.getUri());
-		}
-
 		URI sbol3ChildComponentURI=Util.createSBOL3Uri(sbol2Module.getDefinition());
-				
+		//System.out.println("sbol3ChildComponentURI: " + sbol3ChildComponentURI + " sbol2Module.getDef.getUri: " + sbol2Module.getDefinition().getIdentity());
+
 		SubComponent sbol3SubComponentForModule = null;
 		if (sbol2Module.getDisplayId() != null) {
 			sbol3SubComponentForModule = sbol3ParentComponent.createSubComponent(sbol2Module.getDisplayId(),
@@ -43,23 +36,6 @@ public class ModuleToSubComponentConverter
 			//sbol3SubComponentForModule.addAnnotion(URI.create("http//sbolstandard.org/sbol-converter/23_to_31"),sbol2Module.getIdentity());
 		}
 		
-		//System.out.println("ModuleToSubComponentConverter SUBCOMPONENT " + sbol3SubComponentForModule.getUri());
-		// MapsTo Conversion is lifted one level up
-//		for (MapsTo mapsTo : sbol2Module.getMapsTos()) {
-//
-//			ComponentReference sbol3CompRef = MapstoToComponentReferenceConverter.convert(document, sbol2Module,
-//					sbol3ParentComponent, mapsTo, sbol3SubComponentForModule);
-//
-//			Constraint sbol3Constraint = MapstoToConstraintConverter.convert(sbol3ParentComponent, mapsTo,
-//					sbol3CompRef);
-//
-//			if (sbol3Constraint == null) {
-//				// sbol3SubComponentForModule.addConstraint(sbol3Constraint);
-//				System.out.println("Constraint is null for " + mapsTo.getIdentity() + ". This should not happen.");
-//			}
-//
-//		}
-
 		// MEASURES
 		//System.out.println("ModuleToSubComponentConverter.convert() NOT IMPLEMENTED YET");
 
