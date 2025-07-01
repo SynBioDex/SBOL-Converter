@@ -34,15 +34,19 @@ public class TestUtil {
 	}
 	
 	public static List<String> roundTripConvert(File file) throws Exception {
-		Configuration.getInstance().setValidateBeforeSaving(true);
-
+		
 		org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
+		return roundTripConvert(doc);		
+	}
+
+	public static List<String> roundTripConvert(SBOLDocument sbol2InputDocument) throws Exception {
+		Configuration.getInstance().setValidateBeforeSaving(true);
 		System.out.println("Starting to convert the SBOL2 file below:");
 		
-		SBOLWriter.write(doc, System.out);
+		SBOLWriter.write(sbol2InputDocument, System.out);
 		
 		SBOLDocumentConverter converter = new SBOLDocumentConverter();
-		org.sbolstandard.core3.entity.SBOLDocument sbol3Doc = converter.convert(doc);
+		org.sbolstandard.core3.entity.SBOLDocument sbol3Doc = converter.convert(sbol2InputDocument);
 		System.out.println("--------");
 
 		System.out.println("Converted from SBOL2 to SBOL3:");
@@ -56,7 +60,7 @@ public class TestUtil {
 		System.out.println("Converted from SBOL3 to SBOL2:");
 
 		SBOLWriter.write(sbol2Doc, System.out);
-		SBOLValidate.compareDocuments("SBOL2in", doc, "SBOL2out", sbol2Doc);
+		SBOLValidate.compareDocuments("SBOL2in", sbol2InputDocument, "SBOL2out", sbol2Doc);
 		
 		return SBOLValidate.getErrors();		
 	}

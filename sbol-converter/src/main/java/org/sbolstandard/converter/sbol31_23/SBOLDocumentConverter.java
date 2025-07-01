@@ -4,6 +4,8 @@ import org.sbolstandard.converter.Util;
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.Sequence;
+import org.sbolstandard.core3.entity.TopLevel;
+import org.sbolstandard.core3.entity.TopLevelMetadata;
 import org.sbolstandard.core3.entity.Model;
 import org.sbolstandard.core3.util.SBOLGraphException;
 import org.sbolstandard.core3.entity.Attachment;
@@ -39,14 +41,9 @@ public class SBOLDocumentConverter {
 					comToModuleConverter.convert(sbol2Doc, c);
 
 				} else {
-
 					if (comConverter.convert(sbol2Doc, c) == null) {
 						mConverter.convert(sbol2Doc, c);
 					}
-					//
-					//
-					//
-					//
 				}
 			}
 		}
@@ -94,7 +91,12 @@ public class SBOLDocumentConverter {
 			}
 		}
 
-		
+		if (sbol3Doc.getTopLevels() != null) {
+			TopLevelMetaDataConverter tlmConverter = new TopLevelMetaDataConverter();
+			for (TopLevelMetadata tlm : sbol3Doc.getTopLevelMetadataList()) {
+				tlmConverter.convert(sbol2Doc, tlm);
+			}
+		}
 
 		Util.copyNamespacesFrom3_to_2(sbol3Doc, sbol2Doc);
         

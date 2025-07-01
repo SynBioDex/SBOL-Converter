@@ -8,7 +8,11 @@ import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.xml.namespace.QName;
+
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.jena.rdf.model.Model;
+import org.sbolstandard.core2.Annotation;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.EDAMOntology;
 import org.sbolstandard.core2.RestrictionType;
@@ -16,6 +20,7 @@ import org.sbolstandard.core2.SBOLValidate;
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core2.SystemsBiologyOntology;
 import org.sbolstandard.core3.entity.Identified;
+import org.sbolstandard.core3.entity.Metadata;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.Sequence;
 import org.sbolstandard.core3.entity.TopLevel;
@@ -23,11 +28,15 @@ import org.sbolstandard.core3.util.SBOLGraphException;
 import org.sbolstandard.core3.util.URINameSpace;
 import org.sbolstandard.core3.util.URINameSpace.SONameSpace;
 import org.sbolstandard.core3.vocabulary.ComponentType;
+import org.sbolstandard.core3.vocabulary.DataModel;
 import org.sbolstandard.core3.vocabulary.Encoding;
 import org.sbolstandard.core3.vocabulary.RestrictionType.ConstraintRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.OrientationRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.SequentialRestriction;
+
+import com.apicatalog.jsonld.StringUtils;
+
 import org.sbolstandard.core3.api.SBOLAPI;
 import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Component;
@@ -324,6 +333,151 @@ public class Util {
 		return URI.create(Util.extractURIPrefixSBOL2Uri(input.getIdentity().toString()));
 	}
 
+	public static <T extends Identified> String inferDisplayId(URI uri, URI childEntityDataType, List<T> childEntities) throws SBOLGraphException {
+		String displayId=SBOLAPI.inferDisplayId(uri);
+		if (StringUtils.isBlank(displayId)){
+			displayId=SBOLAPI.createLocalName(childEntityDataType,childEntities);
+		}
+		return displayId;
+
+	}
+
+	public static QName toQName(URI uri) throws SBOLGraphException
+	{
+		String local=SBOLAPI.inferDisplayId(uri);
+		String uriString=uri.toString();
+		// Extract the namespace from the top-level type string
+		int index=uriString.lastIndexOf(local);
+		String namespace = uriString.substring(0,index);
+		/*if (namespace.endsWith("/")) {
+			namespace = namespace.substring(0, namespace.length() - 1);
+		}*/
+		QName qname = new QName(namespace, local);
+		return qname;
+	}
+	
+	public static void copyIdentified(Identified input, org.sbolstandard.core2.Identified output)
+			throws SBOLGraphException, SBOLValidationException {
+		output.setName(input.getName());
+		output.setDescription(input.getDescription());
+		 if (input.getWasDerivedFrom() != null) {
+			output.setWasDerivedFroms(toSet(input.getWasDerivedFrom()));
+		}
+		convertAnnotations3_to_2(input, output);	
+		/* 
+		List<Metadata> metadataEntities = input.getMetadataEntites();
+		if (metadataEntities != null){
+			for (Metadata metadata : metadataEntities) {
+				// Convert Metadata to SBOL2 Annotation
+				Annotation annotation = new Annotation(metadata.getProperty(), metadata.getValue());
+				Annotation nested1=gtl.createAnnotation(new QName(annoNS, "property4"), new QName(annoNS, "NestedType1"), "nestedid", annotations);
+		
+				output.addAnnotation(annotation);
+			}
+		}*/
+
+
+		// TODO: FIX ME
+		// output.setWasGeneratedBy(toSet(input.getWasGeneratedBys()));
+	}
+
+	/**
+	 * Converts a SBOL3 Metadata object to a SBOL2 Annotation and adds it to the output.
+	 * @param metadata The SBOL3 Metadata object
+	 * @param output The SBOL2 Identified object to add the annotation to
+	 * @param qName The QName for the annotation property
+	 * @throws SBOLGraphException 
+	 */
+	private static void convertAnnotations3_to_2(Identified input, org.sbolstandard.core2.Identified output) throws SBOLGraphException, SBOLValidationException {
+		
+		List<Pair<URI, Object>> annotations = input.getAnnotations();
+		if (annotations!=null){
+			for (Pair<URI, Object> annotation : annotations) {
+				// Convert SBOL3 Annotation to Metadata
+				String property = annotation.getLeft().toString();
+				Object value = annotation.getRight();
+				QName qName=toQName(URI.create(property));
+				if (value instanceof URI) {
+					output.createAnnotation(qName, (URI) value);
+				} else if (value instanceof String) {
+					output.createAnnotation(qName, (String) value);
+				} else if (value instanceof Boolean) {
+					output.createAnnotation(qName, (Boolean) value);
+				} else if (value instanceof Double) {
+					output.createAnnotation(qName, (Double) value);
+				} else if (value instanceof Integer) {
+					output.createAnnotation(qName, (Integer) value);
+				}
+				else if (value instanceof TopLevel) {
+					output.createAnnotation(qName, ((TopLevel) value).getUri());
+				}
+				else if (value instanceof Metadata) {
+					Metadata metadata = (Metadata) value;
+					createNestedAnnotation(output, qName, metadata);					
+				}
+			}
+		}
+
+	}
+
+	private static Annotation createNestedAnnotation(Object output, QName qnameProperty, Metadata metadata) throws SBOLGraphException, SBOLValidationException
+	{
+		URI metadataTypeURI=metadata.getType().get(0);
+		QName nestedQName = toQName(metadataTypeURI);
+		
+		List<Annotation> sbol2Annotations = new ArrayList<>();
+		List<Pair<URI, Object>> childMetadataAnnotations=null;
+		List<Pair<URI, Object>> annotations = metadata.getAnnotations();
+		if (annotations!=null){
+			for (Pair<URI, Object> annotation : annotations) {
+				String property = annotation.getLeft().toString();
+				Object value = annotation.getRight();
+				QName qName=toQName(URI.create(property));
+				if (value instanceof URI) {
+					sbol2Annotations.add(new Annotation(qName, (URI) value));
+				} else if (value instanceof String) {
+					sbol2Annotations.add(new Annotation(qName, (String) value));
+				} else if (value instanceof Boolean) {
+					sbol2Annotations.add(new Annotation(qName, (Boolean) value));
+				} else if (value instanceof Double) {
+					sbol2Annotations.add(new Annotation(qName, (Double) value));
+				} else if (value instanceof Integer) {
+					sbol2Annotations.add(new Annotation(qName, (Integer) value));
+				}
+				else if (value instanceof TopLevel) {
+					sbol2Annotations.add(new Annotation(qName, ((TopLevel) value).getUri()));
+				}
+				else if (value instanceof Metadata) {
+					if (childMetadataAnnotations==null)
+					{
+						childMetadataAnnotations=new ArrayList<>();
+					}
+					childMetadataAnnotations.add(annotation);
+				}					
+			}
+		}
+
+		Annotation nestedAnnotation=null;
+		if (output instanceof org.sbolstandard.core2.Identified){
+			org.sbolstandard.core2.Identified identifiedOutput = (org.sbolstandard.core2.Identified) output;
+			nestedAnnotation = identifiedOutput.createAnnotation(qnameProperty, nestedQName, metadata.getDisplayId(), sbol2Annotations);
+		}
+		else if (output instanceof Annotation){
+			Annotation annotationOutput = (Annotation) output;
+			nestedAnnotation = annotationOutput.createAnnotation(qnameProperty, nestedQName, metadata.getDisplayId(), sbol2Annotations);
+		}
+				
+		if (childMetadataAnnotations!=null){
+			for (Pair<URI, Object> childMetadataAnnotation : childMetadataAnnotations){
+				QName qNameChildMetadata=toQName(URI.create(childMetadataAnnotation.getLeft().toString()));
+				Metadata childMetadata= (Metadata)childMetadataAnnotation.getRight();
+				//No need to add the created child annoation since it is added within the createNestedAnnotation method
+				createNestedAnnotation(nestedAnnotation, qNameChildMetadata, childMetadata);
+			}
+		}
+		return nestedAnnotation;
+	}
+
 	public static void copyIdentified(org.sbolstandard.core2.Identified input, Identified output)
 			throws SBOLGraphException {
 		output.setName(input.getName());
@@ -332,14 +486,84 @@ public class Util {
 		output.setWasDerivedFrom(toList(input.getWasDerivedFroms()));
 		// TODO: FIX ME
 		// output.setWasGeneratedBy(toList(input.getWasGeneratedBys()));
-		for (org.sbolstandard.core2.Annotation annotation : input.getAnnotations()) {
-			// TODO: need to add other annotation types
-			if (annotation.isStringValue()) {
-				output.addAnnotion(
-						URI.create(annotation.getQName().getNamespaceURI() + annotation.getQName().getLocalPart()),
-						annotation.getStringValue());
+
+		convertAnnotations_2_to3(input.getAnnotations(), output);
+	}
+
+	/**
+	 * Recursively converts SBOL2 annotations (and nested annotations) to SBOL3 Metadata.
+	 * @param sbol2Annotations List of SBOL2 annotations to convert
+	 * @param parent The SBOL3 Identified object to which metadata will be added
+	 * @throws SBOLGraphException
+	 */
+	public static void convertAnnotations_2_to3(List<Annotation> sbol2Annotations, Identified parent) throws SBOLGraphException {
+		if (sbol2Annotations == null || sbol2Annotations.isEmpty()) return;
+		for (Annotation annotation : sbol2Annotations) {
+			
+			URI property=getAnnotationProperty(annotation);
+			if (annotation.isURIValue()){
+				parent.addAnnotion(property, annotation.getURIValue());
 			}
+			else if (annotation.isNestedAnnotations()){			
+				// If the annotation is a nested annotation, we need to create a Metadata object
+				// and recursively convert its annotations
+				URI annotationURI = annotation.getNestedIdentity();
+				String annotationDataTypeString = annotation.getNestedQName().getNamespaceURI() + annotation.getNestedQName().getLocalPart();
+				URI annotationDataType = URI.create(annotationDataTypeString);
+				String displayId = inferDisplayId(annotationURI, URINameSpace.SBOL.local("Identified"), parent.getMetadataEntites());
+				Metadata metadata = parent.createMetadata(displayId, annotationDataType, property);
+				convertAnnotations_2_to3(annotation.getAnnotations(), metadata);
+			}
+			else if (annotation.isBooleanValue()){
+				parent.addAnnotion(property, annotation.getBooleanValue());				
+			}			
+			else if (annotation.isDoubleValue()){
+				parent.addAnnotion(property, annotation.getDoubleValue());				
+			}
+			else if (annotation.isIntegerValue()){
+				parent.addAnnotion(property, annotation.getIntegerValue());				
+			}
+			else if (annotation.isStringValue()){
+				parent.addAnnotion(property, annotation.getStringValue());				
+			}
+			else {
+				throw new SBOLGraphException("Unknown annotation type: " + annotation.getClass().getName());
+			}			
 		}
+	}
+
+
+	private static URI getAnnotationProperty(Annotation annotation)
+	{
+		String namespaceURI = annotation.getQName().getNamespaceURI();
+		String localString = annotation.getQName().getLocalPart();
+		return SBOLAPI.append(namespaceURI, localString);
+	}
+	
+	private static Object getAnnotationValue(Annotation annotation)
+	{
+		Object value=null;
+		if (annotation.isBooleanValue())
+		{
+			value=annotation.getBooleanValue();
+		}
+		else if (annotation.isDoubleValue())
+		{
+			value=annotation.getDoubleValue();
+		}
+		else if (annotation.isIntegerValue())
+		{
+			value=annotation.getIntegerValue();
+		}
+		else if (annotation.isStringValue())
+		{
+			value=annotation.getStringValue();
+		}		
+		else if (annotation.isURIValue())
+		{
+			value=annotation.getURIValue();
+		}
+		return value;		
 	}
 
 	public static void copyNamespacesFrom2_to_3(org.sbolstandard.core2.SBOLDocument inputSbol2Doc,
@@ -399,18 +623,7 @@ public class Util {
 				}
 			}
 		}
-	}
-	 
-	public static void copyIdentified(Identified input, org.sbolstandard.core2.Identified output)
-			throws SBOLGraphException, SBOLValidationException {
-		output.setName(input.getName());
-		output.setDescription(input.getDescription());
-		 if (input.getWasDerivedFrom() != null) {
-			output.setWasDerivedFroms(toSet(input.getWasDerivedFrom()));
-		}
-		// TODO: FIX ME
-		// output.setWasGeneratedBy(toSet(input.getWasGeneratedBys()));
-	}
+	}	 	
 
 	private static URI convertSOUri_2_to_3(URI soUri)
 	{
