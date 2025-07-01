@@ -34,7 +34,7 @@ public class MapstoToComponentReferenceConverter {
 		//System.out.println("sbol3SubComponentForModule: " + sbol3SubComponentForModule.getUri());
 		ComponentReference sbol3CompRef = sbol3ParentComponent.createComponentReference(sbol3RemoteSubComponent,
 				sbol3SubComponentForModule);
-
+				
 		return sbol3CompRef;
 
 	}

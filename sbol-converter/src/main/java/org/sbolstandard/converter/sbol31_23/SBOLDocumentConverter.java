@@ -1,6 +1,8 @@
 package org.sbolstandard.converter.sbol31_23;
 
 import org.sbolstandard.converter.Util;
+import org.sbolstandard.core2.ComponentDefinition;
+import org.sbolstandard.core2.ModuleDefinition;
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.Sequence;
@@ -89,27 +91,21 @@ public class SBOLDocumentConverter {
 		}
 
 		// Mapsto conversion
-		
 		for (Component component : sbol3Doc.getComponents()) {
-			//Component References 
-
-			// TODO: WE NEED TO CHECK IF THIS IS A MODULE DEFINITION OR COMPONENT DEFINITION
+			
+			// WE NEED TO CHECK IF THIS IS A MODULE DEFINITION OR COMPONENT DEFINITION
 			if (Util.isModuleDefinition(component)) {
 				// Module Definition
-
-				MapsToMainConverter.convertForModuleDefinition(sbol2Doc, component);
+				ModuleDefinition moduleDefinition = sbol2Doc.getModuleDefinition(Util.createSBOL2Uri(component.getUri()));
+				MapsToMainConverter.convertForModuleDefinition(sbol2Doc, component, moduleDefinition);
 				
 			} else {
 				// Component Definition 
-				MapsToMainConverter.convertForComponentDefinition(sbol2Doc, component);
+				ComponentDefinition componentDefinition = sbol2Doc.getComponentDefinition(Util.createSBOL2Uri(component.getUri()));
+				MapsToMainConverter.convertForComponentDefinition(sbol2Doc, component, componentDefinition);
 			}
 			
 		}
-
-		
-
-		
-
 		Util.copyNamespacesFrom3_to_2(sbol3Doc, sbol2Doc);
         
 		return sbol2Doc;

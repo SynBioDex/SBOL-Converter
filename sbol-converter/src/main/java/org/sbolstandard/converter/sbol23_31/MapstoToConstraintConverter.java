@@ -36,7 +36,7 @@ public class MapstoToConstraintConverter {
 		} else if (refinementType.equals(org.sbolstandard.core2.RefinementType.VERIFYIDENTICAL)) {
 			System.out.println("REFINEMENT TYPE IS VERIFYIDENTICAL");
 			sbol3Constraint = sbol3ParentComponent.createConstraint(
-					org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.replaces, sbol3CompRef,
+					org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.verifyIdentical, sbol3CompRef,
 					sbol3LocalSubComponent);
 		} else if (refinementType.equals(org.sbolstandard.core2.RefinementType.MERGE)) {
 			System.out.println("REFINEMENT TYPE IS MERGE");
