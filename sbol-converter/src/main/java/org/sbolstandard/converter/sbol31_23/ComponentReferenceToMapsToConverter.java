@@ -65,7 +65,8 @@ public class ComponentReferenceToMapsToConverter implements ChildEntityConverter
                     System.out.println("Creating MapsTo for a Component: " + sbol2Component.getDisplayId() + " with refinement type: " + refinementType + " and local functional component: " + sbol2LocalFuncCompDisplayId + " and remote feature: " + sbol2RemoteFeatureDisplayId);
                     mapsTo = sbol2Component.createMapsTo(displayId, refinementType, sbol2LocalFuncCompDisplayId, sbol2RemoteFeatureDisplayId);
                 }
-               
+                
+                Util.copyIdentified(componentReference, mapsTo);
                 return mapsTo;
     }
     
