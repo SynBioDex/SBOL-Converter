@@ -50,36 +50,11 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 				sbol2ConvertedFuncComps.add(sbol2FuncCom);				
 				SubComponent sbol3SubCom = fcConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2FuncCom, parameters);
 
-				// Directional information determines SBOL3 interface placement (input, output,
-				// or non-directional)
-				if (sbol2Participation.getParticipant().getDirection() != org.sbolstandard.core2.DirectionType.NONE) {
-					// Get or create an SBOL3 Interface for this Component
-					Interface sbol3Interface = getInterface(sbol3Component);
-
-					// Place the SubComponent in the appropriate list
-					// (inputs/outputs/non-directional) based on direction
-					if (sbol2FuncCom.getDirection() == org.sbolstandard.core2.DirectionType.IN) {
-						sbol3Interface.setInputs(toFeatureList(sbol3SubCom, sbol3Interface.getInputs()));
-					} 
-					else if (sbol2FuncCom.getDirection() == org.sbolstandard.core2.DirectionType.OUT) {
-						sbol3Interface.setOutputs(toFeatureList(sbol3SubCom, sbol3Interface.getOutputs()));
-					} 
-					else if (sbol2FuncCom.getDirection() == org.sbolstandard.core2.DirectionType.INOUT) {
-						sbol3Interface.setNonDirectionals(toFeatureList(sbol3SubCom, sbol3Interface.getNonDirectionals()));
-					}
-				} else {
-					// If direction is NONE, but access is PUBLIC, treat as non-directional
-					// interface
-					if (sbol2FuncCom.getAccess() == AccessType.PUBLIC) {
-						Interface sbol3Interface = getInterface(sbol3Component);
-						sbol3Interface.setNonDirectionals(toFeatureList(sbol3SubCom, sbol3Interface.getNonDirectionals()));
-					}
-				}
+				setUpInterface(sbol2FuncCom, sbol3Component, sbol3SubCom);
+				
 			}
 		}
 		
-		
-
 		// --- Interactions conversion ---
 		// For each SBOL2 Interaction, convert to SBOL3 and attach to the new component
 		for (org.sbolstandard.core2.Interaction sbol2Interaction : sbol2ModuleDefinition.getInteractions()) {
@@ -89,7 +64,6 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 			InteractionConverter interactionConverter = new InteractionConverter();
 			interactionConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2Interaction, parameters);
 		}
-		
 		// TODO: Handle all the functional components
 		// --- Functional Components conversion ---
 		for(FunctionalComponent sbol2FuncCom : sbol2ModuleDefinition.getFunctionalComponents()) {
@@ -97,7 +71,10 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 			//System.out.println("FUNC COMP" + sbol2FuncCom.getIdentity());
 			if(!sbol2ConvertedFuncComps.contains(sbol2FuncCom)) {
 				FunctionalComponentToSubComponentConverter fcConverter = new FunctionalComponentToSubComponentConverter();
-				fcConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2FuncCom, parameters);
+				SubComponent sbol3SubCom = fcConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2FuncCom, parameters);
+
+				setUpInterface(sbol2FuncCom, sbol3Component, sbol3SubCom);
+				
 			}
 			
 		}
@@ -129,5 +106,33 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 		}
 		features.add(sbol3SubCom);
 		return features;
+	}
+
+	private void setUpInterface(FunctionalComponent sbol2FuncCom, Component sbol3Component, SubComponent sbol3SubCom) throws SBOLGraphException {
+		// Directional information determines SBOL3 interface placement (input, output,
+		// or non-directional)
+		if (sbol2FuncCom.getDirection() != org.sbolstandard.core2.DirectionType.NONE) {
+			// Get or create an SBOL3 Interface for this Component
+			Interface sbol3Interface = getInterface(sbol3Component);
+
+			// Place the SubComponent in the appropriate list
+			// (inputs/outputs/non-directional) based on direction
+			if (sbol2FuncCom.getDirection() == org.sbolstandard.core2.DirectionType.IN) {
+				sbol3Interface.setInputs(toFeatureList(sbol3SubCom, sbol3Interface.getInputs()));
+			} 
+			else if (sbol2FuncCom.getDirection() == org.sbolstandard.core2.DirectionType.OUT) {
+				sbol3Interface.setOutputs(toFeatureList(sbol3SubCom, sbol3Interface.getOutputs()));
+			} 
+			else if (sbol2FuncCom.getDirection() == org.sbolstandard.core2.DirectionType.INOUT) {
+				sbol3Interface.setNonDirectionals(toFeatureList(sbol3SubCom, sbol3Interface.getNonDirectionals()));
+			}
+		} else {
+			// If direction is NONE, but access is PUBLIC, treat as non-directional
+			// interface
+			if (sbol2FuncCom.getAccess() == AccessType.PUBLIC) {
+				Interface sbol3Interface = getInterface(sbol3Component);
+				sbol3Interface.setNonDirectionals(toFeatureList(sbol3SubCom, sbol3Interface.getNonDirectionals()));
+			}
+		}
 	}
 }

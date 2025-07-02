@@ -27,14 +27,16 @@ public class MapstoToComponentReferenceConverter {
 		Component childComponent=document.getIdentified(sbol3ChildComponentURI, Component.class);
 						
 		SubComponent sbol3RemoteSubComponent=null;
-		 sbol3RemoteSubComponent = Util.getSBOL3Entity(childComponent.getSubComponents(), mapsTo.getRemote(), parameters);
+		sbol3RemoteSubComponent = Util.getSBOL3Entity(childComponent.getSubComponents(), mapsTo.getRemote(), parameters);
 		
 		//System.out.println("sbol3RemoteSubComponent: " + sbol3RemoteSubComponent.getUri());
 		//System.out.println("sbol3ParentComponent: " + sbol3ParentComponent.getUri());
 		//System.out.println("sbol3SubComponentForModule: " + sbol3SubComponentForModule.getUri());
-		ComponentReference sbol3CompRef = sbol3ParentComponent.createComponentReference(sbol3RemoteSubComponent,
+		ComponentReference sbol3CompRef = sbol3ParentComponent.createComponentReference(mapsTo.getDisplayId(), sbol3RemoteSubComponent,
 				sbol3SubComponentForModule);
 
+		Util.copyIdentified(mapsTo, sbol3CompRef);
+				
 		return sbol3CompRef;
 
 	}
@@ -50,14 +52,14 @@ public class MapstoToComponentReferenceConverter {
 		Component childComponent=document.getIdentified(childComponentURI, Component.class);			
 		
 		SubComponent sbol3RemoteSubComponent = Util.getSBOL3Entity(childComponent.getSubComponents(), mapsTo.getRemote(), parameters);
-		ComponentReference sbol3CompRef = sbol3ParentComponent.createComponentReference(sbol3RemoteSubComponent,
+		ComponentReference sbol3CompRef = sbol3ParentComponent.createComponentReference(mapsTo.getDisplayId(), sbol3RemoteSubComponent,
 				sbol3SubComponentForModule);
 		// TODO: CHECK sbol3SubComponentForModule is true
 		
-		System.out.println("sbol3RemoteSubComponent: " + sbol3RemoteSubComponent.getUri());
-		System.out.println("sbol3ParentComponent: " + sbol3ParentComponent.getUri());
-		System.out.println("sbol3SubComponentForModule: " + sbol3SubComponentForModule.getUri());
-
+		//System.out.println("sbol3RemoteSubComponent: " + sbol3RemoteSubComponent.getUri());
+		//System.out.println("sbol3ParentComponent: " + sbol3ParentComponent.getUri());
+		//System.out.println("sbol3SubComponentForModule: " + sbol3SubComponentForModule.getUri());
+		Util.copyIdentified(mapsTo, sbol3CompRef);
 		return sbol3CompRef;
 
 	}

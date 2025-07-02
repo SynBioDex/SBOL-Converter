@@ -25,26 +25,36 @@ public class ComponentToModuleDefinitionConverter implements EntityConverter<Com
 		moduleDef.setRoles(Util.convertRoles3_to_2(component.getRoles()));
 
 		// MODULES
-		// ??
 		// HOW TO CONVERT MODULES?
-		// TODO: SOME OF THE SUBCOMPONENTS SHOULD BE CONVERTED INTO MODULES 
-		
-
+		// TODO: SOME OF THE SUBCOMPONENTS SHOULD BE CONVERTED INTO MODULES
 		// SUB COMPONENT TO FUNCTIONAL COMPONENTS
 		SubComponentToFunctionalComponentConverter subCompToFunCompConverter = new SubComponentToFunctionalComponentConverter();
+		SubComponentToModuleConverter subCompToModuleConverter = new SubComponentToModuleConverter();
 
+		// TODO: CHECK HERE
 		for (SubComponent subComponent : component.getSubComponents()) {
-			subCompToFunCompConverter.convert(sbol2Doc, moduleDef, component, subComponent);
+			if(subComponent.getInstanceOf()!= null && subComponent.getInstanceOf().getSubComponents() != null)
+			{
+				subCompToModuleConverter.convert(sbol2Doc, moduleDef, component, subComponent);
+			}
+			else
+			{
+				subCompToFunCompConverter.convert(sbol2Doc, moduleDef, component, subComponent);
+			}
 		}
-
 		// INTERACTIONS
 		InteractionConverter interactionConverter = new InteractionConverter();
 
-		for (org.sbolstandard.core3.entity.Interaction interaction : component.getInteractions()) {
-			interactionConverter.convert(sbol2Doc, moduleDef, component, interaction);
-
+		// Can Interactions be null?
+		if (component.getInteractions() == null) {
+			System.out.println("Component " + component.getUri() + " has no interactions.");
 		}
-
+		else{
+			for (org.sbolstandard.core3.entity.Interaction interaction : component.getInteractions()) {
+				interactionConverter.convert(sbol2Doc, moduleDef, component, interaction);
+			}
+		}
+		
 		return moduleDef;
 	}
 

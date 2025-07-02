@@ -1,6 +1,8 @@
 package org.sbolstandard.converter.sbol31_23;
 
 import org.sbolstandard.converter.Util;
+import org.sbolstandard.core2.ComponentDefinition;
+import org.sbolstandard.core2.ModuleDefinition;
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.Sequence;
@@ -29,28 +31,22 @@ public class SBOLDocumentConverter {
 
 		if (sbol3Doc.getComponents() != null) {
 			ComponentConverter comConverter = new ComponentConverter();
-			ModuleConverter mConverter = new ModuleConverter();
-
 			ComponentToModuleDefinitionConverter comToModuleConverter = new ComponentToModuleDefinitionConverter();
 
+			
 			for (Component c : sbol3Doc.getComponents()) {
-				if (Util.isModelDefinition(c)) {
-					// TODO: CREATE A COMPONENT TO MODULE DEFINITION CONVERTER
+				//System.out.println("Converting component: " + c.getDisplayId());
+				if (Util.isModuleDefinition(c)) 
+				{
+					System.out.println("Converting component: " + c.getDisplayId());
 					comToModuleConverter.convert(sbol2Doc, c);
-
-				} else {
-
-					if (comConverter.convert(sbol2Doc, c) == null) {
-						mConverter.convert(sbol2Doc, c);
-					}
-					//
-					//
-					//
-					//
+				} 
+				else 
+				{
+					comConverter.convert(sbol2Doc, c);
 				}
 			}
 		}
-
 		if (sbol3Doc.getModels() != null) {
 			ModelConverter mConverter = new ModelConverter();
 			for (Model m : sbol3Doc.getModels()) {
@@ -94,8 +90,22 @@ public class SBOLDocumentConverter {
 			}
 		}
 
-		
-
+		// Mapsto conversion
+		for (Component component : sbol3Doc.getComponents()) {
+			
+			// WE NEED TO CHECK IF THIS IS A MODULE DEFINITION OR COMPONENT DEFINITION
+			if (Util.isModuleDefinition(component)) {
+				// Module Definition
+				ModuleDefinition moduleDefinition = sbol2Doc.getModuleDefinition(Util.createSBOL2Uri(component.getUri()));
+				MapsToMainConverter.convertForModuleDefinition(sbol2Doc, component, moduleDefinition);
+				
+			} else {
+				// Component Definition 
+				ComponentDefinition componentDefinition = sbol2Doc.getComponentDefinition(Util.createSBOL2Uri(component.getUri()));
+				MapsToMainConverter.convertForComponentDefinition(sbol2Doc, component, componentDefinition);
+			}
+			
+		}
 		Util.copyNamespacesFrom3_to_2(sbol3Doc, sbol2Doc);
         
 		return sbol2Doc;

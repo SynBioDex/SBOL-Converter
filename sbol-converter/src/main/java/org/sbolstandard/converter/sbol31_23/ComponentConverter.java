@@ -15,6 +15,7 @@ import org.sbolstandard.core3.entity.SubComponent;
 import org.sbolstandard.core2.SBOLDocument;
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core3.util.SBOLGraphException;
+import org.sbolstandard.core3.vocabulary.RestrictionType;
 
 public class ComponentConverter implements EntityConverter<Component, ComponentDefinition> {
 
@@ -69,7 +70,11 @@ public class ComponentConverter implements EntityConverter<Component, ComponentD
 		if (constraints != null) {
 			ConstraintConverter converter = new ConstraintConverter();
 			for (Constraint constraint : constraints) {
-				converter.convert(sbol2Doc, compDef, component, constraint);
+				// If it is not mapsto constraint, then convert it
+				if(!Util.isMapstoConstraint(constraint)) {
+					converter.convert(sbol2Doc, compDef, component, constraint);
+				}
+				
 			}
 		}
 
@@ -95,4 +100,6 @@ public class ComponentConverter implements EntityConverter<Component, ComponentD
 		// Return the final SBOL2 ComponentDefinition
 		return compDef;
 	}
+
+	
 }
