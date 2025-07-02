@@ -6,6 +6,8 @@ import org.sbolstandard.core2.ModuleDefinition;
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.Sequence;
+import org.sbolstandard.core3.entity.TopLevel;
+import org.sbolstandard.core3.entity.TopLevelMetadata;
 import org.sbolstandard.core3.entity.Model;
 import org.sbolstandard.core3.util.SBOLGraphException;
 import org.sbolstandard.core3.entity.Attachment;
@@ -91,21 +93,30 @@ public class SBOLDocumentConverter {
 		}
 
 		// Mapsto conversion
-		for (Component component : sbol3Doc.getComponents()) {
-			
-			// WE NEED TO CHECK IF THIS IS A MODULE DEFINITION OR COMPONENT DEFINITION
-			if (Util.isModuleDefinition(component)) {
-				// Module Definition
-				ModuleDefinition moduleDefinition = sbol2Doc.getModuleDefinition(Util.createSBOL2Uri(component.getUri()));
-				MapsToMainConverter.convertForModuleDefinition(sbol2Doc, component, moduleDefinition);
+		if (sbol3Doc.getComponents()!=null){
+			for (Component component : sbol3Doc.getComponents()) {
 				
-			} else {
-				// Component Definition 
-				ComponentDefinition componentDefinition = sbol2Doc.getComponentDefinition(Util.createSBOL2Uri(component.getUri()));
-				MapsToMainConverter.convertForComponentDefinition(sbol2Doc, component, componentDefinition);
+				// WE NEED TO CHECK IF THIS IS A MODULE DEFINITION OR COMPONENT DEFINITION
+				if (Util.isModuleDefinition(component)) {
+					// Module Definition
+					ModuleDefinition moduleDefinition = sbol2Doc.getModuleDefinition(Util.createSBOL2Uri(component.getUri()));
+					MapsToMainConverter.convertForModuleDefinition(sbol2Doc, component, moduleDefinition);
+					
+				} else {
+					// Component Definition 
+					ComponentDefinition componentDefinition = sbol2Doc.getComponentDefinition(Util.createSBOL2Uri(component.getUri()));
+					MapsToMainConverter.convertForComponentDefinition(sbol2Doc, component, componentDefinition);
+				}				
 			}
-			
 		}
+
+		if (sbol3Doc.getTopLevels() != null) {
+			TopLevelMetaDataConverter tlmConverter = new TopLevelMetaDataConverter();
+			for (TopLevelMetadata tlm : sbol3Doc.getTopLevelMetadataList()) {
+				tlmConverter.convert(sbol2Doc, tlm);
+			}
+		}
+
 		Util.copyNamespacesFrom3_to_2(sbol3Doc, sbol2Doc);
         
 		return sbol2Doc;

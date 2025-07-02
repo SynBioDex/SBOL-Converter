@@ -44,9 +44,9 @@ public class SequenceAnnotationToSubComponentTest {
 		SBOLWriter.write(doc, System.out);
 		
 		
-		/*List<String> errors=TestUtil.roundTripConvert(newFile);	
+		List<String> errors=TestUtil.roundTripConvert(newFile);	
 		TestUtil.DisplayErrors(errors);
-		*/
+		
 		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/ComponentDefinitionOutput_gl_cd_sa_comp.xml"));
 		//TestUtil.DisplayErrors(errors);
 		
