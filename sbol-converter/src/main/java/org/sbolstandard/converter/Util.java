@@ -25,6 +25,7 @@ import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.Sequence;
 import org.sbolstandard.core3.entity.TopLevel;
 import org.sbolstandard.core3.util.SBOLGraphException;
+import org.sbolstandard.core3.util.SBOLUtil;
 import org.sbolstandard.core3.util.URINameSpace;
 import org.sbolstandard.core3.util.URINameSpace.SONameSpace;
 import org.sbolstandard.core3.vocabulary.ComponentType;
@@ -283,7 +284,6 @@ public class Util {
 		if (input.isSetDisplayId()) {
 			sbol3Uri += "/" + input.getDisplayId();
 		}
-
 		return URI.create(sbol3Uri);
 	}
 
@@ -342,14 +342,43 @@ public class Util {
 		return displayId;
 
 	}
-
+	private static String getAfterTheLast(String str, String after) {
+		int index = str.lastIndexOf(after);
+		if (index == -1) {
+			return null;
+		} 
+		else {
+			return str.substring(index + after.length());
+		}
+	}
 	public static QName toQName(URI uri) throws SBOLGraphException
 	{
-		String local=SBOLAPI.inferDisplayId(uri);
+		String namespace=null;
 		String uriString=uri.toString();
+		String local=null;
+		
+		if (SBOLUtil.isURL(uriString)){
+			int indexHash = uriString.lastIndexOf("#");
+			int indexSlash = uriString.lastIndexOf("/");
+			if (indexHash> indexSlash){
+				local=getAfterTheLast(uriString, "#");
+			}
+			else{			
+				local=SBOLAPI.inferDisplayId(uri);
+			}
+		}
+		else{
+			local = getAfterTheLast(uriString, "/");
+			if (local==null){
+				//Create a random local name
+				local = "displayid_auto_generated" + UUID.randomUUID().toString().replace("-", "");
+			}
+		}
 		// Extract the namespace from the top-level type string
-		int index=uriString.lastIndexOf(local);
-		String namespace = uriString.substring(0,index);
+		if (local!=null){
+			int index=uriString.lastIndexOf(local);
+			namespace = uriString.substring(0,index);
+		}
 		/*if (namespace.endsWith("/")) {
 			namespace = namespace.substring(0, namespace.length() - 1);
 		}*/
@@ -398,6 +427,7 @@ public class Util {
 				String property = annotation.getLeft().toString();
 				Object value = annotation.getRight();
 				QName qName=toQName(URI.create(property));
+				
 				if (value instanceof URI) {
 					output.createAnnotation(qName, (URI) value);
 				} else if (value instanceof String) {

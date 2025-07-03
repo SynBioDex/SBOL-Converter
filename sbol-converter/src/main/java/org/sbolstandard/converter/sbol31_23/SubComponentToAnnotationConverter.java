@@ -56,8 +56,7 @@ public class SubComponentToAnnotationConverter implements ChildEntityConverter<S
 					newLoc = sbol2SeqAnno.getLocation(loc.getDisplayId());
 				} else {
 					// If SequenceAnnotation exists, add an additional Range to it
-					newLoc = sbol2SeqAnno.addRange(sbol3SubComponent.getDisplayId(), range.getStart().get(),
-							range.getEnd().get(), orientationType);
+					newLoc = sbol2SeqAnno.addRange(loc.getDisplayId(), range.getStart().get(),range.getEnd().get(), orientationType);
 				}
 			}
 			// Handle Cut location (single position)
@@ -70,19 +69,18 @@ public class SubComponentToAnnotationConverter implements ChildEntityConverter<S
 					newLoc = sbol2SeqAnno.getLocation(loc.getDisplayId());
 				} else {
 					// Add an additional Cut to existing SequenceAnnotation
-					newLoc = sbol2SeqAnno.addCut(sbol3SubComponent.getDisplayId(), cut.getAt().get(), orientationType);
+					newLoc = sbol2SeqAnno.addCut(loc.getDisplayId(), cut.getAt().get(), orientationType);
 				}
 			}
 			// Handle EntireSequence location (refers to the whole sequence)
 			else if (loc instanceof EntireSequence) {
 				if (sbol2SeqAnno == null) {
 					// Create SequenceAnnotation referring to entire sequence
-					sbol2SeqAnno = parentCompDef.createSequenceAnnotation(sbol3SubComponent.getDisplayId(),
-							loc.getDisplayId(), orientationType);
+					sbol2SeqAnno = parentCompDef.createSequenceAnnotation(sbol3SubComponent.getDisplayId(), loc.getDisplayId(), orientationType);
 					newLoc = sbol2SeqAnno.getLocation(loc.getDisplayId());
 				} else {
 					// Add a generic location for entire sequence
-					newLoc = sbol2SeqAnno.addGenericLocation(sbol3SubComponent.getDisplayId(), orientationType);
+					newLoc = sbol2SeqAnno.addGenericLocation(loc.getDisplayId(), orientationType);
 				}
 			}
 

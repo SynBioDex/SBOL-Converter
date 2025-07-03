@@ -1,11 +1,9 @@
 package org.sbolstandard.converter.sbol23_31;
 
 import java.net.URI;
-import java.util.List;
 import java.util.Set;
 
 import org.sbolstandard.converter.Util;
-import org.sbolstandard.core2.Annotation;
 import org.sbolstandard.core3.api.SBOLAPI;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.TopLevelMetadata;
@@ -18,7 +16,8 @@ public class GenericTopLevelConverter implements EntityConverter<org.sbolstandar
 		String namespaceURI = input.getRDFType().getNamespaceURI();
 		String localPart = input.getRDFType().getLocalPart();
 		URI dataType=SBOLAPI.append(namespaceURI, localPart);
-		TopLevelMetadata tlm = doc.createMetadata(Util.createSBOL3Uri(input), Util.getNamespace(input), dataType);
+		URI newURI=Util.createSBOL3Uri(input);
+		TopLevelMetadata tlm = doc.createMetadata(newURI, Util.getNamespace(input), dataType);
 		Set<URI> attachments=input.getAttachmentURIs();
 		if (attachments!=null){
 			tlm.setAttachmentsByURIs(Util.toList(attachments));

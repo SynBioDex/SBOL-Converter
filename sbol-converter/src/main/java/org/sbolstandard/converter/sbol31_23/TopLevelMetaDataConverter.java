@@ -6,7 +6,6 @@ import java.util.List;
 import javax.xml.namespace.QName;
 
 import org.sbolstandard.converter.Util;
-import org.sbolstandard.core3.api.SBOLAPI;
 import org.sbolstandard.core3.entity.Attachment;
 import org.sbolstandard.core3.entity.TopLevelMetadata;
 import org.sbolstandard.core3.util.SBOLGraphException;

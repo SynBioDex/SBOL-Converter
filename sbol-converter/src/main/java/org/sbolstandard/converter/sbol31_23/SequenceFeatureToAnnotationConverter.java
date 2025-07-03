@@ -56,22 +56,11 @@ public class SequenceFeatureToAnnotationConverter implements ChildEntityConverte
 				Range range = (Range) loc;
 				if (seqa == null) {
 					// If this is the first location, create a new SequenceAnnotation with this Range
-					seqa = parentCompDef.createSequenceAnnotation(
-						seqf.getDisplayId(), 
-						loc.getDisplayId(), 
-						range.getStart().get(), 
-						range.getEnd().get(), 
-						orientationType
-					);
+					seqa = parentCompDef.createSequenceAnnotation(seqf.getDisplayId(), loc.getDisplayId(), range.getStart().get(), range.getEnd().get(), orientationType);
 					newLoc = seqa.getLocation(loc.getDisplayId());
 				} else {
 					// If SequenceAnnotation exists, add an additional Range to it
-					newLoc = seqa.addRange(
-						seqf.getDisplayId(),
-						range.getStart().get(), 
-						range.getEnd().get(), 
-						orientationType
-					);
+					newLoc = seqa.addRange(loc.getDisplayId(),range.getStart().get(), range.getEnd().get(), orientationType);
 				}
 			}
 			// Handle Cut location (single position)
@@ -79,38 +68,22 @@ public class SequenceFeatureToAnnotationConverter implements ChildEntityConverte
 				Cut cut = (Cut) loc;
 				if (seqa == null) {
 					// Create a new SequenceAnnotation with this Cut
-					seqa = parentCompDef.createSequenceAnnotation(
-						seqf.getDisplayId(), 
-						loc.getDisplayId(), 
-						cut.getAt().get(), 
-						orientationType
-					);
+					seqa = parentCompDef.createSequenceAnnotation(seqf.getDisplayId(), loc.getDisplayId(), cut.getAt().get(),  orientationType);
 					newLoc = seqa.getLocation(loc.getDisplayId());
 				} else {
 					// Add an additional Cut to existing SequenceAnnotation
-					newLoc = seqa.addCut(
-						seqf.getDisplayId(),
-						cut.getAt().get(), 
-						orientationType
-					);
+					newLoc = seqa.addCut(loc.getDisplayId(), cut.getAt().get(), orientationType);
 				}
 			}
 			// Handle EntireSequence location (refers to the whole sequence)
 			else if (loc instanceof EntireSequence) {
 				if (seqa == null) {
 					// Create SequenceAnnotation referring to entire sequence
-					seqa = parentCompDef.createSequenceAnnotation(
-						seqf.getDisplayId(), 
-						loc.getDisplayId(), 
-						orientationType
-					);
+					seqa = parentCompDef.createSequenceAnnotation(seqf.getDisplayId(), loc.getDisplayId(), orientationType);
 					newLoc = seqa.getLocation(loc.getDisplayId());
 				} else {
 					// Add a generic location for entire sequence
-					newLoc = seqa.addGenericLocation(
-						seqf.getDisplayId(), 
-						orientationType
-					);
+					newLoc = seqa.addGenericLocation(loc.getDisplayId(), orientationType);
 				}
 			}
 			

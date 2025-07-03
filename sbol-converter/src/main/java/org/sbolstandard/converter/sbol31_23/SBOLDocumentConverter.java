@@ -23,7 +23,8 @@ public class SBOLDocumentConverter {
 			throws SBOLGraphException, SBOLValidationException {
 		org.sbolstandard.core2.SBOLDocument sbol2Doc = new org.sbolstandard.core2.SBOLDocument();
 
-				
+		Util.copyNamespacesFrom3_to_2(sbol3Doc, sbol2Doc);
+        		
 		SequenceConverter seqConverter = new SequenceConverter();
 		if (sbol3Doc.getSequences() != null) {
 			for (Sequence seq : sbol3Doc.getSequences()) {
@@ -110,14 +111,14 @@ public class SBOLDocumentConverter {
 			}
 		}
 
-		if (sbol3Doc.getTopLevels() != null) {
+		if (sbol3Doc.getTopLevelMetadataList() != null) {
 			TopLevelMetaDataConverter tlmConverter = new TopLevelMetaDataConverter();
 			for (TopLevelMetadata tlm : sbol3Doc.getTopLevelMetadataList()) {
 				tlmConverter.convert(sbol2Doc, tlm);
 			}
 		}
 
-		Util.copyNamespacesFrom3_to_2(sbol3Doc, sbol2Doc);
+		//Util.copyNamespacesFrom3_to_2(sbol3Doc, sbol2Doc);
         
 		return sbol2Doc;
 	}
