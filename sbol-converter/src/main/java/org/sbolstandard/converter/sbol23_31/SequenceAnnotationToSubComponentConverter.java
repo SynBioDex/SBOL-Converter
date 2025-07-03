@@ -34,6 +34,15 @@ public class SequenceAnnotationToSubComponentConverter
 		SubComponent sbol3SubComponent = document.getIdentified(sbol3ComponentURI, SubComponent.class);
 		// sbol3SubComponent.setInstanceOf(Util.createSBOL3Uri(sbol2Component.getDefinitionURI()));
 
+		//Roles also come from Component entities
+		if (sbol3SubComponent.getRoles()==null){ 
+			sbol3SubComponent.setRoles(Util.convertRoles2_to_3(sbol2SeqAnno.getRoles()));
+		}
+		else{
+			for (URI role: sbol2SeqAnno.getRoles()) {
+				sbol3SubComponent.addRole(Util.convertSOUri_2_to_3(role));
+			}		
+		}
 		Sequence sbol3Sequence = Util.getSBOL3SequenceFromSBOl2Parent(document, sbol2ParentCompDef);
 		
 		if (sbol3Sequence!=null) {
@@ -47,35 +56,14 @@ public class SequenceAnnotationToSubComponentConverter
 				// Handle Range location type (start and end positions).
 				if (sbol2Location instanceof org.sbolstandard.core2.Range) {
 					org.sbolstandard.core2.Range sbol2Range = (org.sbolstandard.core2.Range) sbol2Location;
-					sbol3Location = sbol3SubComponent.createRange(sbol2Location.getDisplayId(), sbol2Range.getStart(), sbol2Range.getEnd(), sbol3Sequence);								
-					
-					/*if (SBOLDocumentConverter.isCompliant()){
-						sbol3Location = sbol3SubComponent.createRange(Util.createSBOL3Uri(sbol2Location), sbol2Range.getStart(), sbol2Range.getEnd(), sbol3Sequence);
-					}
-					else {
-						sbol3Location = sbol3SubComponent.createRange(sbol2Location.getDisplayId(), sbol2Range.getStart(), sbol2Range.getEnd(), sbol3Sequence);								
-					}*/
-					
+					sbol3Location = sbol3SubComponent.createRange(sbol2Location.getDisplayId(), sbol2Range.getStart(), sbol2Range.getEnd(), sbol3Sequence);
 				} 
 				else if (sbol2Location instanceof org.sbolstandard.core2.Cut) {
 					org.sbolstandard.core2.Cut sbol2Cut = (org.sbolstandard.core2.Cut) sbol2Location;
-					sbol3Location = sbol3SubComponent.createCut(sbol2Location.getDisplayId(), sbol2Cut.getAt(), sbol3Sequence);	
-					/*if (SBOLDocumentConverter.isCompliant()){
-						sbol3Location = sbol3SubComponent.createCut(Util.createSBOL3Uri(sbol2Location), sbol2Cut.getAt(), sbol3Sequence);
-					}
-					else {
-						sbol3Location = sbol3SubComponent.createCut(sbol2Location.getDisplayId(), sbol2Cut.getAt(), sbol3Sequence);								
-					}*/
-					
+					sbol3Location = sbol3SubComponent.createCut(sbol2Location.getDisplayId(), sbol2Cut.getAt(), sbol3Sequence);											
 				} 
 				else if (sbol2Location instanceof org.sbolstandard.core2.GenericLocation) {
-					sbol3Location = sbol3SubComponent.createEntireSequence(sbol2Location.getDisplayId(), sbol3Sequence);								
-					/*if (SBOLDocumentConverter.isCompliant()){
-						sbol3Location = sbol3SubComponent.createEntireSequence(Util.createSBOL3Uri(sbol2Location), sbol3Sequence);
-					}
-					else {
-						sbol3Location = sbol3SubComponent.createEntireSequence(sbol2Location.getDisplayId(), sbol3Sequence);								
-					}*/					
+					sbol3Location = sbol3SubComponent.createEntireSequence(sbol2Location.getDisplayId(), sbol3Sequence);												
 				}
 				
 				sbol3Location.setOrientation(sbol3Orientation);				

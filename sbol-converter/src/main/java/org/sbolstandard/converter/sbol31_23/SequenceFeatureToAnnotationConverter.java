@@ -89,7 +89,7 @@ public class SequenceFeatureToAnnotationConverter implements ChildEntityConverte
 			
 			if (seqa != null) {
 				// Copy location metadata and properties from SBOL3 Location to SBOL2 Location
-				Util.copyIdentified(loc, newLoc);
+				Util.copyIdentified(loc, newLoc, doc);
 			}
 		}
     	
@@ -104,7 +104,9 @@ public class SequenceFeatureToAnnotationConverter implements ChildEntityConverte
 		}
     	
     	// Copy general Identified properties (like displayId, version, etc.)
-	    Util.copyIdentified(seqf, seqa);
+	    Util.copyIdentified(seqf, seqa, doc);
+		seqa.setRoles(Util.convertRoles3_to_2(seqf.getRoles()));
+		
 
 		return seqa;
 	}

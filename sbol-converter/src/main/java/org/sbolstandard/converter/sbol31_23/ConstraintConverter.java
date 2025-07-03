@@ -30,7 +30,7 @@ public class ConstraintConverter implements ChildEntityConverter<Constraint, org
 					Util.createSBOL2Uri(input.getSubject().getUri()), 
 					Util.createSBOL2Uri(input.getObject().getUri()));
 			
-			Util.copyIdentified(input, sbol2Const);
+			Util.copyIdentified(input, sbol2Const,document);
 		}
     	return sbol2Const;	
 	}

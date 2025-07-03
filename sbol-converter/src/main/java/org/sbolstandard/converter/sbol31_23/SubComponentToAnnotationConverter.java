@@ -86,7 +86,7 @@ public class SubComponentToAnnotationConverter implements ChildEntityConverter<S
 
 			if (sbol2SeqAnno != null) {
 				// Copy location metadata and properties from SBOL3 Location to SBOL2 Location
-				Util.copyIdentified(loc, newLoc);
+				Util.copyIdentified(loc, newLoc, doc);
 			}
 		}
 
@@ -102,7 +102,7 @@ public class SubComponentToAnnotationConverter implements ChildEntityConverter<S
 		}
 
 		// Copy general Identified properties (like displayId, version, etc.)
-		Util.copyIdentified(sbol3SubComponent, sbol2SeqAnno);
+		Util.copyIdentified(sbol3SubComponent, sbol2SeqAnno, doc);
 
 		return sbol2SeqAnno;
 	}

@@ -13,7 +13,7 @@ public class ExperimentConverter implements EntityConverter<Experiment, org.sbol
     @Override
     public  org.sbolstandard.core2.Experiment convert(SBOLDocument doc, Experiment input) throws SBOLGraphException, SBOLValidationException {      	
     	 org.sbolstandard.core2.Experiment exp = doc.createExperiment( Util.getURIPrefix(input), input.getDisplayId(), Util.getVersion(input) );
-		Util.copyIdentified(input, exp);
+		Util.copyIdentified(input, exp, doc);
 		if (input.getMembers() != null) {
 			for (URI uri : input.getMembers()) {
 				exp.addExperimentalData(Util.createSBOL2Uri(uri));//TODO: update URIs

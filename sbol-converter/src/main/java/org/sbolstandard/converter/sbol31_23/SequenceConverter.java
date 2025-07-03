@@ -16,7 +16,7 @@ public class SequenceConverter implements EntityConverter<Sequence, org.sbolstan
 				input.getElements(),Util.getSBOL2SequenceEncodingType(input.getEncoding()));
 		
 		
-    	Util.copyIdentified(input, seq);
+    	Util.copyIdentified(input, seq, doc);
         return seq;
     }
 }

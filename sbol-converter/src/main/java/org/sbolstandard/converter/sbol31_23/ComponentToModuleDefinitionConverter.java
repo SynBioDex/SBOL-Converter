@@ -17,7 +17,7 @@ public class ComponentToModuleDefinitionConverter implements EntityConverter<Com
 		ModuleDefinition moduleDef = sbol2Doc.createModuleDefinition(Util.getURIPrefix(component),
 				component.getDisplayId(), Util.getVersion(component));
 
-		Util.copyIdentified(component, moduleDef);
+		Util.copyIdentified(component, moduleDef, sbol2Doc);
 
 		// TODO
 		// THINGS NEED TO BE CONVERTED

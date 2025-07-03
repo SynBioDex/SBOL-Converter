@@ -51,7 +51,7 @@ public class InteractionConverter implements ChildEntityConverter<Interaction, o
 					Util.convertRoles3_to_2(sbol3Participation.getRoles()));
 			
 			
-			Util.copyIdentified(sbol3Participation, newSbol2Participation);
+			Util.copyIdentified(sbol3Participation, newSbol2Participation, doc);
 			
 			
 		}

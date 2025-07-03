@@ -20,7 +20,7 @@ public class TopLevelMetaDataConverter implements EntityConverter<TopLevelMetada
     	List<URI> types=input.getType();
 		URI topLevelType=types.isEmpty() ? null : types.get(0);
 		
-		QName qnameType = Util.toQName(topLevelType);
+		QName qnameType = Util.toQName(topLevelType, doc);
 				
 		org.sbolstandard.core2.GenericTopLevel gtl = doc.createGenericTopLevel(Util.getURIPrefix(input), input.getDisplayId(), Util.getVersion(input), qnameType);
 		List<Attachment> attachments=input.getAttachments();
@@ -29,7 +29,7 @@ public class TopLevelMetaDataConverter implements EntityConverter<TopLevelMetada
 			List<URI> attachmentURIs=SBOLUtil.getURIs(attachments);
 			gtl.setAttachments(Util.toSet(attachmentURIs));
 		}
-		Util.copyIdentified(input, gtl);
+		Util.copyIdentified(input, gtl, doc);
 		return gtl;
 	}
 }
