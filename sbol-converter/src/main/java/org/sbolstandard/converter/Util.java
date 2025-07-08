@@ -391,7 +391,8 @@ public class Util {
 				qName = new QName(qNameExists.getNamespaceURI(), local, prefix);
 			} 			
 		}
-		else{
+		
+		if (qName==null){
 			// If the prefix is empty, use the namespace URI directly
 			qName = new QName(namespace, local);
 		}
@@ -690,9 +691,12 @@ public class Util {
 	}
 
 	public static Set<URI> convertRoles3_to_2(List<URI> roles) {
-		Set<URI> convertedRoles = new HashSet<URI>();
-		for (URI role : roles) {
-			convertedRoles.add(convertSOUri_3_to_2(role));
+		Set<URI> convertedRoles = null;
+		if (roles != null && !roles.isEmpty()) {	
+			convertedRoles = new HashSet<URI>();		
+			for (URI role : roles) {
+				convertedRoles.add(convertSOUri_3_to_2(role));
+			}
 		}
 		return convertedRoles;
 	}

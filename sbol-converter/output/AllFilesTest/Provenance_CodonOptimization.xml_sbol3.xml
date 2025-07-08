@@ -1,0 +1,30 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:SO="https://identifiers.org/SO:"
+    xmlns:EDAM="https://identifiers.org/edam:"
+    xmlns:sbol="http://sbols.org/v3#"
+    xmlns:CHEBI="https://identifiers.org/CHEBI:"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:SBO="https://identifiers.org/SBO:"
+    xmlns:GO="https://identifiers.org/GO:"
+    xmlns:myapp="http://myapp.com/"
+    xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
+   <sbol:Component rdf:about="http://myapp.com/codon_optimized">
+      <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+      <prov:wasDerivedFrom>
+         <sbol:Component rdf:about="http://myapp.com/non_codon_optimized"/>
+      </prov:wasDerivedFrom>
+      <sbol:name>Codon optimised CDS</sbol:name>
+      <sbol:hasNamespace rdf:resource="http://myapp.com"/>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <sbol:displayId>codon_optimized</sbol:displayId>
+   </sbol:Component>
+   <sbol:Component rdf:about="http://myapp.com/non_codon_optimized">
+      <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+      <sbol:name>Non Codon optimised CDS</sbol:name>
+      <sbol:hasNamespace rdf:resource="http://myapp.com"/>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <sbol:displayId>non_codon_optimized</sbol:displayId>
+   </sbol:Component>
+</rdf:RDF>

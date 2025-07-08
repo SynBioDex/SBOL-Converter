@@ -45,7 +45,8 @@ public class SequenceAnnotationToSubComponentConverter
 		}
 		Sequence sbol3Sequence = Util.getSBOL3SequenceFromSBOl2Parent(document, sbol2ParentCompDef);
 		
-		if (sbol3Sequence!=null) {
+		//if (sbol3Sequence!=null) {
+		if (sbol2SeqAnno.getLocations()!=null){
 			for (org.sbolstandard.core2.Location sbol2Location : sbol2SeqAnno.getLocations()) {
 	
 				Location sbol3Location = null;

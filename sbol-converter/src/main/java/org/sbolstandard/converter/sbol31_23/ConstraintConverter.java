@@ -25,11 +25,8 @@ public class ConstraintConverter implements ChildEntityConverter<Constraint, org
 		RestrictionType sbol2RestrictionType = Util.toSBOL2RestrictionType(input.getRestriction());
 		org.sbolstandard.core2.SequenceConstraint sbol2Const=null;
 		if (sbol2RestrictionType!=null){
-			sbol2Const=sbol2CD.createSequenceConstraint(input.getDisplayId(), 
-					sbol2RestrictionType, 
-					Util.createSBOL2Uri(input.getSubject().getUri()), 
-					Util.createSBOL2Uri(input.getObject().getUri()));
-			
+			//sbol2Const=sbol2CD.createSequenceConstraint(input.getDisplayId(), sbol2RestrictionType, Util.createSBOL2Uri(input.getSubject().getUri()), Util.createSBOL2Uri(input.getObject().getUri()));
+			sbol2Const=sbol2CD.createSequenceConstraint(input.getDisplayId(), sbol2RestrictionType, input.getSubject().getDisplayId(), input.getObject().getDisplayId());			
 			Util.copyIdentified(input, sbol2Const,document);
 		}
     	return sbol2Const;	
