@@ -45,7 +45,7 @@ public class InteractionConverter implements ChildEntityConverter<org.sbolstanda
 			FunctionalComponent sbol2FuncCom = sbol2Participation.getParticipant();
 
 			// Generate the SBOL3 URI for the corresponding Feature (participant)
-			URI sbol3ParticipantFeatureUri = Util.createSBOL3Uri(sbol2FuncCom.getIdentity());
+			URI sbol3ParticipantFeatureUri = Util.createSBOL3Uri(sbol2FuncCom.getIdentity(), parameters);
 
 			// Attempt to retrieve the Feature instance in the SBOL3 document by URI and Feature type
 			Feature sbol3Feature = document.getIdentified(sbol3ParticipantFeatureUri, Feature.getSubClassTypes());

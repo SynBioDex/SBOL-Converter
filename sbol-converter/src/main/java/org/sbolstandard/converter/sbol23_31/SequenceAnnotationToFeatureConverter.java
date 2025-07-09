@@ -26,17 +26,17 @@ public class SequenceAnnotationToFeatureConverter implements ChildEntityConverte
 	    
 	    ComponentDefinition parentCompDef = (ComponentDefinition) seqaParent;
 	    
-	    return getSequenceFeature(document, parentComponent, parentCompDef, seqa);
+	    return getSequenceFeature(document, parentComponent, parentCompDef, seqa, parameters);
 	}
 	
 	private SequenceFeature getSequenceFeature(org.sbolstandard.core3.entity.SBOLDocument document,
-			Component sbol3ParentComp, ComponentDefinition sbol2ParentCompDef, SequenceAnnotation seqa)
+			Component sbol3ParentComp, ComponentDefinition sbol2ParentCompDef, SequenceAnnotation seqa, Parameters parameters)
 			throws SBOLGraphException {
 
 		// Get the SBOL2 Sequence associated with the ComponentDefinition of the SequenceAnnotation.
 		URI seqType = Util.getSBOL2SequenceType(sbol2ParentCompDef);
 		System.out.println("SBOL2 Sequence Type: " + seqType);
-		Sequence sbol3Sequence = Util.getSBOL3SequenceFromSBOl2Parent(document, sbol2ParentCompDef);
+		Sequence sbol3Sequence = Util.getSBOL3SequenceFromSBOl2Parent(document, sbol2ParentCompDef, parameters);
 		
 		SequenceFeature seqFeature=null;
 		if (seqa.getDisplayId()!=null){
@@ -46,7 +46,7 @@ public class SequenceAnnotationToFeatureConverter implements ChildEntityConverte
 			seqFeature =sbol3ParentComp.createSequenceFeature();
 		}
 		
-		seqFeature.setRoles(Util.convertRoles2_to_3(seqa.getRoles()));
+		seqFeature.setRoles(Util.convertSORoles2_to_3(seqa.getRoles()));
        
 		// Iterate over all locations defined in the SBOL2 SequenceAnnotation.
 		for (org.sbolstandard.core2.Location sbol2Loc : seqa.getLocations()) {

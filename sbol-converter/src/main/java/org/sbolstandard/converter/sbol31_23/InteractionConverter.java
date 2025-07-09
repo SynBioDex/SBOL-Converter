@@ -29,7 +29,7 @@ public class InteractionConverter implements ChildEntityConverter<Interaction, o
 				if (sbol2FuncCom == null) {
 					throw new SBOLGraphException("Could not find FunctionalComponent for SubComponent: " + sbol3SubComponent.getUri());
 				}
-				Participation newSbol2Participation = sbol2Interaction.createParticipation(sbol3Participation.getDisplayId(), sbol2FuncCom.getIdentity(), Util.convertRoles3_to_2(sbol3Participation.getRoles()));			
+				Participation newSbol2Participation = sbol2Interaction.createParticipation(sbol3Participation.getDisplayId(), sbol2FuncCom.getIdentity(), Util.convertToSBOL2_SBO_URIs(sbol3Participation.getRoles()));			
 				Util.copyIdentified(sbol3Participation, newSbol2Participation, doc);			
 			}
 		}

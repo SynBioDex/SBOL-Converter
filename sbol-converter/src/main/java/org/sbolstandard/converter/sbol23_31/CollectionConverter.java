@@ -14,7 +14,7 @@ public class CollectionConverter implements EntityConverter<org.sbolstandard.cor
         Collection col = doc.createCollection(Util.createSBOL3Uri(input),Util.getNamespace(input));
         Util.copyIdentified(input, col);
         for (URI memberUri : input.getMemberURIs()) {
-        	col.addMember(Util.createSBOL3Uri(memberUri));
+        	col.addMember(Util.createSBOL3Uri(memberUri, parameters) );
         }
         return col;
     }

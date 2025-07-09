@@ -12,7 +12,7 @@ public class ImplementationConverter implements EntityConverter<org.sbolstandard
     	Implementation impl = doc.createImplementation(Util.createSBOL3Uri(input), Util.getNamespace(input));
 		Util.copyIdentified(input, impl);
 		if (input.isSetBuilt()) {
-			impl.setComponent(Util.createSBOL3Uri(input.getBuiltURI()));
+			impl.setComponent(Util.createSBOL3Uri(input.getBuiltURI(), parameters));
 		}
 		return impl;
 	}

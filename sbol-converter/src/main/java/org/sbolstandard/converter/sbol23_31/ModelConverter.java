@@ -11,7 +11,7 @@ public class ModelConverter implements EntityConverter<org.sbolstandard.core2.Mo
     public Model convert(SBOLDocument doc, org.sbolstandard.core2.Model input, Parameters parameters) throws SBOLGraphException {
     	// TODO: need to convert framework/language URIs
     	// TODO: should swap Language and Framework order to match libSBOLj
-        Model mod = doc.createModel(Util.createSBOL3Uri(input),Util.getNamespace(input),Util.createSBOL3Uri(input.getSource()), Util.getSBOL3ModelFramework(input.getFramework()),
+        Model mod = doc.createModel(Util.createSBOL3Uri(input),Util.getNamespace(input),Util.createSBOL3Uri(input.getSource(), parameters), Util.getSBOL3ModelFramework(input.getFramework()),
         		Util.getSBOL3ModelLanguage(input.getLanguage()));
         Util.copyIdentified(input, mod);
         return mod;

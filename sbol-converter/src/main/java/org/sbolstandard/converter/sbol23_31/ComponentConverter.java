@@ -22,7 +22,7 @@ public class ComponentConverter implements ChildEntityConverter<org.sbolstandard
 	public Feature convert(SBOLDocument doc, Identified parent, org.sbolstandard.core2.Identified inputParent, org.sbolstandard.core2.Component input, Parameters parameters) throws SBOLGraphException {
 		Component sbol3ParentComponent = (Component) parent;
 		Feature result = null;
-			URI sbol3InstanceOfUri = Util.createSBOL3Uri(input.getDefinitionURI());
+			URI sbol3InstanceOfUri = Util.createSBOL3Uri(input.getDefinitionURI(), parameters);
 			SubComponent resultSC=null;
 			if (input.getDisplayId()!=null)
 			{

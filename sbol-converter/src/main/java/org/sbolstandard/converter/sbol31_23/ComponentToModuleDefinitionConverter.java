@@ -19,14 +19,14 @@ public class ComponentToModuleDefinitionConverter implements EntityConverter<Com
 
 		Util.copyIdentified(component, moduleDef, sbol2Doc);
 
-		moduleDef.setRoles(Util.convertRoles3_to_2(component.getRoles()));
+		moduleDef.setRoles(Util.convertSORoles3_to_2(component.getRoles()));
 
 		SubComponentToFunctionalComponentConverter subCompToFunCompConverter = new SubComponentToFunctionalComponentConverter();
 		SubComponentToModuleConverter subCompToModuleConverter = new SubComponentToModuleConverter();
 
 		if (component.getSubComponents()!=null){
 			for (SubComponent subComponent : component.getSubComponents()) {
-				if(subComponent.getInstanceOf()!= null && subComponent.getInstanceOf().getSubComponents() != null){
+				if(subComponent.getInstanceOf()!= null && subComponent.getInstanceOf().getInteractions() != null){
 					subCompToModuleConverter.convert(sbol2Doc, moduleDef, component, subComponent);
 				}
 				else{

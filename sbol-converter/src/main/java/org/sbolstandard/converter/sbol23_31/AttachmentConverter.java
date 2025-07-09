@@ -11,14 +11,14 @@ public class AttachmentConverter implements EntityConverter<org.sbolstandard.cor
 
 	@Override
 	public Attachment convert(SBOLDocument doc, org.sbolstandard.core2.Attachment input, Parameters parameters) throws SBOLGraphException {
-		Attachment att = doc.createAttachment(Util.createSBOL3Uri(input), Util.getNamespace(input),	Util.createSBOL3Uri(input.getSource()));
+		Attachment att = doc.createAttachment(Util.createSBOL3Uri(input), Util.getNamespace(input),	Util.createSBOL3Uri(input.getSource(), parameters));
 		Util.copyIdentified(input, att);
 		att.setHash(input.getHash());
 		if (input.getSize() != null) {
 			att.setSize(OptionalLong.of(input.getSize()));
 		}
 		if (input.getFormat() != null) {
-			att.setFormat(Util.createSBOL3Uri(input.getFormat()));
+			att.setFormat(Util.createSBOL3Uri(input.getFormat(), parameters));
 		}
 		return att;
 	}

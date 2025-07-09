@@ -12,6 +12,11 @@ import javax.xml.namespace.QName;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.Property;
+import org.apache.jena.rdf.model.RDFNode;
+import org.apache.jena.rdf.model.ResIterator;
+import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.StmtIterator;
 import org.sbolstandard.core2.Annotation;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.EDAMOntology;
@@ -242,9 +247,8 @@ public class Util {
 		}
 	}
 
-	public static URI createSBOL3Uri(URI inputUri) {
+	public static URI createSBOL3UriOLD(URI inputUri) {
 		String sbol3Uri = "";
-
 		sbol3Uri = Util.extractURIPrefixSBOL2Uri(inputUri.toString());
 		String version = extractVersionSBOL2Uri(inputUri.toString());
 		String displayId = extractDisplayIdSBOL2Uri(inputUri.toString());
@@ -255,23 +259,77 @@ public class Util {
 			sbol3Uri += "/" + displayId;
 		}
 
-		// In case of URI of type "dynamic_measurement.mdx"
-		// TODO: better check
-		if (sbol3Uri == null)
-		{
+		if (sbol3Uri == null){
 			String inputUriString = inputUri.toString();
-			if (!inputUriString.toLowerCase().startsWith("urn") && !inputUriString.contains("://"))
-			{
-				
+			if (!inputUriString.toLowerCase().startsWith("urn") && !inputUriString.contains("://")){				
 				return SBOLAPI.append("https://sbolstandard.org/SBOL3-Converter", inputUriString);
 			}
-			else
-			{
+			else{
 				return URI.create(inputUri.toString());
 			}
 		}
-
 		return URI.create(sbol3Uri);
+	}
+
+	public static URI createSBOL3Uri(URI inputUri, Parameters parameters) throws SBOLGraphException {
+		Model rdfModel = parameters.getRdfModel();
+		inputUri=getLatestUri(inputUri, rdfModel);
+		String sbol3Uri = "";
+		sbol3Uri = Util.extractURIPrefixSBOL2Uri(inputUri.toString());
+		String version = extractVersionSBOL2Uri(inputUri.toString());
+		String displayId = extractDisplayIdSBOL2Uri(inputUri.toString());
+		if (version != null && !version.equals("")) {
+			sbol3Uri += "/" + version;
+		}
+		if (displayId != null && !displayId.equals("")) {
+			sbol3Uri += "/" + displayId;
+		}
+
+		if (sbol3Uri == null){
+			String inputUriString = inputUri.toString();
+			if (!inputUriString.toLowerCase().startsWith("urn") && !inputUriString.contains("://")){				
+				return SBOLAPI.append("https://sbolstandard.org/SBOL3-Converter", inputUriString);
+			}
+			else{
+				return URI.create(inputUri.toString());
+			}
+		}
+		return URI.create(sbol3Uri);
+	}
+
+	private static URI getLatestUri(URI inputUri, Model rdfModel) {
+		Property persistentIdentity= rdfModel.getProperty("http://sbols.org/v2#persistentIdentity");
+		RDFNode valueNode=rdfModel.getResource(inputUri.toString());
+		//If a resource with "persistentIdentity - inputUri" property exists then inputUri is a persistent identity. Find the most uri with the most current version that the persistent identity refers to.
+		ResIterator it= rdfModel.listSubjectsWithProperty(persistentIdentity, valueNode);
+		Double version=null;
+		if (it.hasNext()) {
+			// If there is a persistent identity, find the most current version
+			while (it.hasNext()) {
+				Resource resource = it.next();
+				if (version==null){
+					inputUri= URI.create(resource.getURI());
+				}
+				Property versionProperty= rdfModel.getProperty("http://sbols.org/v2#version");
+				StmtIterator stmtIt= resource.listProperties(versionProperty);
+				if (stmtIt.hasNext()) {
+					// If there is a version, use it
+					Double currentVersion = stmtIt.next().getObject().asLiteral().getDouble();
+					//if (version==null || (currentVersion != null && currentVersion> version)) {
+					if (version==null) {						
+						version=currentVersion;
+						inputUri=URI.create(resource.getURI());
+					}
+					//Split into if else for debugging purposes!
+					else if (currentVersion != null && currentVersion> version){
+						version=currentVersion;
+						inputUri=URI.create(resource.getURI());
+					}
+				}
+			}			
+		}
+		
+		return inputUri;		
 	}
 
 	public static URI createSBOL3Uri(org.sbolstandard.core2.Identified input) {
@@ -682,7 +740,7 @@ public class Util {
 		return URI.create(soUriString);
 	}
 	
-	public static List<URI> convertRoles2_to_3(Set<URI> roles) {
+	public static List<URI> convertSORoles2_to_3(Set<URI> roles) {
 		List<URI> convertedRoles = new ArrayList<URI>();
 		for (URI role : roles) {
 			convertedRoles.add(convertSOUri_2_to_3(role));
@@ -690,7 +748,7 @@ public class Util {
 		return convertedRoles;
 	}
 
-	public static Set<URI> convertRoles3_to_2(List<URI> roles) {
+	public static Set<URI> convertSORoles3_to_2(List<URI> roles) {
 		Set<URI> convertedRoles = null;
 		if (roles != null && !roles.isEmpty()) {	
 			convertedRoles = new HashSet<URI>();		
@@ -863,14 +921,14 @@ public class Util {
 	}
 
 	public static Sequence getSBOL3SequenceFromSBOl2Parent(SBOLDocument document,
-			ComponentDefinition sbol2ParentCompDef) throws SBOLGraphException {
+			ComponentDefinition sbol2ParentCompDef, Parameters parameters) throws SBOLGraphException {
 		
 		URI seqType = Util.getSBOL2SequenceType(sbol2ParentCompDef);
 		org.sbolstandard.core2.Sequence sbol2seq = sbol2ParentCompDef.getSequenceByEncoding(seqType);
 		Sequence sbol3seq=null;
 		if (sbol2seq!=null)
 		{
-			URI SBOL3ObjectUri = Util.createSBOL3Uri(sbol2seq.getIdentity());
+			URI SBOL3ObjectUri = Util.createSBOL3Uri(sbol2seq.getIdentity(), parameters);
 			sbol3seq = document.getIdentified(SBOL3ObjectUri, Sequence.class);
 		}
 
@@ -879,22 +937,27 @@ public class Util {
 
 	
 	public static List<URI> convertToSBOL3_SBO_URIs(Set<URI> types) {
-		// TODO Auto-generated method stub
 		List<URI> convertedTypes = new ArrayList<URI>();
 		for (URI type : types) {
-			String typeString = type.toString().toLowerCase().replace("/biomodels.sbo", "").replace("sbo:", "SBO:");
-			
-			// WARNING! BELOW IS SHOULD NOT BE NECESSARY ACCORDING TO SBOL3 SPECIFICATION
+			String typeString = type.toString().toLowerCase().replace("/biomodels.sbo", "").replace("sbo:", "SBO:");			
 			typeString = typeString.replace("http", "https");
 			convertedTypes.add(URI.create(typeString));
 		}
 		return convertedTypes;
 	}
-	public static Set<URI> convertToSBOL2_SBO_URIs(List<URI> types) throws SBOLGraphException {
-		Set<URI> convertedTypes = new HashSet<URI>();
-		for (URI type : types) {
-			System.out.println(type.toString());
-			if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.Inhibition.getUri())) {
+
+	private static URI convertSBOUri_3_to_2(URI uri)
+	{
+		String uriString = uri.toString().toLowerCase().replace("sbo:", "biomodels.sbo/SBO:");
+		uriString= uriString.replace("https", "http");
+		return URI.create(uriString);
+	}
+
+	public static Set<URI> convertToSBOL2_SBO_URIs(List<URI> uris) throws SBOLGraphException {
+		Set<URI> convertedUris = new HashSet<URI>();
+		for (URI uri : uris) {
+			convertedUris.add(convertSBOUri_3_to_2(uri));
+			/*if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.Inhibition.getUri())) {
 				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000169"));
 			} else if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.Stimulation.getUri())) {
 				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000170"));
@@ -909,11 +972,11 @@ public class Util {
 			} else if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.Control.getUri())) {
 				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000168"));
 			} else {
-				throw new SBOLGraphException("Unknown SBOL3 Interaction type: " + type);
-				
+				throw new SBOLGraphException("Unknown SBOL3 Interaction type: " + type);				
 			}
+			*/
 		}
-		return convertedTypes;
+		return convertedUris;
 	}
 	
 	public static URI getSBOL3SequenceEncodingType(URI sbol2EncodingType) throws SBOLGraphException {
@@ -1030,7 +1093,6 @@ public class Util {
 				sbolV1out, fastaOut, snapGeneOut, gff3Out, csvOut, outputFile, showDetail, noOutput, changeURIPrefix,
 				enumerate);
 
-		//String outputStr= baosOutput.toString();
 		String errorStr = baosError.toString();
 		if(errorStr.isEmpty()) {
 			return true;
@@ -1090,20 +1152,15 @@ public class Util {
 
 		public static boolean isMapstoConstraint(Constraint constraint) throws SBOLGraphException {
 			// Check if the SBOL3 constraint is a SBOL2 mapsto type
-			if(constraint.getRestriction().equals(org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.differentFrom.getUri()))
-			{
+			if(constraint.getRestriction().equals(org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.differentFrom.getUri())){
 				return true;
 			} 
-			else if(constraint.getRestriction().equals(org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.verifyIdentical.getUri()))
-			{
+			else if(constraint.getRestriction().equals(org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.verifyIdentical.getUri())){
 				return true;
 			}
-			else if(constraint.getRestriction().equals(org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.replaces.getUri()))
-			{
+			else if(constraint.getRestriction().equals(org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.replaces.getUri())){
 				return true;
 			}
-
 			return false;
 		}
-
 }

@@ -78,7 +78,7 @@ public class TestUtil {
 			SBOLWriter.write(sbol2Doc, System.out);
 		}
 		if (outputFile != null) {			
-			SBOLWriter.write(sbol2InputDocument, new File(outputFile + "_sbol2_from_sbol3.xml"));
+			SBOLWriter.write(sbol2Doc, new File(outputFile + "_sbol2_from_sbol3.xml"));
 		}
 		SBOLValidate.compareDocuments("SBOL2in", sbol2InputDocument, "SBOL2out", sbol2Doc);
 		
@@ -183,6 +183,10 @@ public class TestUtil {
 					assertTrue(false, "Error in round trip conversion: " + error);
 				}
 			}
+		}
+		else {
+			System.out.println("No errors in round trip conversion");
+			buffer.append("No errors in round trip conversion" + System.lineSeparator());
 		}
 		return buffer.toString();
 	}

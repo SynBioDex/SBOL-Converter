@@ -15,7 +15,9 @@ public class TempTest {
 	@Test
 	public void TestSBOL2Attachment() throws Exception {
 		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/pICH43844.xml"));
-		List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/RepressionModel.xml"));
+		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/RepressionModel.xml"));
+		List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/RepressionModel.xml"), true,"output/RepressionModel", true);
+
 
 	
 		TestUtil.DisplayErrors(errors);

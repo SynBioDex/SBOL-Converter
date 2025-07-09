@@ -20,7 +20,7 @@ public class CombinatorialDerivationConverter implements EntityConverter<org.sbo
 
     @Override
     public CombinatorialDerivation convert(SBOLDocument doc, org.sbolstandard.core2.CombinatorialDerivation input, Parameters parameters) throws SBOLGraphException { 
-    	URI sbol3TemplateURI=Util.createSBOL3Uri(input.getTemplateIdentity());
+    	URI sbol3TemplateURI=Util.createSBOL3Uri(input.getTemplateIdentity(), parameters);
 		Component sbol3TemplateComponent= doc.getIdentified(sbol3TemplateURI, Component.class);
 		CombinatorialDerivation cd = doc.createCombinatorialDerivation(Util.createSBOL3Uri(input), Util.getNamespace(input), sbol3TemplateComponent);
 		

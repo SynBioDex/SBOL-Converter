@@ -105,7 +105,7 @@ public class SequenceFeatureToAnnotationConverter implements ChildEntityConverte
     	
     	// Copy general Identified properties (like displayId, version, etc.)
 	    Util.copyIdentified(seqf, seqa, doc);
-		seqa.setRoles(Util.convertRoles3_to_2(seqf.getRoles()));
+		seqa.setRoles(Util.convertSORoles3_to_2(seqf.getRoles()));
 		
 
 		return seqa;

@@ -1,5 +1,9 @@
 package org.sbolstandard.converter.sbol23_31;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+
+import org.apache.jena.riot.RDFFormat;
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.core2.Attachment;
 import org.sbolstandard.core2.Collection;
@@ -10,10 +14,15 @@ import org.sbolstandard.core2.GenericTopLevel;
 import org.sbolstandard.core2.Implementation;
 import org.sbolstandard.core2.Model;
 import org.sbolstandard.core2.ModuleDefinition;
+import org.sbolstandard.core2.SBOLConversionException;
 import org.sbolstandard.core2.SBOLValidate;
 import org.sbolstandard.core2.SBOLValidationException;
+import org.sbolstandard.core2.SBOLWriter;
 import org.sbolstandard.core2.Sequence;
 import org.sbolstandard.core3.entity.SBOLDocument;
+import org.sbolstandard.core3.io.SBOLFormat;
+import org.sbolstandard.core3.io.SBOLIO;
+import org.sbolstandard.core3.util.RDFUtil;
 import org.sbolstandard.core3.util.SBOLGraphException;
 
 
@@ -27,9 +36,16 @@ public class SBOLDocumentConverter {
 	}
     */
 	
-	public SBOLDocument convert(org.sbolstandard.core2.SBOLDocument sbol2Doc) throws SBOLGraphException, SBOLValidationException {
+	public SBOLDocument convert(org.sbolstandard.core2.SBOLDocument sbol2Doc) throws SBOLGraphException, SBOLValidationException, SBOLConversionException, IOException {
         SBOLDocument sbol3Doc = new SBOLDocument();
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        SBOLWriter.write(sbol2Doc, baos, "RDF");
+        String sbol2String = baos.toString();
+        org.apache.jena.rdf.model.Model rdfModel=RDFUtil.read(sbol2String, RDFFormat.RDFXML);
+        
+
         Parameters parameters=new Parameters();
+        parameters.setRdfModel(rdfModel);
         SBOLValidate.validateSBOL(sbol2Doc, false, true, true); 
         //isCompliant=SBOLValidate.getNumErrors()==0;
                 
@@ -52,8 +68,8 @@ public class SBOLDocumentConverter {
         ModuleDefinitionToComponentConverter mdConverter = new ModuleDefinitionToComponentConverter();
         for (ModuleDefinition md : sbol2Doc.getModuleDefinitions()) {
             mdConverter.convert(sbol3Doc, md, parameters);            
-        }
-                
+        }                
+
         ExperimentalDataConverter edConverter = new ExperimentalDataConverter();
         for (ExperimentalData ed : sbol2Doc.getExperimentalData()) {
         	edConverter.convert(sbol3Doc, ed, parameters);            
