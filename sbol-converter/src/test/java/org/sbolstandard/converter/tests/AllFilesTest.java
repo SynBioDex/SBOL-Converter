@@ -2,16 +2,13 @@ package org.sbolstandard.converter.tests;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Formatter;
 import java.util.List;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.LogRecord;
 import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
 
 import org.junit.jupiter.api.Test;
-import org.sbolstandard.core2.SBOLWriter;
 import org.sbolstandard.core3.util.SBOLGraphException;
 
 /**
@@ -24,8 +21,9 @@ public class AllFilesTest {
 	@Test
 	public void TestSBOL2AllFiles() throws Exception {
 		//TestUtil.runTestSuiteFile2_to_3(new File("../SBOLTestSuite/SBOL2/SequenceConstraintOutput.xml"));
-		testRecursive(new File("../SBOLTestSuite/SBOL2/"));
-		
+		Logger logger=getLogger();	
+		testRecursive(new File("../SBOLTestSuite/SBOL2/"), "output/SBOLTestSuite_conversion/SBOL2/", logger);		
+		print("All SBOL2 files tested successfully.", logger);
 	}
 	
 	private static Logger getLogger() throws SecurityException, IOException {
@@ -62,8 +60,7 @@ public class AllFilesTest {
         return fileName.substring(dotIndex + 1);
     }
 
-	private static void testRecursive(File folder) throws Exception{	
-		Logger logger=getLogger();
+	private static void testRecursive(File folder, String outputFolder, Logger logger) throws Exception{	
 		logger.info("Testing folder " + folder.getAbsolutePath());
 
 		File[] files=folder.listFiles();
@@ -71,7 +68,7 @@ public class AllFilesTest {
 		{
 			File file=files[i];
 			if (file.isDirectory()){
-				testRecursive(folder);
+				testRecursive(folder, outputFolder, logger);
 			}
 			else{	
 				String extension=getFileExtension(file.getName());
@@ -83,7 +80,7 @@ public class AllFilesTest {
 				print ("**********************************************", logger);
 				print("Testing " + file.getName(), logger);
 				List<String> errors=null;
-				File folderToSave=new File ("output/AllFilesTest");
+				File folderToSave=new File (outputFolder);
 				if (!folderToSave.exists()){
 					folderToSave.mkdirs();
 				}
@@ -96,14 +93,13 @@ public class AllFilesTest {
 					printError("Error testing " + file.getName() + ": " + e.getMessage(),logger);
 					//logger.throwing("AllFilesTest", "testRecursive:" + file.getName(), e);
 					//Try without validation
-					System.out.println ("Trying without validation");
+					printError("Converting without SBOL3 validation", logger);
 					try{
 						errors=TestUtil.roundTripConvert(file,false,outputFile,false);
 					}
 					catch (Exception e2){
-						System.out.println ("Error testing " + file.getName() + " without validation");
-						e2.printStackTrace();
 						logger.severe("Error testing " + file.getName() + " without validation: " + e2.getMessage());
+						e2.printStackTrace();						
 						throw e2;
 					}					
 				}

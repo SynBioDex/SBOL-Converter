@@ -38,7 +38,7 @@ public class TestUtil {
 	}
 
 	public static List<String> roundTripConvert(File file, boolean sbol3Validate, String outputFile, boolean printToScreen) throws Exception {
-		System.out.println("Starting to convert the SBOL2 file:" + file.getName());
+		System.out.println("Converting the SBOL2 file:" + file.getName());
 		
 		org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
 		return roundTripConvert(doc, sbol3Validate, outputFile, printToScreen);		

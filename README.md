@@ -25,7 +25,27 @@ SBOL Java Converter
 ```
 changed by the SBOL3 converter as 
 ```
-``` 
+```
+
+### SBOLTestSuite - Files that could only be converted after the validation was turned off
+* Location entities exist with no sequence entity
+    * partial_pIKE_right_casette.xml
+    * partial_pTAK_left_cassette.xml
+    * partial_pIKE_right_casette.xml
+    * memberAnnotations.xml
+    * ComponentDefinitionOutput_gl_noRange.xml
+    * partial_pIKE_left_cassette.xml
+    * partial_pIKE_right_cassette.xml
+    * ComponentDefinitionOutput.xml
+* AnnotationOutput.xml: The content is exactly the same. However, the order of two annotation propoerties are different and libSBOLj2 reports the files as different. This is not an issue!
+* SBOL2 Files include incorrect resource URIs. The converter fixes them during the conversion.
+    * simple_attachment_plan_ann.xml: Invalid SBOL2 annotation URI
+    * singleModel.xml: Invalid SBOL2 model source
+* Incorrect AminoAcid sequence, which includes the . character
+    * CreateAndRemoveModel.xml
+    * multipleSequences.xml
+
+
  
 ## To download the SBOLTestSuite as a dependency
 git submodule update --init --recursive

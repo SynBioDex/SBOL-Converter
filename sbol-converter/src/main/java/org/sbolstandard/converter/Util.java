@@ -728,15 +728,15 @@ public class Util {
 
 	public static URI convertSOUri_2_to_3(URI soUri)
 	{
-		String uriString = soUri.toString().toLowerCase().replace("so/", "").replace("so:", "SO:");
-		uriString= uriString.replace("http", "https");
+		String uriString = soUri.toString().replaceAll("(?i)so/", "").replace("(?i)so:", "SO:");
+		uriString= uriString.replaceAll("(?i)http://", "https://");
 		return URI.create(uriString);
 	}
 	
 	private static URI convertSOUri_3_to_2(URI soUri)
 	{
-		String soUriString = soUri.toString().toLowerCase().replace("so:", "so/SO:");
-		soUriString= soUriString.replace("https", "http");
+		String soUriString = soUri.toString().replaceAll("(?i)so:", "so/SO:");
+		soUriString= soUriString.replaceAll("(?i)https://", "http://");		
 		return URI.create(soUriString);
 	}
 	
@@ -939,8 +939,8 @@ public class Util {
 	public static List<URI> convertToSBOL3_SBO_URIs(Set<URI> types) {
 		List<URI> convertedTypes = new ArrayList<URI>();
 		for (URI type : types) {
-			String typeString = type.toString().toLowerCase().replace("/biomodels.sbo", "").replace("sbo:", "SBO:");			
-			typeString = typeString.replace("http", "https");
+			String typeString = type.toString().replaceAll("(?i)/biomodels.sbo", "").replace("sbo:", "SBO:");			
+			typeString = typeString.replaceAll("(?i)http://", "https://");
 			convertedTypes.add(URI.create(typeString));
 		}
 		return convertedTypes;
@@ -948,8 +948,8 @@ public class Util {
 
 	private static URI convertSBOUri_3_to_2(URI uri)
 	{
-		String uriString = uri.toString().toLowerCase().replace("sbo:", "biomodels.sbo/SBO:");
-		uriString= uriString.replace("https", "http");
+		String uriString = uri.toString().replaceAll("(?i)sbo:", "biomodels.sbo/SBO:");
+		uriString= uriString.replaceAll("(?i)https://", "http://");
 		return URI.create(uriString);
 	}
 

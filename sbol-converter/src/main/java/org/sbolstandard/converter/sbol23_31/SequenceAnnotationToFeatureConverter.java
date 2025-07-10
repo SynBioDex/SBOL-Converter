@@ -35,7 +35,6 @@ public class SequenceAnnotationToFeatureConverter implements ChildEntityConverte
 
 		// Get the SBOL2 Sequence associated with the ComponentDefinition of the SequenceAnnotation.
 		URI seqType = Util.getSBOL2SequenceType(sbol2ParentCompDef);
-		System.out.println("SBOL2 Sequence Type: " + seqType);
 		Sequence sbol3Sequence = Util.getSBOL3SequenceFromSBOl2Parent(document, sbol2ParentCompDef, parameters);
 		
 		SequenceFeature seqFeature=null;
