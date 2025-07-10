@@ -14,7 +14,7 @@
     <sbol:persistentIdentity rdf:resource="http://www.partsregistry.org/gen/datasheet1"/>
     <sbol:displayId>datasheet1</sbol:displayId>
     <dcterms:title>Datasheet 1</dcterms:title>
-    <myapp:characterizationData rdf:resource="http://www.myapp.org//measurement/1"/>
     <myapp:transcriptionRate>1</myapp:transcriptionRate>
+    <myapp:characterizationData>http://www.myapp.org//measurement/1</myapp:characterizationData>
   </myapp:Datasheet>
 </rdf:RDF>

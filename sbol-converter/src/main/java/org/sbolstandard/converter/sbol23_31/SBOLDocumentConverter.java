@@ -1,9 +1,11 @@
 package org.sbolstandard.converter.sbol23_31;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.apache.jena.riot.RDFFormat;
+import org.apache.jena.riot.RiotException;
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.core2.Attachment;
 import org.sbolstandard.core2.Collection;
@@ -19,6 +21,7 @@ import org.sbolstandard.core2.SBOLValidate;
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core2.SBOLWriter;
 import org.sbolstandard.core2.Sequence;
+import org.sbolstandard.core3.api.SBOLAPI;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.io.SBOLFormat;
 import org.sbolstandard.core3.io.SBOLIO;
@@ -36,13 +39,43 @@ public class SBOLDocumentConverter {
 	}
     */
 	
+    private org.apache.jena.rdf.model.Model getRdfModel(String sbol2String, String errorUri) throws RiotException, FileNotFoundException {
+        
+        try{
+            return RDFUtil.read(sbol2String, RDFFormat.RDFXML);
+        }
+        catch (RiotException e)
+        {
+            int start =  e.getMessage().indexOf("<");
+            int end =  e.getMessage().indexOf(">");
+            String uri=e.getMessage().substring(start+1, end);
+            if (errorUri==null || (errorUri!=null && !uri.equals(errorUri))) {               
+                String newUri= SBOLAPI.append("https://sbolstandard.org/SBOL3-Converter", uri).toString();
+                sbol2String=sbol2String.replace("\"" + uri +  "\"", "\"" + newUri +  "\"");
+                return getRdfModel(sbol2String, uri);
+            }
+            else {
+                throw e;
+            }
+        }   
+    }
+
+
+    
+    
 	public SBOLDocument convert(org.sbolstandard.core2.SBOLDocument sbol2Doc) throws SBOLGraphException, SBOLValidationException, SBOLConversionException, IOException {
         SBOLDocument sbol3Doc = new SBOLDocument();
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         SBOLWriter.write(sbol2Doc, baos, "RDF");
         String sbol2String = baos.toString();
-        org.apache.jena.rdf.model.Model rdfModel=RDFUtil.read(sbol2String, RDFFormat.RDFXML);
-        
+        //org.apache.jena.rdf.model.Model rdfModel=RDFUtil.read(sbol2String, RDFFormat.RDFXML);
+        org.apache.jena.rdf.model.Model rdfModel=getRdfModel(sbol2String, null);
+
+        /*try{
+            org.apache.jena.rdf.model.Model rdfModel=RDFUtil.read(sbol2String, RDFFormat.RDFXML);
+        }
+        catch (RiotException e)
+        {}*/
 
         Parameters parameters=new Parameters();
         parameters.setRdfModel(rdfModel);

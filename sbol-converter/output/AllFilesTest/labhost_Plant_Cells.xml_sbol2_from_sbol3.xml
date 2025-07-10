@@ -17,8 +17,8 @@
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/AcV5_tag"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/ProtA_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/virD5"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/HSP_terminator"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/NeoR_KanR_018"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/HSP_terminator"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/CmR_013"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/AmpR_promoter_009"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/lac_UV5_promoter_002"/>
@@ -41,8 +41,8 @@
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/virD3"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/BlpR_003"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/GmR_003"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/attR2_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/ProtA_001"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/attR2_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/NeoR_KanR_007"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/CaMV_poly_A__signal_004"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/EYFP_002"/>
@@ -61,10 +61,10 @@
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/MCS_1_010"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/LB_T_DNA_repeat_003"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/attP2_002"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/CaMV_35S_promoter_004"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/M13_rev"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/OCS_terminator_002"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/M13_rev"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/virE3"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/CaMV_35S_promoter_004"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/attR1_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/incP_origin_of_transfer_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/OsADH_5__UTR"/>
@@ -82,21 +82,21 @@
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/virA"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/tet_promoter_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/PDK_intron_001"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/TcR_003"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/virJ"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/TcR_003"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/CaMV_35S_promoter_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/ori_010"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/MCS_301"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/trfA_001"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/FLAG_008"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/MCS_301"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/pVS1_StaA"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/KanR_020"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/FLAG_008"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/MCS_255"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/KanR_020"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/oriV_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/virC1__inactivated_"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/RB_T_DNA_repeat_001"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/NOS_terminator_003"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/pRi_replicator_region"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/NOS_terminator_003"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/pSa_ori"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/M13_fwd"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/NOS_promoter_003"/>
@@ -105,62 +105,62 @@
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/_6xHis_006"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/TMV_Omega"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/ATG"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/oriV_004"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/RB_T_DNA_repeat_002"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/oriV_004"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/lacZ_alpha_030"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/lac_operator_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/NOS_promoter_004"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/lac_operator_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/pVS1_RepA_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/IS1_003"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/CaMV_poly_A__signal_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/KanR_008"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/virB6"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/CaMV_poly_A__signal_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/lacZ_alpha_046"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/lac_operator_003"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/NOS_terminator_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/NOS_promoter_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/lac_promoter_002"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/virB7"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/kfrBC_operon"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/virB1_002"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/virB7"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/CaMV_poly_A__signal_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/mgfp5_001"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/incC_korABFG_operon"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/CaMV_poly_A__signal_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/MCS_234"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/oriV_006"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/incC_korABFG_operon"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/virB9"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/oriV_006"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/MCS_1_012"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/IS1_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/ECFP_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/NOS_terminator_001"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/virE1"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/NOS_promoter_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/virB1_001"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/virE1"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/attP1_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/lacZ_alpha_044"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/NeoR_KanR_014"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/ori_014"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/ccdB_004"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/TetR_001"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/NeoR_KanR_014"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/virB8"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/TetR_001"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/ccdB_004"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/EYFP_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/NeoR_KanR_022"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/virK"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/CAP_binding_site_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/MCS_2_008"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/TcR_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/MCS_149"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/streptothricin_acetyltransferase"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/TcR_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/HygR_012"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/CaMV_35S_promoter_003"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/virE2"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/CaMV_35S_promoter_003"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/oriV_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/attR1_001"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/CBP_002"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/MCS_2_013"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/MCS_061"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/ori_013"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/MCS_2_013"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/CBP_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/TEV_Site_010"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/MCS_061"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/incP_origin_of_transfer_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/GRP_signal_sequence"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/bom_001"/>
@@ -171,20 +171,20 @@
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/CaMV_poly_A__signal_003"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/cat1_intron_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/lacZ_alpha_034"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/BlpR_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/kfrA_operon"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/LB_T_DNA_repeat_002"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/BlpR_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/virD1"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/MAS_promoter_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/NeoR_KanR_009"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/CmR_004"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/gene_7_terminator"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/AtADH_5__UTR"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/oriV_003"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/T3_promoter_001"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/oriV_003"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/AtADH_5__UTR"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/TcR_004"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/PDK_intron_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/T7_promoter"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/PDK_intron_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/CaMV_35S_promoter_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/luciferase_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/virB3"/>
@@ -192,12 +192,12 @@
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/Myc_005"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/MCS_049"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/lacZ_alpha_032"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/cat1_intron_003"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/virB10"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/MCS_207"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/NeoR_KanR_002"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/cat1_intron_003"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/pBR322_ori__truncated_"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/virC1"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/MCS_207"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/NeoR_KanR_002"/>
   </sbol:Collection>
   <sbol:ComponentDefinition rdf:about="http://www.async.ece.utah.edu/MCS_019">
     <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/MCS_019"/>
@@ -3237,18 +3237,18 @@
     <sbol:elements>atgcagtttaaggtttacacctataaaagagagagccgttatcgtctgtttgtggatgtacagagtgatattattgacacgcccgggcgacggatggtgatccccctggccagtgcacgtctgctgtcagataaagtctcccgtgaactttacccggtggtgcatatcggggatgaaagctggcgcatgatgaccaccgatatggccagtgtgccggtctccgttatcggggaagaagtggctgatctcagccaccgcgaaaatgacatcaaaaacgccattaacctgatgttctggggaatataa</sbol:elements>
     <sbol:encoding rdf:resource="http://www.chem.qmul.ac.uk/iubmb/misc/naseq.html"/>
   </sbol:Sequence>
-  <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_PDK_intron_001_seq">
-    <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Part_PDK_intron_001_seq"/>
-    <sbol:displayId>Part_PDK_intron_001_seq</sbol:displayId>
-    <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:PDK_intron-001#seq"/>
-    <sbol:elements>gtaaggaaataattattttcttttttccttttagtataaaatagttaagtgatgttaattagtatgattataataatatagttgttataattgtgaaaaaataatttataaatatattgtttacataaacaacatagtaatgtaaaaaaatatgacaagtgatgtgtaagacgaagaagataaaagttgagagtaagtatattatttttaatgaatttgatcgaacatgtaagatgatatacggccggtaagaggttccaactttcaccataatgaaataagatcactaccgggcgtattttttgagttatcgagattttcaggagctaaggaagctaaaatggagaaaaaaatcactggatataccaccgttgatatatcccaatggcatcgtaaagaacattttgaggcatttcagtcagttgctcaatgtacctataaccagaccgttcagctggatattacggcctttttaaagaccgtaaagaaaaataagcacaagttttatccggcctttattcacattcttgcccgcctgatgaatgctcatccggaattccgtatggcaatgaaagacggtgagctggtgatatgggatagtgttcacccttgttacaccgttttccatgagcaaactgaaacgttttcatcgctctggagtgaataccacgacgatttccggcagtttctacacatatattcgcaagatgtggcgtgttacggtgaaaacctggcctatttccctaaagggtttattgagaatatgtttttcgtctcagccaatccctgggtgagtttcaccagttttgatttaaacgtggccaatatggacaacttcttcgcccccgttttcaccatgggcaaatattatacgcaaggcgacaaggtgctgatgccgctggcgattcaggttcatcatgccgtctgtgatggcttccatgtcggcagaatgcttaatgaattacaacagtactgcgatgagtggcagggcggggcgtaatcgcgtggatccggcttactaaaagccagataacagtatgcgtatttgcgcgctgatttttgcggtataagaatatatactgatatgtcgggcccataatagtaattctagctggtttgatgaattaaatatcaatgataaaatactatagtaaaaataagaataaataaattaaaataatatttttttatgattaatagtttattatataattaaatatctataccattactaaatattttagtttaaaagttaataaatattttgttagaaattccaatctgcttgtaatttatcaataaacaaaatattaaataacaagctaaagtaacaaataatatcaaactaatagaaacagtaatctaatgtaacaaaacataatctaatgctaatataacaaagcgcaagatctatcattttatatagtattattttcaatcaacattcttattaatttctaaataatacttgtagttttattaacttctaaatggattgactattaattaaatgaattagtcgaacatgaataaacaaggtaacatgatagatcatgtcattgtgttatcattgatcttacatttggattgattacag</sbol:elements>
-    <sbol:encoding rdf:resource="http://www.chem.qmul.ac.uk/iubmb/misc/naseq.html"/>
-  </sbol:Sequence>
   <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_virE2_seq">
     <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Part_virE2_seq"/>
     <sbol:displayId>Part_virE2_seq</sbol:displayId>
     <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:virE2#seq"/>
     <sbol:elements>atggatccgtctagcaatgagaatgtctatgtgggtcgcggtcacaacatcgaaaatgatgatgacactgaccccaggcgttggaagaaggcgaatatcagttccaacaccatctccgatattcagatgacgaatggcgaagacgtacaatcagggagccctacccgaacggaagttgtaagcccacgtctggattatggatcggtcgactcctcctccagcctttattctggcagcgagcacggaaatcaagctgagattcaaaaagagctgtccgtcttgttctcgaacatgtctttgccaggcaacgatcggcgcccggacgaatacattctcgtgcatcaaacgggacaagatgcttttactggtattgccaaaggcaacctcgaccaaatgcccaccaaggcggaatttaacgcgtgctgccgtctctacagggacggagccggtaattactacccgccacctctcgcattcgacaagattagcgttccagagcaactggaggaaaaatgggggatgatggaggcgaaggaacgtaacaaactgcggtttcagtacaagttggacgtatggaatcatgcgcacgctgatatggggatcacgggcacagagatcttttatcaaacagataagaacataaagctcgaccggaattataaactaagacctgaagaccgatacgtacaaacagaaaaatacgggcgccgggaaattcaaaagcgatatcaacacgaactccaggctggttcgctgctgcccgatattatgatcaaaactccccaaaatgacatccacttcgtgtacaggtttgccggcgacaattacgccaacaaacagttcagcgagtttgaacacaccgtcaagcgcaggtatggcgacgagactgagatcaaattgaagtcaaagtcaggcattatgcatgactcgaaatatctggaatcctgggaacggggcagtgcggatattcgcttcgcggaattcgttggggaaaatagagctcacaatcggcagtttccaactgcgacagtaaatatgggacagcagccagacgggcagggcggtttgacccgcgaccgtcatgtgagcgttgacttcctaatgcaaagcgcacccaattcgccttgggcgcaagctttgaaaaagggagaactgtgggatcgcgttcagttgcttgctcgcgacggcaaccgctatctgtcgccgcccagattggaatattctgaccctgcacatttcaccgagttgatgaaccgggttggtttacccgcatcgatgggtcggcaaagccatgcggctagtatcaaattcgaaaagtttgacgcgcaggcagcggttattgtcttaaatggcccagagttacgtgacattcatgacttgtctcctgaaaaactgcaaaatttgtccaccaaagatgtcatcgtcgccgatcgcaatgagaatggtcagagaactggcacgtacaccagcgtcgcggaatatgagcgcttgcagttaaggctgccacccgatgcagcgggggtgcttggtgaagcaactgacaaatattcacgtgatttcgttcggccagagccggcgtcgcgtccaatcagtgacagccgcaggatatacgaaagtcgaccgcgtagccaaagcgtcaacagcttttga</sbol:elements>
+    <sbol:encoding rdf:resource="http://www.chem.qmul.ac.uk/iubmb/misc/naseq.html"/>
+  </sbol:Sequence>
+  <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_PDK_intron_001_seq">
+    <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Part_PDK_intron_001_seq"/>
+    <sbol:displayId>Part_PDK_intron_001_seq</sbol:displayId>
+    <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:PDK_intron-001#seq"/>
+    <sbol:elements>gtaaggaaataattattttcttttttccttttagtataaaatagttaagtgatgttaattagtatgattataataatatagttgttataattgtgaaaaaataatttataaatatattgtttacataaacaacatagtaatgtaaaaaaatatgacaagtgatgtgtaagacgaagaagataaaagttgagagtaagtatattatttttaatgaatttgatcgaacatgtaagatgatatacggccggtaagaggttccaactttcaccataatgaaataagatcactaccgggcgtattttttgagttatcgagattttcaggagctaaggaagctaaaatggagaaaaaaatcactggatataccaccgttgatatatcccaatggcatcgtaaagaacattttgaggcatttcagtcagttgctcaatgtacctataaccagaccgttcagctggatattacggcctttttaaagaccgtaaagaaaaataagcacaagttttatccggcctttattcacattcttgcccgcctgatgaatgctcatccggaattccgtatggcaatgaaagacggtgagctggtgatatgggatagtgttcacccttgttacaccgttttccatgagcaaactgaaacgttttcatcgctctggagtgaataccacgacgatttccggcagtttctacacatatattcgcaagatgtggcgtgttacggtgaaaacctggcctatttccctaaagggtttattgagaatatgtttttcgtctcagccaatccctgggtgagtttcaccagttttgatttaaacgtggccaatatggacaacttcttcgcccccgttttcaccatgggcaaatattatacgcaaggcgacaaggtgctgatgccgctggcgattcaggttcatcatgccgtctgtgatggcttccatgtcggcagaatgcttaatgaattacaacagtactgcgatgagtggcagggcggggcgtaatcgcgtggatccggcttactaaaagccagataacagtatgcgtatttgcgcgctgatttttgcggtataagaatatatactgatatgtcgggcccataatagtaattctagctggtttgatgaattaaatatcaatgataaaatactatagtaaaaataagaataaataaattaaaataatatttttttatgattaatagtttattatataattaaatatctataccattactaaatattttagtttaaaagttaataaatattttgttagaaattccaatctgcttgtaatttatcaataaacaaaatattaaataacaagctaaagtaacaaataatatcaaactaatagaaacagtaatctaatgtaacaaaacataatctaatgctaatataacaaagcgcaagatctatcattttatatagtattattttcaatcaacattcttattaatttctaaataatacttgtagttttattaacttctaaatggattgactattaattaaatgaattagtcgaacatgaataaacaaggtaacatgatagatcatgtcattgtgttatcattgatcttacatttggattgattacag</sbol:elements>
     <sbol:encoding rdf:resource="http://www.chem.qmul.ac.uk/iubmb/misc/naseq.html"/>
   </sbol:Sequence>
   <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_virE1_seq">

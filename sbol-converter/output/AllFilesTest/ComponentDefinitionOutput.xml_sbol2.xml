@@ -25,11 +25,11 @@
       </sbol:Component>
     </sbol:component>
     <sbol:component>
-      <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_F2620/pLuxR">
-        <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/BBa_F2620/pLuxR"/>
-        <sbol:displayId>pLuxR</sbol:displayId>
+      <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_F2620/rbs">
+        <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/BBa_F2620/rbs"/>
+        <sbol:displayId>rbs</sbol:displayId>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="http://partsregistry.org/cd/BBa_R0062"/>
+        <sbol:definition rdf:resource="http://partsregistry.org/cd/BBa_C0062"/>
       </sbol:Component>
     </sbol:component>
     <sbol:component>
@@ -41,19 +41,19 @@
       </sbol:Component>
     </sbol:component>
     <sbol:component>
-      <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_F2620/rbs">
-        <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/BBa_F2620/rbs"/>
-        <sbol:displayId>rbs</sbol:displayId>
-        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="http://partsregistry.org/cd/BBa_C0062"/>
-      </sbol:Component>
-    </sbol:component>
-    <sbol:component>
       <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_F2620/luxR">
         <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/BBa_F2620/luxR"/>
         <sbol:displayId>luxR</sbol:displayId>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
         <sbol:definition rdf:resource="http://partsregistry.org/cd/BBa_B0034"/>
+      </sbol:Component>
+    </sbol:component>
+    <sbol:component>
+      <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_F2620/pLuxR">
+        <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/BBa_F2620/pLuxR"/>
+        <sbol:displayId>pLuxR</sbol:displayId>
+        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
+        <sbol:definition rdf:resource="http://partsregistry.org/cd/BBa_R0062"/>
       </sbol:Component>
     </sbol:component>
     <sbol:sequenceAnnotation>
@@ -70,6 +70,22 @@
           </sbol:Range>
         </sbol:location>
         <sbol:component rdf:resource="http://partsregistry.org/cd/BBa_F2620/luxR"/>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://partsregistry.org/cd/BBa_F2620/anno5">
+        <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno5"/>
+        <sbol:displayId>anno5</sbol:displayId>
+        <sbol:location>
+          <sbol:Range rdf:about="http://partsregistry.org/cd/BBa_F2620/anno5/range">
+            <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno5/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>901</sbol:start>
+            <sbol:end>956</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+        <sbol:component rdf:resource="http://partsregistry.org/cd/BBa_F2620/pLuxR"/>
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
@@ -118,22 +134,6 @@
           </sbol:Range>
         </sbol:location>
         <sbol:component rdf:resource="http://partsregistry.org/cd/BBa_F2620/ter"/>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://partsregistry.org/cd/BBa_F2620/anno5">
-        <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno5"/>
-        <sbol:displayId>anno5</sbol:displayId>
-        <sbol:location>
-          <sbol:Range rdf:about="http://partsregistry.org/cd/BBa_F2620/anno5/range">
-            <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno5/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>901</sbol:start>
-            <sbol:end>956</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-        <sbol:component rdf:resource="http://partsregistry.org/cd/BBa_F2620/pLuxR"/>
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
   </sbol:ComponentDefinition>

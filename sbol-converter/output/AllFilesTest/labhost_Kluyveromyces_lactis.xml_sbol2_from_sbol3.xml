@@ -9,8 +9,8 @@
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/LAC4_terminator_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/LAC4_promoter__3___002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/AmpR_013"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/LAC4_terminator_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/ori_013"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/LAC4_terminator_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/amdS_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/LAC4_promoter__5__"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/alpha_factor_secretion_signal_005"/>

@@ -23,3 +23,4 @@ public class AttachmentConverter implements EntityConverter<org.sbolstandard.cor
 		return att;
 	}
 }
+

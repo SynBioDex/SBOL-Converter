@@ -1,0 +1,59 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:SO="https://identifiers.org/SO:"
+    xmlns:EDAM="https://identifiers.org/edam:"
+    xmlns:sbol="http://sbols.org/v3#"
+    xmlns:CHEBI="https://identifiers.org/CHEBI:"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:SBO="https://identifiers.org/SBO:"
+    xmlns:GO="https://identifiers.org/GO:"
+    xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
+   <sbol:Component rdf:about="http://www.async.ece.utah.edu/cd">
+      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
+      <sbol:type rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17634"/>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000247"/>
+      <sbol:displayId>cd</sbol:displayId>
+   </sbol:Component>
+   <sbol:Component rdf:about="http://www.async.ece.utah.edu/empty_md">
+      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
+      <sbol:displayId>empty_md</sbol:displayId>
+   </sbol:Component>
+   <sbol:Component rdf:about="http://www.async.ece.utah.edu/md">
+      <sbol:hasFeature>
+         <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/md/m">
+            <sbol:instanceOf rdf:resource="http://www.async.ece.utah.edu/empty_md"/>
+            <sbol:displayId>m</sbol:displayId>
+         </sbol:SubComponent>
+      </sbol:hasFeature>
+      <sbol:hasInteraction>
+         <sbol:Interaction rdf:about="http://www.async.ece.utah.edu/md/i">
+            <sbol:hasParticipation>
+               <sbol:Participation rdf:about="http://www.async.ece.utah.edu/md/i/p">
+                  <sbol:participant>
+                     <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/md/fc">
+                        <sbol:instanceOf rdf:resource="http://www.async.ece.utah.edu/cd"/>
+                        <sbol:displayId>fc</sbol:displayId>
+                     </sbol:SubComponent>
+                  </sbol:participant>
+                  <sbol:role rdf:resource="https://identifiers.org/SBO:0000011"/>
+                  <sbol:displayId>p</sbol:displayId>
+               </sbol:Participation>
+            </sbol:hasParticipation>
+            <sbol:type rdf:resource="https://identifiers.org/SBO:0000177"/>
+            <sbol:displayId>i</sbol:displayId>
+         </sbol:Interaction>
+      </sbol:hasInteraction>
+      <sbol:hasInterface>
+         <sbol:Interface rdf:about="http://www.async.ece.utah.edu/md/Interface1">
+            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/md/fc"/>
+            <sbol:displayId>Interface1</sbol:displayId>
+         </sbol:Interface>
+      </sbol:hasInterface>
+      <sbol:hasFeature rdf:resource="http://www.async.ece.utah.edu/md/fc"/>
+      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
+      <sbol:displayId>md</sbol:displayId>
+   </sbol:Component>
+</rdf:RDF>

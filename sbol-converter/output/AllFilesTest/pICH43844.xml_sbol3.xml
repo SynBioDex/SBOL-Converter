@@ -86,18 +86,6 @@
             <gbConv:multiRangeType>join</gbConv:multiRangeType>
             <sbol:name>Bar phosphimothricin acetyl transferase (S. hygroscopicus)</sbol:name>
             <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation6/range1">
-                  <gbConv:position>position1</gbConv:position>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>3243</sbol:end>
-                  <sbol:start>2893</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH43844_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range1</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation6/range0">
                   <gbConv:position>position0</gbConv:position>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -107,6 +95,18 @@
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH43844_seq"/>
                   </sbol:hasSequence>
                   <sbol:displayId>range0</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation6/range1">
+                  <gbConv:position>position1</gbConv:position>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>3243</sbol:end>
+                  <sbol:start>2893</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH43844_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range1</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>

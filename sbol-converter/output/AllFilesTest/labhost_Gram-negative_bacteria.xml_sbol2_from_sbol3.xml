@@ -8,12 +8,12 @@
     <dcterms:description>This is a collection of features that have been
 			associated with Gram-negative bacteria plasmids downloaded from the
 			SnapGene Resources repository (http://www.snapgene.com).</dcterms:description>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/CmR_013"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/pBBR1_Rep"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/TpR"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/CmR_013"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/tonB_terminator_002"/>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/araBAD_promoter_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/soxR_terminator"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/araBAD_promoter_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/araBAD_promoter_002"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/MCS_093"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/MCS_079"/>

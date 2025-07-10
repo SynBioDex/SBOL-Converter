@@ -92,11 +92,11 @@
       <sbol:role rdf:resource="https://identifiers.org/SO:0001411"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://partsregistry.org/cd/BBa_F2620/Interface1">
-            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/luxR"/>
+            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/pLuxR"/>
             <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/pTetR"/>
             <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/ter"/>
-            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/pLuxR"/>
             <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/rbs"/>
+            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/luxR"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>

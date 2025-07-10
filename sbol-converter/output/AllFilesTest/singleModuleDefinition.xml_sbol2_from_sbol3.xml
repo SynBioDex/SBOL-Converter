@@ -4,6 +4,6 @@
     <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/LacI_Inv"/>
     <sbol:displayId>LacI_Inv</sbol:displayId>
     <sbol:version>1.0</sbol:version>
-    <sbol:role rdf:resource="http://some.ontology.org/Inverter"/>
+    <sbol:role rdf:resource="http://some.ontology.org/inverter"/>
   </sbol:ModuleDefinition>
 </rdf:RDF>

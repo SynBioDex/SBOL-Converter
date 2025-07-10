@@ -6,8 +6,8 @@
     <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Collection:Bacillus_subtilis"/>
     <dcterms:title>Collection of Bacillus subtilis features</dcterms:title>
     <dcterms:description>This is a collection of features that have been associated with Bacillus subtilis plasmids downloaded from the SnapGene Resources repository (http://www.snapgene.com).</dcterms:description>
-    <sbol:member rdf:resource="http://www.async.ece.utah.edu/p15A_ori_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/repB"/>
+    <sbol:member rdf:resource="http://www.async.ece.utah.edu/p15A_ori_001"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/AmpR_promoter_009"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/AmpR_017"/>
     <sbol:member rdf:resource="http://www.async.ece.utah.edu/TcR_006"/>

@@ -34,6 +34,7 @@
       <sbol:description>Constitutive promoter</sbol:description>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://partsregistry.org/cd/cd_comp/Interface1">
+            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/cd_comp/base1"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://partsregistry.org/cd/cd_comp/base2">
                   <sbol:hasLocation>
@@ -52,7 +53,6 @@
                   <sbol:displayId>base2</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/cd_comp/base1"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>

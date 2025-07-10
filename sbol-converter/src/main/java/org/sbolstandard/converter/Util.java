@@ -344,7 +344,7 @@ public class Util {
 		}
 		return URI.create(sbol3Uri);
 	}
-
+	
 	public static URI createSBOL2Uri(URI inputUri) throws SBOLGraphException {
 		String sbol2Uri = "";
 

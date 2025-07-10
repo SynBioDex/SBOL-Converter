@@ -9,8 +9,8 @@
     <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/experiment"/>
     <sbol:displayId>experiment</sbol:displayId>
     <sbol:version>1.0</sbol:version>
-    <sbol:experimentalData rdf:resource="http://www.async.ece.utah.edu/experimental_data1/1.0"/>
     <sbol:experimentalData rdf:resource="http://www.async.ece.utah.edu/experimental_data2/1.0"/>
+    <sbol:experimentalData rdf:resource="http://www.async.ece.utah.edu/experimental_data1/1.0"/>
   </sbol:Experiment>
   <sbol:ExperimentalData rdf:about="http://www.async.ece.utah.edu/experimental_data1/1.0">
     <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/experimental_data1"/>

@@ -27,15 +27,6 @@
         <sbol:displayId>base1</sbol:displayId>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
         <sbol:definition rdf:resource="http://partsregistry.org/cd/cd_base_1"/>
-        <sbol:sourceLocation>
-          <sbol:Range rdf:about="http://partsregistry.org/cd/cd_comp/base1/seq_base1">
-            <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/cd_comp/base1/seq_base1"/>
-            <sbol:displayId>seq_base1</sbol:displayId>
-            <sbol:start>4</sbol:start>
-            <sbol:end>14</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:sourceLocation>
       </sbol:Component>
     </sbol:component>
     <sbol:component>
@@ -44,47 +35,34 @@
         <sbol:displayId>base2</sbol:displayId>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
         <sbol:definition rdf:resource="http://partsregistry.org/cd/cd_base_2"/>
-        <sbol:sourceLocation>
-          <sbol:Range rdf:about="http://partsregistry.org/cd/cd_comp/base2/seq_base2">
-            <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/cd_comp/base2/seq_base2"/>
-            <sbol:displayId>seq_base2</sbol:displayId>
-            <sbol:start>4</sbol:start>
-            <sbol:end>14</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:sourceLocation>
       </sbol:Component>
     </sbol:component>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://partsregistry.org/cd/cd_comp/base_s1">
-        <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/cd_comp/base_s1"/>
-        <sbol:displayId>base_s1</sbol:displayId>
+      <sbol:SequenceAnnotation rdf:about="http://partsregistry.org/cd/cd_comp/base2_base_c2">
+        <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/cd_comp/base2_base_c2"/>
+        <sbol:displayId>base2_base_c2</sbol:displayId>
         <sbol:location>
-          <sbol:Range rdf:about="http://partsregistry.org/cd/cd_comp/base_s1/base_c1">
-            <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/cd_comp/base_s1/base_c1"/>
-            <sbol:displayId>base_c1</sbol:displayId>
-            <sbol:start>1</sbol:start>
-            <sbol:end>11</sbol:end>
-            <sbol:sequence rdf:resource="http://partsregistry.org/seq/seq_comp"/>
-          </sbol:Range>
-        </sbol:location>
-        <sbol:component rdf:resource="http://partsregistry.org/cd/cd_comp/base1"/>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://partsregistry.org/cd/cd_comp/base_s2">
-        <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/cd_comp/base_s2"/>
-        <sbol:displayId>base_s2</sbol:displayId>
-        <sbol:location>
-          <sbol:Range rdf:about="http://partsregistry.org/cd/cd_comp/base_s2/base_c2">
-            <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/cd_comp/base_s2/base_c2"/>
+          <sbol:Range rdf:about="http://partsregistry.org/cd/cd_comp/base2_base_c2/base_c2">
+            <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/cd_comp/base2_base_c2/base_c2"/>
             <sbol:displayId>base_c2</sbol:displayId>
             <sbol:start>12</sbol:start>
             <sbol:end>22</sbol:end>
-            <sbol:sequence rdf:resource="http://partsregistry.org/seq/seq_comp"/>
           </sbol:Range>
         </sbol:location>
-        <sbol:component rdf:resource="http://partsregistry.org/cd/cd_comp/base2"/>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://partsregistry.org/cd/cd_comp/base1_base_c1">
+        <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/cd_comp/base1_base_c1"/>
+        <sbol:displayId>base1_base_c1</sbol:displayId>
+        <sbol:location>
+          <sbol:Range rdf:about="http://partsregistry.org/cd/cd_comp/base1_base_c1/base_c1">
+            <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/cd_comp/base1_base_c1/base_c1"/>
+            <sbol:displayId>base_c1</sbol:displayId>
+            <sbol:start>1</sbol:start>
+            <sbol:end>11</sbol:end>
+          </sbol:Range>
+        </sbol:location>
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequence rdf:resource="http://partsregistry.org/seq/seq_comp"/>
