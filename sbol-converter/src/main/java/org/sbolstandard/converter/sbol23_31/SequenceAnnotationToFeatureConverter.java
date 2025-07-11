@@ -71,12 +71,10 @@ public class SequenceAnnotationToFeatureConverter implements ChildEntityConverte
 				if (sbol2Loc.getDisplayId()!=null) {					
 					sbol3Location = seqFeature.createCut(sbol2Loc.getDisplayId(), sbol2cut.getAt(), sbol3Sequence);
 				}
-				else
-				{
+				else{
 					sbol3Location = seqFeature.createCut(sbol2cut.getAt(), sbol3Sequence);
 				}
 			}
-			// Handle GenericLocation type (whole sequence or undefined region).
 			else if (sbol2Loc instanceof org.sbolstandard.core2.GenericLocation) {
 				if (sbol2Loc.getDisplayId()!=null) {										
 					sbol3Location = seqFeature.createEntireSequence(sbol2Loc.getDisplayId(),  sbol3Sequence);	

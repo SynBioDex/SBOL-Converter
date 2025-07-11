@@ -20,9 +20,20 @@ public class TempTest {
 		//List<String> errors=TestUtil.roundTripConvert(new File("output/simple_attachment_plan_ann_v2.xml"));
 		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/CreateAndRemoveModel.xml"));
 		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/AnnotationOutput.xml"));
-		List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/singleModuleDefinition.xml"));
+		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/singleModuleDefinition.xml"));
+		List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/test_source_location.xml"));
 		
+/*
+cd_comp
+cd_base_1: 4-14 (source loc): ttgacagctagctcagtcctaggtataatgctagc : The first 11 bases
+cd_base2: 4-14 (source loc):  ttgacagctagctcagtcctaggtataatgctagttagcgc: The first 11 bases
 
+seq_comp: 
+1-11
+12-22
+acagctagctcacagctagctc
+
+*/
 		
 		
 

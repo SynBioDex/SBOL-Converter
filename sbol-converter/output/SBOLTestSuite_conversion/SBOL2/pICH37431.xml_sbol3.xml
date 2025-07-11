@@ -123,26 +123,6 @@
       </sbol:hasFeature>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH37431/annotation0">
-            <gbConv:label>AATG 4bp overhang</gbConv:label>
-            <gbConv:featureType>Misc._feature</gbConv:featureType>
-            <sbol:name>AATG 4bp overhang</sbol:name>
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH37431/annotation0/range">
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>14</sbol:end>
-                  <sbol:start>11</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH37431_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
-            <sbol:displayId>annotation0</sbol:displayId>
-         </sbol:SequenceFeature>
-      </sbol:hasFeature>
-      <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH37431/annotation11">
             <gbConv:label>pUC_seq F</gbConv:label>
             <gbConv:vntifkey>27</gbConv:vntifkey>
@@ -164,16 +144,15 @@
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH37431/annotation9">
-            <gbConv:label>kanseqf</gbConv:label>
-            <gbConv:vntifkey>27</gbConv:vntifkey>
-            <gbConv:featureType>Primer</gbConv:featureType>
-            <sbol:name>kanseqf</sbol:name>
+         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH37431/annotation0">
+            <gbConv:label>AATG 4bp overhang</gbConv:label>
+            <gbConv:featureType>Misc._feature</gbConv:featureType>
+            <sbol:name>AATG 4bp overhang</sbol:name>
             <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH37431/annotation9/range">
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH37431/annotation0/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>2494</sbol:end>
-                  <sbol:start>2475</sbol:start>
+                  <sbol:end>14</sbol:end>
+                  <sbol:start>11</sbol:start>
                   <sbol:hasSequence>
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH37431_seq"/>
                   </sbol:hasSequence>
@@ -181,7 +160,7 @@
                </sbol:Range>
             </sbol:hasLocation>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
-            <sbol:displayId>annotation9</sbol:displayId>
+            <sbol:displayId>annotation0</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
@@ -204,6 +183,27 @@
             </sbol:hasLocation>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
             <sbol:displayId>annotation12</sbol:displayId>
+         </sbol:SequenceFeature>
+      </sbol:hasFeature>
+      <sbol:hasFeature>
+         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH37431/annotation9">
+            <gbConv:label>kanseqf</gbConv:label>
+            <gbConv:vntifkey>27</gbConv:vntifkey>
+            <gbConv:featureType>Primer</gbConv:featureType>
+            <sbol:name>kanseqf</sbol:name>
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH37431/annotation9/range">
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>2494</sbol:end>
+                  <sbol:start>2475</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH37431_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
+            <sbol:displayId>annotation9</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>

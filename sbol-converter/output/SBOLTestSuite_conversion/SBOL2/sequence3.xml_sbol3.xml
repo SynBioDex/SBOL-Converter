@@ -257,18 +257,6 @@
             <gbConv:multiRangeType>join</gbConv:multiRangeType>
             <sbol:name>Mlp84B</sbol:name>
             <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF090832/annotation4/range0">
-                  <gbConv:position>position0</gbConv:position>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>1055</sbol:end>
-                  <sbol:start>1001</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/AF090832_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range0</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF090832/annotation4/range1">
                   <gbConv:position>position1</gbConv:position>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -278,6 +266,18 @@
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/AF090832_seq"/>
                   </sbol:hasSequence>
                   <sbol:displayId>range1</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF090832/annotation4/range0">
+                  <gbConv:position>position0</gbConv:position>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>1055</sbol:end>
+                  <sbol:start>1001</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/AF090832_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range0</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000204"/>

@@ -62,7 +62,7 @@ public class TestUtil {
 
 		System.out.println("Converted from SBOL2 to SBOL3:");
 		if (printToScreen){
-			System.out.println(SBOLIO.write(sbol3Doc, SBOLFormat.RDFXML));
+			System.out.println(SBOLIO.write(sbol3Doc, SBOLFormat.TURTLE));
 		}
 		if (outputFile != null) {			
 			SBOLIO.write(sbol3Doc, new File(outputFile + "_sbol3.xml"), SBOLFormat.RDFXML);

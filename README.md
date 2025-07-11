@@ -41,9 +41,12 @@ changed by the SBOL3 converter as
 * SBOL2 Files include incorrect resource URIs. The converter fixes them during the conversion.
     * simple_attachment_plan_ann.xml: Invalid SBOL2 annotation URI
     * singleModel.xml: Invalid SBOL2 model source
+    * attachment_ann.xml: Invalid SBOL2 source URI
+    * simple_attachment_ref.xml: Invalid SBOL2 source URI
 * Incorrect AminoAcid sequence, which includes the . character
     * CreateAndRemoveModel.xml
     * multipleSequences.xml
+    * singleCompDef_withSeq.xml
 
 
  

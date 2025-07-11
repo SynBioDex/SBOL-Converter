@@ -51,15 +51,15 @@
             <sbol:displayId>LacI_pLacI</sbol:displayId>
          </sbol:Interaction>
       </sbol:hasInteraction>
-      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/laci_inverter/TF"/>
+      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/laci_inverter/promoter"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbolstandard.org/example/laci_inverter/Interface1">
-            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/laci_inverter/TF"/>
             <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/laci_inverter/promoter"/>
+            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/laci_inverter/TF"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
-      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/laci_inverter/promoter"/>
+      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/laci_inverter/TF"/>
       <sbol:role rdf:resource="https://parts.igem.org/cgi/partsdb/pgroup.cgi?pgroup=inverter"/>
       <sbol:hasNamespace rdf:resource="http://sbolstandard.org/example"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
@@ -127,6 +127,23 @@
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/Interface1">
             <sbol:nondirectional>
+               <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040">
+                  <sbol:hasLocation>
+                     <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040/location3">
+                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                        <sbol:end>729</sbol:end>
+                        <sbol:start>69</sbol:start>
+                        <sbol:displayId>location3</sbol:displayId>
+                     </sbol:Range>
+                  </sbol:hasLocation>
+                  <sbol:instanceOf>
+                     <sbol:Component rdf:about="http://www.partsregistry.org/BBa_C0040"/>
+                  </sbol:instanceOf>
+                  <sbol:displayId>BBa_C0040</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:nondirectional>
+            <sbol:nondirectional rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_R0010"/>
+            <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/ECK120033736">
                   <sbol:hasLocation>
                      <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/ECK120033736/location6">
@@ -160,23 +177,6 @@
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040">
-                  <sbol:hasLocation>
-                     <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040/location3">
-                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                        <sbol:end>729</sbol:end>
-                        <sbol:start>69</sbol:start>
-                        <sbol:displayId>location3</sbol:displayId>
-                     </sbol:Range>
-                  </sbol:hasLocation>
-                  <sbol:instanceOf>
-                     <sbol:Component rdf:about="http://www.partsregistry.org/BBa_C0040"/>
-                  </sbol:instanceOf>
-                  <sbol:displayId>BBa_C0040</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_R0010"/>
-            <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_E0040">
                   <sbol:hasLocation>
                      <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_E0040/location5">
@@ -195,8 +195,8 @@
       </sbol:hasInterface>
       <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_E0040"/>
       <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120"/>
-      <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040"/>
       <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/ECK120033736"/>
+      <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040"/>
       <sbol:displayId>pIKERightCassette_1</sbol:displayId>
       <sbol:name>LacI Inverter</sbol:name>
    </sbol:Component>
@@ -247,7 +247,6 @@
             <sbol:displayId>ECK120029600</sbol:displayId>
          </sbol:SubComponent>
       </sbol:hasFeature>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:hasFeature>
          <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_C0012">
             <sbol:hasLocation>
@@ -264,6 +263,7 @@
             <sbol:displayId>BBa_C0012</sbol:displayId>
          </sbol:SubComponent>
       </sbol:hasFeature>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/Interface1">
             <sbol:nondirectional>
@@ -282,7 +282,6 @@
                   <sbol:displayId>BBa_R0040</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/ECK120029600"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_J61101">
                   <sbol:hasLocation>
@@ -298,6 +297,7 @@
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:nondirectional rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_C0012"/>
+            <sbol:nondirectional rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/ECK120029600"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -344,15 +344,15 @@
             <sbol:displayId>LacI_pLacI</sbol:displayId>
          </sbol:Interaction>
       </sbol:hasInteraction>
-      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/tetr_inverter/TF"/>
+      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/tetr_inverter/promoter"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbolstandard.org/example/tetr_inverter/Interface1">
-            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/tetr_inverter/TF"/>
             <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/tetr_inverter/promoter"/>
+            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/tetr_inverter/TF"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
-      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/tetr_inverter/promoter"/>
+      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/tetr_inverter/TF"/>
       <sbol:role rdf:resource="https://parts.igem.org/cgi/partsdb/pgroup.cgi?pgroup=inverter"/>
       <sbol:hasNamespace rdf:resource="http://sbolstandard.org/example"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
@@ -479,8 +479,8 @@
       <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/toggle_switch/tetr_inverter"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbolstandard.org/example/toggle_switch/Interface1">
-            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/toggle_switch/LacI"/>
             <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/toggle_switch/TetR"/>
+            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/toggle_switch/LacI"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>

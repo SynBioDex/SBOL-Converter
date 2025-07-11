@@ -24,6 +24,17 @@
                   <sbol:displayId>base_c1</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <sbol:sourceLocation>
+               <sbol:Range rdf:about="http://partsregistry.org/cd/cd_comp/base1/seq_base1">
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>14</sbol:end>
+                  <sbol:start>4</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://partsregistry.org/seq/seq_base1"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>seq_base1</sbol:displayId>
+               </sbol:Range>
+            </sbol:sourceLocation>
             <sbol:instanceOf>
                <sbol:Component rdf:about="http://partsregistry.org/cd/cd_base_1"/>
             </sbol:instanceOf>
@@ -46,6 +57,17 @@
                         <sbol:displayId>base_c2</sbol:displayId>
                      </sbol:Range>
                   </sbol:hasLocation>
+                  <sbol:sourceLocation>
+                     <sbol:Range rdf:about="http://partsregistry.org/cd/cd_comp/base2/seq_base2">
+                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                        <sbol:end>14</sbol:end>
+                        <sbol:start>4</sbol:start>
+                        <sbol:hasSequence>
+                           <sbol:Sequence rdf:about="http://partsregistry.org/seq/seq_base2"/>
+                        </sbol:hasSequence>
+                        <sbol:displayId>seq_base2</sbol:displayId>
+                     </sbol:Range>
+                  </sbol:sourceLocation>
                   <sbol:instanceOf>
                      <sbol:Component rdf:about="http://partsregistry.org/cd/cd_base_2"/>
                   </sbol:instanceOf>
