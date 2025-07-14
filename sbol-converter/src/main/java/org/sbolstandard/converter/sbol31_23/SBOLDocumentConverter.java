@@ -38,14 +38,10 @@ public class SBOLDocumentConverter {
 
 			
 			for (Component c : sbol3Doc.getComponents()) {
-				//System.out.println("Converting component: " + c.getDisplayId());
-				if (Util.isModuleDefinition(c)) 
-				{
-					System.out.println("Converting component: " + c.getDisplayId());
+				if (Util.isModuleDefinition(c)) {
 					comToModuleConverter.convert(sbol2Doc, c);
 				} 
-				else 
-				{
+				else {
 					comConverter.convert(sbol2Doc, c);
 				}
 			}

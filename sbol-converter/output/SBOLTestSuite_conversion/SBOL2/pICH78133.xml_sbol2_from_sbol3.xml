@@ -12,26 +12,6 @@
     <sbol:type rdf:resource="http://identifiers.org/so/SO:0000988"/>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000804"/>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICH78133/annotation7">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH78133/annotation7"/>
-        <sbol:displayId>annotation7</sbol:displayId>
-        <dcterms:title>chloroplast targeting signal</dcterms:title>
-        <gbConv:label>chloroplast targeting signal</gbConv:label>
-        <gbConv:vntifkey>95</gbConv:vntifkey>
-        <gbConv:featureType>Transit_peptide</gbConv:featureType>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH78133/annotation7/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH78133/annotation7/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2335</sbol:start>
-            <sbol:end>2510</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
       <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICH78133/annotation1">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH78133/annotation1"/>
         <sbol:displayId>annotation1</sbol:displayId>
@@ -51,19 +31,20 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICH78133/annotation0">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH78133/annotation0"/>
-        <sbol:displayId>annotation0</sbol:displayId>
-        <dcterms:title>AATG 4bp overhang</dcterms:title>
-        <gbConv:label>AATG 4bp overhang</gbConv:label>
-        <gbConv:featureType>Misc._feature</gbConv:featureType>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICH78133/annotation6">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH78133/annotation6"/>
+        <sbol:displayId>annotation6</sbol:displayId>
+        <dcterms:title>TMV omega</dcterms:title>
+        <gbConv:label>TMV omega</gbConv:label>
+        <gbConv:vntifkey>52</gbConv:vntifkey>
+        <gbConv:featureType>5'_UTR</gbConv:featureType>
         <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH78133/annotation0/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH78133/annotation0/range"/>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH78133/annotation6/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH78133/annotation6/range"/>
             <sbol:displayId>range</sbol:displayId>
-            <sbol:start>1</sbol:start>
-            <sbol:end>4</sbol:end>
+            <sbol:start>2252</sbol:start>
+            <sbol:end>2334</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
@@ -110,6 +91,25 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICH78133/annotation0">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH78133/annotation0"/>
+        <sbol:displayId>annotation0</sbol:displayId>
+        <dcterms:title>AATG 4bp overhang</dcterms:title>
+        <gbConv:label>AATG 4bp overhang</gbConv:label>
+        <gbConv:featureType>Misc._feature</gbConv:featureType>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH78133/annotation0/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH78133/annotation0/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>1</sbol:start>
+            <sbol:end>4</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
       <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICH78133/annotation5">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH78133/annotation5"/>
         <sbol:displayId>annotation5</sbol:displayId>
@@ -129,20 +129,20 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICH78133/annotation6">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH78133/annotation6"/>
-        <sbol:displayId>annotation6</sbol:displayId>
-        <dcterms:title>TMV omega</dcterms:title>
-        <gbConv:label>TMV omega</gbConv:label>
-        <gbConv:vntifkey>52</gbConv:vntifkey>
-        <gbConv:featureType>5'_UTR</gbConv:featureType>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICH78133/annotation7">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH78133/annotation7"/>
+        <sbol:displayId>annotation7</sbol:displayId>
+        <dcterms:title>chloroplast targeting signal</dcterms:title>
+        <gbConv:label>chloroplast targeting signal</gbConv:label>
+        <gbConv:vntifkey>95</gbConv:vntifkey>
+        <gbConv:featureType>Transit_peptide</gbConv:featureType>
         <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH78133/annotation6/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH78133/annotation6/range"/>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH78133/annotation7/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH78133/annotation7/range"/>
             <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2252</sbol:start>
-            <sbol:end>2334</sbol:end>
+            <sbol:start>2335</sbol:start>
+            <sbol:end>2510</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>

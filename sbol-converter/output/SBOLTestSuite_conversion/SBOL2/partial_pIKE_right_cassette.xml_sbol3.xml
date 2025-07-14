@@ -45,6 +45,7 @@
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://www.async.ece.utah.edu/Repressor1/Interface1">
+            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/Repressor1/RBS"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/Repressor1/BBa_C0040">
                   <prov:wasDerivedFrom rdf:resource="urn:d1e2df30-12bf-499a-85d2-95736ec9a183"/>
@@ -60,7 +61,6 @@
                   <sbol:displayId>BBa_C0040</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/Repressor1/RBS"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -216,24 +216,24 @@
             <sbol:displayId>Repressor1_cons_Reporter</sbol:displayId>
          </sbol:Constraint>
       </sbol:hasConstraint>
+      <sbol:hasFeature>
+         <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/pIKERightCasette/BBa_R0010">
+            <prov:wasDerivedFrom rdf:resource="urn:dd88ec76-734a-40eb-8594-a4e26aa7b595"/>
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pIKERightCasette/BBa_R0010/range">
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>200</sbol:end>
+                  <sbol:start>1</sbol:start>
+                  <sbol:displayId>range</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:instanceOf rdf:resource="http://www.async.ece.utah.edu/BBa_R0010"/>
+            <sbol:displayId>BBa_R0010</sbol:displayId>
+         </sbol:SubComponent>
+      </sbol:hasFeature>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://www.async.ece.utah.edu/pIKERightCasette/Interface1">
-            <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/pIKERightCasette/BBa_R0010">
-                  <prov:wasDerivedFrom rdf:resource="urn:dd88ec76-734a-40eb-8594-a4e26aa7b595"/>
-                  <sbol:hasLocation>
-                     <sbol:Range rdf:about="http://www.async.ece.utah.edu/pIKERightCasette/BBa_R0010/range">
-                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                        <sbol:end>200</sbol:end>
-                        <sbol:start>1</sbol:start>
-                        <sbol:displayId>range</sbol:displayId>
-                     </sbol:Range>
-                  </sbol:hasLocation>
-                  <sbol:instanceOf rdf:resource="http://www.async.ece.utah.edu/BBa_R0010"/>
-                  <sbol:displayId>BBa_R0010</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/pIKERightCasette/Repressor1"/>
+            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/pIKERightCasette/Reporter"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/pIKERightCasette/Terminator">
                   <prov:wasDerivedFrom rdf:resource="urn:663cb06c-ae84-4eb6-aca1-bd7c83ed32cb"/>
@@ -247,11 +247,11 @@
                   <sbol:displayId>Terminator</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/pIKERightCasette/Reporter"/>
+            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/pIKERightCasette/BBa_R0010"/>
+            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/pIKERightCasette/Repressor1"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
-      <sbol:hasFeature rdf:resource="http://www.async.ece.utah.edu/pIKERightCasette/BBa_R0010"/>
       <sbol:hasConstraint>
          <sbol:Constraint rdf:about="http://www.async.ece.utah.edu/pIKERightCasette/BBa_R0010_cons_Repressor1">
             <sbol:object rdf:resource="http://www.async.ece.utah.edu/pIKERightCasette/Repressor1"/>

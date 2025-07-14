@@ -66,6 +66,7 @@ public class TestUtil {
 		}
 		if (outputFile != null) {			
 			SBOLIO.write(sbol3Doc, new File(outputFile + "_sbol3.xml"), SBOLFormat.RDFXML);
+			SBOLIO.write(sbol3Doc, new File(outputFile + "_sbol3.ttl"), SBOLFormat.RDFXML);			
 		}
 		
 		org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter converter3_2 = new org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter();

@@ -7,6 +7,7 @@ import java.util.List;
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.core2.AccessType;
 import org.sbolstandard.core2.FunctionalComponent;
+import org.sbolstandard.core2.Model;
 import org.sbolstandard.core2.ModuleDefinition;
 import org.sbolstandard.core2.Participation;
 import org.sbolstandard.core2.SBOLValidationException;
@@ -54,6 +55,11 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 			moduleToSubComponentConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2Module, parameters);
 		}
 		
+		if (sbol2ModuleDefinition.getModels()!=null){
+			for (Model model: sbol2ModuleDefinition.getModels()) {
+				sbol3Component.addModel(Util.createSBOL3Uri(model));
+			}	
+		}
 		return sbol3Component;
 	}
 	

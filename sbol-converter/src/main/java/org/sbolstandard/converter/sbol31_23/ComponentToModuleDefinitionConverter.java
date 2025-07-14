@@ -26,7 +26,7 @@ public class ComponentToModuleDefinitionConverter implements EntityConverter<Com
 
 		if (component.getSubComponents()!=null){
 			for (SubComponent subComponent : component.getSubComponents()) {
-				if(subComponent.getInstanceOf()!= null && subComponent.getInstanceOf().getInteractions() != null){
+				if (Util.isModuleDefinition(subComponent.getInstanceOf())){
 					subCompToModuleConverter.convert(sbol2Doc, moduleDef, component, subComponent);
 				}
 				else{
@@ -42,8 +42,24 @@ public class ComponentToModuleDefinitionConverter implements EntityConverter<Com
 				interactionConverter.convert(sbol2Doc, moduleDef, component, interaction);
 			}
 		}
+
+		if (component.getModels()!=null){
+			for (org.sbolstandard.core3.entity.Model model : component.getModels()) {
+				moduleDef.addModel(Util.createSBOL2Uri(model));
+			}
+		}
 		
 		return moduleDef;
 	}
 
+	private boolean isModule(SubComponent subComponent) throws SBOLGraphException {
+		if(subComponent.getInstanceOf()!= null && subComponent.getInstanceOf().getInteractions() != null){
+			return true;
+		}
+		else if (Util.isModuleDefinition(subComponent.getInstanceOf()))
+		{
+			return true;
+		}
+		return false;
+	}
 }

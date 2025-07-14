@@ -10,15 +10,13 @@
     <sbol:displayId>someModuleDef</sbol:displayId>
     <sbol:version>1.0</sbol:version>
     <annot:thisAnnotation>turtleString</annot:thisAnnotation>
-    <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="http://www.async.ece.utah.edu/someModuleDef/someModule/1.0">
+    <sbol:module>
+      <sbol:Module rdf:about="http://www.async.ece.utah.edu/someModuleDef/someModule/1.0">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/someModuleDef/someModule"/>
         <sbol:displayId>someModule</sbol:displayId>
         <sbol:version>1.0</sbol:version>
         <sbol:definition rdf:resource="http://www.async.ece.utah.edu/someModuleDefSub/1.0"/>
-        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
-        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
-      </sbol:FunctionalComponent>
-    </sbol:functionalComponent>
+      </sbol:Module>
+    </sbol:module>
   </sbol:ModuleDefinition>
 </rdf:RDF>

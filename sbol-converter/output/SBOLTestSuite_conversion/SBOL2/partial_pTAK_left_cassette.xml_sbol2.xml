@@ -27,6 +27,16 @@
     <sbol:type rdf:resource="http://identifiers.org/so/SO:0000987"/>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000141"/>
   </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="http://www.async.ece.utah.edu/BBa_K121014">
+    <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/BBa_K121014"/>
+    <sbol:displayId>BBa_K121014</sbol:displayId>
+    <prov:wasDerivedFrom rdf:resource="http://partsregistry.org/part/BBa_K121014"/>
+    <dcterms:description>promoter (lambda cI regulated)</dcterms:description>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:type rdf:resource="http://identifiers.org/so/SO:0000987"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
+    <sbol:sequence rdf:resource="http://www.async.ece.utah.edu/partseq_12077"/>
+  </sbol:ComponentDefinition>
   <sbol:ComponentDefinition rdf:about="http://www.async.ece.utah.edu/Repressor2">
     <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Repressor2"/>
     <sbol:displayId>Repressor2</sbol:displayId>
@@ -35,19 +45,19 @@
     <sbol:type rdf:resource="http://identifiers.org/so/SO:0000987"/>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
     <sbol:component>
-      <sbol:Component rdf:about="http://www.async.ece.utah.edu/Repressor2/BBa_C0012">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Repressor2/BBa_C0012"/>
-        <sbol:displayId>BBa_C0012</sbol:displayId>
-        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="http://www.async.ece.utah.edu/BBa_C0012"/>
-      </sbol:Component>
-    </sbol:component>
-    <sbol:component>
       <sbol:Component rdf:about="http://www.async.ece.utah.edu/Repressor2/RBS">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Repressor2/RBS"/>
         <sbol:displayId>RBS</sbol:displayId>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
         <sbol:definition rdf:resource="http://www.async.ece.utah.edu/RBS"/>
+      </sbol:Component>
+    </sbol:component>
+    <sbol:component>
+      <sbol:Component rdf:about="http://www.async.ece.utah.edu/Repressor2/BBa_C0012">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Repressor2/BBa_C0012"/>
+        <sbol:displayId>BBa_C0012</sbol:displayId>
+        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
+        <sbol:definition rdf:resource="http://www.async.ece.utah.edu/BBa_C0012"/>
       </sbol:Component>
     </sbol:component>
     <sbol:sequenceAnnotation>
@@ -99,11 +109,11 @@
     <sbol:type rdf:resource="http://identifiers.org/so/SO:0000987"/>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
     <sbol:component>
-      <sbol:Component rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2"/>
-        <sbol:displayId>Repressor2</sbol:displayId>
+      <sbol:Component rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/Terminator">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/Terminator"/>
+        <sbol:displayId>Terminator</sbol:displayId>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="http://www.async.ece.utah.edu/Repressor2"/>
+        <sbol:definition rdf:resource="http://www.async.ece.utah.edu/Terminator"/>
       </sbol:Component>
     </sbol:component>
     <sbol:component>
@@ -115,11 +125,11 @@
       </sbol:Component>
     </sbol:component>
     <sbol:component>
-      <sbol:Component rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/Terminator">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/Terminator"/>
-        <sbol:displayId>Terminator</sbol:displayId>
+      <sbol:Component rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2"/>
+        <sbol:displayId>Repressor2</sbol:displayId>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="http://www.async.ece.utah.edu/Terminator"/>
+        <sbol:definition rdf:resource="http://www.async.ece.utah.edu/Repressor2"/>
       </sbol:Component>
     </sbol:component>
     <sbol:sequenceAnnotation>
@@ -187,16 +197,6 @@
         <sbol:object rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2"/>
       </sbol:SequenceConstraint>
     </sbol:sequenceConstraint>
-  </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="http://www.async.ece.utah.edu/BBa_K121014">
-    <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/BBa_K121014"/>
-    <sbol:displayId>BBa_K121014</sbol:displayId>
-    <prov:wasDerivedFrom rdf:resource="http://partsregistry.org/part/BBa_K121014"/>
-    <dcterms:description>promoter (lambda cI regulated)</dcterms:description>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
-    <sbol:type rdf:resource="http://identifiers.org/so/SO:0000987"/>
-    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
-    <sbol:sequence rdf:resource="http://www.async.ece.utah.edu/partseq_12077"/>
   </sbol:ComponentDefinition>
   <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/partseq_153">
     <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/partseq_153"/>

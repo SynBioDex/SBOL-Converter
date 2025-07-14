@@ -21,7 +21,12 @@ public class TempTest {
 		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/CreateAndRemoveModel.xml"));
 		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/AnnotationOutput.xml"));
 		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/singleModuleDefinition.xml"));
-		List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/test_source_location.xml"));
+		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/test_source_location.xml"));
+		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/ModuleDefinitionOutput.xml"), false,null,true);
+		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/memberAnnotations_interaction.xml"));
+		List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/sequence4.xml"));
+		
+	
 		
 /*
 cd_comp

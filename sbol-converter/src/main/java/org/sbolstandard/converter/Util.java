@@ -36,6 +36,7 @@ import org.sbolstandard.core3.util.URINameSpace.SONameSpace;
 import org.sbolstandard.core3.vocabulary.ComponentType;
 import org.sbolstandard.core3.vocabulary.DataModel;
 import org.sbolstandard.core3.vocabulary.Encoding;
+import org.sbolstandard.core3.vocabulary.Role;
 import org.sbolstandard.core3.vocabulary.RestrictionType.ConstraintRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.OrientationRestriction;
@@ -271,31 +272,7 @@ public class Util {
 		return URI.create(sbol3Uri);
 	}
 
-	public static URI createSBOL3Uri(URI inputUri, Parameters parameters) throws SBOLGraphException {
-		Model rdfModel = parameters.getRdfModel();
-		inputUri=getLatestUri(inputUri, rdfModel);
-		String sbol3Uri = "";
-		sbol3Uri = Util.extractURIPrefixSBOL2Uri(inputUri.toString());
-		String version = extractVersionSBOL2Uri(inputUri.toString());
-		String displayId = extractDisplayIdSBOL2Uri(inputUri.toString());
-		if (version != null && !version.equals("")) {
-			sbol3Uri += "/" + version;
-		}
-		if (displayId != null && !displayId.equals("")) {
-			sbol3Uri += "/" + displayId;
-		}
-
-		if (sbol3Uri == null){
-			String inputUriString = inputUri.toString();
-			if (!inputUriString.toLowerCase().startsWith("urn") && !inputUriString.contains("://")){				
-				return SBOLAPI.append("https://sbolstandard.org/SBOL3-Converter", inputUriString);
-			}
-			else{
-				return URI.create(inputUri.toString());
-			}
-		}
-		return URI.create(sbol3Uri);
-	}
+	
 
 	private static URI getLatestUri(URI inputUri, Model rdfModel) {
 		Property persistentIdentity= rdfModel.getProperty("http://sbols.org/v2#persistentIdentity");
@@ -331,6 +308,33 @@ public class Util {
 		
 		return inputUri;		
 	}
+
+	public static URI createSBOL3Uri(URI inputUri, Parameters parameters) throws SBOLGraphException {
+		Model rdfModel = parameters.getRdfModel();
+		inputUri=getLatestUri(inputUri, rdfModel);
+		String sbol3Uri = "";
+		sbol3Uri = Util.extractURIPrefixSBOL2Uri(inputUri.toString());
+		String version = extractVersionSBOL2Uri(inputUri.toString());
+		String displayId = extractDisplayIdSBOL2Uri(inputUri.toString());
+		if (version != null && !version.equals("")) {
+			sbol3Uri += "/" + version;
+		}
+		if (displayId != null && !displayId.equals("")) {
+			sbol3Uri += "/" + displayId;
+		}
+
+		if (sbol3Uri == null){
+			String inputUriString = inputUri.toString();
+			if (!inputUriString.toLowerCase().startsWith("urn") && !inputUriString.contains("://")){				
+				return SBOLAPI.append("https://sbolstandard.org/SBOL3-Converter", inputUriString);
+			}
+			else{
+				return URI.create(inputUri.toString());
+			}
+		}
+		return URI.create(sbol3Uri);
+	}
+
 
 	public static URI createSBOL3Uri(org.sbolstandard.core2.Identified input) {
 		String sbol3Uri = "";
@@ -1045,9 +1049,9 @@ public class Util {
 		}
 	}
 	public static boolean isModuleDefinition(Component component) throws SBOLGraphException {
-		if(component.getInteractions() != null && !component.getInteractions().isEmpty()) {
-			return true;
-		} else if (component.getTypes().contains(URI.create("https://identifiers.org/SBO:0000241"))) {
+		if(component!=null && component.getInteractions() != null && !component.getInteractions().isEmpty()) {
+			return true;			
+		} else if (component!=null && component.getTypes().contains(ComponentType.FunctionalEntity.getUri())) {
 			return true;
 		}
 		return false;
