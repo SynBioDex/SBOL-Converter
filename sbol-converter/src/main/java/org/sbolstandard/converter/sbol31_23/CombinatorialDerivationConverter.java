@@ -19,7 +19,7 @@ public class CombinatorialDerivationConverter implements EntityConverter<Combina
     @Override
 	public org.sbolstandard.core2.CombinatorialDerivation convert(SBOLDocument doc, CombinatorialDerivation input) throws SBOLGraphException, SBOLValidationException {
 		org.sbolstandard.core2.CombinatorialDerivation cd = doc.createCombinatorialDerivation(Util.getURIPrefix(input),	input.getDisplayId(), Util.getVersion(input), Util.createSBOL2Uri(input.getTemplate()));
-		Util.copyIdentified(input, cd);
+		Util.copyIdentified(input, cd, doc);
 		if (input.getStrategy() != null) {
 			cd.setStrategy(convertStrategy31_23(input.getStrategy()));
 		}

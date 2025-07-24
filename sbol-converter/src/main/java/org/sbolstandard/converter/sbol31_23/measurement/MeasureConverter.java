@@ -25,7 +25,7 @@ public class MeasureConverter implements ChildEntityConverter<Measure, org.sbols
 				measure = sbol2ParentMeasured.createMeasure(sbol3Measure.getDisplayId(),valueDouble, sbol3Measure.getUnit().getUri());
 			}
 			if (measure!=null){
-				Util.copyIdentified(sbol3Measure, measure);
+				Util.copyIdentified(sbol3Measure, measure, doc);
 			}
 		}
 		return measure;

@@ -9,7 +9,7 @@ import org.sbolstandard.core2.OperatorType;
 import org.sbolstandard.core2.StrategyType;
 import org.sbolstandard.core2.VariableComponent;
 import org.sbolstandard.core3.entity.CombinatorialDerivation;
-import org.sbolstandard.core3.entity.Feature;
+import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.VariableFeature;
 import org.sbolstandard.core3.util.SBOLGraphException;
@@ -20,7 +20,10 @@ public class CombinatorialDerivationConverter implements EntityConverter<org.sbo
 
     @Override
     public CombinatorialDerivation convert(SBOLDocument doc, org.sbolstandard.core2.CombinatorialDerivation input, Parameters parameters) throws SBOLGraphException { 
-    	CombinatorialDerivation cd = doc.createCombinatorialDerivation(Util.createSBOL3Uri(input), Util.getNamespace(input), null ); //TODO: need method with URI instead of Component
+    	URI sbol3TemplateURI=Util.createSBOL3Uri(input.getTemplateIdentity(), parameters);
+		Component sbol3TemplateComponent= doc.getIdentified(sbol3TemplateURI, Component.class);
+		CombinatorialDerivation cd = doc.createCombinatorialDerivation(Util.createSBOL3Uri(input), Util.getNamespace(input), sbol3TemplateComponent);
+		
 		Util.copyIdentified(input, cd);
 		if (input.isSetStrategy()) {
 			cd.setStrategy(convertStrategy23_31(input.getStrategy()));

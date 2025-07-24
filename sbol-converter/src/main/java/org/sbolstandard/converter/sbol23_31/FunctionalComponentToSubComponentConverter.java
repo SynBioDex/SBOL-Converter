@@ -5,6 +5,7 @@ import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.SubComponent;
+import org.sbolstandard.core3.util.RDFUtil;
 import org.sbolstandard.core3.util.SBOLGraphException;
 
 import java.net.URI;
@@ -24,21 +25,26 @@ public class FunctionalComponentToSubComponentConverter
 
 		Component sbol3ParentComponent = (Component) sbol3Parent;
 		
-		URI sbol3ChildComponentURI = Util.createSBOL3Uri(sbol2FunctionalComponent.getDefinition().getIdentity());
+		URI sbol3ChildComponentURI = Util.createSBOL3Uri(sbol2FunctionalComponent.getDefinition().getIdentity(), parameters);
 		Component sbol3ChildComponent = document.getIdentified(sbol3ChildComponentURI, Component.class);
 		if (sbol3ChildComponent == null) {
 			throw new SBOLGraphException("Could not find Component for FunctionalComponent: "
 					+ sbol2FunctionalComponent.getDefinition().getIdentity());
 		}
 
-		if (sbol2FunctionalComponent.getDisplayId() != null) {
-			sbol3SubComponent = sbol3ParentComponent.createSubComponent(sbol2FunctionalComponent.getDisplayId(), sbol3ChildComponent);
-		}
-		else{
-			sbol3SubComponent = sbol3ParentComponent.createSubComponent(sbol3ChildComponent);
+		try{
+			if (sbol2FunctionalComponent.getDisplayId() != null) {
+				sbol3SubComponent = sbol3ParentComponent.createSubComponent(sbol2FunctionalComponent.getDisplayId(), sbol3ChildComponent);
+			}
+			else{
+				sbol3SubComponent = sbol3ParentComponent.createSubComponent(sbol3ChildComponent);			
+			}
 			parameters.addMapping(sbol2FunctionalComponent.getIdentity(), sbol3SubComponent.getUri());
 		}
-		
+		catch (Exception e) {
+			throw new SBOLGraphException("Error creating SubComponent for FunctionalComponent: " + sbol2FunctionalComponent.getIdentity(), e);
+		}
+
 		Util.copyIdentified(sbol2FunctionalComponent, sbol3SubComponent);
 
 		

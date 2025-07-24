@@ -1,7 +1,5 @@
 package org.sbolstandard.converter.sbol23_31;
 
-
-
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,39 +15,31 @@ import org.sbolstandard.core3.util.SBOLGraphException;
 
 public class ComponentDefinitionConverter implements EntityConverter<ComponentDefinition, Component> {
 
-
     @Override
     public Component convert(SBOLDocument doc, ComponentDefinition input, Parameters parameters) throws SBOLGraphException, SBOLValidationException { 
-    	//System.out.println("Component:"+Util.createSBOL3Uri(input));
-    	// TODO: there are duplicates in the list
-    	if (doc.getComponents()!=null) {
+    	
+		if (doc.getComponents()!=null) {
     		for (Component c : doc.getComponents()) {
-    			//System.out.println("Check:"+c.getUri());
     			if (c.getUri().toString().equals(Util.createSBOL3Uri(input).toString())) {
     				return null;
     			}
     		}
     	}
     	    	
-    	Component comp = doc.createComponent(Util.createSBOL3Uri(input),
-    			Util.getNamespace(input),
-    			Util.toSBOL3ComponentDefinitionTypes(Util.toList(input.getTypes())));
-    	    	
+    	Component comp = doc.createComponent(Util.createSBOL3Uri(input), Util.getNamespace(input), Util.toSBOL3ComponentDefinitionTypes(Util.toList(input.getTypes())));    	    	
         Util.copyIdentified(input, comp);
-        comp.setRoles(Util.convertRoles2_to_3(input.getRoles()));
+        comp.setRoles(Util.convertSORoles2_to_3(input.getRoles()));
         
         if (input.getSequenceURIs()!= null && input.getSequenceURIs().size() > 0) {
         	List<org.sbolstandard.core3.entity.Sequence> sequences= new ArrayList<>();
-        	for (URI uri:input.getSequenceURIs())
-        	{
-        		URI sbol3URI=Util.createSBOL3Uri(uri);
+        	for (URI uri:input.getSequenceURIs()){
+        		URI sbol3URI=Util.createSBOL3Uri(uri, parameters);
         		org.sbolstandard.core3.entity.Sequence sbol3Seq=doc.getIdentified(sbol3URI, org.sbolstandard.core3.entity.Sequence.class);
         		sequences.add(sbol3Seq);        		
         	}
         	comp.setSequences(sequences);        	 
         }
-       
-        
+               
         ComponentConverter converter = new ComponentConverter();        
         for (org.sbolstandard.core2.Component c : input.getComponents()) {
         	converter.convert(doc, comp, input, c, parameters);
@@ -61,16 +51,15 @@ public class ComponentDefinitionConverter implements EntityConverter<ComponentDe
         		SequenceAnnotationToSubComponentConverter satoscConverter = new SequenceAnnotationToSubComponentConverter();
         		satoscConverter.convert(doc, comp, input, sa, parameters);
         		
-        	} else {
+        	} 
+			else {
     			// If the SequenceAnnotation is not a subComponent, convert it to a Feature
         		SequenceAnnotationToFeatureConverter satosfConverter = new SequenceAnnotationToFeatureConverter();
         		satosfConverter.convert(doc, comp, input,sa, parameters);
-        
         	}
         }
         
         SequenceConstraintConverter seqconstConverter = new SequenceConstraintConverter();
-        
         for (SequenceConstraint sc : input.getSequenceConstraints()) {
         	seqconstConverter.convert(doc, comp, input, sc, parameters);
         }

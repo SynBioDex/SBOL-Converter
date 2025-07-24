@@ -6,15 +6,20 @@
 
 	<groupId>org.sbolstandard</groupId>
 	<artifactId>sbol-converter</artifactId>
-	<version>1.0-SNAPSHOT</version>
-
+	<version>1.0.1-SNAPSHOT</version>
 	<name>sbol-converter</name>
-	<!-- FIXME change it to the project's website -->
-	<url>http://www.example.com</url>
-
+	<url>https://github.com/SynBioDex/SBOL-Converter</url>
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/SynBioDex/SBOL-Converter/issues</url>
+	</issueManagement>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.release>23</maven.compiler.release>
+		<!--<maven.compiler.release>23</maven.compiler.release>-->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>16</maven.compiler.source>
+		<maven.compiler.target>16</maven.compiler.target>
+		<java.version>16</java.version>
 	</properties>
 
 	<dependencyManagement>
@@ -35,7 +40,6 @@
 			<artifactId>junit-jupiter</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- Optionally: parameterized tests support -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-params</artifactId>
@@ -44,10 +48,9 @@
 		<dependency>
 			<groupId>org.sbolstandard</groupId>
 			<artifactId>libSBOLj3</artifactId>
-			<version>1.0.2-SNAPSHOT</version>
+			<version>1.0.3-SNAPSHOT</version>
 		</dependency>
-
-		<dependency>
+		<!--<dependency>
 			<groupId>org.apache.jena</groupId>
 			<artifactId>jena-base</artifactId>
 			<version>5.4.0</version>
@@ -57,7 +60,6 @@
 			<artifactId>jena-core</artifactId>
 			<version>5.4.0</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.jena/jena -->
 		<dependency>
 			<groupId>org.apache.jena</groupId>
 			<artifactId>jena</artifactId>
@@ -69,14 +71,11 @@
 			<artifactId>jena-arq</artifactId>
 			<version>5.4.0</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>2.19.0</version>
 		</dependency>
-		<!--
-		https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-collections4</artifactId>
@@ -87,9 +86,6 @@
 			<artifactId>jakarta.validation-api</artifactId>
 			<version>3.0.2</version>
 		</dependency>
-		<!-- <dependency> <groupId>org.glassfish</groupId>
-		<artifactId>jakarta.el</artifactId> 
-			<version>4.0.1</version> </dependency> -->
 		<dependency>
 			<groupId>org.glassfish.expressly</groupId>
 			<artifactId>expressly</artifactId>
@@ -99,13 +95,12 @@
 			<groupId>org.hibernate.validator</groupId>
 			<artifactId>hibernate-validator-cdi</artifactId>
 			<version>8.0.0.Final</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.sbolstandard/libSBOLj -->
+		</dependency>-->
 		<dependency>
 			<groupId>org.sbolstandard</groupId>
 			<artifactId>libSBOLj</artifactId>
 			<version>2.4.1-SNAPSHOT</version>
-			<exclusions>
+			<!--<exclusions>
 				<exclusion>
 					<groupId>javax.xml.bind</groupId>
 					<artifactId>jaxb-api</artifactId>
@@ -122,22 +117,17 @@
 					<groupId>javax.xml</groupId>
 					<artifactId>jaxb-api</artifactId>
 				</exclusion>
-			</exclusions>
+			</exclusions>-->
 		</dependency>
 	</dependencies>
 
 	<build>
-		<pluginManagement><!-- lock down plugins versions to avoid using Maven
-			defaults (may be moved to parent pom) -->
+		<pluginManagement>
 			<plugins>
-				<!-- clean lifecycle, see
-				https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
 				<plugin>
 					<artifactId>maven-clean-plugin</artifactId>
 					<version>3.4.0</version>
 				</plugin>
-				<!-- default lifecycle, jar packaging: see
-				https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
 				<plugin>
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>3.3.1</version>
@@ -145,9 +135,9 @@
 				<plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.13.0</version>
-					      <configuration>
+					<!--<configuration>
 				        <release>23</release>
-				      </configuration>
+				      </configuration>-->
 				</plugin>
 				<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
@@ -165,8 +155,6 @@
 					<artifactId>maven-deploy-plugin</artifactId>
 					<version>3.1.2</version>
 				</plugin>
-				<!-- site lifecycle, see
-				https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
 				<plugin>
 					<artifactId>maven-site-plugin</artifactId>
 					<version>3.12.1</version>
@@ -189,4 +177,5 @@
 			</snapshots>
 		</repository>
 	</repositories>
+
 </project>

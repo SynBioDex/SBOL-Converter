@@ -1,5 +1,7 @@
 package org.sbolstandard.converter.sbol31_23;
 
+import javax.sound.midi.Sequence;
+
 //import java.net.URI;
 
 import org.sbolstandard.converter.Util;
@@ -32,65 +34,64 @@ public class SubComponentToAnnotationConverter implements ChildEntityConverter<S
 
 		// This will hold the SBOL2 SequenceAnnotation that we are constructing
 		SequenceAnnotation sbol2SeqAnno = null;
+		
+		// Iterate over each Location
+		if (sbol3SubComponent.getLocations()!=null)
+		{
+			for (Location loc : sbol3SubComponent.getLocations()) {
 
-		// Iterate over each Location in the SequenceFeature
-		for (Location loc : sbol3SubComponent.getLocations()) {
-
-			// Get the orientation and convert to SBOL2 OrientationType
-			Orientation orientation = loc.getOrientation();
-			OrientationType orientationType = null;
-			if (orientation != null) {
-				orientationType = Util.toSBOL2OrientationType(orientation);
-			}
-
-			org.sbolstandard.core2.Location newLoc = null;
-
-			// Handle Range location (with start and end coordinates)
-			if (loc instanceof Range) {
-				Range range = (Range) loc;
-				if (sbol2SeqAnno == null) {
-					// If this is the first location, create a new SequenceAnnotation with this
-					// Range
-					sbol2SeqAnno = parentCompDef.createSequenceAnnotation(sbol3SubComponent.getDisplayId() + "_" + loc.getDisplayId(),
-							loc.getDisplayId(), range.getStart().get(), range.getEnd().get(), orientationType);
-					newLoc = sbol2SeqAnno.getLocation(loc.getDisplayId());
-				} else {
-					// If SequenceAnnotation exists, add an additional Range to it
-					newLoc = sbol2SeqAnno.addRange(sbol3SubComponent.getDisplayId(), range.getStart().get(),
-							range.getEnd().get(), orientationType);
+				// Get the orientation and convert to SBOL2 OrientationType
+				Orientation orientation = loc.getOrientation();
+				OrientationType orientationType = null;
+				if (orientation != null) {
+					orientationType = Util.toSBOL2OrientationType(orientation);
 				}
-			}
-			// Handle Cut location (single position)
-			else if (loc instanceof Cut) {
-				Cut cut = (Cut) loc;
-				if (sbol2SeqAnno == null) {
-					// Create a new SequenceAnnotation with this Cut
-					sbol2SeqAnno = parentCompDef.createSequenceAnnotation(sbol3SubComponent.getDisplayId(),
-							loc.getDisplayId(), cut.getAt().get(), orientationType);
-					newLoc = sbol2SeqAnno.getLocation(loc.getDisplayId());
-				} else {
-					// Add an additional Cut to existing SequenceAnnotation
-					newLoc = sbol2SeqAnno.addCut(sbol3SubComponent.getDisplayId(), cut.getAt().get(), orientationType);
-				}
-			}
-			// Handle EntireSequence location (refers to the whole sequence)
-			else if (loc instanceof EntireSequence) {
-				if (sbol2SeqAnno == null) {
-					// Create SequenceAnnotation referring to entire sequence
-					sbol2SeqAnno = parentCompDef.createSequenceAnnotation(sbol3SubComponent.getDisplayId(),
-							loc.getDisplayId(), orientationType);
-					newLoc = sbol2SeqAnno.getLocation(loc.getDisplayId());
-				} else {
-					// Add a generic location for entire sequence
-					newLoc = sbol2SeqAnno.addGenericLocation(sbol3SubComponent.getDisplayId(), orientationType);
-				}
-			}
 
-			if (sbol2SeqAnno != null) {
-				// Copy location metadata and properties from SBOL3 Location to SBOL2 Location
-				Util.copyIdentified(loc, newLoc);
+				org.sbolstandard.core2.Location newLoc = null;
+
+				// Handle Range location (with start and end coordinates)
+				if (loc instanceof Range) {
+					Range range = (Range) loc;
+					if (sbol2SeqAnno == null) {
+						// If this is the first location, create a new SequenceAnnotation with this Range
+						sbol2SeqAnno = parentCompDef.createSequenceAnnotation(getSequenceAnnotationId(sbol3SubComponent, loc), loc.getDisplayId(), range.getStart().get(), range.getEnd().get(), orientationType);
+						newLoc = sbol2SeqAnno.getLocation(loc.getDisplayId());
+					} else {
+						// If SequenceAnnotation exists, add an additional Range to it
+						newLoc = sbol2SeqAnno.addRange(loc.getDisplayId(), range.getStart().get(),range.getEnd().get(), orientationType);
+					}
+				}
+				// Handle Cut location (single position)
+				else if (loc instanceof Cut) {
+					Cut cut = (Cut) loc;
+					if (sbol2SeqAnno == null) {
+						// Create a new SequenceAnnotation with this Cut
+						sbol2SeqAnno = parentCompDef.createSequenceAnnotation(getSequenceAnnotationId(sbol3SubComponent, loc), loc.getDisplayId(), cut.getAt().get(), orientationType);
+						newLoc = sbol2SeqAnno.getLocation(loc.getDisplayId());
+					} else {
+						// Add an additional Cut to existing SequenceAnnotation
+						newLoc = sbol2SeqAnno.addCut(loc.getDisplayId(), cut.getAt().get(), orientationType);
+					}
+				}
+				// Handle EntireSequence location (refers to the whole sequence)
+				else if (loc instanceof EntireSequence) {
+					if (sbol2SeqAnno == null) {
+						// Create SequenceAnnotation referring to entire sequence
+						sbol2SeqAnno = parentCompDef.createSequenceAnnotation(getSequenceAnnotationId(sbol3SubComponent, loc), loc.getDisplayId(), orientationType);
+						newLoc = sbol2SeqAnno.getLocation(loc.getDisplayId());
+					} else {
+						// Add a generic location for entire sequence
+						newLoc = sbol2SeqAnno.addGenericLocation(loc.getDisplayId(), orientationType);
+					}
+				}
+
+				if (sbol2SeqAnno != null) {
+					// Copy location metadata and properties from SBOL3 Location to SBOL2 Location
+					Util.copyIdentified(loc, newLoc, doc);
+				}
 			}
 		}
+		
 
 		// If no valid locations were found, throw an exception
 		if (sbol2SeqAnno == null) {
@@ -104,8 +105,14 @@ public class SubComponentToAnnotationConverter implements ChildEntityConverter<S
 		}
 
 		// Copy general Identified properties (like displayId, version, etc.)
-		Util.copyIdentified(sbol3SubComponent, sbol2SeqAnno);
+		Util.copyIdentified(sbol3SubComponent, sbol2SeqAnno, doc);
 
 		return sbol2SeqAnno;
+	}
+
+	private String getSequenceAnnotationId(SubComponent sbol3SubComponent, Location location) throws SBOLGraphException {
+		// Generate a unique ID for the SequenceAnnotation based on the SubComponent
+		return sbol3SubComponent.getDisplayId() + "_" + location.getDisplayId();
+	
 	}
 }

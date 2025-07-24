@@ -74,7 +74,7 @@ public class SubComponentToFunctionalComponentConverter
 
 		// Copy metadata (displayId, name, description, etc.) from SBOL3 SubComponent to
 		// SBOL2 FunctionalComponent
-		Util.copyIdentified(sbol3SubComponent, sbol2FuncComp);
+		Util.copyIdentified(sbol3SubComponent, sbol2FuncComp, document);
 
 		// Return the new FunctionalComponent
 		return sbol2FuncComp;

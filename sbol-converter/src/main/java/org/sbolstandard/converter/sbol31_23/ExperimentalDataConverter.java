@@ -11,7 +11,7 @@ public class ExperimentalDataConverter implements EntityConverter<ExperimentalDa
     @Override
     public org.sbolstandard.core2.ExperimentalData convert(SBOLDocument doc, ExperimentalData input) throws SBOLGraphException, SBOLValidationException {    	
     	org.sbolstandard.core2.ExperimentalData exp = doc.createExperimentalData(Util.getURIPrefix(input), input.getDisplayId(), Util.getVersion(input));
-		Util.copyIdentified(input, exp);	
+		Util.copyIdentified(input, exp, doc);	
 		return exp;
 	}
 }

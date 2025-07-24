@@ -18,10 +18,8 @@ public class SubComponentToComponentConverter implements ChildEntityConverter<Su
 		ComponentDefinition sbol2CD = (ComponentDefinition) parent;
 		org.sbolstandard.core2.Component sbol2Comp=sbol2CD.createComponent(input.getDisplayId(), AccessType.PUBLIC, Util.createSBOL2Uri(input.getInstanceOf().getUri()));
 		
-		// IF IT IS IN A PARTICIPATION, THEN IT IS A FUNCTIONAL COMPONENT
-		
-		
-		Util.copyIdentified(input, sbol2Comp);
+		sbol2Comp.setRoles(Util.convertSORoles3_to_2(input.getRoles()));
+		Util.copyIdentified(input, sbol2Comp, document);
         return sbol2Comp;	
 	}
 }

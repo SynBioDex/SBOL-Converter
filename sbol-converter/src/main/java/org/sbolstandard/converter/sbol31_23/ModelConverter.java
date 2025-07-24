@@ -14,7 +14,7 @@ public class ModelConverter implements EntityConverter<Model, org.sbolstandard.c
     	// TODO: need to convert framework/language URIs
 		mod = doc.createModel(Util.getURIPrefix(input),input.getDisplayId(),Util.getVersion(input),
 				input.getSource(), Util.getSBOL2ModelLanguage(input.getLanguage()), Util.getSBOL2ModelFramework(input.getFramework()));
-    	Util.copyIdentified(input, mod);
+    	Util.copyIdentified(input, mod, doc);
         return mod;
     }
 }

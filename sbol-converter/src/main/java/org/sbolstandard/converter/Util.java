@@ -12,6 +12,11 @@ import javax.xml.namespace.QName;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.Property;
+import org.apache.jena.rdf.model.RDFNode;
+import org.apache.jena.rdf.model.ResIterator;
+import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.StmtIterator;
 import org.sbolstandard.core2.Annotation;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.EDAMOntology;
@@ -25,11 +30,13 @@ import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.Sequence;
 import org.sbolstandard.core3.entity.TopLevel;
 import org.sbolstandard.core3.util.SBOLGraphException;
+import org.sbolstandard.core3.util.SBOLUtil;
 import org.sbolstandard.core3.util.URINameSpace;
 import org.sbolstandard.core3.util.URINameSpace.SONameSpace;
 import org.sbolstandard.core3.vocabulary.ComponentType;
 import org.sbolstandard.core3.vocabulary.DataModel;
 import org.sbolstandard.core3.vocabulary.Encoding;
+import org.sbolstandard.core3.vocabulary.Role;
 import org.sbolstandard.core3.vocabulary.RestrictionType.ConstraintRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.OrientationRestriction;
@@ -241,9 +248,8 @@ public class Util {
 		}
 	}
 
-	public static URI createSBOL3Uri(URI inputUri) {
+	public static URI createSBOL3UriOLD(URI inputUri) {
 		String sbol3Uri = "";
-
 		sbol3Uri = Util.extractURIPrefixSBOL2Uri(inputUri.toString());
 		String version = extractVersionSBOL2Uri(inputUri.toString());
 		String displayId = extractDisplayIdSBOL2Uri(inputUri.toString());
@@ -254,24 +260,81 @@ public class Util {
 			sbol3Uri += "/" + displayId;
 		}
 
-		// In case of URI of type "dynamic_measurement.mdx"
-		// TODO: better check
-		if (sbol3Uri == null)
-		{
+		if (sbol3Uri == null){
 			String inputUriString = inputUri.toString();
-			if (!inputUriString.toLowerCase().startsWith("urn") && !inputUriString.contains("://"))
-			{
-				
+			if (!inputUriString.toLowerCase().startsWith("urn") && !inputUriString.contains("://")){				
 				return SBOLAPI.append("https://sbolstandard.org/SBOL3-Converter", inputUriString);
 			}
-			else
-			{
+			else{
 				return URI.create(inputUri.toString());
 			}
 		}
-
 		return URI.create(sbol3Uri);
 	}
+
+	
+
+	private static URI getLatestUri(URI inputUri, Model rdfModel) {
+		Property persistentIdentity= rdfModel.getProperty("http://sbols.org/v2#persistentIdentity");
+		RDFNode valueNode=rdfModel.getResource(inputUri.toString());
+		//If a resource with "persistentIdentity - inputUri" property exists then inputUri is a persistent identity. Find the most uri with the most current version that the persistent identity refers to.
+		ResIterator it= rdfModel.listSubjectsWithProperty(persistentIdentity, valueNode);
+		Double version=null;
+		if (it.hasNext()) {
+			// If there is a persistent identity, find the most current version
+			while (it.hasNext()) {
+				Resource resource = it.next();
+				if (version==null){
+					inputUri= URI.create(resource.getURI());
+				}
+				Property versionProperty= rdfModel.getProperty("http://sbols.org/v2#version");
+				StmtIterator stmtIt= resource.listProperties(versionProperty);
+				if (stmtIt.hasNext()) {
+					// If there is a version, use it
+					Double currentVersion = stmtIt.next().getObject().asLiteral().getDouble();
+					//if (version==null || (currentVersion != null && currentVersion> version)) {
+					if (version==null) {						
+						version=currentVersion;
+						inputUri=URI.create(resource.getURI());
+					}
+					//Split into if else for debugging purposes!
+					else if (currentVersion != null && currentVersion> version){
+						version=currentVersion;
+						inputUri=URI.create(resource.getURI());
+					}
+				}
+			}			
+		}
+		
+		return inputUri;		
+	}
+
+	public static URI createSBOL3Uri(URI inputUri, Parameters parameters) throws SBOLGraphException {
+		Model rdfModel = parameters.getRdfModel();
+		inputUri=getLatestUri(inputUri, rdfModel);
+		String sbol3Uri = "";
+		sbol3Uri = Util.extractURIPrefixSBOL2Uri(inputUri.toString());
+		String version = extractVersionSBOL2Uri(inputUri.toString());
+		String displayId = extractDisplayIdSBOL2Uri(inputUri.toString());
+		if (version != null && !version.equals("")) {
+			sbol3Uri += "/" + version;
+		}
+		if (displayId != null && !displayId.equals("")) {
+			sbol3Uri += "/" + displayId;
+		}
+
+		if (sbol3Uri == null){
+			String inputUriString = inputUri.toString();
+			if (!inputUriString.toLowerCase().startsWith("urn") && !inputUriString.contains("://")){				
+				return SBOLAPI.append("https://sbolstandard.org/SBOL3-Converter", inputUriString);
+			}
+			else{
+				return URI.create(inputUri.toString());
+			}
+		}
+		return URI.create(sbol3Uri);
+	}
+
 
 	public static URI createSBOL3Uri(org.sbolstandard.core2.Identified input) {
 		String sbol3Uri = "";
@@ -283,10 +346,9 @@ public class Util {
 		if (input.isSetDisplayId()) {
 			sbol3Uri += "/" + input.getDisplayId();
 		}
-
 		return URI.create(sbol3Uri);
 	}
-
+	
 	public static URI createSBOL2Uri(URI inputUri) throws SBOLGraphException {
 		String sbol2Uri = "";
 
@@ -342,29 +404,71 @@ public class Util {
 		return displayId;
 
 	}
-
-	public static QName toQName(URI uri) throws SBOLGraphException
+	private static String getAfterTheLast(String str, String after) {
+		int index = str.lastIndexOf(after);
+		if (index == -1) {
+			return null;
+		} 
+		else {
+			return str.substring(index + after.length());
+		}
+	}
+	public static QName toQName(URI uri, org.sbolstandard.core2.SBOLDocument sbol2Document) throws SBOLGraphException
 	{
-		String local=SBOLAPI.inferDisplayId(uri);
+		String namespace=null;
 		String uriString=uri.toString();
+		String local=null;
+		
+		if (SBOLUtil.isURL(uriString)){
+			int indexHash = uriString.lastIndexOf("#");
+			int indexSlash = uriString.lastIndexOf("/");
+			if (indexHash> indexSlash){
+				local=getAfterTheLast(uriString, "#");
+			}
+			else{			
+				local=SBOLAPI.inferDisplayId(uri);
+			}
+		}
+		else{
+			local = getAfterTheLast(uriString, "/");
+			if (local==null){
+				//Create a random local name
+				local = "displayid_auto_generated" + UUID.randomUUID().toString().replace("-", "");
+			}
+		}
 		// Extract the namespace from the top-level type string
-		int index=uriString.lastIndexOf(local);
-		String namespace = uriString.substring(0,index);
+		if (local!=null){
+			int index=uriString.lastIndexOf(local);
+			namespace = uriString.substring(0,index);
+		}
 		/*if (namespace.endsWith("/")) {
 			namespace = namespace.substring(0, namespace.length() - 1);
 		}*/
-		QName qname = new QName(namespace, local);
-		return qname;
+		QName qName = null;
+		QName qNameExists=sbol2Document.getNamespace(URI.create(namespace));
+		if (qNameExists!=null){
+			String prefix = qNameExists.getPrefix();
+			if (prefix!=null && !prefix.isEmpty()) {
+				// If the prefix is not empty, use it to create the QName
+				qName = new QName(qNameExists.getNamespaceURI(), local, prefix);
+			} 			
+		}
+		
+		if (qName==null){
+			// If the prefix is empty, use the namespace URI directly
+			qName = new QName(namespace, local);
+		}
+		return qName;
 	}
 	
-	public static void copyIdentified(Identified input, org.sbolstandard.core2.Identified output)
+	public static void copyIdentified(Identified input, org.sbolstandard.core2.Identified output, org.sbolstandard.core2.SBOLDocument sbol2Document)
 			throws SBOLGraphException, SBOLValidationException {
 		output.setName(input.getName());
 		output.setDescription(input.getDescription());
 		 if (input.getWasDerivedFrom() != null) {
 			output.setWasDerivedFroms(toSet(input.getWasDerivedFrom()));
 		}
-		convertAnnotations3_to_2(input, output);	
+		convertAnnotations3_to_2(input, output, sbol2Document);	
 		/* 
 		List<Metadata> metadataEntities = input.getMetadataEntites();
 		if (metadataEntities != null){
@@ -389,7 +493,7 @@ public class Util {
 	 * @param qName The QName for the annotation property
 	 * @throws SBOLGraphException 
 	 */
-	private static void convertAnnotations3_to_2(Identified input, org.sbolstandard.core2.Identified output) throws SBOLGraphException, SBOLValidationException {
+	private static void convertAnnotations3_to_2(Identified input, org.sbolstandard.core2.Identified output, org.sbolstandard.core2.SBOLDocument sbol2Document) throws SBOLGraphException, SBOLValidationException {
 		
 		List<Pair<URI, Object>> annotations = input.getAnnotations();
 		if (annotations!=null){
@@ -397,7 +501,7 @@ public class Util {
 				// Convert SBOL3 Annotation to Metadata
 				String property = annotation.getLeft().toString();
 				Object value = annotation.getRight();
-				QName qName=toQName(URI.create(property));
+				QName qName=toQName(URI.create(property),sbol2Document);
 				if (value instanceof URI) {
 					output.createAnnotation(qName, (URI) value);
 				} else if (value instanceof String) {
@@ -414,17 +518,17 @@ public class Util {
 				}
 				else if (value instanceof Metadata) {
 					Metadata metadata = (Metadata) value;
-					createNestedAnnotation(output, qName, metadata);					
+					createNestedAnnotation(output, qName, metadata, sbol2Document);					
 				}
 			}
 		}
 
 	}
 
-	private static Annotation createNestedAnnotation(Object output, QName qnameProperty, Metadata metadata) throws SBOLGraphException, SBOLValidationException
+	private static Annotation createNestedAnnotation(Object output, QName qnameProperty, Metadata metadata,org.sbolstandard.core2.SBOLDocument sbol2Document) throws SBOLGraphException, SBOLValidationException
 	{
 		URI metadataTypeURI=metadata.getType().get(0);
-		QName nestedQName = toQName(metadataTypeURI);
+		QName nestedQName = toQName(metadataTypeURI,sbol2Document);
 		
 		List<Annotation> sbol2Annotations = new ArrayList<>();
 		List<Pair<URI, Object>> childMetadataAnnotations=null;
@@ -433,7 +537,7 @@ public class Util {
 			for (Pair<URI, Object> annotation : annotations) {
 				String property = annotation.getLeft().toString();
 				Object value = annotation.getRight();
-				QName qName=toQName(URI.create(property));
+				QName qName=toQName(URI.create(property),sbol2Document);
 				if (value instanceof URI) {
 					sbol2Annotations.add(new Annotation(qName, (URI) value));
 				} else if (value instanceof String) {
@@ -470,10 +574,10 @@ public class Util {
 				
 		if (childMetadataAnnotations!=null){
 			for (Pair<URI, Object> childMetadataAnnotation : childMetadataAnnotations){
-				QName qNameChildMetadata=toQName(URI.create(childMetadataAnnotation.getLeft().toString()));
+				QName qNameChildMetadata=toQName(URI.create(childMetadataAnnotation.getLeft().toString()), sbol2Document);
 				Metadata childMetadata= (Metadata)childMetadataAnnotation.getRight();
 				//No need to add the created child annoation since it is added within the createNestedAnnotation method
-				createNestedAnnotation(nestedAnnotation, qNameChildMetadata, childMetadata);
+				createNestedAnnotation(nestedAnnotation, qNameChildMetadata, childMetadata, sbol2Document);
 			}
 		}
 		return nestedAnnotation;
@@ -626,21 +730,21 @@ public class Util {
 		}
 	}	 	
 
-	private static URI convertSOUri_2_to_3(URI soUri)
+	public static URI convertSOUri_2_to_3(URI soUri)
 	{
-		String uriString = soUri.toString().toLowerCase().replace("so/", "").replace("so:", "SO:");
-		uriString= uriString.replace("http", "https");
+		String uriString = soUri.toString().replaceAll("(?i)so/", "").replace("(?i)so:", "SO:");
+		uriString= uriString.replaceAll("(?i)http://", "https://");
 		return URI.create(uriString);
 	}
 	
 	private static URI convertSOUri_3_to_2(URI soUri)
 	{
-		String soUriString = soUri.toString().toLowerCase().replace("so:", "so/SO:");
-		soUriString= soUriString.replace("https", "http");
+		String soUriString = soUri.toString().replaceAll("(?i)so:", "so/SO:");
+		soUriString= soUriString.replaceAll("(?i)https://", "http://");		
 		return URI.create(soUriString);
 	}
 	
-	public static List<URI> convertRoles2_to_3(Set<URI> roles) {
+	public static List<URI> convertSORoles2_to_3(Set<URI> roles) {
 		List<URI> convertedRoles = new ArrayList<URI>();
 		for (URI role : roles) {
 			convertedRoles.add(convertSOUri_2_to_3(role));
@@ -648,10 +752,13 @@ public class Util {
 		return convertedRoles;
 	}
 
-	public static Set<URI> convertRoles3_to_2(List<URI> roles) {
-		Set<URI> convertedRoles = new HashSet<URI>();
-		for (URI role : roles) {
-			convertedRoles.add(convertSOUri_3_to_2(role));
+	public static Set<URI> convertSORoles3_to_2(List<URI> roles) {
+		Set<URI> convertedRoles = null;
+		if (roles != null && !roles.isEmpty()) {	
+			convertedRoles = new HashSet<URI>();		
+			for (URI role : roles) {
+				convertedRoles.add(convertSOUri_3_to_2(role));
+			}
 		}
 		return convertedRoles;
 	}
@@ -818,14 +925,14 @@ public class Util {
 	}
 
 	public static Sequence getSBOL3SequenceFromSBOl2Parent(SBOLDocument document,
-			ComponentDefinition sbol2ParentCompDef) throws SBOLGraphException {
+			ComponentDefinition sbol2ParentCompDef, Parameters parameters) throws SBOLGraphException {
 		
 		URI seqType = Util.getSBOL2SequenceType(sbol2ParentCompDef);
 		org.sbolstandard.core2.Sequence sbol2seq = sbol2ParentCompDef.getSequenceByEncoding(seqType);
 		Sequence sbol3seq=null;
 		if (sbol2seq!=null)
 		{
-			URI SBOL3ObjectUri = Util.createSBOL3Uri(sbol2seq.getIdentity());
+			URI SBOL3ObjectUri = Util.createSBOL3Uri(sbol2seq.getIdentity(), parameters);
 			sbol3seq = document.getIdentified(SBOL3ObjectUri, Sequence.class);
 		}
 
@@ -834,22 +941,27 @@ public class Util {
 
 	
 	public static List<URI> convertToSBOL3_SBO_URIs(Set<URI> types) {
-		// TODO Auto-generated method stub
 		List<URI> convertedTypes = new ArrayList<URI>();
 		for (URI type : types) {
-			String typeString = type.toString().toLowerCase().replace("/biomodels.sbo", "").replace("sbo:", "SBO:");
-			
-			// WARNING! BELOW IS SHOULD NOT BE NECESSARY ACCORDING TO SBOL3 SPECIFICATION
-			typeString = typeString.replace("http", "https");
+			String typeString = type.toString().replaceAll("(?i)/biomodels.sbo", "").replace("sbo:", "SBO:");			
+			typeString = typeString.replaceAll("(?i)http://", "https://");
 			convertedTypes.add(URI.create(typeString));
 		}
 		return convertedTypes;
 	}
-	public static Set<URI> convertToSBOL2_SBO_URIs(List<URI> types) throws SBOLGraphException {
-		Set<URI> convertedTypes = new HashSet<URI>();
-		for (URI type : types) {
-			System.out.println(type.toString());
-			if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.Inhibition.getUri())) {
+
+	private static URI convertSBOUri_3_to_2(URI uri)
+	{
+		String uriString = uri.toString().replaceAll("(?i)sbo:", "biomodels.sbo/SBO:");
+		uriString= uriString.replaceAll("(?i)https://", "http://");
+		return URI.create(uriString);
+	}
+
+	public static Set<URI> convertToSBOL2_SBO_URIs(List<URI> uris) throws SBOLGraphException {
+		Set<URI> convertedUris = new HashSet<URI>();
+		for (URI uri : uris) {
+			convertedUris.add(convertSBOUri_3_to_2(uri));
+			/*if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.Inhibition.getUri())) {
 				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000169"));
 			} else if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.Stimulation.getUri())) {
 				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000170"));
@@ -864,11 +976,11 @@ public class Util {
 			} else if(type.equals(org.sbolstandard.core3.vocabulary.InteractionType.Control.getUri())) {
 				convertedTypes.add(URI.create("http://identifiers.org/biomodels.sbo/SBO:0000168"));
 			} else {
-				throw new SBOLGraphException("Unknown SBOL3 Interaction type: " + type);
-				
+				throw new SBOLGraphException("Unknown SBOL3 Interaction type: " + type);				
 			}
+			*/
 		}
-		return convertedTypes;
+		return convertedUris;
 	}
 	
 	public static URI getSBOL3SequenceEncodingType(URI sbol2EncodingType) throws SBOLGraphException {
@@ -937,9 +1049,9 @@ public class Util {
 		}
 	}
 	public static boolean isModuleDefinition(Component component) throws SBOLGraphException {
-		if(component.getInteractions() != null && !component.getInteractions().isEmpty()) {
-			return true;
-		} else if (component.getTypes().contains(URI.create("https://identifiers.org/SBO:0000241"))) {
+		if(component!=null && component.getInteractions() != null && !component.getInteractions().isEmpty()) {
+			return true;			
+		} else if (component!=null && component.getTypes().contains(ComponentType.FunctionalEntity.getUri())) {
 			return true;
 		}
 		return false;
@@ -985,7 +1097,6 @@ public class Util {
 				sbolV1out, fastaOut, snapGeneOut, gff3Out, csvOut, outputFile, showDetail, noOutput, changeURIPrefix,
 				enumerate);
 
-		//String outputStr= baosOutput.toString();
 		String errorStr = baosError.toString();
 		if(errorStr.isEmpty()) {
 			return true;
@@ -1045,20 +1156,65 @@ public class Util {
 
 		public static boolean isMapstoConstraint(Constraint constraint) throws SBOLGraphException {
 			// Check if the SBOL3 constraint is a SBOL2 mapsto type
-			if(constraint.getRestriction().equals(org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.differentFrom.getUri()))
-			{
+			if(constraint.getRestriction().equals(org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.differentFrom.getUri())){
 				return true;
 			} 
-			else if(constraint.getRestriction().equals(org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.verifyIdentical.getUri()))
-			{
+			else if(constraint.getRestriction().equals(org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.verifyIdentical.getUri())){
 				return true;
 			}
-			else if(constraint.getRestriction().equals(org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.replaces.getUri()))
-			{
+			else if(constraint.getRestriction().equals(org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.replaces.getUri())){
 				return true;
 			}
-
 			return false;
 		}
+
+		public static Sequence getEmptySequence(Component sbol3ParentComp, SBOLDocument document) throws SBOLGraphException
+		{
+			Sequence sbol3Sequence = null;
+			URI emptySeqUri= URI.create(sbol3ParentComp.getUri().toString() + "_seq");				
+			if (sbol3ParentComp.getSequences()!=null && !sbol3ParentComp.getSequences().isEmpty()) {
+				sbol3Sequence = Util.getByUri(sbol3ParentComp.getSequences(), emptySeqUri);
+				//sbol3ParentComp.getSequences().add(sbol3Sequence);
+				//sbol3Sequence = sbol3ParentComp.getSequences().get(0);				
+			}
+			else{ 
+				sbol3Sequence = Util.createEmptySequence(sbol3ParentComp, document, emptySeqUri);
+			}
+			return sbol3Sequence;
+		}
+
+		public static Sequence createEmptySequence(Component sbol3Component, SBOLDocument document, URI sequenceURI) throws SBOLGraphException {
+			Sequence sbol3Sequence = document.createSequence(sequenceURI, sbol3Component.getNamespace());
+			List<Encoding> encodings = getEncodingsFromComponentType(sbol3Component);
+			if (encodings != null && !encodings.isEmpty()) {
+				sbol3Sequence.setEncoding(encodings.get(0));
+			}
+			sbol3Sequence.setEncoding(Encoding.NucleicAcid);
+			sbol3Component.setSequences(Arrays.asList(sbol3Sequence));
+			return sbol3Sequence;
+		}
+
+		private static List<Encoding> getEncodingsFromComponentType(Component sbol3Component) {
+			List<Encoding> encodings = null;
+			if (sbol3Component.getTypes() != null) {
+				for (URI type : sbol3Component.getTypes()) {
+					ComponentType compType = ComponentType.get(type);
+					if (compType != null) {
+						List<Encoding> currentEncodings = ComponentType.checkComponentTypeMatch(compType);
+						if (currentEncodings != null && !currentEncodings.isEmpty()) {
+							if (encodings == null) {
+								encodings = currentEncodings;
+							} else {
+								encodings.addAll(currentEncodings);
+							}
+						}
+					}
+
+				}
+			}
+			return encodings;
+		}
+
+
 
 }

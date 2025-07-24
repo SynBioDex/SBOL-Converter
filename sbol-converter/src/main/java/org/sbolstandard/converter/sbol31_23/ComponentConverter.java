@@ -42,10 +42,10 @@ public class ComponentConverter implements EntityConverter<Component, ComponentD
 		);
 
 		// Copy over identifiers, names, etc.
-		Util.copyIdentified(component, compDef);
+		Util.copyIdentified(component, compDef, sbol2Doc);
 
 		// Convert and set SBOL3 roles to SBOL2 roles
-		compDef.setRoles(Util.convertRoles3_to_2(component.getRoles()));
+		compDef.setRoles(Util.convertSORoles3_to_2(component.getRoles()));
 
 		// Convert all SBOL3 SubComponents to SBOL2 format
 		List<SubComponent> subComponents = component.getSubComponents();

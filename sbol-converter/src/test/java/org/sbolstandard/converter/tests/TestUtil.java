@@ -33,36 +33,61 @@ public class TestUtil {
 
 	}
 	
-	public static List<String> roundTripConvert(File file) throws Exception {
-		
-		org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
-		return roundTripConvert(doc);		
+	public static List<String> roundTripConvert(File file) throws Exception {		
+		return roundTripConvert(file, true,null, true);		
 	}
 
-	public static List<String> roundTripConvert(SBOLDocument sbol2InputDocument) throws Exception {
-		Configuration.getInstance().setValidateBeforeSaving(true);
-		System.out.println("Starting to convert the SBOL2 file below:");
+	public static List<String> roundTripConvert(File file, boolean sbol3Validate, String outputFile, boolean printToScreen) throws Exception {
+		System.out.println("Converting the SBOL2 file:" + file.getName());
 		
-		SBOLWriter.write(sbol2InputDocument, System.out);
+		org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
+		return roundTripConvert(doc, sbol3Validate, outputFile, printToScreen);		
+	}
+
+	public static List<String> roundTripConvert(SBOLDocument sbol2InputDocument, boolean sbol3Validate, String outputFile, boolean printToScreen) throws Exception {
+		Configuration.getInstance().setValidateBeforeSaving(sbol3Validate);
+		Configuration.getInstance().setValidateAfterSettingProperties(sbol3Validate);
 		
+		
+		if (printToScreen){
+			SBOLWriter.write(sbol2InputDocument, System.out);
+		}
+		if (outputFile != null) {			
+			SBOLWriter.write(sbol2InputDocument, new File(outputFile + "_sbol2.xml"));
+		}
+
 		SBOLDocumentConverter converter = new SBOLDocumentConverter();
 		org.sbolstandard.core3.entity.SBOLDocument sbol3Doc = converter.convert(sbol2InputDocument);
 		System.out.println("--------");
 
 		System.out.println("Converted from SBOL2 to SBOL3:");
-		System.out.println(SBOLIO.write(sbol3Doc, SBOLFormat.RDFXML));
-		//SBOLIO.write(sbol3Doc, new File("output/currentSBOL3File.xml"), SBOLFormat.RDFXML);
-
+		if (printToScreen){
+			System.out.println(SBOLIO.write(sbol3Doc, SBOLFormat.TURTLE));
+		}
+		if (outputFile != null) {			
+			SBOLIO.write(sbol3Doc, new File(outputFile + "_sbol3.xml"), SBOLFormat.RDFXML);
+			SBOLIO.write(sbol3Doc, new File(outputFile + "_sbol3.ttl"), SBOLFormat.RDFXML);			
+		}
+		
 		org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter converter3_2 = new org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter();
 		org.sbolstandard.core2.SBOLDocument sbol2Doc = converter3_2.convert(sbol3Doc);
 
 		System.out.println("");
 		System.out.println("Converted from SBOL3 to SBOL2:");
 
-		SBOLWriter.write(sbol2Doc, System.out);
+		if (printToScreen){		
+			SBOLWriter.write(sbol2Doc, System.out);
+		}
+		if (outputFile != null) {			
+			SBOLWriter.write(sbol2Doc, new File(outputFile + "_sbol2_from_sbol3.xml"));
+		}
 		SBOLValidate.compareDocuments("SBOL2in", sbol2InputDocument, "SBOL2out", sbol2Doc);
 		
 		return SBOLValidate.getErrors();		
+	}
+
+	public static List<String> roundTripConvert(SBOLDocument sbol2InputDocument) throws Exception {
+		return roundTripConvert(sbol2InputDocument, true,null, true);
 	}
 
 	public static void runTestSuiteFile2_to_3(File file) throws Exception {
@@ -143,19 +168,28 @@ public class TestUtil {
 		return output;
 	}
 	
-	public static void DisplayErrors(List<String> errors)
+	public static String DisplayErrors(List<String> errors)
 	{
+		StringBuffer buffer = new StringBuffer();
 		if (errors.size()>0) {
 			for (String error : errors) {
 				if (error.contains("not found") || error.contains("differ"))
 				{
-					System.out.println("WARNING: THERE ARE ERRORS BUT JUST DIFFERENT IDS " + error);
+					String message=("WARNING: THERE ARE ERRORS BUT JUST DIFFERENT IDS " + error);
+					System.out.println(message);
+					buffer.append(message + System.lineSeparator());
 				}else{
 					System.out.println("Error: " + error);
+					System.out.println(buffer);
 					assertTrue(false, "Error in round trip conversion: " + error);
 				}
 			}
 		}
+		else {
+			System.out.println("No errors in round trip conversion");
+			buffer.append("No errors in round trip conversion" + System.lineSeparator());
+		}
+		return buffer.toString();
 	}
 
 }

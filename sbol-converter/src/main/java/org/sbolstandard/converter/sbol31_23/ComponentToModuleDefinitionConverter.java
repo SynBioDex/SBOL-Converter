@@ -17,45 +17,49 @@ public class ComponentToModuleDefinitionConverter implements EntityConverter<Com
 		ModuleDefinition moduleDef = sbol2Doc.createModuleDefinition(Util.getURIPrefix(component),
 				component.getDisplayId(), Util.getVersion(component));
 
-		Util.copyIdentified(component, moduleDef);
+		Util.copyIdentified(component, moduleDef, sbol2Doc);
 
-		// TODO
-		// THINGS NEED TO BE CONVERTED
-		// roles
-		moduleDef.setRoles(Util.convertRoles3_to_2(component.getRoles()));
+		moduleDef.setRoles(Util.convertSORoles3_to_2(component.getRoles()));
 
-		// MODULES
-		// HOW TO CONVERT MODULES?
-		// TODO: SOME OF THE SUBCOMPONENTS SHOULD BE CONVERTED INTO MODULES
-		// SUB COMPONENT TO FUNCTIONAL COMPONENTS
 		SubComponentToFunctionalComponentConverter subCompToFunCompConverter = new SubComponentToFunctionalComponentConverter();
 		SubComponentToModuleConverter subCompToModuleConverter = new SubComponentToModuleConverter();
 
-		// TODO: CHECK HERE
-		for (SubComponent subComponent : component.getSubComponents()) {
-			if(subComponent.getInstanceOf()!= null && subComponent.getInstanceOf().getSubComponents() != null)
-			{
-				subCompToModuleConverter.convert(sbol2Doc, moduleDef, component, subComponent);
-			}
-			else
-			{
-				subCompToFunCompConverter.convert(sbol2Doc, moduleDef, component, subComponent);
+		if (component.getSubComponents()!=null){
+			for (SubComponent subComponent : component.getSubComponents()) {
+				if (Util.isModuleDefinition(subComponent.getInstanceOf())){
+					subCompToModuleConverter.convert(sbol2Doc, moduleDef, component, subComponent);
+				}
+				else{
+					subCompToFunCompConverter.convert(sbol2Doc, moduleDef, component, subComponent);
+				}
 			}
 		}
-		// INTERACTIONS
+		
 		InteractionConverter interactionConverter = new InteractionConverter();
 
-		// Can Interactions be null?
-		if (component.getInteractions() == null) {
-			System.out.println("Component " + component.getUri() + " has no interactions.");
-		}
-		else{
+		if (component.getInteractions()!=null){
 			for (org.sbolstandard.core3.entity.Interaction interaction : component.getInteractions()) {
 				interactionConverter.convert(sbol2Doc, moduleDef, component, interaction);
+			}
+		}
+
+		if (component.getModels()!=null){
+			for (org.sbolstandard.core3.entity.Model model : component.getModels()) {
+				moduleDef.addModel(Util.createSBOL2Uri(model));
 			}
 		}
 		
 		return moduleDef;
 	}
 
+	private boolean isModule(SubComponent subComponent) throws SBOLGraphException {
+		if(subComponent.getInstanceOf()!= null && subComponent.getInstanceOf().getInteractions() != null){
+			return true;
+		}
+		else if (Util.isModuleDefinition(subComponent.getInstanceOf()))
+		{
+			return true;
+		}
+		return false;
+	}
 }
