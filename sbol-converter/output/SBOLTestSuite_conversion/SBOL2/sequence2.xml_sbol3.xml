@@ -15,11 +15,6 @@
       <genbank:division>PLN</genbank:division>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation0">
-            <gbConv:ecotype>Col-0</gbConv:ecotype>
-            <gbConv:db_xref>taxon:3702</gbConv:db_xref>
-            <gbConv:mol_type>genomic DNA</gbConv:mol_type>
-            <gbConv:organism>Arabidopsis thaliana</gbConv:organism>
-            <sbol:name>Arabidopsis thaliana</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation0/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -31,14 +26,17 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:ecotype>Col-0</gbConv:ecotype>
+            <gbConv:db_xref>taxon:3702</gbConv:db_xref>
+            <gbConv:mol_type>genomic DNA</gbConv:mol_type>
+            <gbConv:organism>Arabidopsis thaliana</gbConv:organism>
+            <sbol:name>Arabidopsis thaliana</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0002206"/>
             <sbol:displayId>annotation0</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation7">
-            <gbConv:gene>CCT</gbConv:gene>
-            <sbol:name>CCT</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation7/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -50,6 +48,8 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:gene>CCT</gbConv:gene>
+            <sbol:name>CCT</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000205"/>
             <sbol:displayId>annotation7</sbol:displayId>
          </sbol:SequenceFeature>
@@ -87,6 +87,10 @@
                </sbol:Range>
             </sbol:hasLocation>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+            <gbConv:product>CTP:phosphocholine cytidylyltransferase</gbConv:product>
+            <gbConv:db_xref>GI:5640001</gbConv:db_xref>
+            <gbConv:translation>MSNVIGDRTEDGLSTAAAASGSTAVQSSPPTDRPVRVYADGIYDLFHFGHARSLEQAKLAFPNNTYLLVGCCNDETTHKYKGRTVMTAEERYESLRHCKWVDEVIPDAPWVVNQEFLDKHQIDYVAHDSLPYADSSGAGKDVYEFVKKVGRFKETQRTEGISTSDIIMRIVKDYNQYVMRNLDRGYSREDLGVSFVKEKRLRVNMRLKKLQERVKEQQERVGEKIQTVKMLRNEWVENADRWVAGFLEIFEEGCHKMGTAIVDSIQERLMRQKSAERLENGQDDDTDDQFYEEYFDHDMGSDDDEDEKFYDEEEVKEEETEKTVMTDAKDNK</gbConv:translation>
+            <gbConv:multiRangeType>join</gbConv:multiRangeType>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation6/range7">
                   <gbConv:position>position7</gbConv:position>
@@ -99,7 +103,6 @@
                   <sbol:displayId>range7</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <gbConv:product>CTP:phosphocholine cytidylyltransferase</gbConv:product>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation6/range2">
                   <gbConv:position>position2</gbConv:position>
@@ -112,9 +115,6 @@
                   <sbol:displayId>range2</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <gbConv:multiRangeType>join</gbConv:multiRangeType>
-            <gbConv:db_xref>GI:5640001</gbConv:db_xref>
-            <gbConv:translation>MSNVIGDRTEDGLSTAAAASGSTAVQSSPPTDRPVRVYADGIYDLFHFGHARSLEQAKLAFPNNTYLLVGCCNDETTHKYKGRTVMTAEERYESLRHCKWVDEVIPDAPWVVNQEFLDKHQIDYVAHDSLPYADSSGAGKDVYEFVKKVGRFKETQRTEGISTSDIIMRIVKDYNQYVMRNLDRGYSREDLGVSFVKEKRLRVNMRLKKLQERVKEQQERVGEKIQTVKMLRNEWVENADRWVAGFLEIFEEGCHKMGTAIVDSIQERLMRQKSAERLENGQDDDTDDQFYEEYFDHDMGSDDDEDEKFYDEEEVKEEETEKTVMTDAKDNK</gbConv:translation>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation6/range4">
                   <gbConv:position>position4</gbConv:position>
@@ -170,9 +170,6 @@
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation3">
-            <gbConv:gene>CCT</gbConv:gene>
-            <gbConv:regulatory_class>TATA_box</gbConv:regulatory_class>
-            <sbol:name>CCT</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation3/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -184,6 +181,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:gene>CCT</gbConv:gene>
+            <gbConv:regulatory_class>TATA_box</gbConv:regulatory_class>
+            <sbol:name>CCT</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0005836"/>
             <sbol:displayId>annotation3</sbol:displayId>
          </sbol:SequenceFeature>
@@ -201,8 +201,6 @@
       </genbank:reference>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation5">
-            <gbConv:gene>CCT</gbConv:gene>
-            <sbol:name>CCT</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation5/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -214,6 +212,8 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:gene>CCT</gbConv:gene>
+            <sbol:name>CCT</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000204"/>
             <sbol:displayId>annotation5</sbol:displayId>
          </sbol:SequenceFeature>
@@ -221,9 +221,6 @@
       <sbol:description>Arabidopsis thaliana CTP:phosphocholine cytidylyltransferase (CCT) gene, complete cds.</sbol:description>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation2">
-            <gbConv:gene>CCT</gbConv:gene>
-            <gbConv:regulatory_class>promoter</gbConv:regulatory_class>
-            <sbol:name>CCT</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation2/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -235,6 +232,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:gene>CCT</gbConv:gene>
+            <gbConv:regulatory_class>promoter</gbConv:regulatory_class>
+            <sbol:name>CCT</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0005836"/>
             <sbol:displayId>annotation2</sbol:displayId>
          </sbol:SequenceFeature>
@@ -304,6 +304,7 @@
                   <sbol:displayId>range0</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <sbol:role rdf:resource="https://identifiers.org/SO:0000234"/>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation4/range5">
                   <gbConv:position>position5</gbConv:position>
@@ -316,7 +317,6 @@
                   <sbol:displayId>range5</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000234"/>
             <gbConv:gene>CCT</gbConv:gene>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation4/range6">
@@ -361,8 +361,6 @@
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation1">
-            <gbConv:gene>CCT</gbConv:gene>
-            <sbol:name>CCT</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation1/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -374,6 +372,8 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:gene>CCT</gbConv:gene>
+            <sbol:name>CCT</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000704"/>
             <sbol:displayId>annotation1</sbol:displayId>
          </sbol:SequenceFeature>

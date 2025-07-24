@@ -16,10 +16,6 @@
       <sbol:type rdf:resource="https://identifiers.org/SO:0000988"/>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation3">
-            <gbConv:label>rep (pMB1)</gbConv:label>
-            <gbConv:vntifkey>21</gbConv:vntifkey>
-            <gbConv:featureType>Misc._feature</gbConv:featureType>
-            <sbol:name>rep (pMB1)</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation3/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -31,17 +27,16 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:label>rep (pMB1)</gbConv:label>
+            <gbConv:vntifkey>21</gbConv:vntifkey>
+            <gbConv:featureType>Misc._feature</gbConv:featureType>
+            <sbol:name>rep (pMB1)</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
             <sbol:displayId>annotation3</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation7">
-            <gbConv:label>Act2 intron (A. thaliana)</gbConv:label>
-            <gbConv:label>Act2int1</gbConv:label>
-            <gbConv:vntifkey>15</gbConv:vntifkey>
-            <gbConv:featureType>Intron</gbConv:featureType>
-            <sbol:name>Act2 intron (A. thaliana)</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation7/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -53,6 +48,11 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:label>Act2 intron (A. thaliana)</gbConv:label>
+            <gbConv:label>Act2int1</gbConv:label>
+            <gbConv:vntifkey>15</gbConv:vntifkey>
+            <gbConv:featureType>Intron</gbConv:featureType>
+            <sbol:name>Act2 intron (A. thaliana)</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
             <sbol:displayId>annotation7</sbol:displayId>
          </sbol:SequenceFeature>
@@ -61,10 +61,6 @@
       <genbank:locus>pICH43844</genbank:locus>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation2">
-            <gbConv:label>G to A</gbConv:label>
-            <gbConv:vntifkey>62</gbConv:vntifkey>
-            <gbConv:featureType>Mutation</gbConv:featureType>
-            <sbol:name>G to A</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation2/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -76,15 +72,16 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:label>G to A</gbConv:label>
+            <gbConv:vntifkey>62</gbConv:vntifkey>
+            <gbConv:featureType>Mutation</gbConv:featureType>
+            <sbol:name>G to A</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
             <sbol:displayId>annotation2</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation6">
-            <gbConv:label>Bar phosphimothricin acetyl transferase (S. hygroscopicus)</gbConv:label>
-            <gbConv:multiRangeType>join</gbConv:multiRangeType>
-            <sbol:name>Bar phosphimothricin acetyl transferase (S. hygroscopicus)</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation6/range0">
                   <gbConv:position>position0</gbConv:position>
@@ -109,6 +106,9 @@
                   <sbol:displayId>range1</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:label>Bar phosphimothricin acetyl transferase (S. hygroscopicus)</gbConv:label>
+            <gbConv:multiRangeType>join</gbConv:multiRangeType>
+            <sbol:name>Bar phosphimothricin acetyl transferase (S. hygroscopicus)</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
             <sbol:displayId>annotation6</sbol:displayId>
          </sbol:SequenceFeature>
@@ -117,9 +117,6 @@
       <genbank:molecule>DNA</genbank:molecule>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation1">
-            <gbConv:label>Sm/Sp no DraIII</gbConv:label>
-            <gbConv:vntifkey>4</gbConv:vntifkey>
-            <sbol:name>Sm/Sp no DraIII</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation1/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -131,15 +128,15 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:label>Sm/Sp no DraIII</gbConv:label>
+            <gbConv:vntifkey>4</gbConv:vntifkey>
+            <sbol:name>Sm/Sp no DraIII</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
             <sbol:displayId>annotation1</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation5">
-            <gbConv:label>AATG 4bp overhang</gbConv:label>
-            <gbConv:featureType>Misc._Feature</gbConv:featureType>
-            <sbol:name>AATG 4bp overhang</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation5/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -151,6 +148,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:label>AATG 4bp overhang</gbConv:label>
+            <gbConv:featureType>Misc._Feature</gbConv:featureType>
+            <sbol:name>AATG 4bp overhang</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
             <sbol:displayId>annotation5</sbol:displayId>
          </sbol:SequenceFeature>
@@ -160,9 +160,6 @@
       <sbol:displayId>pICH43844</sbol:displayId>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation0">
-            <gbConv:label>GCTT 4bp overhang</gbConv:label>
-            <gbConv:featureType>Misc._Feature</gbConv:featureType>
-            <sbol:name>GCTT 4bp overhang</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation0/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -174,17 +171,15 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:label>GCTT 4bp overhang</gbConv:label>
+            <gbConv:featureType>Misc._Feature</gbConv:featureType>
+            <sbol:name>GCTT 4bp overhang</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
             <sbol:displayId>annotation0</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation4">
-            <gbConv:note>RNaseH cleavage point</gbConv:note>
-            <gbConv:label>ORI</gbConv:label>
-            <gbConv:vntifkey>33</gbConv:vntifkey>
-            <gbConv:featureType>Replication_ori</gbConv:featureType>
-            <sbol:name>ORI</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation4/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001031"/>
@@ -196,6 +191,11 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>RNaseH cleavage point</gbConv:note>
+            <gbConv:label>ORI</gbConv:label>
+            <gbConv:vntifkey>33</gbConv:vntifkey>
+            <gbConv:featureType>Replication_ori</gbConv:featureType>
+            <sbol:name>ORI</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
             <sbol:displayId>annotation4</sbol:displayId>
          </sbol:SequenceFeature>

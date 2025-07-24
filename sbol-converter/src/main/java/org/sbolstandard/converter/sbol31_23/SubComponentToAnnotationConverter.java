@@ -1,5 +1,7 @@
 package org.sbolstandard.converter.sbol31_23;
 
+import javax.sound.midi.Sequence;
+
 //import java.net.URI;
 
 import org.sbolstandard.converter.Util;
@@ -32,7 +34,7 @@ public class SubComponentToAnnotationConverter implements ChildEntityConverter<S
 
 		// This will hold the SBOL2 SequenceAnnotation that we are constructing
 		SequenceAnnotation sbol2SeqAnno = null;
-
+		
 		// Iterate over each Location
 		if (sbol3SubComponent.getLocations()!=null)
 		{

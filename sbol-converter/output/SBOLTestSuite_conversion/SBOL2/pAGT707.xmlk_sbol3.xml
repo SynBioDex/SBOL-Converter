@@ -25,10 +25,6 @@
       <genbank:comment>This file is created by Vector NTI http://www.invitrogen.com/</genbank:comment>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation4">
-            <gbConv:note>color: #66cc99; direction: RIGHT</gbConv:note>
-            <gbConv:note>rep (pMB1)</gbConv:note>
-            <gbConv:label>rep (pMB1)</gbConv:label>
-            <sbol:name>rep (pMB1)</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation4/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -40,6 +36,10 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>color: #66cc99; direction: RIGHT</gbConv:note>
+            <gbConv:note>rep (pMB1)</gbConv:note>
+            <gbConv:label>rep (pMB1)</gbConv:label>
+            <sbol:name>rep (pMB1)</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0001411"/>
             <sbol:displayId>annotation4</sbol:displayId>
          </sbol:SequenceFeature>
@@ -49,9 +49,6 @@
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation0">
-            <gbConv:mol_type>other DNA</gbConv:mol_type>
-            <gbConv:organism>synthetic DNA construct</gbConv:organism>
-            <sbol:name>synthetic DNA construct</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation0/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -63,6 +60,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:mol_type>other DNA</gbConv:mol_type>
+            <gbConv:organism>synthetic DNA construct</gbConv:organism>
+            <sbol:name>synthetic DNA construct</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0002206"/>
             <sbol:displayId>annotation0</sbol:displayId>
          </sbol:SequenceFeature>
@@ -70,11 +70,6 @@
       <genbank:locus>Exported File</genbank:locus>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation5">
-            <gbConv:note>color: #3366cc</gbConv:note>
-            <gbConv:note>RNaseH cleavage point</gbConv:note>
-            <gbConv:note>ORI</gbConv:note>
-            <gbConv:label>ORI</gbConv:label>
-            <sbol:name>ORI</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation5/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -86,6 +81,11 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>color: #3366cc</gbConv:note>
+            <gbConv:note>RNaseH cleavage point</gbConv:note>
+            <gbConv:note>ORI</gbConv:note>
+            <gbConv:label>ORI</gbConv:label>
+            <sbol:name>ORI</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000296"/>
             <sbol:displayId>annotation5</sbol:displayId>
          </sbol:SequenceFeature>
@@ -96,10 +96,6 @@
       </sbol:hasSequence>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation1">
-            <gbConv:note>color: #3366cc</gbConv:note>
-            <gbConv:note>CCAT</gbConv:note>
-            <gbConv:label>CCAT</gbConv:label>
-            <sbol:name>CCAT</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation1/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -111,6 +107,10 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>color: #3366cc</gbConv:note>
+            <gbConv:note>CCAT</gbConv:note>
+            <gbConv:label>CCAT</gbConv:label>
+            <sbol:name>CCAT</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0001411"/>
             <sbol:displayId>annotation1</sbol:displayId>
          </sbol:SequenceFeature>
@@ -119,10 +119,6 @@
       <sbol:displayId>Exported_File</sbol:displayId>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation6">
-            <gbConv:note>color: #009966</gbConv:note>
-            <gbConv:note>TMV UTR</gbConv:note>
-            <gbConv:label>TMV UTR</gbConv:label>
-            <sbol:name>TMV UTR</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation6/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -134,6 +130,10 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>color: #009966</gbConv:note>
+            <gbConv:note>TMV UTR</gbConv:note>
+            <gbConv:label>TMV UTR</gbConv:label>
+            <sbol:name>TMV UTR</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000204"/>
             <sbol:displayId>annotation6</sbol:displayId>
          </sbol:SequenceFeature>
@@ -169,9 +169,6 @@
       <genbank:organism>synthetic DNA construct</genbank:organism>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation3">
-            <gbConv:note>color: #3366cc</gbConv:note>
-            <gbConv:note>G to A</gbConv:note>
-            <sbol:name>color: #3366cc</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation3/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -183,6 +180,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>color: #3366cc</gbConv:note>
+            <gbConv:note>G to A</gbConv:note>
+            <sbol:name>color: #3366cc</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0001060"/>
             <sbol:displayId>annotation3</sbol:displayId>
          </sbol:SequenceFeature>

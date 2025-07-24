@@ -40,10 +40,6 @@
       <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/EF587312/annotation0">
-            <gbConv:db_xref>taxon:443237</gbConv:db_xref>
-            <gbConv:mol_type>other DNA</gbConv:mol_type>
-            <gbConv:organism>Yeast expression vector pNIA-Cb</gbConv:organism>
-            <sbol:name>Yeast expression vector pNIA-Cb</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/EF587312/annotation0/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -55,6 +51,10 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:db_xref>taxon:443237</gbConv:db_xref>
+            <gbConv:mol_type>other DNA</gbConv:mol_type>
+            <gbConv:organism>Yeast expression vector pNIA-Cb</gbConv:organism>
+            <sbol:name>Yeast expression vector pNIA-Cb</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0002206"/>
             <sbol:displayId>annotation0</sbol:displayId>
          </sbol:SequenceFeature>

@@ -10,6 +10,14 @@
     xmlns:GO="https://identifiers.org/GO:"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_J23119">
+      <prov:wasDerivedFrom rdf:resource="http://partsregistry.org/Part:BBa_J23119"/>
+      <sbol:hasSequence>
+         <sbol:Sequence rdf:about="http://partsregistry.org/cd/BBa_J23119_seq"/>
+      </sbol:hasSequence>
+      <sbol:displayId>BBa_J23119</sbol:displayId>
+      <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <sbol:name>J23119 promoter</sbol:name>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://partsregistry.org/cd/BBa_J23119/rangeAt12">
             <sbol:hasLocation>
@@ -17,18 +25,21 @@
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>1197</sbol:end>
                   <sbol:start>69</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://partsregistry.org/cd/BBa_J23119_seq"/>
+                  </sbol:hasSequence>
                   <sbol:displayId>location3</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
             <sbol:displayId>rangeAt12</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
-      <prov:wasDerivedFrom rdf:resource="http://partsregistry.org/Part:BBa_J23119"/>
-      <sbol:description>Constitutive promoter</sbol:description>
-      <sbol:name>J23119 promoter</sbol:name>
       <sbol:hasNamespace rdf:resource="http://partsregistry.org/cd"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>BBa_J23119</sbol:displayId>
+      <sbol:description>Constitutive promoter</sbol:description>
    </sbol:Component>
+   <sbol:Sequence rdf:about="http://partsregistry.org/cd/BBa_J23119_seq">
+      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+      <sbol:hasNamespace rdf:resource="http://partsregistry.org/cd"/>
+      <sbol:displayId>BBa_J23119_seq</sbol:displayId>
+   </sbol:Sequence>
 </rdf:RDF>

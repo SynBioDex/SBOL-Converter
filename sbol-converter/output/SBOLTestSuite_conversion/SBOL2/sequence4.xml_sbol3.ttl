@@ -15,9 +15,6 @@
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/1/L00727">
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation28">
-            <gbConv:note>Form I,II,III,IV,V,VII,VIII mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation28/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -29,6 +26,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form I,II,III,IV,V,VII,VIII mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation28</sbol:displayId>
          </sbol:SequenceFeature>
@@ -36,9 +36,6 @@
       <genbank:molecule>DNA</genbank:molecule>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation26">
-            <gbConv:note>Form I,II,III,IV,VI,VII,VIII mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation26/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -50,15 +47,15 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form I,II,III,IV,VI,VII,VIII mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation26</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation12">
-            <gbConv:note>Form III mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation12/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -70,6 +67,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form III mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation12</sbol:displayId>
          </sbol:SequenceFeature>
@@ -278,9 +278,6 @@
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation10">
-            <gbConv:note>Form I,V,VI,VII,VIII mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation10/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -292,15 +289,15 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form I,V,VI,VII,VIII mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation10</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation48">
-            <gbConv:note>Form I,II,III,IV,V,VI,VII,VIII mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation48/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -312,15 +309,16 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form I,II,III,IV,V,VI,VII,VIII mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation48</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
+      <obo:OBI_0001617>1546326</obo:OBI_0001617>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation34">
-            <gbConv:rpt_type>dispersed</gbConv:rpt_type>
-            <gbConv:rpt_family>Alu-Sb</gbConv:rpt_family>
-            <sbol:name>repeat_region</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation34/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -332,16 +330,15 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:rpt_type>dispersed</gbConv:rpt_type>
+            <gbConv:rpt_family>Alu-Sb</gbConv:rpt_family>
+            <sbol:name>repeat_region</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000657"/>
             <sbol:displayId>annotation34</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
-      <obo:OBI_0001617>1546326</obo:OBI_0001617>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation32">
-            <gbConv:note>Form I,II,III,IV,V,VI,VII,VIII mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation32/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -353,15 +350,15 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form I,II,III,IV,V,VI,VII,VIII mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation32</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation29">
-            <gbConv:note>Form VI mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation29/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -373,15 +370,15 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form VI mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation29</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation13">
-            <gbConv:note>Form IV mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation13/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -393,6 +390,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form IV mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation13</sbol:displayId>
          </sbol:SequenceFeature>
@@ -400,9 +400,6 @@
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation11">
-            <gbConv:note>Form II mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation11/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -414,15 +411,15 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form II mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation11</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation41">
-            <gbConv:note>sequence not found in GenBank Accesssion Number L08835</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation41/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -434,15 +431,15 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>sequence not found in GenBank Accesssion Number L08835</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0001411"/>
             <sbol:displayId>annotation41</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation35">
-            <gbConv:rpt_type>dispersed</gbConv:rpt_type>
-            <gbConv:rpt_family>Alu-Sp</gbConv:rpt_family>
-            <sbol:name>repeat_region</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation35/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -454,6 +451,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:rpt_type>dispersed</gbConv:rpt_type>
+            <gbConv:rpt_family>Alu-Sp</gbConv:rpt_family>
+            <sbol:name>repeat_region</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000657"/>
             <sbol:displayId>annotation35</sbol:displayId>
          </sbol:SequenceFeature>
@@ -486,8 +486,6 @@
       <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation33">
-            <gbConv:rpt_type>direct</gbConv:rpt_type>
-            <sbol:name>repeat_region</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation33/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -499,6 +497,8 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:rpt_type>direct</gbConv:rpt_type>
+            <sbol:name>repeat_region</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000657"/>
             <sbol:displayId>annotation33</sbol:displayId>
          </sbol:SequenceFeature>
@@ -506,6 +506,7 @@
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation16">
             <gbConv:codon_start>1</gbConv:codon_start>
+            <gbConv:protein_id>AAA75238.1</gbConv:protein_id>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation16/range1">
                   <gbConv:position>position1</gbConv:position>
@@ -530,7 +531,6 @@
                   <sbol:displayId>range11</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <gbConv:protein_id>AAA75238.1</gbConv:protein_id>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation16/range5">
                   <gbConv:position>position5</gbConv:position>
@@ -556,6 +556,9 @@
                </sbol:Range>
             </sbol:hasLocation>
             <sbol:displayId>annotation16</sbol:displayId>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+            <gbConv:multiRangeType>join</gbConv:multiRangeType>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation16/range0">
                   <gbConv:position>position0</gbConv:position>
@@ -568,7 +571,6 @@
                   <sbol:displayId>range0</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation16/range10">
                   <gbConv:position>position10</gbConv:position>
@@ -581,8 +583,6 @@
                   <sbol:displayId>range10</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <gbConv:multiRangeType>join</gbConv:multiRangeType>
-            <gbConv:gene>Mt-PK</gbConv:gene>
             <gbConv:db_xref>GI:976146</gbConv:db_xref>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation16/range4">
@@ -676,9 +676,6 @@
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation20">
-            <gbConv:note>Form II,III,and IV mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation20/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -690,15 +687,15 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form II,III,and IV mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation20</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation14">
-            <gbConv:note>Form IV mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation14/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -710,15 +707,15 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form IV mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation14</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation38">
-            <gbConv:rpt_type>dispersed</gbConv:rpt_type>
-            <gbConv:rpt_family>Alu-J</gbConv:rpt_family>
-            <sbol:name>repeat_region</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation38/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -730,6 +727,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:rpt_type>dispersed</gbConv:rpt_type>
+            <gbConv:rpt_family>Alu-J</gbConv:rpt_family>
+            <sbol:name>repeat_region</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000657"/>
             <sbol:displayId>annotation38</sbol:displayId>
          </sbol:SequenceFeature>
@@ -913,9 +913,6 @@
       </genbank:reference>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation42">
-            <gbConv:note>Form I,II,III,IV,V,VI,VII,VIII mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation42/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -927,14 +924,15 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form I,II,III,IV,V,VI,VII,VIII mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation42</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation36">
-            <gbConv:rpt_type>direct</gbConv:rpt_type>
-            <sbol:name>repeat_region</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation36/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -946,14 +944,14 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:rpt_type>direct</gbConv:rpt_type>
+            <sbol:name>repeat_region</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000657"/>
             <sbol:displayId>annotation36</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation1">
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation1/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -965,6 +963,8 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000704"/>
             <sbol:displayId>annotation1</sbol:displayId>
          </sbol:SequenceFeature>
@@ -973,9 +973,6 @@
       <obo:OBI_0001617>8469976</obo:OBI_0001617>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation40">
-            <gbConv:note>similar to EST sequence in GenBank Accession Number H04589</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation40/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -987,15 +984,15 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>similar to EST sequence in GenBank Accession Number H04589</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0001411"/>
             <sbol:displayId>annotation40</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation23">
-            <gbConv:note>Form I,II,III,IV,V,VI,VII,VIII mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation23/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -1007,14 +1004,17 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form I,II,III,IV,V,VI,VII,VIII mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation23</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation17">
-            <gbConv:codon_start>1</gbConv:codon_start>
             <gbConv:product>myotonin-protein kinase, Form VI</gbConv:product>
+            <gbConv:codon_start>1</gbConv:codon_start>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation17/range3">
                   <gbConv:position>position3</gbConv:position>
@@ -1039,6 +1039,7 @@
                   <sbol:displayId>range7</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <sbol:name>myotonin-protein kinase, Form VI</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation17/range13">
                   <gbConv:position>position13</gbConv:position>
@@ -1051,7 +1052,6 @@
                   <sbol:displayId>range13</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <sbol:name>myotonin-protein kinase, Form VI</sbol:name>
             <sbol:displayId>annotation17</sbol:displayId>
             <gbConv:protein_id>AAA75239.1</gbConv:protein_id>
             <gbConv:gene>Mt-PK</gbConv:gene>
@@ -1118,6 +1118,7 @@
                   <sbol:displayId>range11</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>The Form VI mRNA product has a 5 residue deletion compared to Form I</gbConv:note>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation17/range5">
                   <gbConv:position>position5</gbConv:position>
@@ -1130,7 +1131,6 @@
                   <sbol:displayId>range5</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <gbConv:note>The Form VI mRNA product has a 5 residue deletion compared to Form I</gbConv:note>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation17/range9">
                   <gbConv:position>position9</gbConv:position>
@@ -1198,9 +1198,6 @@
       <sbol:displayId>L00727</sbol:displayId>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation21">
-            <gbConv:note>Form I,II,III,IV,V,VI,VII,VIII mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation21/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -1212,6 +1209,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form I,II,III,IV,V,VI,VII,VIII mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation21</sbol:displayId>
          </sbol:SequenceFeature>
@@ -1307,6 +1307,7 @@
                   <sbol:displayId>range12</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:codon_start>1</gbConv:codon_start>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation15/range2">
                   <gbConv:position>position2</gbConv:position>
@@ -1319,7 +1320,6 @@
                   <sbol:displayId>range2</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <gbConv:codon_start>1</gbConv:codon_start>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation15/range6">
                   <gbConv:position>position6</gbConv:position>
@@ -1401,9 +1401,6 @@
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation45">
-            <gbConv:note>Form I,II,III,IV,V,VI,VII mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation45/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -1415,14 +1412,15 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form I,II,III,IV,V,VI,VII mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation45</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation39">
-            <gbConv:rpt_type>direct</gbConv:rpt_type>
-            <sbol:name>repeat_region</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation39/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -1434,6 +1432,8 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:rpt_type>direct</gbConv:rpt_type>
+            <sbol:name>repeat_region</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000657"/>
             <sbol:displayId>annotation39</sbol:displayId>
          </sbol:SequenceFeature>
@@ -1502,6 +1502,7 @@
                   <sbol:displayId>range11</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <sbol:role rdf:resource="https://identifiers.org/SO:0000234"/>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation4/range5">
                   <gbConv:position>position5</gbConv:position>
@@ -1514,7 +1515,6 @@
                   <sbol:displayId>range5</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000234"/>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation4/range0">
                   <gbConv:position>position0</gbConv:position>
@@ -1564,6 +1564,7 @@
                   <sbol:displayId>range3</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <sbol:name>alternatively spliced Form VIII mRNA</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation4/range1">
                   <gbConv:position>position1</gbConv:position>
@@ -1576,7 +1577,6 @@
                   <sbol:displayId>range1</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <sbol:name>alternatively spliced Form VIII mRNA</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation4/range8">
                   <gbConv:position>position8</gbConv:position>
@@ -1594,9 +1594,6 @@
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation43">
-            <gbConv:note>Form I,II,III,IV,V,VI,VII,VIII mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation43/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -1608,14 +1605,15 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form I,II,III,IV,V,VI,VII,VIII mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation43</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation37">
-            <gbConv:rpt_type>direct</gbConv:rpt_type>
-            <sbol:name>repeat_region</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation37/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -1627,6 +1625,8 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:rpt_type>direct</gbConv:rpt_type>
+            <sbol:name>repeat_region</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000657"/>
             <sbol:displayId>annotation37</sbol:displayId>
          </sbol:SequenceFeature>
@@ -1658,6 +1658,7 @@
                   <sbol:displayId>range6</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:multiRangeType>join</gbConv:multiRangeType>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation2/range1">
                   <gbConv:position>position1</gbConv:position>
@@ -1670,7 +1671,6 @@
                   <sbol:displayId>range1</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <gbConv:multiRangeType>join</gbConv:multiRangeType>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation2/range5">
                   <gbConv:position>position5</gbConv:position>
@@ -1681,18 +1681,6 @@
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
                   </sbol:hasSequence>
                   <sbol:displayId>range5</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation2/range11">
-                  <gbConv:position>position11</gbConv:position>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>9586</sbol:end>
-                  <sbol:start>9540</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range11</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
             <sbol:hasLocation>
@@ -1707,8 +1695,20 @@
                   <sbol:displayId>range4</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000234"/>
             <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:role rdf:resource="https://identifiers.org/SO:0000234"/>
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation2/range11">
+                  <gbConv:position>position11</gbConv:position>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>9586</sbol:end>
+                  <sbol:start>9540</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range11</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation2/range9">
                   <gbConv:position>position9</gbConv:position>
@@ -1811,9 +1811,6 @@
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation24">
-            <gbConv:note>Form I,II,III,IV,V,VI,VII,VIII mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation24/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -1825,6 +1822,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form I,II,III,IV,V,VI,VII,VIII mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation24</sbol:displayId>
          </sbol:SequenceFeature>
@@ -1932,6 +1932,7 @@
             </sbol:hasLocation>
             <sbol:displayId>annotation18</sbol:displayId>
             <gbConv:codon_start>1</gbConv:codon_start>
+            <gbConv:translation>MGGHFWPPEPYTVFMWGSPWEADSPRVKLRGREKGRQTEGGAFPLVSSALSGDPRFFSPTTPPAEPIVVRLKEVRLQRDDFEILKVIGRGAFSEVAVVKMKQTGQVYAMKIMNKWDMLKRGEVSCFREERDVLVNGDRRWITQLHFAFQDENYLYLVMEYYVGGDLLTLLSKFGERIPAEMARFYLAEIVMAIDSVHRLGYVHRDIKPDNILLDRCGHIRLADFGSCLKLRADGTTPFYADSTAETYGKIVHYKEHLSLPLVDEGVPEEARDFIQRLLCPPETRLGRGGAGDFRTHPFFFGLDWDGLRDSVPPFTPDFEGATDTCNFDLVEDGLTAMVSGGGETLSDIREGAPLGVHLPFVGYSYSCMALRDSEVPGPTPMEVEAEQLLEPHVQAPSLEPSVSPQDETAEVAVPAAVPAAEAEAEVTLRELQEALEEEVLTRQSLSREMEAIRTDNQNFASQLREAEARNRDLEAHVRQLQERMELLQAEGATAVTGVPSPRATDPPSHLDGPPAVAVGQCPLVGPGPMHRRHLLLPARVPRPGLSEALSLLLFAVVLSRAAALGCIGLVAHAGQLTAVWRRPGAARAP</gbConv:translation>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation18/range5">
                   <gbConv:position>position5</gbConv:position>
@@ -1944,7 +1945,8 @@
                   <sbol:displayId>range5</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <gbConv:translation>MGGHFWPPEPYTVFMWGSPWEADSPRVKLRGREKGRQTEGGAFPLVSSALSGDPRFFSPTTPPAEPIVVRLKEVRLQRDDFEILKVIGRGAFSEVAVVKMKQTGQVYAMKIMNKWDMLKRGEVSCFREERDVLVNGDRRWITQLHFAFQDENYLYLVMEYYVGGDLLTLLSKFGERIPAEMARFYLAEIVMAIDSVHRLGYVHRDIKPDNILLDRCGHIRLADFGSCLKLRADGTTPFYADSTAETYGKIVHYKEHLSLPLVDEGVPEEARDFIQRLLCPPETRLGRGGAGDFRTHPFFFGLDWDGLRDSVPPFTPDFEGATDTCNFDLVEDGLTAMVSGGGETLSDIREGAPLGVHLPFVGYSYSCMALRDSEVPGPTPMEVEAEQLLEPHVQAPSLEPSVSPQDETAEVAVPAAVPAAEAEAEVTLRELQEALEEEVLTRQSLSREMEAIRTDNQNFASQLREAEARNRDLEAHVRQLQERMELLQAEGATAVTGVPSPRATDPPSHLDGPPAVAVGQCPLVGPGPMHRRHLLLPARVPRPGLSEALSLLLFAVVLSRAAALGCIGLVAHAGQLTAVWRRPGAARAP</gbConv:translation>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation18/range9">
                   <gbConv:position>position9</gbConv:position>
@@ -1957,8 +1959,6 @@
                   <sbol:displayId>range9</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
-            <gbConv:gene>Mt-PK</gbConv:gene>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation18/range0">
                   <gbConv:position>position0</gbConv:position>
@@ -1972,6 +1972,7 @@
                </sbol:Range>
             </sbol:hasLocation>
             <gbConv:db_xref>GI:976143</gbConv:db_xref>
+            <gbConv:protein_id>AAA75235.1</gbConv:protein_id>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation18/range4">
                   <gbConv:position>position4</gbConv:position>
@@ -1984,7 +1985,6 @@
                   <sbol:displayId>range4</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <gbConv:protein_id>AAA75235.1</gbConv:protein_id>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation18/range8">
                   <gbConv:position>position8</gbConv:position>
@@ -1997,6 +1997,7 @@
                   <sbol:displayId>range8</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:multiRangeType>join</gbConv:multiRangeType>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation18/range13">
                   <gbConv:position>position13</gbConv:position>
@@ -2009,7 +2010,6 @@
                   <sbol:displayId>range13</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <gbConv:multiRangeType>join</gbConv:multiRangeType>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasSequence>
@@ -2232,19 +2232,6 @@
                </sbol:Range>
             </sbol:hasLocation>
             <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation22/range2">
-                  <gbConv:position>position2</gbConv:position>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>3420</sbol:end>
-                  <sbol:start>3272</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range2</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
-            <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation22/range12">
                   <gbConv:position>position12</gbConv:position>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -2254,6 +2241,19 @@
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
                   </sbol:hasSequence>
                   <sbol:displayId>range12</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation22/range2">
+                  <gbConv:position>position2</gbConv:position>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>3420</sbol:end>
+                  <sbol:start>3272</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range2</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
             <gbConv:product>myotonin-protein kinase, Form II,III,IV</gbConv:product>
@@ -2336,18 +2336,7 @@
             <gbConv:multiRangeType>join</gbConv:multiRangeType>
             <gbConv:protein_id>AAA75240.1</gbConv:protein_id>
             <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation22/range10">
-                  <gbConv:position>position10</gbConv:position>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>9586</sbol:end>
-                  <sbol:start>9540</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range10</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
+            <gbConv:translation>MKQTGQVYAMKIMNKWDMLKRGEVSCFREERDVLVNGDRRWITQLHFAFQDENYLYLVMEYYVGGDLLTLLSKFGERIPAEMARFYLAEIVMAIDSVHRLGYVHRDIKPDNILLDRCGHIRLADFGSCLKLRADGTVRSLVAVGTPDYLSPEILQAVGGGPGTGSYGPECDWWALGVFAYEMFYGQTPFYADSTAETYGKIVHYKEHLSLPLVDEGVPEEARDFIQRLLCPPETRLGRGGAGDFRTHPFFFGLDWDGLRDSVPPFTPDFEGATDTCNFDLVEDGLTAMVSGGGETLSDIREGAPLGVHLPFVGYSYSCMALRDSEVPGPTPMEVEAEQLLEPHVQAPSLEPSVSPQDETAEVAVPAAVPAAEAEAEVTLRELQEALEEEVLTRQSLSREMEAIRTDNQNFASQLREAEARNRDLEAHVRQLQERMELLQAEGATAVTGVPSPRATDPPSHLDGPPAVAVGQCPLVGPGPMHRRHLLLPARVPRPGLSEALSLLLFAVVLSRAAALGCIGLVAHAGQLTAVWRRPGAARAP</gbConv:translation>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation22/range0">
                   <gbConv:position>position0</gbConv:position>
@@ -2360,7 +2349,18 @@
                   <sbol:displayId>range0</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <gbConv:translation>MKQTGQVYAMKIMNKWDMLKRGEVSCFREERDVLVNGDRRWITQLHFAFQDENYLYLVMEYYVGGDLLTLLSKFGERIPAEMARFYLAEIVMAIDSVHRLGYVHRDIKPDNILLDRCGHIRLADFGSCLKLRADGTVRSLVAVGTPDYLSPEILQAVGGGPGTGSYGPECDWWALGVFAYEMFYGQTPFYADSTAETYGKIVHYKEHLSLPLVDEGVPEEARDFIQRLLCPPETRLGRGGAGDFRTHPFFFGLDWDGLRDSVPPFTPDFEGATDTCNFDLVEDGLTAMVSGGGETLSDIREGAPLGVHLPFVGYSYSCMALRDSEVPGPTPMEVEAEQLLEPHVQAPSLEPSVSPQDETAEVAVPAAVPAAEAEAEVTLRELQEALEEEVLTRQSLSREMEAIRTDNQNFASQLREAEARNRDLEAHVRQLQERMELLQAEGATAVTGVPSPRATDPPSHLDGPPAVAVGQCPLVGPGPMHRRHLLLPARVPRPGLSEALSLLLFAVVLSRAAALGCIGLVAHAGQLTAVWRRPGAARAP</gbConv:translation>
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation22/range10">
+                  <gbConv:position>position10</gbConv:position>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>9586</sbol:end>
+                  <sbol:start>9540</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range10</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation22/range3">
                   <gbConv:position>position3</gbConv:position>
@@ -2378,9 +2378,6 @@
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation46">
-            <gbConv:note>region previously sequenced; see GenBank Accession Number M87313</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation46/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -2392,6 +2389,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>region previously sequenced; see GenBank Accession Number M87313</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0001411"/>
             <sbol:displayId>annotation46</sbol:displayId>
          </sbol:SequenceFeature>
@@ -2577,9 +2577,6 @@
       <genbank:division>PRI</genbank:division>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation44">
-            <gbConv:note>Form I,II,III,IV,V,VI,VII,VIII mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation44/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -2591,15 +2588,15 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form I,II,III,IV,V,VI,VII,VIII mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation44</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation30">
-            <gbConv:rpt_type>dispersed</gbConv:rpt_type>
-            <gbConv:rpt_family>Alu-J</gbConv:rpt_family>
-            <sbol:name>repeat_region</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation30/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -2611,6 +2608,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:rpt_type>dispersed</gbConv:rpt_type>
+            <gbConv:rpt_family>Alu-J</gbConv:rpt_family>
+            <sbol:name>repeat_region</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000657"/>
             <sbol:displayId>annotation30</sbol:displayId>
          </sbol:SequenceFeature>
@@ -2619,9 +2619,6 @@
       <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation27">
-            <gbConv:note>Form V mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation27/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -2633,15 +2630,15 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form V mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation27</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation25">
-            <gbConv:note>Form I,II,III,IV,V,VI,VII,VIII mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation25/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -2653,6 +2650,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form I,II,III,IV,V,VI,VII,VIII mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation25</sbol:displayId>
          </sbol:SequenceFeature>
@@ -2708,6 +2708,7 @@
                   <sbol:displayId>range6</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <sbol:name>myotonin-protein kinase, Form VIII</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation19/range1">
                   <gbConv:position>position1</gbConv:position>
@@ -2720,20 +2721,8 @@
                   <sbol:displayId>range1</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <sbol:name>myotonin-protein kinase, Form VIII</sbol:name>
             <gbConv:protein_id>AAA75237.1</gbConv:protein_id>
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation19/range5">
-                  <gbConv:position>position5</gbConv:position>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>4246</sbol:end>
-                  <sbol:start>4040</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range5</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
+            <gbConv:product>myotonin-protein kinase, Form VIII</gbConv:product>
             <gbConv:note>The Form VIII mRNA product terminates immediately after the final splice acceptor and is missing a predicted COOH-transmembrane domain found in Form I</gbConv:note>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation19/range9">
@@ -2747,8 +2736,19 @@
                   <sbol:displayId>range9</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <gbConv:product>myotonin-protein kinase, Form VIII</gbConv:product>
             <gbConv:db_xref>GI:976145</gbConv:db_xref>
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation19/range5">
+                  <gbConv:position>position5</gbConv:position>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>4246</sbol:end>
+                  <sbol:start>4040</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range5</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation19/range0">
                   <gbConv:position>position0</gbConv:position>
@@ -2764,6 +2764,8 @@
             <gbConv:translation>MGGHFWPPEPYTVFMWGSPWEADSPRVKLRGREKGRQTEGGAFPLVSSALSGDPRFFSPTTPPAEPIVVRLKEVRLQRDDFEILKVIGRGAFSEVAVVKMKQTGQVYAMKIMNKWDMLKRGEVSCFREERDVLVNGDRRWITQLHFAFQDENYLYLVMEYYVGGDLLTLLSKFGERIPAEMARFYLAEIVMAIDSVHRLGYVHRDIKPDNILLDRCGHIRLADFGSCLKLRADGTVRSLVAVGTPDYLSPEILQAVGGGPGTGSYGPECDWWALGVFAYEMFYGQTPFYADSTAETYGKIVHYKEHLSLPLVDEGVPEEARDFIQRLLCPPETRLGRGGAGDFRTHPFFFGLDWDGLRDSVPPFTPDFEGATDTCNFDLVEDGLTAMVSGGGETLSDIREGAPLGVHLPFVGYSYSCMALRDSEVPGPTPMEVEAEQLLEPHVQAPSLEPSVSPQDETAEVAVPAAVPAAEAEAEVTLRELQEALEEEVLTRQSLSREMEAIRTDNQNFASQLREAEARNRDLEAHVRQLQERMELLQAEGATGP</gbConv:translation>
             <gbConv:codon_start>1</gbConv:codon_start>
             <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+            <sbol:displayId>annotation19</sbol:displayId>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation19/range4">
                   <gbConv:position>position4</gbConv:position>
@@ -2776,8 +2778,6 @@
                   <sbol:displayId>range4</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <sbol:displayId>annotation19</sbol:displayId>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation19/range8">
                   <gbConv:position>position8</gbConv:position>
@@ -2819,9 +2819,6 @@
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation49">
-            <gbConv:rpt_unit_seq>gct</gbConv:rpt_unit_seq>
-            <gbConv:note>9 gct repeats in this region; expanded variants known to be present in patients with myotonic dystrophy</gbConv:note>
-            <sbol:name>9 gct repeats in this region; expanded variants known to be present in patients with myotonic dystrophy</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation49/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -2833,6 +2830,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:rpt_unit_seq>gct</gbConv:rpt_unit_seq>
+            <gbConv:note>9 gct repeats in this region; expanded variants known to be present in patients with myotonic dystrophy</gbConv:note>
+            <sbol:name>9 gct repeats in this region; expanded variants known to be present in patients with myotonic dystrophy</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000657"/>
             <sbol:displayId>annotation49</sbol:displayId>
          </sbol:SequenceFeature>
@@ -3000,6 +3000,7 @@
                </sbol:Range>
             </sbol:hasLocation>
             <sbol:displayId>annotation8</sbol:displayId>
+            <gbConv:gene>Mt-PK</gbConv:gene>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation8/range3">
                   <gbConv:position>position3</gbConv:position>
@@ -3012,7 +3013,6 @@
                   <sbol:displayId>range3</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <gbConv:gene>Mt-PK</gbConv:gene>
             <gbConv:product>alternatively spliced Form III mRNA</gbConv:product>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation8/range9">
@@ -3030,9 +3030,6 @@
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation47">
-            <gbConv:note>Form I,II,III,IV,V,VI mRNA</gbConv:note>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:name>Mt-PK</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation47/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -3044,6 +3041,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>Form I,II,III,IV,V,VI mRNA</gbConv:note>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:name>Mt-PK</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000147"/>
             <sbol:displayId>annotation47</sbol:displayId>
          </sbol:SequenceFeature>
@@ -3149,6 +3149,7 @@
                </sbol:Range>
             </sbol:hasLocation>
             <gbConv:gene>Mt-PK</gbConv:gene>
+            <gbConv:multiRangeType>join</gbConv:multiRangeType>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation6/range6">
                   <gbConv:position>position6</gbConv:position>
@@ -3161,7 +3162,6 @@
                   <sbol:displayId>range6</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <gbConv:multiRangeType>join</gbConv:multiRangeType>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation6/range4">
                   <gbConv:position>position4</gbConv:position>
@@ -3188,18 +3188,6 @@
             </sbol:hasLocation>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000234"/>
             <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation6/range12">
-                  <gbConv:position>position12</gbConv:position>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>9965</sbol:end>
-                  <sbol:start>9876</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range12</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation6/range1">
                   <gbConv:position>position1</gbConv:position>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -3209,6 +3197,18 @@
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
                   </sbol:hasSequence>
                   <sbol:displayId>range1</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation6/range12">
+                  <gbConv:position>position12</gbConv:position>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>9965</sbol:end>
+                  <sbol:start>9876</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range12</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
             <sbol:hasLocation>
@@ -3242,9 +3242,6 @@
       <sbol:description>Human myotonin protein kinase (Mt-PK) gene, complete cds.</sbol:description>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation31">
-            <gbConv:rpt_type>dispersed</gbConv:rpt_type>
-            <gbConv:rpt_family>Alu-Sc</gbConv:rpt_family>
-            <sbol:name>repeat_region</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation31/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -3256,6 +3253,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:rpt_type>dispersed</gbConv:rpt_type>
+            <gbConv:rpt_family>Alu-Sc</gbConv:rpt_family>
+            <sbol:name>repeat_region</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000657"/>
             <sbol:displayId>annotation31</sbol:displayId>
          </sbol:SequenceFeature>
@@ -3289,8 +3289,6 @@
       <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/U49845/annotation53">
-            <gbConv:gene>AXL2</gbConv:gene>
-            <sbol:name>AXL2</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/U49845/annotation53/range">
                   <gbConv:endGreaterThan>true</gbConv:endGreaterThan>
@@ -3304,6 +3302,8 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:gene>AXL2</gbConv:gene>
+            <sbol:name>AXL2</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000704"/>
             <sbol:displayId>annotation53</sbol:displayId>
          </sbol:SequenceFeature>
@@ -3312,9 +3312,6 @@
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/U49845/annotation57">
-            <gbConv:product>Rev7p</gbConv:product>
-            <gbConv:gene>REV7</gbConv:gene>
-            <sbol:name>Rev7p</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/U49845/annotation57/range">
                   <gbConv:endGreaterThan>true</gbConv:endGreaterThan>
@@ -3328,6 +3325,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:product>Rev7p</gbConv:product>
+            <gbConv:gene>REV7</gbConv:gene>
+            <sbol:name>Rev7p</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000234"/>
             <sbol:displayId>annotation57</sbol:displayId>
          </sbol:SequenceFeature>
@@ -3364,8 +3364,6 @@
       <genbank:organism>Saccharomyces cerevisiae Eukaryota; Fungi; Dikarya; Ascomycota; Saccharomycotina; Saccharomycetes; Saccharomycetales; Saccharomycetaceae; Saccharomyces.</genbank:organism>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/U49845/annotation56">
-            <gbConv:gene>REV7</gbConv:gene>
-            <sbol:name>REV7</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/U49845/annotation56/range">
                   <gbConv:endGreaterThan>true</gbConv:endGreaterThan>
@@ -3379,6 +3377,8 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:gene>REV7</gbConv:gene>
+            <sbol:name>REV7</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000704"/>
             <sbol:displayId>annotation56</sbol:displayId>
          </sbol:SequenceFeature>
@@ -3386,8 +3386,6 @@
       <sbol:description>Saccharomyces cerevisiae TCP1-beta gene, partial cds; and Axl2p (AXL2) and Rev7p (REV7) genes, complete cds.</sbol:description>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/U49845/annotation51">
-            <gbConv:product>TCP1-beta</gbConv:product>
-            <sbol:name>TCP1-beta</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/U49845/annotation51/range">
                   <gbConv:endGreaterThan>true</gbConv:endGreaterThan>
@@ -3401,6 +3399,8 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:product>TCP1-beta</gbConv:product>
+            <sbol:name>TCP1-beta</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000234"/>
             <sbol:displayId>annotation51</sbol:displayId>
          </sbol:SequenceFeature>
@@ -3444,11 +3444,6 @@
       <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/U49845/annotation50">
-            <gbConv:chromosome>IX</gbConv:chromosome>
-            <gbConv:db_xref>taxon:4932</gbConv:db_xref>
-            <gbConv:mol_type>genomic DNA</gbConv:mol_type>
-            <gbConv:organism>Saccharomyces cerevisiae</gbConv:organism>
-            <sbol:name>Saccharomyces cerevisiae</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/U49845/annotation50/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -3460,6 +3455,11 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:chromosome>IX</gbConv:chromosome>
+            <gbConv:db_xref>taxon:4932</gbConv:db_xref>
+            <gbConv:mol_type>genomic DNA</gbConv:mol_type>
+            <gbConv:organism>Saccharomyces cerevisiae</gbConv:organism>
+            <sbol:name>Saccharomyces cerevisiae</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0002206"/>
             <sbol:displayId>annotation50</sbol:displayId>
          </sbol:SequenceFeature>
@@ -3481,9 +3481,6 @@
       </genbank:reference>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/U49845/annotation54">
-            <gbConv:product>Axl2p</gbConv:product>
-            <gbConv:gene>AXL2</gbConv:gene>
-            <sbol:name>Axl2p</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/U49845/annotation54/range">
                   <gbConv:endGreaterThan>true</gbConv:endGreaterThan>
@@ -3497,6 +3494,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:product>Axl2p</gbConv:product>
+            <gbConv:gene>AXL2</gbConv:gene>
+            <sbol:name>Axl2p</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000234"/>
             <sbol:displayId>annotation54</sbol:displayId>
          </sbol:SequenceFeature>

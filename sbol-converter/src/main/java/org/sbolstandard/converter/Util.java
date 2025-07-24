@@ -1167,4 +1167,54 @@ public class Util {
 			}
 			return false;
 		}
+
+		public static Sequence getEmptySequence(Component sbol3ParentComp, SBOLDocument document) throws SBOLGraphException
+		{
+			Sequence sbol3Sequence = null;
+			URI emptySeqUri= URI.create(sbol3ParentComp.getUri().toString() + "_seq");				
+			if (sbol3ParentComp.getSequences()!=null && !sbol3ParentComp.getSequences().isEmpty()) {
+				sbol3Sequence = Util.getByUri(sbol3ParentComp.getSequences(), emptySeqUri);
+				//sbol3ParentComp.getSequences().add(sbol3Sequence);
+				//sbol3Sequence = sbol3ParentComp.getSequences().get(0);				
+			}
+			else{ 
+				sbol3Sequence = Util.createEmptySequence(sbol3ParentComp, document, emptySeqUri);
+			}
+			return sbol3Sequence;
+		}
+
+		public static Sequence createEmptySequence(Component sbol3Component, SBOLDocument document, URI sequenceURI) throws SBOLGraphException {
+			Sequence sbol3Sequence = document.createSequence(sequenceURI, sbol3Component.getNamespace());
+			List<Encoding> encodings = getEncodingsFromComponentType(sbol3Component);
+			if (encodings != null && !encodings.isEmpty()) {
+				sbol3Sequence.setEncoding(encodings.get(0));
+			}
+			sbol3Sequence.setEncoding(Encoding.NucleicAcid);
+			sbol3Component.setSequences(Arrays.asList(sbol3Sequence));
+			return sbol3Sequence;
+		}
+
+		private static List<Encoding> getEncodingsFromComponentType(Component sbol3Component) {
+			List<Encoding> encodings = null;
+			if (sbol3Component.getTypes() != null) {
+				for (URI type : sbol3Component.getTypes()) {
+					ComponentType compType = ComponentType.get(type);
+					if (compType != null) {
+						List<Encoding> currentEncodings = ComponentType.checkComponentTypeMatch(compType);
+						if (currentEncodings != null && !currentEncodings.isEmpty()) {
+							if (encodings == null) {
+								encodings = currentEncodings;
+							} else {
+								encodings.addAll(currentEncodings);
+							}
+						}
+					}
+
+				}
+			}
+			return encodings;
+		}
+
+
+
 }

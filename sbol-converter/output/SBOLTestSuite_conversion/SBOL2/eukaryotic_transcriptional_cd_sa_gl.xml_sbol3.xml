@@ -13,11 +13,17 @@
     xmlns:sbh="http://wiki.synbiohub.org/wiki/Terms/synbiohub#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422">
+      <sbol:hasSequence>
+         <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422_seq"/>
+      </sbol:hasSequence>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/annotation942815">
             <sbol:hasLocation>
                <sbol:EntireSequence rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/annotation942815/gl942815">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422_seq"/>
+                  </sbol:hasSequence>
                   <sbol:displayId>gl942815</sbol:displayId>
                </sbol:EntireSequence>
             </sbol:hasLocation>
@@ -36,4 +42,9 @@
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:displayId>Pro_GeneratedInstance82</sbol:displayId>
    </sbol:Component>
+   <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422_seq">
+      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+      <sbol:hasNamespace rdf:resource="https://synbiohub.org/public/igem"/>
+      <sbol:displayId>BBa_E0422_seq</sbol:displayId>
+   </sbol:Sequence>
 </rdf:RDF>

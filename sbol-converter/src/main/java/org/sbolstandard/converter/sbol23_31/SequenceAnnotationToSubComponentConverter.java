@@ -3,6 +3,7 @@ package org.sbolstandard.converter.sbol23_31;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core2.SequenceAnnotation;
+import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.Location;
 import org.sbolstandard.core3.entity.SBOLDocument;
@@ -35,8 +36,15 @@ public class SequenceAnnotationToSubComponentConverter
 				sbol3SubComponent.addRole(Util.convertSOUri_2_to_3(role));
 			}		
 		}
+		
+		/*
 		Sequence sbol3Sequence = Util.getSBOL3SequenceFromSBOl2Parent(document, sbol2ParentCompDef, parameters);
 		
+		Component sbol3ParentComp = (Component) sbol3Parent;	    
+		if (sbol3Sequence == null) {
+			sbol3Sequence= Util.getEmptySequence(sbol3ParentComp, document);
+		}		
+
 		if (sbol2SeqAnno.getLocations()!=null){
 			for (org.sbolstandard.core2.Location sbol2Location : sbol2SeqAnno.getLocations()) {
 	
@@ -53,13 +61,27 @@ public class SequenceAnnotationToSubComponentConverter
 					sbol3Location = sbol3SubComponent.createCut(sbol2Location.getDisplayId(), sbol2Cut.getAt(), sbol3Sequence);											
 				} 
 				else if (sbol2Location instanceof org.sbolstandard.core2.GenericLocation) {
-					sbol3Location = sbol3SubComponent.createEntireSequence(sbol2Location.getDisplayId(), sbol3Sequence);												
+					
+					//org.sbolstandard.core2.Component sbol2Comp= sbol2SeqAnno.getComponent();
+					//org.sbolstandard.core2.ComponentDefinition sbol2CompDef=sbol2Comp.getDefinition();
+					//org.sbolstandard.core2.Sequence sbol2ChildSequence = sbol2CompDef.getSequences().iterator().next();
+					//if (sbol2ChildSequence==null)
+					//{
+					//	sbol3Sequence= Util.getEmptySequence(sbol3ParentComp, document);//GMGMGM
+					//}
+					//URI sbol3SubComponentSeqeunceUri=Util.createSBOL3Uri(sbol2ChildSequence.getIdentity(), parameters);
+					//Sequence sbol3SubComponentSequence = document.getIdentified(sbol3SubComponentSeqeunceUri, Sequence.class);
+					
+					sbol3Location = sbol3SubComponent.createEntireSequence(sbol2Location.getDisplayId(), null);												
 				}
 				
 				sbol3Location.setOrientation(sbol3Orientation);				
 				Util.copyIdentified(sbol2Location, sbol3Location);
 			}
+			
 		}
+		*/
+	
 		Util.copyIdentified(sbol2SeqAnno, sbol3SubComponent);
 		return sbol3SubComponent;
 	}

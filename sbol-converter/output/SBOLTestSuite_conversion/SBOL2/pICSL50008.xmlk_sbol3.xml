@@ -25,10 +25,6 @@
       <genbank:source>natural DNA sequence</genbank:source>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation4">
-            <gbConv:note>color: #a6acb3</gbConv:note>
-            <gbConv:note>GCTT BsaI overhang</gbConv:note>
-            <gbConv:label>GCTT BsaI overhang</gbConv:label>
-            <sbol:name>GCTT BsaI overhang</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation4/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -40,6 +36,10 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>color: #a6acb3</gbConv:note>
+            <gbConv:note>GCTT BsaI overhang</gbConv:note>
+            <gbConv:label>GCTT BsaI overhang</gbConv:label>
+            <sbol:name>GCTT BsaI overhang</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0001411"/>
             <sbol:displayId>annotation4</sbol:displayId>
          </sbol:SequenceFeature>
@@ -48,9 +48,6 @@
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation0">
-            <gbConv:mol_type>genomic DNA</gbConv:mol_type>
-            <gbConv:organism>unspecified</gbConv:organism>
-            <sbol:name>unspecified</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation0/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -62,6 +59,9 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:mol_type>genomic DNA</gbConv:mol_type>
+            <gbConv:organism>unspecified</gbConv:organism>
+            <sbol:name>unspecified</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0002206"/>
             <sbol:displayId>annotation0</sbol:displayId>
          </sbol:SequenceFeature>
@@ -74,11 +74,6 @@
       </sbol:hasSequence>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation1">
-            <gbConv:note>color: #a6acb3; direction: LEFT</gbConv:note>
-            <gbConv:note>Length: 1011;Found at strand: negative;Start codon: ATG</gbConv:note>
-            <gbConv:note>SpecR</gbConv:note>
-            <gbConv:label>SpecR</gbConv:label>
-            <sbol:name>SpecR</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation1/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001031"/>
@@ -90,6 +85,11 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>color: #a6acb3; direction: LEFT</gbConv:note>
+            <gbConv:note>Length: 1011;Found at strand: negative;Start codon: ATG</gbConv:note>
+            <gbConv:note>SpecR</gbConv:note>
+            <gbConv:label>SpecR</gbConv:label>
+            <sbol:name>SpecR</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0001411"/>
             <sbol:displayId>annotation1</sbol:displayId>
          </sbol:SequenceFeature>
@@ -100,10 +100,6 @@
       <genbank:keywords>pICSL50008 corr (1)</genbank:keywords>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation2">
-            <gbConv:note>color: #a6acb3</gbConv:note>
-            <gbConv:note>TTCG BsaI overhang</gbConv:note>
-            <gbConv:label>TTCG BsaI overhang</gbConv:label>
-            <sbol:name>TTCG BsaI overhang</sbol:name>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation2/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -115,6 +111,10 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:note>color: #a6acb3</gbConv:note>
+            <gbConv:note>TTCG BsaI overhang</gbConv:note>
+            <gbConv:label>TTCG BsaI overhang</gbConv:label>
+            <sbol:name>TTCG BsaI overhang</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0001411"/>
             <sbol:displayId>annotation2</sbol:displayId>
          </sbol:SequenceFeature>
@@ -125,8 +125,8 @@
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation3">
             <gbConv:label>GFP</gbConv:label>
-            <gbConv:translation>VSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTFSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</gbConv:translation>
             <sbol:name>GFP</sbol:name>
+            <gbConv:translation>VSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTFSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</gbConv:translation>
             <gbConv:note>color: #05fd14</gbConv:note>
             <gbConv:note>GFP</gbConv:note>
             <sbol:hasLocation>

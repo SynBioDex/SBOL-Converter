@@ -7,10 +7,14 @@ import org.sbolstandard.core3.entity.Location;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.SequenceFeature;
 import org.sbolstandard.core3.util.SBOLGraphException;
+import org.sbolstandard.core3.vocabulary.ComponentType;
+import org.sbolstandard.core3.vocabulary.Encoding;
 import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Sequence;
 
 import java.net.URI;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 
 import org.sbolstandard.converter.Util;
@@ -44,9 +48,15 @@ public class SequenceAnnotationToFeatureConverter implements ChildEntityConverte
 		else{
 			seqFeature =sbol3ParentComp.createSequenceFeature();
 		}
-		
+		parameters.addMapping(seqa.getIdentity(), seqFeature.getUri());
+
 		seqFeature.setRoles(Util.convertSORoles2_to_3(seqa.getRoles()));
-       
+
+	/* 
+		if (sbol3Sequence == null) {
+			sbol3Sequence= Util.getEmptySequence(sbol3ParentComp, document);
+		}
+
 		// Iterate over all locations defined in the SBOL2 SequenceAnnotation.
 		for (org.sbolstandard.core2.Location sbol2Loc : seqa.getLocations()) {
 			Location sbol3Location = null;
@@ -91,6 +101,7 @@ public class SequenceAnnotationToFeatureConverter implements ChildEntityConverte
 			}
 		}
 
+*/
 		// Copy common identified properties (displayId, version, etc.) from the SBOL2
 		// SequenceAnnotation to the SBOL3 SequenceFeature.
 		Util.copyIdentified(seqa, seqFeature);
@@ -98,5 +109,7 @@ public class SequenceAnnotationToFeatureConverter implements ChildEntityConverte
 		// Return the created SBOL3 SequenceFeature object.
 		return seqFeature;
 	}
+
+	
 
 }

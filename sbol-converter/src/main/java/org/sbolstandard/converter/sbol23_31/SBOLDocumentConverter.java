@@ -3,6 +3,7 @@ package org.sbolstandard.converter.sbol23_31;
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URI;
 
 import org.apache.jena.riot.RDFFormat;
 import org.apache.jena.riot.RiotException;
@@ -21,8 +22,14 @@ import org.sbolstandard.core2.SBOLValidate;
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core2.SBOLWriter;
 import org.sbolstandard.core2.Sequence;
+import org.sbolstandard.core2.SequenceAnnotation;
 import org.sbolstandard.core3.api.SBOLAPI;
+import org.sbolstandard.core3.entity.Component;
+import org.sbolstandard.core3.entity.FeatureWithLocation;
+import org.sbolstandard.core3.entity.Location;
 import org.sbolstandard.core3.entity.SBOLDocument;
+import org.sbolstandard.core3.entity.SequenceFeature;
+import org.sbolstandard.core3.entity.SubComponent;
 import org.sbolstandard.core3.io.SBOLFormat;
 import org.sbolstandard.core3.io.SBOLIO;
 import org.sbolstandard.core3.util.RDFUtil;
@@ -91,7 +98,8 @@ public class SBOLDocumentConverter {
         for (ComponentDefinition cd : sbol2Doc.getComponentDefinitions()) {
             cdConverter.convert(sbol3Doc, cd, parameters);            
         }
-       
+        // Convert SequenceAnnotations' locations to SubComponents.locations or SequenceFeatures.locations
+        convertLocations(sbol2Doc, sbol3Doc, parameters);
         
         ModelConverter mConverter = new ModelConverter();
         for (Model mod : sbol2Doc.getModels()) {
@@ -149,4 +157,94 @@ public class SBOLDocumentConverter {
         
         return sbol3Doc;
 	}
+
+    private void convertLocations(org.sbolstandard.core2.SBOLDocument sbol2Doc, SBOLDocument document, Parameters parameters) throws SBOLGraphException {
+        ComponentDefinitionConverter cdConverter = new ComponentDefinitionConverter();
+        for (ComponentDefinition cd : sbol2Doc.getComponentDefinitions()) {
+            for (SequenceAnnotation sbol2SeqAnno : cd.getSequenceAnnotations()) {
+                org.sbolstandard.core3.entity.Sequence sbol3Sequence = Util.getSBOL3SequenceFromSBOl2Parent(document, cd, parameters);
+
+                URI sbol3ComponentURI = Util.createSBOL3Uri(cd);
+                Component sbol3ParentComp = document.getIdentified(sbol3ComponentURI, Component.class);
+                if (sbol3Sequence == null) {
+                    sbol3Sequence = Util.getEmptySequence(sbol3ParentComp, document);
+                }
+                SubComponent sbol3SubComponent = null;
+                SequenceFeature sbol3SequenceFeature = null;                
+                FeatureWithLocation featureWithLocation=null;
+
+                if (sbol2SeqAnno.isSetComponent()) {
+                    URI sbol3SubComponentURI = parameters.getMapping(sbol2SeqAnno.getComponent().getIdentity());
+                    sbol3SubComponent = document.getIdentified(sbol3SubComponentURI, SubComponent.class);
+                    featureWithLocation=sbol3SubComponent;
+                } 
+                else {
+                    URI sbol3SequenceFeatureURI = parameters.getMapping(sbol2SeqAnno.getIdentity());
+                    sbol3SequenceFeature = document.getIdentified(sbol3SequenceFeatureURI, SequenceFeature.class);
+                     featureWithLocation=sbol3SequenceFeature;
+                }
+                
+                if (sbol2SeqAnno.getLocations() != null) {
+                    for (org.sbolstandard.core2.Location sbol2Location : sbol2SeqAnno.getLocations()) {
+                        org.sbolstandard.core3.entity.Sequence sbol3LocationSequence=null;
+                        if (sbol2Location.getSequenceURI()!=null){
+                            URI sbol3LocationSequenceURI = Util.createSBOL3Uri(sbol2Location.getSequenceURI(), parameters);
+                            sbol3LocationSequence = document.getIdentified(sbol3LocationSequenceURI, org.sbolstandard.core3.entity.Sequence.class);
+                        }
+                        if (sbol3LocationSequence == null) {
+                            sbol3LocationSequence = sbol3Sequence;
+                        }
+                        Location sbol3Location = null;
+                        org.sbolstandard.core3.vocabulary.Orientation sbol3Orientation = Util.toSBOL3Orientation(sbol2Location.getOrientation());
+
+                        // Handle Range location type (start and end positions).
+                        if (sbol2Location instanceof org.sbolstandard.core2.Range) {
+                            org.sbolstandard.core2.Range sbol2Range = (org.sbolstandard.core2.Range) sbol2Location;
+                            if (sbol2Location.getDisplayId()!=null) {	
+                                sbol3Location = featureWithLocation.createRange(sbol2Location.getDisplayId(), sbol2Range.getStart(), sbol2Range.getEnd(), sbol3LocationSequence);
+                            } 
+                            else {
+                                sbol3Location = featureWithLocation.createRange(sbol2Range.getStart(), sbol2Range.getEnd(), sbol3LocationSequence);
+                            }
+                        } 
+                        else if (sbol2Location instanceof org.sbolstandard.core2.Cut) {
+                            org.sbolstandard.core2.Cut sbol2Cut = (org.sbolstandard.core2.Cut) sbol2Location;
+                            if (sbol2Location.getDisplayId()!=null) {	                            
+                                sbol3Location = featureWithLocation.createCut(sbol2Location.getDisplayId(), sbol2Cut.getAt(), sbol3LocationSequence);
+                            }
+                            else {
+                                sbol3Location = featureWithLocation.createCut(sbol2Cut.getAt(), sbol3LocationSequence);
+                            }
+                        } 
+                        else if (sbol2Location instanceof org.sbolstandard.core2.GenericLocation) {                          
+                            if (sbol3LocationSequence==null) {
+                                org.sbolstandard.core2.Component sbol2Comp= sbol2SeqAnno.getComponent();
+                                org.sbolstandard.core2.ComponentDefinition sbol2CompDef=sbol2Comp.getDefinition();
+                                org.sbolstandard.core2.Sequence sbol2ChildSequence = sbol2CompDef.getSequences().iterator().next();
+                                if (sbol2ChildSequence==null){
+                                    sbol3LocationSequence= Util.getEmptySequence(sbol3ParentComp, document);
+                                }
+                                else{
+                                    URI sbol3SubComponentSequenceUri=Util.createSBOL3Uri(sbol2ChildSequence.getIdentity(), parameters);
+					                sbol3LocationSequence = document.getIdentified(sbol3SubComponentSequenceUri, org.sbolstandard.core3.entity.Sequence.class);                                    
+                                }
+                            }
+
+                            if (sbol2Location.getDisplayId()!=null) {	                                                       
+                                sbol3Location = featureWithLocation.createEntireSequence(sbol2Location.getDisplayId(), sbol3LocationSequence);
+                            }
+                            else {
+                                sbol3Location = featureWithLocation.createEntireSequence(sbol3LocationSequence);
+                            }
+                        }
+
+                        sbol3Location.setOrientation(sbol3Orientation);
+                        Util.copyIdentified(sbol2Location, sbol3Location);
+                    }
+                }
+            }
+
+        }
+    }
+
 }
