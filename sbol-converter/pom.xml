@@ -45,6 +45,7 @@
 			<artifactId>junit-jupiter-params</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.sbolstandard</groupId>
 			<artifactId>libSBOLj3</artifactId>
