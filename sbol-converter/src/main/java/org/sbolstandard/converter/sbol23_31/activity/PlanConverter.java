@@ -12,8 +12,9 @@ public class PlanConverter implements EntityConverter<org.sbolstandard.core2.Pla
 
 	@Override
 	public Plan convert(SBOLDocument doc, org.sbolstandard.core2.Plan input, Parameters parameters) throws SBOLGraphException {
-		Plan plan = doc.createPlan(Util.createSBOL3Uri(input), Util.getNamespace(input));		
-		Util.copyIdentified(input, plan);	
+		Plan plan = doc.createPlan(Util.createSBOL3Uri(input), Util.getNamespace(input));
+		
+		Util.copyIdentified(input, plan, parameters);
 		return plan;
 	} 
 

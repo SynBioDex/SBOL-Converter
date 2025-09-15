@@ -35,8 +35,8 @@ public class MapstoToComponentReferenceConverter {
 		ComponentReference sbol3CompRef = sbol3ParentComponent.createComponentReference(mapsTo.getDisplayId(), sbol3RemoteSubComponent,
 				sbol3SubComponentForModule);
 
-		Util.copyIdentified(mapsTo, sbol3CompRef);
-				
+		Util.copyIdentified(mapsTo, sbol3CompRef, parameters);
+		
 		return sbol3CompRef;
 
 	}
@@ -59,7 +59,7 @@ public class MapstoToComponentReferenceConverter {
 		//System.out.println("sbol3RemoteSubComponent: " + sbol3RemoteSubComponent.getUri());
 		//System.out.println("sbol3ParentComponent: " + sbol3ParentComponent.getUri());
 		//System.out.println("sbol3SubComponentForModule: " + sbol3SubComponentForModule.getUri());
-		Util.copyIdentified(mapsTo, sbol3CompRef);
+		Util.copyIdentified(mapsTo, sbol3CompRef, parameters);
 		return sbol3CompRef;
 
 	}

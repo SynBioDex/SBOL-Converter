@@ -50,7 +50,7 @@ public class ComponentConverter implements ChildEntityConverter<org.sbolstandard
 		}
 		result = resultSC;
 		
-		Util.copyIdentified(input, result);
+		Util.copyIdentified(input, result, parameters);
 
 		if (input.getAccess()==AccessType.PUBLIC){
 			Interface sbol3Interface = sbol3ParentComponent.getInterface();

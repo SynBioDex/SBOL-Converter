@@ -21,27 +21,6 @@
          <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH51266_seq"/>
       </sbol:hasSequence>
       <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH51266/annotation3">
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH51266/annotation3/range">
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>2015</sbol:end>
-                  <sbol:start>1401</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH51266_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <gbConv:label>rep (pMB1)</gbConv:label>
-            <gbConv:vntifkey>21</gbConv:vntifkey>
-            <gbConv:featureType>Misc._feature</gbConv:featureType>
-            <sbol:name>rep (pMB1)</sbol:name>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
-            <sbol:displayId>annotation3</sbol:displayId>
-         </sbol:SequenceFeature>
-      </sbol:hasFeature>
-      <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH51266/annotation7">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH51266/annotation7/range">
@@ -63,7 +42,6 @@
             <sbol:displayId>annotation7</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH51266/annotation0">
             <sbol:hasLocation>
@@ -82,6 +60,28 @@
             <sbol:name>AATG 4bp overhang</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
             <sbol:displayId>annotation0</sbol:displayId>
+         </sbol:SequenceFeature>
+      </sbol:hasFeature>
+      <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
+      <sbol:hasFeature>
+         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH51266/annotation3">
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH51266/annotation3/range">
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>2015</sbol:end>
+                  <sbol:start>1401</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH51266_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <gbConv:label>rep (pMB1)</gbConv:label>
+            <gbConv:vntifkey>21</gbConv:vntifkey>
+            <gbConv:featureType>Misc._feature</gbConv:featureType>
+            <sbol:name>rep (pMB1)</sbol:name>
+            <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
+            <sbol:displayId>annotation3</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>

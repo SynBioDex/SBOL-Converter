@@ -27,7 +27,7 @@ public class ComponentDefinitionConverter implements EntityConverter<ComponentDe
     	}
     	    	
     	Component comp = doc.createComponent(Util.createSBOL3Uri(input), Util.getNamespace(input), Util.toSBOL3ComponentDefinitionTypes(Util.toList(input.getTypes())));    	    	
-        Util.copyIdentified(input, comp);
+        Util.copyIdentified(input, comp, parameters);
         comp.setRoles(Util.convertSORoles2_to_3(input.getRoles()));
         
         if (input.getSequenceURIs()!= null && input.getSequenceURIs().size() > 0) {

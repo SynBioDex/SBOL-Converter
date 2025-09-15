@@ -45,7 +45,7 @@ public class FunctionalComponentToSubComponentConverter
 			throw new SBOLGraphException("Error creating SubComponent for FunctionalComponent: " + sbol2FunctionalComponent.getIdentity(), e);
 		}
 
-		Util.copyIdentified(sbol2FunctionalComponent, sbol3SubComponent);
+		Util.copyIdentified(sbol2FunctionalComponent, sbol3SubComponent, parameters);
 
 		
 

@@ -33,7 +33,7 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 		Component sbol3Component = doc.createComponent(Util.createSBOL3Uri(sbol2ModuleDefinition), Util.getNamespace(sbol2ModuleDefinition), types);
 
 		// Copy generic metadata (displayId, name, description, etc.)
-		Util.copyIdentified(sbol2ModuleDefinition, sbol3Component);
+		Util.copyIdentified(sbol2ModuleDefinition, sbol3Component, parameters);
 
 		// Set SBOL2 roles on the SBOL3 Component, converting format as needed
 		sbol3Component.setRoles(Util.convertSORoles2_to_3(sbol2ModuleDefinition.getRoles()));

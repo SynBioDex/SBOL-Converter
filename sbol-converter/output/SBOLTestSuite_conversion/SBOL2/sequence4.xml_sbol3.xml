@@ -1734,18 +1734,6 @@
                </sbol:Range>
             </sbol:hasLocation>
             <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation2/range10">
-                  <gbConv:position>position10</gbConv:position>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>9368</sbol:end>
-                  <sbol:start>9271</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range10</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation2/range3">
                   <gbConv:position>position3</gbConv:position>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -1755,6 +1743,18 @@
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
                   </sbol:hasSequence>
                   <sbol:displayId>range3</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation2/range10">
+                  <gbConv:position>position10</gbConv:position>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>9368</sbol:end>
+                  <sbol:start>9271</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range10</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
             <sbol:displayId>annotation2</sbol:displayId>

@@ -8,6 +8,10 @@ import java.net.URI;
 import org.apache.jena.riot.RDFFormat;
 import org.apache.jena.riot.RiotException;
 import org.sbolstandard.converter.Util;
+import org.sbolstandard.converter.sbol23_31.activity.AgentConverter;
+import org.sbolstandard.converter.sbol23_31.activity.PlanConverter;
+import org.sbolstandard.core2.Activity;
+import org.sbolstandard.core2.Agent;
 import org.sbolstandard.core2.Attachment;
 import org.sbolstandard.core2.Collection;
 import org.sbolstandard.core2.ComponentDefinition;
@@ -30,8 +34,6 @@ import org.sbolstandard.core3.entity.Location;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.SequenceFeature;
 import org.sbolstandard.core3.entity.SubComponent;
-import org.sbolstandard.core3.io.SBOLFormat;
-import org.sbolstandard.core3.io.SBOLIO;
 import org.sbolstandard.core3.util.RDFUtil;
 import org.sbolstandard.core3.util.SBOLGraphException;
 
@@ -153,6 +155,22 @@ public class SBOLDocumentConverter {
 			MapstoToMainConverter.convertFromModuleDefinition(sbol3Doc, sbol2MD,parameters);
 		}
         
+        PlanConverter planConverter = new PlanConverter();
+        for (org.sbolstandard.core2.Plan sbol2Plan : sbol2Doc.getPlans()) {
+            planConverter.convert(sbol3Doc, sbol2Plan, parameters);            
+        }
+
+        AgentConverter agentConverter = new AgentConverter();
+        for (Agent agent : sbol2Doc.getAgents()) {
+            agentConverter.convert(sbol3Doc, agent, parameters);            
+        }
+
+        // Activity conversion child entities are Association and Usage
+        ActivityConverter activityConverter = new ActivityConverter();
+        for (Activity sbol2Activity : sbol2Doc.getActivities()) {
+            activityConverter.convert(sbol3Doc, sbol2Activity, parameters);
+        }
+
         Util.copyNamespacesFrom2_to_3(sbol2Doc, sbol3Doc);
         
         return sbol3Doc;
@@ -239,7 +257,7 @@ public class SBOLDocumentConverter {
                         }
 
                         sbol3Location.setOrientation(sbol3Orientation);
-                        Util.copyIdentified(sbol2Location, sbol3Location);
+                        Util.copyIdentified(sbol2Location, sbol3Location, parameters);
                     }
                 }
             }

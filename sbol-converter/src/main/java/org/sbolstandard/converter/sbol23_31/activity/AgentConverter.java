@@ -13,7 +13,7 @@ public class AgentConverter implements EntityConverter<org.sbolstandard.core2.Ag
 	@Override
 	public Agent convert(SBOLDocument doc, org.sbolstandard.core2.Agent input, Parameters parameters) throws SBOLGraphException {
 		Agent agent = doc.createAgent(Util.createSBOL3Uri(input), Util.getNamespace(input));		
-		Util.copyIdentified(input, agent);	
+		Util.copyIdentified(input, agent, parameters);	
 		return agent;
 	} 
 

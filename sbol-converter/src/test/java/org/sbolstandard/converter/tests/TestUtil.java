@@ -101,7 +101,8 @@ public class TestUtil {
 
 			SBOLDocumentConverter converter = new SBOLDocumentConverter();
 			org.sbolstandard.core3.entity.SBOLDocument sbol3Doc = converter.convert(doc);
-
+			
+			//System.out.println("SBOL3-DOC "+sbol3Doc.getComponents().size());
 			for (Component component : sbol3Doc.getComponents()) {
 				List<String> messages = IdentifiedValidator.getValidator().validate(sbol3Doc.getComponents().get(0));
 				printMessages(messages, "Component" + component.getDisplayId());

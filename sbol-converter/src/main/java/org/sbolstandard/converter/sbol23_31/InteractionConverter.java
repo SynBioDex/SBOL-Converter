@@ -68,11 +68,11 @@ public class InteractionConverter implements ChildEntityConverter<org.sbolstanda
 				sbol3Participation = sbol3Interaction.createParticipation(Util.convertToSBOL3_SBO_URIs(sbol2Participation.getRoles()),sbol3Feature);
 				parameters.addMapping(sbol2Participation.getIdentity(), sbol3Participation.getUri());
 			}
-			Util.copyIdentified(sbol2Participation, sbol3Participation);
+			Util.copyIdentified(sbol2Participation, sbol3Participation, parameters);
 		}
 
 		// Copy common identified fields (displayId, version, etc.) from the SBOL2 Interaction to the SBOL3 Interaction
-		Util.copyIdentified(sbol2Interaction, sbol3Interaction);
+		Util.copyIdentified(sbol2Interaction, sbol3Interaction, parameters);
 
 		// Return the constructed SBOL3 Interaction
 		return sbol3Interaction;

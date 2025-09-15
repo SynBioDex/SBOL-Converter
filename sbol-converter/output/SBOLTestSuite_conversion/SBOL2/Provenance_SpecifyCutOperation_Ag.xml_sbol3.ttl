@@ -9,4 +9,9 @@
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:GO="https://identifiers.org/GO:"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
+   <sbol:TopLevel rdf:about="http://www.async.ece.utah.edu/unknown">
+      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
+      <sbol:displayId>unknown</sbol:displayId>
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+   </sbol:TopLevel>
 </rdf:RDF>

@@ -1,12 +1,14 @@
 package org.sbolstandard.converter.sbol31_23;
 
 import org.sbolstandard.converter.Util;
+import org.sbolstandard.converter.sbol31_23.activity.AgentConverter;
+import org.sbolstandard.converter.sbol31_23.activity.PlanConverter;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.ModuleDefinition;
+import org.sbolstandard.core2.Plan;
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.Sequence;
-import org.sbolstandard.core3.entity.TopLevel;
 import org.sbolstandard.core3.entity.TopLevelMetadata;
 import org.sbolstandard.core3.entity.Model;
 import org.sbolstandard.core3.util.SBOLGraphException;
@@ -110,9 +112,33 @@ public class SBOLDocumentConverter {
 		if (sbol3Doc.getTopLevelMetadataList() != null) {
 			TopLevelMetaDataConverter tlmConverter = new TopLevelMetaDataConverter();
 			for (TopLevelMetadata tlm : sbol3Doc.getTopLevelMetadataList()) {
+				
+
 				tlmConverter.convert(sbol2Doc, tlm);
 			}
 		}
+
+		if(sbol3Doc.getPlans()!=null) {
+			PlanConverter planConverter = new PlanConverter();
+			for(org.sbolstandard.core3.entity.provenance.Plan plan : sbol3Doc.getPlans()) {
+				planConverter.convert(sbol2Doc, plan);
+			}
+		}
+
+		if (sbol3Doc.getAgents() != null) {
+			AgentConverter agentConverter = new AgentConverter();
+			for (org.sbolstandard.core3.entity.provenance.Agent agent : sbol3Doc.getAgents()) {
+				agentConverter.convert(sbol2Doc, agent);
+			}
+		}
+
+		if (sbol3Doc.getActivities() != null) {
+			ActivityConverter activityConverter = new ActivityConverter();
+			for (org.sbolstandard.core3.entity.provenance.Activity activity : sbol3Doc.getActivities()) {
+				activityConverter.convert(sbol2Doc, activity);
+			}
+		}
+		
 		
 		return sbol2Doc;
 	}

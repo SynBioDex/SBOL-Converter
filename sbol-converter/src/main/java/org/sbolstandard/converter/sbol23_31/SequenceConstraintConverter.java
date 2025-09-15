@@ -36,7 +36,7 @@ public class SequenceConstraintConverter implements ChildEntityConverter<org.sbo
         else{
         	constraint= parentComponent.createConstraint(sbol3RestrictionUri, subjectFeature, objectFeature);
         }
-        Util.copyIdentified(input, constraint);		
+        Util.copyIdentified(input, constraint, parameters);		
     	return constraint;
     	
     

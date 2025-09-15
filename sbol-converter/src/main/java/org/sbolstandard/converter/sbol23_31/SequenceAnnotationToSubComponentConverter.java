@@ -82,7 +82,7 @@ public class SequenceAnnotationToSubComponentConverter
 		}
 		*/
 	
-		Util.copyIdentified(sbol2SeqAnno, sbol3SubComponent);
+		Util.copyIdentified(sbol2SeqAnno, sbol3SubComponent, parameters);
 		return sbol3SubComponent;
 	}
 }
