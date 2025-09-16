@@ -6,6 +6,7 @@ import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.provenance.Activity;
 import org.sbolstandard.core3.entity.provenance.Agent;
 import org.sbolstandard.core3.entity.provenance.Association;
+import org.sbolstandard.core3.entity.provenance.Plan;
 import org.sbolstandard.core3.util.SBOLGraphException;
 
 public class AssociationConverter implements ChildEntityConverter<org.sbolstandard.core2.Association, Association> {
@@ -19,6 +20,12 @@ public class AssociationConverter implements ChildEntityConverter<org.sbolstanda
 		Agent sbol3Agent = doc.getIdentified(Util.createSBOL3Uri(sbol2Agent), Agent.class);
 
 		Association sbol3Association = sbol3ParentActivity.createAssociation(Util.createSBOL3Uri(sbol2Association),sbol3Agent);
+
+		// Adding Plans
+		if(sbol2Association.getPlan() != null) {
+			Plan sbol3Plan = doc.getIdentified(Util.createSBOL3Uri(sbol2Association.getPlan()), Plan.class);
+			sbol3Association.setPlan(sbol3Plan);
+		}
 
 		sbol3Association.setRoles(Util.toList(sbol2Association.getRoles()));
 

@@ -17,6 +17,9 @@ public class UsageConverter implements ChildEntityConverter<org.sbolstandard.cor
 		System.out.println("Usage Entity: " + sbol2Usage.getEntity());
 		System.out.println("Usage Display ID: " + sbol2Usage.getDisplayId());
 
+		// TODO: Entity CONVERTER
+	
+
 		Usage sbol3Usage = sbol3ParentActivity.createUsage(Util.createSBOL3Uri(sbol2Usage), Util.createSBOL3Uri(sbol2Usage.getEntity()));
 
 		sbol3Usage.setRoles(Util.toList(sbol2Usage.getRoles()));

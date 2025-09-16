@@ -24,6 +24,11 @@ public class AssociationConverter implements ChildEntityConverter<Association, o
 				// TODO: SBOL3 Association DISPLAY ID CHECK
 				org.sbolstandard.core2.Association sbol2Association = sbol2ParentActivity.createAssociation(sbol3Association.getDisplayId(), sbol2Agent.getIdentity());
 				
+				if(sbol3Association.getPlan() != null) {
+					org.sbolstandard.core3.entity.provenance.Plan sbol3Plan = sbol3Association.getPlan();
+					sbol2Association.setPlan(Util.createSBOL2Uri(sbol3Plan));
+				}
+
 				if(sbol3Association.getRoles()!=null){
 					sbol2Association.setRoles(Util.toSet(sbol3Association.getRoles()));
 				}

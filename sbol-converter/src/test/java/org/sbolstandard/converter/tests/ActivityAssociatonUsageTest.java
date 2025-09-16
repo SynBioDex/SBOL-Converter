@@ -31,7 +31,7 @@ public class ActivityAssociatonUsageTest {
 		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/SBOL2/design_usa_act_ann.xml"));
 
 		//
-		//TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/SBOL2/Provenance_SpecifyJoinOperation_act_us.xml"));
+		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/SBOL2/Provenance_SpecifyJoinOperation_act_us.xml"));
 
 	}
 
