@@ -19,7 +19,7 @@ public class ActivityConverter implements EntityConverter<org.sbolstandard.core2
 		}
 
 		if (input.getStartedAtTime() != null) {
-			activity.setStartedAtTime(input.getStartedAtTime().getYear(), input.getStartedAtTime().getMonthOfYear(), input.getStartedAtTime().getDayOfMonth(),
+			activity.setStartedAtTime (input.getStartedAtTime().getYear(), input.getStartedAtTime().getMonthOfYear(), input.getStartedAtTime().getDayOfMonth(),
 					input.getStartedAtTime().getHourOfDay(), input.getStartedAtTime().getMinuteOfHour(), input.getStartedAtTime().getSecondOfMinute());
 		}
 		if (input.getEndedAtTime() != null) {

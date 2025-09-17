@@ -19,8 +19,8 @@ public class AssociationConverter implements ChildEntityConverter<org.sbolstanda
 		org.sbolstandard.core2.Agent sbol2Agent = sbol2Association.getAgent();
 		Agent sbol3Agent = doc.getIdentified(Util.createSBOL3Uri(sbol2Agent), Agent.class);
 
-		Association sbol3Association = sbol3ParentActivity.createAssociation(Util.createSBOL3Uri(sbol2Association),sbol3Agent);
-
+		Association sbol3Association = sbol3ParentActivity.createAssociation(sbol2Association.getDisplayId(), sbol3Agent);
+		
 		// Adding Plans
 		if(sbol2Association.getPlan() != null) {
 			Plan sbol3Plan = doc.getIdentified(Util.createSBOL3Uri(sbol2Association.getPlan()), Plan.class);

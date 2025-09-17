@@ -1,7 +1,6 @@
 package org.sbolstandard.converter.sbol31_23;
 
-import java.time.OffsetDateTime;
-import java.time.ZoneOffset;
+
 
 import org.apache.jena.datatypes.xsd.XSDDateTime;
 import org.joda.time.DateTime;
@@ -54,11 +53,11 @@ public class ActivityConverter implements EntityConverter<Activity, org.sbolstan
 
 	private static DateTime convertToDateTime(XSDDateTime xsdDateTime) {
 		if (xsdDateTime == null) return null;
-
-		// XSDDateTime → Calendar → Instant → OffsetDateTime
-		OffsetDateTime odt = xsdDateTime.asCalendar().toInstant().atOffset(ZoneOffset.UTC);
-
-		// Wrap in SBOL3 DateTime
-		return new DateTime(odt);
+		
+		// Convert XSDDateTime to java.util.Calendar
+        java.util.Calendar calendar = xsdDateTime.asCalendar();
+        // Wrap calendar in Joda DateTime
+        return new DateTime(calendar);
+		
 	}
 }

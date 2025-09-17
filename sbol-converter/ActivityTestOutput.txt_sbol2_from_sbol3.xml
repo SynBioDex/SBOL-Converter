@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<rdf:RDF xmlns:pr="http://partsregistry.org/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sbol="http://sbols.org/v2#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
+  <prov:Activity rdf:about="http://partsregistry.org/act/TEST_ACTIVITY">
+    <sbol:persistentIdentity rdf:resource="http://partsregistry.org/act/TEST_ACTIVITY"/>
+    <sbol:displayId>TEST_ACTIVITY</sbol:displayId>
+    <prov:startedAtTime>2025-09-06T12:50:23.000Z</prov:startedAtTime>
+    <prov:endedAtTime>2025-09-16T12:50:23.000Z</prov:endedAtTime>
+  </prov:Activity>
+</rdf:RDF>

@@ -1,6 +1,7 @@
 package org.sbolstandard.converter.sbol31_23;
 
 import org.sbolstandard.converter.Util;
+import org.sbolstandard.converter.sbol31_23.measurement.MeasurementConverter;
 import org.sbolstandard.core2.ModuleDefinition;
 import org.sbolstandard.core2.Participation;
 import org.sbolstandard.core2.SBOLDocument;
@@ -20,6 +21,7 @@ public class InteractionConverter implements ChildEntityConverter<Interaction, o
 		org.sbolstandard.core2.Interaction sbol2Interaction = null;		
 		ModuleDefinition sbol2ParentModuleDef = (ModuleDefinition) sbol2Parent;
 		sbol2Interaction = sbol2ParentModuleDef.createInteraction(sbol3Interaction.getDisplayId(), Util.convertToSBOL2_SBO_URIs(sbol3Interaction.getTypes()));
+		
 
 		if (sbol3Interaction.getParticipations()!=null) {
 			for (org.sbolstandard.core3.entity.Participation sbol3Participation : sbol3Interaction.getParticipations()) {
@@ -30,9 +32,26 @@ public class InteractionConverter implements ChildEntityConverter<Interaction, o
 					throw new SBOLGraphException("Could not find FunctionalComponent for SubComponent: " + sbol3SubComponent.getUri());
 				}
 				Participation newSbol2Participation = sbol2Interaction.createParticipation(sbol3Participation.getDisplayId(), sbol2FuncCom.getIdentity(), Util.convertToSBOL2_SBO_URIs(sbol3Participation.getRoles()));			
+				// Measurement conversion
+				if(sbol3Participation.getMeasures()!=null) {
+					MeasurementConverter measurementConverter = new MeasurementConverter();
+					for (org.sbolstandard.core3.entity.measure.Measure sbol3Measure : sbol3Participation.getMeasures()) {
+						measurementConverter.convert(doc, newSbol2Participation, sbol3Participation, sbol3Measure);
+					}
+				}
 				Util.copyIdentified(sbol3Participation, newSbol2Participation, doc);			
 			}
 		}
+
+		// Measuremet conversion
+		if(sbol3Interaction.getMeasures()!=null) {
+			MeasurementConverter measurementConverter = new MeasurementConverter();
+			for (org.sbolstandard.core3.entity.measure.Measure sbol3Measure : sbol3Interaction.getMeasures()) {
+				measurementConverter.convert(doc, sbol2Interaction, sbol3Interaction, sbol3Measure);
+			}
+		}
+
+		Util.copyIdentified(sbol3Interaction, sbol2Interaction, doc);
 		return sbol2Interaction;
 	}
 }

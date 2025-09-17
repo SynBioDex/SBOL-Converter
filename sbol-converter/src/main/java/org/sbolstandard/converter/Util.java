@@ -504,6 +504,13 @@ public class Util {
 					topLevelOutput.setAttachments(sbol2AttachmentURIs);
 				}
 			}
+			// TODO: WRITE ME
+			// if has measurement 
+			// 	if output is module 
+			// 	    copy hasMeasurement URIS
+			// 	else if component instance 
+			// 		copy hasMeasurement URIS
+			
 		}
 	}
 

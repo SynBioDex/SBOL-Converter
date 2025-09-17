@@ -5,15 +5,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.sbolstandard.converter.Util;
+import org.sbolstandard.converter.sbol23_31.measurement.MeasurementConverter;
 import org.sbolstandard.core2.AccessType;
 import org.sbolstandard.core2.Location;
+import org.sbolstandard.core2.Measure;
 import org.sbolstandard.core2.RoleIntegrationType;
+import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Feature;
 import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.Interface;
 import org.sbolstandard.core3.entity.SBOLDocument;
-import org.sbolstandard.core3.entity.Sequence;
 import org.sbolstandard.core3.entity.SubComponent;
 import org.sbolstandard.core3.util.SBOLGraphException;
 import org.sbolstandard.core3.vocabulary.RoleIntegration;
@@ -21,7 +23,7 @@ import org.sbolstandard.core3.vocabulary.RoleIntegration;
 public class ComponentConverter implements ChildEntityConverter<org.sbolstandard.core2.Component, Feature> {
 
 	@Override
-	public Feature convert(SBOLDocument doc, Identified parent, org.sbolstandard.core2.Identified inputParent, org.sbolstandard.core2.Component input, Parameters parameters) throws SBOLGraphException {
+	public Feature convert(SBOLDocument doc, Identified parent, org.sbolstandard.core2.Identified inputParent, org.sbolstandard.core2.Component input, Parameters parameters) throws SBOLGraphException, SBOLValidationException {
 		Component sbol3ParentComponent = (Component) parent;
 		Feature result = null;
 		URI sbol3InstanceOfUri = Util.createSBOL3Uri(input.getDefinitionURI(), parameters);
@@ -49,6 +51,14 @@ public class ComponentConverter implements ChildEntityConverter<org.sbolstandard
 			resultSC.setRoleIntegration(risbol3);
 		}
 		result = resultSC;
+
+		// Measurement conversion
+		if(input.getMeasures()!=null) {
+			MeasurementConverter measurementConverter = new MeasurementConverter();
+			for (Measure sbol2Measure : input.getMeasures()) {
+				measurementConverter.convert(doc, result, input, sbol2Measure, parameters);
+			}
+		}
 		
 		Util.copyIdentified(input, result, parameters);
 
