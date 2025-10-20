@@ -259,6 +259,7 @@ public class App {
 				}
 			}
 		} else {
+			// TODO: Currently only supports SBOL2 to SBOL3 conversion and vice versa
 	        Configuration.getInstance().setValidateBeforeSaving(false);
 	        SBOLDocument doc3 = new SBOLDocument();
 	        doc3.setBaseURI(URI.create("http://dummy.org"));

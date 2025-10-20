@@ -123,7 +123,32 @@
 
 	<build>
 		<pluginManagement>
-			<plugins>
+		  <plugins>
+                    <plugin>
+                      <groupId>org.apache.maven.plugins</groupId>
+                      <artifactId>maven-assembly-plugin</artifactId>
+                      <version>3.6.0</version>
+                      <configuration>
+                        <descriptorRefs>
+                          <descriptorRef>jar-with-dependencies</descriptorRef>
+                        </descriptorRefs>
+                        <archive>
+                          <manifest>
+                            <!-- Replace with your main class -->
+                            <mainClass>org.sbolstandard.converter.App</mainClass>
+                          </manifest>
+                        </archive>
+                      </configuration>
+                      <executions>
+                        <execution>
+                          <id>make-assembly</id>
+                          <phase>package</phase>
+                          <goals>
+                            <goal>single</goal>
+                          </goals>
+                        </execution>
+                      </executions>
+                    </plugin>
 				<plugin>
 					<artifactId>maven-clean-plugin</artifactId>
 					<version>3.4.0</version>
