@@ -245,10 +245,14 @@ public class App {
 		boolean foundSBOL3 = false;
 
 		org.sbolstandard.core2.SBOLDocument document = SBOLReader.read(file);
-		for (QName n : document.getNamespaces())
-		{
-			if (n.getNamespaceURI().equals(sbol2.getNamespaceURI())) foundSBOL2 = true;
-			if (n.getNamespaceURI().equals(sbol3.getNamespaceURI())) foundSBOL3 = true;
+		try {
+			for (QName n : document.getNamespaces())
+			{	
+				if (n.getNamespaceURI().equals(sbol2.getNamespaceURI())) foundSBOL2 = true;
+				if (n.getNamespaceURI().equals(sbol3.getNamespaceURI())) foundSBOL3 = true;
+			}
+		} catch (Exception e) {
+			foundSBOL3 = true;
 		}
 		
 		if (!foundSBOL3 && !sbolV3out) {
@@ -277,7 +281,7 @@ public class App {
 	        SBOLDocument doc3 = new SBOLDocument();
 	        doc3.setBaseURI(URI.create("http://dummy.org"));
 	        
-	        if (foundSBOL2) {
+	        if (foundSBOL2 && !foundSBOL3) {
 	        	org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(fileName);
 	        	//SBOLWriter.write(doc, System.out);
 	        	if (sbolV3out) {
@@ -295,15 +299,53 @@ public class App {
 	        	}
 	        } else if (foundSBOL3) {
 	    		File inFile = new File(fileName);
+	            Configuration.getInstance().setCompleteDocument(complete);
+	            Configuration.getInstance().setValidateRecommendedRules(bestPractice);
 	        	org.sbolstandard.core3.entity.SBOLDocument sbol3Doc = SBOLIO.read(inFile);
-	        	if (sbolV2out) {
+	        	if (sbolV3out) {
+        			if (outputFile.equals("")) {
+        				String result=SBOLIO.write(sbol3Doc, SBOLFormat.RDFXML);
+        				System.out.println(result);
+        			} else {
+        				File outFile = new File(outputFile);
+        				SBOLIO.write(sbol3Doc, outFile, SBOLFormat.RDFXML);
+        			}
+	        	} else if (sbolV2out) {
 	        		org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter converter3_2 = new org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter();
 	        		org.sbolstandard.core2.SBOLDocument sbol2Doc = converter3_2.convert(sbol3Doc);
 	        		if (!noOutput) {
 	        			if (outputFile.equals("")) {
-	            	    	SBOLWriter.write(sbol2Doc, System.out);
+	        				if (sbolV1out) {
+		            	    	SBOLWriter.write(sbol2Doc, System.out, org.sbolstandard.core2.SBOLDocument.RDFV1);
+	        				} else if (genBankOut) {
+		            	    	SBOLWriter.write(sbol2Doc, System.out, org.sbolstandard.core2.SBOLDocument.GENBANK);
+	        				} else if (fastaOut) {
+		            	    	SBOLWriter.write(sbol2Doc, System.out, org.sbolstandard.core2.SBOLDocument.FASTAformat);
+	        				} else if (snapGeneOut) {
+		            	    	SBOLWriter.write(sbol2Doc, System.out, org.sbolstandard.core2.SBOLDocument.SNAPGENE);
+	        				} else if (gff3Out) {
+		            	    	SBOLWriter.write(sbol2Doc, System.out, org.sbolstandard.core2.SBOLDocument.GFF3format);
+	        				} else if (csvOut) {
+		            	    	SBOLWriter.write(sbol2Doc, System.out, org.sbolstandard.core2.SBOLDocument.CSV);
+	        				} else {
+		            	    	SBOLWriter.write(sbol2Doc, System.out);
+	        				}
 	        			} else {
-	            	    	SBOLWriter.write(sbol2Doc, outputFile);
+	        				if (sbolV1out) {
+		            	    	SBOLWriter.write(sbol2Doc, outputFile, org.sbolstandard.core2.SBOLDocument.RDFV1);
+	        				} else if (genBankOut) {
+		            	    	SBOLWriter.write(sbol2Doc, outputFile, org.sbolstandard.core2.SBOLDocument.GENBANK);
+	        				} else if (fastaOut) {
+		            	    	SBOLWriter.write(sbol2Doc, outputFile, org.sbolstandard.core2.SBOLDocument.FASTAformat);
+	        				} else if (snapGeneOut) {
+		            	    	SBOLWriter.write(sbol2Doc, outputFile, org.sbolstandard.core2.SBOLDocument.SNAPGENE);
+	        				} else if (gff3Out) {
+		            	    	SBOLWriter.write(sbol2Doc, outputFile, org.sbolstandard.core2.SBOLDocument.GFF3format);
+	        				} else if (csvOut) {
+		            	    	SBOLWriter.write(sbol2Doc, outputFile, org.sbolstandard.core2.SBOLDocument.CSV);
+	        				} else {
+		            	    	SBOLWriter.write(sbol2Doc, outputFile);
+	        				}
 	        			}
 	        		}
 	        	}
