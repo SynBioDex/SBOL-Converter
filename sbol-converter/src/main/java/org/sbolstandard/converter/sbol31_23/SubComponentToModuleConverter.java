@@ -3,6 +3,7 @@ package org.sbolstandard.converter.sbol31_23;
 import java.net.URI;
 
 import org.sbolstandard.converter.Util;
+import org.sbolstandard.converter.sbol31_23.measurement.MeasurementConverter;
 import org.sbolstandard.core2.AccessType;
 import org.sbolstandard.core2.DirectionType;
 import org.sbolstandard.core2.FunctionalComponent;
@@ -12,6 +13,7 @@ import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.Interface;
 import org.sbolstandard.core3.entity.SubComponent;
+import org.sbolstandard.core3.entity.measure.Measure;
 import org.sbolstandard.core3.util.SBOLGraphException;
 
 // This converter maps an SBOL3 SubComponent to an SBOL2 FunctionalComponent
@@ -40,7 +42,13 @@ public class SubComponentToModuleConverter
 		}
 		org.sbolstandard.core2.Module module  = sbol2ModuleDefinition.createModule(sbol3SubComponent.getDisplayId(), sbol2ChildModuleDefUri);
 		
-		// Measures???
+		// Measurement conversion
+		if(sbol3SubComponent.getMeasures()!=null) {
+			MeasurementConverter measurementConverter = new MeasurementConverter();
+			for (Measure sbol3Measure : sbol3SubComponent.getMeasures()) {
+				measurementConverter.convert(document, module, sbol3SubComponent, sbol3Measure);
+			}
+		}
 
 		return module; 
 		

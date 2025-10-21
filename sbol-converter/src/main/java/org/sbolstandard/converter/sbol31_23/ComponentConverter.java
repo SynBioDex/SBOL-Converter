@@ -1,7 +1,6 @@
 package org.sbolstandard.converter.sbol31_23;
 
 import java.net.URI;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.sbolstandard.converter.Util;
@@ -15,7 +14,6 @@ import org.sbolstandard.core3.entity.SubComponent;
 import org.sbolstandard.core2.SBOLDocument;
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core3.util.SBOLGraphException;
-import org.sbolstandard.core3.vocabulary.RestrictionType;
 
 public class ComponentConverter implements EntityConverter<Component, ComponentDefinition> {
 

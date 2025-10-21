@@ -1,8 +1,10 @@
 package org.sbolstandard.converter.sbol23_31;
 
+import org.sbolstandard.core2.Activity;
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.SBOLDocument;
+import org.sbolstandard.core3.entity.provenance.Association;
 import org.sbolstandard.core3.util.SBOLGraphException;
 
 public interface ChildEntityConverter<InputEntity, OutputEntity> {

@@ -23,26 +23,6 @@
     <sbol:type rdf:resource="http://identifiers.org/so/SO:0000988"/>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000804"/>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation4">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation4"/>
-        <sbol:displayId>annotation4</sbol:displayId>
-        <dcterms:title>GCTT BsaI overhang</dcterms:title>
-        <gbConv:note>color: #a6acb3</gbConv:note>
-        <gbConv:note>GCTT BsaI overhang</gbConv:note>
-        <gbConv:label>GCTT BsaI overhang</gbConv:label>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0001411"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation4/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation4/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2869</sbol:start>
-            <sbol:end>2872</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
       <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation2">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation2"/>
         <sbol:displayId>annotation2</sbol:displayId>
@@ -120,6 +100,26 @@
             <sbol:start>744</sbol:start>
             <sbol:end>1754</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#reverseComplement"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation4">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation4"/>
+        <sbol:displayId>annotation4</sbol:displayId>
+        <dcterms:title>GCTT BsaI overhang</dcterms:title>
+        <gbConv:note>color: #a6acb3</gbConv:note>
+        <gbConv:note>GCTT BsaI overhang</gbConv:note>
+        <gbConv:label>GCTT BsaI overhang</gbConv:label>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0001411"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation4/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation4/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>2869</sbol:start>
+            <sbol:end>2872</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
       </sbol:SequenceAnnotation>

@@ -12,7 +12,7 @@ public class CollectionConverter implements EntityConverter<org.sbolstandard.cor
     @Override
     public Collection convert(SBOLDocument doc, org.sbolstandard.core2.Collection input, Parameters parameters) throws SBOLGraphException {  
         Collection col = doc.createCollection(Util.createSBOL3Uri(input),Util.getNamespace(input));
-        Util.copyIdentified(input, col);
+        Util.copyIdentified(input, col, parameters);
         for (URI memberUri : input.getMemberURIs()) {
         	col.addMember(Util.createSBOL3Uri(memberUri, parameters) );
         }

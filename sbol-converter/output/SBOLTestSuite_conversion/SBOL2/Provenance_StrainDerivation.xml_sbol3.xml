@@ -25,4 +25,10 @@
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:displayId>bsubtilis168</sbol:displayId>
    </sbol:Component>
+   <sbol:TopLevel rdf:about="http://myapp.com/x_ray">
+      <sbol:name>X-ray</sbol:name>
+      <sbol:hasNamespace rdf:resource="http://myapp.com"/>
+      <sbol:displayId>x_ray</sbol:displayId>
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+   </sbol:TopLevel>
 </rdf:RDF>

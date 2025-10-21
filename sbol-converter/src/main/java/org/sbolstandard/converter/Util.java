@@ -18,6 +18,7 @@ import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.sbolstandard.core2.Annotation;
+import org.sbolstandard.core2.Attachment;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.EDAMOntology;
 import org.sbolstandard.core2.RestrictionType;
@@ -468,6 +469,8 @@ public class Util {
 		 if (input.getWasDerivedFrom() != null) {
 			output.setWasDerivedFroms(toSet(input.getWasDerivedFrom()));
 		}
+
+		convertIfTopLevel3to2(input, output);
 		convertAnnotations3_to_2(input, output, sbol2Document);	
 		/* 
 		List<Metadata> metadataEntities = input.getMetadataEntites();
@@ -484,6 +487,31 @@ public class Util {
 
 		// TODO: FIX ME
 		// output.setWasGeneratedBy(toSet(input.getWasGeneratedBys()));
+	}
+
+	private static void convertIfTopLevel3to2(Identified input, org.sbolstandard.core2.Identified output) throws SBOLGraphException, SBOLValidationException {
+		if (input instanceof org.sbolstandard.core3.entity.TopLevel) {
+			org.sbolstandard.core3.entity.TopLevel topLevelInput = (org.sbolstandard.core3.entity.TopLevel) input;
+			if (output instanceof org.sbolstandard.core2.TopLevel) {
+				org.sbolstandard.core2.TopLevel topLevelOutput = (org.sbolstandard.core2.TopLevel) output;
+				if(topLevelInput.getAttachments()!=null) {
+					Set<URI> sbol2AttachmentURIs = new HashSet<>();
+					for(org.sbolstandard.core3.entity.Attachment sbol3Attachment : topLevelInput.getAttachments()) {
+						URI sbol2Uri = Util.createSBOL2Uri(sbol3Attachment.getUri());
+						sbol2AttachmentURIs.add(sbol2Uri);
+					}
+					// It does not have setAttachmentURIs method
+					topLevelOutput.setAttachments(sbol2AttachmentURIs);
+				}
+			}
+			// TODO: WRITE ME
+			// if has measurement 
+			// 	if output is module 
+			// 	    copy hasMeasurement URIS
+			// 	else if component instance 
+			// 		copy hasMeasurement URIS
+			
+		}
 	}
 
 	/**
@@ -583,7 +611,7 @@ public class Util {
 		return nestedAnnotation;
 	}
 
-	public static void copyIdentified(org.sbolstandard.core2.Identified input, Identified output)
+	public static void copyIdentified(org.sbolstandard.core2.Identified input, Identified output, Parameters parameters)
 			throws SBOLGraphException {
 		output.setName(input.getName());
 		output.setDescription(input.getDescription());
@@ -591,10 +619,24 @@ public class Util {
 		output.setWasDerivedFrom(toList(input.getWasDerivedFroms()));
 		// TODO: FIX ME
 		// output.setWasGeneratedBy(toList(input.getWasGeneratedBys()));
-
+		convertIfTopLevel(input, output,parameters);
 		convertAnnotations_2_to3(input.getAnnotations(), output);
 	}
 
+	private static void convertIfTopLevel(org.sbolstandard.core2.Identified input, Identified output, Parameters parameters) throws SBOLGraphException {
+		if (input instanceof org.sbolstandard.core2.TopLevel) {
+			org.sbolstandard.core2.TopLevel topLevelInput = (org.sbolstandard.core2.TopLevel) input;
+			if (input instanceof org.sbolstandard.core2.TopLevel) {
+				org.sbolstandard.core3.entity.TopLevel topLevelOutput = (org.sbolstandard.core3.entity.TopLevel) output;
+				List<URI> sbol3AttachmentURIs = new ArrayList<>();
+				for(URI sbol2Uri : topLevelInput.getAttachmentURIs()) {
+					URI sbol3Uri = Util.createSBOL3Uri(sbol2Uri, parameters);
+					sbol3AttachmentURIs.add(sbol3Uri);
+				}
+				topLevelOutput.setAttachmentsByURIs(sbol3AttachmentURIs);
+			}
+		}
+	}
 	/**
 	 * Recursively converts SBOL2 annotations (and nested annotations) to SBOL3 Metadata.
 	 * @param sbol2Annotations List of SBOL2 annotations to convert

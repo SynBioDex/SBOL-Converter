@@ -3,6 +3,7 @@ package org.sbolstandard.converter.sbol23_31;
 import java.net.URI;
 
 import org.sbolstandard.converter.Util;
+import org.sbolstandard.converter.sbol23_31.measurement.MeasurementConverter;
 import org.sbolstandard.core2.FunctionalComponent;
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core3.entity.Component;
@@ -38,6 +39,8 @@ public class InteractionConverter implements ChildEntityConverter<org.sbolstanda
 			parameters.addMapping(sbol2Interaction.getIdentity(), sbol3Interaction.getUri());					
 		}
 
+
+
 		// Convert each SBOL2 Participation to SBOL3 Participation
 		for (org.sbolstandard.core2.Participation sbol2Participation : sbol2Interaction.getParticipations()) {
 
@@ -68,11 +71,27 @@ public class InteractionConverter implements ChildEntityConverter<org.sbolstanda
 				sbol3Participation = sbol3Interaction.createParticipation(Util.convertToSBOL3_SBO_URIs(sbol2Participation.getRoles()),sbol3Feature);
 				parameters.addMapping(sbol2Participation.getIdentity(), sbol3Participation.getUri());
 			}
-			Util.copyIdentified(sbol2Participation, sbol3Participation);
+			// Measurement conversion of Participation
+			if(sbol2Participation.getMeasures()!=null) {
+				MeasurementConverter measurementConverter = new MeasurementConverter();
+				for (org.sbolstandard.core2.Measure sbol2Measure : sbol2Participation.getMeasures()) {
+					measurementConverter.convert(document, sbol3Participation, sbol2Participation, sbol2Measure, parameters);
+				}
+			}
+
+			Util.copyIdentified(sbol2Participation, sbol3Participation, parameters);
+		}
+
+		// Measurement conversion
+		if(sbol2Interaction.getMeasures()!=null) {
+			MeasurementConverter measurementConverter = new MeasurementConverter();
+			for (org.sbolstandard.core2.Measure sbol2Measure : sbol2Interaction.getMeasures()) {
+				measurementConverter.convert(document, sbol3Interaction, sbol2Interaction, sbol2Measure, parameters);
+			}
 		}
 
 		// Copy common identified fields (displayId, version, etc.) from the SBOL2 Interaction to the SBOL3 Interaction
-		Util.copyIdentified(sbol2Interaction, sbol3Interaction);
+		Util.copyIdentified(sbol2Interaction, sbol3Interaction, parameters);
 
 		// Return the constructed SBOL3 Interaction
 		return sbol3Interaction;

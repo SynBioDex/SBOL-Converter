@@ -164,6 +164,27 @@
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
+         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH37431/annotation9">
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH37431/annotation9/range">
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>2494</sbol:end>
+                  <sbol:start>2475</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH37431_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <gbConv:label>kanseqf</gbConv:label>
+            <gbConv:vntifkey>27</gbConv:vntifkey>
+            <gbConv:featureType>Primer</gbConv:featureType>
+            <sbol:name>kanseqf</sbol:name>
+            <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
+            <sbol:displayId>annotation9</sbol:displayId>
+         </sbol:SequenceFeature>
+      </sbol:hasFeature>
+      <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH37431/annotation12">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH37431/annotation12/range">
@@ -183,27 +204,6 @@
             <sbol:name>P(LAC)</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
             <sbol:displayId>annotation12</sbol:displayId>
-         </sbol:SequenceFeature>
-      </sbol:hasFeature>
-      <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH37431/annotation9">
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH37431/annotation9/range">
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>2494</sbol:end>
-                  <sbol:start>2475</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH37431_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <gbConv:label>kanseqf</gbConv:label>
-            <gbConv:vntifkey>27</gbConv:vntifkey>
-            <gbConv:featureType>Primer</gbConv:featureType>
-            <sbol:name>kanseqf</sbol:name>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
-            <sbol:displayId>annotation9</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>

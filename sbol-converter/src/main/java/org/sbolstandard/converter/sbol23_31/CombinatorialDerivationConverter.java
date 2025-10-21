@@ -24,7 +24,7 @@ public class CombinatorialDerivationConverter implements EntityConverter<org.sbo
 		Component sbol3TemplateComponent= doc.getIdentified(sbol3TemplateURI, Component.class);
 		CombinatorialDerivation cd = doc.createCombinatorialDerivation(Util.createSBOL3Uri(input), Util.getNamespace(input), sbol3TemplateComponent);
 		
-		Util.copyIdentified(input, cd);
+		Util.copyIdentified(input, cd, parameters);
 		if (input.isSetStrategy()) {
 			cd.setStrategy(convertStrategy23_31(input.getStrategy()));
 		}

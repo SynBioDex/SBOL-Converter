@@ -22,13 +22,12 @@ public class ConstraintToRefinementTypeConverter implements ChildEntityConverter
         
                 URI uriRestrictionType = constraint.getRestriction();
                 
-                // Subject ve object'i al
+                //Get subject and object
                 org.sbolstandard.core3.entity.Identified subject = constraint.getSubject();
                 org.sbolstandard.core3.entity.Identified object = constraint.getObject();
 
 
                 RefinementType refinementType = RefinementType.USEREMOTE;
-                org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.replaces.getUri();
                 if (uriRestrictionType.equals(org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction.replaces.getUri())) {
 
                     // If subject is ComponentReference and object  is SubComponent then USEREMOTE

@@ -27,4 +27,10 @@
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:displayId>non_codon_optimized</sbol:displayId>
    </sbol:Component>
+   <sbol:TopLevel rdf:about="http://myapp.com/codon_optimization_software">
+      <sbol:name>Codon Optimization Software</sbol:name>
+      <sbol:hasNamespace rdf:resource="http://myapp.com"/>
+      <sbol:displayId>codon_optimization_software</sbol:displayId>
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+   </sbol:TopLevel>
 </rdf:RDF>
