@@ -248,6 +248,9 @@ public class App {
 						version, keepGoing, compareFile, compareFileName, mainFileName, 
 						topLevelURIStr, genBankOut, sbolV1out, fastaOut, snapGeneOut, gff3Out, csvOut, outputFile, 
 						showDetail, noOutput, changeURIprefix, enumerate);
+		    	if (SBOLValidate.getErrors().size()>0) {
+		    		System.exit(1);
+		    	}
 			} else {
 				for (File eachFile : file.listFiles()) {
 					// TODO: should allow compare to a directory of same named files
