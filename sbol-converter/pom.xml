@@ -47,10 +47,12 @@
 		</dependency>
 		
 		<dependency>
-			<groupId>org.sbolstandard</groupId>
-			<artifactId>libSBOLj3</artifactId>
-			<version>1.0.4.1-SNAPSHOT</version>
-		</dependency>
+    		<groupId>org.sbolstandard</groupId>
+   			<artifactId>libsbolj3</artifactId>
+    		<version>1.0.4.1-SNAPSHOT</version>
+  		</dependency>
+
+		
 		<!--<dependency>
 			<groupId>org.apache.jena</groupId>
 			<artifactId>jena-base</artifactId>
@@ -177,6 +179,11 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
+		 <repository>
+    		<id>github</id>
+			<name>GitHub Packages</name>
+    		<url>https://maven.pkg.github.com/SynBioDex</url>
+  		</repository>
 	</repositories>
 
 </project>
