@@ -229,14 +229,24 @@ public class App {
 		if (fileName.equals(""))
 			usage();
 
-		//boolean foundSBOL1 = false;
+		File file = new File(fileName);
+		if (!URIPrefix.equals("")) {
+			SBOLReader.setURIPrefix(URIPrefix);
+		}
+		if (!compliant) {
+			SBOLReader.setCompliant(false);
+		}
+		SBOLReader.setTypesInURI(typesInURI);
+		SBOLReader.setVersion(version);
+		SBOLReader.setKeepGoing(keepGoing);
+		SBOLWriter.setKeepGoing(keepGoing);
+
 		boolean foundSBOL2 = false;
 		boolean foundSBOL3 = false;
-		File file = new File(fileName);
+
 		org.sbolstandard.core2.SBOLDocument document = SBOLReader.read(file);
 		for (QName n : document.getNamespaces())
 		{
-			//if (n.getNamespaceURI().equals(sbol1.getNamespaceURI())) foundSBOL1 = true;
 			if (n.getNamespaceURI().equals(sbol2.getNamespaceURI())) foundSBOL2 = true;
 			if (n.getNamespaceURI().equals(sbol3.getNamespaceURI())) foundSBOL3 = true;
 		}
