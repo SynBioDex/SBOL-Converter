@@ -152,9 +152,21 @@ public class App {
 		boolean changeURIprefix = false;
 		boolean enumerate = false;
 
-        // For testing only
-        //args=new String[] {"test_files/invalid.ttl", "-l", "SBOL2", "-o", "invalid-out.ttl"};
-        //args=new String[] {"test_files/invalid.ttl"};
+        // SBOL3 to SBOL2 test
+        //args=new String[] {"test_files/invalid.ttl", "-l", "SBOL2", "-o", "test_files/invalid-out.xml"};
+        
+        // SBOL2 to GenBank test
+        //args=new String[] {"test_files/invalid-out.xml", "-l", "GenBank", "-p", "keele", "-o", "test_files/outputs/cSbol2ToGenBank.gb"};
+
+        // SBOL3 to GenBank test
+        //args=new String[] {"test_files/invalid.ttl", "-l", "GenBank", "-o", "test_files/outputs/3ToGenBank.gb"};
+
+        // GenBank to SBOL2 test
+        //args=new String[] {"test_files/genBankTestFile.gb", "-l", "SBOL2", "-p", "keele", "-o", "test_files/outputs/gbtoSBOL2.xml"};
+
+        // GenBank to SBOL3 test
+        //args=new String[] {"test_files/genBankTestFile.gb", "-l", "SBOL3", "-p", "keele", "-o", "test_files/outputs/gbtoSBOL3.ttl"};
+
 
 		int i = 0;
 		while (i < args.length) {
@@ -281,7 +293,10 @@ public class App {
 			foundSBOL3 = true;
 		}
 
-		if (!foundSBOL3 && !sbolV3out) {
+        //OLD IF-ELSE STRUCTURE METHOD CALL FOR THE SAKE OF DEMONSTRATION
+        //oldIfElseStructure(file, fileName, URIPrefix, complete, compliant, bestPractice, typesInURI, version, keepGoing, compareFile, compareFileName, mainFileName, topLevelURIStr, genBankOut, sbolV1out, fastaOut, snapGeneOut, gff3Out, csvOut, outputFile, showDetail, noOutput, changeURIprefix, enumerate, foundSBOL2, foundSBOL3, documentAsString, sbolV3out, sbolV2out);
+        
+        if (!foundSBOL3 && !sbolV3out) {
             // THERE IS NO SBOL3 CONTENT AND THERE IS NO SBOL3 OUTPUT REQUESTED,
             // INPUT FILE CAN BE SBOL2/GENBANK/FASTA etc.
             // SO PERFORM SBOL2 VALIDATION OR CONVERSION TO/FROM SBOL2
@@ -307,19 +322,18 @@ public class App {
                             //SBOLValidator.getValidator().validate(null)
 				}
 			}
-		} else {
+		} else { // SBOL3 CONTENT IS PRESENT OR SBOL3 OUTPUT IS REQUESTED // SO PERFORM SBOL3 VALIDATION OR CONVERSION TO/FROM SBOL3
 	        if (foundSBOL2 && !foundSBOL3) {// THERE IS SBOL2 IN INPUT, NO SBOL3 IN INPUT - SBOL2 TO SBOL3 CONVERSION
-                
-
                 InputStream inputStream = new ByteArrayInputStream(documentAsString.getBytes(StandardCharsets.UTF_8));
 	        	org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(inputStream);
                 //System.out.println("SBOL2 to SBOL3 document read.");
-
 	        	if (sbolV3out) {
                     System.out.println("Converting SBOL2 to SBOL3...");
                     //CONVERT SBOL2 TO SBOL3
-	        		SBOLDocumentConverter converter = new SBOLDocumentConverter();
-	        		org.sbolstandard.core3.entity.SBOLDocument sbol3Doc = converter.convert(doc);
+                    Configuration.getInstance().setCompleteDocument(complete);
+	                Configuration.getInstance().setValidateRecommendedRules(bestPractice);
+	        		SBOLDocumentConverter converter2to3 = new SBOLDocumentConverter();
+	        		org.sbolstandard.core3.entity.SBOLDocument sbol3Doc = converter2to3.convert(doc);
 	        		if (!noOutput) {
                         // OUTPUT THE SBOL3 DOCUMENT
 	        			if (outputFile.equals("")) {
@@ -335,6 +349,7 @@ public class App {
 	        	}
 	        } else if (foundSBOL3) { // THERE IS SBOL3 CONTENT
 	        	if (sbolV3out) {
+                    // SBOL3 FOUND AND SBOL3 OUTPUT REQUESTED
                     // ?? WHAT IS THIS ??
                     File inFile = new File(fileName);
 	                Configuration.getInstance().setCompleteDocument(complete);
@@ -350,8 +365,8 @@ public class App {
         				File outFile = new File(outputFile);
         				SBOLIO.write(sbol3Doc, outFile, SBOLFormat.RDFXML);
         			}
-	        	} else if (sbolV2out) {
-                    //CONVERT SBOL3 TO SBOL2
+	        	} else if (sbolV2out || genBankOut || fastaOut || snapGeneOut || gff3Out || csvOut) {
+                    //CONVERT SBOL3 TO SBOL2 OR GENBANK/FASTA/SNAPGENE/GFF3/CSV
                     System.out.println("Converting SBOL3 to SBOL2...");
                     File inFile = new File(fileName);
 	                Configuration.getInstance().setCompleteDocument(complete);
@@ -418,9 +433,43 @@ public class App {
                         }
                     }
                 }
-	        }	    	
+	        } else {
+                
+                // INPUT FILE IS EITHER SBOL1 OR NON-SBOL
+                System.out.println("Not Provided SBOL2 or SBOL3 content in the input file.");
+                // FIRST CONVERT TO SBOL2 THEN TO SBOL3
+                org.sbolstandard.core2.SBOLDocument sbol2Doc = SBOLValidate.validate(System.out,System.err,fileName, URIPrefix, "", complete, compliant, bestPractice, typesInURI, 
+						version, keepGoing, compareFile, compareFileName, mainFileName, 
+						topLevelURIStr, genBankOut, sbolV1out, fastaOut, snapGeneOut, gff3Out, csvOut, outputFile, 
+						showDetail, noOutput, changeURIprefix, enumerate);
+		    	if (SBOLValidate.getErrors().size()>0) {
+		    		System.exit(1);
+		    	}
+
+                System.out.println("Converting SBOL2 to SBOL3...");
+                Configuration.getInstance().setCompleteDocument(complete);
+                Configuration.getInstance().setValidateRecommendedRules(bestPractice);
+        		SBOLDocumentConverter converter2to3 = new SBOLDocumentConverter();
+        		org.sbolstandard.core3.entity.SBOLDocument sbol3Doc = converter2to3.convert(sbol2Doc);
+                if (!noOutput) {
+                        // OUTPUT THE SBOL3 DOCUMENT
+	        			if (outputFile.equals("")) {
+                            // OUTPUT TO SYSTEM.OUT
+	        				String result=SBOLIO.write(sbol3Doc, SBOLFormat.RDFXML);
+	        				System.out.println(result);
+	        			} else {
+                            // OUTPUT TO SPECIFIED FILE
+	        				File outFile = new File(outputFile);
+	        				SBOLIO.write(sbol3Doc, outFile, SBOLFormat.RDFXML);
+	        			}
+	        		}
+            }
 		}
-	}
+    
+    }
+    
+
+
     private static int sbol3Validation(PrintStream outputStream, PrintStream errorStream, String fileName,
 			String URIPrefix, String defaultDisplayId, boolean complete, boolean compliant, boolean bestPractice, boolean typesInURI,
 			String version, boolean keepGoing, String compareFile, String compareFileName, String mainFileName,
@@ -504,13 +553,26 @@ public class App {
             // Input Document is SBOL2
             if(sbolV3out){
                 // CONVERT SBOL2 TO SBOL3
+                /*convertToSBOL2ToSBOL3(file, fileName, URIPrefix, complete, compliant, bestPractice, typesInURI,
+                    version, keepGoing, compareFile, compareFileName, mainFileName,
+                    topLevelURIStr, genBankOut, sbolV1out, fastaOut, snapGeneOut, gff3Out, csvOut, outputFile,
+                    showDetail, noOutput, changeURIprefix, enumerate);
 
             } else if (genBankOut || fastaOut || snapGeneOut || gff3Out || csvOut){
                 // CONVERT SBOL2 TO GENBANK/FASTA/SNAPGENE/GFF3/CSV
 
+                /*convertSBOL2ToOtherFormats(file, fileName, URIPrefix, complete, compliant, bestPractice, typesInURI,
+                    version, keepGoing, compareFile, compareFileName, mainFileName,
+                    topLevelURIStr, genBankOut, sbolV1out, fastaOut, snapGeneOut, gff3Out, csvOut, outputFile,
+                    showDetail, noOutput, changeURIprefix, enumerate);*/
+
             } else {
                 // SBOL2 VALIDATION
 
+                /*sbol2Validation(System.out, System.err, fileName, URIPrefix, complete, compliant, bestPractice, typesInURI,
+                    version, keepGoing, compareFile, compareFileName, mainFileName,
+                    topLevelURIStr, genBankOut, sbolV1out, fastaOut, snapGeneOut, gff3Out, csvOut, outputFile,
+                    showDetail, noOutput, changeURIprefix, enumerate);*/
             }
         } else if (foundSBOL3){
             // Input Document is SBOL3
@@ -543,6 +605,38 @@ public class App {
 
 
     }
+
+    private static void convertSBOL2ToOtherFormats(File file, String fileName, String uRIPrefix, boolean complete,
+            boolean compliant, boolean bestPractice, boolean typesInURI, String version, boolean keepGoing,
+            String compareFile, String compareFileName, String mainFileName, String topLevelURIStr, boolean genBankOut,
+            boolean sbolV1out, boolean fastaOut, boolean snapGeneOut, boolean gff3Out, boolean csvOut,
+            String outputFile, boolean showDetail, boolean noOutput, boolean changeURIprefix, boolean enumerate) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'convertSBOL2ToOtherFormats'");
+    }
+
+
+    private static void convertToSBOL2ToSBOL3(File file, String fileName, String uRIPrefix, boolean complete,
+            boolean compliant, boolean bestPractice, boolean typesInURI, String version, boolean keepGoing,
+            String compareFile, String compareFileName, String mainFileName, String topLevelURIStr, boolean genBankOut,
+            boolean sbolV1out, boolean fastaOut, boolean snapGeneOut, boolean gff3Out, boolean csvOut,
+            String outputFile, boolean showDetail, boolean noOutput, boolean changeURIprefix, boolean enumerate) {
+        // TODO Auto-generated method stub
+        
+
+        // CONVERT FROM SBOL2 TO SBOL3
+
+
+
+
+    }
+
+    private static void oldIfElseStructure(File file, String fileName, String URIPrefix, boolean complete, boolean compliant, boolean bestPractice, boolean typesInURI,
+            String version, boolean keepGoing, String compareFile, String compareFileName, String mainFileName,
+            String topLevelURIStr, boolean genBankOut, boolean sbolV1out, boolean fastaOut, boolean snapGeneOut, boolean gff3Out, boolean csvOut, String outputFile,
+            boolean showDetail, boolean noOutput, boolean changeURIprefix, boolean enumerate, boolean foundSBOL2, boolean foundSBOL3, String documentAsString, boolean sbolV3out, boolean sbolV2out) throws SBOLGraphException, IOException, SBOLValidationException, SBOLConversionException {
+        
+    } 
 }
 
 

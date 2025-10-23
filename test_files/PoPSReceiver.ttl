@@ -145,14 +145,6 @@
         sbol:participant  <BBa_F2620/SubComponent2> ;
         sbol:role         SBO:0000459 .
 
-:TetR_protein_Sequence1
-        a                  sbol:Sequence ;
-        sbol:description   "TetR_protein sequence" ;
-        sbol:displayId     "TetR_protein_Sequence1" ;
-        sbol:elements      "NNNNNNNNNNN" ;
-        sbol:encoding      EDAM:format_1208 ;
-        sbol:hasNamespace  <../igem> ;
-        sbol:name          "Sequence1" .
 
 <BBa_B0015/SubComponent2>
         a                 sbol:SubComponent ;
@@ -274,14 +266,7 @@
         sbol:displayId   "SubComponent1" ;
         sbol:instanceOf  :BBa_C0062_protein .
 
-:BBa_C0062_protein_Sequence1
-        a                  sbol:Sequence ;
-        sbol:description   "BBa_C0062_protein sequence" ;
-        sbol:displayId     "BBa_C0062_protein_Sequence1" ;
-        sbol:elements      "NNNNNNNNNNN" ;
-        sbol:encoding      EDAM:format_1208 ;
-        sbol:hasNamespace  <../igem> ;
-        sbol:name          "Sequence1" .
+
 
 <BBa_F2620/Interaction3>
         a                      sbol:Interaction ;

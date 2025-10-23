@@ -119,6 +119,12 @@ java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test
 java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/sbol3TestFile.ttl -l SBOL2 -o ../test_files/outputs/convertedSBOL2File.xml
 ```
 
+4. Converting from SBOL3 to GenBank ()
+
+```
+java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/sbol3TestFile.ttl -l GenBank -p https://keele.ac.uk -o ../test_files/outputs/convertedGenBankFile.gb
+```
+
 #### Validation
 
 1. Validating an SBOL3 file:
