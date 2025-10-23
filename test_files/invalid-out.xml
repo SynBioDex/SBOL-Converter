@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<rdf:RDF xmlns="https://synbiohub.org/public/igem/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sbol="http://sbols.org/v2#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
+  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_B0010">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0010"/>
+    <sbol:displayId>BBa_B0010</sbol:displayId>
+    <dcterms:title>BBa_B0010</dcterms:title>
+    <dcterms:description>Transcriptional terminator consisting of a 64 bp stem-loop</dcterms:description>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://www.keele.ac.uk/metehan"/>
+    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_B0010_Sequence1"/>
+  </sbol:ComponentDefinition>
+  <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/BBa_B0010_Sequence1">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0010_Sequence1"/>
+    <sbol:displayId>BBa_B0010_Sequence1</sbol:displayId>
+    <dcterms:title>Sequence1</dcterms:title>
+    <dcterms:description>BBa_B0010 sequence</dcterms:description>
+    <sbol:elements>ccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctc</sbol:elements>
+    <sbol:encoding rdf:resource="http://www.chem.qmul.ac.uk/iubmb/misc/naseq.html"/>
+  </sbol:Sequence>
+</rdf:RDF>
