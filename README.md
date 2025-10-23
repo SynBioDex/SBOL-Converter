@@ -119,11 +119,19 @@ java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test
 java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/sbol3TestFile.ttl -l SBOL2 -o ../test_files/outputs/convertedSBOL2File.xml
 ```
 
-4. Converting from SBOL3 to GenBank ()
+4. Converting from SBOL3 to GenBank (providing a prefix URI is required)
 
 ```
-java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/sbol3TestFile.ttl -l GenBank -p https://keele.ac.uk -o ../test_files/outputs/convertedGenBankFile.gb
+java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/sbol3ShortTest.ttl -l GenBank -p https://keele.ac.uk -o ../test_files/outputs/convGenBankFromSBOL3.gb
 ```
+
+5. Converting from GenBank to SBOL3 (providing a prefix URI is required)
+
+```
+java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/genBankTestFile.gb -l SBOL3 -p https://keele.ac.uk  -o ../test_files/outputs/convSBOL3FromGenBank.ttl;
+```
+
+
 
 #### Validation
 

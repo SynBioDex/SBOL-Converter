@@ -442,7 +442,8 @@ public class App {
 						version, keepGoing, compareFile, compareFileName, mainFileName, 
 						topLevelURIStr, genBankOut, sbolV1out, fastaOut, snapGeneOut, gff3Out, csvOut, outputFile, 
 						showDetail, noOutput, changeURIprefix, enumerate);
-		    	if (SBOLValidate.getErrors().size()>0) {
+                List<String> errors = SBOLValidate.getErrors();
+		    	if (errors == null || errors.size() > 0) {
 		    		System.exit(1);
 		    	}
 
