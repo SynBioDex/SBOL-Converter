@@ -1,8 +1,24 @@
 # SBOL-Converter
 
-The Java library has been developed to convert [Synthetic Biology Open Language version 3 (SBOL3) and SBOL2](https://sbolstandard.org/data-model-specification) files. The convesion can be in either direction, from SBOL2 to SBOL3 and vice versa. The library is under development and is currently available as an alpha release.
+The Java library has been developed to convert [Synthetic Biology Open Language version 3 (SBOL3) and SBOL2](https://sbolstandard.org/data-model-specification) files. The convesion can be in either direction, from SBOL2 to SBOL3 and vice versa.
 
-## Installation
+It can also be used to convert:
+
+- GenBank,
+- FASTA,
+- SnapGene,
+- GFF3 and
+- CSV files.
+
+The library is under development and is currently available as an alpha release.
+
+## Download
+
+Please download from the relase page using the link below:
+
+TODO: URL
+
+### Installation from the Source
 
 First, download the project and install it using Maven.
 
@@ -10,6 +26,12 @@ First, download the project and install it using Maven.
 git clone https://github.com/SynBioDex/SBOL-Converter.git
 cd sbol-converter
 mvn install -DskipTests=true
+```
+
+The jar file can be found under the target file:
+
+```
+java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar
 ```
 
 Then include it as a Maven dependency in your project's POM file.
@@ -28,6 +50,110 @@ Then include it as a Maven dependency in your project's POM file.
 ```
 
 ## How to use the converter:
+
+The library provides separete converters from SBOL2-to-SBOL3 and SBOL3-to-SBOL2. Each converter takes an an SBOL document to be converted and returns a document for the target version.
+
+### From command line
+
+The converter can be used with the following command
+
+```
+java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar <inputFile> [options]  [-o <outputFile>]
+```
+
+Convertion Options:
+
+- -l <language> specfies language (SBOL1/SBOL2/GenBank/FASTA/SnapGene/GFF3/CSV) for output (default=SBOL2)
+
+Validation Options for SBOL3:
+
+- -p <URIprefix> used for converted objects
+- -c change URI prefix to specified <URIprefix>
+- -v <version> used for converted objects
+- -t uses types in URIs
+- -i allow SBOL document to be incomplete
+- -b check best practices
+- -f fail on first error
+- -d display detailed error trace
+- -mf main SBOL file if file diff. option is selected
+- -cf second SBOL file if file diff. option is selected
+- -no indicate no output file to be generated from validation
+- -en enumerate CombinatorialDerivations
+
+Validation Options for SBOL2:
+
+- -s <topLevelURI> select only this object and those it references
+- -p <URIprefix> used for converted objects
+- -c change URI prefix to specified <URIprefix>
+- -v <version> used for converted objects
+- -t uses types in URIs
+- -n allow non-compliant URIs (Not applicable for SBOL3 validation)
+- -i allow SBOL document to be incomplete
+- -b check best practices
+- -f fail on first error
+- -d display detailed error trace
+- -mf main SBOL file if file diff. option is selected
+- -cf second SBOL file if file diff. option is selected
+- -no indicate no output file to be generated from validation
+- -en enumerate CombinatorialDerivations
+
+#### Converting to/from SBOL3
+
+Examples:
+
+1. Converting from SBOL2 to SBOL3 and displaying the result in CLI:
+
+```
+java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/testFile.xml -l SBOL3
+```
+
+2. Converting from SBOL2 to SBOL3 and writing the result in a file:
+
+```
+java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/testFile.xml -l SBOL3  -o ../test_files/outputs/convertedSBOL3File.ttl
+```
+
+3. Converting from SBOL3 to SBOL2 and writing the result in a file:
+
+```
+java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/sbol3TestFile.ttl -l SBOL2 -o ../test_files/outputs/convertedSBOL2File.xml
+```
+
+#### Validation
+
+1. Validating an SBOL3 file:
+
+```
+java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/sbol3TestFile.ttl
+```
+
+2. Validating an SBOL3 file checking best practices:
+
+```
+java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/sbol3TestFile.ttl -b
+```
+
+3. Validating an SBOL3 file allowing incomlete documents
+
+```
+java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/sbol3TestFile.ttl -i
+```
+
+3. Validating an SBOL2 file:
+
+```
+java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/sbol2TestFile.xml
+```
+
+#### Converting to/from GenBank, FASTA, etc.
+
+1. Converting from GenBank/FASTA/... to SBOL2 (providing a prefix URI is required)
+
+```
+java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/genBankTestFile.gb -l SBOL2 -p https://keele.ac.uk/scm  -o ../test_files/outputs/convertedSBOL2.xml
+```
+
+### Using the code
 
 The library provides separete converters from SBOL2-to-SBOL3 and SBOL3-to-SBOL2. Each converter takes an an SBOL document to be converted and returns a document for the target version.
 

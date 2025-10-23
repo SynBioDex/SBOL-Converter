@@ -1,0 +1,530 @@
+@base          <https://synbiohub.org/public/igem/> .
+@prefix :      <https://synbiohub.org/public/igem/> .
+@prefix CHEBI: <https://identifiers.org/CHEBI:> .
+@prefix EDAM:  <https://identifiers.org/edam:> .
+@prefix GO:    <https://identifiers.org/GO:> .
+@prefix SBO:   <https://identifiers.org/SBO:> .
+@prefix SO:    <https://identifiers.org/SO:> .
+@prefix om:    <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix sbol:  <http://sbols.org/v3#> .
+
+<Template/Constraint1>
+        a                 sbol:Constraint ;
+        sbol:displayId    "Constraint1" ;
+        sbol:object       <Template/SubComponent2> ;
+        sbol:restriction  sbol:precedes ;
+        sbol:subject      <Template/SubComponent1> .
+
+<LuxRDevice/SubComponent1>
+        a                 sbol:SubComponent ;
+        sbol:displayId    "SubComponent1" ;
+        sbol:hasLocation  <LuxRDevice/SubComponent1/Range1> ;
+        sbol:instanceOf   :BBa_B0034 ;
+        sbol:orientation  SO:0001030 .
+
+:pGeneric  a               sbol:Component ;
+        sbol:description   "A repressible promoter" ;
+        sbol:displayId     "pGeneric" ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:name          "pGeneric" ;
+        sbol:role          SO:0000167 ;
+        sbol:type          SBO:0000251 .
+
+:BBa_K174004_Sequence1
+        a                  sbol:Sequence ;
+        sbol:description   "BBa_K174004 sequence" ;
+        sbol:displayId     "BBa_K174004_Sequence1" ;
+        sbol:elements      "agaacaacctctgctaaaattcctgaaaaattttgcaaaaagttgttgactttatctacaaggtgtggcataatgtgtggaattgtgagcgctcacaattaagctt" ;
+        sbol:encoding      EDAM:format_1207 ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:name          "Sequence1" .
+
+:ModelBasedDesign  a       sbol:TopLevel , prov:Plan ;
+        sbol:displayId     "ModelBasedDesign" ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:name          "ModelBasedDesign" .
+
+:Template  a                sbol:Component ;
+        sbol:description    "Receiver Template" ;
+        sbol:displayId      "Template" ;
+        sbol:hasConstraint  <Template/Constraint1> ;
+        sbol:hasFeature     <Template/SubComponent1> , <Template/SubComponent3> , <Template/SubComponent2> , <Template/SubComponent4> ;
+        sbol:hasNamespace   <../igem> ;
+        sbol:name           "Template" ;
+        sbol:role           SO:0000704 ;
+        sbol:type           SBO:0000251 .
+
+:Designer  a               sbol:TopLevel , prov:Agent ;
+        sbol:displayId     "Designer" ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:name          "Designer " .
+
+<LuxRDevice/Interaction2>
+        a                      sbol:Interaction ;
+        sbol:displayId         "Interaction2" ;
+        sbol:hasParticipation  <LuxRDevice/Interaction2/Participation2> , <LuxRDevice/Interaction2/Participation1> ;
+        sbol:type              SBO:0000170 .
+
+<LuxRDevice/Interaction1/Participation2>
+        a                 sbol:Participation ;
+        sbol:displayId    "Participation2" ;
+        sbol:participant  <LuxRDevice/SubComponent5> ;
+        sbol:role         SBO:0000011 .
+
+<LuxRDevice/Interaction2/Participation2>
+        a                 sbol:Participation ;
+        sbol:displayId    "Participation2" ;
+        sbol:participant  <LuxRDevice/SubComponent5> ;
+        sbol:role         SBO:0000459 .
+
+:BBa_C0062_Sequence1  a    sbol:Sequence ;
+        sbol:description   "BBa_C0062 sequence" ;
+        sbol:displayId     "BBa_C0062_Sequence1" ;
+        sbol:elements      "atgaaaaacataaatgccgacgacacatacagaataattaataaaattaaagcttgtagaagcaataatgatattaatcaatgcttatctgatatgactaaaatggtacattgtgaatattatttactcgcgatcatttatcctcattctatggttaaatctgatatttcaatcctagataattaccctaaaaaatggaggcaatattatgatgacgctaatttaataaaatatgatcctatagtagattattctaactccaatcattcaccaattaattggaatatatttgaaaacaatgctgtaaataaaaaatctccaaatgtaattaaagaagcgaaaacatcaggtcttatcactgggtttagtttccctattcatacggctaacaatggcttcggaatgcttagttttgcacattcagaaaaagacaactatatagatagtttatttttacatgcgtgtatgaacataccattaattgttccttctctagttgataattatcgaaaaataaatatagcaaataataaatcaaacaacgatttaaccaaaagagaaaaagaatgtttagcgtgggcatgcgaaggaaaaagctcttgggatatttcaaaaatattaggttgcagtgagcgtactgtcactttccatttaaccaatgcgcaaatgaaactcaatacaacaaaccgctgccaaagtatttctaaagcaattttaacaggagcaattgattgcccatactttaaaaattaataacactgatagtgctagtgtagatcac" ;
+        sbol:encoding      EDAM:format_1207 ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:name          "Sequence1" .
+
+:LuxRDevice_Sequence1
+        a                  sbol:Sequence ;
+        sbol:description   "LuxRDevice sequence" ;
+        sbol:displayId     "LuxRDevice_Sequence1" ;
+        sbol:elements      "aaagaggagaaaatgaaaaacataaatgccgacgacacatacagaataattaataaaattaaagcttgtagaagcaataatgatattaatcaatgcttatctgatatgactaaaatggtacattgtgaatattatttactcgcgatcatttatcctcattctatggttaaatctgatatttcaatcctagataattaccctaaaaaatggaggcaatattatgatgacgctaatttaataaaatatgatcctatagtagattattctaactccaatcattcaccaattaattggaatatatttgaaaacaatgctgtaaataaaaaatctccaaatgtaattaaagaagcgaaaacatcaggtcttatcactgggtttagtttccctattcatacggctaacaatggcttcggaatgcttagttttgcacattcagaaaaagacaactatatagatagtttatttttacatgcgtgtatgaacataccattaattgttccttctctagttgataattatcgaaaaataaatatagcaaataataaatcaaacaacgatttaaccaaaagagaaaaagaatgtttagcgtgggcatgcgaaggaaaaagctcttgggatatttcaaaaatattaggttgcagtgagcgtactgtcactttccatttaaccaatgcgcaaatgaaactcaatacaacaaaccgctgccaaagtatttctaaagcaattttaacaggagcaattgattgcccatactttaaaaattaataacactgatagtgctagtgtagatcacccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctcacactggctcaccttcgggtgggcctttctgcgtttataacctgtaggatcgtacaggtttacgcaagaaaatggtttgttatagtcgaataaa" ;
+        sbol:encoding      EDAM:format_1207 ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:name          "Sequence1" .
+
+:BBa_B0010_Sequence1  a    sbol:Sequence ;
+        sbol:description   "BBa_B0010 sequence" ;
+        sbol:displayId     "BBa_B0010_Sequence1" ;
+        sbol:elements      "ccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctc" ;
+        sbol:encoding      EDAM:format_1207 ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:name          "Sequence1" .
+
+<LuxRDevice/SubComponent1/Range1>
+        a                 sbol:Range ;
+        sbol:displayId    "Range1" ;
+        sbol:end          "12" ;
+        sbol:hasSequence  :LuxRDevice_Sequence1 ;
+        sbol:orientation  SO:0001030 ;
+        sbol:start        "1" .
+
+:BBa_C0062_protein  a      sbol:Component ;
+        sbol:description   "LuxR protein" ;
+        sbol:displayId     "BBa_C0062_protein" ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:hasSequence   :BBa_C0062_protein_Sequence1 ;
+        sbol:name          "LuxR" ;
+        sbol:role          GO:0003700 ;
+        sbol:type          SBO:0000252 .
+
+<BBa_F2620/Interaction1>
+        a                      sbol:Interaction ;
+        sbol:displayId         "Interaction1" ;
+        sbol:hasParticipation  <BBa_F2620/Interaction1/Participation2> , <BBa_F2620/Interaction1/Participation1> ;
+        sbol:type              SBO:0000170 .
+
+<Template/SubComponent1>
+        a                sbol:SubComponent ;
+        sbol:displayId   "SubComponent1" ;
+        sbol:instanceOf  :pGeneric .
+
+:BBa_B0012_Sequence1  a    sbol:Sequence ;
+        sbol:description   "BBa_B0012 sequence" ;
+        sbol:displayId     "BBa_B0012_Sequence1" ;
+        sbol:elements      "tcacactggctcaccttcgggtgggcctttctgcgtttata" ;
+        sbol:encoding      EDAM:format_1207 ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:name          "Sequence1" .
+
+:BBa_B0012  a              sbol:Component ;
+        sbol:description   "Double terminator consisting of BBa_B0010 and BBa_B0012" ;
+        sbol:displayId     "BBa_B0012" ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:hasSequence   :BBa_B0012_Sequence1 ;
+        sbol:name          "BBa_B0012" ;
+        sbol:role          SO:0000141 ;
+        sbol:type          SBO:0000251 .
+
+:BBa_R0040  a              sbol:Component ;
+        sbol:description   "TetR repressible promoter" ;
+        sbol:displayId     "BBa_R0040" ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:hasSequence   :BBa_R0040_Sequence1 ;
+        sbol:name          "pTetR" ;
+        sbol:role          SO:0000167 ;
+        sbol:type          SBO:0000251 .
+
+:cell   a                  sbol:TopLevel , om:SingularUnit ;
+        sbol:displayId     "cell" ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:name          "cell" ;
+        om:label           "cell" ;
+        om:symbol          "cell" .
+
+<PromoterDerivation/VariableFeature1>
+        a                 sbol:VariableFeature ;
+        sbol:cardinality  sbol:one ;
+        sbol:displayId    "VariableFeature1" ;
+        sbol:variable     <Template/SubComponent1> ;
+        sbol:variant      :BBa_R0040 , :BBa_K174004 .
+
+<BBa_F2620/SubComponent4>
+        a                    sbol:SubComponent ;
+        sbol:displayId       "SubComponent4" ;
+        sbol:instanceOf      :TetR_protein ;
+        prov:wasDerivedFrom  <Template/SubComponent4> .
+
+<activity1/Usage1>  a   sbol:Identified , prov:Usage ;
+        sbol:displayId  "Usage1" ;
+        prov:entity     :PoPSReceiverSBMLModel ;
+        prov:hadRole    sbol:learn .
+
+<LuxRDevice/Interaction1>
+        a                      sbol:Interaction ;
+        sbol:displayId         "Interaction1" ;
+        sbol:hasParticipation  <LuxRDevice/Interaction1/Participation2> , <LuxRDevice/Interaction1/Participation1> ;
+        sbol:type              SBO:0000589 .
+
+<LuxRDevice/Interaction1/Participation1>
+        a                 sbol:Participation ;
+        sbol:displayId    "Participation1" ;
+        sbol:participant  <LuxRDevice/SubComponent2> ;
+        sbol:role         SBO:0000645 .
+
+<LuxRDevice/Interaction2/Participation1>
+        a                 sbol:Participation ;
+        sbol:displayId    "Participation1" ;
+        sbol:participant  <LuxRDevice/SubComponent4> ;
+        sbol:role         SBO:0000643 .
+
+<activity1/Association1>
+        a               sbol:Identified , prov:Association ;
+        sbol:displayId  "Association1" ;
+        prov:agent      :Designer ;
+        prov:hadPlan    :ModelBasedDesign ;
+        prov:hadRole    sbol:design .
+
+:polymerase  a             sbol:TopLevel , om:SingularUnit ;
+        sbol:displayId     "polymerase" ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:name          "polymerase" ;
+        om:label           "polymerase" ;
+        om:symbol          "polymerase" .
+
+<BBa_F2620/Constraint1>
+        a                 sbol:Constraint ;
+        sbol:displayId    "Constraint1" ;
+        sbol:object       <BBa_F2620/SubComponent2> ;
+        sbol:restriction  sbol:precedes ;
+        sbol:subject      <BBa_F2620/SubComponent1> .
+
+<LuxRDevice/SubComponent2/Range1>
+        a                 sbol:Range ;
+        sbol:displayId    "Range1" ;
+        sbol:end          "793" ;
+        sbol:hasSequence  :LuxRDevice_Sequence1 ;
+        sbol:orientation  SO:0001030 ;
+        sbol:start        "13" .
+
+<LuxRDevice/SubComponent5>
+        a                sbol:SubComponent ;
+        sbol:displayId   "SubComponent5" ;
+        sbol:instanceOf  :BBa_C0062_protein .
+
+<BBa_F2620/PoPS_per_cell>
+        a                     sbol:Identified , om:Measure ;
+        sbol:displayId        "PoPS_per_cell" ;
+        om:hasNumericalValue  "6.6" ;
+        om:hasUnit            :PoPS .
+
+<BBa_F2620/SubComponent3>
+        a                    sbol:SubComponent ;
+        sbol:displayId       "SubComponent3" ;
+        sbol:instanceOf      :BBa_C0062_protein ;
+        prov:wasDerivedFrom  <Template/SubComponent3> .
+
+:BBa_B0015_Sequence1  a    sbol:Sequence ;
+        sbol:description   "BBa_B0015 sequence" ;
+        sbol:displayId     "BBa_B0015_Sequence1" ;
+        sbol:elements      "ccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctcacactggctcaccttcgggtgggcctttctgcgtttata" ;
+        sbol:encoding      EDAM:format_1207 ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:name          "Sequence1" .
+
+<BBa_F2620/Interaction1/Participation2>
+        a                 sbol:Participation ;
+        sbol:displayId    "Participation2" ;
+        sbol:participant  <BBa_F2620/SubComponent4> ;
+        sbol:role         SBO:0000459 .
+
+:activity1  a                      sbol:TopLevel , prov:Activity ;
+        sbol:displayId             "activity1" ;
+        sbol:hasNamespace          <../igem> ;
+        sbol:name                  "ModelBasedDesignActivity" ;
+        sbol:type                  sbol:design ;
+        prov:qualifiedAssociation  <activity1/Association1> ;
+        prov:qualifiedUsage        <activity1/Usage1> .
+
+<LuxRDevice/SubComponent4>
+        a                 sbol:SubComponent ;
+        sbol:displayId    "SubComponent4" ;
+        sbol:hasLocation  <LuxRDevice/SubComponent4/Range1> ;
+        sbol:instanceOf   :BBa_R0062 ;
+        sbol:orientation  SO:0001030 .
+
+:PromoterDerivation  a           sbol:CombinatorialDerivation ;
+        sbol:displayId           "PromoterDerivation" ;
+        sbol:hasNamespace        <../igem> ;
+        sbol:hasVariableFeature  <PromoterDerivation/VariableFeature1> ;
+        sbol:strategy            sbol:enumerate ;
+        sbol:template            :Template .
+
+:TetR_protein_Sequence1
+        a                  sbol:Sequence ;
+        sbol:description   "TetR_protein sequence" ;
+        sbol:displayId     "TetR_protein_Sequence1" ;
+        sbol:elements      "NNNNNNNNNNN" ;
+        sbol:encoding      EDAM:format_1208 ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:name          "Sequence1" .
+
+<BBa_B0015/SubComponent2>
+        a                 sbol:SubComponent ;
+        sbol:displayId    "SubComponent2" ;
+        sbol:hasLocation  <BBa_B0015/SubComponent2/Range1> ;
+        sbol:instanceOf   :BBa_B0012 ;
+        sbol:orientation  SO:0001030 .
+
+<LuxRDevice/SubComponent3/Range1>
+        a                 sbol:Range ;
+        sbol:displayId    "Range1" ;
+        sbol:end          "914" ;
+        sbol:hasSequence  :LuxRDevice_Sequence1 ;
+        sbol:orientation  SO:0001030 ;
+        sbol:start        "794" .
+
+:BBa_B0010  a              sbol:Component ;
+        sbol:description   "Transcriptional terminator consisting of a 64 bp stem-loop" ;
+        sbol:displayId     "BBa_B0010" ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:hasSequence   :BBa_B0010_Sequence1 ;
+        sbol:name          "BBa_B0010" ;
+        sbol:role          SO:0000141 ;
+        sbol:type          SBO:0000251 .
+
+:TetR_protein  a           sbol:Component ;
+        sbol:description   "TetR protein" ;
+        sbol:displayId     "TetR_protein" ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:hasSequence   :TetR_protein_Sequence1 ;
+        sbol:name          "TetR" ;
+        sbol:role          GO:0003700 ;
+        sbol:type          SBO:0000252 .
+
+<BBa_F2620/SubComponent2>
+        a                    sbol:SubComponent ;
+        sbol:displayId       "SubComponent2" ;
+        sbol:instanceOf      :LuxRDevice ;
+        prov:wasDerivedFrom  <Template/SubComponent2> .
+
+:F2620Datasheet  a         sbol:Attachment ;
+        sbol:displayId     "F2620Datasheet" ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:source        <https://openwetware.org/wiki/File:F2620.de2-NEW.pdf> .
+
+<BBa_F2620/Interaction1/Participation1>
+        a                 sbol:Participation ;
+        sbol:displayId    "Participation1" ;
+        sbol:participant  <BBa_F2620/SubComponent1> ;
+        sbol:role         SBO:0000643 .
+
+<Template/SubComponent4>
+        a                sbol:SubComponent ;
+        sbol:displayId   "SubComponent4" ;
+        sbol:instanceOf  :TetR_protein .
+
+:BBa_B0034_Sequence1  a    sbol:Sequence ;
+        sbol:description   "BBa_B0034 sequence" ;
+        sbol:displayId     "BBa_B0034_Sequence1" ;
+        sbol:elements      "aaagaggagaaa" ;
+        sbol:encoding      EDAM:format_1207 ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:name          "Sequence1" .
+
+<BBa_B0015/SubComponent1/Range1>
+        a                 sbol:Range ;
+        sbol:displayId    "Range1" ;
+        sbol:end          "80" ;
+        sbol:hasSequence  :BBa_B0015_Sequence1 ;
+        sbol:orientation  SO:0001030 ;
+        sbol:start        "1" .
+
+:BBa_K174004  a            sbol:Component ;
+        sbol:description   "LacI repressible promoter" ;
+        sbol:displayId     "BBa_K174004" ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:hasSequence   :BBa_K174004_Sequence1 ;
+        sbol:name          "pLacI" ;
+        sbol:role          SO:0000167 ;
+        sbol:type          SBO:0000251 .
+
+:BBa_B0015  a              sbol:Component ;
+        sbol:description   "Double terminator consisting of BBa_B0010 and BBa_B0012" ;
+        sbol:displayId     "BBa_B0015" ;
+        sbol:hasFeature    <BBa_B0015/SubComponent2> , <BBa_B0015/SubComponent1> ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:hasSequence   :BBa_B0015_Sequence1 ;
+        sbol:name          "BBa_B0015" ;
+        sbol:role          SO:0000141 ;
+        sbol:type          SBO:0000251 .
+
+:PoPSReceiverSBMLModel
+        a                  sbol:Model ;
+        sbol:displayId     "PoPSReceiverSBMLModel" ;
+        sbol:framework     SBO:0000062 ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:language      EDAM:format_2585 ;
+        sbol:source        <http://sbolstandard.org/models/popsreceiver> .
+
+:BBa_R0062_Sequence1  a    sbol:Sequence ;
+        sbol:description   "BBa_R0062 sequence" ;
+        sbol:displayId     "BBa_R0062_Sequence1" ;
+        sbol:elements      "acctgtaggatcgtacaggtttacgcaagaaaatggtttgttatagtcgaataaa" ;
+        sbol:encoding      EDAM:format_1207 ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:name          "Sequence1" .
+
+<LuxRDevice/SubComponent3>
+        a                 sbol:SubComponent ;
+        sbol:displayId    "SubComponent3" ;
+        sbol:hasLocation  <LuxRDevice/SubComponent3/Range1> ;
+        sbol:instanceOf   :BBa_B0015 ;
+        sbol:orientation  SO:0001030 .
+
+<BBa_B0015/SubComponent1>
+        a                 sbol:SubComponent ;
+        sbol:displayId    "SubComponent1" ;
+        sbol:hasLocation  <BBa_B0015/SubComponent1/Range1> ;
+        sbol:instanceOf   :BBa_B0010 ;
+        sbol:orientation  SO:0001030 .
+
+:BBa_F2620  a                sbol:Component ;
+        sbol:description     "PoPS Receiver" ;
+        sbol:displayId       "BBa_F2620" ;
+        sbol:hasAttachment   :F2620Datasheet ;
+        sbol:hasConstraint   <BBa_F2620/Constraint1> ;
+        sbol:hasFeature      <BBa_F2620/SubComponent2> , <BBa_F2620/SubComponent3> , <BBa_F2620/SubComponent4> , <BBa_F2620/SubComponent1> ;
+        sbol:hasInteraction  <BBa_F2620/Interaction1> ;
+        sbol:hasMeasure      <BBa_F2620/PoPS_per_cell> ;
+        sbol:hasNamespace    <../igem> ;
+        sbol:name            "BBa_F2620" ;
+        sbol:role            SO:0000704 ;
+        sbol:type            SBO:0000251 ;
+        prov:wasDerivedFrom  :PromoterDerivation , :Template ;
+        prov:wasGeneratedBy  :activity1 .
+
+<BBa_F2620/SubComponent1>
+        a                    sbol:SubComponent ;
+        sbol:displayId       "SubComponent1" ;
+        sbol:instanceOf      :BBa_R0040 ;
+        prov:wasDerivedFrom  <Template/SubComponent1> .
+
+:PoPS   a                  sbol:TopLevel , om:UnitDivision ;
+        sbol:displayId     "PoPS" ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:name          "PoPS" ;
+        om:hasDenominator  :cell ;
+        om:hasNumerator    :polymerase ;
+        om:label           "PoPS" ;
+        om:symbol          "PoPS" .
+
+:BBa_C0062_protein_Sequence1
+        a                  sbol:Sequence ;
+        sbol:description   "BBa_C0062_protein sequence" ;
+        sbol:displayId     "BBa_C0062_protein_Sequence1" ;
+        sbol:elements      "NNNNNNNNNNN" ;
+        sbol:encoding      EDAM:format_1208 ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:name          "Sequence1" .
+
+<Template/SubComponent3>
+        a                sbol:SubComponent ;
+        sbol:displayId   "SubComponent3" ;
+        sbol:instanceOf  :BBa_C0062_protein .
+
+<LuxRDevice/SubComponent2>
+        a                 sbol:SubComponent ;
+        sbol:displayId    "SubComponent2" ;
+        sbol:hasLocation  <LuxRDevice/SubComponent2/Range1> ;
+        sbol:instanceOf   :BBa_C0062 ;
+        sbol:orientation  SO:0001030 .
+
+<BBa_B0015/SubComponent2/Range1>
+        a                 sbol:Range ;
+        sbol:displayId    "Range1" ;
+        sbol:end          "121" ;
+        sbol:hasSequence  :BBa_B0015_Sequence1 ;
+        sbol:orientation  SO:0001030 ;
+        sbol:start        "81" .
+
+:LuxRDevice  a               sbol:Component ;
+        sbol:description     "LuxR Device" ;
+        sbol:displayId       "LuxRDevice" ;
+        sbol:hasFeature      <LuxRDevice/SubComponent5> , <LuxRDevice/SubComponent3> , <LuxRDevice/SubComponent4> , <LuxRDevice/SubComponent2> , <LuxRDevice/SubComponent1> ;
+        sbol:hasInteraction  <LuxRDevice/Interaction1> , <LuxRDevice/Interaction2> ;
+        sbol:hasNamespace    <../igem> ;
+        sbol:hasSequence     :LuxRDevice_Sequence1 ;
+        sbol:name            "LuxRDevice" ;
+        sbol:role            SO:0000704 ;
+        sbol:type            SBO:0000251 .
+
+:BBa_B0034  a              sbol:Component ;
+        sbol:description   "RBS based on Elowitz repressilator" ;
+        sbol:displayId     "BBa_B0034" ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:hasSequence   :BBa_B0034_Sequence1 ;
+        sbol:name          "BBa_B0034" ;
+        sbol:role          SO:0000139 ;
+        sbol:type          SBO:0000251 .
+
+:BBa_R0062  a              sbol:Component ;
+        sbol:description   "Promoter (luxR &amp; HSL regulated -- lux pR)" ;
+        sbol:displayId     "BBa_R0062" ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:hasSequence   :BBa_R0062_Sequence1 ;
+        sbol:name          "pLuxR" ;
+        sbol:role          SO:0000167 ;
+        sbol:type          SBO:0000251 .
+
+:BBa_R0040_Sequence1  a    sbol:Sequence ;
+        sbol:description   "BBa_R0040 sequence" ;
+        sbol:displayId     "BBa_R0040_Sequence1" ;
+        sbol:elements      "tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcac" ;
+        sbol:encoding      EDAM:format_1207 ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:name          "Sequence1" .
+
+<Template/SubComponent2>
+        a                sbol:SubComponent ;
+        sbol:displayId   "SubComponent2" ;
+        sbol:instanceOf  :LuxRDevice .
+
+:BBa_C0062  a              sbol:Component ;
+        sbol:description   "luxR repressor/activator,  (no LVA?)" ;
+        sbol:displayId     "BBa_C0062" ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:hasSequence   :BBa_C0062_Sequence1 ;
+        sbol:name          "luxR" ;
+        sbol:role          SO:0000316 ;
+        sbol:type          SBO:0000251 .
+
+<LuxRDevice/SubComponent4/Range1>
+        a                 sbol:Range ;
+        sbol:displayId    "Range1" ;
+        sbol:end          "969" ;
+        sbol:hasSequence  :LuxRDevice_Sequence1 ;
+        sbol:orientation  SO:0001030 ;
+        sbol:start        "915" .

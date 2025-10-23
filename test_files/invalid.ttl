@@ -1,0 +1,27 @@
+@base          <https://synbiohub.org/public/igem/> .
+@prefix :      <https://synbiohub.org/public/igem/> .
+@prefix CHEBI: <https://identifiers.org/CHEBI:> .
+@prefix EDAM:  <https://identifiers.org/edam:> .
+@prefix GO:    <https://identifiers.org/GO:> .
+@prefix SBO:   <https://identifiers.org/SBO:> .
+@prefix SO:    <https://identifiers.org/SO:> .
+@prefix om:    <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix sbol:  <http://sbols.org/v3#> .
+
+:BBa_B0010_Sequence1  a    sbol:Sequence ;
+        sbol:description   "BBa_B0010 sequence" ;
+        sbol:displayId     "BBa_B0010_Sequence1" ;
+        sbol:elements      "ccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctc" ;
+        sbol:encoding      EDAM:format_1207 ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:name          "Sequence1" .
+
+:BBa_B0010  a              sbol:Component ;
+        sbol:description   "Transcriptional terminator consisting of a 64 bp stem-loop" ;
+        sbol:displayId     "BBa_B0010" ;
+        sbol:hasNamespace  <../igem> ;
+        sbol:hasSequence   :BBa_B0010_Sequence1 ;
+        sbol:name          "BBa_B0010" ;
+        sbol:role          <https://www.keele.ac.uk/metehan> ;
+        sbol:type          SBO:0000251 .
