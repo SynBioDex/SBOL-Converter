@@ -1,4 +1,4 @@
-package org.sbolstandard.converter.sbol31_23.activity;
+package org.sbolstandard.converter.sbol31_23.provenance;
 
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.converter.sbol31_23.EntityConverter;

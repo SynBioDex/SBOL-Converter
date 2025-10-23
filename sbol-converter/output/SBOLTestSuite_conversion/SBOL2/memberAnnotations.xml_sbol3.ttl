@@ -94,8 +94,8 @@
       </sbol:hasConstraint>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://www.async.ece.utah.edu/1.0/someCompDef/Interface1">
-            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/1.0/someCompDef/someComponent"/>
             <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/1.0/someCompDef/someOtherComponent"/>
+            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/1.0/someCompDef/someComponent"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>

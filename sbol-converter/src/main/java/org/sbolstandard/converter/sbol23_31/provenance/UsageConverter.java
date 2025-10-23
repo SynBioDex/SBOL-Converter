@@ -1,6 +1,8 @@
-package org.sbolstandard.converter.sbol23_31;
+package org.sbolstandard.converter.sbol23_31.provenance;
 
 import org.sbolstandard.converter.Util;
+import org.sbolstandard.converter.sbol23_31.ChildEntityConverter;
+import org.sbolstandard.converter.sbol23_31.Parameters;
 import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.provenance.Activity;

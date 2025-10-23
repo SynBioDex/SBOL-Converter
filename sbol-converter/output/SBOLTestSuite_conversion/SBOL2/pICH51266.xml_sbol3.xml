@@ -21,25 +21,24 @@
          <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH51266_seq"/>
       </sbol:hasSequence>
       <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH51266/annotation7">
+         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH51266/annotation3">
             <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH51266/annotation7/range">
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH51266/annotation3/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>3667</sbol:end>
-                  <sbol:start>3606</sbol:start>
+                  <sbol:end>2015</sbol:end>
+                  <sbol:start>1401</sbol:start>
                   <sbol:hasSequence>
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH51266_seq"/>
                   </sbol:hasSequence>
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <gbConv:label>TMV Omega leader</gbConv:label>
-            <gbConv:label>Omega leader</gbConv:label>
-            <gbConv:vntifkey>52</gbConv:vntifkey>
-            <gbConv:featureType>5'_UTR</gbConv:featureType>
-            <sbol:name>TMV Omega leader</sbol:name>
+            <gbConv:label>rep (pMB1)</gbConv:label>
+            <gbConv:vntifkey>21</gbConv:vntifkey>
+            <gbConv:featureType>Misc._feature</gbConv:featureType>
+            <sbol:name>rep (pMB1)</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
-            <sbol:displayId>annotation7</sbol:displayId>
+            <sbol:displayId>annotation3</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>
@@ -64,24 +63,25 @@
       </sbol:hasFeature>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
       <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH51266/annotation3">
+         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH51266/annotation7">
             <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH51266/annotation3/range">
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH51266/annotation7/range">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>2015</sbol:end>
-                  <sbol:start>1401</sbol:start>
+                  <sbol:end>3667</sbol:end>
+                  <sbol:start>3606</sbol:start>
                   <sbol:hasSequence>
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH51266_seq"/>
                   </sbol:hasSequence>
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <gbConv:label>rep (pMB1)</gbConv:label>
-            <gbConv:vntifkey>21</gbConv:vntifkey>
-            <gbConv:featureType>Misc._feature</gbConv:featureType>
-            <sbol:name>rep (pMB1)</sbol:name>
+            <gbConv:label>TMV Omega leader</gbConv:label>
+            <gbConv:label>Omega leader</gbConv:label>
+            <gbConv:vntifkey>52</gbConv:vntifkey>
+            <gbConv:featureType>5'_UTR</gbConv:featureType>
+            <sbol:name>TMV Omega leader</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
-            <sbol:displayId>annotation3</sbol:displayId>
+            <sbol:displayId>annotation7</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>

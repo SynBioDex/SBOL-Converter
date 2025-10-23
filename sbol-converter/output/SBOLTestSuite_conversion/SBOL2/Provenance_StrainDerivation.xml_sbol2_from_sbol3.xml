@@ -15,6 +15,27 @@
     <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
   </sbol:ComponentDefinition>
+  <prov:Activity rdf:about="http://myapp.com/xraymutagenesis">
+    <sbol:persistentIdentity rdf:resource="http://myapp.com/xraymutagenesis"/>
+    <sbol:displayId>xraymutagenesis</sbol:displayId>
+    <dcterms:title>X-ray mutagenesis</dcterms:title>
+    <prov:qualifiedAssociation>
+      <prov:Association rdf:about="http://myapp.com/xraymutagenesis/association">
+        <sbol:persistentIdentity rdf:resource="http://myapp.com/xraymutagenesis/association"/>
+        <sbol:displayId>association</sbol:displayId>
+        <prov:hadRole rdf:resource="http://myapp.com/mutagen"/>
+        <prov:agent rdf:resource="http://myapp.com/x_ray"/>
+      </prov:Association>
+    </prov:qualifiedAssociation>
+    <prov:qualifiedUsage>
+      <prov:Usage rdf:about="http://myapp.com/xraymutagenesis/usage">
+        <sbol:persistentIdentity rdf:resource="http://myapp.com/xraymutagenesis/usage"/>
+        <sbol:displayId>usage</sbol:displayId>
+        <prov:hadRole rdf:resource="http://sbols.org/v2#source"/>
+        <prov:entity rdf:resource="http://myapp.com/bsubtilisncimb3610"/>
+      </prov:Usage>
+    </prov:qualifiedUsage>
+  </prov:Activity>
   <prov:Agent rdf:about="http://myapp.com/x_ray">
     <sbol:persistentIdentity rdf:resource="http://myapp.com/x_ray"/>
     <sbol:displayId>x_ray</sbol:displayId>

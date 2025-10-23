@@ -10,4 +10,44 @@
     xmlns:GO="https://identifiers.org/GO:"
     xmlns:sys-bio="http://sys-bio.org#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
+   <sbol:TopLevel rdf:about="http://sys-bio.org/1.0.0/Activity_raw_data_generation">
+      <prov:qualifiedUsage>
+         <sbol:Identified rdf:about="http://sys-bio.org/1.0.0/Activity_raw_data_generation/build_usage">
+            <prov:hadRole rdf:resource="http://sbols.org/v2#build"/>
+            <prov:entity rdf:resource="http://sys-bio.org/1.0.0/Implementation_build"/>
+            <sbol:displayId>build_usage</sbol:displayId>
+            <rdf:type rdf:resource="http://www.w3.org/ns/prov#Usage"/>
+         </sbol:Identified>
+      </prov:qualifiedUsage>
+      <sbol:hasNamespace rdf:resource="http://sys-bio.org"/>
+      <sbol:displayId>Activity_raw_data_generation</sbol:displayId>
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+   </sbol:TopLevel>
+   <sbol:TopLevel rdf:about="http://sys-bio.org/1.0.0/Activity_fit_model_generation">
+      <dcterms:created>2003-12-04T12:00:00Z</dcterms:created>
+      <prov:qualifiedUsage>
+         <sbol:Identified rdf:about="http://sys-bio.org/1.0.0/Activity_fit_model_generation/raw_data_usage">
+            <prov:hadRole rdf:resource="http://sbols.org/v2#test"/>
+            <prov:entity rdf:resource="http://sys-bio.org/1.0.0/Attachment_raw_data"/>
+            <sbol:displayId>raw_data_usage</sbol:displayId>
+            <rdf:type rdf:resource="http://www.w3.org/ns/prov#Usage"/>
+         </sbol:Identified>
+      </prov:qualifiedUsage>
+      <sbol:hasNamespace rdf:resource="http://sys-bio.org"/>
+      <sbol:displayId>Activity_fit_model_generation</sbol:displayId>
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+   </sbol:TopLevel>
+   <sbol:TopLevel rdf:about="http://sys-bio.org/1.0.0/Activity_design_generation">
+      <prov:qualifiedUsage>
+         <sbol:Identified rdf:about="http://sys-bio.org/1.0.0/Activity_design_generation/predicted_usage">
+            <prov:hadRole rdf:resource="http://sbols.org/v2#learn"/>
+            <prov:entity rdf:resource="http://sys-bio.org/1.0.0/Model_predicted"/>
+            <sbol:displayId>predicted_usage</sbol:displayId>
+            <rdf:type rdf:resource="http://www.w3.org/ns/prov#Usage"/>
+         </sbol:Identified>
+      </prov:qualifiedUsage>
+      <sbol:hasNamespace rdf:resource="http://sys-bio.org"/>
+      <sbol:displayId>Activity_design_generation</sbol:displayId>
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+   </sbol:TopLevel>
 </rdf:RDF>

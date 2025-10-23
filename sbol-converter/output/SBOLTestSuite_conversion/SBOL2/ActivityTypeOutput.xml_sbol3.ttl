@@ -9,4 +9,11 @@
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:GO="https://identifiers.org/GO:"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
+   <sbol:TopLevel rdf:about="http://www.partsregistry.org/act/activityId">
+      <sbol:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000415"/>
+      <sbol:type rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23924"/>
+      <sbol:hasNamespace rdf:resource="http://www.partsregistry.org/act"/>
+      <sbol:displayId>activityId</sbol:displayId>
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+   </sbol:TopLevel>
 </rdf:RDF>

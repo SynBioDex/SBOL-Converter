@@ -1,12 +1,14 @@
-package org.sbolstandard.converter.sbol23_31;
+package org.sbolstandard.converter.sbol23_31.provenance;
+
+import java.net.URI;
 
 import org.sbolstandard.converter.Util;
+import org.sbolstandard.converter.sbol23_31.ChildEntityConverter;
+import org.sbolstandard.converter.sbol23_31.Parameters;
 import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.provenance.Activity;
-import org.sbolstandard.core3.entity.provenance.Agent;
 import org.sbolstandard.core3.entity.provenance.Association;
-import org.sbolstandard.core3.entity.provenance.Plan;
 import org.sbolstandard.core3.util.SBOLGraphException;
 
 public class AssociationConverter implements ChildEntityConverter<org.sbolstandard.core2.Association, Association> {
@@ -16,15 +18,14 @@ public class AssociationConverter implements ChildEntityConverter<org.sbolstanda
 		
 		Activity sbol3ParentActivity = (Activity) parent;
 
-		org.sbolstandard.core2.Agent sbol2Agent = sbol2Association.getAgent();
-		Agent sbol3Agent = doc.getIdentified(Util.createSBOL3Uri(sbol2Agent), Agent.class);
-
-		Association sbol3Association = sbol3ParentActivity.createAssociation(sbol2Association.getDisplayId(), sbol3Agent);
+		URI sbol2AgentURI = sbol2Association.getAgentURI();
+		URI sbol3AgentURI = Util.createSBOL3Uri(sbol2AgentURI, parameters);
 		
-		// Adding Plans
+		Association sbol3Association = sbol3ParentActivity.createAssociation(sbol2Association.getDisplayId(), sbol3AgentURI);
+		
 		if(sbol2Association.getPlan() != null) {
-			Plan sbol3Plan = doc.getIdentified(Util.createSBOL3Uri(sbol2Association.getPlan()), Plan.class);
-			sbol3Association.setPlan(sbol3Plan);
+			URI sbol3PlanURI = Util.createSBOL3Uri(sbol2Association.getPlanURI(), parameters);
+			sbol3Association.setPlan(sbol3PlanURI);
 		}
 
 		sbol3Association.setRoles(Util.toList(sbol2Association.getRoles()));

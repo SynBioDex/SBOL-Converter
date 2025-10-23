@@ -21,6 +21,11 @@ public class TestUtil {
 
 	public static void runTestSuiteFile(File file) throws Exception {
 
+		runTestSuiteFile(file, 0);
+	}
+
+		public static void runTestSuiteFile(File file, int expectedErrorCount) throws Exception {
+
 		int numOfErros = 0;
 		List<String> errors=roundTripConvert(file);
 		
@@ -28,9 +33,8 @@ public class TestUtil {
 			System.out.println(error);
 			numOfErros++;
 		}
-		assertTrue(numOfErros == 0, "Errors in conversion from" + file.getName());
+		assertTrue(numOfErros == expectedErrorCount, "Errors in conversion from" + file.getName());
 		System.out.println("--------");
-
 	}
 	
 	public static List<String> roundTripConvert(File file) throws Exception {		

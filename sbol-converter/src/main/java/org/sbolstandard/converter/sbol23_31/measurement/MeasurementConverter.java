@@ -1,6 +1,7 @@
 package org.sbolstandard.converter.sbol23_31.measurement;
 
 import java.net.URI;
+import java.util.List;
 
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.converter.sbol23_31.ChildEntityConverter;
@@ -21,26 +22,22 @@ public class MeasurementConverter implements ChildEntityConverter<org.sbolstanda
 		Measure sbol3Measure =null;
         Double dbl = sbol2Measure.getNumericalValue();        
         Float value = dbl != null ? dbl.floatValue() : null;
-
-		
+		URI unitURI=Util.createSBOL3Uri(sbol2Measure.getUnitURI(), parameters);
 		if (sbol2Measure.getDisplayId()!=null){
-			sbol3Measure= sbol3Parent.createMeasure(sbol2Measure.getDisplayId(), value, null);
+			sbol3Measure= sbol3Parent.createMeasure(sbol2Measure.getDisplayId(), value, unitURI);
         }
 		else{
             String name=SBOLAPI.createLocalName(MeasureDataModel.Measure.uri,sbol3Parent.getMeasures());
-            sbol3Measure= sbol3Parent.createMeasure(name,value, null);
+            sbol3Measure= sbol3Parent.createMeasure(name,value, unitURI);
 			parameters.addMapping(sbol2Measure.getIdentity(), sbol3Measure.getUri());					
 		} 
 		
-		if(sbol2Measure.getUnit()!=null) {
-			sbol3Measure.setUnit(Util.createSBOL3Uri(sbol2Measure.getUnit().getIdentity(), parameters));
-		}
 		if(sbol2Measure.getTypes()!=null) {
-			sbol3Measure.setTypes(Util.toList(sbol2Measure.getTypes()));
+			List<URI> sbol3Types=Util.convertToSBOL3_SBO_URIs(sbol2Measure.getTypes());
+			sbol3Measure.setTypes(sbol3Types);
 		}
 
 		Util.copyIdentified(sbol2Measure, sbol3Measure, parameters);
-
         return sbol3Measure;
     }
 }

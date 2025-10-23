@@ -1,10 +1,11 @@
-package org.sbolstandard.converter.sbol31_23;
+package org.sbolstandard.converter.sbol31_23.provenance;
 
 
 
 import org.apache.jena.datatypes.xsd.XSDDateTime;
 import org.joda.time.DateTime;
 import org.sbolstandard.converter.Util;
+import org.sbolstandard.converter.sbol31_23.EntityConverter;
 import org.sbolstandard.core3.entity.provenance.Activity;
 import org.sbolstandard.core3.util.SBOLGraphException;
 import org.sbolstandard.core2.SBOLDocument;

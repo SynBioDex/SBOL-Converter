@@ -11,8 +11,8 @@
     xmlns:GO="https://identifiers.org/GO:"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:TopLevel rdf:about="http://partsregistry.org/act/TEST_ACTIVITY">
-      <prov:endedAtTime>2025-09-16T12:50:23Z</prov:endedAtTime>
-      <prov:startedAtTime>2025-09-06T12:50:23Z</prov:startedAtTime>
+      <prov:endedAtTime>2025-10-23T11:20:40Z</prov:endedAtTime>
+      <prov:startedAtTime>2025-10-13T11:20:40Z</prov:startedAtTime>
       <sbol:hasNamespace rdf:resource="http://partsregistry.org/act"/>
       <sbol:displayId>TEST_ACTIVITY</sbol:displayId>
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>

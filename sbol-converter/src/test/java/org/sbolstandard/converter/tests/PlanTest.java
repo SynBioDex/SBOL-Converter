@@ -11,7 +11,7 @@ public class PlanTest {
 	@Test
 	public void TestSBOL2Plan() throws Exception {
 		//TestUtil.runTestSuiteFile2_to_3(new File("../SBOLTestSuite/SBOL2/simple_attachment_plan_ann.xml"));
-		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/SBOL2/simple_attachment_plan_ann.xml"));
+		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/SBOL2/simple_attachment_plan_ann.xml"),1);
 		//TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/SBOL2/simple_attachment_ref.xml"));
 		
 	}

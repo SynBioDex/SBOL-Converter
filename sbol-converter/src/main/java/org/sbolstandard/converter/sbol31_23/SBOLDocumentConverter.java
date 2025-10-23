@@ -1,8 +1,9 @@
 package org.sbolstandard.converter.sbol31_23;
 
 import org.sbolstandard.converter.Util;
-import org.sbolstandard.converter.sbol31_23.activity.AgentConverter;
-import org.sbolstandard.converter.sbol31_23.activity.PlanConverter;
+import org.sbolstandard.converter.sbol31_23.provenance.ActivityConverter;
+import org.sbolstandard.converter.sbol31_23.provenance.AgentConverter;
+import org.sbolstandard.converter.sbol31_23.provenance.PlanConverter;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.ModuleDefinition;
 import org.sbolstandard.core2.Plan;
