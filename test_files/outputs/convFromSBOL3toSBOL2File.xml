@@ -1,103 +1,5 @@
 <?xml version="1.0" ?>
 <rdf:RDF xmlns="https://synbiohub.org/public/igem/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sbol="http://sbols.org/v2#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
-  <sbol:ModuleDefinition rdf:about="https://synbiohub.org/public/igem/LuxRDevice">
-    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice"/>
-    <sbol:displayId>LuxRDevice</sbol:displayId>
-    <dcterms:title>LuxRDevice</dcterms:title>
-    <dcterms:description>LuxR Device</dcterms:description>
-    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000704"/>
-    <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://synbiohub.org/public/igem/LuxRDevice/SubComponent5">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/SubComponent5"/>
-        <sbol:displayId>SubComponent5</sbol:displayId>
-        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_C0062_protein"/>
-        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
-        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
-      </sbol:FunctionalComponent>
-    </sbol:functionalComponent>
-    <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://synbiohub.org/public/igem/LuxRDevice/SubComponent4">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/SubComponent4"/>
-        <sbol:displayId>SubComponent4</sbol:displayId>
-        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_R0062"/>
-        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
-        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
-      </sbol:FunctionalComponent>
-    </sbol:functionalComponent>
-    <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://synbiohub.org/public/igem/LuxRDevice/SubComponent2">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/SubComponent2"/>
-        <sbol:displayId>SubComponent2</sbol:displayId>
-        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_C0062"/>
-        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
-        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
-      </sbol:FunctionalComponent>
-    </sbol:functionalComponent>
-    <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://synbiohub.org/public/igem/LuxRDevice/SubComponent3">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/SubComponent3"/>
-        <sbol:displayId>SubComponent3</sbol:displayId>
-        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_B0015"/>
-        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
-        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
-      </sbol:FunctionalComponent>
-    </sbol:functionalComponent>
-    <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://synbiohub.org/public/igem/LuxRDevice/SubComponent1">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/SubComponent1"/>
-        <sbol:displayId>SubComponent1</sbol:displayId>
-        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_B0034"/>
-        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
-        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
-      </sbol:FunctionalComponent>
-    </sbol:functionalComponent>
-    <sbol:interaction>
-      <sbol:Interaction rdf:about="https://synbiohub.org/public/igem/LuxRDevice/Interaction2">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/Interaction2"/>
-        <sbol:displayId>Interaction2</sbol:displayId>
-        <sbol:type rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000170"/>
-        <sbol:participation>
-          <sbol:Participation rdf:about="https://synbiohub.org/public/igem/LuxRDevice/Interaction2/Participation2">
-            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/Interaction2/Participation2"/>
-            <sbol:displayId>Participation2</sbol:displayId>
-            <sbol:role rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000459"/>
-            <sbol:participant rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/SubComponent5"/>
-          </sbol:Participation>
-        </sbol:participation>
-        <sbol:participation>
-          <sbol:Participation rdf:about="https://synbiohub.org/public/igem/LuxRDevice/Interaction2/Participation1">
-            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/Interaction2/Participation1"/>
-            <sbol:displayId>Participation1</sbol:displayId>
-            <sbol:role rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000643"/>
-            <sbol:participant rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/SubComponent4"/>
-          </sbol:Participation>
-        </sbol:participation>
-      </sbol:Interaction>
-    </sbol:interaction>
-    <sbol:interaction>
-      <sbol:Interaction rdf:about="https://synbiohub.org/public/igem/LuxRDevice/Interaction1">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/Interaction1"/>
-        <sbol:displayId>Interaction1</sbol:displayId>
-        <sbol:type rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000589"/>
-        <sbol:participation>
-          <sbol:Participation rdf:about="https://synbiohub.org/public/igem/LuxRDevice/Interaction1/Participation1">
-            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/Interaction1/Participation1"/>
-            <sbol:displayId>Participation1</sbol:displayId>
-            <sbol:role rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000645"/>
-            <sbol:participant rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/SubComponent2"/>
-          </sbol:Participation>
-        </sbol:participation>
-        <sbol:participation>
-          <sbol:Participation rdf:about="https://synbiohub.org/public/igem/LuxRDevice/Interaction1/Participation2">
-            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/Interaction1/Participation2"/>
-            <sbol:displayId>Participation2</sbol:displayId>
-            <sbol:role rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000011"/>
-            <sbol:participant rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/SubComponent5"/>
-          </sbol:Participation>
-        </sbol:participation>
-      </sbol:Interaction>
-    </sbol:interaction>
-  </sbol:ModuleDefinition>
   <sbol:ModuleDefinition rdf:about="https://synbiohub.org/public/igem/BBa_F2620">
     <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_F2620"/>
     <sbol:displayId>BBa_F2620</sbol:displayId>
@@ -168,6 +70,104 @@
       </sbol:Module>
     </sbol:module>
   </sbol:ModuleDefinition>
+  <sbol:ModuleDefinition rdf:about="https://synbiohub.org/public/igem/LuxRDevice">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice"/>
+    <sbol:displayId>LuxRDevice</sbol:displayId>
+    <dcterms:title>LuxRDevice</dcterms:title>
+    <dcterms:description>LuxR Device</dcterms:description>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000704"/>
+    <sbol:functionalComponent>
+      <sbol:FunctionalComponent rdf:about="https://synbiohub.org/public/igem/LuxRDevice/SubComponent4">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/SubComponent4"/>
+        <sbol:displayId>SubComponent4</sbol:displayId>
+        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_R0062"/>
+        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
+        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
+      </sbol:FunctionalComponent>
+    </sbol:functionalComponent>
+    <sbol:functionalComponent>
+      <sbol:FunctionalComponent rdf:about="https://synbiohub.org/public/igem/LuxRDevice/SubComponent5">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/SubComponent5"/>
+        <sbol:displayId>SubComponent5</sbol:displayId>
+        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_C0062_protein"/>
+        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
+        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
+      </sbol:FunctionalComponent>
+    </sbol:functionalComponent>
+    <sbol:functionalComponent>
+      <sbol:FunctionalComponent rdf:about="https://synbiohub.org/public/igem/LuxRDevice/SubComponent2">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/SubComponent2"/>
+        <sbol:displayId>SubComponent2</sbol:displayId>
+        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_C0062"/>
+        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
+        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
+      </sbol:FunctionalComponent>
+    </sbol:functionalComponent>
+    <sbol:functionalComponent>
+      <sbol:FunctionalComponent rdf:about="https://synbiohub.org/public/igem/LuxRDevice/SubComponent1">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/SubComponent1"/>
+        <sbol:displayId>SubComponent1</sbol:displayId>
+        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_B0034"/>
+        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
+        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
+      </sbol:FunctionalComponent>
+    </sbol:functionalComponent>
+    <sbol:functionalComponent>
+      <sbol:FunctionalComponent rdf:about="https://synbiohub.org/public/igem/LuxRDevice/SubComponent3">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/SubComponent3"/>
+        <sbol:displayId>SubComponent3</sbol:displayId>
+        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_B0015"/>
+        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
+        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
+      </sbol:FunctionalComponent>
+    </sbol:functionalComponent>
+    <sbol:interaction>
+      <sbol:Interaction rdf:about="https://synbiohub.org/public/igem/LuxRDevice/Interaction2">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/Interaction2"/>
+        <sbol:displayId>Interaction2</sbol:displayId>
+        <sbol:type rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000170"/>
+        <sbol:participation>
+          <sbol:Participation rdf:about="https://synbiohub.org/public/igem/LuxRDevice/Interaction2/Participation2">
+            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/Interaction2/Participation2"/>
+            <sbol:displayId>Participation2</sbol:displayId>
+            <sbol:role rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000459"/>
+            <sbol:participant rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/SubComponent5"/>
+          </sbol:Participation>
+        </sbol:participation>
+        <sbol:participation>
+          <sbol:Participation rdf:about="https://synbiohub.org/public/igem/LuxRDevice/Interaction2/Participation1">
+            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/Interaction2/Participation1"/>
+            <sbol:displayId>Participation1</sbol:displayId>
+            <sbol:role rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000643"/>
+            <sbol:participant rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/SubComponent4"/>
+          </sbol:Participation>
+        </sbol:participation>
+      </sbol:Interaction>
+    </sbol:interaction>
+    <sbol:interaction>
+      <sbol:Interaction rdf:about="https://synbiohub.org/public/igem/LuxRDevice/Interaction1">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/Interaction1"/>
+        <sbol:displayId>Interaction1</sbol:displayId>
+        <sbol:type rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000589"/>
+        <sbol:participation>
+          <sbol:Participation rdf:about="https://synbiohub.org/public/igem/LuxRDevice/Interaction1/Participation1">
+            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/Interaction1/Participation1"/>
+            <sbol:displayId>Participation1</sbol:displayId>
+            <sbol:role rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000645"/>
+            <sbol:participant rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/SubComponent2"/>
+          </sbol:Participation>
+        </sbol:participation>
+        <sbol:participation>
+          <sbol:Participation rdf:about="https://synbiohub.org/public/igem/LuxRDevice/Interaction1/Participation2">
+            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/Interaction1/Participation2"/>
+            <sbol:displayId>Participation2</sbol:displayId>
+            <sbol:role rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000011"/>
+            <sbol:participant rdf:resource="https://synbiohub.org/public/igem/LuxRDevice/SubComponent5"/>
+          </sbol:Participation>
+        </sbol:participation>
+      </sbol:Interaction>
+    </sbol:interaction>
+  </sbol:ModuleDefinition>
   <sbol:Model rdf:about="https://synbiohub.org/public/igem/PoPSReceiverSBMLModel">
     <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/PoPSReceiverSBMLModel"/>
     <sbol:displayId>PoPSReceiverSBMLModel</sbol:displayId>
@@ -175,51 +175,6 @@
     <sbol:language rdf:resource="http://identifiers.org/edam/format_2585"/>
     <sbol:framework rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000062"/>
   </sbol:Model>
-  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_B0034">
-    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0034"/>
-    <sbol:displayId>BBa_B0034</sbol:displayId>
-    <dcterms:title>BBa_B0034</dcterms:title>
-    <dcterms:description>RBS based on Elowitz repressilator</dcterms:description>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
-    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000139"/>
-    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_B0034_Sequence1"/>
-  </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_C0062">
-    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_C0062"/>
-    <sbol:displayId>BBa_C0062</sbol:displayId>
-    <dcterms:title>luxR</dcterms:title>
-    <dcterms:description>luxR repressor/activator,  (no LVA?)</dcterms:description>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
-    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
-    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_C0062_Sequence1"/>
-  </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_R0040">
-    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_R0040"/>
-    <sbol:displayId>BBa_R0040</sbol:displayId>
-    <dcterms:title>pTetR</dcterms:title>
-    <dcterms:description>TetR repressible promoter</dcterms:description>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
-    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
-    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_Sequence1"/>
-  </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_C0062_protein">
-    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_C0062_protein"/>
-    <sbol:displayId>BBa_C0062_protein</sbol:displayId>
-    <dcterms:title>LuxR</dcterms:title>
-    <dcterms:description>LuxR protein</dcterms:description>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Protein"/>
-    <sbol:role rdf:resource="http://identifiers.org/GO:0003700"/>
-    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_C0062_protein_Sequence1"/>
-  </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_B0012">
-    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0012"/>
-    <sbol:displayId>BBa_B0012</sbol:displayId>
-    <dcterms:title>BBa_B0012</dcterms:title>
-    <dcterms:description>Double terminator consisting of BBa_B0010 and BBa_B0012</dcterms:description>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
-    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000141"/>
-    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_B0012_Sequence1"/>
-  </sbol:ComponentDefinition>
   <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_B0015">
     <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0015"/>
     <sbol:displayId>BBa_B0015</sbol:displayId>
@@ -275,6 +230,51 @@
     </sbol:sequenceAnnotation>
     <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_B0015_Sequence1"/>
   </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_B0034">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0034"/>
+    <sbol:displayId>BBa_B0034</sbol:displayId>
+    <dcterms:title>BBa_B0034</dcterms:title>
+    <dcterms:description>RBS based on Elowitz repressilator</dcterms:description>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000139"/>
+    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_B0034_Sequence1"/>
+  </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_C0062">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_C0062"/>
+    <sbol:displayId>BBa_C0062</sbol:displayId>
+    <dcterms:title>luxR</dcterms:title>
+    <dcterms:description>luxR repressor/activator,  (no LVA?)</dcterms:description>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
+    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_C0062_Sequence1"/>
+  </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_R0040">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_R0040"/>
+    <sbol:displayId>BBa_R0040</sbol:displayId>
+    <dcterms:title>pTetR</dcterms:title>
+    <dcterms:description>TetR repressible promoter</dcterms:description>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
+    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_Sequence1"/>
+  </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_C0062_protein">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_C0062_protein"/>
+    <sbol:displayId>BBa_C0062_protein</sbol:displayId>
+    <dcterms:title>LuxR</dcterms:title>
+    <dcterms:description>LuxR protein</dcterms:description>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Protein"/>
+    <sbol:role rdf:resource="http://identifiers.org/GO:0003700"/>
+    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_C0062_protein_Sequence1"/>
+  </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_B0012">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0012"/>
+    <sbol:displayId>BBa_B0012</sbol:displayId>
+    <dcterms:title>BBa_B0012</dcterms:title>
+    <dcterms:description>Double terminator consisting of BBa_B0010 and BBa_B0012</dcterms:description>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000141"/>
+    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_B0012_Sequence1"/>
+  </sbol:ComponentDefinition>
   <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_K174004">
     <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_K174004"/>
     <sbol:displayId>BBa_K174004</sbol:displayId>
@@ -318,14 +318,6 @@
     <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000704"/>
     <sbol:component>
-      <sbol:Component rdf:about="https://synbiohub.org/public/igem/Template/SubComponent2">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/Template/SubComponent2"/>
-        <sbol:displayId>SubComponent2</sbol:displayId>
-        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/LuxRDevice"/>
-      </sbol:Component>
-    </sbol:component>
-    <sbol:component>
       <sbol:Component rdf:about="https://synbiohub.org/public/igem/Template/SubComponent1">
         <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/Template/SubComponent1"/>
         <sbol:displayId>SubComponent1</sbol:displayId>
@@ -334,19 +326,27 @@
       </sbol:Component>
     </sbol:component>
     <sbol:component>
-      <sbol:Component rdf:about="https://synbiohub.org/public/igem/Template/SubComponent3">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/Template/SubComponent3"/>
-        <sbol:displayId>SubComponent3</sbol:displayId>
-        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_C0062_protein"/>
-      </sbol:Component>
-    </sbol:component>
-    <sbol:component>
       <sbol:Component rdf:about="https://synbiohub.org/public/igem/Template/SubComponent4">
         <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/Template/SubComponent4"/>
         <sbol:displayId>SubComponent4</sbol:displayId>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
         <sbol:definition rdf:resource="https://synbiohub.org/public/igem/TetR_protein"/>
+      </sbol:Component>
+    </sbol:component>
+    <sbol:component>
+      <sbol:Component rdf:about="https://synbiohub.org/public/igem/Template/SubComponent2">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/Template/SubComponent2"/>
+        <sbol:displayId>SubComponent2</sbol:displayId>
+        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
+        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/LuxRDevice"/>
+      </sbol:Component>
+    </sbol:component>
+    <sbol:component>
+      <sbol:Component rdf:about="https://synbiohub.org/public/igem/Template/SubComponent3">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/Template/SubComponent3"/>
+        <sbol:displayId>SubComponent3</sbol:displayId>
+        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
+        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_C0062_protein"/>
       </sbol:Component>
     </sbol:component>
     <sbol:sequenceConstraint>
