@@ -377,34 +377,48 @@ public class App {
 	        		if (!noOutput) {
 	        			if (outputFile.equals("")) {
 	        				if (sbolV1out) {
+								System.out.println("Converting SBOL2 to SBOL1...");
 		            	    	SBOLWriter.write(sbol2Doc, System.out, org.sbolstandard.core2.SBOLDocument.RDFV1);
 	        				} else if (genBankOut) {
+								System.out.println("Converting SBOL2 to GenBank...");
 		            	    	SBOLWriter.write(sbol2Doc, System.out, org.sbolstandard.core2.SBOLDocument.GENBANK);
 	        				} else if (fastaOut) {
+								System.out.println("Converting SBOL2 to FASTA...");
 		            	    	SBOLWriter.write(sbol2Doc, System.out, org.sbolstandard.core2.SBOLDocument.FASTAformat);
 	        				} else if (snapGeneOut) {
+								System.out.println("Converting SBOL2 to SnapGene...");
 		            	    	SBOLWriter.write(sbol2Doc, System.out, org.sbolstandard.core2.SBOLDocument.SNAPGENE);
 	        				} else if (gff3Out) {
+								System.out.println("Converting SBOL2 to GFF3...");
 		            	    	SBOLWriter.write(sbol2Doc, System.out, org.sbolstandard.core2.SBOLDocument.GFF3format);
 	        				} else if (csvOut) {
+								System.out.println("Converting SBOL2 to CSV...");
 		            	    	SBOLWriter.write(sbol2Doc, System.out, org.sbolstandard.core2.SBOLDocument.CSV);
 	        				} else {
+								System.out.println("Converting SBOL2 to RDF...");
 		            	    	SBOLWriter.write(sbol2Doc, System.out);
 	        				}
 	        			} else {
 	        				if (sbolV1out) {
+								System.out.println("Converting SBOL2 to SBOL1...");
 		            	    	SBOLWriter.write(sbol2Doc, outputFile, org.sbolstandard.core2.SBOLDocument.RDFV1);
 	        				} else if (genBankOut) {
+								System.out.println("Converting SBOL2 to GenBank...");
 		            	    	SBOLWriter.write(sbol2Doc, outputFile, org.sbolstandard.core2.SBOLDocument.GENBANK);
 	        				} else if (fastaOut) {
+								System.out.println("Converting SBOL2 to FASTA...");
 		            	    	SBOLWriter.write(sbol2Doc, outputFile, org.sbolstandard.core2.SBOLDocument.FASTAformat);
 	        				} else if (snapGeneOut) {
+								System.out.println("Converting SBOL2 to SnapGene...");
 		            	    	SBOLWriter.write(sbol2Doc, outputFile, org.sbolstandard.core2.SBOLDocument.SNAPGENE);
 	        				} else if (gff3Out) {
+								System.out.println("Converting SBOL2 to GFF3...");
 		            	    	SBOLWriter.write(sbol2Doc, outputFile, org.sbolstandard.core2.SBOLDocument.GFF3format);
 	        				} else if (csvOut) {
+								System.out.println("Converting SBOL2 to CSV...");
 		            	    	SBOLWriter.write(sbol2Doc, outputFile, org.sbolstandard.core2.SBOLDocument.CSV);
 	        				} else {
+								System.out.println("Converting SBOL2 to RDF...");
 		            	    	SBOLWriter.write(sbol2Doc, outputFile);
 	        				}
 	        			}
@@ -475,7 +489,7 @@ public class App {
 			String URIPrefix, String defaultDisplayId, boolean complete, boolean compliant, boolean bestPractice, boolean typesInURI,
 			String version, boolean keepGoing, String compareFile, String compareFileName, String mainFileName,
 			String topLevelURIStr, boolean genBankOut, boolean sbolV1out, boolean fastaOut, boolean snapGeneOut, boolean gff3Out, boolean csvOut, String outputFile,
-			boolean showDetail, boolean noOutput, boolean changeURIPrefix, boolean enumerate) throws SBOLGraphException, FileNotFoundException{
+			boolean showDetail, boolean noOutput, boolean changeURIPrefix, boolean enumerate) throws SBOLGraphException, IOException{
 
 
             // Not used parameters
@@ -498,7 +512,7 @@ public class App {
 
             List<String> result;
             try {
-                result = sbol3ValidationOnlyRequiredParameters(fileName, complete, bestPractice);
+                result = sbol3ValidationOnlyRequiredParameters(fileName, complete, bestPractice, noOutput);
             } catch (FileNotFoundException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -520,9 +534,10 @@ public class App {
             }
     }
 
-    private static List<String> sbol3ValidationOnlyRequiredParameters(String fileName, boolean complete,  boolean bestPractice) throws SBOLGraphException, FileNotFoundException { 
+    private static List<String> sbol3ValidationOnlyRequiredParameters(String fileName, boolean complete,  boolean bestPractice, boolean noOutput) throws SBOLGraphException, IOException {
 
             
+
             File file = new File(fileName);
             List<String> errorList = new ArrayList<>();
             try {
@@ -533,6 +548,10 @@ public class App {
             
                 errorList = SBOLValidator.getValidator().validate(sbolDocument);
                 //System.out.println("Validation errors: " + errorList.size());
+				if (!noOutput && errorList.size() == 0) {
+					// OUTPUT THE SBOL3 DOCUMENT
+					System.out.println(SBOLIO.write(sbolDocument, SBOLFormat.TURTLE));
+				}
                 return errorList;
                 
             } catch (FileNotFoundException | SBOLGraphException e) {

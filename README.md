@@ -10,13 +10,13 @@ It can also be used to convert:
 - GFF3 and
 - CSV files.
 
-The library is under development and is currently available as an alpha release.
+The library is under development and is currently available as an beta release.
 
 ## Download
 
-Please download from the relase page using the link below:
+Please download the latest relase from the link below:
 
-TODO: URL
+https://github.com/SynBioDex/SBOL-Converter/releases
 
 ### Installation from the Source
 
@@ -31,7 +31,7 @@ mvn install -DskipTests=true
 The jar file can be found under the target file:
 
 ```
-java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar
+java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar
 ```
 
 Then include it as a Maven dependency in your project's POM file.
@@ -42,7 +42,7 @@ Then include it as a Maven dependency in your project's POM file.
    <dependency>
       <groupId>org.sbolstandard</groupId>
       <artifactId>sbol-converter</artifactId>
-      <version>1.0.1-SNAPSHOT</version>
+      <version>1.0.2-SNAPSHOT</version>
    </dependency>
    ...
 </dependencies>
@@ -58,7 +58,7 @@ The library provides separete converters from SBOL2-to-SBOL3 and SBOL3-to-SBOL2.
 The converter can be used with the following command
 
 ```
-java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar <inputFile> [options]  [-o <outputFile>]
+java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar <inputFile> [options]  [-o <outputFile>]
 ```
 
 Convertion Options:
@@ -67,18 +67,9 @@ Convertion Options:
 
 Validation Options for SBOL3:
 
-- -p <URIprefix> used for converted objects
-- -c change URI prefix to specified <URIprefix>
-- -v <version> used for converted objects
-- -t uses types in URIs
 - -i allow SBOL document to be incomplete
 - -b check best practices
-- -f fail on first error
-- -d display detailed error trace
-- -mf main SBOL file if file diff. option is selected
-- -cf second SBOL file if file diff. option is selected
 - -no indicate no output file to be generated from validation
-- -en enumerate CombinatorialDerivations
 
 Validation Options for SBOL2:
 
@@ -104,59 +95,94 @@ Examples:
 1. Converting from SBOL2 to SBOL3 and displaying the result in CLI:
 
 ```
-java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/testFile.xml -l SBOL3
+java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+ ../test_files/sbol2TestFile.xml \
+-l SBOL3
 ```
 
 2. Converting from SBOL2 to SBOL3 and writing the result in a file:
 
 ```
-java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/testFile.xml -l SBOL3  -o ../test_files/outputs/convertedSBOL3File.ttl
+java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+../test_files/sbol2TestFile.xml \
+-l SBOL3 \
+-o ../test_files/outputs/convFromSBOL2toSBOL3File.ttl
 ```
 
 3. Converting from SBOL3 to SBOL2 and writing the result in a file:
 
 ```
-java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/sbol3TestFile.ttl -l SBOL2 -o ../test_files/outputs/convertedSBOL2File.xml
+java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+../test_files/sbol3TestFile.ttl \
+-l SBOL2 \
+-o ../test_files/outputs/convFromSBOL3toSBOL2File.xml
 ```
 
 4. Converting from SBOL3 to GenBank (providing a prefix URI is required)
 
 ```
-java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/sbol3ShortTest.ttl -l GenBank -p https://keele.ac.uk -o ../test_files/outputs/convGenBankFromSBOL3.gb
+java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+../test_files/sbol3ShortTest.ttl \
+-l GenBank \
+-p https://keele.ac.uk \
+-o ../test_files/outputs/convFromSBOL3toGenBankFile.gb
 ```
 
 5. Converting from GenBank to SBOL3 (providing a prefix URI is required)
 
 ```
-java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/genBankTestFile.gb -l SBOL3 -p https://keele.ac.uk  -o ../test_files/outputs/convSBOL3FromGenBank.ttl;
+java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+../test_files/genBankTestFile.gb \
+ -l SBOL3 -p https://keele.ac.uk  \
+ -o ../test_files/outputs/convFromGenBanktoSBOL3File.ttl;
 ```
-
-
 
 #### Validation
 
 1. Validating an SBOL3 file:
 
 ```
-java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/sbol3TestFile.ttl
+java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+../test_files/sbol3TestFile.ttl
 ```
 
 2. Validating an SBOL3 file checking best practices:
 
 ```
-java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/sbol3TestFile.ttl -b
+java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+../test_files/sbol3TestFile.ttl \
+-b
 ```
 
-3. Validating an SBOL3 file allowing incomlete documents
+3. Validating an SBOL3 file allowing incomlete documents:
 
 ```
-java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/sbol3TestFile.ttl -i
+java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+../test_files/sbol3TestFile.ttl \
+-i
 ```
 
-3. Validating an SBOL2 file:
+4. Validating an SBOL3 file without output:
 
 ```
-java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/sbol2TestFile.xml
+java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+../test_files/sbol3TestFile.ttl \
+-no
+```
+
+5. To see the error of an invalid SBOL3 file that do not follow best practices:
+
+```
+java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+../test_files/invalid.ttl \
+-b
+```
+
+6. Validating an SBOL2 file:
+
+```
+java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+../test_files/sbol2TestFile.xml
 ```
 
 #### Converting to/from GenBank, FASTA, etc.
@@ -164,7 +190,12 @@ java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test
 1. Converting from GenBank/FASTA/... to SBOL2 (providing a prefix URI is required)
 
 ```
-java -jar target/sbol-converter-1.0.1-SNAPSHOT-jar-with-dependencies.jar ../test_files/genBankTestFile.gb -l SBOL2 -p https://keele.ac.uk/scm  -o ../test_files/outputs/convertedSBOL2.xml
+java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+  ../test_files/genBankTestFile.gb \
+  -l SBOL2 \
+  -p https://keele.ac.uk/scm \
+  -o ../test_files/outputs/convFromGenBanktoSBOL2File.xml
+
 ```
 
 ### Using the code
