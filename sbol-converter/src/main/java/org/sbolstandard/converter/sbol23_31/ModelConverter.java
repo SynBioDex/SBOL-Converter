@@ -13,7 +13,7 @@ public class ModelConverter implements EntityConverter<org.sbolstandard.core2.Mo
     	// TODO: should swap Language and Framework order to match libSBOLj
         Model mod = doc.createModel(Util.createSBOL3Uri(input),Util.getNamespace(input),Util.createSBOL3Uri(input.getSource(), parameters), Util.getSBOL3ModelFramework(input.getFramework()),
         		Util.getSBOL3ModelLanguage(input.getLanguage()));
-        Util.copyIdentified(input, mod);
+        Util.copyIdentified(input, mod, parameters);
         return mod;
     }
 }

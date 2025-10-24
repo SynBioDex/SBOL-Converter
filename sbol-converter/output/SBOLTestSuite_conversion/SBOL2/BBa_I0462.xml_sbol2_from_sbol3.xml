@@ -46,6 +46,22 @@
       </sbol:Component>
     </sbol:component>
     <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0015_range">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0015_range"/>
+        <sbol:displayId>BBa_B0015_range</sbol:displayId>
+        <prov:wasDerivedFrom rdf:resource="http://sbols.org/anot#3456789"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0015_range/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0015_range/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>808</sbol:start>
+            <sbol:end>936</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
       <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/BBa_I0462/BBa_C0062_range">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/BBa_I0462/BBa_C0062_range"/>
         <sbol:displayId>BBa_C0062_range</sbol:displayId>
@@ -72,22 +88,6 @@
             <sbol:displayId>range</sbol:displayId>
             <sbol:start>1</sbol:start>
             <sbol:end>12</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0015_range">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0015_range"/>
-        <sbol:displayId>BBa_B0015_range</sbol:displayId>
-        <prov:wasDerivedFrom rdf:resource="http://sbols.org/anot#3456789"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0015_range/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0015_range/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>808</sbol:start>
-            <sbol:end>936</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>

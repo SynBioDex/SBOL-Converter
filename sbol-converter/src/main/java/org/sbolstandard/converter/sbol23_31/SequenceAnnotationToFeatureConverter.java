@@ -104,7 +104,7 @@ public class SequenceAnnotationToFeatureConverter implements ChildEntityConverte
 */
 		// Copy common identified properties (displayId, version, etc.) from the SBOL2
 		// SequenceAnnotation to the SBOL3 SequenceFeature.
-		Util.copyIdentified(seqa, seqFeature);
+		Util.copyIdentified(seqa, seqFeature, parameters);
 
 		// Return the created SBOL3 SequenceFeature object.
 		return seqFeature;

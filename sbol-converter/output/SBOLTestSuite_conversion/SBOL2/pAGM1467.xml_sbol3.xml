@@ -15,26 +15,6 @@
       <genbank:locus>pAGM1467</genbank:locus>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
       <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pAGM1467/annotation5">
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pAGM1467/annotation5/range">
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>2251</sbol:end>
-                  <sbol:start>2248</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pAGM1467_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <gbConv:label>TACT 4 bp overhang</gbConv:label>
-            <gbConv:featureType>Misc._Feature</gbConv:featureType>
-            <sbol:name>TACT 4 bp overhang</sbol:name>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
-            <sbol:displayId>annotation5</sbol:displayId>
-         </sbol:SequenceFeature>
-      </sbol:hasFeature>
-      <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pAGM1467/annotation7">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pAGM1467/annotation7/range">
@@ -52,6 +32,26 @@
             <sbol:name>His tag with EK cleavage site</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
             <sbol:displayId>annotation7</sbol:displayId>
+         </sbol:SequenceFeature>
+      </sbol:hasFeature>
+      <sbol:hasFeature>
+         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pAGM1467/annotation5">
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pAGM1467/annotation5/range">
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>2251</sbol:end>
+                  <sbol:start>2248</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pAGM1467_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <gbConv:label>TACT 4 bp overhang</gbConv:label>
+            <gbConv:featureType>Misc._Feature</gbConv:featureType>
+            <sbol:name>TACT 4 bp overhang</sbol:name>
+            <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
+            <sbol:displayId>annotation5</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>

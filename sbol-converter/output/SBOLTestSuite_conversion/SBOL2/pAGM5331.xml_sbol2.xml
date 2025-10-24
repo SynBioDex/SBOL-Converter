@@ -12,20 +12,76 @@
     <sbol:type rdf:resource="http://identifiers.org/so/SO:0000988"/>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000804"/>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation6">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation6"/>
-        <sbol:displayId>annotation6</sbol:displayId>
-        <dcterms:title>omega (TMV)</dcterms:title>
-        <gbConv:featureType>5'_UTR</gbConv:featureType>
-        <gbConv:vntifkey>52</gbConv:vntifkey>
-        <gbConv:label>omega (TMV)</gbConv:label>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation5">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation5"/>
+        <sbol:displayId>annotation5</sbol:displayId>
+        <dcterms:title>TACT 4bp overhang</dcterms:title>
+        <gbConv:featureType>Misc._Feature</gbConv:featureType>
+        <gbConv:label>TACT 4bp overhang</gbConv:label>
         <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation6/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation6/range"/>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation5/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation5/range"/>
             <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2252</sbol:start>
-            <sbol:end>2333</sbol:end>
+            <sbol:start>2248</sbol:start>
+            <sbol:end>2251</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation0">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation0"/>
+        <sbol:displayId>annotation0</sbol:displayId>
+        <dcterms:title>AATG</dcterms:title>
+        <gbConv:featureType>Misc._Feature</gbConv:featureType>
+        <gbConv:label>AATG</gbConv:label>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation0/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation0/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>1</sbol:start>
+            <sbol:end>4</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation7">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation7"/>
+        <sbol:displayId>annotation7</sbol:displayId>
+        <dcterms:title>nuclear localisation signsal (SV40)</dcterms:title>
+        <gbConv:featureType>Transit_peptide</gbConv:featureType>
+        <gbConv:label>nuclear localisation signsal (SV40)</gbConv:label>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation7/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation7/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>2334</sbol:start>
+            <sbol:end>2377</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation1">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation1"/>
+        <sbol:displayId>annotation1</sbol:displayId>
+        <dcterms:title>Sm/Sp no DraIII</dcterms:title>
+        <gbConv:vntifkey>4</gbConv:vntifkey>
+        <gbConv:label>Sm/Sp no DraIII</gbConv:label>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation1/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation1/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>231</sbol:start>
+            <sbol:end>1241</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
@@ -93,76 +149,20 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation1">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation1"/>
-        <sbol:displayId>annotation1</sbol:displayId>
-        <dcterms:title>Sm/Sp no DraIII</dcterms:title>
-        <gbConv:vntifkey>4</gbConv:vntifkey>
-        <gbConv:label>Sm/Sp no DraIII</gbConv:label>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation1/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation1/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>231</sbol:start>
-            <sbol:end>1241</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation5">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation5"/>
-        <sbol:displayId>annotation5</sbol:displayId>
-        <dcterms:title>TACT 4bp overhang</dcterms:title>
-        <gbConv:featureType>Misc._Feature</gbConv:featureType>
-        <gbConv:label>TACT 4bp overhang</gbConv:label>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation6">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation6"/>
+        <sbol:displayId>annotation6</sbol:displayId>
+        <dcterms:title>omega (TMV)</dcterms:title>
+        <gbConv:featureType>5'_UTR</gbConv:featureType>
+        <gbConv:vntifkey>52</gbConv:vntifkey>
+        <gbConv:label>omega (TMV)</gbConv:label>
         <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation5/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation5/range"/>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation6/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation6/range"/>
             <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2248</sbol:start>
-            <sbol:end>2251</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation0">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation0"/>
-        <sbol:displayId>annotation0</sbol:displayId>
-        <dcterms:title>AATG</dcterms:title>
-        <gbConv:featureType>Misc._Feature</gbConv:featureType>
-        <gbConv:label>AATG</gbConv:label>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation0/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation0/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>1</sbol:start>
-            <sbol:end>4</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation7">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation7"/>
-        <sbol:displayId>annotation7</sbol:displayId>
-        <dcterms:title>nuclear localisation signsal (SV40)</dcterms:title>
-        <gbConv:featureType>Transit_peptide</gbConv:featureType>
-        <gbConv:label>nuclear localisation signsal (SV40)</gbConv:label>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pAGM5331/annotation7/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pAGM5331/annotation7/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2334</sbol:start>
-            <sbol:end>2377</sbol:end>
+            <sbol:start>2252</sbol:start>
+            <sbol:end>2333</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>

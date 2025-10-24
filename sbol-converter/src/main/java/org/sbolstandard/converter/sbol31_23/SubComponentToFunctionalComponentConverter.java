@@ -4,6 +4,7 @@ import java.net.URI;
 
 import org.apache.thrift.Option.None;
 import org.sbolstandard.converter.Util;
+import org.sbolstandard.converter.sbol31_23.measurement.MeasurementConverter;
 import org.sbolstandard.core2.AccessType;
 import org.sbolstandard.core2.DirectionType;
 import org.sbolstandard.core2.FunctionalComponent;
@@ -13,6 +14,7 @@ import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.Interface;
 import org.sbolstandard.core3.entity.SubComponent;
+import org.sbolstandard.core3.entity.measure.Measure;
 import org.sbolstandard.core3.util.SBOLGraphException;
 
 // This converter maps an SBOL3 SubComponent to an SBOL2 FunctionalComponent
@@ -71,6 +73,14 @@ public class SubComponentToFunctionalComponentConverter
 				sbol2ChildComponentDefinitionURI, // URI of the referenced ComponentDefinition
 				sbol2DirectionType // DirectionType (IN, OUT, INOUT, NONE)
 		);
+
+		// Measurement conversion
+		if(sbol3SubComponent.getMeasures()!=null) {
+			MeasurementConverter measurementConverter = new MeasurementConverter();
+			for ( Measure sbol3Measure : sbol3SubComponent.getMeasures()) {
+				measurementConverter.convert(document, sbol2FuncComp, sbol3SubComponent, sbol3Measure);
+			}
+		}
 
 		// Copy metadata (displayId, name, description, etc.) from SBOL3 SubComponent to
 		// SBOL2 FunctionalComponent

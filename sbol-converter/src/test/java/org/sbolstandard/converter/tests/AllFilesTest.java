@@ -23,7 +23,12 @@ public class AllFilesTest {
 		//TestUtil.runTestSuiteFile2_to_3(new File("../SBOLTestSuite/SBOL2/SequenceConstraintOutput.xml"));
 		Logger logger=getLogger();	
 		testRecursive(new File("../SBOLTestSuite/SBOL2/"), "output/SBOLTestSuite_conversion/SBOL2/", logger);		
-		print("All SBOL2 files tested successfully.", logger);
+		/* 
+		print("Starting to convert SBOL2 files that are not compliant with best practices.", logger);
+		testRecursive(new File("../SBOLTestSuite/SBOL2_bp/"), "output/SBOLTestSuite_conversion/SBOL2_bp/", logger);				
+		print("All SBOL2_bp files tested successfully.", logger);
+		*/
+
 	}
 	
 	private static Logger getLogger() throws SecurityException, IOException {
@@ -64,6 +69,9 @@ public class AllFilesTest {
 		logger.info("Testing folder " + folder.getAbsolutePath());
 
 		File[] files=folder.listFiles();
+		int successCounter=0;
+		int totalCounter=0;
+		int withoutValidationCounter=0;
 		for (int i=0;i<files.length;i++)
 		{
 			File file=files[i];
@@ -76,7 +84,7 @@ public class AllFilesTest {
 					printError("File " + file.getName() + " has no extension, skipping", logger);
 					continue;
 				}
-
+				totalCounter++;
 				print ("**********************************************", logger);
 				print("Testing " + file.getName(), logger);
 				List<String> errors=null;
@@ -87,6 +95,7 @@ public class AllFilesTest {
 				String outputFile= folderToSave + File.separator + file.getName();
 				try{
 					errors=TestUtil.roundTripConvert(file,true,outputFile,false );
+					successCounter++;
 				}
 				catch (SBOLGraphException e){
 					e.printStackTrace();
@@ -96,6 +105,7 @@ public class AllFilesTest {
 					printError("Converting without SBOL3 validation", logger);
 					try{
 						errors=TestUtil.roundTripConvert(file,false,outputFile,false);
+						withoutValidationCounter++;
 					}
 					catch (Exception e2){
 						logger.severe("Error testing " + file.getName() + " without validation: " + e2.getMessage());
@@ -110,10 +120,17 @@ public class AllFilesTest {
 				}
 			}
 		}
+		logger.info("Testing folder " + folder.getAbsolutePath());
+		String conversionSummary=String.format("Completed converting SBOL2 files in folder %s. %d/%d files were converted successfully.", folder.getAbsolutePath(), successCounter, totalCounter);
+		if (withoutValidationCounter>0){
+			conversionSummary+=String.format(" %d additional files could be converted without SBOL3 validation.", withoutValidationCounter);
+		}
+		print(conversionSummary, logger);
+
 	}
 
 	private static void print(String message, Logger logger) {
-		//System.out.println(message);
+		System.out.println(message);
 		logger.info(message);		
 	}
 

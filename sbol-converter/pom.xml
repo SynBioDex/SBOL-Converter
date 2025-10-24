@@ -6,7 +6,7 @@
 
 	<groupId>org.sbolstandard</groupId>
 	<artifactId>sbol-converter</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.2-SNAPSHOT</version>
 	<name>sbol-converter</name>
 	<url>https://github.com/SynBioDex/SBOL-Converter</url>
 	<issueManagement>
@@ -45,11 +45,14 @@
 			<artifactId>junit-jupiter-params</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
 		<dependency>
-			<groupId>org.sbolstandard</groupId>
-			<artifactId>libSBOLj3</artifactId>
-			<version>1.0.3-SNAPSHOT</version>
-		</dependency>
+    		<groupId>org.sbolstandard</groupId>
+   			<artifactId>libsbolj3</artifactId>
+    		<version>1.0.4.1-SNAPSHOT</version>
+  		</dependency>
+
+		
 		<!--<dependency>
 			<groupId>org.apache.jena</groupId>
 			<artifactId>jena-base</artifactId>
@@ -165,6 +168,33 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
+			<plugins>
+				<plugin>
+                      <groupId>org.apache.maven.plugins</groupId>
+                      <artifactId>maven-assembly-plugin</artifactId>
+                      <version>3.6.0</version>
+                      <configuration>
+                        <descriptorRefs>
+                          <descriptorRef>jar-with-dependencies</descriptorRef>
+                        </descriptorRefs>
+                        <archive>
+                          <manifest>
+                            <!-- Replace with your main class -->
+                            <mainClass>org.sbolstandard.converter.App</mainClass>
+                          </manifest>
+                        </archive>
+                      </configuration>
+                      <executions>
+                        <execution>
+                          <id>make-assembly</id>
+                          <phase>package</phase>
+                          <goals>
+                            <goal>single</goal>
+                          </goals>
+                        </execution>
+                      </executions>
+                    </plugin>
+		</plugins>
 	</build>
 
 	<repositories>
@@ -176,6 +206,11 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
+		<!-- <repository>
+    		<id>github</id>
+			<name>GitHub Packages</name>
+    		<url>https://maven.pkg.github.com/SynBioDex</url>
+  		</repository>-->
 	</repositories>
 
 </project>

@@ -39,8 +39,6 @@ public class ComponentReferenceToMapsToConverter implements ChildEntityConverter
                 
 				for (org.sbolstandard.core3.entity.Constraint constraint : sbol3ParentComponent.getConstraints()) {
 					if (Util.isMapstoConstraint(constraint)) {
-						//TODO: implement this
-						// CHECK
 						if (constraint.getSubject().getUri().equals(componentReference.getUri()) || constraint.getObject().getUri().equals(componentReference.getUri())) {
                             refinementType = constraintToMapsToConverter.convert(document, sbol2Parent, sbol3ParentComponent, constraint);
                             currentConstraint = constraint;

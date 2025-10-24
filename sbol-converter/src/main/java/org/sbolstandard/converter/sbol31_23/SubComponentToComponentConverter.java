@@ -1,8 +1,10 @@
 package org.sbolstandard.converter.sbol31_23;
 
 import org.sbolstandard.converter.Util;
+import org.sbolstandard.converter.sbol31_23.measurement.MeasurementConverter;
 import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.SubComponent;
+import org.sbolstandard.core3.entity.measure.Measure;
 import org.sbolstandard.core2.AccessType;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.SBOLDocument;
@@ -19,6 +21,15 @@ public class SubComponentToComponentConverter implements ChildEntityConverter<Su
 		org.sbolstandard.core2.Component sbol2Comp=sbol2CD.createComponent(input.getDisplayId(), AccessType.PUBLIC, Util.createSBOL2Uri(input.getInstanceOf().getUri()));
 		
 		sbol2Comp.setRoles(Util.convertSORoles3_to_2(input.getRoles()));
+
+		//Measurement conversion
+		if(input.getMeasures()!=null) {
+			MeasurementConverter measurementConverter = new MeasurementConverter();
+			for (Measure sbol3Measure : input.getMeasures()) {
+				measurementConverter.convert(document, sbol2Comp, input, sbol3Measure);
+			}
+		}
+
 		Util.copyIdentified(input, sbol2Comp, document);
         return sbol2Comp;	
 	}

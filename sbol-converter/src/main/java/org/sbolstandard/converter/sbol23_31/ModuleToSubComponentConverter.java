@@ -5,8 +5,8 @@ import java.net.URI;
 
 
 import org.sbolstandard.converter.Util;
+import org.sbolstandard.converter.sbol23_31.measurement.MeasurementConverter;
 import org.sbolstandard.core2.SBOLValidationException;
-import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.SubComponent;
@@ -38,6 +38,12 @@ public class ModuleToSubComponentConverter
 		
 		// MEASURES
 		//System.out.println("ModuleToSubComponentConverter.convert() NOT IMPLEMENTED YET");
+		if(sbol2Module.getMeasures()!=null) {
+			MeasurementConverter measurementConverter = new MeasurementConverter();
+			for (org.sbolstandard.core2.Measure sbol2Measure : sbol2Module.getMeasures()) {
+				measurementConverter.convert(document, sbol3SubComponentForModule, sbol2Module, sbol2Measure, parameters);
+			}
+		}
 
 		return sbol3SubComponentForModule;
 

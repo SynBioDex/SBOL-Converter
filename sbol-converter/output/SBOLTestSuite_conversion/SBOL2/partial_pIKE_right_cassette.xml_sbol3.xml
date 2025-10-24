@@ -104,24 +104,6 @@
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://www.async.ece.utah.edu/Reporter/Interface1">
             <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/Reporter/rbsB">
-                  <sbol:hasLocation>
-                     <sbol:EntireSequence rdf:about="http://www.async.ece.utah.edu/Reporter/rbsB/genericLocation">
-                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                        <sbol:hasSequence>
-                           <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Reporter_seq"/>
-                        </sbol:hasSequence>
-                        <sbol:displayId>genericLocation</sbol:displayId>
-                     </sbol:EntireSequence>
-                  </sbol:hasLocation>
-                  <prov:wasDerivedFrom rdf:resource="urn:f6071601-1d80-4bd1-9142-21cd931cc545"/>
-                  <sbol:instanceOf>
-                     <sbol:Component rdf:about="http://www.async.ece.utah.edu/rbsB"/>
-                  </sbol:instanceOf>
-                  <sbol:displayId>rbsB</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/Reporter/BBa_E0040">
                   <sbol:hasLocation>
                      <sbol:EntireSequence rdf:about="http://www.async.ece.utah.edu/Reporter/BBa_E0040/genericLocation">
@@ -137,6 +119,24 @@
                      <sbol:Component rdf:about="http://www.async.ece.utah.edu/BBa_E0040"/>
                   </sbol:instanceOf>
                   <sbol:displayId>BBa_E0040</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:nondirectional>
+            <sbol:nondirectional>
+               <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/Reporter/rbsB">
+                  <sbol:hasLocation>
+                     <sbol:EntireSequence rdf:about="http://www.async.ece.utah.edu/Reporter/rbsB/genericLocation">
+                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                        <sbol:hasSequence>
+                           <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Reporter_seq"/>
+                        </sbol:hasSequence>
+                        <sbol:displayId>genericLocation</sbol:displayId>
+                     </sbol:EntireSequence>
+                  </sbol:hasLocation>
+                  <prov:wasDerivedFrom rdf:resource="urn:f6071601-1d80-4bd1-9142-21cd931cc545"/>
+                  <sbol:instanceOf>
+                     <sbol:Component rdf:about="http://www.async.ece.utah.edu/rbsB"/>
+                  </sbol:instanceOf>
+                  <sbol:displayId>rbsB</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:displayId>Interface1</sbol:displayId>

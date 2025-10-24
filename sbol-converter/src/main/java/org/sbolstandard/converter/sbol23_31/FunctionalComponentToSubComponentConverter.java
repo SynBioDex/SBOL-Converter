@@ -11,6 +11,7 @@ import org.sbolstandard.core3.util.SBOLGraphException;
 import java.net.URI;
 
 import org.sbolstandard.converter.Util;
+import org.sbolstandard.converter.sbol23_31.measurement.MeasurementConverter;
 
 public class FunctionalComponentToSubComponentConverter
 		implements ChildEntityConverter<org.sbolstandard.core2.FunctionalComponent, SubComponent> {
@@ -45,7 +46,15 @@ public class FunctionalComponentToSubComponentConverter
 			throw new SBOLGraphException("Error creating SubComponent for FunctionalComponent: " + sbol2FunctionalComponent.getIdentity(), e);
 		}
 
-		Util.copyIdentified(sbol2FunctionalComponent, sbol3SubComponent);
+		// Measurement conversion
+		if(sbol2FunctionalComponent.getMeasures()!=null) {
+			MeasurementConverter measurementConverter = new MeasurementConverter();
+			for (org.sbolstandard.core2.Measure sbol2Measure : sbol2FunctionalComponent.getMeasures()) {
+				measurementConverter.convert(document, sbol3SubComponent, sbol2FunctionalComponent, sbol2Measure, parameters);
+			}
+		}
+
+		Util.copyIdentified(sbol2FunctionalComponent, sbol3SubComponent, parameters);
 
 		
 

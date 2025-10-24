@@ -25,4 +25,34 @@
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:displayId>bsubtilis168</sbol:displayId>
    </sbol:Component>
+   <sbol:TopLevel rdf:about="http://myapp.com/xraymutagenesis">
+      <sbol:name>X-ray mutagenesis</sbol:name>
+      <prov:qualifiedUsage>
+         <sbol:Identified rdf:about="http://myapp.com/xraymutagenesis/usage">
+            <prov:hadRole rdf:resource="http://sbols.org/v2#source"/>
+            <prov:entity rdf:resource="http://myapp.com/bsubtilisncimb3610"/>
+            <sbol:displayId>usage</sbol:displayId>
+            <rdf:type rdf:resource="http://www.w3.org/ns/prov#Usage"/>
+         </sbol:Identified>
+      </prov:qualifiedUsage>
+      <prov:qualifiedAssociation>
+         <sbol:Identified rdf:about="http://myapp.com/xraymutagenesis/association">
+            <prov:hadRole rdf:resource="http://myapp.com/mutagen"/>
+            <prov:agent>
+               <sbol:TopLevel rdf:about="http://myapp.com/x_ray"/>
+            </prov:agent>
+            <sbol:displayId>association</sbol:displayId>
+            <rdf:type rdf:resource="http://www.w3.org/ns/prov#Association"/>
+         </sbol:Identified>
+      </prov:qualifiedAssociation>
+      <sbol:hasNamespace rdf:resource="http://myapp.com"/>
+      <sbol:displayId>xraymutagenesis</sbol:displayId>
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+   </sbol:TopLevel>
+   <sbol:TopLevel rdf:about="http://myapp.com/x_ray">
+      <sbol:name>X-ray</sbol:name>
+      <sbol:hasNamespace rdf:resource="http://myapp.com"/>
+      <sbol:displayId>x_ray</sbol:displayId>
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+   </sbol:TopLevel>
 </rdf:RDF>

@@ -304,7 +304,6 @@
                   <sbol:displayId>range0</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000234"/>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation4/range5">
                   <gbConv:position>position5</gbConv:position>
@@ -317,6 +316,7 @@
                   <sbol:displayId>range5</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <sbol:role rdf:resource="https://identifiers.org/SO:0000234"/>
             <gbConv:gene>CCT</gbConv:gene>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation4/range6">

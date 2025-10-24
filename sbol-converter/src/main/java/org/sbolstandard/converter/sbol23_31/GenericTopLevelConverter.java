@@ -22,7 +22,7 @@ public class GenericTopLevelConverter implements EntityConverter<org.sbolstandar
 		if (attachments!=null){
 			tlm.setAttachmentsByURIs(Util.toList(attachments));
 		}
-		Util.copyIdentified(input, tlm);		
+		Util.copyIdentified(input, tlm, parameters);		
 		return tlm;
 	}
 	
