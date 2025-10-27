@@ -9,6 +9,7 @@
     xmlns:prov="http://www.w3.org/ns/prov#"
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_B0015">
       <sbol:hasSequence>
@@ -35,6 +36,7 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno3"/>
             <sbol:instanceOf>
                <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_B0034"/>
             </sbol:instanceOf>
@@ -55,6 +57,7 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno4"/>
             <sbol:instanceOf rdf:resource="http://partsregistry.org/cd/BBa_B0015"/>
             <sbol:displayId>ter</sbol:displayId>
          </sbol:SubComponent>
@@ -72,6 +75,7 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno2"/>
             <sbol:instanceOf>
                <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_C0062"/>
             </sbol:instanceOf>
@@ -91,12 +95,16 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno5"/>
             <sbol:instanceOf>
                <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_R0062"/>
             </sbol:instanceOf>
             <sbol:displayId>pLuxR</sbol:displayId>
          </sbol:SubComponent>
       </sbol:hasFeature>
+      <backport2_3:sbol3TempSequenceURI>
+         <sbol:Sequence rdf:about="http://partsregistry.org/cd/BBa_F2620_seq"/>
+      </backport2_3:sbol3TempSequenceURI>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:hasFeature>
          <sbol:SubComponent rdf:about="http://partsregistry.org/cd/BBa_F2620/pTetR">
@@ -111,6 +119,7 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno1"/>
             <sbol:instanceOf>
                <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_R0040"/>
             </sbol:instanceOf>
@@ -125,11 +134,11 @@
       <sbol:role rdf:resource="https://identifiers.org/SO:0001411"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://partsregistry.org/cd/BBa_F2620/Interface1">
-            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/luxR"/>
-            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/pTetR"/>
-            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/ter"/>
             <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/pLuxR"/>
+            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/ter"/>
             <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/rbs"/>
+            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/pTetR"/>
+            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/luxR"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>

@@ -522,12 +522,16 @@ public class Util {
 	 * @throws SBOLGraphException 
 	 */
 	private static void convertAnnotations3_to_2(Identified input, org.sbolstandard.core2.Identified output, org.sbolstandard.core2.SBOLDocument sbol2Document) throws SBOLGraphException, SBOLValidationException {
-		
 		List<Pair<URI, Object>> annotations = input.getAnnotations();
 		if (annotations!=null){
+			//String sbol2BackPortAnnotationPrefix=ConverterNameSpace.BackPort_2_3.getUri().toString() +  ConverterVocabulary.Two_to_Three.sbol2BackPortTermPrefix;		
 			for (Pair<URI, Object> annotation : annotations) {
 				// Convert SBOL3 Annotation to Metadata
 				String property = annotation.getLeft().toString();
+				//If the annotation was added during the conversion from v2 to v3, then remove it when converting it back to v2
+				if (property.toLowerCase().startsWith(ConverterNameSpace.BackPort_2_3.getUri().toString().toLowerCase())){				
+					continue;
+				}
 				Object value = annotation.getRight();
 				QName qName=toQName(URI.create(property),sbol2Document);
 				if (value instanceof URI) {
@@ -621,6 +625,8 @@ public class Util {
 		// output.setWasGeneratedBy(toList(input.getWasGeneratedBys()));
 		convertIfTopLevel(input, output,parameters);
 		convertAnnotations_2_to3(input.getAnnotations(), output);
+
+		
 	}
 
 	private static void convertIfTopLevel(org.sbolstandard.core2.Identified input, Identified output, Parameters parameters) throws SBOLGraphException {
@@ -649,7 +655,7 @@ public class Util {
 			
 			URI property=getAnnotationProperty(annotation);
 			if (annotation.isURIValue()){
-				parent.addAnnotion(property, annotation.getURIValue());
+				parent.addAnnotation(property, annotation.getURIValue());
 			}
 			else if (annotation.isNestedAnnotations()){			
 				// If the annotation is a nested annotation, we need to create a Metadata object
@@ -662,16 +668,16 @@ public class Util {
 				convertAnnotations_2_to3(annotation.getAnnotations(), metadata);
 			}
 			else if (annotation.isBooleanValue()){
-				parent.addAnnotion(property, annotation.getBooleanValue());				
+				parent.addAnnotation(property, annotation.getBooleanValue());				
 			}			
 			else if (annotation.isDoubleValue()){
-				parent.addAnnotion(property, annotation.getDoubleValue());				
+				parent.addAnnotation(property, annotation.getDoubleValue());				
 			}
 			else if (annotation.isIntegerValue()){
-				parent.addAnnotion(property, annotation.getIntegerValue());				
+				parent.addAnnotation(property, annotation.getIntegerValue());				
 			}
 			else if (annotation.isStringValue()){
-				parent.addAnnotion(property, annotation.getStringValue());				
+				parent.addAnnotation(property, annotation.getStringValue());				
 			}
 			else {
 				throw new SBOLGraphException("Unknown annotation type: " + annotation.getClass().getName());
@@ -713,23 +719,23 @@ public class Util {
 		return value;		
 	}
 
-	public static void copyNamespacesFrom2_to_3(org.sbolstandard.core2.SBOLDocument inputSbol2Doc,
-			SBOLDocument outputSbol3Doc) {
+	public static void copyNamespacesFrom2_to_3(org.sbolstandard.core2.SBOLDocument inputSbol2Doc, SBOLDocument outputSbol3Doc) {
+		Model model = outputSbol3Doc.getRDFModel();
+		outputSbol3Doc.addNameSpacePrefixes(ConverterNameSpace.BackPort_2_3.getPrefix(), ConverterNameSpace.BackPort_2_3.getUri());
+
 		for (int i = 0; i < inputSbol2Doc.getNamespaces().size(); i++) {
 			String uri = inputSbol2Doc.getNamespaces().get(i).getNamespaceURI();
 			String prefix = inputSbol2Doc.getNamespaces().get(i).getPrefix();
-			
-			Model model=outputSbol3Doc.getRDFModel();
-			if (model.getNsPrefixURI(prefix)==null && model.getNsPrefixURI(prefix.toLowerCase())==null && 
-					model.getNsPrefixURI(prefix)==null && 
-					model.getNsURIPrefix(uri)==null &&
-					model.getNsURIPrefix(uri.toLowerCase())==null){
-			//if (!uri.toLowerCase().equals("http://sbols.org/v2#")) {
+
+			if (model.getNsPrefixURI(prefix) == null && model.getNsPrefixURI(prefix.toLowerCase()) == null &&
+					model.getNsPrefixURI(prefix) == null &&
+					model.getNsURIPrefix(uri) == null &&
+					model.getNsURIPrefix(uri.toLowerCase()) == null) {
+				// if (!uri.toLowerCase().equals("http://sbols.org/v2#")) {
 				outputSbol3Doc.addNameSpacePrefixes(prefix, URI.create(uri));
 			}
 		}
-	}
-	
+	}	
 	public static void copyNamespacesFrom3_to_2(SBOLDocument inputSbol3Doc, org.sbolstandard.core2.SBOLDocument outputSbol2Doc) throws SBOLValidationException 
 	{
 		Model model=inputSbol3Doc.getRDFModel();
@@ -764,9 +770,12 @@ public class Util {
 				    	break;
 				    }			    					
 				}
-				if (!found)
-				{
-					outputSbol2Doc.addNamespace(URI.create(namespaceSBOL3), prefixSBOL3);	
+				if (!found){
+					//Only add if the annotation was about v2 to v3 when converting to v2
+					//No need to include to v2->v3 namespace in a v2 document
+					if (!namespaceSBOL3.equalsIgnoreCase(ConverterNameSpace.BackPort_2_3.getUri().toString())){						
+						outputSbol2Doc.addNamespace(URI.create(namespaceSBOL3), prefixSBOL3);	
+					}
 				}
 			}
 		}
@@ -1233,6 +1242,7 @@ public class Util {
 			}
 			sbol3Sequence.setEncoding(Encoding.NucleicAcid);
 			sbol3Component.setSequences(Arrays.asList(sbol3Sequence));
+			sbol3Component.addAnnotation(ConverterVocabulary.Two_to_Three.sbol3TempSequenceURI, sbol3Sequence.getUri());
 			return sbol3Sequence;
 		}
 

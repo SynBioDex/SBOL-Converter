@@ -8,6 +8,7 @@
     xmlns:prov="http://www.w3.org/ns/prov#"
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/cas9m_BFP_cds">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
@@ -43,7 +44,7 @@
       <sbol:hasConstraint>
          <sbol:Constraint rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/Constraint1">
             <sbol:object>
-               <sbol:ComponentReference rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/gRNA_b_map">
+               <sbol:ComponentReference rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP_map">
                   <sbol:inChildOf>
                      <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/CRISPR_Template">
                         <sbol:instanceOf>
@@ -53,22 +54,22 @@
                      </sbol:SubComponent>
                   </sbol:inChildOf>
                   <sbol:refersTo>
-                     <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/gRNA_generic">
+                     <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/cas9_generic">
                         <sbol:instanceOf>
-                           <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/gRNA_generic"/>
+                           <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/cas9_generic"/>
                         </sbol:instanceOf>
-                        <sbol:displayId>gRNA_generic</sbol:displayId>
+                        <sbol:displayId>cas9_generic</sbol:displayId>
                      </sbol:SubComponent>
                   </sbol:refersTo>
-                  <sbol:displayId>gRNA_b_map</sbol:displayId>
+                  <sbol:displayId>cas9m_BFP_map</sbol:displayId>
                </sbol:ComponentReference>
             </sbol:object>
             <sbol:subject>
-               <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/gRNA_b">
+               <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP">
                   <sbol:instanceOf>
-                     <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/gRNA_b"/>
+                     <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/cas9m_BFP"/>
                   </sbol:instanceOf>
-                  <sbol:displayId>gRNA_b</sbol:displayId>
+                  <sbol:displayId>cas9m_BFP</sbol:displayId>
                </sbol:SubComponent>
             </sbol:subject>
             <sbol:restriction rdf:resource="http://sbols.org/v3#replaces"/>
@@ -124,14 +125,6 @@
          </sbol:ComponentReference>
       </sbol:hasFeature>
       <sbol:hasFeature>
-         <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP">
-            <sbol:instanceOf>
-               <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/cas9m_BFP"/>
-            </sbol:instanceOf>
-            <sbol:displayId>cas9m_BFP</sbol:displayId>
-         </sbol:SubComponent>
-      </sbol:hasFeature>
-      <sbol:hasFeature>
          <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/gRNA_b_gene">
             <sbol:instanceOf>
                <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/gRNA_b_gene"/>
@@ -139,6 +132,7 @@
             <sbol:displayId>gRNA_b_gene</sbol:displayId>
          </sbol:SubComponent>
       </sbol:hasFeature>
+      <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP"/>
       <sbol:hasInteraction>
          <sbol:Interaction rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/mKate_production">
             <sbol:hasParticipation>
@@ -179,7 +173,20 @@
             <sbol:displayId>cas9m_BFP_gRNA_b</sbol:displayId>
          </sbol:SubComponent>
       </sbol:hasFeature>
-      <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/gRNA_b_map"/>
+      <sbol:hasFeature>
+         <sbol:ComponentReference rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/gRNA_b_map">
+            <sbol:inChildOf rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/CRISPR_Template"/>
+            <sbol:refersTo>
+               <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/gRNA_generic">
+                  <sbol:instanceOf>
+                     <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/gRNA_generic"/>
+                  </sbol:instanceOf>
+                  <sbol:displayId>gRNA_generic</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:refersTo>
+            <sbol:displayId>gRNA_b_map</sbol:displayId>
+         </sbol:ComponentReference>
+      </sbol:hasFeature>
       <sbol:hasConstraint>
          <sbol:Constraint rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/Constraint5">
             <sbol:object>
@@ -230,7 +237,14 @@
          <sbol:Interaction rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/gRNA_b_deg">
             <sbol:hasParticipation>
                <sbol:Participation rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/gRNA_b_deg/gRNA_b">
-                  <sbol:participant rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/gRNA_b"/>
+                  <sbol:participant>
+                     <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/gRNA_b">
+                        <sbol:instanceOf>
+                           <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/gRNA_b"/>
+                        </sbol:instanceOf>
+                        <sbol:displayId>gRNA_b</sbol:displayId>
+                     </sbol:SubComponent>
+                  </sbol:participant>
                   <sbol:role rdf:resource="https://identifiers.org/SBO:0000010"/>
                   <sbol:displayId>gRNA_b</sbol:displayId>
                </sbol:Participation>
@@ -239,37 +253,11 @@
             <sbol:displayId>gRNA_b_deg</sbol:displayId>
          </sbol:Interaction>
       </sbol:hasInteraction>
-      <sbol:hasFeature>
-         <sbol:ComponentReference rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP_map">
-            <sbol:inChildOf rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/CRISPR_Template"/>
-            <sbol:refersTo>
-               <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/cas9_generic">
-                  <sbol:instanceOf>
-                     <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/cas9_generic"/>
-                  </sbol:instanceOf>
-                  <sbol:displayId>cas9_generic</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:refersTo>
-            <sbol:displayId>cas9m_BFP_map</sbol:displayId>
-         </sbol:ComponentReference>
-      </sbol:hasFeature>
+      <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP_map"/>
       <sbol:hasConstraint>
          <sbol:Constraint rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/Constraint2">
-            <sbol:object>
-               <sbol:ComponentReference rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_gene_map">
-                  <sbol:inChildOf rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/CRISPR_Template"/>
-                  <sbol:refersTo>
-                     <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/target_gene">
-                        <sbol:instanceOf>
-                           <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/target_gene"/>
-                        </sbol:instanceOf>
-                        <sbol:displayId>target_gene</sbol:displayId>
-                     </sbol:SubComponent>
-                  </sbol:refersTo>
-                  <sbol:displayId>EYFP_gene_map</sbol:displayId>
-               </sbol:ComponentReference>
-            </sbol:object>
-            <sbol:subject rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_gene"/>
+            <sbol:object rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/gRNA_b_map"/>
+            <sbol:subject rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/gRNA_b"/>
             <sbol:restriction rdf:resource="http://sbols.org/v3#replaces"/>
             <sbol:displayId>Constraint2</sbol:displayId>
          </sbol:Constraint>
@@ -331,8 +319,21 @@
       </sbol:hasInteraction>
       <sbol:hasConstraint>
          <sbol:Constraint rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/Constraint3">
-            <sbol:object rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP_map"/>
-            <sbol:subject rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP"/>
+            <sbol:object>
+               <sbol:ComponentReference rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_gene_map">
+                  <sbol:inChildOf rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/CRISPR_Template"/>
+                  <sbol:refersTo>
+                     <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/target_gene">
+                        <sbol:instanceOf>
+                           <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/target_gene"/>
+                        </sbol:instanceOf>
+                        <sbol:displayId>target_gene</sbol:displayId>
+                     </sbol:SubComponent>
+                  </sbol:refersTo>
+                  <sbol:displayId>EYFP_gene_map</sbol:displayId>
+               </sbol:ComponentReference>
+            </sbol:object>
+            <sbol:subject rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_gene"/>
             <sbol:restriction rdf:resource="http://sbols.org/v3#replaces"/>
             <sbol:displayId>Constraint3</sbol:displayId>
          </sbol:Constraint>
@@ -459,15 +460,15 @@
             <sbol:displayId>EYFP_gene_constraint</sbol:displayId>
          </sbol:Constraint>
       </sbol:hasConstraint>
-      <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/EYFP_gene/EYFP_cds"/>
+      <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/EYFP_gene/CRP_b"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbols.org/CRISPR_Example/1.0/EYFP_gene/Interface1">
-            <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/EYFP_gene/EYFP_cds"/>
             <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/EYFP_gene/CRP_b"/>
+            <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/EYFP_gene/EYFP_cds"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
-      <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/EYFP_gene/CRP_b"/>
+      <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/EYFP_gene/EYFP_cds"/>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
       <sbol:hasNamespace rdf:resource="http://sbols.org/CRISPR_Example"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
@@ -540,11 +541,11 @@
       </sbol:hasInteraction>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/Interface1">
-            <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/target"/>
             <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/target_gene"/>
             <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/gRNA_generic"/>
-            <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/cas9_generic"/>
+            <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/target"/>
             <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/cas9_gRNA_complex"/>
+            <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/cas9_generic"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -673,15 +674,15 @@
             <sbol:displayId>cas9m_BFP_gene_constraint</sbol:displayId>
          </sbol:Constraint>
       </sbol:hasConstraint>
-      <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/cas9m_BFP_gene/pConst"/>
+      <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/cas9m_BFP_gene/cas9m_BFP_cds"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbols.org/CRISPR_Example/1.0/cas9m_BFP_gene/Interface1">
-            <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/cas9m_BFP_gene/pConst"/>
             <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/cas9m_BFP_gene/cas9m_BFP_cds"/>
+            <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/cas9m_BFP_gene/pConst"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
-      <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/cas9m_BFP_gene/cas9m_BFP_cds"/>
+      <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/cas9m_BFP_gene/pConst"/>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
       <sbol:hasNamespace rdf:resource="http://sbols.org/CRISPR_Example"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
@@ -726,8 +727,8 @@
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbols.org/CRISPR_Example/1.0/gRNA_b_gene/Interface1">
-            <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/gRNA_b_gene/gRNA_b_nc"/>
             <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/gRNA_b_gene/CRa_U6"/>
+            <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/gRNA_b_gene/gRNA_b_nc"/>
             <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/gRNA_b_gene/gRNA_b_terminator"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
@@ -754,15 +755,15 @@
             <sbol:displayId>GAL4VP16_gene_constraint</sbol:displayId>
          </sbol:Constraint>
       </sbol:hasConstraint>
-      <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/Gal4VP16_gene/Gal4VP16_cds"/>
+      <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/Gal4VP16_gene/pConst"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbols.org/CRISPR_Example/1.0/Gal4VP16_gene/Interface1">
-            <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/Gal4VP16_gene/Gal4VP16_cds"/>
             <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/Gal4VP16_gene/pConst"/>
+            <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/Gal4VP16_gene/Gal4VP16_cds"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
-      <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/Gal4VP16_gene/pConst"/>
+      <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/Gal4VP16_gene/Gal4VP16_cds"/>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
       <sbol:hasNamespace rdf:resource="http://sbols.org/CRISPR_Example"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>

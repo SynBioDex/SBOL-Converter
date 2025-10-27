@@ -5,6 +5,7 @@
     xmlns:sbol="http://sbols.org/v3#"
     xmlns:genbank="http://www.ncbi.nlm.nih.gov/genbank#"
     xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:EDAM="https://identifiers.org/edam:"
     xmlns:obo="http://purl.obolibrary.org/obo/"

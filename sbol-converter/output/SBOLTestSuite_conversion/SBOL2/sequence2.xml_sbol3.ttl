@@ -1,15 +1,16 @@
 <rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:gbConv="http://sbols.org/genBankConversion#"
-    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:SO="https://identifiers.org/SO:"
-    xmlns:EDAM="https://identifiers.org/edam:"
     xmlns:sbol="http://sbols.org/v3#"
+    xmlns:genbank="http://www.ncbi.nlm.nih.gov/genbank#"
+    xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:EDAM="https://identifiers.org/edam:"
     xmlns:CHEBI="https://identifiers.org/CHEBI:"
     xmlns:prov="http://www.w3.org/ns/prov#"
-    xmlns:genbank="http://www.ncbi.nlm.nih.gov/genbank#"
     xmlns:SBO="https://identifiers.org/SBO:"
-    xmlns:GO="https://identifiers.org/GO:"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/1/AF165912">
       <genbank:division>PLN</genbank:division>
@@ -304,6 +305,7 @@
                   <sbol:displayId>range0</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <sbol:role rdf:resource="https://identifiers.org/SO:0000234"/>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation4/range5">
                   <gbConv:position>position5</gbConv:position>
@@ -316,7 +318,6 @@
                   <sbol:displayId>range5</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000234"/>
             <gbConv:gene>CCT</gbConv:gene>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation4/range6">

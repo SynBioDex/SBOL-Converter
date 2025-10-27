@@ -12,18 +12,38 @@
     <sbol:type rdf:resource="http://identifiers.org/so/SO:0000988"/>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000804"/>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation7">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation7"/>
-        <sbol:displayId>annotation7</sbol:displayId>
-        <dcterms:title>NptII (E.coli)</dcterms:title>
-        <gbConv:label>NptII (E.coli)</gbConv:label>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation0">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation0"/>
+        <sbol:displayId>annotation0</sbol:displayId>
+        <dcterms:title>CGCT 4bp overhang</dcterms:title>
+        <gbConv:featureType>MIsc._Feature</gbConv:featureType>
+        <gbConv:label>CGCT 4bp overhang</gbConv:label>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation7/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation7/range"/>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation0/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation0/range"/>
             <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2592</sbol:start>
-            <sbol:end>3386</sbol:end>
+            <sbol:start>1</sbol:start>
+            <sbol:end>4</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation5">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation5"/>
+        <sbol:displayId>annotation5</sbol:displayId>
+        <dcterms:title>GGAG 4bp overhang</dcterms:title>
+        <gbConv:featureType>MIsc._Feature</gbConv:featureType>
+        <gbConv:label>GGAG 4bp overhang</gbConv:label>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation5/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation5/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>2248</sbol:start>
+            <sbol:end>2251</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
@@ -50,19 +70,37 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation8">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation8"/>
-        <sbol:displayId>annotation8</sbol:displayId>
-        <dcterms:title>ocs terminator (Agrobacterium tumefaciens)</dcterms:title>
-        <gbConv:featureType>Terminator</gbConv:featureType>
-        <gbConv:label>ocs terminator (Agrobacterium tumefaciens)</gbConv:label>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation6">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation6"/>
+        <sbol:displayId>annotation6</sbol:displayId>
+        <dcterms:title>Nos promoter (Agrobacterium tumefaciens)</dcterms:title>
+        <gbConv:featureType>Promoter</gbConv:featureType>
+        <gbConv:label>Nos promoter (Agrobacterium tumefaciens)</gbConv:label>
         <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation8/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation8/range"/>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation6/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation6/range"/>
             <sbol:displayId>range</sbol:displayId>
-            <sbol:start>3387</sbol:start>
-            <sbol:end>4118</sbol:end>
+            <sbol:start>2252</sbol:start>
+            <sbol:end>2521</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation7">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation7"/>
+        <sbol:displayId>annotation7</sbol:displayId>
+        <dcterms:title>NptII (E.coli)</dcterms:title>
+        <gbConv:label>NptII (E.coli)</gbConv:label>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation7/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation7/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>2592</sbol:start>
+            <sbol:end>3386</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
@@ -83,25 +121,6 @@
             <sbol:displayId>range</sbol:displayId>
             <sbol:start>1401</sbol:start>
             <sbol:end>2015</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation6">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation6"/>
-        <sbol:displayId>annotation6</sbol:displayId>
-        <dcterms:title>Nos promoter (Agrobacterium tumefaciens)</dcterms:title>
-        <gbConv:featureType>Promoter</gbConv:featureType>
-        <gbConv:label>Nos promoter (Agrobacterium tumefaciens)</gbConv:label>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation6/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation6/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2252</sbol:start>
-            <sbol:end>2521</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
@@ -148,38 +167,19 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation0">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation0"/>
-        <sbol:displayId>annotation0</sbol:displayId>
-        <dcterms:title>CGCT 4bp overhang</dcterms:title>
-        <gbConv:featureType>MIsc._Feature</gbConv:featureType>
-        <gbConv:label>CGCT 4bp overhang</gbConv:label>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation8">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation8"/>
+        <sbol:displayId>annotation8</sbol:displayId>
+        <dcterms:title>ocs terminator (Agrobacterium tumefaciens)</dcterms:title>
+        <gbConv:featureType>Terminator</gbConv:featureType>
+        <gbConv:label>ocs terminator (Agrobacterium tumefaciens)</gbConv:label>
         <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation0/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation0/range"/>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation8/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation8/range"/>
             <sbol:displayId>range</sbol:displayId>
-            <sbol:start>1</sbol:start>
-            <sbol:end>4</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation5">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation5"/>
-        <sbol:displayId>annotation5</sbol:displayId>
-        <dcterms:title>GGAG 4bp overhang</dcterms:title>
-        <gbConv:featureType>MIsc._Feature</gbConv:featureType>
-        <gbConv:label>GGAG 4bp overhang</gbConv:label>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70004/annotation5/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70004/annotation5/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2248</sbol:start>
-            <sbol:end>2251</sbol:end>
+            <sbol:start>3387</sbol:start>
+            <sbol:end>4118</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>

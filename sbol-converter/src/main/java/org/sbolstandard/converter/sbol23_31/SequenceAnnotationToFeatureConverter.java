@@ -3,20 +3,12 @@ package org.sbolstandard.converter.sbol23_31;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.SequenceAnnotation;
 import org.sbolstandard.core3.entity.Identified;
-import org.sbolstandard.core3.entity.Location;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.SequenceFeature;
 import org.sbolstandard.core3.util.SBOLGraphException;
-import org.sbolstandard.core3.vocabulary.ComponentType;
-import org.sbolstandard.core3.vocabulary.Encoding;
 import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Sequence;
-
 import java.net.URI;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
-
 import org.sbolstandard.converter.Util;
 
 public class SequenceAnnotationToFeatureConverter implements ChildEntityConverter<org.sbolstandard.core2.SequenceAnnotation,SequenceFeature>{

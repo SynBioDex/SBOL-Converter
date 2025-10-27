@@ -3,6 +3,7 @@
     xmlns:SO="https://identifiers.org/SO:"
     xmlns:sbol="http://sbols.org/v3#"
     xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:EDAM="https://identifiers.org/edam:"
@@ -13,6 +14,9 @@
     xmlns:sbh="http://wiki.synbiohub.org/wiki/Terms/synbiohub#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422">
+      <backport2_3:sbol3TempSequenceURI>
+         <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422_seq"/>
+      </backport2_3:sbol3TempSequenceURI>
       <sbol:hasSequence>
          <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422_seq"/>
       </sbol:hasSequence>
