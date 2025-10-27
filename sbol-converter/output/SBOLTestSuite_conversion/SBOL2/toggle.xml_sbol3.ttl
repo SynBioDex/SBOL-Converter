@@ -5,6 +5,7 @@
     xmlns:sbol2="http://sbols.org/v2#"
     xmlns:sesame="http://www.openrdf.org/schema/sesame#"
     xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:EDAM="https://identifiers.org/edam:"
@@ -205,6 +206,7 @@
                   <sbol:displayId>location4</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/anno4"/>
             <sbol:instanceOf>
                <sbol:Component rdf:about="http://www.partsregistry.org/BBa_J61130"/>
             </sbol:instanceOf>
@@ -229,6 +231,7 @@
                   <sbol:displayId>location1</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/anno1"/>
             <sbol:instanceOf>
                <sbol:Component rdf:about="http://www.partsregistry.org/BBa_R0010"/>
             </sbol:instanceOf>
@@ -236,6 +239,9 @@
          </sbol:SubComponent>
       </sbol:hasFeature>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000280"/>
+      <backport2_3:sbol3TempSequenceURI>
+         <sbol:Sequence rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1_seq"/>
+      </backport2_3:sbol3TempSequenceURI>
       <sbol:hasNamespace rdf:resource="http://www.virtualparts.org/part"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/Interface1">
@@ -252,10 +258,12 @@
                         <sbol:displayId>location5</sbol:displayId>
                      </sbol:Range>
                   </sbol:hasLocation>
+                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/anno5"/>
                   <sbol:instanceOf rdf:resource="http://www.partsregistry.org/BBa_E0040"/>
                   <sbol:displayId>BBa_E0040</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
+            <sbol:nondirectional rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_R0010"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/ECK120033736">
                   <sbol:hasLocation>
@@ -269,10 +277,32 @@
                         <sbol:displayId>location6</sbol:displayId>
                      </sbol:Range>
                   </sbol:hasLocation>
+                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/anno6"/>
                   <sbol:instanceOf>
                      <sbol:Component rdf:about="http://www.partsregistry.org/ECK120033736"/>
                   </sbol:instanceOf>
                   <sbol:displayId>ECK120033736</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:nondirectional>
+            <sbol:nondirectional rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61130"/>
+            <sbol:nondirectional>
+               <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120">
+                  <sbol:hasLocation>
+                     <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120/location2">
+                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                        <sbol:end>68</sbol:end>
+                        <sbol:start>56</sbol:start>
+                        <sbol:hasSequence>
+                           <sbol:Sequence rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1_seq"/>
+                        </sbol:hasSequence>
+                        <sbol:displayId>location2</sbol:displayId>
+                     </sbol:Range>
+                  </sbol:hasLocation>
+                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/anno2"/>
+                  <sbol:instanceOf>
+                     <sbol:Component rdf:about="http://www.partsregistry.org/BBa_J61120"/>
+                  </sbol:instanceOf>
+                  <sbol:displayId>BBa_J61120</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:nondirectional>
@@ -288,40 +318,20 @@
                         <sbol:displayId>location3</sbol:displayId>
                      </sbol:Range>
                   </sbol:hasLocation>
+                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/anno3"/>
                   <sbol:instanceOf>
                      <sbol:Component rdf:about="http://www.partsregistry.org/BBa_C0040"/>
                   </sbol:instanceOf>
                   <sbol:displayId>BBa_C0040</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
-            <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120">
-                  <sbol:hasLocation>
-                     <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120/location2">
-                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                        <sbol:end>68</sbol:end>
-                        <sbol:start>56</sbol:start>
-                        <sbol:hasSequence>
-                           <sbol:Sequence rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1_seq"/>
-                        </sbol:hasSequence>
-                        <sbol:displayId>location2</sbol:displayId>
-                     </sbol:Range>
-                  </sbol:hasLocation>
-                  <sbol:instanceOf>
-                     <sbol:Component rdf:about="http://www.partsregistry.org/BBa_J61120"/>
-                  </sbol:instanceOf>
-                  <sbol:displayId>BBa_J61120</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_R0010"/>
-            <sbol:nondirectional rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61130"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
       <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_E0040"/>
       <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120"/>
-      <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040"/>
       <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/ECK120033736"/>
+      <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040"/>
       <sbol:displayId>pIKERightCassette_1</sbol:displayId>
       <sbol:name>LacI Inverter</sbol:name>
    </sbol:Component>
@@ -372,12 +382,16 @@
                   <sbol:displayId>location4</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/anno4"/>
             <sbol:instanceOf>
                <sbol:Component rdf:about="http://www.partsregistry.org/ECK120029600"/>
             </sbol:instanceOf>
             <sbol:displayId>ECK120029600</sbol:displayId>
          </sbol:SubComponent>
       </sbol:hasFeature>
+      <backport2_3:sbol3TempSequenceURI>
+         <sbol:Sequence rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1_seq"/>
+      </backport2_3:sbol3TempSequenceURI>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:hasFeature>
          <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_C0012">
@@ -392,6 +406,7 @@
                   <sbol:displayId>location3</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/anno3"/>
             <sbol:instanceOf>
                <sbol:Component rdf:about="http://www.partsregistry.org/BBa_C0012"/>
             </sbol:instanceOf>
@@ -400,25 +415,7 @@
       </sbol:hasFeature>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/Interface1">
-            <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_R0040">
-                  <sbol:hasLocation>
-                     <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_R0040/location1">
-                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                        <sbol:end>55</sbol:end>
-                        <sbol:start>1</sbol:start>
-                        <sbol:hasSequence>
-                           <sbol:Sequence rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1_seq"/>
-                        </sbol:hasSequence>
-                        <sbol:displayId>location1</sbol:displayId>
-                     </sbol:Range>
-                  </sbol:hasLocation>
-                  <sbol:instanceOf>
-                     <sbol:Component rdf:about="http://www.partsregistry.org/BBa_R0040"/>
-                  </sbol:instanceOf>
-                  <sbol:displayId>BBa_R0040</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
+            <sbol:nondirectional rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_C0012"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_J61101">
                   <sbol:hasLocation>
@@ -432,12 +429,32 @@
                         <sbol:displayId>location2</sbol:displayId>
                      </sbol:Range>
                   </sbol:hasLocation>
+                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/anno2"/>
                   <sbol:instanceOf rdf:resource="http://www.partsregistry.org/BBa_J61101"/>
                   <sbol:displayId>BBa_J61101</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
+            <sbol:nondirectional>
+               <sbol:SubComponent rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_R0040">
+                  <sbol:hasLocation>
+                     <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_R0040/location1">
+                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                        <sbol:end>55</sbol:end>
+                        <sbol:start>1</sbol:start>
+                        <sbol:hasSequence>
+                           <sbol:Sequence rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1_seq"/>
+                        </sbol:hasSequence>
+                        <sbol:displayId>location1</sbol:displayId>
+                     </sbol:Range>
+                  </sbol:hasLocation>
+                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/anno1"/>
+                  <sbol:instanceOf>
+                     <sbol:Component rdf:about="http://www.partsregistry.org/BBa_R0040"/>
+                  </sbol:instanceOf>
+                  <sbol:displayId>BBa_R0040</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:nondirectional>
             <sbol:nondirectional rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/ECK120029600"/>
-            <sbol:nondirectional rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_C0012"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -445,8 +462,8 @@
       <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_R0040"/>
       <sbol:displayId>pIKELeftCassette_1</sbol:displayId>
       <sbol:hasNamespace rdf:resource="http://www.virtualparts.org/part"/>
-      <sbol:name>TetR Inverter</sbol:name>
       <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_J61101"/>
+      <sbol:name>TetR Inverter</sbol:name>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000280"/>
    </sbol:Component>
    <sbol:Component rdf:about="http://sbolstandard.org/example/tetr_inverter">
@@ -533,6 +550,7 @@
                         <sbol:displayId>location1</sbol:displayId>
                      </sbol:Range>
                   </sbol:hasLocation>
+                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/anno1"/>
                   <sbol:instanceOf rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1"/>
                   <sbol:displayId>pIKELeftCassette_1</sbol:displayId>
                </sbol:SubComponent>
@@ -550,6 +568,7 @@
                         <sbol:displayId>location2</sbol:displayId>
                      </sbol:Range>
                   </sbol:hasLocation>
+                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/anno2"/>
                   <sbol:instanceOf rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1"/>
                   <sbol:displayId>pIKERightCassette_1</sbol:displayId>
                </sbol:SubComponent>
@@ -562,6 +581,9 @@
       </sbol:hasSequence>
       <sbol:name>LacI/TetR Toggle Switch</sbol:name>
       <sbol:hasNamespace rdf:resource="http://www.virtualparts.org/part"/>
+      <backport2_3:sbol3TempSequenceURI>
+         <sbol:Sequence rdf:about="http://www.virtualparts.org/part/pIKE_Toggle_1_seq"/>
+      </backport2_3:sbol3TempSequenceURI>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000280"/>
       <sbol:hasFeature rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/pIKERightCassette_1"/>
       <sbol:displayId>pIKE_Toggle_1</sbol:displayId>

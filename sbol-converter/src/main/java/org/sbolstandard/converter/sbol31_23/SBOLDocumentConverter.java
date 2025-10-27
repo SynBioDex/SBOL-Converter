@@ -60,7 +60,6 @@ public class SBOLDocumentConverter {
 			ExperimentalDataConverter edConverter = new ExperimentalDataConverter();
 			for (ExperimentalData ed : sbol3Doc.getExperimentalData()) {
 				edConverter.convert(sbol2Doc, ed);
-
 			}
 		}
 
@@ -113,8 +112,6 @@ public class SBOLDocumentConverter {
 		if (sbol3Doc.getTopLevelMetadataList() != null) {
 			TopLevelMetaDataConverter tlmConverter = new TopLevelMetaDataConverter();
 			for (TopLevelMetadata tlm : sbol3Doc.getTopLevelMetadataList()) {
-				
-
 				tlmConverter.convert(sbol2Doc, tlm);
 			}
 		}
@@ -139,7 +136,6 @@ public class SBOLDocumentConverter {
 				activityConverter.convert(sbol2Doc, activity);
 			}
 		}
-		
 		
 		return sbol2Doc;
 	}

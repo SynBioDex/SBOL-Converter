@@ -36,7 +36,7 @@ public class TempTest {
 		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/ComponentDefinitionOutput.xml"));
 		
 	    //TODO: Do another round trip using the final SBOL2 file. It contains a sequence URI but not the sequence itself now!
-		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/eukaryotic_transcriptional_cd_sa_gl.xml"));
+		List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/eukaryotic_transcriptional_cd_sa_gl.xml"));
 		
 		//ERROR: due to the SBOL2 issues
 		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/ModuleDefinitionOutput.xml"));
@@ -45,7 +45,7 @@ public class TempTest {
 		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/ComponentDefinitionOutput_gl.xml"));
 		
 		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/ComponentDefinitionOutput_gl_cd_sa_comp.xml"));
-		List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/partial_pTAK_right_cassette.xml"));
+		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/partial_pTAK_right_cassette.xml"));
 		
 		//ERROR: due to the SBOL2 issues		
 		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/toggle.xml"));

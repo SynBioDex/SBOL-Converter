@@ -23,6 +23,5 @@
         </sbol:location>
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
-    <sbol:sequence rdf:resource="http://partsregistry.org/cd/BBa_J23119_seq"/>
   </sbol:ComponentDefinition>
 </rdf:RDF>

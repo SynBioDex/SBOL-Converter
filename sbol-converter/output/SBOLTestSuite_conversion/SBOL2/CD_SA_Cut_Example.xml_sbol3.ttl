@@ -8,6 +8,7 @@
     xmlns:prov="http://www.w3.org/ns/prov#"
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_J23119">
       <prov:wasDerivedFrom rdf:resource="http://partsregistry.org/Part:BBa_J23119"/>
@@ -48,6 +49,9 @@
       </sbol:hasFeature>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:name>J23119 promoter</sbol:name>
+      <backport2_3:sbol3TempSequenceURI>
+         <sbol:Sequence rdf:about="http://partsregistry.org/cd/BBa_J23119_seq"/>
+      </backport2_3:sbol3TempSequenceURI>
       <sbol:hasNamespace rdf:resource="http://partsregistry.org/cd"/>
       <sbol:description>Constitutive promoter</sbol:description>
    </sbol:Component>

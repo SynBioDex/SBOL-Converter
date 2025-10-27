@@ -70,6 +70,8 @@ public class AllFilesTest {
 
 		File[] files=folder.listFiles();
 		int successCounter=0;
+		int successCounterWithNoErrors=0;
+		
 		int totalCounter=0;
 		int withoutValidationCounter=0;
 		for (int i=0;i<files.length;i++)
@@ -96,6 +98,9 @@ public class AllFilesTest {
 				try{
 					errors=TestUtil.roundTripConvert(file,true,outputFile,false );
 					successCounter++;
+					if (errors==null || errors.size()==0){
+						successCounterWithNoErrors++;
+					}
 				}
 				catch (SBOLGraphException e){
 					e.printStackTrace();
@@ -121,7 +126,7 @@ public class AllFilesTest {
 			}
 		}
 		logger.info("Testing folder " + folder.getAbsolutePath());
-		String conversionSummary=String.format("Completed converting SBOL2 files in folder %s. %d/%d files were converted successfully.", folder.getAbsolutePath(), successCounter, totalCounter);
+		String conversionSummary=String.format("Completed converting SBOL2 files in folder %s. %d/%d files were converted successfully. %d/%d were round tripped identically.", folder.getAbsolutePath(), successCounter, totalCounter, successCounterWithNoErrors, totalCounter);
 		if (withoutValidationCounter>0){
 			conversionSummary+=String.format(" %d additional files could be converted without SBOL3 validation.", withoutValidationCounter);
 		}

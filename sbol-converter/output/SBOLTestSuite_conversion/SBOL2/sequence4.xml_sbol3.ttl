@@ -5,6 +5,7 @@
     xmlns:sbol="http://sbols.org/v3#"
     xmlns:genbank="http://www.ncbi.nlm.nih.gov/genbank#"
     xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:EDAM="https://identifiers.org/edam:"
     xmlns:obo="http://purl.obolibrary.org/obo/"
@@ -508,18 +509,6 @@
             <gbConv:codon_start>1</gbConv:codon_start>
             <gbConv:protein_id>AAA75238.1</gbConv:protein_id>
             <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation16/range1">
-                  <gbConv:position>position1</gbConv:position>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>2474</sbol:end>
-                  <sbol:start>2391</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range1</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation16/range11">
                   <gbConv:position>position11</gbConv:position>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -529,6 +518,18 @@
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
                   </sbol:hasSequence>
                   <sbol:displayId>range11</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation16/range1">
+                  <gbConv:position>position1</gbConv:position>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>2474</sbol:end>
+                  <sbol:start>2391</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range1</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
             <sbol:hasLocation>
@@ -560,18 +561,6 @@
             <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
             <gbConv:multiRangeType>join</gbConv:multiRangeType>
             <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation16/range10">
-                  <gbConv:position>position10</gbConv:position>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>9368</sbol:end>
-                  <sbol:start>9271</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range10</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation16/range0">
                   <gbConv:position>position0</gbConv:position>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -581,6 +570,18 @@
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
                   </sbol:hasSequence>
                   <sbol:displayId>range0</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation16/range10">
+                  <gbConv:position>position10</gbConv:position>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>9368</sbol:end>
+                  <sbol:start>9271</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range10</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
             <gbConv:db_xref>GI:976146</gbConv:db_xref>
@@ -1502,6 +1503,7 @@
                   <sbol:displayId>range11</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <sbol:role rdf:resource="https://identifiers.org/SO:0000234"/>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation4/range5">
                   <gbConv:position>position5</gbConv:position>
@@ -1514,7 +1516,6 @@
                   <sbol:displayId>range5</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000234"/>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation4/range0">
                   <gbConv:position>position0</gbConv:position>
@@ -1684,20 +1685,6 @@
                </sbol:Range>
             </sbol:hasLocation>
             <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation2/range11">
-                  <gbConv:position>position11</gbConv:position>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>9586</sbol:end>
-                  <sbol:start>9540</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range11</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <gbConv:gene>Mt-PK</gbConv:gene>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000234"/>
-            <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation2/range4">
                   <gbConv:position>position4</gbConv:position>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -1707,6 +1694,20 @@
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
                   </sbol:hasSequence>
                   <sbol:displayId>range4</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <gbConv:gene>Mt-PK</gbConv:gene>
+            <sbol:role rdf:resource="https://identifiers.org/SO:0000234"/>
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation2/range11">
+                  <gbConv:position>position11</gbConv:position>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>9586</sbol:end>
+                  <sbol:start>9540</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range11</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
             <sbol:hasLocation>
@@ -3188,18 +3189,6 @@
             </sbol:hasLocation>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000234"/>
             <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation6/range1">
-                  <gbConv:position>position1</gbConv:position>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>2474</sbol:end>
-                  <sbol:start>2391</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range1</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation6/range12">
                   <gbConv:position>position12</gbConv:position>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -3209,6 +3198,18 @@
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
                   </sbol:hasSequence>
                   <sbol:displayId>range12</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation6/range1">
+                  <gbConv:position>position1</gbConv:position>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>2474</sbol:end>
+                  <sbol:start>2391</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range1</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
             <sbol:hasLocation>

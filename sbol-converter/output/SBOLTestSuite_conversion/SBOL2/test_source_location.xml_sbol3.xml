@@ -9,6 +9,7 @@
     xmlns:prov="http://www.w3.org/ns/prov#"
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://partsregistry.org/cd/cd_comp">
       <sbol:hasNamespace rdf:resource="http://partsregistry.org/cd"/>
@@ -24,6 +25,7 @@
                   <sbol:displayId>base_c1</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://partsregistry.org/cd/cd_comp/base_s1"/>
             <sbol:sourceLocation>
                <sbol:Range rdf:about="http://partsregistry.org/cd/cd_comp/base1/seq_base1">
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -58,6 +60,7 @@
                         <sbol:displayId>base_c2</sbol:displayId>
                      </sbol:Range>
                   </sbol:hasLocation>
+                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://partsregistry.org/cd/cd_comp/base_s2"/>
                   <sbol:sourceLocation>
                      <sbol:Range rdf:about="http://partsregistry.org/cd/cd_comp/base2/seq_base2">
                         <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>

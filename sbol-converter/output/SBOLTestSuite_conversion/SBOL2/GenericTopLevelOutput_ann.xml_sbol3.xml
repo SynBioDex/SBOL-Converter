@@ -9,6 +9,7 @@
     xmlns:prov="http://www.w3.org/ns/prov#"
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <myapp:Datasheet rdf:about="http://www.partsregistry.org/gen/datasheet1">
       <myapp:transcriptionRate>1</myapp:transcriptionRate>
