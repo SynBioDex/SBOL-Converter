@@ -212,6 +212,18 @@ public class SBOLDocumentConverter {
                         if (sbol3LocationSequence == null) {
                             sbol3LocationSequence = sbol3Sequence;
                         }
+                        if (sbol3LocationSequence == null) {
+                            org.sbolstandard.core2.Component sbol2Comp = sbol2SeqAnno.getComponent();
+                            org.sbolstandard.core2.ComponentDefinition sbol2CompDef = sbol2Comp.getDefinition();
+                            org.sbolstandard.core2.Sequence sbol2ChildSequence = sbol2CompDef.getSequences().iterator().next();
+                            if (sbol2ChildSequence == null) {
+                                sbol3LocationSequence = Util.getEmptySequence(sbol3ParentComp, document);
+                            } else {
+                                URI sbol3SubComponentSequenceUri = Util.createSBOL3Uri(sbol2ChildSequence.getIdentity(), parameters);
+                                sbol3LocationSequence = document.getIdentified(sbol3SubComponentSequenceUri,org.sbolstandard.core3.entity.Sequence.class);
+                            }
+                        }
+
                         Location sbol3Location = null;
                         org.sbolstandard.core3.vocabulary.Orientation sbol3Orientation = Util.toSBOL3Orientation(sbol2Location.getOrientation());
 
@@ -235,7 +247,7 @@ public class SBOLDocumentConverter {
                             }
                         } 
                         else if (sbol2Location instanceof org.sbolstandard.core2.GenericLocation) {                          
-                            if (sbol3LocationSequence==null) {
+                            /*if (sbol3LocationSequence==null) {
                                 org.sbolstandard.core2.Component sbol2Comp= sbol2SeqAnno.getComponent();
                                 org.sbolstandard.core2.ComponentDefinition sbol2CompDef=sbol2Comp.getDefinition();
                                 org.sbolstandard.core2.Sequence sbol2ChildSequence = sbol2CompDef.getSequences().iterator().next();
@@ -246,7 +258,7 @@ public class SBOLDocumentConverter {
                                     URI sbol3SubComponentSequenceUri=Util.createSBOL3Uri(sbol2ChildSequence.getIdentity(), parameters);
 					                sbol3LocationSequence = document.getIdentified(sbol3SubComponentSequenceUri, org.sbolstandard.core3.entity.Sequence.class);                                    
                                 }
-                            }
+                            }*/
 
                             if (sbol2Location.getDisplayId()!=null) {	                                                       
                                 sbol3Location = featureWithLocation.createEntireSequence(sbol2Location.getDisplayId(), sbol3LocationSequence);

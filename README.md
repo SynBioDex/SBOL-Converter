@@ -310,8 +310,19 @@ Number of files successfully converted without validation : 189/189 (All files)
     - simple_attachment_ref.xml: Invalid SBOL2 source URI
     - attachment.xml: Invalid SBOL2 source URI
 
-## When converted from SBOL3 to SBOL2, Identified prov:wasGeneratedBy property will be lost.
 
 ## To download the SBOLTestSuite as a dependency
 
 git submodule update --init --recursive
+
+
+## Conversion Annotations (Backport)
+Backport annotations use two different namespaces from SBOL2 to SBOL3 and vice versa
+* https://sbols.org/backport/2_3#: SBOL3 documents converted from SBOL2 will include terms from this namespace
+* https://sbols.org/backport/3_2#: SBOL2 documents converted from SBOL2 will include terms from this namespace
+
+### SBOL2-SBOL3 Conversion
+* https://sbols.org/backport/2_3#sbol2OriginalSequenceAnnotationURI: Handles sbol2.SequenceAnnotations. The sbol2.SequenceAnnotation and sbol2.Component entities are merged into sbol3.SubComponent entities. During the conversion, an sbol2.SequenceAnnotation entity's URI is stored within the corresponding sbol3.Component entity.
+* https://sbols.org/backport/2_3#sbol3TempSequenceURI: Used to track the empty sequences created in SBOL3 documents during the conversion. sbol2:Location entities can have empty sequences while sbol3.Location entities must have a Sequence entity. Hence, during the SBOL2-to-3 conversion, an empty sequence is created.This annotation is used to remove the sequences marked as empty during the SBOL3-to-2 conversion.
+
+# Empty Sequences

@@ -44,7 +44,7 @@
       <sbol:hasConstraint>
          <sbol:Constraint rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/Constraint1">
             <sbol:object>
-               <sbol:ComponentReference rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP_map">
+               <sbol:ComponentReference rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_gene_map">
                   <sbol:inChildOf>
                      <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/CRISPR_Template">
                         <sbol:instanceOf>
@@ -54,22 +54,22 @@
                      </sbol:SubComponent>
                   </sbol:inChildOf>
                   <sbol:refersTo>
-                     <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/cas9_generic">
+                     <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/target_gene">
                         <sbol:instanceOf>
-                           <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/cas9_generic"/>
+                           <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/target_gene"/>
                         </sbol:instanceOf>
-                        <sbol:displayId>cas9_generic</sbol:displayId>
+                        <sbol:displayId>target_gene</sbol:displayId>
                      </sbol:SubComponent>
                   </sbol:refersTo>
-                  <sbol:displayId>cas9m_BFP_map</sbol:displayId>
+                  <sbol:displayId>EYFP_gene_map</sbol:displayId>
                </sbol:ComponentReference>
             </sbol:object>
             <sbol:subject>
-               <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP">
+               <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_gene">
                   <sbol:instanceOf>
-                     <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/cas9m_BFP"/>
+                     <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/EYFP_gene"/>
                   </sbol:instanceOf>
-                  <sbol:displayId>cas9m_BFP</sbol:displayId>
+                  <sbol:displayId>EYFP_gene</sbol:displayId>
                </sbol:SubComponent>
             </sbol:subject>
             <sbol:restriction rdf:resource="http://sbols.org/v3#replaces"/>
@@ -80,14 +80,7 @@
          <sbol:Interaction rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_Activation">
             <sbol:hasParticipation>
                <sbol:Participation rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_Activation/EYFP_gene">
-                  <sbol:participant>
-                     <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_gene">
-                        <sbol:instanceOf>
-                           <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/EYFP_gene"/>
-                        </sbol:instanceOf>
-                        <sbol:displayId>EYFP_gene</sbol:displayId>
-                     </sbol:SubComponent>
-                  </sbol:participant>
+                  <sbol:participant rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_gene"/>
                   <sbol:role rdf:resource="https://identifiers.org/SBO:0000598"/>
                   <sbol:displayId>EYFP_gene</sbol:displayId>
                </sbol:Participation>
@@ -132,7 +125,14 @@
             <sbol:displayId>gRNA_b_gene</sbol:displayId>
          </sbol:SubComponent>
       </sbol:hasFeature>
-      <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP"/>
+      <sbol:hasFeature>
+         <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP">
+            <sbol:instanceOf>
+               <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/cas9m_BFP"/>
+            </sbol:instanceOf>
+            <sbol:displayId>cas9m_BFP</sbol:displayId>
+         </sbol:SubComponent>
+      </sbol:hasFeature>
       <sbol:hasInteraction>
          <sbol:Interaction rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/mKate_production">
             <sbol:hasParticipation>
@@ -190,25 +190,20 @@
       <sbol:hasConstraint>
          <sbol:Constraint rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/Constraint5">
             <sbol:object>
-               <sbol:ComponentReference rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_map">
+               <sbol:ComponentReference rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP_map">
                   <sbol:inChildOf rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/CRISPR_Template"/>
                   <sbol:refersTo>
-                     <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/target">
-                        <sbol:instanceOf rdf:resource="http://sbols.org/CRISPR_Example/1.0/target"/>
-                        <sbol:displayId>target</sbol:displayId>
+                     <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/cas9_generic">
+                        <sbol:instanceOf>
+                           <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/cas9_generic"/>
+                        </sbol:instanceOf>
+                        <sbol:displayId>cas9_generic</sbol:displayId>
                      </sbol:SubComponent>
                   </sbol:refersTo>
-                  <sbol:displayId>EYFP_map</sbol:displayId>
+                  <sbol:displayId>cas9m_BFP_map</sbol:displayId>
                </sbol:ComponentReference>
             </sbol:object>
-            <sbol:subject>
-               <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP">
-                  <sbol:instanceOf>
-                     <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/EYFP"/>
-                  </sbol:instanceOf>
-                  <sbol:displayId>EYFP</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:subject>
+            <sbol:subject rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP"/>
             <sbol:restriction rdf:resource="http://sbols.org/v3#replaces"/>
             <sbol:displayId>Constraint5</sbol:displayId>
          </sbol:Constraint>
@@ -319,21 +314,8 @@
       </sbol:hasInteraction>
       <sbol:hasConstraint>
          <sbol:Constraint rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/Constraint3">
-            <sbol:object>
-               <sbol:ComponentReference rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_gene_map">
-                  <sbol:inChildOf rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/CRISPR_Template"/>
-                  <sbol:refersTo>
-                     <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/target_gene">
-                        <sbol:instanceOf>
-                           <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/target_gene"/>
-                        </sbol:instanceOf>
-                        <sbol:displayId>target_gene</sbol:displayId>
-                     </sbol:SubComponent>
-                  </sbol:refersTo>
-                  <sbol:displayId>EYFP_gene_map</sbol:displayId>
-               </sbol:ComponentReference>
-            </sbol:object>
-            <sbol:subject rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_gene"/>
+            <sbol:object rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP_gRNA_map"/>
+            <sbol:subject rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP_gRNA_b"/>
             <sbol:restriction rdf:resource="http://sbols.org/v3#replaces"/>
             <sbol:displayId>Constraint3</sbol:displayId>
          </sbol:Constraint>
@@ -369,10 +351,28 @@
       <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/Gal4VP16"/>
       <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_gene_map"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
-      <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP"/>
+      <sbol:hasFeature>
+         <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP">
+            <sbol:instanceOf>
+               <sbol:Component rdf:about="http://sbols.org/CRISPR_Example/1.0/EYFP"/>
+            </sbol:instanceOf>
+            <sbol:displayId>EYFP</sbol:displayId>
+         </sbol:SubComponent>
+      </sbol:hasFeature>
       <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/CRISPR_Template"/>
       <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_gene"/>
-      <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_map"/>
+      <sbol:hasFeature>
+         <sbol:ComponentReference rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_map">
+            <sbol:inChildOf rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/CRISPR_Template"/>
+            <sbol:refersTo>
+               <sbol:SubComponent rdf:about="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/target">
+                  <sbol:instanceOf rdf:resource="http://sbols.org/CRISPR_Example/1.0/target"/>
+                  <sbol:displayId>target</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:refersTo>
+            <sbol:displayId>EYFP_map</sbol:displayId>
+         </sbol:ComponentReference>
+      </sbol:hasFeature>
       <sbol:hasFeature rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/mKate"/>
       <sbol:hasInteraction>
          <sbol:Interaction rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/Gal4VP16_production">
@@ -409,8 +409,8 @@
       </sbol:hasInteraction>
       <sbol:hasConstraint>
          <sbol:Constraint rdf:about="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/Constraint4">
-            <sbol:object rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP_gRNA_map"/>
-            <sbol:subject rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP_gRNA_b"/>
+            <sbol:object rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_map"/>
+            <sbol:subject rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP"/>
             <sbol:restriction rdf:resource="http://sbols.org/v3#replaces"/>
             <sbol:displayId>Constraint4</sbol:displayId>
          </sbol:Constraint>
@@ -541,11 +541,11 @@
       </sbol:hasInteraction>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/Interface1">
-            <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/target_gene"/>
-            <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/gRNA_generic"/>
             <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/target"/>
             <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/cas9_gRNA_complex"/>
+            <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/gRNA_generic"/>
             <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/cas9_generic"/>
+            <sbol:nondirectional rdf:resource="http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/target_gene"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>

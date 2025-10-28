@@ -52,15 +52,15 @@
             <sbol:displayId>LacI_pLacI</sbol:displayId>
          </sbol:Interaction>
       </sbol:hasInteraction>
-      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/laci_inverter/TF"/>
+      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/laci_inverter/promoter"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbolstandard.org/example/laci_inverter/Interface1">
-            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/laci_inverter/TF"/>
             <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/laci_inverter/promoter"/>
+            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/laci_inverter/TF"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
-      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/laci_inverter/promoter"/>
+      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/laci_inverter/TF"/>
       <sbol:role rdf:resource="https://parts.igem.org/cgi/partsdb/pgroup.cgi?pgroup=inverter"/>
       <sbol:hasNamespace rdf:resource="http://sbolstandard.org/example"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
@@ -546,8 +546,8 @@
       <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/toggle_switch/tetr_inverter"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbolstandard.org/example/toggle_switch/Interface1">
-            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/toggle_switch/LacI"/>
             <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/toggle_switch/TetR"/>
+            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/toggle_switch/LacI"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>

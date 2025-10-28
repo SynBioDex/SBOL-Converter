@@ -19,6 +19,7 @@ import org.sbolstandard.core2.SequenceAnnotation;
 import org.sbolstandard.core3.entity.Location;
 import org.sbolstandard.core3.entity.Range;
 import org.sbolstandard.core3.api.SBOLAPI;
+import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Cut;
 import org.sbolstandard.core3.entity.EntireSequence;
 import org.sbolstandard.core3.entity.Identified;
@@ -99,6 +100,14 @@ public class SubComponentToAnnotationConverter implements ChildEntityConverter<S
 				}
 
 				if (sbol2SeqAnno != null) {
+					//Set the location's sequence
+					URI sbol2SequenceURI=Util.createSBOL2Uri(loc.getSequenceURI());
+					Component sbol3Component=(Component) inputParent;
+					boolean isTempSequence=Util.isTempSequence(sbol3Component, sbol2SequenceURI);
+					if (!isTempSequence){//GMGM
+						//newLoc.setSequence(sbol2SequenceURI);
+					}
+					
 					// Copy location metadata and properties from SBOL3 Location to SBOL2 Location
 					Util.copyIdentified(loc, newLoc, doc);
 				}

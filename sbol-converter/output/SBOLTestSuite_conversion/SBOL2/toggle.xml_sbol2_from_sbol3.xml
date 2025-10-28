@@ -36,47 +36,47 @@
     <sbol:member rdf:resource="http://www.partsregistry.org/BBa_R0040"/>
     <sbol:member rdf:resource="http://sbolstandard.org/example/toggle_switch"/>
   </sbol:Collection>
-  <sbol:ModuleDefinition rdf:about="http://sbolstandard.org/example/tetr_inverter">
-    <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/tetr_inverter"/>
-    <sbol:displayId>tetr_inverter</sbol:displayId>
+  <sbol:ModuleDefinition rdf:about="http://sbolstandard.org/example/laci_inverter">
+    <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/laci_inverter"/>
+    <sbol:displayId>laci_inverter</sbol:displayId>
     <sbol:role rdf:resource="http://parts.igem.org/cgi/partsdb/pgroup.cgi?pgroup=inverter"/>
     <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="http://sbolstandard.org/example/tetr_inverter/TF">
-        <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/tetr_inverter/TF"/>
+      <sbol:FunctionalComponent rdf:about="http://sbolstandard.org/example/laci_inverter/TF">
+        <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/laci_inverter/TF"/>
         <sbol:displayId>TF</sbol:displayId>
-        <sbol:definition rdf:resource="http://identifiers.org/uniprot/Q6QR72"/>
+        <sbol:definition rdf:resource="http://identifiers.org/uniprot/P03023"/>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
         <sbol:direction rdf:resource="http://sbols.org/v2#inout"/>
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="http://sbolstandard.org/example/tetr_inverter/promoter">
-        <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/tetr_inverter/promoter"/>
+      <sbol:FunctionalComponent rdf:about="http://sbolstandard.org/example/laci_inverter/promoter">
+        <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/laci_inverter/promoter"/>
         <sbol:displayId>promoter</sbol:displayId>
-        <sbol:definition rdf:resource="http://www.partsregistry.org/BBa_R0040"/>
+        <sbol:definition rdf:resource="http://www.partsregistry.org/BBa_R0010"/>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
         <sbol:direction rdf:resource="http://sbols.org/v2#inout"/>
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:interaction>
-      <sbol:Interaction rdf:about="http://sbolstandard.org/example/tetr_inverter/LacI_pLacI">
-        <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/tetr_inverter/LacI_pLacI"/>
+      <sbol:Interaction rdf:about="http://sbolstandard.org/example/laci_inverter/LacI_pLacI">
+        <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/laci_inverter/LacI_pLacI"/>
         <sbol:displayId>LacI_pLacI</sbol:displayId>
         <sbol:type rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000169"/>
         <sbol:participation>
-          <sbol:Participation rdf:about="http://sbolstandard.org/example/tetr_inverter/LacI_pLacI/Q6QR72">
-            <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/tetr_inverter/LacI_pLacI/Q6QR72"/>
-            <sbol:displayId>Q6QR72</sbol:displayId>
+          <sbol:Participation rdf:about="http://sbolstandard.org/example/laci_inverter/LacI_pLacI/P03023">
+            <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/laci_inverter/LacI_pLacI/P03023"/>
+            <sbol:displayId>P03023</sbol:displayId>
             <sbol:role rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000020"/>
-            <sbol:participant rdf:resource="http://sbolstandard.org/example/tetr_inverter/TF"/>
+            <sbol:participant rdf:resource="http://sbolstandard.org/example/laci_inverter/TF"/>
           </sbol:Participation>
         </sbol:participation>
         <sbol:participation>
-          <sbol:Participation rdf:about="http://sbolstandard.org/example/tetr_inverter/LacI_pLacI/BBa_R0040">
-            <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/tetr_inverter/LacI_pLacI/BBa_R0040"/>
-            <sbol:displayId>BBa_R0040</sbol:displayId>
+          <sbol:Participation rdf:about="http://sbolstandard.org/example/laci_inverter/LacI_pLacI/BBa_R0010">
+            <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/laci_inverter/LacI_pLacI/BBa_R0010"/>
+            <sbol:displayId>BBa_R0010</sbol:displayId>
             <sbol:role rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000598"/>
-            <sbol:participant rdf:resource="http://sbolstandard.org/example/tetr_inverter/promoter"/>
+            <sbol:participant rdf:resource="http://sbolstandard.org/example/laci_inverter/promoter"/>
           </sbol:Participation>
         </sbol:participation>
       </sbol:Interaction>
@@ -87,19 +87,19 @@
     <sbol:displayId>toggle_switch</sbol:displayId>
     <sbol:role rdf:resource="http://sbolstandard.org/example/module_role/toggle_switch"/>
     <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="http://sbolstandard.org/example/toggle_switch/TetR">
-        <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/toggle_switch/TetR"/>
-        <sbol:displayId>TetR</sbol:displayId>
-        <sbol:definition rdf:resource="http://identifiers.org/uniprot/Q6QR72"/>
+      <sbol:FunctionalComponent rdf:about="http://sbolstandard.org/example/toggle_switch/LacI">
+        <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/toggle_switch/LacI"/>
+        <sbol:displayId>LacI</sbol:displayId>
+        <sbol:definition rdf:resource="http://identifiers.org/uniprot/P03023"/>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
         <sbol:direction rdf:resource="http://sbols.org/v2#inout"/>
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="http://sbolstandard.org/example/toggle_switch/LacI">
-        <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/toggle_switch/LacI"/>
-        <sbol:displayId>LacI</sbol:displayId>
-        <sbol:definition rdf:resource="http://identifiers.org/uniprot/P03023"/>
+      <sbol:FunctionalComponent rdf:about="http://sbolstandard.org/example/toggle_switch/TetR">
+        <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/toggle_switch/TetR"/>
+        <sbol:displayId>TetR</sbol:displayId>
+        <sbol:definition rdf:resource="http://identifiers.org/uniprot/Q6QR72"/>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
         <sbol:direction rdf:resource="http://sbols.org/v2#inout"/>
       </sbol:FunctionalComponent>
@@ -138,47 +138,47 @@
       </sbol:Module>
     </sbol:module>
   </sbol:ModuleDefinition>
-  <sbol:ModuleDefinition rdf:about="http://sbolstandard.org/example/laci_inverter">
-    <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/laci_inverter"/>
-    <sbol:displayId>laci_inverter</sbol:displayId>
+  <sbol:ModuleDefinition rdf:about="http://sbolstandard.org/example/tetr_inverter">
+    <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/tetr_inverter"/>
+    <sbol:displayId>tetr_inverter</sbol:displayId>
     <sbol:role rdf:resource="http://parts.igem.org/cgi/partsdb/pgroup.cgi?pgroup=inverter"/>
     <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="http://sbolstandard.org/example/laci_inverter/promoter">
-        <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/laci_inverter/promoter"/>
+      <sbol:FunctionalComponent rdf:about="http://sbolstandard.org/example/tetr_inverter/promoter">
+        <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/tetr_inverter/promoter"/>
         <sbol:displayId>promoter</sbol:displayId>
-        <sbol:definition rdf:resource="http://www.partsregistry.org/BBa_R0010"/>
+        <sbol:definition rdf:resource="http://www.partsregistry.org/BBa_R0040"/>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
         <sbol:direction rdf:resource="http://sbols.org/v2#inout"/>
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="http://sbolstandard.org/example/laci_inverter/TF">
-        <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/laci_inverter/TF"/>
+      <sbol:FunctionalComponent rdf:about="http://sbolstandard.org/example/tetr_inverter/TF">
+        <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/tetr_inverter/TF"/>
         <sbol:displayId>TF</sbol:displayId>
-        <sbol:definition rdf:resource="http://identifiers.org/uniprot/P03023"/>
+        <sbol:definition rdf:resource="http://identifiers.org/uniprot/Q6QR72"/>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
         <sbol:direction rdf:resource="http://sbols.org/v2#inout"/>
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:interaction>
-      <sbol:Interaction rdf:about="http://sbolstandard.org/example/laci_inverter/LacI_pLacI">
-        <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/laci_inverter/LacI_pLacI"/>
+      <sbol:Interaction rdf:about="http://sbolstandard.org/example/tetr_inverter/LacI_pLacI">
+        <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/tetr_inverter/LacI_pLacI"/>
         <sbol:displayId>LacI_pLacI</sbol:displayId>
         <sbol:type rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000169"/>
         <sbol:participation>
-          <sbol:Participation rdf:about="http://sbolstandard.org/example/laci_inverter/LacI_pLacI/P03023">
-            <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/laci_inverter/LacI_pLacI/P03023"/>
-            <sbol:displayId>P03023</sbol:displayId>
+          <sbol:Participation rdf:about="http://sbolstandard.org/example/tetr_inverter/LacI_pLacI/Q6QR72">
+            <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/tetr_inverter/LacI_pLacI/Q6QR72"/>
+            <sbol:displayId>Q6QR72</sbol:displayId>
             <sbol:role rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000020"/>
-            <sbol:participant rdf:resource="http://sbolstandard.org/example/laci_inverter/TF"/>
+            <sbol:participant rdf:resource="http://sbolstandard.org/example/tetr_inverter/TF"/>
           </sbol:Participation>
         </sbol:participation>
         <sbol:participation>
-          <sbol:Participation rdf:about="http://sbolstandard.org/example/laci_inverter/LacI_pLacI/BBa_R0010">
-            <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/laci_inverter/LacI_pLacI/BBa_R0010"/>
-            <sbol:displayId>BBa_R0010</sbol:displayId>
+          <sbol:Participation rdf:about="http://sbolstandard.org/example/tetr_inverter/LacI_pLacI/BBa_R0040">
+            <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/example/tetr_inverter/LacI_pLacI/BBa_R0040"/>
+            <sbol:displayId>BBa_R0040</sbol:displayId>
             <sbol:role rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000598"/>
-            <sbol:participant rdf:resource="http://sbolstandard.org/example/laci_inverter/promoter"/>
+            <sbol:participant rdf:resource="http://sbolstandard.org/example/tetr_inverter/promoter"/>
           </sbol:Participation>
         </sbol:participation>
       </sbol:Interaction>

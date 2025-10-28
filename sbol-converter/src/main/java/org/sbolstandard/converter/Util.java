@@ -30,6 +30,7 @@ import org.sbolstandard.core3.entity.Metadata;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.Sequence;
 import org.sbolstandard.core3.entity.TopLevel;
+import org.sbolstandard.core3.entity.TopLevelMetadata;
 import org.sbolstandard.core3.util.SBOLGraphException;
 import org.sbolstandard.core3.util.SBOLUtil;
 import org.sbolstandard.core3.util.URINameSpace;
@@ -1267,6 +1268,29 @@ public class Util {
 			return encodings;
 		}
 
+
+		public static boolean isTempSequence(Component component, URI sequenceURI) throws SBOLGraphException {
+		List<Object> backPorts=component.getAnnotation(ConverterVocabulary.Two_to_Three.sbol3TempSequenceURI);
+		if (backPorts!=null && backPorts.size()>0){
+			for (Object o: backPorts){
+				URI tempSeqUri=null;
+				if (o instanceof URI){
+					tempSeqUri=(URI) o;				
+				}
+				else if (o instanceof Metadata){
+					tempSeqUri=((Metadata) o).getUri();		
+				}
+				else if (o instanceof TopLevelMetadata){
+					tempSeqUri=((TopLevelMetadata) o).getUri();			
+				}
+
+				if (tempSeqUri.equals(sequenceURI)) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
 
 
 }

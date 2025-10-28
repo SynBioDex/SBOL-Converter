@@ -48,6 +48,29 @@ public class ComponentConverter implements EntityConverter<Component, ComponentD
 		// Convert and set SBOL3 roles to SBOL2 roles
 		compDef.setRoles(Util.convertSORoles3_to_2(component.getRoles()));
 
+		/*if (component.getSequences()!=null){
+			for (Sequence sequence: component.getSequences()) {
+				// Convert SBOL3 Sequence to SBOL2 Sequence
+	            URI sequenceURI = sequence.getUri();
+	            if (!isTempSequence(component, sequenceURI)){
+					URI sbol2URI=Util.createSBOL2Uri(sequenceURI);
+	            	compDef.addSequence(sbol2URI);
+				}
+	        
+			}	
+		}*/
+
+		if (component.getSequenceURIs()!=null){
+			for (URI sequenceURI: component.getSequenceURIs()) {
+				// Convert SBOL3 Sequence to SBOL2 Sequence
+	            if (!Util.isTempSequence(component, sequenceURI)){
+					URI sbol2URI=Util.createSBOL2Uri(sequenceURI);
+	            	compDef.addSequence(sbol2URI);
+				}
+	        
+			}	
+		}
+
 		// Convert all SBOL3 SubComponents to SBOL2 format
 		List<SubComponent> subComponents = component.getSubComponents();
 		if (subComponents != null) {
@@ -87,43 +110,7 @@ public class ComponentConverter implements EntityConverter<Component, ComponentD
 				sfConverter.convert(sbol2Doc, compDef, component, sf);
 			}
 		}
-
-		if (component.getSequences()!=null){
-			for (Sequence sequence: component.getSequences()) {
-				// Convert SBOL3 Sequence to SBOL2 Sequence
-	            URI sequenceURI = sequence.getUri();
-	            if (!isTempSequence(component, sequenceURI)){
-					URI sbol2URI=Util.createSBOL2Uri(sequenceURI);
-	            	compDef.addSequence(sbol2URI);
-				}
-	        
-			}	
-		}
 			
 		return compDef;
-	}
-
-	private boolean isTempSequence(Component component, URI sequenceURI) throws SBOLGraphException {
-		List<Object> backPorts=component.getAnnotation(ConverterVocabulary.Two_to_Three.sbol3TempSequenceURI);
-		if (backPorts!=null && backPorts.size()>0){
-			for (Object o: backPorts){
-				URI tempSeqUri=null;
-				if (o instanceof URI){
-					tempSeqUri=(URI) o;				
-				}
-				else if (o instanceof Metadata){
-					tempSeqUri=((Metadata) o).getUri();		
-				}
-				else if (o instanceof TopLevelMetadata){
-					tempSeqUri=((TopLevelMetadata) o).getUri();			
-				}
-
-				if (tempSeqUri.equals(sequenceURI)) {
-					return true;
-				}
-			}
-		}
-		return false;
-	}
-	
+	}	
 }
