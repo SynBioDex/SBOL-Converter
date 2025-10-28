@@ -43,6 +43,8 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/EF587312/annotation0">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/EF587312/annotation0/range">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>705</sbol:end>
                   <sbol:start>1</sbol:start>
@@ -82,6 +84,8 @@
             <sbol:displayId>annotation1</sbol:displayId>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/EF587312/annotation1/range">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>705</sbol:end>
                   <sbol:start>1</sbol:start>

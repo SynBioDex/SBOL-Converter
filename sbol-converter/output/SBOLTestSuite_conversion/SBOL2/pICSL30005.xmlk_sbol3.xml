@@ -17,6 +17,8 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation4">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation4/range">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001031"/>
                   <sbol:end>2329</sbol:end>
                   <sbol:start>1715</sbol:start>
@@ -38,6 +40,8 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation3">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation3/range">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>1480</sbol:end>
                   <sbol:start>1397</sbol:start>
@@ -60,6 +64,8 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation2">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation2/range">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>1483</sbol:end>
                   <sbol:start>1395</sbol:start>
@@ -87,6 +93,8 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation1">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation1/range">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001031"/>
                   <sbol:end>193</sbol:end>
                   <sbol:start>193</sbol:start>
@@ -109,6 +117,8 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation5">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation5/range">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>1730</sbol:end>
                   <sbol:start>1730</sbol:start>
@@ -131,6 +141,8 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation0">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation0/range">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001031"/>
                   <sbol:end>1170</sbol:end>
                   <sbol:start>160</sbol:start>

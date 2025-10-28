@@ -16,6 +16,8 @@
          <sbol:SequenceFeature rdf:about="http://partsregistry.org/cd/BBa_J23119/cutat10">
             <sbol:hasLocation>
                <sbol:Cut rdf:about="http://partsregistry.org/cd/BBa_J23119/cutat10/cut">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:at>10</sbol:at>
                   <sbol:hasSequence>
@@ -36,6 +38,8 @@
          <sbol:SequenceFeature rdf:about="http://partsregistry.org/cd/BBa_J23119/cutat12">
             <sbol:hasLocation>
                <sbol:Cut rdf:about="http://partsregistry.org/cd/BBa_J23119/cutat12/cut">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:at>12</sbol:at>
                   <sbol:hasSequence>

@@ -7,6 +7,7 @@ import java.net.URI;
 
 import org.apache.jena.riot.RDFFormat;
 import org.apache.jena.riot.RiotException;
+import org.sbolstandard.converter.ConverterVocabulary;
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.converter.sbol23_31.provenance.ActivityConverter;
 import org.sbolstandard.converter.sbol23_31.provenance.AgentConverter;
@@ -204,14 +205,19 @@ public class SBOLDocumentConverter {
                 
                 if (sbol2SeqAnno.getLocations() != null) {
                     for (org.sbolstandard.core2.Location sbol2Location : sbol2SeqAnno.getLocations()) {
+                        boolean annotateSbol2LocationWithNullSequence = false;
                         org.sbolstandard.core3.entity.Sequence sbol3LocationSequence=null;
                         if (sbol2Location.getSequenceURI()!=null){
                             URI sbol3LocationSequenceURI = Util.createSBOL3Uri(sbol2Location.getSequenceURI(), parameters);
                             sbol3LocationSequence = document.getIdentified(sbol3LocationSequenceURI, org.sbolstandard.core3.entity.Sequence.class);
                         }
+                        else{
+                            annotateSbol2LocationWithNullSequence = true;
+                        }
                         if (sbol3LocationSequence == null) {
                             sbol3LocationSequence = sbol3Sequence;
                         }
+                       /* GM: Commented on 20251028 */
                         if (sbol3LocationSequence == null) {
                             org.sbolstandard.core2.Component sbol2Comp = sbol2SeqAnno.getComponent();
                             org.sbolstandard.core2.ComponentDefinition sbol2CompDef = sbol2Comp.getDefinition();
@@ -223,6 +229,7 @@ public class SBOLDocumentConverter {
                                 sbol3LocationSequence = document.getIdentified(sbol3SubComponentSequenceUri,org.sbolstandard.core3.entity.Sequence.class);
                             }
                         }
+                        
 
                         Location sbol3Location = null;
                         org.sbolstandard.core3.vocabulary.Orientation sbol3Orientation = Util.toSBOL3Orientation(sbol2Location.getOrientation());
@@ -269,6 +276,9 @@ public class SBOLDocumentConverter {
                         }
 
                         sbol3Location.setOrientation(sbol3Orientation);
+                        if (annotateSbol2LocationWithNullSequence) {
+                            sbol3Location.addAnnotation(ConverterVocabulary.Two_to_Three.sbol2LocationSequenceNull, true);
+                        }
                         Util.copyIdentified(sbol2Location, sbol3Location, parameters);
                     }
                 }

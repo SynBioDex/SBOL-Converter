@@ -103,9 +103,14 @@ public class SubComponentToAnnotationConverter implements ChildEntityConverter<S
 					//Set the location's sequence
 					URI sbol2SequenceURI=Util.createSBOL2Uri(loc.getSequenceURI());
 					Component sbol3Component=(Component) inputParent;
-					boolean isTempSequence=Util.isTempSequence(sbol3Component, sbol2SequenceURI);
-					if (!isTempSequence){//GMGM
-						//newLoc.setSequence(sbol2SequenceURI);
+					boolean sbol2LocationSequenceNull=false;
+					List<Object> locNullAnnotations=loc.getAnnotation(ConverterVocabulary.Two_to_Three.sbol2LocationSequenceNull);
+					if (locNullAnnotations!=null && locNullAnnotations.size()>0){
+						sbol2LocationSequenceNull= (boolean) locNullAnnotations.get(0);						
+					}
+					//boolean isTempSequence=Util.isTempSequence(sbol3Component, sbol2SequenceURI);
+					if (!sbol2LocationSequenceNull){//GMGM
+						newLoc.setSequence(sbol2SequenceURI);
 					}
 					
 					// Copy location metadata and properties from SBOL3 Location to SBOL2 Location

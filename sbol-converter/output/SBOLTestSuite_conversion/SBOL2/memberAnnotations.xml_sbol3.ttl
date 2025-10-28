@@ -36,6 +36,8 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1.0/someCompDef/someSequenceAnnotation">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1.0/someCompDef/someSequenceAnnotation/cut">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:end>10</sbol:end>
                   <sbol:start>1</sbol:start>
                   <sbol:hasSequence>
@@ -70,6 +72,8 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1.0/someCompDef/someSequenceAnnotation2">
             <sbol:hasLocation>
                <sbol:Cut rdf:about="http://www.async.ece.utah.edu/1.0/someCompDef/someSequenceAnnotation2/cut">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:at>1</sbol:at>
                   <sbol:hasSequence>
@@ -98,8 +102,8 @@
       </sbol:hasConstraint>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://www.async.ece.utah.edu/1.0/someCompDef/Interface1">
-            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/1.0/someCompDef/someComponent"/>
             <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/1.0/someCompDef/someOtherComponent"/>
+            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/1.0/someCompDef/someComponent"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
