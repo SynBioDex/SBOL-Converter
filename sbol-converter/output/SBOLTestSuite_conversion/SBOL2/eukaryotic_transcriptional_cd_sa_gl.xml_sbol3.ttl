@@ -24,6 +24,8 @@
          <sbol:SequenceFeature rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/annotation942815">
             <sbol:hasLocation>
                <sbol:EntireSequence rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/annotation942815/gl942815">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:hasSequence>
                      <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422_seq"/>

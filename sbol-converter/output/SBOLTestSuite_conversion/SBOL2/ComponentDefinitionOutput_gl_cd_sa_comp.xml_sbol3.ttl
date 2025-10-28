@@ -30,6 +30,8 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn">
             <sbol:hasLocation>
                <sbol:EntireSequence rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/GenericLocation">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:hasSequence>
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent_seq"/>
@@ -39,6 +41,8 @@
             </sbol:hasLocation>
             <sbol:hasLocation>
                <sbol:EntireSequence rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/gl">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:hasSequence>
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent_seq"/>
                   </sbol:hasSequence>
@@ -73,6 +77,8 @@
          <sbol:SubComponent rdf:about="http://partsregistry.org/cd/BBa_F2620/rbs">
             <sbol:hasLocation>
                <sbol:EntireSequence rdf:about="http://partsregistry.org/cd/BBa_F2620/rbs/GenericLocation_anno2">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:hasSequence>
                      <sbol:Sequence rdf:about="http://partsregistry.org/cd/BBa_F2620_seq"/>
@@ -115,11 +121,11 @@
       <sbol:role rdf:resource="https://identifiers.org/SO:0001411"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://partsregistry.org/cd/BBa_F2620/Interface1">
+            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/luxR"/>
             <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/pLuxR"/>
+            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/pTetR"/>
             <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/ter"/>
             <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/rbs"/>
-            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/pTetR"/>
-            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/luxR"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>

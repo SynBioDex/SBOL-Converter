@@ -33,6 +33,8 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn">
             <sbol:hasLocation>
                <sbol:EntireSequence rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/GenericLocation">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:hasSequence>
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent_seq"/>
@@ -42,6 +44,8 @@
             </sbol:hasLocation>
             <sbol:hasLocation>
                <sbol:EntireSequence rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/gl">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:hasSequence>
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent_seq"/>
                   </sbol:hasSequence>
@@ -61,6 +65,8 @@
          <sbol:SubComponent rdf:about="http://partsregistry.org/cd/BBa_F2620/luxR">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://partsregistry.org/cd/BBa_F2620/luxR/range">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>770</sbol:end>
                   <sbol:start>69</sbol:start>
@@ -82,6 +88,8 @@
          <sbol:SubComponent rdf:about="http://partsregistry.org/cd/BBa_F2620/ter">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://partsregistry.org/cd/BBa_F2620/ter/range">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>900</sbol:end>
                   <sbol:start>771</sbol:start>
@@ -100,6 +108,8 @@
          <sbol:SubComponent rdf:about="http://partsregistry.org/cd/BBa_F2620/rbs">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://partsregistry.org/cd/BBa_F2620/rbs/range">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>68</sbol:end>
                   <sbol:start>56</sbol:start>
@@ -120,6 +130,8 @@
          <sbol:SubComponent rdf:about="http://partsregistry.org/cd/BBa_F2620/pLuxR">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://partsregistry.org/cd/BBa_F2620/pLuxR/range">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>956</sbol:end>
                   <sbol:start>901</sbol:start>
@@ -144,6 +156,8 @@
          <sbol:SubComponent rdf:about="http://partsregistry.org/cd/BBa_F2620/pTetR">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://partsregistry.org/cd/BBa_F2620/pTetR/range">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>55</sbol:end>
                   <sbol:start>1</sbol:start>
@@ -168,11 +182,11 @@
       <sbol:role rdf:resource="https://identifiers.org/SO:0001411"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://partsregistry.org/cd/BBa_F2620/Interface1">
+            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/luxR"/>
             <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/pLuxR"/>
+            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/pTetR"/>
             <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/ter"/>
             <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/rbs"/>
-            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/pTetR"/>
-            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/luxR"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>

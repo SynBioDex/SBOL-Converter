@@ -46,6 +46,9 @@
                <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/Repressor2/BBa_C0012">
                   <sbol:hasLocation>
                      <sbol:EntireSequence rdf:about="http://www.async.ece.utah.edu/Repressor2/BBa_C0012/genericLocation">
+                        <backport2_3:sbol2LocationSequenceNull
+                         rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</backport2_3:sbol2LocationSequenceNull>
                         <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                         <sbol:hasSequence>
                            <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Repressor2_seq"/>
@@ -65,6 +68,9 @@
                <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/Repressor2/RBS">
                   <sbol:hasLocation>
                      <sbol:EntireSequence rdf:about="http://www.async.ece.utah.edu/Repressor2/RBS/genericLocation">
+                        <backport2_3:sbol2LocationSequenceNull
+                         rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</backport2_3:sbol2LocationSequenceNull>
                         <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                         <sbol:hasSequence>
                            <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Repressor2_seq"/>
@@ -126,6 +132,9 @@
                <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2">
                   <sbol:hasLocation>
                      <sbol:EntireSequence rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2/genericLocation">
+                        <backport2_3:sbol2LocationSequenceNull
+                         rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</backport2_3:sbol2LocationSequenceNull>
                         <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                         <sbol:hasSequence>
                            <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete_seq"/>
@@ -143,6 +152,9 @@
                <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/BBa_K121014">
                   <sbol:hasLocation>
                      <sbol:Range rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/BBa_K121014/range">
+                        <backport2_3:sbol2LocationSequenceNull
+                         rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</backport2_3:sbol2LocationSequenceNull>
                         <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                         <sbol:end>90</sbol:end>
                         <sbol:start>1</sbol:start>
@@ -169,6 +181,9 @@
                <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/Terminator">
                   <sbol:hasLocation>
                      <sbol:EntireSequence rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/Terminator/genericLocation">
+                        <backport2_3:sbol2LocationSequenceNull
+                         rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</backport2_3:sbol2LocationSequenceNull>
                         <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                         <sbol:hasSequence>
                            <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete_seq"/>
@@ -198,9 +213,9 @@
       <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/Interface1">
+            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/BBa_K121014"/>
             <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/Terminator"/>
             <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2"/>
-            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/BBa_K121014"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
