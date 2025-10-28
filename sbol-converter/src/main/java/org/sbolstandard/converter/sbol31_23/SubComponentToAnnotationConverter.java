@@ -100,16 +100,16 @@ public class SubComponentToAnnotationConverter implements ChildEntityConverter<S
 				}
 
 				if (sbol2SeqAnno != null) {
-					//Set the location's sequence
-					URI sbol2SequenceURI=Util.createSBOL2Uri(loc.getSequenceURI());
-					Component sbol3Component=(Component) inputParent;
+					//Set the location's sequence if the SBOL2 location's sequence is not marked as null in the SBOL3 location
+					//During conversion from 2 to 3, empty sequences are created if there is no sequence. If the parent sbol2.CompDef has a sequence, then it is used.
+					//However, the sbol2.Location may not have any sequence attached to it originally!
 					boolean sbol2LocationSequenceNull=false;
 					List<Object> locNullAnnotations=loc.getAnnotation(ConverterVocabulary.Two_to_Three.sbol2LocationSequenceNull);
 					if (locNullAnnotations!=null && locNullAnnotations.size()>0){
 						sbol2LocationSequenceNull= (boolean) locNullAnnotations.get(0);						
 					}
-					//boolean isTempSequence=Util.isTempSequence(sbol3Component, sbol2SequenceURI);
-					if (!sbol2LocationSequenceNull){//GMGM
+					if (!sbol2LocationSequenceNull){
+						URI sbol2SequenceURI=Util.createSBOL2Uri(loc.getSequenceURI());					
 						newLoc.setSequence(sbol2SequenceURI);
 					}
 					
