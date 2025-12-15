@@ -20,6 +20,9 @@
    </sbol:Component>
    <sbol:Component rdf:about="http://myapp.com/bsubtilis168">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+      <prov:wasGeneratedBy>
+         <sbol:TopLevel rdf:about="http://myapp.com/xraymutagenesis"/>
+      </prov:wasGeneratedBy>
       <prov:wasDerivedFrom rdf:resource="http://myapp.com/bsubtilisncimb3610"/>
       <sbol:name>Bacillus subtilis 168</sbol:name>
       <sbol:hasNamespace rdf:resource="http://myapp.com"/>

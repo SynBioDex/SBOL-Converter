@@ -12,6 +12,24 @@
     <sbol:type rdf:resource="http://identifiers.org/so/SO:0000988"/>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000804"/>
     <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL50013/annotation5">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL50013/annotation5"/>
+        <sbol:displayId>annotation5</sbol:displayId>
+        <dcterms:title>C terminal T7 (bacteriophage T7 gene 10) tag</dcterms:title>
+        <gbConv:label>C terminal T7 (bacteriophage T7 gene 10) tag</gbConv:label>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL50013/annotation5/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL50013/annotation5/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>2236</sbol:start>
+            <sbol:end>2307</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
       <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL50013/annotation1">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL50013/annotation1"/>
         <sbol:displayId>annotation1</sbol:displayId>
@@ -52,24 +70,6 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL50013/annotation5">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL50013/annotation5"/>
-        <sbol:displayId>annotation5</sbol:displayId>
-        <dcterms:title>C terminal T7 (bacteriophage T7 gene 10) tag</dcterms:title>
-        <gbConv:label>C terminal T7 (bacteriophage T7 gene 10) tag</gbConv:label>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL50013/annotation5/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL50013/annotation5/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2236</sbol:start>
-            <sbol:end>2307</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
       <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL50013/annotation3">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL50013/annotation3"/>
         <sbol:displayId>annotation3</sbol:displayId>
@@ -86,6 +86,25 @@
             <sbol:start>1984</sbol:start>
             <sbol:end>1984</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#reverseComplement"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL50013/annotation6">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL50013/annotation6"/>
+        <sbol:displayId>annotation6</sbol:displayId>
+        <dcterms:title>GCTT 4bp overhang</dcterms:title>
+        <gbConv:label>GCTT 4bp overhang</gbConv:label>
+        <gbConv:featureType>MIsc._Feature</gbConv:featureType>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL50013/annotation6/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL50013/annotation6/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>2308</sbol:start>
+            <sbol:end>2311</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
       </sbol:SequenceAnnotation>
@@ -123,25 +142,6 @@
             <sbol:displayId>range</sbol:displayId>
             <sbol:start>215</sbol:start>
             <sbol:end>1225</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL50013/annotation6">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL50013/annotation6"/>
-        <sbol:displayId>annotation6</sbol:displayId>
-        <dcterms:title>GCTT 4bp overhang</dcterms:title>
-        <gbConv:label>GCTT 4bp overhang</gbConv:label>
-        <gbConv:featureType>MIsc._Feature</gbConv:featureType>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL50013/annotation6/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL50013/annotation6/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2308</sbol:start>
-            <sbol:end>2311</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>

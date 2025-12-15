@@ -21,7 +21,7 @@ public class TempTest {
 		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/CreateAndRemoveModel.xml"));
 		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/AnnotationOutput.xml"));
 		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/singleModuleDefinition.xml"));
-		List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/test_source_location.xml"));
+		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/test_source_location.xml"));
 		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/ModuleDefinitionOutput.xml"), false,null,true);
 		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/memberAnnotations_interaction.xml"));
 		//List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/sequence4.xml"));
@@ -61,8 +61,14 @@ seq_comp:
 12-22
 acagctagctcacagctagctc
 
-*/	
-		TestUtil.DisplayErrors(errors);
+*/	        
+        //List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/simple_attachment_plan_ann.xml"));
+	List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/Provenance_CodonOptimization.xml"));
+		
+                TestUtil.DisplayErrors(errors);                
+		if (errors!=null && errors.size()>0) {
+                   // throw new Exception("Conversion produced errors");
+                }
 			
 	}
 

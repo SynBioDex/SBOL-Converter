@@ -467,10 +467,13 @@ public class Util {
 			throws SBOLGraphException, SBOLValidationException {
 		output.setName(input.getName());
 		output.setDescription(input.getDescription());
-		 if (input.getWasDerivedFrom() != null) {
+		if (input.getWasDerivedFrom() != null) {
 			output.setWasDerivedFroms(toSet(input.getWasDerivedFrom()));
 		}
-
+		if (input.getWasGeneratedByURIs() != null) {
+			output.setWasGeneratedBys(toSet(input.getWasGeneratedByURIs()));
+		}
+		
 		convertIfTopLevel3to2(input, output);
 		convertAnnotations3_to_2(input, output, sbol2Document);	
 		/* 
@@ -620,10 +623,8 @@ public class Util {
 			throws SBOLGraphException {
 		output.setName(input.getName());
 		output.setDescription(input.getDescription());
-		// TODO: Fix me: 
 		output.setWasDerivedFrom(toList(input.getWasDerivedFroms()));
-		// TODO: FIX ME
-		// output.setWasGeneratedBy(toList(input.getWasGeneratedBys()));
+		output.setWasGeneratedByURIs(toList(input.getWasGeneratedBys()));
 		convertIfTopLevel(input, output,parameters);
 		convertAnnotations_2_to3(input.getAnnotations(), output);
 

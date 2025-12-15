@@ -13,6 +13,9 @@
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://myapp.com/codon_optimized">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+      <prov:wasGeneratedBy>
+         <sbol:TopLevel rdf:about="http://myapp.com/codon_optimization_activity"/>
+      </prov:wasGeneratedBy>
       <prov:wasDerivedFrom>
          <sbol:Component rdf:about="http://myapp.com/non_codon_optimized"/>
       </prov:wasDerivedFrom>
