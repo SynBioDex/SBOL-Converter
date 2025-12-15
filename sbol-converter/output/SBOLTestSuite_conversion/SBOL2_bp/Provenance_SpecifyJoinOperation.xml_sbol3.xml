@@ -1,0 +1,65 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:SO="https://identifiers.org/SO:"
+    xmlns:EDAM="https://identifiers.org/edam:"
+    xmlns:sbol="http://sbols.org/v3#"
+    xmlns:CHEBI="https://identifiers.org/CHEBI:"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:SBO="https://identifiers.org/SBO:"
+    xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
+    xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
+   <sbol:Component rdf:about="http://sbolstandard.org/build/dna_part_1">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/build/dna_part_1"/>
+      <sbol:name>dna_part_1</sbol:name>
+      <sbol:hasNamespace rdf:resource="http://sbolstandard.org/build"/>
+      <sbol:type rdf:resource="https://identifiers.org/SO:0000985"/>
+      <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <sbol:displayId>dna_part_1</sbol:displayId>
+   </sbol:Component>
+   <sbol:Component rdf:about="http://sbolstandard.org/build/dna_part_2">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/build/dna_part_2"/>
+      <sbol:name>dna_part_2</sbol:name>
+      <sbol:hasNamespace rdf:resource="http://sbolstandard.org/build"/>
+      <sbol:type rdf:resource="https://identifiers.org/SO:0000985"/>
+      <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <sbol:displayId>dna_part_2</sbol:displayId>
+   </sbol:Component>
+   <sbol:Component rdf:about="http://sbolstandard.org/build/joined_dna_part">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/build/joined_dna_part"/>
+      <sbol:name>joined_dna_part</sbol:name>
+      <sbol:hasNamespace rdf:resource="http://sbolstandard.org/build"/>
+      <sbol:type rdf:resource="https://identifiers.org/SO:0000985"/>
+      <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <sbol:displayId>joined_dna_part</sbol:displayId>
+   </sbol:Component>
+   <sbol:TopLevel rdf:about="http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2"/>
+      <sbol:name>join(dna_part_1, dna_part_2)</sbol:name>
+      <prov:qualifiedUsage>
+         <sbol:Identified rdf:about="http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_2">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_2"/>
+            <prov:hadRole rdf:resource="http://identifiers.org/so/SO:0001632"/>
+            <prov:entity rdf:resource="http://sbolstandard.org/build/dna_part_2"/>
+            <sbol:displayId>dna_part_2</sbol:displayId>
+            <rdf:type rdf:resource="http://www.w3.org/ns/prov#Usage"/>
+         </sbol:Identified>
+      </prov:qualifiedUsage>
+      <prov:qualifiedUsage>
+         <sbol:Identified rdf:about="http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_1">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_1"/>
+            <prov:hadRole rdf:resource="http://identifiers.org/so/SO:0001631"/>
+            <prov:entity rdf:resource="http://sbolstandard.org/build/dna_part_1"/>
+            <sbol:displayId>dna_part_1</sbol:displayId>
+            <rdf:type rdf:resource="http://www.w3.org/ns/prov#Usage"/>
+         </sbol:Identified>
+      </prov:qualifiedUsage>
+      <sbol:hasNamespace rdf:resource="http://sbolstandard.org/build"/>
+      <sbol:displayId>join_dna_part_1_with_dna_part_2</sbol:displayId>
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+   </sbol:TopLevel>
+</rdf:RDF>

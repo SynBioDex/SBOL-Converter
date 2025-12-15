@@ -1,9 +1,21 @@
+	
 package org.sbolstandard.converter.tests;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.LogRecord;
+import java.util.logging.Logger;
 
 import org.sbolstandard.converter.sbol23_31.SBOLDocumentConverter;
 import org.sbolstandard.core2.SBOLDocument;
@@ -15,6 +27,7 @@ import org.sbolstandard.core3.entity.SubComponent;
 import org.sbolstandard.core3.io.SBOLFormat;
 import org.sbolstandard.core3.io.SBOLIO;
 import org.sbolstandard.core3.util.Configuration;
+import org.sbolstandard.core3.util.SBOLGraphException;
 import org.sbolstandard.core3.validation.IdentifiedValidator;
 
 public class TestUtil {
@@ -46,6 +59,105 @@ public class TestUtil {
 		
 		org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
 		return roundTripConvert(doc, sbol3Validate, outputFile, printToScreen);		
+	}
+	public static List<String> roundTripConvertForNC(File file, boolean sbol3Validate, String outputFile, boolean printToScreen) throws Exception {
+		System.out.println("Converting the SBOL2 file (Method for Non Compliant Files -  Validation " + (sbol3Validate ? "Enabled" : "Disabled") + "):" + file.getName());
+		
+		org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
+		return roundTripConvert(doc, sbol3Validate, outputFile, printToScreen);		
+	}
+	public static List<String> roundTripConvertNonBP(File file, boolean sbol3Validate, String outputFile, boolean printToScreen, boolean allowNonBestPractice) throws Exception {
+		System.out.println("Converting the SBOL2 file:" + file.getName());
+		boolean previousSetting=Configuration.getInstance().isValidateRecommendedRules();
+		if (allowNonBestPractice) {
+			Configuration.getInstance().setValidateRecommendedRules(false);
+		}
+		org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
+		List<String> result = roundTripConvert(doc, sbol3Validate, outputFile, printToScreen);	
+		Configuration.getInstance().setValidateRecommendedRules(previousSetting);
+		return result;
+	}
+	public static List<String> roundTripConvertForIC(File file, boolean sbol3Validate, String outputFile, boolean printToScreen, boolean allowIC) throws Exception {
+		System.out.println("Converting the SBOL2 file:" + file.getName());
+		//Configuration.getInstance().setCompleteDocument(true);
+		boolean previousSetting = Configuration.getInstance().isCompleteDocument();
+		System.out.println("Previous complete document setting: " + previousSetting);
+		if (allowIC) {
+			Configuration.getInstance().setCompleteDocument(false);
+		}
+		org.sbolstandard.core2.SBOLDocument sbol2InputDocument = SBOLReader.read(file);
+		//List<String> result = roundTripConvert(doc, sbol3Validate, outputFile, printToScreen);
+		if (printToScreen){
+			SBOLWriter.write(sbol2InputDocument, System.out);
+		}
+		if (outputFile != null) {			
+			SBOLWriter.write(sbol2InputDocument, new File(outputFile + "_sbol2.xml"));
+		}
+
+		SBOLDocumentConverter converter = new SBOLDocumentConverter();
+		org.sbolstandard.core3.entity.SBOLDocument sbol3Doc = null;
+		try{
+			 sbol3Doc = converter.convert(sbol2InputDocument);
+		} catch (Exception e){
+			System.out.println("Error converting SBOL2 to SBOL3: " + e.getMessage());
+			e.printStackTrace();
+			throw e;
+		}
+		
+		System.out.println("--------");
+
+		System.out.println("Converted from SBOL2 to SBOL3:");
+		if (printToScreen){
+			System.out.println(SBOLIO.write(sbol3Doc, SBOLFormat.TURTLE));
+		}
+		if (outputFile != null) {			
+			SBOLIO.write(sbol3Doc, new File(outputFile + "_sbol3.xml"), SBOLFormat.RDFXML);
+			SBOLIO.write(sbol3Doc, new File(outputFile + "_sbol3.ttl"), SBOLFormat.RDFXML);			
+		}
+		
+		org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter converter3_2 = new org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter();
+		org.sbolstandard.core2.SBOLDocument sbol2Doc = converter3_2.convert(sbol3Doc);
+
+		System.out.println("");
+		System.out.println("Converted from SBOL3 to SBOL2:");
+
+		if (printToScreen){		
+			SBOLWriter.write(sbol2Doc, System.out);
+		}
+		if (outputFile != null) {			
+			SBOLWriter.write(sbol2Doc, new File(outputFile + "_sbol2_from_sbol3.xml"));
+		}
+		SBOLValidate.compareDocuments("SBOL2in", sbol2InputDocument, "SBOL2out", sbol2Doc);
+	
+		Configuration.getInstance().setCompleteDocument(previousSetting);
+		return SBOLValidate.getErrors();
+	}
+	public static List<String> roundTripConvertReadFromString(File file, boolean sbol3Validate, String outputFile, boolean printToScreen) throws Exception {
+		System.out.println("Converting the SBOL2 file:" + file.getName());
+		
+		org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
+		//String sbol2String = doc.toString();
+
+		// Initialize output stream
+		OutputStream os = new ByteArrayOutputStream();		
+		SBOLWriter.write(doc, os);
+
+		// Use os as input stream for SBOLReader
+		InputStream is = new ByteArrayInputStream(((ByteArrayOutputStream) os).toByteArray());
+		SBOLDocument doc2 = SBOLReader.read(is);
+/* 
+		// Convert sbol2String into a stream
+		InputStream sbol2Stream = new ByteArrayInputStream(sbol2String.getBytes(StandardCharsets.UTF_8));
+		// Example usage: SBOLReader.read(sbol2Stream);
+		
+		SBOLDocument doc2;
+		try (InputStream in = new ByteArrayInputStream(sbol2String.getBytes(StandardCharsets.UTF_8))) {
+    			doc2 = SBOLReader.read(in);
+		}
+		*/
+		System.out.println("++++++++++++++Read SBOL2 from string:++++++++++++++");
+
+		return roundTripConvert(doc2, sbol3Validate, outputFile, printToScreen);		
 	}
 
 	public static List<String> roundTripConvert(SBOLDocument sbol2InputDocument, boolean sbol3Validate, String outputFile, boolean printToScreen) throws Exception {
@@ -195,6 +307,202 @@ public class TestUtil {
 			buffer.append("No errors in round trip conversion" + System.lineSeparator());
 		}
 		return buffer.toString();
+	}
+
+	public static Logger getLogger(String fileName) throws SecurityException, IOException {
+		Logger logger= Logger.getLogger(AllFilesTest.class.getName());
+		  // Disable default handlers
+        logger.setUseParentHandlers(false);
+
+		// Create FileHandler with pattern
+        FileHandler fileHandler = new FileHandler("output/logs/" + fileName, false);  // true = append mode
+        //fileHandler.setFormatter(new SimpleFormatter());
+		// Create minimal Formatter (only message, nothing else)
+        java.util.logging.Formatter minimalFormatter = new java.util.logging.Formatter() {
+            @Override
+            public String format(LogRecord record) {
+                return record.getMessage() + System.lineSeparator();
+            }
+        };
+
+		// Custom Formatter: Only message, no date, no method, no level        
+		fileHandler.setFormatter(minimalFormatter);
+        fileHandler.setLevel(Level.ALL);
+		// Add handler to the logger
+        logger.addHandler(fileHandler);
+        logger.setLevel(Level.ALL);
+		return logger;
+	}
+
+	private static String getFileExtension(String fileName) {
+        if (fileName == null) return "";
+        int dotIndex = fileName.lastIndexOf('.');
+        if (dotIndex == -1 || dotIndex == fileName.length() - 1) {
+            return "";  // No extension or ends with dot
+        }
+        return fileName.substring(dotIndex + 1);
+    }
+
+	public static void testRecursiveFromDirectory(File folder, String outputFolder, Logger logger, boolean isNonBP, boolean isIC, boolean isNC) throws Exception{	
+		logger.info("Testing folder " + folder.getAbsolutePath());
+
+		File[] files=folder.listFiles();
+		int successCounter=0;
+		int successCounterWithNoErrors=0;
+		List<String> allDiffFiles = new ArrayList<>();
+		List<String> allDiffFilesOutputs = new ArrayList<>();
+		List<String> diffFiles = new ArrayList<>();
+		List<String> diffFilesWarnings = new ArrayList<>();
+		
+		int totalCounter=0;
+		int withoutValidationCounter=0;
+		List<String> withoutValidationFiles = new ArrayList<>();
+		String diffFileName = getDiffFileName(isNonBP, isIC, isNC);
+		for (int i=0;i<files.length;i++)
+		{
+			File file=files[i];
+			if (file.isDirectory()){
+				testRecursiveFromDirectory(folder, outputFolder, logger, isNonBP, isIC, isNC);
+			}
+			else{	
+				String extension = getFileExtension(file.getName());
+				if (extension==null || extension.isEmpty()){
+					printError("File " + file.getName() + " has no extension, skipping", logger);
+					continue;
+				}
+				totalCounter++;
+				print ("**********************************************", logger);
+				print("Testing " + file.getName(), logger);
+				List<String> errors=null;
+				File folderToSave=new File (outputFolder);
+				if (!folderToSave.exists()){
+					folderToSave.mkdirs();
+				}
+				String outputFile = folderToSave + File.separator + file.getName();
+				try{
+					if (isNonBP) {
+						errors = roundTripConvertNonBP(file,true,outputFile,false, true );
+					} else if (isIC) {
+						errors = roundTripConvertForIC(file,true,outputFile,false, true );
+					} else if (isNC) {
+						// To be implemented
+						errors = roundTripConvertForNC(file, true, outputFile,false );
+					} else {
+						errors = roundTripConvert(file,true,outputFile,false );
+					}
+					//errors = roundTripConvert(file,true,outputFile,false );
+					successCounter++;
+					if (errors==null || errors.size()==0){
+						successCounterWithNoErrors++;
+					} 
+					else {
+					 	diffFiles.add(file.getName());
+					 	diffFilesWarnings.add(errors.toString());
+						allDiffFiles.add(file.getName());
+						allDiffFilesOutputs.add("DIFF, "+errors.toString());
+					}
+				}
+				catch (SBOLGraphException e){
+					e.printStackTrace();
+					printError("Error testing " + file.getName() + ": " + e.getMessage(),logger);
+					//logger.throwing("AllFilesTest", "testRecursive:" + file.getName(), e);
+					//Try without validation
+					//
+					allDiffFiles.add(file.getName());
+					String sanitizedMsg = e.getMessage();
+					if (sanitizedMsg != null) {
+						sanitizedMsg = sanitizedMsg.replace("\t", "; ").replace(",", "; ").replace("\n", "; ");
+					}
+					allDiffFilesOutputs.add("VALERROR, "+sanitizedMsg);
+					
+					printError("Converting without SBOL3 validation", logger);
+					try{
+						if (isNonBP) {
+							errors = roundTripConvertNonBP(file,false,outputFile,false, true );
+						} else if (isIC) {
+							errors = roundTripConvertForIC(file,false,outputFile,false, true );
+						} else if (isNC) {
+							errors = roundTripConvertForNC(file, false, outputFile,false );
+						} else {
+							errors = roundTripConvert(file,false,outputFile,false );
+						}
+						withoutValidationCounter++;
+						withoutValidationFiles.add(file.getName());
+
+					}
+					catch (Exception e2){
+						logger.severe("Error testing " + file.getName() + " without validation: " + e2.getMessage());
+						e2.printStackTrace();						
+						throw e2;
+					}					
+				}
+				if (errors!=null && errors.size()>0){
+					logger.warning(DisplayErrors(errors));
+					print ("Completed converting " + file.getName(),logger);
+					print ("////////////////////////////////////////////", logger);
+					
+				}
+			}
+		}
+		logger.info("Testing folder " + folder.getAbsolutePath());
+		String conversionSummary = String.format("Completed converting SBOL2 files in folder %s. %d/%d files were converted successfully. %d/%d were round tripped identically.", folder.getAbsolutePath(), successCounter, totalCounter, successCounterWithNoErrors, totalCounter);
+		if (withoutValidationCounter>0){
+			conversionSummary+=String.format(" %d additional files could be converted without SBOL3 validation.", withoutValidationCounter);
+		}
+		print(conversionSummary, logger);
+		if (!diffFiles.isEmpty()) {
+			print("****************************************", logger);
+			print("Files that DIFFERED after round-tripping: \n" + String.join(", \n", diffFiles), logger);
+			print("****************************************", logger);
+		}
+		if (!withoutValidationFiles.isEmpty()) {
+			print("+++++++++++++++++++++++++++++++++++++++++", logger);
+			print("Files that could be converted without SBOL3 VALIDATION: \n" + String.join(", \n", withoutValidationFiles), logger);
+			print("+++++++++++++++++++++++++++++++++++++++++", logger);
+		}
+
+		writeDiffFilesWithWarnings(allDiffFiles, allDiffFilesOutputs, diffFileName);
+
+	}
+
+	/**
+	 * Writes the diffFiles and diffFilesWarnings lists to a file, combining each filename and its corresponding warning in a comma-separated style.
+	 * Each line in the output file will be: filename,warning
+	 */
+	private static void writeDiffFilesWithWarnings(List<String> fileNames, List<String> warnings, String outputPath) throws IOException {
+		if (fileNames == null || warnings == null || fileNames.size() != warnings.size()) {
+			throw new IllegalArgumentException("fileNames and warnings must be non-null and of equal size");
+		}
+		try (java.io.BufferedWriter writer = new java.io.BufferedWriter(new java.io.FileWriter(outputPath))) {
+			for (int i = 0; i < fileNames.size(); i++) {
+				String line = String.valueOf(i+1) + ", " + fileNames.get(i) + ", " + warnings.get(i);
+				writer.write(line);
+				writer.newLine();
+			}
+		}
+	}
+
+	private static String getDiffFileName(boolean isNonBP, boolean isIC, boolean isNC) {
+		if (isNonBP) {
+			return "output/logs/AllDiffFilesNonBPOutputs.csv";
+		} else if (isIC) {
+			return "output/logs/AllDiffFilesICOutputs.csv";
+		} else if (isNC) {
+			return "output/logs/AllDiffFilesNCOutputs.csv";
+		} else {
+			return "output/logs/AllDiffFilesOutputs.csv";
+		}
+	}
+	
+
+	private static void print(String message, Logger logger) {
+		System.out.println(message);
+		logger.info(message);		
+	}
+
+	private static void printError(String message, Logger logger) {
+		//System.out.println(message);
+		logger.severe(message);		
 	}
 
 }

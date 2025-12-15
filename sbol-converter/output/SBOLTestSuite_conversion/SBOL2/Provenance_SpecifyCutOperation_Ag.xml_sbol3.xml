@@ -11,6 +11,7 @@
     xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:TopLevel rdf:about="http://www.async.ece.utah.edu/unknown">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/unknown"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>unknown</sbol:displayId>
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>

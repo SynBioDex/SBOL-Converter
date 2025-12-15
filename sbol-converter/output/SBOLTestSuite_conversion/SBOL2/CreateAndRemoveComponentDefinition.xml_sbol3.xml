@@ -13,6 +13,7 @@
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/1.0/someCompDef">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someCompDef/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000252"/>
       <sbol:displayId>someCompDef</sbol:displayId>

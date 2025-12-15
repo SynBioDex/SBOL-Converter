@@ -13,6 +13,7 @@
    <sbol:Component rdf:about="http://sbolstandard.org/example/toggle_switch">
       <sbol:role rdf:resource="https://sbolstandard.org/example/module_role/toggle_switch"/>
       <dcterms:created>2003-12-04T12:00:00Z</dcterms:created>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/toggle_switch"/>
       <sbol:hasNamespace rdf:resource="http://sbolstandard.org/example"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
       <sbol:displayId>toggle_switch</sbol:displayId>
@@ -20,11 +21,13 @@
    <sbol:Component rdf:about="http://sbolstandard.org/example/tetr_inverter">
       <sbol:hasInteraction>
          <sbol:Interaction rdf:about="http://sbolstandard.org/example/tetr_inverter/LacI_pLacI">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/tetr_inverter/LacI_pLacI"/>
             <sbol:type rdf:resource="https://identifiers.org/SBO:0000169"/>
             <sbol:displayId>LacI_pLacI</sbol:displayId>
          </sbol:Interaction>
       </sbol:hasInteraction>
       <sbol:role rdf:resource="https://parts.igem.org/cgi/partsdb/pgroup.cgi?pgroup=inverter"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/tetr_inverter"/>
       <sbol:hasNamespace rdf:resource="http://sbolstandard.org/example"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
       <sbol:displayId>tetr_inverter</sbol:displayId>

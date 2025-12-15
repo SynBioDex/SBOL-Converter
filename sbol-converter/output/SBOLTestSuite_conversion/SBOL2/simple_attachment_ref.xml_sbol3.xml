@@ -13,6 +13,7 @@
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:TopLevel rdf:about="http://sys-bio.org/Plan/1.0.0/characterization_protocol">
       <dcterms:created>2003-12-04T12:00:00Z</dcterms:created>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://sys-bio.org/Plan/characterization_protocol/1.0.0"/>
       <sbol:hasAttachment>
          <sbol:Attachment rdf:about="http://sys-bio.org/Attachment/1.0.0/characterization_protocol"/>
       </sbol:hasAttachment>
@@ -21,6 +22,7 @@
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Plan"/>
    </sbol:TopLevel>
    <sbol:Attachment rdf:about="http://sys-bio.org/Attachment/1.0.0/characterization_protocol">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://sys-bio.org/Attachment/characterization_protocol/1.0.0"/>
       <sbol:source rdf:resource="https://sbolstandard.org/SBOL3-Converter/dynamic_measurement.mdx"/>
       <sbol:hasNamespace rdf:resource="http://sys-bio.org/Attachment"/>
       <sbol:displayId>characterization_protocol</sbol:displayId>

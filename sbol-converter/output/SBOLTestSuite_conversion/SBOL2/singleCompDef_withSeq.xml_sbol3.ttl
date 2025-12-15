@@ -17,6 +17,7 @@
          <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1.0/pLacSeq"/>
       </sbol:hasSequence>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pLac/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:displayId>pLac</sbol:displayId>
@@ -24,6 +25,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1.0/pLacSeq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>ACGTURYSWKMBDHVN-.</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pLacSeq/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>pLacSeq</sbol:displayId>
    </sbol:Sequence>

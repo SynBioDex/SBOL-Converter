@@ -12,6 +12,7 @@
     xmlns:sys-bio="http://sys-bio.org#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:TopLevel rdf:about="http://sys-bio.org/1.0.0/Activity_build_generation">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://sys-bio.org/Activity_build_generation/1.0.0"/>
       <sbol:hasNamespace rdf:resource="http://sys-bio.org"/>
       <sbol:displayId>Activity_build_generation</sbol:displayId>
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>

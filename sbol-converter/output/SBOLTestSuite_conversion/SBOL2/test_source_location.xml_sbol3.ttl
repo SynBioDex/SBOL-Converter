@@ -17,6 +17,7 @@
          <sbol:SubComponent rdf:about="http://partsregistry.org/cd/cd_comp/base1">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://partsregistry.org/cd/cd_comp/base1/base_c1">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/cd_comp/base_s1/base_c1"/>
                   <sbol:end>11</sbol:end>
                   <sbol:start>1</sbol:start>
                   <sbol:hasSequence>
@@ -25,9 +26,11 @@
                   <sbol:displayId>base_c1</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/cd_comp/base_s1"/>
             <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://partsregistry.org/cd/cd_comp/base_s1"/>
             <sbol:sourceLocation>
                <sbol:Range rdf:about="http://partsregistry.org/cd/cd_comp/base1/seq_base1">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/cd_comp/base1/seq_base1"/>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>14</sbol:end>
                   <sbol:start>4</sbol:start>
@@ -37,6 +40,7 @@
                   <sbol:displayId>seq_base1</sbol:displayId>
                </sbol:Range>
             </sbol:sourceLocation>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/cd_comp/base1"/>
             <sbol:instanceOf>
                <sbol:Component rdf:about="http://partsregistry.org/cd/cd_base_1"/>
             </sbol:instanceOf>
@@ -44,13 +48,16 @@
          </sbol:SubComponent>
       </sbol:hasFeature>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/cd_comp"/>
       <sbol:description>Constitutive promoter</sbol:description>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://partsregistry.org/cd/cd_comp/Interface1">
+            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/cd_comp/base1"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://partsregistry.org/cd/cd_comp/base2">
                   <sbol:hasLocation>
                      <sbol:Range rdf:about="http://partsregistry.org/cd/cd_comp/base2/base_c2">
+                        <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/cd_comp/base_s2/base_c2"/>
                         <sbol:end>22</sbol:end>
                         <sbol:start>12</sbol:start>
                         <sbol:hasSequence>
@@ -59,9 +66,11 @@
                         <sbol:displayId>base_c2</sbol:displayId>
                      </sbol:Range>
                   </sbol:hasLocation>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/cd_comp/base_s2"/>
                   <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://partsregistry.org/cd/cd_comp/base_s2"/>
                   <sbol:sourceLocation>
                      <sbol:Range rdf:about="http://partsregistry.org/cd/cd_comp/base2/seq_base2">
+                        <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/cd_comp/base2/seq_base2"/>
                         <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                         <sbol:end>14</sbol:end>
                         <sbol:start>4</sbol:start>
@@ -71,13 +80,13 @@
                         <sbol:displayId>seq_base2</sbol:displayId>
                      </sbol:Range>
                   </sbol:sourceLocation>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/cd_comp/base2"/>
                   <sbol:instanceOf>
                      <sbol:Component rdf:about="http://partsregistry.org/cd/cd_base_2"/>
                   </sbol:instanceOf>
                   <sbol:displayId>base2</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/cd_comp/base1"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -94,6 +103,7 @@
          <sbol:Sequence rdf:about="http://partsregistry.org/seq/seq_base2"/>
       </sbol:hasSequence>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/cd_base_2"/>
       <sbol:hasNamespace rdf:resource="http://partsregistry.org/cd"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:displayId>cd_base_2</sbol:displayId>
@@ -103,6 +113,7 @@
          <sbol:Sequence rdf:about="http://partsregistry.org/seq/seq_base1"/>
       </sbol:hasSequence>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/cd_base_1"/>
       <sbol:hasNamespace rdf:resource="http://partsregistry.org/cd"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:displayId>cd_base_1</sbol:displayId>
@@ -110,18 +121,21 @@
    <sbol:Sequence rdf:about="http://partsregistry.org/seq/seq_comp">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>acagctagctcacagctagctc</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/seq/seq_comp"/>
       <sbol:hasNamespace rdf:resource="http://partsregistry.org/seq"/>
       <sbol:displayId>seq_comp</sbol:displayId>
    </sbol:Sequence>
    <sbol:Sequence rdf:about="http://partsregistry.org/seq/seq_base2">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>ttgacagctagctcagtcctaggtataatgctagttagcgc</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/seq/seq_base2"/>
       <sbol:hasNamespace rdf:resource="http://partsregistry.org/seq"/>
       <sbol:displayId>seq_base2</sbol:displayId>
    </sbol:Sequence>
    <sbol:Sequence rdf:about="http://partsregistry.org/seq/seq_base1">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>ttgacagctagctcagtcctaggtataatgctagc</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/seq/seq_base1"/>
       <sbol:hasNamespace rdf:resource="http://partsregistry.org/seq"/>
       <sbol:displayId>seq_base1</sbol:displayId>
    </sbol:Sequence>

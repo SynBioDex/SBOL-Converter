@@ -18,7 +18,6 @@ import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.sbolstandard.core2.Annotation;
-import org.sbolstandard.core2.Attachment;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.EDAMOntology;
 import org.sbolstandard.core2.RestrictionType;
@@ -34,11 +33,8 @@ import org.sbolstandard.core3.entity.TopLevelMetadata;
 import org.sbolstandard.core3.util.SBOLGraphException;
 import org.sbolstandard.core3.util.SBOLUtil;
 import org.sbolstandard.core3.util.URINameSpace;
-import org.sbolstandard.core3.util.URINameSpace.SONameSpace;
 import org.sbolstandard.core3.vocabulary.ComponentType;
-import org.sbolstandard.core3.vocabulary.DataModel;
 import org.sbolstandard.core3.vocabulary.Encoding;
-import org.sbolstandard.core3.vocabulary.Role;
 import org.sbolstandard.core3.vocabulary.RestrictionType.ConstraintRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.IdentityRestriction;
 import org.sbolstandard.core3.vocabulary.RestrictionType.OrientationRestriction;
@@ -49,13 +45,10 @@ import com.apicatalog.jsonld.StringUtils;
 import org.sbolstandard.core3.api.SBOLAPI;
 import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.core3.entity.Constraint;
-import org.sbolstandard.core3.entity.Component;
 import org.sbolstandard.converter.sbol23_31.Parameters;
 
 
 public class Util {
-	
-	
 
 	private static final String versionPattern = "[0-9]+[\\p{L}0-9_\\.-]*";
 
@@ -276,40 +269,141 @@ public class Util {
 
 	
 
+	/**
+	 * Given an input URI and an RDF model, checks if the input URI is being used
+	 * as a persistent identity in SBOL2. If so, finds the resource URI with the
+	 * latest version associated with that persistent identity.
+	 *
+	 * @param inputUri The input URI to check.
+	 * @param rdfModel The RDF model containing SBOL2 data.
+	 * @return The latest-version URI if found; otherwise, the original input URI.
+	 */
+	// private static URI getLatestUri(URI inputUri, Model rdfModel) {
+
+	// 	// SBOL2 predicate: sbol2:persistentIdentity
+	// 	Property persistentIdentity = rdfModel.getProperty("http://sbols.org/v2#persistentIdentity");
+
+	// 	// Treat the input URI as an RDF resource node.
+	// 	RDFNode valueNode = rdfModel.getResource(inputUri.toString());
+
+	// 	ResIterator it = rdfModel.listSubjectsWithProperty(persistentIdentity, valueNode);
+
+	// 	Double version = null;
+
+	// 	if (it.hasNext()) {
+	// 		// We found at least one subject that uses inputUri as its persistentIdentity.
+	// 		while (it.hasNext()) {
+	// 			Resource resource = it.next();
+	// 			// Initialize inputUri to some matching resource URI (fallback if no version is found).
+	// 			if (version == null) {
+	// 				inputUri = URI.create(resource.getURI());
+	// 			}
+
+	// 			// SBOL2 predicate: sbol2:version
+	// 			Property versionProperty = rdfModel.getProperty("http://sbols.org/v2#version");
+
+	// 			// Read the version value(s) attached to this resource.
+	// 			StmtIterator stmtIt = resource.listProperties(versionProperty);
+
+	// 			if (stmtIt.hasNext()) {
+	// 				// If a version literal exists, parse it as a Double.
+	// 				Double currentVersion = stmtIt.next().getObject().asLiteral().getDouble();
+	// 				/*
+	// 				* Keep the URI of the resource with the highest version number.
+	// 				* The if/else is split mainly for debugging readability.
+	// 				*/
+	// 				if (version == null) {
+	// 					version = currentVersion;
+	// 					inputUri = URI.create(resource.getURI());
+	// 				} else if (currentVersion != null && currentVersion > version) {
+	// 					version = currentVersion;
+	// 					inputUri = URI.create(resource.getURI());
+	// 				}
+
+
+	// 			}
+	// 		}
+    // 	}
+
+    // 	// If inputUri was not a persistentIdentity (or no matches), returns the original inputUri.
+    // 	// Otherwise, returns the latest-version resource URI found.
+    // 	return inputUri;
+	// }
+
 	private static URI getLatestUri(URI inputUri, Model rdfModel) {
-		Property persistentIdentity= rdfModel.getProperty("http://sbols.org/v2#persistentIdentity");
-		RDFNode valueNode=rdfModel.getResource(inputUri.toString());
-		//If a resource with "persistentIdentity - inputUri" property exists then inputUri is a persistent identity. Find the most uri with the most current version that the persistent identity refers to.
-		ResIterator it= rdfModel.listSubjectsWithProperty(persistentIdentity, valueNode);
-		Double version=null;
-		if (it.hasNext()) {
-			// If there is a persistent identity, find the most current version
-			while (it.hasNext()) {
-				Resource resource = it.next();
-				if (version==null){
-					inputUri= URI.create(resource.getURI());
-				}
-				Property versionProperty= rdfModel.getProperty("http://sbols.org/v2#version");
-				StmtIterator stmtIt= resource.listProperties(versionProperty);
-				if (stmtIt.hasNext()) {
-					// If there is a version, use it
-					Double currentVersion = stmtIt.next().getObject().asLiteral().getDouble();
-					//if (version==null || (currentVersion != null && currentVersion> version)) {
-					if (version==null) {						
-						version=currentVersion;
-						inputUri=URI.create(resource.getURI());
-					}
-					//Split into if else for debugging purposes!
-					else if (currentVersion != null && currentVersion> version){
-						version=currentVersion;
-						inputUri=URI.create(resource.getURI());
-					}
-				}
-			}			
+		Property persistentIdentity = rdfModel.getProperty("http://sbols.org/v2#persistentIdentity");
+		RDFNode valueNode = rdfModel.getResource(inputUri.toString());
+		ResIterator it = rdfModel.listSubjectsWithProperty(persistentIdentity, valueNode);
+
+		String bestVersionStr = null;
+		URI bestUri = inputUri;
+
+		Property versionProperty = rdfModel.getProperty("http://sbols.org/v2#version");
+
+		while (it.hasNext()) {
+			Resource resource = it.next();
+
+			// Fallback: if we never find a version, at least return some matching resource URI
+			if (bestVersionStr == null) {
+				bestUri = URI.create(resource.getURI());
+			}
+
+			StmtIterator stmtIt = resource.listProperties(versionProperty);
+			if (!stmtIt.hasNext()) continue;
+
+			String currentVersionStr = stmtIt.next().getObject().asLiteral().getString();
+
+			if (bestVersionStr == null || compareVersions(currentVersionStr, bestVersionStr) > 0) {
+				bestVersionStr = currentVersionStr;
+				bestUri = URI.create(resource.getURI());
+			}
 		}
-		
-		return inputUri;		
+
+		return bestUri;
 	}
+
+	/**
+	 * Compares version strings like "1", "1.0", "1.0.0", "2.10.3".
+	 * Returns >0 if a > b, <0 if a < b, 0 if equal.
+	 *
+	 * - Splits by dots.
+	 * - Compares each numeric segment.
+	 * - Missing segments are treated as 0 (so 1.0 == 1.0.0).
+	 * - If a segment is not numeric, it falls back to lexicographic comparison.
+	 */
+	private static int compareVersions(String a, String b) {
+		String[] pa = a.trim().split("\\.");
+		String[] pb = b.trim().split("\\.");
+
+		int n = Math.max(pa.length, pb.length);
+		for (int i = 0; i < n; i++) {
+			String sa = i < pa.length ? pa[i] : "0";
+			String sb = i < pb.length ? pb[i] : "0";
+
+			Integer ia = tryParseInt(sa);
+			Integer ib = tryParseInt(sb);
+
+			if (ia != null && ib != null) {
+				int c = Integer.compare(ia, ib);
+				if (c != 0) return c;
+			} else {
+				// If non-numeric parts exist, do a safe string comparison as fallback
+				int c = sa.compareToIgnoreCase(sb);
+				if (c != 0) return c;
+			}
+		}
+		return 0;
+	}
+
+	private static Integer tryParseInt(String s) {
+		try {
+			return Integer.parseInt(s);
+		} catch (Exception e) {
+			return null;
+		}
+	}
+
+
 
 	public static URI createSBOL3Uri(URI inputUri, Parameters parameters) throws SBOLGraphException {
 		Model rdfModel = parameters.getRdfModel();
@@ -547,6 +641,7 @@ public class Util {
 					output.createAnnotation(qName, (Integer) value);
 				}
 				else if (value instanceof TopLevel) {
+					
 					output.createAnnotation(qName, ((TopLevel) value).getUri());
 				}
 				else if (value instanceof Metadata) {
@@ -623,10 +718,10 @@ public class Util {
 		// TODO: Fix me: 
 		output.setWasDerivedFrom(toList(input.getWasDerivedFroms()));
 		// TODO: FIX ME
-		// output.setWasGeneratedBy(toList(input.getWasGeneratedBys()));
+		//output.setWasGeneratedBy(toList(input.getWasGeneratedBys()));
 		convertIfTopLevel(input, output,parameters);
+		output.addAnnotation(ConverterVocabulary.Two_to_Three.sbol2OriginalURI, input.getIdentity());
 		convertAnnotations_2_to3(input.getAnnotations(), output);
-
 		
 	}
 

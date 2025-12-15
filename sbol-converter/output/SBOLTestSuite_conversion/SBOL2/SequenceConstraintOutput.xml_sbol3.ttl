@@ -12,6 +12,7 @@
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://partsregistry.org/cd/LacI_operator">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000057"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/LacI_operator"/>
       <sbol:description>LacI binding site</sbol:description>
       <sbol:name>LacI operator</sbol:name>
       <sbol:hasNamespace rdf:resource="http://partsregistry.org/cd"/>
@@ -20,6 +21,7 @@
    </sbol:Component>
    <sbol:Component rdf:about="http://partsregistry.org/cd/pspac">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/pspac"/>
       <sbol:hasNamespace rdf:resource="http://partsregistry.org/cd"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:displayId>pspac</sbol:displayId>
@@ -27,17 +29,20 @@
    <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_K174004">
       <sbol:hasFeature>
          <sbol:SubComponent rdf:about="http://partsregistry.org/cd/BBa_K174004/LacI_operator">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_K174004/LacI_operator"/>
             <sbol:instanceOf rdf:resource="http://partsregistry.org/cd/LacI_operator"/>
             <sbol:displayId>LacI_operator</sbol:displayId>
          </sbol:SubComponent>
       </sbol:hasFeature>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_K174004"/>
       <sbol:displayId>BBa_K174004</sbol:displayId>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://partsregistry.org/cd/BBa_K174004/Interface1">
             <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_K174004/LacI_operator"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://partsregistry.org/cd/BBa_K174004/pspac">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_K174004/pspac"/>
                   <sbol:instanceOf rdf:resource="http://partsregistry.org/cd/pspac"/>
                   <sbol:displayId>pspac</sbol:displayId>
                </sbol:SubComponent>
@@ -52,6 +57,7 @@
       <sbol:description>pspac core promoter region</sbol:description>
       <sbol:hasConstraint>
          <sbol:Constraint rdf:about="http://partsregistry.org/cd/BBa_K174004/r1">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_K174004/r1"/>
             <sbol:object rdf:resource="http://partsregistry.org/cd/BBa_K174004/LacI_operator"/>
             <sbol:subject rdf:resource="http://partsregistry.org/cd/BBa_K174004/pspac"/>
             <sbol:restriction rdf:resource="http://sbols.org/v3#precedes"/>

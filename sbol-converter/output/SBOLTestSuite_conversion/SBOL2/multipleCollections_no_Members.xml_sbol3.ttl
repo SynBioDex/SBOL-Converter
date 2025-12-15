@@ -13,14 +13,17 @@
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Collection rdf:about="http://www.async.ece.utah.edu/1.0/myPart3">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/myPart3/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>myPart3</sbol:displayId>
    </sbol:Collection>
    <sbol:Collection rdf:about="http://www.async.ece.utah.edu/1.0/myPart2">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/myPart2/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>myPart2</sbol:displayId>
    </sbol:Collection>
    <sbol:Collection rdf:about="http://www.async.ece.utah.edu/1.0/myPart1">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/myPart1/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>myPart1</sbol:displayId>
    </sbol:Collection>

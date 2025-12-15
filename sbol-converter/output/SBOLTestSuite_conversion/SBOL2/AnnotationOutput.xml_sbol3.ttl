@@ -25,6 +25,7 @@
          </pr:Information>
       </pr:information>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_J23119"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:hasNamespace rdf:resource="http://partsregistry.org/cd"/>
       <sbol:description>Constitutive promoter</sbol:description>

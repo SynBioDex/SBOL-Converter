@@ -13,20 +13,24 @@
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Collection rdf:about="http://www.async.ece.utah.edu/1.0/someSequence2">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someSequence2/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>someSequence2</sbol:displayId>
    </sbol:Collection>
    <sbol:Collection rdf:about="http://www.async.ece.utah.edu/1.0/someSequence3">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someSequence3/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>someSequence3</sbol:displayId>
    </sbol:Collection>
    <sbol:Collection rdf:about="http://www.async.ece.utah.edu/1.0/someSequence1">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someSequence1/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>someSequence1</sbol:displayId>
    </sbol:Collection>
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1.0/someSequence">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>ACGTURYSWKMBDHVN-.</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someSequence/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>someSequence</sbol:displayId>
    </sbol:Sequence>

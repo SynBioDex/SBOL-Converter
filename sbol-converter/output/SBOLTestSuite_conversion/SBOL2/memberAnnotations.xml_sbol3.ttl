@@ -14,6 +14,7 @@
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Model rdf:about="http://www.async.ece.utah.edu/1.0/someModel">
       <annot:thisAnnotation>turtleString</annot:thisAnnotation>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someModel/1.0"/>
       <sbol:language rdf:resource="https://identifiers.org/edam:format_2585"/>
       <sbol:framework rdf:resource="https://identifiers.org/SBO:0000062"/>
       <sbol:source rdf:resource="https://sbolstandard.org/SBOL3-Converter/someModel_source"/>
@@ -22,11 +23,13 @@
    </sbol:Model>
    <sbol:Collection rdf:about="http://www.async.ece.utah.edu/1.0/myParts">
       <annot:thisAnnotation>turtleString</annot:thisAnnotation>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/myParts/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>myParts</sbol:displayId>
    </sbol:Collection>
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/1.0/someCompDefCDS">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someCompDefCDS/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:displayId>someCompDefCDS</sbol:displayId>
@@ -36,6 +39,7 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1.0/someCompDef/someSequenceAnnotation">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1.0/someCompDef/someSequenceAnnotation/cut">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someCompDef/someSequenceAnnotation/cut/1.0"/>
                   <backport2_3:sbol2LocationSequenceNull rdf:datatype=
                   "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:end>10</sbol:end>
@@ -47,6 +51,7 @@
                </sbol:Range>
             </sbol:hasLocation>
             <annot:thisAnnotation>turtleString</annot:thisAnnotation>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someCompDef/someSequenceAnnotation/1.0"/>
             <sbol:displayId>someSequenceAnnotation</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
@@ -56,12 +61,14 @@
       <sbol:hasFeature>
          <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/1.0/someCompDef/someComponent">
             <annot:thisAnnotation>turtleString</annot:thisAnnotation>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someCompDef/someComponent/1.0"/>
             <sbol:instanceOf rdf:resource="http://www.async.ece.utah.edu/1.0/someCompDefCDS"/>
             <sbol:displayId>someComponent</sbol:displayId>
          </sbol:SubComponent>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/1.0/someCompDef/someOtherComponent">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someCompDef/someOtherComponent/1.0"/>
             <sbol:instanceOf rdf:resource="http://www.async.ece.utah.edu/1.0/someCompDefCDS"/>
             <sbol:displayId>someOtherComponent</sbol:displayId>
          </sbol:SubComponent>
@@ -72,6 +79,7 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1.0/someCompDef/someSequenceAnnotation2">
             <sbol:hasLocation>
                <sbol:Cut rdf:about="http://www.async.ece.utah.edu/1.0/someCompDef/someSequenceAnnotation2/cut">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someCompDef/someSequenceAnnotation2/cut/1.0"/>
                   <backport2_3:sbol2LocationSequenceNull rdf:datatype=
                   "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -82,6 +90,7 @@
                   <sbol:displayId>cut</sbol:displayId>
                </sbol:Cut>
             </sbol:hasLocation>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someCompDef/someSequenceAnnotation2/1.0"/>
             <sbol:displayId>someSequenceAnnotation2</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
@@ -91,9 +100,11 @@
          <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1.0/someCompDef_seq"/>
       </sbol:hasSequence>
       <annot:thisAnnotation>turtleString</annot:thisAnnotation>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someCompDef/1.0"/>
       <sbol:hasConstraint>
          <sbol:Constraint rdf:about="http://www.async.ece.utah.edu/1.0/someCompDef/someSequenceConstraint">
             <annot:thisAnnotation>turtleString</annot:thisAnnotation>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someCompDef/someSequenceConstraint/1.0"/>
             <sbol:object rdf:resource="http://www.async.ece.utah.edu/1.0/someCompDef/someOtherComponent"/>
             <sbol:subject rdf:resource="http://www.async.ece.utah.edu/1.0/someCompDef/someComponent"/>
             <sbol:restriction rdf:resource="http://sbols.org/v3#precedes"/>
@@ -109,6 +120,7 @@
       </sbol:hasInterface>
    </sbol:Component>
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/1.0/someModuleDefSub">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someModuleDefSub/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
       <sbol:displayId>someModuleDefSub</sbol:displayId>
@@ -122,11 +134,13 @@
       </sbol:hasFeature>
       <sbol:hasInteraction>
          <sbol:Interaction rdf:about="http://www.async.ece.utah.edu/1.0/someModuleDef/someInteraction">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someModuleDef/someInteraction/1.0"/>
             <sbol:type rdf:resource="https://identifiers.org/SBO:0000177"/>
             <sbol:displayId>someInteraction</sbol:displayId>
          </sbol:Interaction>
       </sbol:hasInteraction>
       <annot:thisAnnotation>turtleString</annot:thisAnnotation>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someModuleDef/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
       <sbol:displayId>someModuleDef</sbol:displayId>
@@ -135,6 +149,7 @@
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>ACGTURYSWKMBDHVN-.</sbol:elements>
       <annot:thisAnnotation>turtleString</annot:thisAnnotation>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someSeq/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>someSeq</sbol:displayId>
    </sbol:Sequence>
@@ -145,6 +160,7 @@
    </sbol:Sequence>
    <grn:RegulatoryReaction rdf:about="http://www.async.ece.utah.edu/1.0/someGenericTopLevel">
       <annot:thisAnnotation>turtleString</annot:thisAnnotation>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someGenericTopLevel/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>someGenericTopLevel</sbol:displayId>
       <rdf:type rdf:resource="http://sbols.org/v3#TopLevel"/>

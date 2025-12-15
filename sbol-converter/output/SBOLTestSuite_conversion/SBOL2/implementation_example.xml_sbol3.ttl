@@ -15,18 +15,21 @@
       <sbol:built>
          <sbol:Component rdf:about="http://examples.org/ComponentDefinition/1.0.0/mutant"/>
       </sbol:built>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://examples.org/Implementation/build/1.0.0"/>
       <prov:wasDerivedFrom rdf:resource="http://examples.org/ComponentDefinition/design/1.0.0"/>
       <sbol:hasNamespace rdf:resource="http://examples.org/Implementation"/>
       <sbol:displayId>build</sbol:displayId>
    </sbol:Implementation>
    <sbol:Component rdf:about="http://examples.org/ComponentDefinition/1.0.0/mutant">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://examples.org/ComponentDefinition/mutant/1.0.0"/>
       <sbol:hasNamespace rdf:resource="http://examples.org/ComponentDefinition"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:displayId>mutant</sbol:displayId>
    </sbol:Component>
    <sbol:Component rdf:about="http://examples.org/ComponentDefinition/1.0.0/design">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://examples.org/ComponentDefinition/design/1.0.0"/>
       <sbol:hasNamespace rdf:resource="http://examples.org/ComponentDefinition"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:displayId>design</sbol:displayId>

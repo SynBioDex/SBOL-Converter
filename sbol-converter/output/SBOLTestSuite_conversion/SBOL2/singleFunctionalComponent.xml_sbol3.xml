@@ -13,6 +13,7 @@
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/1.0/LacIInCDS">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/LacIInCDS/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000252"/>
       <sbol:displayId>LacIInCDS</sbol:displayId>
@@ -22,6 +23,7 @@
          <sbol:Interface rdf:about="http://www.async.ece.utah.edu/1.0/LacIIn/Interface1">
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/1.0/LacIIn/funcComp">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/LacIIn/funcComp/1.0"/>
                   <sbol:instanceOf rdf:resource="http://www.async.ece.utah.edu/1.0/LacIInCDS"/>
                   <sbol:displayId>funcComp</sbol:displayId>
                </sbol:SubComponent>
@@ -30,6 +32,7 @@
          </sbol:Interface>
       </sbol:hasInterface>
       <sbol:hasFeature rdf:resource="http://www.async.ece.utah.edu/1.0/LacIIn/funcComp"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/LacIIn/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000252"/>
       <sbol:displayId>LacIIn</sbol:displayId>

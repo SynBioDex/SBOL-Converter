@@ -8,6 +8,12 @@
     <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000057"/>
   </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="http://partsregistry.org/cd/pspac">
+    <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/pspac"/>
+    <sbol:displayId>pspac</sbol:displayId>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
+  </sbol:ComponentDefinition>
   <sbol:ComponentDefinition rdf:about="http://partsregistry.org/cd/BBa_K174004">
     <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/BBa_K174004"/>
     <sbol:displayId>BBa_K174004</sbol:displayId>
@@ -40,11 +46,5 @@
         <sbol:object rdf:resource="http://partsregistry.org/cd/BBa_K174004/LacI_operator"/>
       </sbol:SequenceConstraint>
     </sbol:sequenceConstraint>
-  </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="http://partsregistry.org/cd/pspac">
-    <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/pspac"/>
-    <sbol:displayId>pspac</sbol:displayId>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
-    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
   </sbol:ComponentDefinition>
 </rdf:RDF>

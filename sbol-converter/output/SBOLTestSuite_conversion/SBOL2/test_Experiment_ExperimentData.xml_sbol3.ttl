@@ -13,20 +13,24 @@
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:ExperimentalData rdf:about="http://www.async.ece.utah.edu/1.0/experimental_data1">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/experimental_data1/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>experimental_data1</sbol:displayId>
    </sbol:ExperimentalData>
    <sbol:ExperimentalData rdf:about="http://www.async.ece.utah.edu/1.0/experimental_data2">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/experimental_data2/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>experimental_data2</sbol:displayId>
    </sbol:ExperimentalData>
    <sbol:Experiment rdf:about="http://www.async.ece.utah.edu/1.0/experiment">
       <sbol:member rdf:resource="http://www.async.ece.utah.edu/1.0/experimental_data2"/>
       <sbol:member rdf:resource="http://www.async.ece.utah.edu/1.0/experimental_data1"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/experiment/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>experiment</sbol:displayId>
    </sbol:Experiment>
    <grn:RegulatoryReaction rdf:about="http://www.async.ece.utah.edu/1.0/GenericTopLevel">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/GenericTopLevel/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>GenericTopLevel</sbol:displayId>
       <rdf:type rdf:resource="http://sbols.org/v3#TopLevel"/>

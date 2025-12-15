@@ -12,6 +12,7 @@
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:TopLevel rdf:about="http://www.async.ece.utah.edu/unknown">
       <dcterms:created>2003-12-04T12:00:00Z</dcterms:created>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/unknown"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>unknown</sbol:displayId>
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>

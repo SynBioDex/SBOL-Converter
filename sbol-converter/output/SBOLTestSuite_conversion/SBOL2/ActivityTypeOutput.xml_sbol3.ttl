@@ -11,6 +11,7 @@
     xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:TopLevel rdf:about="http://www.partsregistry.org/act/activityId">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.partsregistry.org/act/activityId"/>
       <sbol:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000415"/>
       <sbol:type rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23924"/>
       <sbol:hasNamespace rdf:resource="http://www.partsregistry.org/act"/>

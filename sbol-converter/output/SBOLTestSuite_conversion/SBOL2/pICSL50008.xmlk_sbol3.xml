@@ -28,6 +28,7 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation4">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation4/range">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation4/range"/>
                   <backport2_3:sbol2LocationSequenceNull rdf:datatype=
                   "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -42,6 +43,7 @@
             <gbConv:note>color: #a6acb3</gbConv:note>
             <gbConv:note>GCTT BsaI overhang</gbConv:note>
             <gbConv:label>GCTT BsaI overhang</gbConv:label>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation4"/>
             <sbol:name>GCTT BsaI overhang</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0001411"/>
             <sbol:displayId>annotation4</sbol:displayId>
@@ -53,6 +55,7 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation0">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation0/range">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation0/range"/>
                   <backport2_3:sbol2LocationSequenceNull rdf:datatype=
                   "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -66,6 +69,7 @@
             </sbol:hasLocation>
             <gbConv:mol_type>genomic DNA</gbConv:mol_type>
             <gbConv:organism>unspecified</gbConv:organism>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation0"/>
             <sbol:name>unspecified</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0002206"/>
             <sbol:displayId>annotation0</sbol:displayId>
@@ -79,8 +83,10 @@
       </sbol:hasSequence>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation1">
+            <sbol:role rdf:resource="https://identifiers.org/SO:0001411"/>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation1/range">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation1/range"/>
                   <backport2_3:sbol2LocationSequenceNull rdf:datatype=
                   "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001031"/>
@@ -92,13 +98,13 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <gbConv:note>color: #a6acb3; direction: LEFT</gbConv:note>
-            <gbConv:note>Length: 1011;Found at strand: negative;Start codon: ATG</gbConv:note>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation1"/>
+            <sbol:displayId>annotation1</sbol:displayId>
+            <sbol:name>SpecR</sbol:name>
             <gbConv:note>SpecR</gbConv:note>
             <gbConv:label>SpecR</gbConv:label>
-            <sbol:name>SpecR</sbol:name>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0001411"/>
-            <sbol:displayId>annotation1</sbol:displayId>
+            <gbConv:note>color: #a6acb3; direction: LEFT</gbConv:note>
+            <gbConv:note>Length: 1011;Found at strand: negative;Start codon: ATG</gbConv:note>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <genbank:date>12-MAR-2014</genbank:date>
@@ -109,6 +115,7 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation2">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation2/range">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation2/range"/>
                   <backport2_3:sbol2LocationSequenceNull rdf:datatype=
                   "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -123,23 +130,27 @@
             <gbConv:note>color: #a6acb3</gbConv:note>
             <gbConv:note>TTCG BsaI overhang</gbConv:note>
             <gbConv:label>TTCG BsaI overhang</gbConv:label>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation2"/>
             <sbol:name>TTCG BsaI overhang</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0001411"/>
             <sbol:displayId>annotation2</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <genbank:molecule>ds-DNA</genbank:molecule>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Exported_File"/>
       <sbol:type rdf:resource="https://identifiers.org/SO:0000988"/>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation3">
             <gbConv:label>GFP</gbConv:label>
-            <sbol:name>GFP</sbol:name>
             <gbConv:translation>VSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTFSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK</gbConv:translation>
+            <sbol:name>GFP</sbol:name>
             <gbConv:note>color: #05fd14</gbConv:note>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation3"/>
             <gbConv:note>GFP</gbConv:note>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation3/range">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation3/range"/>
                   <backport2_3:sbol2LocationSequenceNull rdf:datatype=
                   "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
@@ -160,6 +171,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Exported_File_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>aacatgtgagcaaaaggccagcaaaaggccaggaaccgtaaaaaggccgcgttgctggcgtttttccataggctccgcccccctgacgagcatcacaaaaatcgacgctcaagtcagaggtggcgaaacccgacaggactataaagataccaggcgtttccccctggaagctccctcgtgcgctctcctgttccgaccctgccgcttaccggatacctgtccgcctttctcccttcgggaagcgtggcgctttctcaatgctcacgctgtaggtatctcagttcggtgtaggtcgttcgctccaagctgggctgtgtgcacgaaccccccgttcagcccgaccgctgcgccttatccggtaactatcgtcttgagtccaacccggtaagacacgacttatcgccactggcagcagccactggtaacaggattagcagagcgaggtatgtaggcggtgctacagagttcttgaagtggtggcctaactacggctacactagaaggacagtatttggtatctgcgctctgctgaagccagttaccttcggaaaaagagttggtagctcttgatccggcaaacaaaccaccgctggtagcggtggtttttttgtttgcaagcagcagattacgcgcagaaaaaaaggatctcaagaagatcctttgatcttttctacggggtctgacgctcagtggaacgacgcgtaactcacgttaagggattttggtcatgggtggctcgagggttatttgccgactaccttggtgatctcgcctttcacgtagtggacaaattcttccaactgatctgcgcgcgaggccaagcgatcttcttcttgtccaagataagcctgtctagcttcaagtatgacgggctgatactgggccggcaggcgctccattgcccagtcggcagcgacatccttcggcgcgattttgccggttactgcgctgtaccaaatgcgggacaacgtaagcactacatttcgctcatcgccagcccagtcgggcggcgagttccatagcgttaaggtttcatttagcgcctcaaatagatcctgttcaggaaccggatcaaagagttcctccgccgctggacctaccaaggcaacgctatgttctcttgcttttgtcagcaagatagccagatcaatgtcgatcgtggctggctcgaagatacctgcaagaatgtcattgcgctgccattctccaaattgcagttcgcgcttagctggataacgccacggaatgatgtcgtcgtgcacaacaatggtgacttctacagcgcggagaatctcgctctctccaggggaagccgaagtttccaaaaggtcgttgatcaaagctcgccgcgttgtttcatcaagccttacggtcaccgtaaccagcaaatcaatatcactgtgtggcttcaggccgccatccactgcggagccgtacaaatgtacggccagcaacgtcggttcgagatggcgctcgatgacgccaactacctctgatagttgagtcgatacttcggcgatcaccgcttccctcatgatgtttaactttgttttagggcgactgccctgctgcgtaacatcgttgctgctccataacatcaaacatcgacccacggcgtaacgcgcttgctgcttggatgcccgaggcatagactgtaccccaaaaaaacagtcataacaagccatgaaaaccgccaccgcgccgttaccaccgctgcgttcggtcaaggttctggaccagttgcgtgagcgcatacgctacttgcattacagcttacgaaccgaacaggcttatgtccactgggttcgtgccttcatccgtttccacggtgtgcgtcacccggcaaccttgggtagcagcgaagtcgaggcatttctgtcctggctggtctagaggaggcatgatgatatatttttatcttgtgcaatgtaacatcagagattttgagacacgggccagagctgccaggaaacagctatgaccatgtaatacgactcactataggggatatcagctggatggcaaataatgatttttattttgactgatagtgacctgttcgttgcaacaaattgatgagcaattattttttataatgccaactttgtacaagaaagctgggtcgaattcgcccttcaccggtctctttcggtgagcaagggcgaggagctgttcaccggggtggtgcccatcctggtcgagctggacggcgacgtaaacggccacaagttcagcgtgtccggcgagggcgagggcgatgccacctacggcaagctgaccctgaagttcatctgcaccaccggcaagctgcccgtgccctggcccaccctcgtgaccaccttcagctacggcgtgcagtgcttcagccgctaccccgaccacatgaagcagcacgacttcttcaagtccgccatgcccgaaggctacgtccaggagcgcaccatcttcttcaaggacgacggcaactacaagacccgcgccgaggtgaagttcgagggcgacaccctggtgaaccgcatcgagctgaagggcatcgacttcaaggaggacggcaacatcctggggcacaagctggagtacaactacaacagccacaacgtctatatcatggccgacaagcagaagaacggcatcaaggtgaacttcaagatccgccacaacatcgaggacggcagcgtgcagctcgccgaccactaccagcagaacacccccatcggcgacggccccgtgctgctgcccgacaaccactacctgagcacccagtccgccctgagcaaagaccccaacgagaagcgcgatcacatggtcctgctggagttcgtgaccgccgccgggatcactcacggcatggacgagctgtacaagtaagctttgagacctaaagggcgaattcggagcctgcttttttgtacaaagttggcattataaaaaagcattgctcatcaatttgttgcaacgaacaggtcactatcagtcaaaataaaatcattatttggggcccgagcttaagactggccgtcgttttacaacgtcgtgactgggaaaacatccatgctagcgttaacgcgagagtagggaactgccaggcatcaaataaaacgaaaggctcagtcggaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctcctgagtaggacaaatccgccgggagcggatttgaacgttgtgaagcaacggcccggagggtggcgggcaggacgcccgccataaactgccaggcatcaaactaagcagaaggccatcctgacggatggcctttttgcgtttctacaaactcttcctggctagcggtacgcgtattaattgcgttgcgctcactgcccgctttccagtcgggaaacctgtcgtgccagctgcattaatgaatcggccaacgcgcggggagaggcggtttgcgtattgggcgctcttccgcttcctcgctcactgactcgctgcgctcggtcgttcggctgcggcgagcggtatcagctcactcaaaggcggtaatacggttatccacagaatcaggggataacgcaggaaag</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Exported_File_seq"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>Exported_File_seq</sbol:displayId>
    </sbol:Sequence>

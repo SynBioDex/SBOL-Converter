@@ -12,22 +12,24 @@
     xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://www.partsregistry.org/cd/BBa_J23119">
+      <sbol:description>Constitutive promoter</sbol:description>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.partsregistry.org/cd/BBa_J23119"/>
+      <sbol:hasNamespace rdf:resource="http://www.partsregistry.org/cd"/>
+      <sbol:displayId>BBa_J23119</sbol:displayId>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
       <myapp:datasheet>
          <myapp:Datasheet rdf:about="http://www.partsregistry.org/gen/datasheet1">
             <myapp:transcriptionRate>1</myapp:transcriptionRate>
             <myapp:characterizationData rdf:resource="http://www.myapp.org//measurement/1"/>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.partsregistry.org/gen/datasheet1"/>
             <sbol:name>Datasheet 1</sbol:name>
             <sbol:hasNamespace rdf:resource="http://www.partsregistry.org/gen"/>
             <sbol:displayId>datasheet1</sbol:displayId>
             <rdf:type rdf:resource="http://sbols.org/v3#TopLevel"/>
          </myapp:Datasheet>
       </myapp:datasheet>
-      <prov:wasDerivedFrom rdf:resource="http://www.partsregistry.org/Part:BBa_J23119"/>
-      <sbol:description>Constitutive promoter</sbol:description>
       <sbol:name>J23119</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://www.partsregistry.org/cd"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>BBa_J23119</sbol:displayId>
+      <prov:wasDerivedFrom rdf:resource="http://www.partsregistry.org/Part:BBa_J23119"/>
    </sbol:Component>
 </rdf:RDF>

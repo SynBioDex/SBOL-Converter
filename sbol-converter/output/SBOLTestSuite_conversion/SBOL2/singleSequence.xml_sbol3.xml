@@ -15,6 +15,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1.0/pLacSeq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>ACGTURYSWKMBDHVN-.</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pLacSeq/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>pLacSeq</sbol:displayId>
    </sbol:Sequence>

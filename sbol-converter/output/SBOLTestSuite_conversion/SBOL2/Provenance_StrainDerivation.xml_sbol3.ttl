@@ -13,6 +13,7 @@
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://myapp.com/bsubtilisncimb3610">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://myapp.com/bsubtilisncimb3610"/>
       <sbol:name>Bacillus subtilis NCIMB 3610</sbol:name>
       <sbol:hasNamespace rdf:resource="http://myapp.com"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
@@ -20,6 +21,7 @@
    </sbol:Component>
    <sbol:Component rdf:about="http://myapp.com/bsubtilis168">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://myapp.com/bsubtilis168"/>
       <prov:wasDerivedFrom rdf:resource="http://myapp.com/bsubtilisncimb3610"/>
       <sbol:name>Bacillus subtilis 168</sbol:name>
       <sbol:hasNamespace rdf:resource="http://myapp.com"/>
@@ -27,9 +29,11 @@
       <sbol:displayId>bsubtilis168</sbol:displayId>
    </sbol:Component>
    <sbol:TopLevel rdf:about="http://myapp.com/xraymutagenesis">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://myapp.com/xraymutagenesis"/>
       <sbol:name>X-ray mutagenesis</sbol:name>
       <prov:qualifiedUsage>
          <sbol:Identified rdf:about="http://myapp.com/xraymutagenesis/usage">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://myapp.com/xraymutagenesis/usage"/>
             <prov:hadRole rdf:resource="http://sbols.org/v2#source"/>
             <prov:entity rdf:resource="http://myapp.com/bsubtilisncimb3610"/>
             <sbol:displayId>usage</sbol:displayId>
@@ -38,6 +42,7 @@
       </prov:qualifiedUsage>
       <prov:qualifiedAssociation>
          <sbol:Identified rdf:about="http://myapp.com/xraymutagenesis/association">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://myapp.com/xraymutagenesis/association"/>
             <prov:hadRole rdf:resource="http://myapp.com/mutagen"/>
             <prov:agent>
                <sbol:TopLevel rdf:about="http://myapp.com/x_ray"/>
@@ -51,6 +56,7 @@
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
    </sbol:TopLevel>
    <sbol:TopLevel rdf:about="http://myapp.com/x_ray">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://myapp.com/x_ray"/>
       <sbol:name>X-ray</sbol:name>
       <sbol:hasNamespace rdf:resource="http://myapp.com"/>
       <sbol:displayId>x_ray</sbol:displayId>

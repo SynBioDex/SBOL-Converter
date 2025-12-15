@@ -13,6 +13,7 @@
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/1.0/someModuleDefSub">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someModuleDefSub/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
       <sbol:displayId>someModuleDefSub</sbol:displayId>
@@ -25,6 +26,7 @@
          </sbol:SubComponent>
       </sbol:hasFeature>
       <annot:thisAnnotation>turtleString</annot:thisAnnotation>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someModuleDef/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
       <sbol:displayId>someModuleDef</sbol:displayId>

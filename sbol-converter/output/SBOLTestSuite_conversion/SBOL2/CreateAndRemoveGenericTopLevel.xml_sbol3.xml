@@ -13,6 +13,7 @@
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <grn:RegulatoryReaction rdf:about="http://www.async.ece.utah.edu/1.0/someGenTopLev">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/someGenTopLev/1.0"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>someGenTopLev</sbol:displayId>
       <rdf:type rdf:resource="http://sbols.org/v3#TopLevel"/>
