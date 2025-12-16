@@ -31,6 +31,44 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation0">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH43844/annotation0"/>
+        <sbol:displayId>annotation0</sbol:displayId>
+        <dcterms:title>GCTT 4bp overhang</dcterms:title>
+        <gbConv:featureType>Misc._Feature</gbConv:featureType>
+        <gbConv:label>GCTT 4bp overhang</gbConv:label>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation0/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH43844/annotation0/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>1</sbol:start>
+            <sbol:end>4</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation5">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH43844/annotation5"/>
+        <sbol:displayId>annotation5</sbol:displayId>
+        <dcterms:title>AATG 4bp overhang</dcterms:title>
+        <gbConv:featureType>Misc._Feature</gbConv:featureType>
+        <gbConv:label>AATG 4bp overhang</gbConv:label>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation5/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH43844/annotation5/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>2248</sbol:start>
+            <sbol:end>2251</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
       <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation3">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH43844/annotation3"/>
         <sbol:displayId>annotation3</sbol:displayId>
@@ -51,49 +89,21 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation6">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH43844/annotation6"/>
-        <sbol:displayId>annotation6</sbol:displayId>
-        <dcterms:title>Bar phosphimothricin acetyl transferase (S. hygroscopicus)</dcterms:title>
-        <gbConv:multiRangeType>join</gbConv:multiRangeType>
-        <gbConv:label>Bar phosphimothricin acetyl transferase (S. hygroscopicus)</gbConv:label>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation6/range1">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH43844/annotation6/range1"/>
-            <sbol:displayId>range1</sbol:displayId>
-            <gbConv:position>position1</gbConv:position>
-            <sbol:start>2893</sbol:start>
-            <sbol:end>3243</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation6/range0">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH43844/annotation6/range0"/>
-            <sbol:displayId>range0</sbol:displayId>
-            <gbConv:position>position0</gbConv:position>
-            <sbol:start>2249</sbol:start>
-            <sbol:end>2449</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation0">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH43844/annotation0"/>
-        <sbol:displayId>annotation0</sbol:displayId>
-        <dcterms:title>GCTT 4bp overhang</dcterms:title>
-        <gbConv:featureType>Misc._Feature</gbConv:featureType>
-        <gbConv:label>GCTT 4bp overhang</gbConv:label>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation7">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH43844/annotation7"/>
+        <sbol:displayId>annotation7</sbol:displayId>
+        <dcterms:title>Act2 intron (A. thaliana)</dcterms:title>
+        <gbConv:featureType>Intron</gbConv:featureType>
+        <gbConv:vntifkey>15</gbConv:vntifkey>
+        <gbConv:label>Act2int1</gbConv:label>
+        <gbConv:label>Act2 intron (A. thaliana)</gbConv:label>
         <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation0/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH43844/annotation0/range"/>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation7/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH43844/annotation7/range"/>
             <sbol:displayId>range</sbol:displayId>
-            <sbol:start>1</sbol:start>
-            <sbol:end>4</sbol:end>
+            <sbol:start>2450</sbol:start>
+            <sbol:end>2892</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
@@ -141,40 +151,30 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation5">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH43844/annotation5"/>
-        <sbol:displayId>annotation5</sbol:displayId>
-        <dcterms:title>AATG 4bp overhang</dcterms:title>
-        <gbConv:featureType>Misc._Feature</gbConv:featureType>
-        <gbConv:label>AATG 4bp overhang</gbConv:label>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation6">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH43844/annotation6"/>
+        <sbol:displayId>annotation6</sbol:displayId>
+        <dcterms:title>Bar phosphimothricin acetyl transferase (S. hygroscopicus)</dcterms:title>
+        <gbConv:multiRangeType>join</gbConv:multiRangeType>
+        <gbConv:label>Bar phosphimothricin acetyl transferase (S. hygroscopicus)</gbConv:label>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation5/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH43844/annotation5/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2248</sbol:start>
-            <sbol:end>2251</sbol:end>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation6/range0">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH43844/annotation6/range0"/>
+            <sbol:displayId>range0</sbol:displayId>
+            <gbConv:position>position0</gbConv:position>
+            <sbol:start>2249</sbol:start>
+            <sbol:end>2449</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation7">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH43844/annotation7"/>
-        <sbol:displayId>annotation7</sbol:displayId>
-        <dcterms:title>Act2 intron (A. thaliana)</dcterms:title>
-        <gbConv:featureType>Intron</gbConv:featureType>
-        <gbConv:vntifkey>15</gbConv:vntifkey>
-        <gbConv:label>Act2int1</gbConv:label>
-        <gbConv:label>Act2 intron (A. thaliana)</gbConv:label>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation7/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH43844/annotation7/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2450</sbol:start>
-            <sbol:end>2892</sbol:end>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH43844/annotation6/range1">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICH43844/annotation6/range1"/>
+            <sbol:displayId>range1</sbol:displayId>
+            <gbConv:position>position1</gbConv:position>
+            <sbol:start>2893</sbol:start>
+            <sbol:end>3243</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>

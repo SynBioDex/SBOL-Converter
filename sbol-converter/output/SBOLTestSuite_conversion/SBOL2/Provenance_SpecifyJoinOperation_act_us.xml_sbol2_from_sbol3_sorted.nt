@@ -1,0 +1,16 @@
+<http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_1> <http://sbols.org/v2#displayId> "dna_part_1" .
+<http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_1> <http://sbols.org/v2#persistentIdentity> <http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_1> .
+<http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Usage> .
+<http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_1> <http://www.w3.org/ns/prov#entity> <http://sbolstandard.org/build/dna_part_1> .
+<http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_1> <http://www.w3.org/ns/prov#hadRole> <http://identifiers.org/so/SO:0001631> .
+<http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_2> <http://sbols.org/v2#displayId> "dna_part_2" .
+<http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_2> <http://sbols.org/v2#persistentIdentity> <http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_2> .
+<http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Usage> .
+<http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_2> <http://www.w3.org/ns/prov#entity> <http://sbolstandard.org/build/dna_part_2> .
+<http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_2> <http://www.w3.org/ns/prov#hadRole> <http://identifiers.org/so/SO:0001632> .
+<http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2> <http://purl.org/dc/terms/title> "join(dna_part_1, dna_part_2)" .
+<http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2> <http://sbols.org/v2#displayId> "join_dna_part_1_with_dna_part_2" .
+<http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2> <http://sbols.org/v2#persistentIdentity> <http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2> .
+<http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2> <http://www.w3.org/ns/prov#qualifiedUsage> <http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_1> .
+<http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2> <http://www.w3.org/ns/prov#qualifiedUsage> <http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_2> .

@@ -1,0 +1,6 @@
+<http://www.async.ece.utah.edu/pLacSeq/1.0> <http://sbols.org/v2#displayId> "pLacSeq" .
+<http://www.async.ece.utah.edu/pLacSeq/1.0> <http://sbols.org/v2#elements> "ACGTURYSWKMBDHVN-." .
+<http://www.async.ece.utah.edu/pLacSeq/1.0> <http://sbols.org/v2#encoding> <http://www.chem.qmul.ac.uk/iubmb/misc/naseq.html> .
+<http://www.async.ece.utah.edu/pLacSeq/1.0> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/pLacSeq> .
+<http://www.async.ece.utah.edu/pLacSeq/1.0> <http://sbols.org/v2#version> "1.0" .
+<http://www.async.ece.utah.edu/pLacSeq/1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#Sequence> .

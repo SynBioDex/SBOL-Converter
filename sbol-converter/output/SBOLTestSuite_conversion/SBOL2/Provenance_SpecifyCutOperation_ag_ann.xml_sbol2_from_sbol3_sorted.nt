@@ -1,0 +1,4 @@
+<http://www.async.ece.utah.edu/unknown> <http://purl.org/dc/terms/created> "2003-12-04T12:00:00Z" .
+<http://www.async.ece.utah.edu/unknown> <http://sbols.org/v2#displayId> "unknown" .
+<http://www.async.ece.utah.edu/unknown> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/unknown> .
+<http://www.async.ece.utah.edu/unknown> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Agent> .
