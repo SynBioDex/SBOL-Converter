@@ -1,0 +1,125 @@
+<http://www.async.ece.utah.edu/pICSL50009/annotation0/range> <http://sbols.org/v2#displayId> "range" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation0/range> <http://sbols.org/v2#end> "1225" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation0/range> <http://sbols.org/v2#orientation> <http://sbols.org/v2#inline> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation0/range> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/pICSL50009/annotation0/range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation0/range> <http://sbols.org/v2#start> "215" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation0/range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#Range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation0> <http://purl.org/dc/terms/title> "Sm/Sp no DraIII" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation0> <http://sbols.org/genBankConversion#label> "Sm/Sp no DraIII" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation0> <http://sbols.org/genBankConversion#vntifkey> "4" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation0> <http://sbols.org/v2#displayId> "annotation0" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation0> <http://sbols.org/v2#location> <http://www.async.ece.utah.edu/pICSL50009/annotation0/range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation0> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/pICSL50009/annotation0> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation0> <http://sbols.org/v2#role> <http://identifiers.org/so/SO:0000316> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#SequenceAnnotation> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation1/range> <http://sbols.org/v2#displayId> "range" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation1/range> <http://sbols.org/v2#end> "1192" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation1/range> <http://sbols.org/v2#orientation> <http://sbols.org/v2#inline> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation1/range> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/pICSL50009/annotation1/range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation1/range> <http://sbols.org/v2#start> "1192" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation1/range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#Range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation1> <http://purl.org/dc/terms/title> "G to A" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation1> <http://sbols.org/genBankConversion#featureType> "Mutation" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation1> <http://sbols.org/genBankConversion#label> "G to A" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation1> <http://sbols.org/genBankConversion#vntifkey> "62" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation1> <http://sbols.org/v2#displayId> "annotation1" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation1> <http://sbols.org/v2#location> <http://www.async.ece.utah.edu/pICSL50009/annotation1/range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation1> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/pICSL50009/annotation1> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation1> <http://sbols.org/v2#role> <http://identifiers.org/so/SO:0000110> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#SequenceAnnotation> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation2/range> <http://sbols.org/v2#displayId> "range" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation2/range> <http://sbols.org/v2#end> "1999" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation2/range> <http://sbols.org/v2#orientation> <http://sbols.org/v2#inline> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation2/range> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/pICSL50009/annotation2/range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation2/range> <http://sbols.org/v2#start> "1385" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation2/range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#Range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation2> <http://purl.org/dc/terms/title> "rep (pMB1)" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation2> <http://sbols.org/genBankConversion#featureType> "Misc._feature" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation2> <http://sbols.org/genBankConversion#label> "rep (pMB1)" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation2> <http://sbols.org/genBankConversion#vntifkey> "21" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation2> <http://sbols.org/v2#displayId> "annotation2" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation2> <http://sbols.org/v2#location> <http://www.async.ece.utah.edu/pICSL50009/annotation2/range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation2> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/pICSL50009/annotation2> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation2> <http://sbols.org/v2#role> <http://identifiers.org/so/SO:0000110> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#SequenceAnnotation> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation3/range> <http://sbols.org/v2#displayId> "range" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation3/range> <http://sbols.org/v2#end> "1984" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation3/range> <http://sbols.org/v2#orientation> <http://sbols.org/v2#reverseComplement> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation3/range> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/pICSL50009/annotation3/range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation3/range> <http://sbols.org/v2#start> "1984" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation3/range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#Range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation3> <http://purl.org/dc/terms/title> "ORI" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation3> <http://sbols.org/genBankConversion#featureType> "Replication_ori" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation3> <http://sbols.org/genBankConversion#label> "ORI" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation3> <http://sbols.org/genBankConversion#note> " RNaseH cleavage point " .
+<http://www.async.ece.utah.edu/pICSL50009/annotation3> <http://sbols.org/genBankConversion#vntifkey> "33" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation3> <http://sbols.org/v2#displayId> "annotation3" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation3> <http://sbols.org/v2#location> <http://www.async.ece.utah.edu/pICSL50009/annotation3/range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation3> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/pICSL50009/annotation3> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation3> <http://sbols.org/v2#role> <http://identifiers.org/so/SO:0000110> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#SequenceAnnotation> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation4/range> <http://sbols.org/v2#displayId> "range" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation4/range> <http://sbols.org/v2#end> "2235" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation4/range> <http://sbols.org/v2#orientation> <http://sbols.org/v2#inline> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation4/range> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/pICSL50009/annotation4/range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation4/range> <http://sbols.org/v2#start> "2232" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation4/range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#Range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation4> <http://purl.org/dc/terms/title> "TTCG 4bp overhang" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation4> <http://sbols.org/genBankConversion#featureType> "MIsc._Feature" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation4> <http://sbols.org/genBankConversion#label> "TTCG 4bp overhang" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation4> <http://sbols.org/v2#displayId> "annotation4" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation4> <http://sbols.org/v2#location> <http://www.async.ece.utah.edu/pICSL50009/annotation4/range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation4> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/pICSL50009/annotation4> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation4> <http://sbols.org/v2#role> <http://identifiers.org/so/SO:0000110> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#SequenceAnnotation> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation5/range> <http://sbols.org/v2#displayId> "range" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation5/range> <http://sbols.org/v2#end> "2430" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation5/range> <http://sbols.org/v2#orientation> <http://sbols.org/v2#inline> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation5/range> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/pICSL50009/annotation5/range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation5/range> <http://sbols.org/v2#start> "2236" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation5/range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#Range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation5> <http://purl.org/dc/terms/title> "C terminal 6xHA (Human influenza hemagglutinin) tag" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation5> <http://sbols.org/genBankConversion#label> "C terminal 6xHA (Human influenza hemagglutinin) tag" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation5> <http://sbols.org/v2#displayId> "annotation5" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation5> <http://sbols.org/v2#location> <http://www.async.ece.utah.edu/pICSL50009/annotation5/range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation5> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/pICSL50009/annotation5> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation5> <http://sbols.org/v2#role> <http://identifiers.org/so/SO:0000316> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#SequenceAnnotation> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation6/range> <http://sbols.org/v2#displayId> "range" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation6/range> <http://sbols.org/v2#end> "2434" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation6/range> <http://sbols.org/v2#orientation> <http://sbols.org/v2#inline> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation6/range> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/pICSL50009/annotation6/range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation6/range> <http://sbols.org/v2#start> "2431" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation6/range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#Range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation6> <http://purl.org/dc/terms/title> "GCTT 4bp overhang" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation6> <http://sbols.org/genBankConversion#featureType> "MIsc._Feature" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation6> <http://sbols.org/genBankConversion#label> "GCTT 4bp overhang" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation6> <http://sbols.org/v2#displayId> "annotation6" .
+<http://www.async.ece.utah.edu/pICSL50009/annotation6> <http://sbols.org/v2#location> <http://www.async.ece.utah.edu/pICSL50009/annotation6/range> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation6> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/pICSL50009/annotation6> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation6> <http://sbols.org/v2#role> <http://identifiers.org/so/SO:0000110> .
+<http://www.async.ece.utah.edu/pICSL50009/annotation6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#SequenceAnnotation> .
+<http://www.async.ece.utah.edu/pICSL50009> <http://sbols.org/v2#displayId> "pICSL50009" .
+<http://www.async.ece.utah.edu/pICSL50009> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/pICSL50009> .
+<http://www.async.ece.utah.edu/pICSL50009> <http://sbols.org/v2#role> <http://identifiers.org/so/SO:0000804> .
+<http://www.async.ece.utah.edu/pICSL50009> <http://sbols.org/v2#sequence> <http://www.async.ece.utah.edu/pICSL50009_seq> .
+<http://www.async.ece.utah.edu/pICSL50009> <http://sbols.org/v2#sequenceAnnotation> <http://www.async.ece.utah.edu/pICSL50009/annotation0> .
+<http://www.async.ece.utah.edu/pICSL50009> <http://sbols.org/v2#sequenceAnnotation> <http://www.async.ece.utah.edu/pICSL50009/annotation1> .
+<http://www.async.ece.utah.edu/pICSL50009> <http://sbols.org/v2#sequenceAnnotation> <http://www.async.ece.utah.edu/pICSL50009/annotation2> .
+<http://www.async.ece.utah.edu/pICSL50009> <http://sbols.org/v2#sequenceAnnotation> <http://www.async.ece.utah.edu/pICSL50009/annotation3> .
+<http://www.async.ece.utah.edu/pICSL50009> <http://sbols.org/v2#sequenceAnnotation> <http://www.async.ece.utah.edu/pICSL50009/annotation4> .
+<http://www.async.ece.utah.edu/pICSL50009> <http://sbols.org/v2#sequenceAnnotation> <http://www.async.ece.utah.edu/pICSL50009/annotation5> .
+<http://www.async.ece.utah.edu/pICSL50009> <http://sbols.org/v2#sequenceAnnotation> <http://www.async.ece.utah.edu/pICSL50009/annotation6> .
+<http://www.async.ece.utah.edu/pICSL50009> <http://sbols.org/v2#type> <http://identifiers.org/so/SO:0000988> .
+<http://www.async.ece.utah.edu/pICSL50009> <http://sbols.org/v2#type> <http://www.biopax.org/release/biopax-level3.owl#DnaRegion> .
+<http://www.async.ece.utah.edu/pICSL50009> <http://www.ncbi.nlm.nih.gov/genbank#comment> "This file is created by Vector NTI http://www.invitrogen.com/" .
+<http://www.async.ece.utah.edu/pICSL50009> <http://www.ncbi.nlm.nih.gov/genbank#date> "3-MAR-2009" .
+<http://www.async.ece.utah.edu/pICSL50009> <http://www.ncbi.nlm.nih.gov/genbank#division> "UNA" .
+<http://www.async.ece.utah.edu/pICSL50009> <http://www.ncbi.nlm.nih.gov/genbank#locus> "pICSL50009" .
+<http://www.async.ece.utah.edu/pICSL50009> <http://www.ncbi.nlm.nih.gov/genbank#molecule> "DNA" .
+<http://www.async.ece.utah.edu/pICSL50009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#ComponentDefinition> .
+<http://www.async.ece.utah.edu/pICSL50009_seq> <http://sbols.org/v2#displayId> "pICSL50009_seq" .
+<http://www.async.ece.utah.edu/pICSL50009_seq> <http://sbols.org/v2#elements> "GTGGCTCTTCAGTGGACGAAAGGGCCTCGTGATACGCCTATTTTTATAGGTTAATGTCATGATAATAATGGTTTCTTAGACGTCAGGTGGCACTTTTCGGGGAAATGTGCGCGGAACCCCTATTTGTTTATTTTTCTAAATACATTCAAATATGTATCCGCTCATGAGACAATAACCCTGATAAATGCTTCAATAATATTGAAAAAGGAAGAGTATGCGCTCACGCAACTGGTCCAGAACCTTGACCGAACGCAGCGGTGGTAACGGCGCAGTGGCGGTTTTCATGGCTTGTTATGACTGTTTTTTTGGGGTACAGTCTATGCCTCGGGCATCCAAGCAGCAAGCGCGTTACGCCGTGGGTCGATGTTTGATGTTATGGAGCAGCAACGATGTTACGCAGCAGGGCAGTCGCCCTAAAACAAAGTTAAACATCATGAGGGAAGCGGTGATCGCCGAAGTATCGACTCAACTATCAGAGGTAGTTGGCGTCATCGAGCGCCATCTCGAACCGACGTTGCTGGCCGTACATTTGTACGGCTCCGCAGTGGATGGCGGCCTGAAGCCACACAGCGATATTGATTTGCTGGTTACGGTGACCGTAAGGCTTGATGAAACAACGCGGCGAGCTTTGATCAACGACCTTTTGGAAACTTCGGCTTCCCCTGGAGAGAGCGAGATTCTCCGCGCTGTAGAAGTCACCATTGTTGTGCACGACGACATCATTCCGTGGCGTTATCCAGCTAAGCGCGAACTGCAATTTGGAGAATGGCAGCGCAATGACATTCTTGCAGGTATCTTCGAGCCAGCCACGATCGACATTGATCTGGCTATCTTGCTGACAAAAGCAAGAGAACATAGCGTTGCCTTGGTAGGTCCAGCGGCGGAGGAACTCTTTGATCCGGTTCCTGAACAGGATCTATTTGAGGCGCTAAATGAAACCTTAACGCTATGGAACTCGCCGCCCGACTGGGCTGGCGATGAGCGAAATGTAGTGCTTACGTTGTCCCGCATTTGGTACAGCGCAGTAACCGGCAAAATCGCGCCGAAGGATGTCGCTGCCGACTGGGCAATGGAGCGCCTGCCGGCCCAGTATCAGCCCGTCATACTTGAAGCTAGACAGGCTTATCTTGGACAAGAAGAAGATCGCTTGGCCTCGCGCGCAGATCAGTTGGAAGAATTTGTCCATTACGTAAAAGGCGAGATCACCAAGGTAGTCGGCAAATAACTGTCAGACCAAGTTTACTCATATATACTTTAGATTGATTTAAAACTTCATTTTTAATTTAAAAGGATCTAGGTGAAGATCCTTTTTGATAATCTCATGACCAAAATCCCTTAACGTGAGTTTTCGTTCCACTGAGCGTCAGACCCCGTAGAAAAGATCAAAGGATCTTCTTGAGATCCTTTTTTTCTGCGCGTAATCTGCTGCTTGCAAACAAAAAAACCACCGCTACCAGCGGTGGTTTGTTTGCCGGATCAAGAGCTACCAACTCTTTTTCCGAAGGTAACTGGCTTCAGCAGAGCGCAGATACCAAATACTGTCCTTCTAGTGTAGCCGTAGTTAGGCCACCACTTCAAGAACTCTGTAGCACCGCCTACATACCTCGCTCTGCTAATCCTGTTACCAGTGGCTGCTGCCAGTGGCGATAAGTCGTGTCTTACCGGGTTGGACTCAAGACGATAGTTACCGGATAAGGCGCAGCGGTCGGGCTGAACGGGGGGTTCGTGCACACAGCCCAGCTTGGAGCGAACGACCTACACCGAACTGAGATACCTACAGCGTGAGCTATGAGAAAGCGCCACGCTTCCCGAAGGGAGAAAGGCGGACAGGTATCCGGTAAGCGGCAGGGTCGGAACAGGAGAGCGCACGAGGGAGCTTCCAGGGGGAAACGCCTGGTATCTTTATAGTCCTGTCGGGTTTCGCCACCTCTGACTTGAGCGTCGATTTTTGTGATGCTCGTCAGGGGGGCGGAGCCTATGGAAAAACGCCAGCAACGCGGCCTTTTTACGGTTCCTGGCCTTTTGCTGGCCTTTTGCTCACATGTTCTTTCCTGCGTTATCCCCTGATTCTGTGGATAACCGTATTACCGCCTTTGAGTGAGCTGATACCGCTCGCCGCAGCCGAACGACCGAGCGCAGCGAGTCAGTGAGCGAGGAAGCGGAAGAGCGCCCAATACGCAAACCGCCTCTCCCCGCGCGTTGGCCGATTCATTAATCACTCTGTGGTCTCATTCGTACCCATACGATGTTCCTGACTATGCGGGCTATCCCTATGACGTCCCGGACTATGCAGGATTGTATCCATATGACGTTCCAGATTACGCCACTAGAGCTGCTTACCCATACGATGTTCCTGACTATGCGGGCTATCCCTATGACGTCCCGGACTATGCAGGATTGTATCCATATGACGTTCCAGATTACGCCTGAGCTTTGAGACCACGAA" .
+<http://www.async.ece.utah.edu/pICSL50009_seq> <http://sbols.org/v2#encoding> <http://www.chem.qmul.ac.uk/iubmb/misc/naseq.html> .
+<http://www.async.ece.utah.edu/pICSL50009_seq> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/pICSL50009_seq> .
+<http://www.async.ece.utah.edu/pICSL50009_seq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#Sequence> .

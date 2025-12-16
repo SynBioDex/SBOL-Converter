@@ -70,6 +70,31 @@
       <genbank:division>UNA</genbank:division>
       <sbol:type rdf:resource="https://identifiers.org/SO:0000988"/>
       <sbol:hasFeature>
+         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH41414/annotation2">
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH41414/annotation2/range">
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>1208</sbol:end>
+                  <sbol:start>1208</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH41414_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <gbConv:label>G to A</gbConv:label>
+            <gbConv:vntifkey>62</gbConv:vntifkey>
+            <gbConv:dnas_title>G to A</gbConv:dnas_title>
+            <gbConv:featureType>Mutation</gbConv:featureType>
+            <sbol:name>G to A</sbol:name>
+            <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
+            <sbol:displayId>annotation2</sbol:displayId>
+         </sbol:SequenceFeature>
+      </sbol:hasFeature>
+      <genbank:molecule>DNA</genbank:molecule>
+      <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH41414/annotation4">
             <gbConv:note> RNaseH cleavage point </gbConv:note>
             <sbol:name>ORI</sbol:name>
@@ -92,31 +117,6 @@
             <sbol:displayId>annotation4</sbol:displayId>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
             <gbConv:dnas_title>ORI</gbConv:dnas_title>
-         </sbol:SequenceFeature>
-      </sbol:hasFeature>
-      <genbank:molecule>DNA</genbank:molecule>
-      <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH41414/annotation2">
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH41414/annotation2/range">
-                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
-                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>1208</sbol:end>
-                  <sbol:start>1208</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH41414_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <gbConv:label>G to A</gbConv:label>
-            <gbConv:vntifkey>62</gbConv:vntifkey>
-            <gbConv:dnas_title>G to A</gbConv:dnas_title>
-            <gbConv:featureType>Mutation</gbConv:featureType>
-            <sbol:name>G to A</sbol:name>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
-            <sbol:displayId>annotation2</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasFeature>

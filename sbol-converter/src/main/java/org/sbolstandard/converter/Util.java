@@ -18,7 +18,6 @@ import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.sbolstandard.core2.Annotation;
-import org.sbolstandard.core2.Attachment;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.EDAMOntology;
 import org.sbolstandard.core2.RestrictionType;

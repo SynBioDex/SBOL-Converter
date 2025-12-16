@@ -3,8 +3,13 @@ package org.sbolstandard.converter.tests;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.List;
 
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.riot.RDFFormat;
 import org.sbolstandard.converter.sbol23_31.SBOLDocumentConverter;
 import org.sbolstandard.core2.SBOLDocument;
 import org.sbolstandard.core2.SBOLReader;
@@ -15,6 +20,9 @@ import org.sbolstandard.core3.entity.SubComponent;
 import org.sbolstandard.core3.io.SBOLFormat;
 import org.sbolstandard.core3.io.SBOLIO;
 import org.sbolstandard.core3.util.Configuration;
+import org.sbolstandard.core3.util.RDFUtil;
+import org.sbolstandard.core3.util.SBOLGraphException;
+import org.sbolstandard.core3.util.SBOLUtil;
 import org.sbolstandard.core3.validation.IdentifiedValidator;
 
 public class TestUtil {
@@ -48,7 +56,17 @@ public class TestUtil {
 		return roundTripConvert(doc, sbol3Validate, outputFile, printToScreen);		
 	}
 
-	public static List<String> roundTripConvert(SBOLDocument sbol2InputDocument, boolean sbol3Validate, String outputFile, boolean printToScreen) throws Exception {
+
+    private static void createSortedNtriples(File input, File output) throws FileNotFoundException, IOException, SBOLGraphException {
+                Model model = RDFUtil.read(input, RDFFormat.RDFXML);
+                File fileTmpUnsortedSBOL2=new File(output.getParent(), input.getName() + "_unsorted.nt");
+				RDFUtil.write(model, fileTmpUnsortedSBOL2, RDFFormat.NTRIPLES);
+                SBOLUtil.sort(fileTmpUnsortedSBOL2, output, Charset.forName("ASCII"));
+				fileTmpUnsortedSBOL2.delete();
+
+        }
+
+		public static List<String> roundTripConvert(SBOLDocument sbol2InputDocument, boolean sbol3Validate, String outputFile, boolean printToScreen) throws Exception {
 		Configuration.getInstance().setValidateBeforeSaving(sbol3Validate);
 		Configuration.getInstance().setValidateAfterSettingProperties(sbol3Validate);
 		
@@ -56,8 +74,10 @@ public class TestUtil {
 		if (printToScreen){
 			SBOLWriter.write(sbol2InputDocument, System.out);
 		}
-		if (outputFile != null) {			
-			SBOLWriter.write(sbol2InputDocument, new File(outputFile + "_sbol2.xml"));
+		if (outputFile != null) {
+			File sbol2File = new File(outputFile + "_sbol2.xml");			
+			SBOLWriter.write(sbol2InputDocument, sbol2File);
+			createSortedNtriples(sbol2File, new File(outputFile + "_sbol2_sorted.nt"));
 		}
 
 		SBOLDocumentConverter converter = new SBOLDocumentConverter();
@@ -70,7 +90,7 @@ public class TestUtil {
 		}
 		if (outputFile != null) {			
 			SBOLIO.write(sbol3Doc, new File(outputFile + "_sbol3.xml"), SBOLFormat.RDFXML);
-			SBOLIO.write(sbol3Doc, new File(outputFile + "_sbol3.ttl"), SBOLFormat.RDFXML);			
+			SBOLIO.write(sbol3Doc, new File(outputFile + "_sbol3.ttl"), SBOLFormat.TURTLE);	
 		}
 		
 		org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter converter3_2 = new org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter();
@@ -84,6 +104,7 @@ public class TestUtil {
 		}
 		if (outputFile != null) {			
 			SBOLWriter.write(sbol2Doc, new File(outputFile + "_sbol2_from_sbol3.xml"));
+			createSortedNtriples(new File(outputFile + "_sbol2_from_sbol3.xml"), new File(outputFile + "_sbol2_from_sbol3_sorted.nt"));
 		}
 		SBOLValidate.compareDocuments("SBOL2in", sbol2InputDocument, "SBOL2out", sbol2Doc);
 		

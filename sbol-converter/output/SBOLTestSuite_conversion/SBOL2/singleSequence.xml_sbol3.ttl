@@ -1,21 +1,20 @@
-<rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:SO="https://identifiers.org/SO:"
-    xmlns:grn="urn:bbn.com:tasbe:grn/"
-    xmlns:sbol="http://sbols.org/v3#"
-    xmlns:GO="https://identifiers.org/GO:"
-    xmlns:backport2_3="https://sbols.org/backport/2_3#"
-    xmlns:dcterms="http://purl.org/dc/terms/"
-    xmlns:EDAM="https://identifiers.org/edam:"
-    xmlns:CHEBI="https://identifiers.org/CHEBI:"
-    xmlns:prov="http://www.w3.org/ns/prov#"
-    xmlns:annot="http://myannotation.org/"
-    xmlns:SBO="https://identifiers.org/SBO:"
-    xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
-   <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1.0/pLacSeq">
-      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
-      <sbol:elements>ACGTURYSWKMBDHVN-.</sbol:elements>
-      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
-      <sbol:displayId>pLacSeq</sbol:displayId>
-   </sbol:Sequence>
-</rdf:RDF>
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX annot:       <http://myannotation.org/>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX grn:         <urn:bbn.com:tasbe:grn/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+
+<http://www.async.ece.utah.edu/1.0/pLacSeq>
+        rdf:type           sbol:Sequence;
+        sbol:displayId     "pLacSeq";
+        sbol:elements      "ACGTURYSWKMBDHVN-.";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <http://www.async.ece.utah.edu> .

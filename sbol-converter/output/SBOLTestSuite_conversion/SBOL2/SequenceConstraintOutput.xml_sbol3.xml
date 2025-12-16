@@ -35,18 +35,18 @@
       <sbol:displayId>BBa_K174004</sbol:displayId>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://partsregistry.org/cd/BBa_K174004/Interface1">
+            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_K174004/LacI_operator"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://partsregistry.org/cd/BBa_K174004/pspac">
                   <sbol:instanceOf rdf:resource="http://partsregistry.org/cd/pspac"/>
                   <sbol:displayId>pspac</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_K174004/LacI_operator"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:hasFeature rdf:resource="http://partsregistry.org/cd/BBa_K174004/pspac"/>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:hasNamespace rdf:resource="http://partsregistry.org/cd"/>
       <sbol:name>constitutive promoter</sbol:name>
       <sbol:description>pspac core promoter region</sbol:description>

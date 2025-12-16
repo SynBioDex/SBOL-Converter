@@ -1,0 +1,5 @@
+<http://www.partsregistry.org/act/activityId> <http://sbols.org/v2#displayId> "activityId" .
+<http://www.partsregistry.org/act/activityId> <http://sbols.org/v2#persistentIdentity> <http://www.partsregistry.org/act/activityId> .
+<http://www.partsregistry.org/act/activityId> <http://sbols.org/v2#type> <http://purl.obolibrary.org/obo/CHEBI_23924> .
+<http://www.partsregistry.org/act/activityId> <http://sbols.org/v2#type> <http://purl.obolibrary.org/obo/OBI_0000415> .
+<http://www.partsregistry.org/act/activityId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
