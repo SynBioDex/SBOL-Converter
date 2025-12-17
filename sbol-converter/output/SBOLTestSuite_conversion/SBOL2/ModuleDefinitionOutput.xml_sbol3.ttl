@@ -129,7 +129,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbolstandard.org/example/tetr_inverter/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://sbolstandard.org/example/tetr_inverter/TF> , <http://sbolstandard.org/example/tetr_inverter/promoter> .
+        sbol:nondirectional  <http://sbolstandard.org/example/tetr_inverter/promoter> , <http://sbolstandard.org/example/tetr_inverter/TF> .
 
 <http://sbolstandard.org/example/toggle_switch>
         rdf:type                      sbol:Component;
@@ -186,16 +186,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:displayId       "Interface1";
         sbol:nondirectional  <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKERightCassette_1> , <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKELeftCassette_1> .
 
-<http://sbolstandard.org/example/toggle_switch/laci_inverter>
-        rdf:type         sbol:SubComponent;
-        sbol:displayId   "laci_inverter";
-        sbol:instanceOf  <http://sbolstandard.org/example/laci_inverter> .
-
 <http://sbolstandard.org/example/tetr_inverter/promoter>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "promoter";
         sbol:instanceOf               <http://www.partsregistry.org/BBa_R0040>;
         backport2_3:sbol2OriginalURI  <http://sbolstandard.org/example/tetr_inverter/promoter> .
+
+<http://sbolstandard.org/example/toggle_switch/laci_inverter>
+        rdf:type         sbol:SubComponent;
+        sbol:displayId   "laci_inverter";
+        sbol:instanceOf  <http://sbolstandard.org/example/laci_inverter> .
 
 <http://www.virtualparts.org/part/BBa_J61120>
         rdf:type                      sbol:Sequence;

@@ -55,19 +55,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:role                     SO:0000234;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation7/1> .
 
-<http://www.async.ece.utah.edu/1/U49845/annotation2>
-        rdf:type                      sbol:SequenceFeature;
-        gbConv:codon_start            "3";
-        gbConv:db_xref                "GI:1293614";
-        gbConv:product                "TCP1-beta";
-        gbConv:protein_id             "AAA98665.1";
-        gbConv:translation            "SSIYNGISTSGLDLNNGTIADMRQLGIVESYKLKRAVVSSASEAAEVLLRVDNIIRARPRTANRQHM";
-        sbol:displayId                "annotation2";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/1/U49845/annotation2/range>;
-        sbol:name                     "TCP1-beta";
-        sbol:role                     SO:0000316;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation2/1> .
-
 <http://www.async.ece.utah.edu/1/U49845/annotation6/range>
         rdf:type                      sbol:Range;
         gbConv:endGreaterThan         "true";
@@ -80,6 +67,19 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation6/range/1> .
+
+<http://www.async.ece.utah.edu/1/U49845/annotation2>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:codon_start            "3";
+        gbConv:db_xref                "GI:1293614";
+        gbConv:product                "TCP1-beta";
+        gbConv:protein_id             "AAA98665.1";
+        gbConv:translation            "SSIYNGISTSGLDLNNGTIADMRQLGIVESYKLKRAVVSSASEAAEVLLRVDNIIRARPRTANRQHM";
+        sbol:displayId                "annotation2";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/U49845/annotation2/range>;
+        sbol:name                     "TCP1-beta";
+        sbol:role                     SO:0000316;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation2/1> .
 
 <http://www.async.ece.utah.edu/1/U49845/reference1>
         rdf:type         genbank:Reference , sbol:Identified;

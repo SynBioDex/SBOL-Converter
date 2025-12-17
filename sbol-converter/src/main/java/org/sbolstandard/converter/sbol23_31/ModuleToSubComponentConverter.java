@@ -2,8 +2,6 @@ package org.sbolstandard.converter.sbol23_31;
 
 import java.net.URI;
 
-
-
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.converter.sbol23_31.measurement.MeasurementConverter;
 import org.sbolstandard.core2.SBOLValidationException;
@@ -23,9 +21,8 @@ public class ModuleToSubComponentConverter
 		
 		org.sbolstandard.core3.entity.Component sbol3ParentComponent = (org.sbolstandard.core3.entity.Component) sbol3Parent;
 
-		URI sbol3ChildComponentURI=Util.createSBOL3Uri(sbol2Module.getDefinition());
-		//System.out.println("sbol3ChildComponentURI: " + sbol3ChildComponentURI + " sbol2Module.getDef.getUri: " + sbol2Module.getDefinition().getIdentity());
-
+		URI sbol3ChildComponentURI=Util.createSBOL3Uri(sbol2Module.getDefinitionURI(), parameters);
+	
 		SubComponent sbol3SubComponentForModule = null;
 		if (sbol2Module.getDisplayId() != null) {
 			sbol3SubComponentForModule = sbol3ParentComponent.createSubComponent(sbol2Module.getDisplayId(),
@@ -33,11 +30,8 @@ public class ModuleToSubComponentConverter
 		} else {
 			sbol3SubComponentForModule = sbol3ParentComponent.createSubComponent(sbol3ChildComponentURI);
 			parameters.addMapping(sbol2Module.getIdentity(), sbol3SubComponentForModule.getUri());
-			//sbol3SubComponentForModule.addAnnotion(URI.create("http//sbolstandard.org/sbol-converter/23_to_31"),sbol2Module.getIdentity());
 		}
 		
-		// MEASURES
-		//System.out.println("ModuleToSubComponentConverter.convert() NOT IMPLEMENTED YET");
 		if(sbol2Module.getMeasures()!=null) {
 			MeasurementConverter measurementConverter = new MeasurementConverter();
 			for (org.sbolstandard.core2.Measure sbol2Measure : sbol2Module.getMeasures()) {
@@ -46,7 +40,5 @@ public class ModuleToSubComponentConverter
 		}
 
 		return sbol3SubComponentForModule;
-
 	}
-
 }
