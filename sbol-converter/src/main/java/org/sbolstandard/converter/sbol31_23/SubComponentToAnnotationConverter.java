@@ -148,9 +148,7 @@ public class SubComponentToAnnotationConverter implements ChildEntityConverter<S
 		List<Object> backPorts=sbol3SubComponent.getAnnotation(ConverterVocabulary.Two_to_Three.sbol2SequenceAnnotationURI);
 		if (backPorts!=null && backPorts.size()>0){
 			URI sbol2AnnotationURI= (URI) backPorts.get(0);
-			sbol2AnnotationId= Util.extractDisplayIdSBOL2Uri(sbol2AnnotationURI.toString());
-		
-			//SBOLAPI.inferDisplayId(sbol2AnnotationURI);		
+			sbol2AnnotationId= Util.extractDisplayIdSBOL2Uri(sbol2AnnotationURI.toString());	
 		}
 		return sbol2AnnotationId;
 	}

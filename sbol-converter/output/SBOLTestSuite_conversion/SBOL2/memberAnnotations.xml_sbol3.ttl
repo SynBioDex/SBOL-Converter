@@ -53,7 +53,9 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/1.0/someModuleDef/someModule>
         rdf:type         sbol:SubComponent;
         sbol:displayId   "someModule";
-        sbol:instanceOf  <http://www.async.ece.utah.edu/1.0/someModuleDefSub> .
+        sbol:instanceOf  <http://www.async.ece.utah.edu/1.0/someModuleDefSub>;
+        backport2_3:sbol2OriginatesFromModule
+                "true" .
 
 <http://www.async.ece.utah.edu/1.0/someCompDefCDS>
         rdf:type                      sbol:Component;
@@ -122,7 +124,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/1.0/someCompDef/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/1.0/someCompDef/someComponent> , <http://www.async.ece.utah.edu/1.0/someCompDef/someOtherComponent> .
+        sbol:nondirectional  <http://www.async.ece.utah.edu/1.0/someCompDef/someOtherComponent> , <http://www.async.ece.utah.edu/1.0/someCompDef/someComponent> .
 
 <http://www.async.ece.utah.edu/1.0/someCompDef/someComponent>
         rdf:type                      sbol:SubComponent;

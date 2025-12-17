@@ -55,14 +55,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:hasNamespace             pr:seq;
         backport2_3:sbol2OriginalURI  <http://partsregistry.org/seq/seq_base1> .
 
-<http://partsregistry.org/seq/seq_comp>
-        rdf:type                      sbol:Sequence;
-        sbol:displayId                "seq_comp";
-        sbol:elements                 "acagctagctcacagctagctc";
-        sbol:encoding                 EDAM:format_1207;
-        sbol:hasNamespace             pr:seq;
-        backport2_3:sbol2OriginalURI  <http://partsregistry.org/seq/seq_comp> .
-
 <http://partsregistry.org/cd/cd_base_1>
         rdf:type                      sbol:Component;
         sbol:displayId                "cd_base_1";
@@ -72,10 +64,18 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:type                     SBO:0000251;
         backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/cd_base_1> .
 
+<http://partsregistry.org/seq/seq_comp>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "seq_comp";
+        sbol:elements                 "acagctagctcacagctagctc";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             pr:seq;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/seq/seq_comp> .
+
 <http://partsregistry.org/cd/cd_comp/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://partsregistry.org/cd/cd_comp/base2> , <http://partsregistry.org/cd/cd_comp/base1> .
+        sbol:nondirectional  <http://partsregistry.org/cd/cd_comp/base1> , <http://partsregistry.org/cd/cd_comp/base2> .
 
 <http://partsregistry.org/cd/cd_comp/base2/base_c2>
         rdf:type                      sbol:Range;

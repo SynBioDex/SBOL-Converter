@@ -1,0 +1,954 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dc:          <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX igem:        <http://wiki.synbiohub.org/wiki/Terms/igem#>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbh:         <http://wiki.synbiohub.org/wiki/Terms/synbiohub#>
+PREFIX sbol:        <http://sbols.org/v3#>
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/Ter_Component>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "Ter_Component";
+        sbol:instanceOf               <https://synbiohub.org/public/igem/1/BBa_B0014>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2/Ter_Component/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0014_sequence>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "BBa_B0014_sequence";
+        sbol:elements                 "tcacactggctcaccttcgggtgggcctttctgcgtttatatactagagagagaatataaaaagccagattattaatccggcttttttattattt";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <https://synbiohub.org/public/igem>;
+        sbh:ownedBy                   <https://synbiohub.org/user/myers> , <https://synbiohub.org/user/james>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0014_sequence/1>;
+        prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_B0014>;
+        prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0014_sequence/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/GFP_Reporter_Template_SequenceConstraint1>
+        rdf:type                      sbol:Constraint;
+        sbol:displayId                "GFP_Reporter_Template_SequenceConstraint1";
+        sbol:object                   <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/CDS_Component>;
+        sbol:restriction              sbol:precedes;
+        sbol:subject                  <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/RBS_Component>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance3/GFP_Reporter_Template_SequenceConstraint1/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0011/annotation7019/range7019>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range7019";
+        sbol:end                      "46";
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_B0011_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1";
+        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0011/1>;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0011/annotation7019/range7019/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0012/annotation1687>
+        rdf:type                      sbol:SequenceFeature;
+        sbol:displayId                "annotation1687";
+        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_B0012/annotation1687/range1687>;
+        sbol:name                     "stop";
+        sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#feature/stop> , SO:0000319;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0012/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0012/annotation1687/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0011>
+        rdf:type                      sbol:Component;
+        dc:creator                    "Reshma Shetty";
+        dcterms:created               "2003-01-31T12:00:00Z";
+        dcterms:modified              "2015-08-31T04:07:20Z";
+        sbol:description              "LuxICDABEG (+/-)";
+        sbol:displayId                "BBa_B0011";
+        sbol:hasFeature               <https://synbiohub.org/public/igem/1/BBa_B0011/annotation1683> , <https://synbiohub.org/public/igem/1/BBa_B0011/annotation7019>;
+        sbol:hasNamespace             <https://synbiohub.org/public/igem>;
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_B0011_sequence>;
+        sbol:name                     "BBa_B0011";
+        sbol:role                     SO:0000141 , <https://wiki.synbiohub.org/wiki/Terms/igem#partType/Terminator>;
+        sbol:type                     SBO:0000251;
+        igem:discontinued             "false";
+        igem:dominant                 "false";
+        igem:experience               <http://wiki.synbiohub.org/wiki/Terms/igem#experience/Works>;
+        igem:group_u_list             "_1_";
+        igem:m_user_id                "0";
+        igem:owner_id                 "24";
+        igem:owning_group_id          "7";
+        igem:partStatus               "Released HQ 2013";
+        igem:sampleStatus             "In stock";
+        igem:status                   <http://wiki.synbiohub.org/wiki/Terms/igem#status/Available>;
+        sbh:bookmark                  "false";
+        sbh:mutableDescription        "Bidirectional transcriptional terminator consisting of a 22 bp stem-loop.</p>";
+        sbh:mutableNotes              "<P> <P>In the naturally-occuring sequence there is a mismatch in the stem of the      stem loop. This can be corrected via an A-&gt;G mutation (at position 40 -- sequence coordinate/not MFOLD coordinate). The above sequence does not reflect this mutation (but the MFOLD image does). This terminator's location cannot be      found using some inverted repeat detectors like PALINDROME because it is too      short and contains a mismatch. This one was found with the help of Tom Knight.      It lies between two coding regions that point towards eachother.<P>";
+        sbh:mutableProvenance         "Derived from luxICDABEG operon terminator of Vibrio fischeri <genbank>AF170104</genbank>.";
+        sbh:ownedBy                   <https://synbiohub.org/user/myers> , <https://synbiohub.org/user/james>;
+        sbh:star                      "true";
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0011/1>;
+        prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_B0011>;
+        prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0011/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/Ter_Component>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "Ter_Component";
+        sbol:instanceOf               <https://synbiohub.org/public/igem/1/BBa_B0014>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance1/Ter_Component/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0012/annotation1690/range1690>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range1690";
+        sbol:end                      "41";
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_B0012_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "28";
+        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0012/1>;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0012/annotation1690/range1690/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_E0040>
+        rdf:type                      sbol:Component;
+        dc:creator                    "jcbraff";
+        dcterms:created               "2004-09-29T11:00:00Z";
+        dcterms:modified              "2016-01-26T02:09:38Z";
+        sbol:description              "green fluorescent protein derived from jellyfish Aequeora victoria wild-type GFP (SwissProt: P42212";
+        sbol:displayId                "BBa_E0040";
+        sbol:hasFeature               <https://synbiohub.org/public/igem/1/BBa_E0040/annotation1934520>;
+        sbol:hasNamespace             <https://synbiohub.org/public/igem>;
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_E0040_sequence>;
+        sbol:name                     "GFP";
+        sbol:role                     SO:0000316 , <https://wiki.synbiohub.org/wiki/Terms/igem#partType/Coding>;
+        sbol:type                     SBO:0000251;
+        igem:discontinued             "false";
+        igem:dominant                 "true";
+        igem:experience               <http://wiki.synbiohub.org/wiki/Terms/igem#experience/Works>;
+        igem:group_u_list             "_11_1_";
+        igem:m_user_id                "4206";
+        igem:owner_id                 "61";
+        igem:owning_group_id          "7";
+        igem:partStatus               "Released HQ 2013";
+        igem:sampleStatus             "In stock";
+        igem:status                   <http://wiki.synbiohub.org/wiki/Terms/igem#status/Available>;
+        sbh:bookmark                  "false";
+        sbh:mutableDescription        "GFP (mut3b) [note that this part does not have a barcode]";
+        sbh:ownedBy                   <https://synbiohub.org/user/myers> , <https://synbiohub.org/user/james>;
+        sbh:star                      "true";
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_E0040/1>;
+        prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_E0040>;
+        prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0040/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/RBS_Component>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "RBS_Component";
+        sbol:instanceOf               <https://synbiohub.org/public/igem/1/BBa_B0034>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance1/RBS_Component/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template/CDS_Component/GenericLocation>
+        rdf:type                      sbol:EntireSequence;
+        sbol:displayId                "GenericLocation";
+        sbol:hasSequence              <http://michael.zhang/1/GFP_Reporter_TemplateSequence>;
+        sbol:orientation              SO:0001030;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation2/GenericLocation/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0011/annotation1683/range1683>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range1683";
+        sbol:end                      "35";
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_B0011_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "13";
+        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0011/1>;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0011/annotation1683/range1683/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3_SBOLDesignerActivity>
+        rdf:type                      sbol:TopLevel , prov:Activity;
+        dc:creator                    "Michael Zhang";
+        sbol:displayId                "GFP_Reporter_Template_GeneratedInstance3_SBOLDesignerActivity";
+        sbol:hasNamespace             <http://michael.zhang>;
+        prov:endedAtTime              "2018-01-23T00:16:05Z";
+        prov:qualifiedAssociation     <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3_SBOLDesignerActivity/Association>;
+        prov:qualifiedUsage           <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3_SBOLDesignerActivity/GFP_Reporter_Template_CombinatorialDerivation_Usage>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance3_SBOLDesignerActivity/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0012/annotation1690>
+        rdf:type                      sbol:SequenceFeature;
+        sbol:displayId                "annotation1690";
+        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_B0012/annotation1690/range1690>;
+        sbol:name                     "polya";
+        sbol:role                     SO:0000553 , <https://wiki.synbiohub.org/wiki/Terms/igem#feature/polya>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0012/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0012/annotation1690/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_SBOLDesignerActivity>
+        rdf:type                      sbol:TopLevel , prov:Activity;
+        dc:creator                    "Michael Zhang";
+        sbol:displayId                "GFP_Reporter_Template_SBOLDesignerActivity";
+        sbol:hasNamespace             <http://michael.zhang>;
+        prov:endedAtTime              "2018-01-23T00:15:58Z";
+        prov:qualifiedAssociation     <http://michael.zhang/1/GFP_Reporter_Template_SBOLDesignerActivity/Association>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_I766210_sequence>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "BBa_I766210_sequence";
+        sbol:elements                 "tctaaaggtgaagaattattcactggtgttgtcccaattttggttgaattagatggtgatgttaatggtcacaaattttctgtctccggtgaaggtgaaggtgatgctacttacggtaaattgaccttaaaatttatttgtactactggtaaattgccagttccatggccaaccttagtcactactttaacttatggtgttcaatgtttttctagatacccagatcatatgaaacaacatgactttttcaagtctgccatgccagaaggttatgttcaagaaagaactatttttttcaaagatgacggtaactacaagaccagagctgaagtcaagtttgaaggtgataccttagttaatagaatcgaattaaaaggtattgattttaaagaagatggtaacattttaggtcacaaattggaatacaactataactctcacaatgtttacatcatggctgacaaacaaaagaatggtatcaaagttaacttcaaaattagacacaacattgaagatggttctgttcaattagctgaccattatcaacaaaatactccaattggtgatggtccagtcttgttaccagacaaccattacttatccactcaatctaggttatccaaagatccaaacgaaaagagagaccacatggtcttgttagaatttgttactgctgctggtattacccatggtatggatgaattgtacaaa";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <https://synbiohub.org/public/igem>;
+        sbh:ownedBy                   <https://synbiohub.org/user/myers> , <https://synbiohub.org/user/james>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_I766210_sequence/1>;
+        prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_I766210>;
+        prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_I766210_sequence/1> .
+
+<http://michael.zhang/1/Pro>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "Pro";
+        sbol:hasNamespace             <http://michael.zhang>;
+        sbol:role                     SO:0000167;
+        sbol:type                     SBO:0000251;
+        prov:wasGeneratedBy           <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance3_SBOLDesignerActivity/1> , <http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/Pro/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/Pro_Component>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "Pro_Component";
+        sbol:instanceOf               <http://michael.zhang/1/Pro>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2/Pro_Component/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0034>
+        rdf:type                      sbol:Component;
+        dc:creator                    "Vinay S Mahajan, Voichita D. Marinescu, Brian Chow, Alexander      D Wissner-Gross and Peter Carr IAP, 2003.";
+        dcterms:created               "2003-01-31T12:00:00Z";
+        dcterms:modified              "2015-08-31T04:07:20Z";
+        sbol:description              "RBS (Elowitz 1999) -- defines RBS efficiency";
+        sbol:displayId                "BBa_B0034";
+        sbol:hasFeature               <https://synbiohub.org/public/igem/1/BBa_B0034/annotation23325>;
+        sbol:hasNamespace             <https://synbiohub.org/public/igem>;
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_B0034_sequence>;
+        sbol:name                     "BBa_B0034";
+        sbol:role                     SO:0000139 , <https://wiki.synbiohub.org/wiki/Terms/igem#partType/RBS>;
+        sbol:type                     SBO:0000251;
+        igem:discontinued             "false";
+        igem:dominant                 "true";
+        igem:experience               <http://wiki.synbiohub.org/wiki/Terms/igem#experience/Works>;
+        igem:group_u_list             "_1_";
+        igem:m_user_id                "0";
+        igem:owner_id                 "24";
+        igem:owning_group_id          "7";
+        igem:partStatus               "Released HQ 2013";
+        igem:sampleStatus             "In stock";
+        igem:status                   <http://wiki.synbiohub.org/wiki/Terms/igem#status/Available>;
+        sbh:bookmark                  "false";
+        sbh:mutableDescription        "RBS based on Elowitz repressilator.";
+        sbh:mutableNotes              "Varies from -6 to +1 region from original sequence to accomodate BioBricks      suffix.   <p>No secondary structures are formed in the given RBS region. Users should check      for secondary structures induced in the RBS by upstream and downstream elements      in the +50 to -50 region, as such structures will greatly affect the strength      of the RBS.\n\nContact info for this part: <a href=\"mailto:(bchow@media.mit.edu)\">Brian Chow</a>";
+        sbh:ownedBy                   <https://synbiohub.org/user/james> , <https://synbiohub.org/user/myers>;
+        sbh:star                      "true";
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0034/1>;
+        prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_B0034>;
+        prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0034/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0014/component939311/range939311>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range939311";
+        sbol:end                      "95";
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_B0014_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "50";
+        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0014/1>;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0014/annotation939311/range939311/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0012/annotation1687/range1687>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range1687";
+        sbol:end                      "34";
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_B0012_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "34";
+        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0012/1>;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0012/annotation1687/range1687/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_E0040/annotation1934520/range1934520>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range1934520";
+        sbol:end                      "720";
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_E0040_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1";
+        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_E0040/1>;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0040/annotation1934520/range1934520/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/Ter_Component>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "Ter_Component";
+        sbol:instanceOf               <https://synbiohub.org/public/igem/1/BBa_B0014>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance3/Ter_Component/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_E0040_sequence>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "BBa_E0040_sequence";
+        sbol:elements                 "atgcgtaaaggagaagaacttttcactggagttgtcccaattcttgttgaattagatggtgatgttaatgggcacaaattttctgtcagtggagagggtgaaggtgatgcaacatacggaaaacttacccttaaatttatttgcactactggaaaactacctgttccatggccaacacttgtcactactttcggttatggtgttcaatgctttgcgagatacccagatcatatgaaacagcatgactttttcaagagtgccatgcccgaaggttatgtacaggaaagaactatatttttcaaagatgacgggaactacaagacacgtgctgaagtcaagtttgaaggtgatacccttgttaatagaatcgagttaaaaggtattgattttaaagaagatggaaacattcttggacacaaattggaatacaactataactcacacaatgtatacatcatggcagacaaacaaaagaatggaatcaaagttaacttcaaaattagacacaacattgaagatggaagcgttcaactagcagaccattatcaacaaaatactccaattggcgatggccctgtccttttaccagacaaccattacctgtccacacaatctgccctttcgaaagatcccaacgaaaagagagaccacatggtccttcttgagtttgtaacagctgctgggattacacatggcatggatgaactatacaaataataa";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <https://synbiohub.org/public/igem>;
+        sbh:ownedBy                   <https://synbiohub.org/user/james> , <https://synbiohub.org/user/myers>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_E0040_sequence/1>;
+        prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_E0040>;
+        prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0040_sequence/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/RBS_Component>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "RBS_Component";
+        sbol:instanceOf               <https://synbiohub.org/public/igem/1/BBa_B0034>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance3/RBS_Component/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/CDS_Component>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "CDS_Component";
+        sbol:instanceOf               <https://synbiohub.org/public/igem/1/BBa_E0040>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance1/CDS_Component/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/GFP_Reporter_Template_SequenceConstraint>
+        rdf:type                      sbol:Constraint;
+        sbol:displayId                "GFP_Reporter_Template_SequenceConstraint";
+        sbol:object                   <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/RBS_Component>;
+        sbol:restriction              sbol:precedes;
+        sbol:subject                  <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/Pro_Component>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2/GFP_Reporter_Template_SequenceConstraint/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template/RBS_Component/GFP_Reporter_Template_SequenceAnnotation1_Range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "GFP_Reporter_Template_SequenceAnnotation1_Range";
+        sbol:end                      "12";
+        sbol:hasSequence              <http://michael.zhang/1/GFP_Reporter_TemplateSequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation1/GFP_Reporter_Template_SequenceAnnotation1_Range/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/GFP_Reporter_Template_SequenceConstraint2>
+        rdf:type                      sbol:Constraint;
+        sbol:displayId                "GFP_Reporter_Template_SequenceConstraint2";
+        sbol:object                   <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/Ter_Component>;
+        sbol:restriction              sbol:precedes;
+        sbol:subject                  <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/CDS_Component>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2/GFP_Reporter_Template_SequenceConstraint2/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0034/annotation23325>
+        rdf:type                      sbol:SequenceFeature;
+        sbol:displayId                "annotation23325";
+        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_B0034/annotation23325/range23325>;
+        sbol:name                     "conserved";
+        sbol:role                     SO:0000330 , <https://wiki.synbiohub.org/wiki/Terms/igem#feature/conserved>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0034/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0034/annotation23325/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/RBS_Component>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "RBS_Component";
+        sbol:instanceOf               <https://synbiohub.org/public/igem/1/BBa_B0034>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2/RBS_Component/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0011/annotation7019>
+        rdf:type                      sbol:SequenceFeature;
+        sbol:displayId                "annotation7019";
+        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_B0011/annotation7019/range7019>;
+        sbol:name                     "BBa_B0011";
+        sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#feature/BioBrick> , SO:0000804;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0011/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0011/annotation7019/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint1>
+        rdf:type                      sbol:Constraint;
+        sbol:displayId                "GFP_Reporter_Template_SequenceConstraint1";
+        sbol:object                   <http://michael.zhang/1/GFP_Reporter_Template/CDS_Component>;
+        sbol:restriction              sbol:precedes;
+        sbol:subject                  <http://michael.zhang/1/GFP_Reporter_Template/RBS_Component>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint1/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_SBOLDesignerActivity/Association>
+        rdf:type                      sbol:Identified , prov:Association;
+        sbol:displayId                "Association";
+        prov:agent                    <https://synbiohub.org/public/SBOL_Software/2.2/SBOLDesigner>;
+        prov:hadRole                  <http://sbols.org/v2#sequenceEditor>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/Association/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0012/annotation1686/range1686>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range1686";
+        sbol:end                      "27";
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_B0012_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "8";
+        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0012/1>;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0012/annotation1686/range1686/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/GFP_Reporter_Template_SequenceConstraint1>
+        rdf:type                      sbol:Constraint;
+        sbol:displayId                "GFP_Reporter_Template_SequenceConstraint1";
+        sbol:object                   <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/CDS_Component>;
+        sbol:restriction              sbol:precedes;
+        sbol:subject                  <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/RBS_Component>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance1/GFP_Reporter_Template_SequenceConstraint1/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0012_sequence>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "BBa_B0012_sequence";
+        sbol:elements                 "tcacactggctcaccttcgggtgggcctttctgcgtttata";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <https://synbiohub.org/public/igem>;
+        sbh:ownedBy                   <https://synbiohub.org/user/james> , <https://synbiohub.org/user/myers>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0012_sequence/1>;
+        prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_B0012>;
+        prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0012_sequence/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/Pro_Component>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "Pro_Component";
+        sbol:instanceOf               <http://michael.zhang/1/Pro>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance3/Pro_Component/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "GFP_Reporter_Template_GeneratedInstance1";
+        sbol:hasConstraint            <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/GFP_Reporter_Template_SequenceConstraint1> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/GFP_Reporter_Template_SequenceConstraint2> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/GFP_Reporter_Template_SequenceConstraint>;
+        sbol:hasFeature               <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/CDS_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/RBS_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/Ter_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/Pro_Component>;
+        sbol:hasInterface             <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/Interface1>;
+        sbol:hasNamespace             <http://michael.zhang>;
+        sbol:hasSequence              <http://michael.zhang/1/GFP_Reporter_TemplateSequence>;
+        sbol:role                     SO:0000804;
+        sbol:type                     SBO:0000251;
+        prov:wasDerivedFrom           <http://michael.zhang/UnnamedPart/1> , <http://michael.zhang/GFP_Reporter_Template/1>;
+        prov:wasGeneratedBy           <http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1> , <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance3_SBOLDesignerActivity/1>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance1/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0012/annotation7020>
+        rdf:type                      sbol:SequenceFeature;
+        sbol:displayId                "annotation7020";
+        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_B0012/annotation7020/range7020>;
+        sbol:name                     "BBa_B0012";
+        sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#feature/BioBrick> , SO:0000804;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0012/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0012/annotation7020/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_M36577>
+        rdf:type                      sbol:Component;
+        dc:creator                    "Elisa Vidales";
+        dcterms:created               "2015-10-21T11:00:00Z";
+        dcterms:modified              "2015-10-23T06:16:16Z";
+        sbol:description              "GFP";
+        sbol:displayId                "BBa_M36577";
+        sbol:hasNamespace             <https://synbiohub.org/public/igem>;
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_M36577_sequence>;
+        sbol:name                     "BBa_M36577";
+        sbol:role                     SO:0000316 , <https://wiki.synbiohub.org/wiki/Terms/igem#partType/Coding>;
+        sbol:type                     SBO:0000251;
+        igem:discontinued             "true";
+        igem:dominant                 "false";
+        igem:experience               <http://wiki.synbiohub.org/wiki/Terms/igem#experience/None>;
+        igem:group_u_list             "_848_";
+        igem:m_user_id                "29087";
+        igem:owner_id                 "29087";
+        igem:owning_group_id          "9";
+        igem:status                   <http://wiki.synbiohub.org/wiki/Terms/igem#status/Deleted>;
+        sbh:bookmark                  "false";
+        sbh:mutableDescription        "Codes GFP fluorescence.";
+        sbh:mutableNotes              "N/A";
+        sbh:mutableProvenance         "BIOE 44 pComet genome sequence";
+        sbh:ownedBy                   <https://synbiohub.org/user/myers> , <https://synbiohub.org/user/james>;
+        sbh:star                      "false";
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_M36577/1>;
+        prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_M36577>;
+        prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_M36577/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0034/annotation23325/range23325>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range23325";
+        sbol:end                      "8";
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_B0034_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "5";
+        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0034/1>;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0034/annotation23325/range23325/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/Interface1>
+        rdf:type             sbol:Interface;
+        sbol:displayId       "Interface1";
+        sbol:nondirectional  <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/Pro_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/Ter_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/CDS_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/RBS_Component> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3_SBOLDesignerActivity/GFP_Reporter_Template_CombinatorialDerivation_Usage>
+        rdf:type                      sbol:Identified , prov:Usage;
+        sbol:displayId                "GFP_Reporter_Template_CombinatorialDerivation_Usage";
+        prov:entity                   <http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation>;
+        prov:hadRole                  <http://sbols.org/v2#sequenceEditor>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance3_SBOLDesignerActivity/GFP_Reporter_Template_CombinatorialDerivation_Usage/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint>
+        rdf:type                      sbol:Constraint;
+        sbol:displayId                "GFP_Reporter_Template_SequenceConstraint";
+        sbol:object                   <http://michael.zhang/1/GFP_Reporter_Template/RBS_Component>;
+        sbol:restriction              sbol:precedes;
+        sbol:subject                  <http://michael.zhang/1/GFP_Reporter_Template/Pro_Component>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0014/Interface1>
+        rdf:type             sbol:Interface;
+        sbol:displayId       "Interface1";
+        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_B0014/component939311> , <https://synbiohub.org/public/igem/1/BBa_B0014/component939303> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/CDS_Component>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "CDS_Component";
+        sbol:instanceOf               <https://synbiohub.org/public/igem/1/BBa_M36577>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2/CDS_Component/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0012/annotation1686>
+        rdf:type                      sbol:SequenceFeature;
+        sbol:displayId                "annotation1686";
+        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_B0012/annotation1686/range1686>;
+        sbol:name                     "T7 TE";
+        sbol:role                     SO:0000313 , <https://wiki.synbiohub.org/wiki/Terms/igem#feature/stem_loop>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0012/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0012/annotation1686/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0012/annotation7020/range7020>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range7020";
+        sbol:end                      "41";
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_B0012_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1";
+        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0012/1>;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0012/annotation7020/range7020/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/Interface1>
+        rdf:type             sbol:Interface;
+        sbol:displayId       "Interface1";
+        sbol:nondirectional  <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/CDS_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/Pro_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/Ter_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/RBS_Component> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0034_sequence>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "BBa_B0034_sequence";
+        sbol:elements                 "aaagaggagaaa";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <https://synbiohub.org/public/igem>;
+        sbh:ownedBy                   <https://synbiohub.org/user/james> , <https://synbiohub.org/user/myers>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0034_sequence/1>;
+        prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_B0034>;
+        prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0034_sequence/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0011/annotation1683>
+        rdf:type                      sbol:SequenceFeature;
+        sbol:displayId                "annotation1683";
+        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_B0011/annotation1683/range1683>;
+        sbol:name                     "stem_loop";
+        sbol:role                     SO:0000313 , <https://wiki.synbiohub.org/wiki/Terms/igem#feature/stem_loop>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0011/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0011/annotation1683/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template/Pro_Component>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "Pro_Component";
+        sbol:hasLocation              <http://michael.zhang/1/GFP_Reporter_Template/Pro_Component/GenericLocation>;
+        sbol:instanceOf               <http://michael.zhang/1/Pro>;
+        backport2_3:sbol2OriginalSequenceAnnotationURI
+                <http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation/1>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation/1> , <http://michael.zhang/GFP_Reporter_Template/Pro_Component/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "GFP_Reporter_Template_GeneratedInstance3";
+        sbol:hasConstraint            <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/GFP_Reporter_Template_SequenceConstraint> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/GFP_Reporter_Template_SequenceConstraint2> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/GFP_Reporter_Template_SequenceConstraint1>;
+        sbol:hasFeature               <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/Ter_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/CDS_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/RBS_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/Pro_Component>;
+        sbol:hasInterface             <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/Interface1>;
+        sbol:hasNamespace             <http://michael.zhang>;
+        sbol:hasSequence              <http://michael.zhang/1/GFP_Reporter_TemplateSequence>;
+        sbol:role                     SO:0000804;
+        sbol:type                     SBO:0000251;
+        prov:wasDerivedFrom           <http://michael.zhang/UnnamedPart/1> , <http://michael.zhang/GFP_Reporter_Template/1>;
+        prov:wasGeneratedBy           <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance3_SBOLDesignerActivity/1> , <http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance3/1> .
+
+<https://synbiohub.org/public/igem/1/igem2sbol>
+        rdf:type                      prov:Activity , sbol:TopLevel;
+        dc:creator                    "James Alastair McLaughlin" , "Chris J. Myers";
+        sbol:description              "Conversion of the iGEM parts registry to SBOL2.1";
+        sbol:displayId                "igem2sbol";
+        sbol:hasNamespace             <https://synbiohub.org/public/igem>;
+        sbol:name                     "iGEM to SBOL conversion";
+        sbh:ownedBy                   <https://synbiohub.org/user/james> , <https://synbiohub.org/user/myers>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/igem2sbol/1>;
+        prov:endedAtTime              "2017-03-06T15:00:00Z";
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/igem2sbol/1> .
+
+<http://michael.zhang/1/GFP_Reporter_TemplateSequence>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "GFP_Reporter_TemplateSequence";
+        sbol:elements                 "aaagaggagaaatcacactggctcaccttcgggtgggcctttctgcgtttatatactagagagagaatataaaaagccagattattaatccggcttttttattattt";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://michael.zhang>;
+        prov:wasGeneratedBy           <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance3_SBOLDesignerActivity/1> , <http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_TemplateSequence/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/Interface1>
+        rdf:type             sbol:Interface;
+        sbol:displayId       "Interface1";
+        sbol:nondirectional  <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/Ter_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/RBS_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/CDS_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/Pro_Component> .
+
+<http://michael.zhang/1/GFP_Reporter_Template/Interface1>
+        rdf:type             sbol:Interface;
+        sbol:displayId       "Interface1";
+        sbol:nondirectional  <http://michael.zhang/1/GFP_Reporter_Template/RBS_Component> , <http://michael.zhang/1/GFP_Reporter_Template/Ter_Component> , <http://michael.zhang/1/GFP_Reporter_Template/Pro_Component> , <http://michael.zhang/1/GFP_Reporter_Template/CDS_Component> .
+
+<http://michael.zhang/1/GFP_Reporter_Template/Pro_Component/GenericLocation>
+        rdf:type                      sbol:EntireSequence;
+        sbol:displayId                "GenericLocation";
+        sbol:hasSequence              <http://michael.zhang/1/GFP_Reporter_TemplateSequence>;
+        sbol:orientation              SO:0001030;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation/GenericLocation/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/GFP_Reporter_Template_SequenceConstraint2>
+        rdf:type                      sbol:Constraint;
+        sbol:displayId                "GFP_Reporter_Template_SequenceConstraint2";
+        sbol:object                   <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/Ter_Component>;
+        sbol:restriction              sbol:precedes;
+        sbol:subject                  <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/CDS_Component>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance3/GFP_Reporter_Template_SequenceConstraint2/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template/Ter_Component/GFP_Reporter_Template_SequenceAnnotation3_Range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "GFP_Reporter_Template_SequenceAnnotation3_Range";
+        sbol:end                      "107";
+        sbol:hasSequence              <http://michael.zhang/1/GFP_Reporter_TemplateSequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "13";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation3/GFP_Reporter_Template_SequenceAnnotation3_Range/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0012>
+        rdf:type                      sbol:Component;
+        dc:creator                    "Reshma Shetty";
+        dcterms:created               "2003-01-31T12:00:00Z";
+        dcterms:modified              "2015-08-31T04:07:20Z";
+        sbol:description              "TE from coliphageT7";
+        sbol:displayId                "BBa_B0012";
+        sbol:hasFeature               <https://synbiohub.org/public/igem/1/BBa_B0012/annotation1690> , <https://synbiohub.org/public/igem/1/BBa_B0012/annotation7020> , <https://synbiohub.org/public/igem/1/BBa_B0012/annotation1686> , <https://synbiohub.org/public/igem/1/BBa_B0012/annotation1687>;
+        sbol:hasNamespace             <https://synbiohub.org/public/igem>;
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_B0012_sequence>;
+        sbol:name                     "BBa_B0012";
+        sbol:role                     SO:0000141 , <https://wiki.synbiohub.org/wiki/Terms/igem#partType/Terminator>;
+        sbol:type                     SBO:0000251;
+        igem:discontinued             "false";
+        igem:dominant                 "false";
+        igem:experience               <http://wiki.synbiohub.org/wiki/Terms/igem#experience/Fails>;
+        igem:group_u_list             "_1_";
+        igem:m_user_id                "0";
+        igem:owner_id                 "24";
+        igem:owning_group_id          "7";
+        igem:partStatus               "Released HQ 2013";
+        igem:sampleStatus             "In stock";
+        igem:status                   <http://wiki.synbiohub.org/wiki/Terms/igem#status/Available>;
+        sbh:bookmark                  "false";
+        sbh:mutableDescription        "Transcription terminator for the <i>E.coli</i> RNA polymerase.";
+        sbh:mutableNotes              "<P> <P>Suggested by Sri Kosuri and Drew Endy as a high efficiency terminator. The      5' end cutoff was placed immediately after the TAA stop codon and the 3' end      cutoff was placed just prior to the RBS of Gene 1.4 (before AAGGAG).<P> Use anywhere transcription should be stopped when the gene of interest is upstream of this terminator.";
+        sbh:mutableProvenance         "Derived from the TE terminator of T7 bacteriophage between Genes 1.3 and 1.4      <genbank>V01146</genbank>.";
+        sbh:ownedBy                   <https://synbiohub.org/user/myers> , <https://synbiohub.org/user/james>;
+        sbh:star                      "false";
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0012/1>;
+        prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_B0012>;
+        prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0012/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/GFP_Reporter_Template_SequenceConstraint>
+        rdf:type                      sbol:Constraint;
+        sbol:displayId                "GFP_Reporter_Template_SequenceConstraint";
+        sbol:object                   <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/RBS_Component>;
+        sbol:restriction              sbol:precedes;
+        sbol:subject                  <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/Pro_Component>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance3/GFP_Reporter_Template_SequenceConstraint/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template/Ter_Component>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "Ter_Component";
+        sbol:hasLocation              <http://michael.zhang/1/GFP_Reporter_Template/Ter_Component/GFP_Reporter_Template_SequenceAnnotation3_Range>;
+        sbol:instanceOf               <https://synbiohub.org/public/igem/1/BBa_B0014>;
+        backport2_3:sbol2OriginalSequenceAnnotationURI
+                <http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation3/1>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation3/1> , <http://michael.zhang/GFP_Reporter_Template/Ter_Component/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/CDS_Component>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "CDS_Component";
+        sbol:instanceOf               <https://synbiohub.org/public/igem/1/BBa_I766210>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance3/CDS_Component/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template/RBS_Component>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "RBS_Component";
+        sbol:hasLocation              <http://michael.zhang/1/GFP_Reporter_Template/RBS_Component/GFP_Reporter_Template_SequenceAnnotation1_Range>;
+        sbol:instanceOf               <https://synbiohub.org/public/igem/1/BBa_B0034>;
+        backport2_3:sbol2OriginalSequenceAnnotationURI
+                <http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation1/1>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation1/1> , <http://michael.zhang/GFP_Reporter_Template/RBS_Component/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/GFP_Reporter_Template_SequenceConstraint1>
+        rdf:type                      sbol:Constraint;
+        sbol:displayId                "GFP_Reporter_Template_SequenceConstraint1";
+        sbol:object                   <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/CDS_Component>;
+        sbol:restriction              sbol:precedes;
+        sbol:subject                  <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/RBS_Component>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2/GFP_Reporter_Template_SequenceConstraint1/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "GFP_Reporter_Template";
+        sbol:hasConstraint            <http://michael.zhang/1/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint2> , <http://michael.zhang/1/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint> , <http://michael.zhang/1/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint1>;
+        sbol:hasFeature               <http://michael.zhang/1/GFP_Reporter_Template/Ter_Component> , <http://michael.zhang/1/GFP_Reporter_Template/CDS_Component> , <http://michael.zhang/1/GFP_Reporter_Template/RBS_Component> , <http://michael.zhang/1/GFP_Reporter_Template/Pro_Component>;
+        sbol:hasInterface             <http://michael.zhang/1/GFP_Reporter_Template/Interface1>;
+        sbol:hasNamespace             <http://michael.zhang>;
+        sbol:hasSequence              <http://michael.zhang/1/GFP_Reporter_TemplateSequence>;
+        sbol:role                     SO:0000804;
+        sbol:type                     SBO:0000251;
+        prov:wasDerivedFrom           <http://michael.zhang/UnnamedPart/1>;
+        prov:wasGeneratedBy           <http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1> , <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance3_SBOLDesignerActivity/1>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_E0040/annotation1934520>
+        rdf:type                      sbol:SequenceFeature;
+        sbol:displayId                "annotation1934520";
+        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_E0040/annotation1934520/range1934520>;
+        sbol:name                     "GFP protein";
+        sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#feature/protein> , SO:0000316;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_E0040/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0040/annotation1934520/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0014/component939303>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "component939303";
+        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_B0014/component939303/range939303>;
+        sbol:instanceOf               <https://synbiohub.org/public/igem/1/BBa_B0012>;
+        sbol:name                     "BBa_B0012";
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0014/1>;
+        backport2_3:sbol2OriginalSequenceAnnotationURI
+                <https://synbiohub.org/public/igem/BBa_B0014/annotation939303/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0014/annotation939303/1> , <https://synbiohub.org/public/igem/BBa_B0014/component939303/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0014/component939311>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "component939311";
+        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_B0014/component939311/range939311>;
+        sbol:instanceOf               <https://synbiohub.org/public/igem/1/BBa_B0011>;
+        sbol:name                     "BBa_B0011";
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0014/1>;
+        backport2_3:sbol2OriginalSequenceAnnotationURI
+                <https://synbiohub.org/public/igem/BBa_B0014/annotation939311/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0014/annotation939311/1> , <https://synbiohub.org/public/igem/BBa_B0014/component939311/1> .
+
+<http://michael.zhang/1/CDS>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "CDS";
+        sbol:hasNamespace             <http://michael.zhang>;
+        sbol:role                     SO:0000316;
+        sbol:type                     SBO:0000251;
+        prov:wasGeneratedBy           <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance3_SBOLDesignerActivity/1> , <http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/CDS/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0014>
+        rdf:type                      sbol:Component;
+        dc:creator                    "Reshma Shetty";
+        dcterms:created               "2003-07-15T11:00:00Z";
+        dcterms:modified              "2015-08-31T04:07:20Z";
+        sbol:description              "double terminator (B0012-B0011)";
+        sbol:displayId                "BBa_B0014";
+        sbol:hasFeature               <https://synbiohub.org/public/igem/1/BBa_B0014/component939311> , <https://synbiohub.org/public/igem/1/BBa_B0014/component939303>;
+        sbol:hasInterface             <https://synbiohub.org/public/igem/1/BBa_B0014/Interface1>;
+        sbol:hasNamespace             <https://synbiohub.org/public/igem>;
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_B0014_sequence>;
+        sbol:name                     "BBa_B0014";
+        sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#partType/Terminator> , SO:0000141;
+        sbol:type                     SBO:0000251;
+        igem:discontinued             "false";
+        igem:dominant                 "true";
+        igem:experience               <http://wiki.synbiohub.org/wiki/Terms/igem#experience/Works>;
+        igem:group_u_list             "_1_";
+        igem:m_user_id                "0";
+        igem:owner_id                 "24";
+        igem:owning_group_id          "7";
+        igem:partStatus               "Released HQ 2013";
+        igem:sampleStatus             "In stock";
+        igem:status                   <http://wiki.synbiohub.org/wiki/Terms/igem#status/Available>;
+        sbh:bookmark                  "false";
+        sbh:mutableDescription        "Double terminator consisting of BBa_B0012 and BBa_B0011";
+        sbh:ownedBy                   <https://synbiohub.org/user/james> , <https://synbiohub.org/user/myers>;
+        sbh:star                      "true";
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0014/1>;
+        prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_B0014>;
+        prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0014/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template/CDS_Component>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "CDS_Component";
+        sbol:hasLocation              <http://michael.zhang/1/GFP_Reporter_Template/CDS_Component/GenericLocation>;
+        sbol:instanceOf               <http://michael.zhang/1/CDS>;
+        backport2_3:sbol2OriginalSequenceAnnotationURI
+                <http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation2/1>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation2/1> , <http://michael.zhang/GFP_Reporter_Template/CDS_Component/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0014/component939303/range939303>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range939303";
+        sbol:end                      "41";
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_B0014_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1";
+        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0014/1>;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0014/annotation939303/range939303/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/GFP_Reporter_Template_SequenceConstraint>
+        rdf:type                      sbol:Constraint;
+        sbol:displayId                "GFP_Reporter_Template_SequenceConstraint";
+        sbol:object                   <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/RBS_Component>;
+        sbol:restriction              sbol:precedes;
+        sbol:subject                  <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/Pro_Component>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance1/GFP_Reporter_Template_SequenceConstraint/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0011_sequence>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "BBa_B0011_sequence";
+        sbol:elements                 "agagaatataaaaagccagattattaatccggcttttttattattt";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <https://synbiohub.org/public/igem>;
+        sbh:ownedBy                   <https://synbiohub.org/user/myers> , <https://synbiohub.org/user/james>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0011_sequence/1>;
+        prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_B0011>;
+        prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0011_sequence/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_M36577_sequence>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "BBa_M36577_sequence";
+        sbol:elements                 "atgacggccctgacagaaggtgcgaagctgttcgagaaggagattccctatatcacagaattggagggggatgtagagggtatgaagtttatcatcaaaggcgaagggacaggggatgcaacaactggaacaattaaggctaagtacatttgcacgaccggcgacgtcccggtgccctggtccacgctcgtcaccacgctcacgtacggagcccagtgctttgccaaatatggccctgaacttaaagacttctacaagtcgtgtatgccggagggatacgtgcaagagaggacgatcacctttgaaggtgacggagtattcaaaacaagagcggaggtgacgttcgagaatggatcggtctataaccgggtcaagctcaacggacagggctttaagaaagatggacacgtccttgggaagaatttggagttcaatttcaccccgcattgtctttacatctggggtgatcaggcgaatcacgggttgaaatcagcgttcaagatcatgcacgagattacggggagcaaagaggactttatcgtggcagaccacactcagatgaacactccaatcggagggggtcccgtacacgtacccgagtatcatcacctgaccgtctggacatcgtttggaaaagaccctgacgacgatgaaactgatcatctcaacattgtggaagtgatcaaggcggtggacttggaaacataccgctga";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <https://synbiohub.org/public/igem>;
+        sbh:ownedBy                   <https://synbiohub.org/user/james> , <https://synbiohub.org/user/myers>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_M36577_sequence/1>;
+        prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_M36577>;
+        prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_M36577_sequence/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3_SBOLDesignerActivity/Association>
+        rdf:type                      sbol:Identified , prov:Association;
+        sbol:displayId                "Association";
+        prov:agent                    <https://synbiohub.org/public/SBOL_Software/2.2/SBOLDesigner>;
+        prov:hadRole                  <http://sbols.org/v2#sequenceEditor>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance3_SBOLDesignerActivity/Association/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint2>
+        rdf:type                      sbol:Constraint;
+        sbol:displayId                "GFP_Reporter_Template_SequenceConstraint2";
+        sbol:object                   <http://michael.zhang/1/GFP_Reporter_Template/Ter_Component>;
+        sbol:restriction              sbol:precedes;
+        sbol:subject                  <http://michael.zhang/1/GFP_Reporter_Template/CDS_Component>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint2/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/GFP_Reporter_Template_SequenceConstraint2>
+        rdf:type                      sbol:Constraint;
+        sbol:displayId                "GFP_Reporter_Template_SequenceConstraint2";
+        sbol:object                   <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/Ter_Component>;
+        sbol:restriction              sbol:precedes;
+        sbol:subject                  <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/CDS_Component>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance1/GFP_Reporter_Template_SequenceConstraint2/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance1/Pro_Component>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "Pro_Component";
+        sbol:instanceOf               <http://michael.zhang/1/Pro>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance1/Pro_Component/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_I766210>
+        rdf:type                      sbol:Component;
+        dc:creator                    "Nili Sommovilla";
+        dcterms:created               "2007-10-21T11:00:00Z";
+        dcterms:modified              "2015-08-31T04:08:09Z";
+        sbol:description              "GFP";
+        sbol:displayId                "BBa_I766210";
+        sbol:hasNamespace             <https://synbiohub.org/public/igem>;
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_I766210_sequence>;
+        sbol:name                     "BBa_I766210";
+        sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#partType/Coding> , SO:0000316;
+        sbol:type                     SBO:0000251;
+        igem:discontinued             "false";
+        igem:dominant                 "false";
+        igem:group_u_list             "_155_";
+        igem:m_user_id                "0";
+        igem:owner_id                 "1931";
+        igem:owning_group_id          "9";
+        igem:sampleStatus             "Not in stock";
+        igem:status                   <http://wiki.synbiohub.org/wiki/Terms/igem#status/Unavailable>;
+        sbh:bookmark                  "false";
+        sbh:mutableDescription        "encodes for green fluorescence protein";
+        sbh:mutableNotes              "none";
+        sbh:mutableProvenance         "?";
+        sbh:ownedBy                   <https://synbiohub.org/user/james> , <https://synbiohub.org/user/myers>;
+        sbh:star                      "false";
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_I766210/1>;
+        prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_I766210>;
+        prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_I766210/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "GFP_Reporter_Template_GeneratedInstance2";
+        sbol:hasConstraint            <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/GFP_Reporter_Template_SequenceConstraint> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/GFP_Reporter_Template_SequenceConstraint1> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/GFP_Reporter_Template_SequenceConstraint2>;
+        sbol:hasFeature               <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/Pro_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/CDS_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/RBS_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/Ter_Component>;
+        sbol:hasInterface             <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/Interface1>;
+        sbol:hasNamespace             <http://michael.zhang>;
+        sbol:hasSequence              <http://michael.zhang/1/GFP_Reporter_TemplateSequence>;
+        sbol:role                     SO:0000804;
+        sbol:type                     SBO:0000251;
+        prov:wasDerivedFrom           <http://michael.zhang/UnnamedPart/1> , <http://michael.zhang/GFP_Reporter_Template/1>;
+        prov:wasGeneratedBy           <http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1> , <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance3_SBOLDesignerActivity/1>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2/1> .

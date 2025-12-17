@@ -1,0 +1,73 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:SO="https://identifiers.org/SO:"
+    xmlns:sbol="http://sbols.org/v3#"
+    xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:EDAM="https://identifiers.org/edam:"
+    xmlns:CHEBI="https://identifiers.org/CHEBI:"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:igem="http://wiki.synbiohub.org/wiki/Terms/igem#"
+    xmlns:SBO="https://identifiers.org/SBO:"
+    xmlns:sbh="http://wiki.synbiohub.org/wiki/Terms/synbiohub#"
+    xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
+   <sbol:TopLevel rdf:about="http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity">
+      <dc:creator>Michael Zhang</dc:creator>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/1"/>
+      <prov:qualifiedUsage>
+         <sbol:Identified rdf:about="http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/GFP_Reporter_Template_CombinatorialDerivation_Sample_Usage">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/GFP_Reporter_Template_CombinatorialDerivation_Sample_Usage/1"/>
+            <prov:hadRole rdf:resource="http://sbols.org/v2#sequenceEditor"/>
+            <prov:entity rdf:resource="http://michael.zhang/1/GFP_Reporter_Template_CombinatorialDerivation_Sample"/>
+            <sbol:displayId>GFP_Reporter_Template_CombinatorialDerivation_Sample_Usage</sbol:displayId>
+            <rdf:type rdf:resource="http://www.w3.org/ns/prov#Usage"/>
+         </sbol:Identified>
+      </prov:qualifiedUsage>
+      <prov:qualifiedAssociation>
+         <sbol:Identified rdf:about="http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/Association">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/Association/1"/>
+            <prov:hadRole rdf:resource="http://sbols.org/v2#sequenceEditor"/>
+            <prov:agent rdf:resource="https://synbiohub.org/public/SBOL_Software/2.2/SBOLDesigner"/>
+            <sbol:displayId>Association</sbol:displayId>
+            <rdf:type rdf:resource="http://www.w3.org/ns/prov#Association"/>
+         </sbol:Identified>
+      </prov:qualifiedAssociation>
+      <prov:endedAtTime>2018-01-23T00:15:46Z</prov:endedAtTime>
+      <sbol:hasNamespace rdf:resource="http://michael.zhang"/>
+      <sbol:displayId>GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity</sbol:displayId>
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+   </sbol:TopLevel>
+   <sbol:TopLevel rdf:about="http://michael.zhang/1/GFP_Reporter_Template_SBOLDesignerActivity">
+      <dc:creator>Michael Zhang</dc:creator>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1"/>
+      <prov:qualifiedAssociation>
+         <sbol:Identified rdf:about="http://michael.zhang/1/GFP_Reporter_Template_SBOLDesignerActivity/Association">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/Association/1"/>
+            <prov:hadRole rdf:resource="http://sbols.org/v2#sequenceEditor"/>
+            <prov:agent rdf:resource="https://synbiohub.org/public/SBOL_Software/2.2/SBOLDesigner"/>
+            <sbol:displayId>Association</sbol:displayId>
+            <rdf:type rdf:resource="http://www.w3.org/ns/prov#Association"/>
+         </sbol:Identified>
+      </prov:qualifiedAssociation>
+      <prov:endedAtTime>2018-01-23T00:15:40Z</prov:endedAtTime>
+      <sbol:hasNamespace rdf:resource="http://michael.zhang"/>
+      <sbol:displayId>GFP_Reporter_Template_SBOLDesignerActivity</sbol:displayId>
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+   </sbol:TopLevel>
+   <prov:Activity rdf:about="https://synbiohub.org/public/igem/1/igem2sbol">
+      <sbol:displayId>igem2sbol</sbol:displayId>
+      <sbol:name>iGEM to SBOL conversion</sbol:name>
+      <sbol:description>Conversion of the iGEM parts registry to SBOL2.1</sbol:description>
+      <dc:creator>James Alastair McLaughlin</dc:creator>
+      <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/igem2sbol/1"/>
+      <rdf:type rdf:resource="http://sbols.org/v3#TopLevel"/>
+      <sbh:ownedBy rdf:resource="https://synbiohub.org/user/james"/>
+      <sbol:hasNamespace rdf:resource="https://synbiohub.org/public/igem"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="https://synbiohub.org/public/igem/igem2sbol/1"/>
+      <dc:creator>Chris J. Myers</dc:creator>
+      <prov:endedAtTime>2017-03-06T15:00:00Z</prov:endedAtTime>
+      <sbh:ownedBy rdf:resource="https://synbiohub.org/user/myers"/>
+   </prov:Activity>
+</rdf:RDF>

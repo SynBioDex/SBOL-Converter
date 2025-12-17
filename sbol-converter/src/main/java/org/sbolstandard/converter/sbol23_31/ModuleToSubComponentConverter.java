@@ -2,6 +2,7 @@ package org.sbolstandard.converter.sbol23_31;
 
 import java.net.URI;
 
+import org.sbolstandard.converter.ConverterVocabulary;
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.converter.sbol23_31.measurement.MeasurementConverter;
 import org.sbolstandard.core2.SBOLValidationException;
@@ -38,6 +39,7 @@ public class ModuleToSubComponentConverter
 				measurementConverter.convert(document, sbol3SubComponentForModule, sbol2Module, sbol2Measure, parameters);
 			}
 		}
+		sbol3SubComponentForModule.addAnnotation(ConverterVocabulary.Two_to_Three.sbol2OriginatesFromModule,"true");
 
 		return sbol3SubComponentForModule;
 	}

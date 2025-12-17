@@ -1,5 +1,9 @@
 package org.sbolstandard.converter.sbol31_23;
 
+import java.net.URI;
+import java.util.List;
+
+import org.sbolstandard.converter.ConverterVocabulary;
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.core2.ModuleDefinition;
 import org.sbolstandard.core2.SBOLDocument;
@@ -24,42 +28,68 @@ public class ComponentToModuleDefinitionConverter implements EntityConverter<Com
 		SubComponentToFunctionalComponentConverter subCompToFunCompConverter = new SubComponentToFunctionalComponentConverter();
 		SubComponentToModuleConverter subCompToModuleConverter = new SubComponentToModuleConverter();
 
-		if (component.getSubComponents()!=null){
+		if (component.getSubComponents() != null) {
 			for (SubComponent subComponent : component.getSubComponents()) {
-				if (Util.isModuleDefinition(subComponent.getInstanceOf())){
+				if (Util.isModuleDefinition(subComponent.getInstanceOf())) {
 					subCompToModuleConverter.convert(sbol2Doc, moduleDef, component, subComponent);
-				}
-				else{
-					subCompToFunCompConverter.convert(sbol2Doc, moduleDef, component, subComponent);
+				} 
+				else {
+					if (isModule(subComponent)){
+						subCompToModuleConverter.convert(sbol2Doc, moduleDef, component, subComponent);
+					}
+					else{
+						subCompToFunCompConverter.convert(sbol2Doc, moduleDef, component, subComponent);
+					}
 				}
 			}
 		}
-		
+
 		InteractionConverter interactionConverter = new InteractionConverter();
 
-		if (component.getInteractions()!=null){
+		if (component.getInteractions() != null) {
 			for (org.sbolstandard.core3.entity.Interaction interaction : component.getInteractions()) {
 				interactionConverter.convert(sbol2Doc, moduleDef, component, interaction);
 			}
 		}
 
-		if (component.getModels()!=null){
-			for (org.sbolstandard.core3.entity.Model model : component.getModels()) {
-				moduleDef.addModel(Util.createSBOL2Uri(model));
+		if (component.getModelURIs() != null) {
+			for (URI modelURI : component.getModelURIs()) {
+				moduleDef.addModel(Util.createSBOL2Uri(modelURI));
 			}
 		}
-		
+
 		return moduleDef;
 	}
 
+	/**
+	 * Checks whether the given SubComponent is converted from an SBOL2 Module by checking a previous annotation.
+	 * @param subComponent
+	 * @return
+	 * @throws SBOLGraphException
+	 */
 	private boolean isModule(SubComponent subComponent) throws SBOLGraphException {
-		if(subComponent.getInstanceOf()!= null && subComponent.getInstanceOf().getInteractions() != null){
-			return true;
+		boolean isFromModule = false;
+		List<Object> values = subComponent.getAnnotation(ConverterVocabulary.Two_to_Three.sbol2OriginatesFromModule);
+		if (values != null && !values.isEmpty()) {
+			String value = values.get(0).toString();
+			if (value.equalsIgnoreCase("true")) {
+				isFromModule = true;
+			}
 		}
-		else if (Util.isModuleDefinition(subComponent.getInstanceOf()))
-		{
-			return true;
-		}
-		return false;
+		return isFromModule;
 	}
+	/*
+	 * private boolean isModule(SubComponent subComponent) throws SBOLGraphException
+	 * {
+	 * if(subComponent.getInstanceOf()!= null &&
+	 * subComponent.getInstanceOf().getInteractions() != null){
+	 * return true;
+	 * }
+	 * else if (Util.isModuleDefinition(subComponent, subComponent.getInstanceOf()))
+	 * {
+	 * return true;
+	 * }
+	 * return false;
+	 * }
+	 */
 }

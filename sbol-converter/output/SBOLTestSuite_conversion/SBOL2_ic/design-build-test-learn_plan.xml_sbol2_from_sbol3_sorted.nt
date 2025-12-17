@@ -1,0 +1,4 @@
+<http://sys-bio.org/Plan_model_fitting/1.0.0> <http://sbols.org/v2#displayId> "Plan_model_fitting" .
+<http://sys-bio.org/Plan_model_fitting/1.0.0> <http://sbols.org/v2#persistentIdentity> <http://sys-bio.org/Plan_model_fitting> .
+<http://sys-bio.org/Plan_model_fitting/1.0.0> <http://sbols.org/v2#version> "1.0.0" .
+<http://sys-bio.org/Plan_model_fitting/1.0.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Plan> .

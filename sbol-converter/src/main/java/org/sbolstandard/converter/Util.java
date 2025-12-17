@@ -28,6 +28,7 @@ import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.Metadata;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.Sequence;
+import org.sbolstandard.core3.entity.SubComponent;
 import org.sbolstandard.core3.entity.TopLevel;
 import org.sbolstandard.core3.entity.TopLevelMetadata;
 import org.sbolstandard.core3.util.SBOLGraphException;
@@ -1406,6 +1407,4 @@ public class Util {
 		}
 		return false;
 	}
-
-
 }
