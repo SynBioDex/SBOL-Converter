@@ -91,7 +91,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbolstandard.org/example/tetr_inverter/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://sbolstandard.org/example/tetr_inverter/promoter> , <http://sbolstandard.org/example/tetr_inverter/TF> .
+        sbol:nondirectional  <http://sbolstandard.org/example/tetr_inverter/TF> , <http://sbolstandard.org/example/tetr_inverter/promoter> .
 
 <http://sbolstandard.org/example/toggle_switch2/laci_inverter_module>
         rdf:type         sbol:SubComponent;
@@ -120,21 +120,21 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:instanceOf               <http://identifiers.org/uniprot/P03023>;
         backport2_3:sbol2OriginalURI  <http://sbolstandard.org/example/toggle_switch/LacI> .
 
-<http://sbolstandard.org/example/toggle_switch2/TetR>
-        rdf:type                      sbol:SubComponent;
-        sbol:displayId                "TetR";
-        sbol:instanceOf               <http://identifiers.org/uniprot/Q6QR72>;
-        backport2_3:sbol2OriginalURI  <http://sbolstandard.org/example/toggle_switch2/TetR> .
-
 <http://sbolstandard.org/example/toggle_switch>
         rdf:type                      sbol:Component;
         sbol:displayId                "toggle_switch";
-        sbol:hasFeature               <http://sbolstandard.org/example/toggle_switch/TetR> , <http://sbolstandard.org/example/toggle_switch/LacI>;
+        sbol:hasFeature               <http://sbolstandard.org/example/toggle_switch/LacI> , <http://sbolstandard.org/example/toggle_switch/TetR>;
         sbol:hasInterface             <http://sbolstandard.org/example/toggle_switch/Interface1>;
         sbol:hasNamespace             <http://sbolstandard.org/example>;
         sbol:role                     <https://sbolstandard.org/example/module_role/toggle_switch>;
         sbol:type                     SBO:0000241;
         backport2_3:sbol2OriginalURI  <http://sbolstandard.org/example/toggle_switch> .
+
+<http://sbolstandard.org/example/toggle_switch2/TetR>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "TetR";
+        sbol:instanceOf               <http://identifiers.org/uniprot/Q6QR72>;
+        backport2_3:sbol2OriginalURI  <http://sbolstandard.org/example/toggle_switch2/TetR> .
 
 <http://sbolstandard.org/example/laci_inverter/LacI_pLacI/P03023>
         rdf:type                      sbol:Participation;
@@ -142,12 +142,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:participant              <http://sbolstandard.org/example/laci_inverter/TF>;
         sbol:role                     SBO:0000020;
         backport2_3:sbol2OriginalURI  <http://sbolstandard.org/example/laci_inverter/LacI_pLacI/P03023> .
-
-<http://sbolstandard.org/example/laci_inverter/promoter>
-        rdf:type                      sbol:SubComponent;
-        sbol:displayId                "promoter";
-        sbol:instanceOf               <http://www.partsregistry.org/BBa_R0010>;
-        backport2_3:sbol2OriginalURI  <http://sbolstandard.org/example/laci_inverter/promoter> .
 
 <http://sbolstandard.org/example/tetr_inverter>
         rdf:type                      sbol:Component;
@@ -160,6 +154,12 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:type                     SBO:0000241;
         backport2_3:sbol2OriginalURI  <http://sbolstandard.org/example/tetr_inverter> .
 
+<http://sbolstandard.org/example/laci_inverter/promoter>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "promoter";
+        sbol:instanceOf               <http://www.partsregistry.org/BBa_R0010>;
+        backport2_3:sbol2OriginalURI  <http://sbolstandard.org/example/laci_inverter/promoter> .
+
 <http://sbolstandard.org/example/toggle_switch2/LacI>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "LacI";
@@ -169,7 +169,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbolstandard.org/example/toggle_switch/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://sbolstandard.org/example/toggle_switch/TetR> , <http://sbolstandard.org/example/toggle_switch/LacI> .
+        sbol:nondirectional  <http://sbolstandard.org/example/toggle_switch/LacI> , <http://sbolstandard.org/example/toggle_switch/TetR> .
 
 <http://sbolstandard.org/example/toggle_switch2/Interface1>
         rdf:type             sbol:Interface;
