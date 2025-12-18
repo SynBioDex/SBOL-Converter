@@ -1,309 +1,274 @@
-<rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:dcterms="http://purl.org/dc/terms/"
-    xmlns:SO="https://identifiers.org/SO:"
-    xmlns:EDAM="https://identifiers.org/edam:"
-    xmlns:sbol="http://sbols.org/v3#"
-    xmlns:pr="http://partsregistry.org/"
-    xmlns:CHEBI="https://identifiers.org/CHEBI:"
-    xmlns:prov="http://www.w3.org/ns/prov#"
-    xmlns:SBO="https://identifiers.org/SBO:"
-    xmlns:GO="https://identifiers.org/GO:"
-    xmlns:backport2_3="https://sbols.org/backport/2_3#"
-    xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
-   <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_B0015">
-      <sbol:hasSequence>
-         <sbol:Sequence rdf:about="http://partsregistry.org/seq/BBa_B0015"/>
-      </sbol:hasSequence>
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000141"/>
-      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_B0015"/>
-      <sbol:description>Double terminator</sbol:description>
-      <sbol:name>BBa_B0015</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://partsregistry.org/cd"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>BBa_B0015</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent">
-      <backport2_3:sbol3TempSequenceURI>
-         <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent_seq"/>
-      </backport2_3:sbol3TempSequenceURI>
-      <sbol:hasSequence>
-         <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent_seq"/>
-      </sbol:hasSequence>
-      <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn">
-            <sbol:hasLocation>
-               <sbol:EntireSequence rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/GenericLocation">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/GenericLocation"/>
-                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
-                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>GenericLocation</sbol:displayId>
-               </sbol:EntireSequence>
-            </sbol:hasLocation>
-            <sbol:hasLocation>
-               <sbol:EntireSequence rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/gl">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/gl"/>
-                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
-                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>gl</sbol:displayId>
-               </sbol:EntireSequence>
-            </sbol:hasLocation>
-            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn"/>
-            <sbol:displayId>gl_seqAnn</sbol:displayId>
-         </sbol:SequenceFeature>
-      </sbol:hasFeature>
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
-      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/GenericLocationComponent"/>
-      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>GenericLocationComponent</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_F2620">
-      <sbol:hasFeature>
-         <sbol:SubComponent rdf:about="http://partsregistry.org/cd/BBa_F2620/luxR">
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://partsregistry.org/cd/BBa_F2620/luxR/range">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno3/range"/>
-                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
-                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>770</sbol:end>
-                  <sbol:start>69</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://partsregistry.org/cd/BBa_F2620_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno3"/>
-            <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno3"/>
-            <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/luxR"/>
-            <sbol:instanceOf>
-               <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_B0034"/>
-            </sbol:instanceOf>
-            <sbol:displayId>luxR</sbol:displayId>
-         </sbol:SubComponent>
-      </sbol:hasFeature>
-      <sbol:description>3OC6HSL -&gt; PoPS Receiver</sbol:description>
-      <sbol:hasFeature>
-         <sbol:SubComponent rdf:about="http://partsregistry.org/cd/BBa_F2620/ter">
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://partsregistry.org/cd/BBa_F2620/ter/range">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno4/range"/>
-                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
-                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>900</sbol:end>
-                  <sbol:start>771</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://partsregistry.org/cd/BBa_F2620_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno4"/>
-            <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno4"/>
-            <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/ter"/>
-            <sbol:instanceOf rdf:resource="http://partsregistry.org/cd/BBa_B0015"/>
-            <sbol:displayId>ter</sbol:displayId>
-         </sbol:SubComponent>
-      </sbol:hasFeature>
-      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_F2620"/>
-      <sbol:hasFeature>
-         <sbol:SubComponent rdf:about="http://partsregistry.org/cd/BBa_F2620/rbs">
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://partsregistry.org/cd/BBa_F2620/rbs/range">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno2/range"/>
-                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
-                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>68</sbol:end>
-                  <sbol:start>56</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://partsregistry.org/cd/BBa_F2620_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno2"/>
-            <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno2"/>
-            <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/rbs"/>
-            <sbol:instanceOf>
-               <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_C0062"/>
-            </sbol:instanceOf>
-            <sbol:displayId>rbs</sbol:displayId>
-         </sbol:SubComponent>
-      </sbol:hasFeature>
-      <sbol:hasFeature>
-         <sbol:SubComponent rdf:about="http://partsregistry.org/cd/BBa_F2620/pLuxR">
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://partsregistry.org/cd/BBa_F2620/pLuxR/range">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno5/range"/>
-                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
-                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>956</sbol:end>
-                  <sbol:start>901</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://partsregistry.org/cd/BBa_F2620_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno5"/>
-            <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno5"/>
-            <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/pLuxR"/>
-            <sbol:instanceOf>
-               <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_R0062"/>
-            </sbol:instanceOf>
-            <sbol:displayId>pLuxR</sbol:displayId>
-         </sbol:SubComponent>
-      </sbol:hasFeature>
-      <backport2_3:sbol3TempSequenceURI>
-         <sbol:Sequence rdf:about="http://partsregistry.org/cd/BBa_F2620_seq"/>
-      </backport2_3:sbol3TempSequenceURI>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:hasFeature>
-         <sbol:SubComponent rdf:about="http://partsregistry.org/cd/BBa_F2620/pTetR">
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://partsregistry.org/cd/BBa_F2620/pTetR/range">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno1/range"/>
-                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
-                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>55</sbol:end>
-                  <sbol:start>1</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://partsregistry.org/cd/BBa_F2620_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno1"/>
-            <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/anno1"/>
-            <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_F2620/pTetR"/>
-            <sbol:instanceOf>
-               <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_R0040"/>
-            </sbol:instanceOf>
-            <sbol:displayId>pTetR</sbol:displayId>
-         </sbol:SubComponent>
-      </sbol:hasFeature>
-      <sbol:hasSequence>
-         <sbol:Sequence rdf:about="http://partsregistry.org/cd/BBa_F2620_seq"/>
-      </sbol:hasSequence>
-      <sbol:name>BBa_F2620</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://partsregistry.org/cd"/>
-      <sbol:role rdf:resource="https://identifiers.org/SO:0001411"/>
-      <sbol:hasInterface>
-         <sbol:Interface rdf:about="http://partsregistry.org/cd/BBa_F2620/Interface1">
-            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/rbs"/>
-            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/pLuxR"/>
-            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/ter"/>
-            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/pTetR"/>
-            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/luxR"/>
-            <sbol:displayId>Interface1</sbol:displayId>
-         </sbol:Interface>
-      </sbol:hasInterface>
-      <sbol:displayId>BBa_F2620</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_B0034">
-      <sbol:hasSequence>
-         <sbol:Sequence rdf:about="http://partsregistry.org/seq/BBa_B0034"/>
-      </sbol:hasSequence>
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000139"/>
-      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_B0034"/>
-      <sbol:description>RBS based on Elowitz repressilator</sbol:description>
-      <sbol:name>BBa_B0034</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://partsregistry.org/cd"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>BBa_B0034</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_R0062">
-      <sbol:hasSequence>
-         <sbol:Sequence rdf:about="http://partsregistry.org/seq/BBa_R0062"/>
-      </sbol:hasSequence>
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
-      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_R0062"/>
-      <sbol:description>LuxR inducible promoter</sbol:description>
-      <sbol:name>BBa_R0062</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://partsregistry.org/cd"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>BBa_R0062</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_R0040">
-      <sbol:hasSequence>
-         <sbol:Sequence rdf:about="http://partsregistry.org/seq/BBa_R0040"/>
-      </sbol:hasSequence>
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
-      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_R0040"/>
-      <sbol:description>TetR repressible promoter</sbol:description>
-      <sbol:name>BBa_R0040</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://partsregistry.org/cd"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>BBa_R0040</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_C0062">
-      <sbol:hasSequence>
-         <sbol:Sequence rdf:about="http://partsregistry.org/seq/BBa_C0062"/>
-      </sbol:hasSequence>
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
-      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_C0062"/>
-      <sbol:description>luxR coding sequence</sbol:description>
-      <sbol:name>BBa_C0062</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://partsregistry.org/cd"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>BBa_C0062</sbol:displayId>
-   </sbol:Component>
-   <sbol:Sequence rdf:about="http://partsregistry.org/seq/BBa_B0015">
-      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
-      <sbol:elements>ccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctactagagtcacactggctcaccttcgggtgggcctttctgcgtttata</sbol:elements>
-      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/seq/BBa_B0015"/>
-      <sbol:hasNamespace rdf:resource="http://partsregistry.org/seq"/>
-      <sbol:displayId>BBa_B0015</sbol:displayId>
-   </sbol:Sequence>
-   <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent_seq">
-      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
-      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
-      <sbol:displayId>GenericLocationComponent_seq</sbol:displayId>
-   </sbol:Sequence>
-   <sbol:Sequence rdf:about="http://partsregistry.org/seq/BBa_C0062">
-      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
-      <sbol:elements>atgcttatctgatatgactaaaatggtacattgtgaatattatttactcgcgatcatttatcctcattctatggttaaatctgatatttcaatcctagataattaccctaaaaaatggaggcaatattatgatgacgctaatttaataaaatatgatcctatagtagattattctaactccaatcattcaccaattaattggaatatatttgaaaacaatgctgtaaataaaaaatctccaaatgtaattaaagaagcgaaaacatcaggtcttatcactgggtttagtttccctattcatacggctaacaatggcttcggaatgcttagttttgcacattcagaaaaagacaactatatagatagtttatttttacatgcgtgtatgaacataccattaattgttccttctctagttgataattatcgaaaaataaatatagcaaataataaatcaaacaacgatttaaccaaaagagaaaaagaatgtttagcgtgggcatgcgaaggaaaaagctcttgggatatttcaaaaatattaggttgcagtgagcgtactgtcactttccatttaaccaatgcgcaaatgaaactcaatacaacaaaccgctgccaaagtatttctaaagcaattttaacaggagcaattgattgcccatactttaaaaattaataacactgatagtgctagtgtagatcac</sbol:elements>
-      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/seq/BBa_C0062"/>
-      <sbol:hasNamespace rdf:resource="http://partsregistry.org/seq"/>
-      <sbol:displayId>BBa_C0062</sbol:displayId>
-   </sbol:Sequence>
-   <sbol:Sequence rdf:about="http://partsregistry.org/cd/BBa_F2620_seq">
-      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
-      <sbol:hasNamespace rdf:resource="http://partsregistry.org/cd"/>
-      <sbol:displayId>BBa_F2620_seq</sbol:displayId>
-   </sbol:Sequence>
-   <sbol:Sequence rdf:about="http://partsregistry.org/seq/BBa_R0062">
-      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
-      <sbol:elements>acctgtaggatcgtacaggtttacgcaagaaaatggtttgttatagtcgaataaa</sbol:elements>
-      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/seq/BBa_R0062"/>
-      <sbol:hasNamespace rdf:resource="http://partsregistry.org/seq"/>
-      <sbol:displayId>BBa_R0062</sbol:displayId>
-   </sbol:Sequence>
-   <sbol:Sequence rdf:about="http://partsregistry.org/seq/BBa_R0040">
-      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
-      <sbol:elements>tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcac</sbol:elements>
-      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/seq/BBa_R0040"/>
-      <sbol:hasNamespace rdf:resource="http://partsregistry.org/seq"/>
-      <sbol:displayId>BBa_R0040</sbol:displayId>
-   </sbol:Sequence>
-   <sbol:Sequence rdf:about="http://partsregistry.org/seq/BBa_B0034">
-      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
-      <sbol:elements>aaagaggagaaa</sbol:elements>
-      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/seq/BBa_B0034"/>
-      <sbol:hasNamespace rdf:resource="http://partsregistry.org/seq"/>
-      <sbol:displayId>BBa_B0034</sbol:displayId>
-   </sbol:Sequence>
-</rdf:RDF>
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX pr:          <http://partsregistry.org/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+
+<http://partsregistry.org/seq/BBa_B0034>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "BBa_B0034";
+        sbol:elements                 "aaagaggagaaa";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             pr:seq;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/seq/BBa_B0034> .
+
+<http://partsregistry.org/cd/BBa_B0015>
+        rdf:type                      sbol:Component;
+        sbol:description              "Double terminator";
+        sbol:displayId                "BBa_B0015";
+        sbol:hasNamespace             pr:cd;
+        sbol:hasSequence              <http://partsregistry.org/seq/BBa_B0015>;
+        sbol:name                     "BBa_B0015";
+        sbol:role                     SO:0000141;
+        sbol:type                     SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_B0015> .
+
+<http://partsregistry.org/seq/BBa_C0062>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "BBa_C0062";
+        sbol:elements                 "atgcttatctgatatgactaaaatggtacattgtgaatattatttactcgcgatcatttatcctcattctatggttaaatctgatatttcaatcctagataattaccctaaaaaatggaggcaatattatgatgacgctaatttaataaaatatgatcctatagtagattattctaactccaatcattcaccaattaattggaatatatttgaaaacaatgctgtaaataaaaaatctccaaatgtaattaaagaagcgaaaacatcaggtcttatcactgggtttagtttccctattcatacggctaacaatggcttcggaatgcttagttttgcacattcagaaaaagacaactatatagatagtttatttttacatgcgtgtatgaacataccattaattgttccttctctagttgataattatcgaaaaataaatatagcaaataataaatcaaacaacgatttaaccaaaagagaaaaagaatgtttagcgtgggcatgcgaaggaaaaagctcttgggatatttcaaaaatattaggttgcagtgagcgtactgtcactttccatttaaccaatgcgcaaatgaaactcaatacaacaaaccgctgccaaagtatttctaaagcaattttaacaggagcaattgattgcccatactttaaaaattaataacactgatagtgctagtgtagatcac";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             pr:seq;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/seq/BBa_C0062> .
+
+<http://partsregistry.org/cd/BBa_R0062>
+        rdf:type                      sbol:Component;
+        sbol:description              "LuxR inducible promoter";
+        sbol:displayId                "BBa_R0062";
+        sbol:hasNamespace             pr:cd;
+        sbol:hasSequence              <http://partsregistry.org/seq/BBa_R0062>;
+        sbol:name                     "BBa_R0062";
+        sbol:role                     SO:0000167;
+        sbol:type                     SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_R0062> .
+
+<http://partsregistry.org/seq/BBa_B0015>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "BBa_B0015";
+        sbol:elements                 "ccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctactagagtcacactggctcaccttcgggtgggcctttctgcgtttata";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             pr:seq;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/seq/BBa_B0015> .
+
+<http://partsregistry.org/cd/BBa_F2620/luxR/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "770";
+        sbol:hasSequence              <http://partsregistry.org/cd/BBa_F2620_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "69";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_F2620/anno3/range> .
+
+<http://partsregistry.org/seq/BBa_R0062>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "BBa_R0062";
+        sbol:elements                 "acctgtaggatcgtacaggtttacgcaagaaaatggtttgttatagtcgaataaa";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             pr:seq;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/seq/BBa_R0062> .
+
+<http://partsregistry.org/cd/BBa_F2620/rbs>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "rbs";
+        sbol:hasLocation              <http://partsregistry.org/cd/BBa_F2620/rbs/range>;
+        sbol:instanceOf               <http://partsregistry.org/cd/BBa_C0062>;
+        backport2_3:sbol2OriginalSequenceAnnotationURI
+                <http://partsregistry.org/cd/BBa_F2620/anno2>;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_F2620/anno2> , <http://partsregistry.org/cd/BBa_F2620/rbs> .
+
+<http://www.async.ece.utah.edu/GenericLocationComponent_seq>
+        rdf:type           sbol:Sequence;
+        sbol:displayId     "GenericLocationComponent_seq";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <http://www.async.ece.utah.edu> .
+
+<http://partsregistry.org/cd/BBa_F2620/pLuxR/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "956";
+        sbol:hasSequence              <http://partsregistry.org/cd/BBa_F2620_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "901";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_F2620/anno5/range> .
+
+<http://partsregistry.org/cd/BBa_F2620/luxR>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "luxR";
+        sbol:hasLocation              <http://partsregistry.org/cd/BBa_F2620/luxR/range>;
+        sbol:instanceOf               <http://partsregistry.org/cd/BBa_B0034>;
+        backport2_3:sbol2OriginalSequenceAnnotationURI
+                <http://partsregistry.org/cd/BBa_F2620/anno3>;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_F2620/anno3> , <http://partsregistry.org/cd/BBa_F2620/luxR> .
+
+<http://www.async.ece.utah.edu/GenericLocationComponent>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "GenericLocationComponent";
+        sbol:hasFeature               <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn>;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/GenericLocationComponent_seq>;
+        sbol:role                     SO:0000167;
+        sbol:type                     SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/GenericLocationComponent>;
+        backport2_3:sbol3TempSequenceURI
+                <http://www.async.ece.utah.edu/GenericLocationComponent_seq> .
+
+<http://partsregistry.org/cd/BBa_F2620>
+        rdf:type                      sbol:Component;
+        sbol:description              "3OC6HSL -> PoPS Receiver";
+        sbol:displayId                "BBa_F2620";
+        sbol:hasFeature               <http://partsregistry.org/cd/BBa_F2620/luxR> , <http://partsregistry.org/cd/BBa_F2620/ter> , <http://partsregistry.org/cd/BBa_F2620/rbs> , <http://partsregistry.org/cd/BBa_F2620/pLuxR> , <http://partsregistry.org/cd/BBa_F2620/pTetR>;
+        sbol:hasInterface             <http://partsregistry.org/cd/BBa_F2620/Interface1>;
+        sbol:hasNamespace             pr:cd;
+        sbol:hasSequence              <http://partsregistry.org/cd/BBa_F2620_seq>;
+        sbol:name                     "BBa_F2620";
+        sbol:role                     SO:0001411;
+        sbol:type                     SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_F2620>;
+        backport2_3:sbol3TempSequenceURI
+                <http://partsregistry.org/cd/BBa_F2620_seq> .
+
+<http://partsregistry.org/cd/BBa_F2620/pTetR>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "pTetR";
+        sbol:hasLocation              <http://partsregistry.org/cd/BBa_F2620/pTetR/range>;
+        sbol:instanceOf               <http://partsregistry.org/cd/BBa_R0040>;
+        backport2_3:sbol2OriginalSequenceAnnotationURI
+                <http://partsregistry.org/cd/BBa_F2620/anno1>;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_F2620/anno1> , <http://partsregistry.org/cd/BBa_F2620/pTetR> .
+
+<http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/gl>
+        rdf:type                      sbol:EntireSequence;
+        sbol:displayId                "gl";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/GenericLocationComponent_seq>;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/gl> .
+
+<http://partsregistry.org/cd/BBa_F2620/ter>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "ter";
+        sbol:hasLocation              <http://partsregistry.org/cd/BBa_F2620/ter/range>;
+        sbol:instanceOf               <http://partsregistry.org/cd/BBa_B0015>;
+        backport2_3:sbol2OriginalSequenceAnnotationURI
+                <http://partsregistry.org/cd/BBa_F2620/anno4>;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_F2620/anno4> , <http://partsregistry.org/cd/BBa_F2620/ter> .
+
+<http://partsregistry.org/cd/BBa_F2620/Interface1>
+        rdf:type             sbol:Interface;
+        sbol:displayId       "Interface1";
+        sbol:nondirectional  <http://partsregistry.org/cd/BBa_F2620/pLuxR> , <http://partsregistry.org/cd/BBa_F2620/pTetR> , <http://partsregistry.org/cd/BBa_F2620/rbs> , <http://partsregistry.org/cd/BBa_F2620/luxR> , <http://partsregistry.org/cd/BBa_F2620/ter> .
+
+<http://partsregistry.org/cd/BBa_F2620/pTetR/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "55";
+        sbol:hasSequence              <http://partsregistry.org/cd/BBa_F2620_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_F2620/anno1/range> .
+
+<http://partsregistry.org/cd/BBa_F2620/pLuxR>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "pLuxR";
+        sbol:hasLocation              <http://partsregistry.org/cd/BBa_F2620/pLuxR/range>;
+        sbol:instanceOf               <http://partsregistry.org/cd/BBa_R0062>;
+        backport2_3:sbol2OriginalSequenceAnnotationURI
+                <http://partsregistry.org/cd/BBa_F2620/anno5>;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_F2620/anno5> , <http://partsregistry.org/cd/BBa_F2620/pLuxR> .
+
+<http://partsregistry.org/cd/BBa_F2620/rbs/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "68";
+        sbol:hasSequence              <http://partsregistry.org/cd/BBa_F2620_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "56";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_F2620/anno2/range> .
+
+<http://partsregistry.org/cd/BBa_F2620/ter/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "900";
+        sbol:hasSequence              <http://partsregistry.org/cd/BBa_F2620_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "771";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_F2620/anno4/range> .
+
+<http://partsregistry.org/cd/BBa_F2620_seq>
+        rdf:type           sbol:Sequence;
+        sbol:displayId     "BBa_F2620_seq";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  pr:cd .
+
+<http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/GenericLocation>
+        rdf:type                      sbol:EntireSequence;
+        sbol:displayId                "GenericLocation";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/GenericLocationComponent_seq>;
+        sbol:orientation              SO:0001030;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/GenericLocation> .
+
+<http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn>
+        rdf:type                      sbol:SequenceFeature;
+        sbol:displayId                "gl_seqAnn";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/GenericLocation> , <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/gl>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn> .
+
+<http://partsregistry.org/cd/BBa_R0040>
+        rdf:type                      sbol:Component;
+        sbol:description              "TetR repressible promoter";
+        sbol:displayId                "BBa_R0040";
+        sbol:hasNamespace             pr:cd;
+        sbol:hasSequence              <http://partsregistry.org/seq/BBa_R0040>;
+        sbol:name                     "BBa_R0040";
+        sbol:role                     SO:0000167;
+        sbol:type                     SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_R0040> .
+
+<http://partsregistry.org/cd/BBa_B0034>
+        rdf:type                      sbol:Component;
+        sbol:description              "RBS based on Elowitz repressilator";
+        sbol:displayId                "BBa_B0034";
+        sbol:hasNamespace             pr:cd;
+        sbol:hasSequence              <http://partsregistry.org/seq/BBa_B0034>;
+        sbol:name                     "BBa_B0034";
+        sbol:role                     SO:0000139;
+        sbol:type                     SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_B0034> .
+
+<http://partsregistry.org/seq/BBa_R0040>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "BBa_R0040";
+        sbol:elements                 "tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcac";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             pr:seq;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/seq/BBa_R0040> .
+
+<http://partsregistry.org/cd/BBa_C0062>
+        rdf:type                      sbol:Component;
+        sbol:description              "luxR coding sequence";
+        sbol:displayId                "BBa_C0062";
+        sbol:hasNamespace             pr:cd;
+        sbol:hasSequence              <http://partsregistry.org/seq/BBa_C0062>;
+        sbol:name                     "BBa_C0062";
+        sbol:role                     SO:0000316;
+        sbol:type                     SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_C0062> .

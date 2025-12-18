@@ -14,6 +14,9 @@
    <sbol:Component rdf:about="http://myapp.com/codon_optimized">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
       <backport2_3:sbol2OriginalURI rdf:resource="http://myapp.com/codon_optimized"/>
+      <prov:wasGeneratedBy>
+         <sbol:TopLevel rdf:about="http://myapp.com/codon_optimization_activity"/>
+      </prov:wasGeneratedBy>
       <prov:wasDerivedFrom>
          <sbol:Component rdf:about="http://myapp.com/non_codon_optimized"/>
       </prov:wasDerivedFrom>

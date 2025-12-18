@@ -1,0 +1,5 @@
+<http://www.async.ece.utah.edu/LacI_Inv/1.0> <http://sbols.org/v2#displayId> "LacI_Inv" .
+<http://www.async.ece.utah.edu/LacI_Inv/1.0> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/LacI_Inv> .
+<http://www.async.ece.utah.edu/LacI_Inv/1.0> <http://sbols.org/v2#role> <http://some.ontology.org/Inverter> .
+<http://www.async.ece.utah.edu/LacI_Inv/1.0> <http://sbols.org/v2#version> "1.0" .
+<http://www.async.ece.utah.edu/LacI_Inv/1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#ModuleDefinition> .
