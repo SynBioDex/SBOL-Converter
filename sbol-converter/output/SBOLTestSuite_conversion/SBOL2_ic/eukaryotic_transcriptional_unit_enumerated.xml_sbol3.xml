@@ -4731,9 +4731,7 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
          <sbol:Identified rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance42_SBOLDesignerActivity/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation_Usage">
             <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance42_SBOLDesignerActivity/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation_Usage/1"/>
             <prov:hadRole rdf:resource="http://sbols.org/v2#sequenceEditor"/>
-            <prov:entity>
-               <sbol:CombinatorialDerivation rdf:about="http://michael.zhang/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation"/>
-            </prov:entity>
+            <prov:entity rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation"/>
             <sbol:displayId>Eukaryotic_Transcriptional_Unit_CombinatorialDerivation_Usage</sbol:displayId>
             <rdf:type rdf:resource="http://www.w3.org/ns/prov#Usage"/>
          </sbol:Identified>
@@ -4769,49 +4767,4 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
       <sbol:displayId>Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity</sbol:displayId>
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
    </sbol:TopLevel>
-   <sbol:CombinatorialDerivation rdf:about="http://michael.zhang/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation">
-      <sbol:hasVariableFeature>
-         <sbol:VariableFeature rdf:about="http://michael.zhang/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation/Pro_Component_VariableComponent">
-            <sbol:variantDerivation>
-               <sbol:CombinatorialDerivation rdf:about="http://michael.zhang/Pro_CombinatorialDerivation"/>
-            </sbol:variantDerivation>
-            <sbol:cardinality rdf:resource="http://sbols.org/v3#one"/>
-            <sbol:displayId>Pro_Component_VariableComponent</sbol:displayId>
-         </sbol:VariableFeature>
-      </sbol:hasVariableFeature>
-      <sbol:hasVariableFeature>
-         <sbol:VariableFeature rdf:about="http://michael.zhang/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation/CDS_Component_VariableComponent">
-            <sbol:variant rdf:resource="https://synbiohub.org/public/igem/1/BBa_K1606007"/>
-            <sbol:variant rdf:resource="https://synbiohub.org/public/igem/1/BBa_C0100"/>
-            <sbol:variant rdf:resource="https://synbiohub.org/public/igem/1/BBa_J45000"/>
-            <sbol:variant rdf:resource="https://synbiohub.org/public/igem/1/BBa_K1606010"/>
-            <sbol:cardinality rdf:resource="http://sbols.org/v3#one"/>
-            <sbol:displayId>CDS_Component_VariableComponent</sbol:displayId>
-         </sbol:VariableFeature>
-      </sbol:hasVariableFeature>
-      <sbol:strategy rdf:resource="http://sbols.org/v3#enumerate"/>
-      <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation"/>
-      <prov:wasGeneratedBy rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity/1"/>
-      <sbol:hasNamespace rdf:resource="http://michael.zhang"/>
-      <sbol:template rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit"/>
-      <sbol:displayId>Eukaryotic_Transcriptional_Unit_CombinatorialDerivation</sbol:displayId>
-   </sbol:CombinatorialDerivation>
-   <sbol:CombinatorialDerivation rdf:about="http://michael.zhang/Pro_CombinatorialDerivation">
-      <sbol:hasVariableFeature>
-         <sbol:VariableFeature rdf:about="http://michael.zhang/Pro_CombinatorialDerivation/Op_Component_VariableComponent">
-            <sbol:variant rdf:resource="https://synbiohub.org/public/igem/1/BBa_I741109"/>
-            <sbol:variant rdf:resource="https://synbiohub.org/public/igem/1/BBa_K119002"/>
-            <sbol:variant rdf:resource="https://synbiohub.org/public/igem/1/BBa_I9201"/>
-            <sbol:variant rdf:resource="https://synbiohub.org/public/igem/1/BBa_I13603"/>
-            <sbol:cardinality rdf:resource="http://sbols.org/v3#zeroOrOne"/>
-            <sbol:displayId>Op_Component_VariableComponent</sbol:displayId>
-         </sbol:VariableFeature>
-      </sbol:hasVariableFeature>
-      <sbol:strategy rdf:resource="http://sbols.org/v3#enumerate"/>
-      <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Pro_CombinatorialDerivation"/>
-      <prov:wasGeneratedBy rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity/1"/>
-      <sbol:hasNamespace rdf:resource="http://michael.zhang"/>
-      <sbol:template rdf:resource="http://michael.zhang/1/Pro"/>
-      <sbol:displayId>Pro_CombinatorialDerivation</sbol:displayId>
-   </sbol:CombinatorialDerivation>
 </rdf:RDF>

@@ -78,52 +78,353 @@
     </sbol:sequenceConstraint>
     <sbol:sequence rdf:resource="http://michael.zhang/GFP_Reporter_TemplateSequence/1"/>
   </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_K1545001/1">
-    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_K1545001"/>
-    <sbol:displayId>BBa_K1545001</sbol:displayId>
+  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_B0011/1">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0011"/>
+    <sbol:displayId>BBa_B0011</sbol:displayId>
     <sbol:version>1</sbol:version>
-    <prov:wasDerivedFrom rdf:resource="http://parts.igem.org/Part:BBa_K1545001"/>
+    <prov:wasDerivedFrom rdf:resource="http://parts.igem.org/Part:BBa_B0011"/>
     <prov:wasGeneratedBy rdf:resource="https://synbiohub.org/public/igem/igem2sbol/1"/>
-    <dcterms:title>BBa_K1545001</dcterms:title>
-    <dcterms:description>6xGFP1 decoy</dcterms:description>
-    <sbh:mutableDescription>Array of 6 binding sites for gRNAs matching CCATCTAATTCAACAAGAATTGG + 7 bp spacer</sbh:mutableDescription>
+    <dcterms:title>BBa_B0011</dcterms:title>
+    <dcterms:description>LuxICDABEG (+/-)</dcterms:description>
+    <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0011/1"/>
+    <sbh:star>true</sbh:star>
+    <sbh:ownedBy rdf:resource="https://synbiohub.org/user/myers"/>
+    <sbh:bookmark>false</sbh:bookmark>
+    <igem:m_user_id>0</igem:m_user_id>
+    <sbh:mutableDescription>Bidirectional transcriptional terminator consisting of a 22 bp stem-loop.&lt;/p&gt;</sbh:mutableDescription>
+    <igem:owning_group_id>7</igem:owning_group_id>
+    <sbh:mutableProvenance>Derived from luxICDABEG operon terminator of Vibrio fischeri &lt;genbank&gt;AF170104&lt;/genbank&gt;.</sbh:mutableProvenance>
+    <igem:status rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#status/Available"/>
+    <igem:group_u_list>_1_</igem:group_u_list>
+    <sbh:ownedBy rdf:resource="https://synbiohub.org/user/james"/>
+    <igem:dominant>false</igem:dominant>
+    <igem:sampleStatus>In stock</igem:sampleStatus>
+    <igem:discontinued>false</igem:discontinued>
+    <dc:creator>Reshma Shetty</dc:creator>
+    <igem:experience rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#experience/Works"/>
+    <sbh:mutableNotes>&lt;P&gt; &lt;P&gt;In the naturally-occuring sequence there is a mismatch in the stem of the      stem loop. This can be corrected via an A-&amp;gt;G mutation (at position 40 -- sequence coordinate/not MFOLD coordinate). The above sequence does not reflect this mutation (but the MFOLD image does). This terminator's location cannot be      found using some inverted repeat detectors like PALINDROME because it is too      short and contains a mismatch. This one was found with the help of Tom Knight.      It lies between two coding regions that point towards eachother.&lt;P&gt;</sbh:mutableNotes>
+    <igem:owner_id>24</igem:owner_id>
+    <dcterms:modified>2015-08-31T04:07:20Z</dcterms:modified>
+    <dcterms:created>2003-01-31T12:00:00Z</dcterms:created>
+    <igem:partStatus>Released HQ 2013</igem:partStatus>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000141"/>
+    <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#partType/Terminator"/>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="https://synbiohub.org/public/igem/BBa_B0011/annotation1683/1">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0011/annotation1683"/>
+        <sbol:displayId>annotation1683</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <dcterms:title>stem_loop</dcterms:title>
+        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0011/1"/>
+        <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#feature/stem_loop"/>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000313"/>
+        <sbol:location>
+          <sbol:Range rdf:about="https://synbiohub.org/public/igem/BBa_B0011/annotation1683/range1683/1">
+            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0011/annotation1683/range1683"/>
+            <sbol:displayId>range1683</sbol:displayId>
+            <sbol:version>1</sbol:version>
+            <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0011/1"/>
+            <igem:direction rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward"/>
+            <sbol:start>13</sbol:start>
+            <sbol:end>35</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="https://synbiohub.org/public/igem/BBa_B0011/annotation7019/1">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0011/annotation7019"/>
+        <sbol:displayId>annotation7019</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <dcterms:title>BBa_B0011</dcterms:title>
+        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0011/1"/>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000804"/>
+        <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#feature/BioBrick"/>
+        <sbol:location>
+          <sbol:Range rdf:about="https://synbiohub.org/public/igem/BBa_B0011/annotation7019/range7019/1">
+            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0011/annotation7019/range7019"/>
+            <sbol:displayId>range7019</sbol:displayId>
+            <sbol:version>1</sbol:version>
+            <igem:direction rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward"/>
+            <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0011/1"/>
+            <sbol:start>1</sbol:start>
+            <sbol:end>46</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_B0011_sequence/1"/>
+  </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_B0034/1">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0034"/>
+    <sbol:displayId>BBa_B0034</sbol:displayId>
+    <sbol:version>1</sbol:version>
+    <prov:wasDerivedFrom rdf:resource="http://parts.igem.org/Part:BBa_B0034"/>
+    <prov:wasGeneratedBy rdf:resource="https://synbiohub.org/public/igem/igem2sbol/1"/>
+    <dcterms:title>BBa_B0034</dcterms:title>
+    <dcterms:description>RBS (Elowitz 1999) -- defines RBS efficiency</dcterms:description>
+    <dcterms:modified>2015-08-31T04:07:20Z</dcterms:modified>
+    <sbh:ownedBy rdf:resource="https://synbiohub.org/user/james"/>
+    <sbh:mutableNotes>Varies from -6 to +1 region from original sequence to accomodate BioBricks      suffix.   &lt;p&gt;No secondary structures are formed in the given RBS region. Users should check      for secondary structures induced in the RBS by upstream and downstream elements      in the +50 to -50 region, as such structures will greatly affect the strength      of the RBS.
+
+Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian Chow&lt;/a&gt;</sbh:mutableNotes>
+    <igem:discontinued>false</igem:discontinued>
+    <dc:creator>Vinay S Mahajan, Voichita D. Marinescu, Brian Chow, Alexander      D Wissner-Gross and Peter Carr IAP, 2003.</dc:creator>
+    <igem:status rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#status/Available"/>
+    <igem:dominant>true</igem:dominant>
+    <sbh:mutableDescription>RBS based on Elowitz repressilator.</sbh:mutableDescription>
+    <sbh:ownedBy rdf:resource="https://synbiohub.org/user/myers"/>
+    <igem:owning_group_id>7</igem:owning_group_id>
+    <sbh:bookmark>false</sbh:bookmark>
+    <igem:m_user_id>0</igem:m_user_id>
+    <igem:owner_id>24</igem:owner_id>
+    <sbh:star>true</sbh:star>
+    <igem:experience rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#experience/Works"/>
+    <igem:partStatus>Released HQ 2013</igem:partStatus>
+    <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0034/1"/>
+    <igem:group_u_list>_1_</igem:group_u_list>
+    <igem:sampleStatus>In stock</igem:sampleStatus>
+    <dcterms:created>2003-01-31T12:00:00Z</dcterms:created>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000139"/>
+    <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#partType/RBS"/>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="https://synbiohub.org/public/igem/BBa_B0034/annotation23325/1">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0034/annotation23325"/>
+        <sbol:displayId>annotation23325</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <dcterms:title>conserved</dcterms:title>
+        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0034/1"/>
+        <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#feature/conserved"/>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000330"/>
+        <sbol:location>
+          <sbol:Range rdf:about="https://synbiohub.org/public/igem/BBa_B0034/annotation23325/range23325/1">
+            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0034/annotation23325/range23325"/>
+            <sbol:displayId>range23325</sbol:displayId>
+            <sbol:version>1</sbol:version>
+            <igem:direction rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward"/>
+            <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0034/1"/>
+            <sbol:start>5</sbol:start>
+            <sbol:end>8</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_B0034_sequence/1"/>
+  </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="http://michael.zhang/GFP_Reporter_Template/1">
+    <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template"/>
+    <sbol:displayId>GFP_Reporter_Template</sbol:displayId>
+    <sbol:version>1</sbol:version>
+    <prov:wasDerivedFrom rdf:resource="http://michael.zhang/UnnamedPart/1"/>
+    <prov:wasGeneratedBy rdf:resource="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/1"/>
+    <prov:wasGeneratedBy rdf:resource="http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1"/>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000804"/>
+    <sbol:component>
+      <sbol:Component rdf:about="http://michael.zhang/GFP_Reporter_Template/Pro_Component/1">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/Pro_Component"/>
+        <sbol:displayId>Pro_Component</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
+        <sbol:definition rdf:resource="http://michael.zhang/Pro/1"/>
+      </sbol:Component>
+    </sbol:component>
+    <sbol:component>
+      <sbol:Component rdf:about="http://michael.zhang/GFP_Reporter_Template/Ter_Component/1">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/Ter_Component"/>
+        <sbol:displayId>Ter_Component</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
+        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_B0014/1"/>
+      </sbol:Component>
+    </sbol:component>
+    <sbol:component>
+      <sbol:Component rdf:about="http://michael.zhang/GFP_Reporter_Template/CDS_Component/1">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/CDS_Component"/>
+        <sbol:displayId>CDS_Component</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
+        <sbol:definition rdf:resource="http://michael.zhang/CDS/1"/>
+      </sbol:Component>
+    </sbol:component>
+    <sbol:component>
+      <sbol:Component rdf:about="http://michael.zhang/GFP_Reporter_Template/RBS_Component/1">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/RBS_Component"/>
+        <sbol:displayId>RBS_Component</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
+        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_B0034/1"/>
+      </sbol:Component>
+    </sbol:component>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation3/1">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation3"/>
+        <sbol:displayId>GFP_Reporter_Template_SequenceAnnotation3</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <sbol:location>
+          <sbol:Range rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation3/GFP_Reporter_Template_SequenceAnnotation3_Range/1">
+            <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation3/GFP_Reporter_Template_SequenceAnnotation3_Range"/>
+            <sbol:displayId>GFP_Reporter_Template_SequenceAnnotation3_Range</sbol:displayId>
+            <sbol:version>1</sbol:version>
+            <sbol:start>13</sbol:start>
+            <sbol:end>107</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+        <sbol:component rdf:resource="http://michael.zhang/GFP_Reporter_Template/Ter_Component/1"/>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation/1">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation"/>
+        <sbol:displayId>GFP_Reporter_Template_SequenceAnnotation</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <sbol:location>
+          <sbol:GenericLocation rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation/GenericLocation/1">
+            <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation/GenericLocation"/>
+            <sbol:displayId>GenericLocation</sbol:displayId>
+            <sbol:version>1</sbol:version>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:GenericLocation>
+        </sbol:location>
+        <sbol:component rdf:resource="http://michael.zhang/GFP_Reporter_Template/Pro_Component/1"/>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation2/1">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation2"/>
+        <sbol:displayId>GFP_Reporter_Template_SequenceAnnotation2</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <sbol:location>
+          <sbol:GenericLocation rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation2/GenericLocation/1">
+            <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation2/GenericLocation"/>
+            <sbol:displayId>GenericLocation</sbol:displayId>
+            <sbol:version>1</sbol:version>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:GenericLocation>
+        </sbol:location>
+        <sbol:component rdf:resource="http://michael.zhang/GFP_Reporter_Template/CDS_Component/1"/>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation1/1">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation1"/>
+        <sbol:displayId>GFP_Reporter_Template_SequenceAnnotation1</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <sbol:location>
+          <sbol:Range rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation1/GFP_Reporter_Template_SequenceAnnotation1_Range/1">
+            <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation1/GFP_Reporter_Template_SequenceAnnotation1_Range"/>
+            <sbol:displayId>GFP_Reporter_Template_SequenceAnnotation1_Range</sbol:displayId>
+            <sbol:version>1</sbol:version>
+            <sbol:start>1</sbol:start>
+            <sbol:end>12</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+        <sbol:component rdf:resource="http://michael.zhang/GFP_Reporter_Template/RBS_Component/1"/>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceConstraint>
+      <sbol:SequenceConstraint rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint1/1">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint1"/>
+        <sbol:displayId>GFP_Reporter_Template_SequenceConstraint1</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <sbol:restriction rdf:resource="http://sbols.org/v2#precedes"/>
+        <sbol:subject rdf:resource="http://michael.zhang/GFP_Reporter_Template/RBS_Component/1"/>
+        <sbol:object rdf:resource="http://michael.zhang/GFP_Reporter_Template/CDS_Component/1"/>
+      </sbol:SequenceConstraint>
+    </sbol:sequenceConstraint>
+    <sbol:sequenceConstraint>
+      <sbol:SequenceConstraint rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint2/1">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint2"/>
+        <sbol:displayId>GFP_Reporter_Template_SequenceConstraint2</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <sbol:restriction rdf:resource="http://sbols.org/v2#precedes"/>
+        <sbol:subject rdf:resource="http://michael.zhang/GFP_Reporter_Template/CDS_Component/1"/>
+        <sbol:object rdf:resource="http://michael.zhang/GFP_Reporter_Template/Ter_Component/1"/>
+      </sbol:SequenceConstraint>
+    </sbol:sequenceConstraint>
+    <sbol:sequenceConstraint>
+      <sbol:SequenceConstraint rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint/1">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint"/>
+        <sbol:displayId>GFP_Reporter_Template_SequenceConstraint</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <sbol:restriction rdf:resource="http://sbols.org/v2#precedes"/>
+        <sbol:subject rdf:resource="http://michael.zhang/GFP_Reporter_Template/Pro_Component/1"/>
+        <sbol:object rdf:resource="http://michael.zhang/GFP_Reporter_Template/RBS_Component/1"/>
+      </sbol:SequenceConstraint>
+    </sbol:sequenceConstraint>
+    <sbol:sequence rdf:resource="http://michael.zhang/GFP_Reporter_TemplateSequence/1"/>
+  </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="http://michael.zhang/Pro/1">
+    <sbol:persistentIdentity rdf:resource="http://michael.zhang/Pro"/>
+    <sbol:displayId>Pro</sbol:displayId>
+    <sbol:version>1</sbol:version>
+    <prov:wasGeneratedBy rdf:resource="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/1"/>
+    <prov:wasGeneratedBy rdf:resource="http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1"/>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
+  </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="http://michael.zhang/CDS/1">
+    <sbol:persistentIdentity rdf:resource="http://michael.zhang/CDS"/>
+    <sbol:displayId>CDS</sbol:displayId>
+    <sbol:version>1</sbol:version>
+    <prov:wasGeneratedBy rdf:resource="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/1"/>
+    <prov:wasGeneratedBy rdf:resource="http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1"/>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
+  </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_K1545000/1">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_K1545000"/>
+    <sbol:displayId>BBa_K1545000</sbol:displayId>
+    <sbol:version>1</sbol:version>
+    <prov:wasDerivedFrom rdf:resource="http://parts.igem.org/Part:BBa_K1545000"/>
+    <prov:wasGeneratedBy rdf:resource="https://synbiohub.org/public/igem/igem2sbol/1"/>
+    <dcterms:title>BBa_K1545000</dcterms:title>
+    <dcterms:description>1xGFP1 decoy</dcterms:description>
     <dcterms:modified>2015-05-08T01:10:53Z</dcterms:modified>
     <sbh:ownedBy rdf:resource="https://synbiohub.org/user/james"/>
     <igem:sampleStatus>In stock</igem:sampleStatus>
     <igem:status rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#status/Available"/>
-    <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_K1545001/1"/>
     <igem:owner_id>23396</igem:owner_id>
-    <igem:dominant>false</igem:dominant>
     <igem:owning_group_id>9</igem:owning_group_id>
+    <igem:dominant>false</igem:dominant>
     <igem:m_user_id>0</igem:m_user_id>
     <igem:group_u_list>_1928_</igem:group_u_list>
     <sbh:mutableProvenance>synthesized</sbh:mutableProvenance>
     <dcterms:created>2014-10-08T11:00:00Z</dcterms:created>
     <igem:discontinued>false</igem:discontinued>
     <dc:creator>Mike Zhu</dc:creator>
+    <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_K1545000/1"/>
     <sbh:bookmark>false</sbh:bookmark>
     <sbh:star>false</sbh:star>
+    <sbh:mutableDescription>Array of 1 binding site for gRNAs matching CCATCTAATTCAACAAGAATTGG + 7 bp spacer</sbh:mutableDescription>
     <sbh:ownedBy rdf:resource="https://synbiohub.org/user/myers"/>
     <sbh:mutableNotes>n/a</sbh:mutableNotes>
     <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
     <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#partType/Regulatory"/>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="https://synbiohub.org/public/igem/BBa_K1545001/annotation2407780/1">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_K1545001/annotation2407780"/>
-        <sbol:displayId>annotation2407780</sbol:displayId>
+      <sbol:SequenceAnnotation rdf:about="https://synbiohub.org/public/igem/BBa_K1545000/annotation2407646/1">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_K1545000/annotation2407646"/>
+        <sbol:displayId>annotation2407646</sbol:displayId>
         <sbol:version>1</sbol:version>
         <dcterms:title>GFP1 binding site + NGG</dcterms:title>
-        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_K1545001/1"/>
+        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_K1545000/1"/>
         <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
         <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#feature/misc"/>
         <sbol:location>
-          <sbol:Range rdf:about="https://synbiohub.org/public/igem/BBa_K1545001/annotation2407780/range2407780/1">
-            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_K1545001/annotation2407780/range2407780"/>
-            <sbol:displayId>range2407780</sbol:displayId>
+          <sbol:Range rdf:about="https://synbiohub.org/public/igem/BBa_K1545000/annotation2407646/range2407646/1">
+            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_K1545000/annotation2407646/range2407646"/>
+            <sbol:displayId>range2407646</sbol:displayId>
             <sbol:version>1</sbol:version>
-            <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_K1545001/1"/>
             <igem:direction rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward"/>
+            <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_K1545000/1"/>
             <sbol:start>1</sbol:start>
             <sbol:end>24</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
@@ -131,7 +432,7 @@
         </sbol:location>
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
-    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_K1545001_sequence/1"/>
+    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_K1545000_sequence/1"/>
   </sbol:ComponentDefinition>
   <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_B0014/1">
     <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0014"/>
@@ -231,224 +532,6 @@
     </sbol:sequenceAnnotation>
     <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_B0014_sequence/1"/>
   </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_K1545000/1">
-    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_K1545000"/>
-    <sbol:displayId>BBa_K1545000</sbol:displayId>
-    <sbol:version>1</sbol:version>
-    <prov:wasDerivedFrom rdf:resource="http://parts.igem.org/Part:BBa_K1545000"/>
-    <prov:wasGeneratedBy rdf:resource="https://synbiohub.org/public/igem/igem2sbol/1"/>
-    <dcterms:title>BBa_K1545000</dcterms:title>
-    <dcterms:description>1xGFP1 decoy</dcterms:description>
-    <dcterms:modified>2015-05-08T01:10:53Z</dcterms:modified>
-    <sbh:ownedBy rdf:resource="https://synbiohub.org/user/james"/>
-    <igem:sampleStatus>In stock</igem:sampleStatus>
-    <igem:status rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#status/Available"/>
-    <igem:owner_id>23396</igem:owner_id>
-    <igem:owning_group_id>9</igem:owning_group_id>
-    <igem:dominant>false</igem:dominant>
-    <igem:m_user_id>0</igem:m_user_id>
-    <igem:group_u_list>_1928_</igem:group_u_list>
-    <sbh:mutableProvenance>synthesized</sbh:mutableProvenance>
-    <dcterms:created>2014-10-08T11:00:00Z</dcterms:created>
-    <igem:discontinued>false</igem:discontinued>
-    <dc:creator>Mike Zhu</dc:creator>
-    <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_K1545000/1"/>
-    <sbh:bookmark>false</sbh:bookmark>
-    <sbh:star>false</sbh:star>
-    <sbh:mutableDescription>Array of 1 binding site for gRNAs matching CCATCTAATTCAACAAGAATTGG + 7 bp spacer</sbh:mutableDescription>
-    <sbh:ownedBy rdf:resource="https://synbiohub.org/user/myers"/>
-    <sbh:mutableNotes>n/a</sbh:mutableNotes>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
-    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
-    <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#partType/Regulatory"/>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="https://synbiohub.org/public/igem/BBa_K1545000/annotation2407646/1">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_K1545000/annotation2407646"/>
-        <sbol:displayId>annotation2407646</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <dcterms:title>GFP1 binding site + NGG</dcterms:title>
-        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_K1545000/1"/>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
-        <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#feature/misc"/>
-        <sbol:location>
-          <sbol:Range rdf:about="https://synbiohub.org/public/igem/BBa_K1545000/annotation2407646/range2407646/1">
-            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_K1545000/annotation2407646/range2407646"/>
-            <sbol:displayId>range2407646</sbol:displayId>
-            <sbol:version>1</sbol:version>
-            <igem:direction rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward"/>
-            <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_K1545000/1"/>
-            <sbol:start>1</sbol:start>
-            <sbol:end>24</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_K1545000_sequence/1"/>
-  </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="http://michael.zhang/Pro/1">
-    <sbol:persistentIdentity rdf:resource="http://michael.zhang/Pro"/>
-    <sbol:displayId>Pro</sbol:displayId>
-    <sbol:version>1</sbol:version>
-    <prov:wasGeneratedBy rdf:resource="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/1"/>
-    <prov:wasGeneratedBy rdf:resource="http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1"/>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
-    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
-  </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="http://michael.zhang/GFP_Reporter_Template/1">
-    <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template"/>
-    <sbol:displayId>GFP_Reporter_Template</sbol:displayId>
-    <sbol:version>1</sbol:version>
-    <prov:wasDerivedFrom rdf:resource="http://michael.zhang/UnnamedPart/1"/>
-    <prov:wasGeneratedBy rdf:resource="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/1"/>
-    <prov:wasGeneratedBy rdf:resource="http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1"/>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
-    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000804"/>
-    <sbol:component>
-      <sbol:Component rdf:about="http://michael.zhang/GFP_Reporter_Template/Pro_Component/1">
-        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/Pro_Component"/>
-        <sbol:displayId>Pro_Component</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="http://michael.zhang/Pro/1"/>
-      </sbol:Component>
-    </sbol:component>
-    <sbol:component>
-      <sbol:Component rdf:about="http://michael.zhang/GFP_Reporter_Template/Ter_Component/1">
-        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/Ter_Component"/>
-        <sbol:displayId>Ter_Component</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_B0014/1"/>
-      </sbol:Component>
-    </sbol:component>
-    <sbol:component>
-      <sbol:Component rdf:about="http://michael.zhang/GFP_Reporter_Template/CDS_Component/1">
-        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/CDS_Component"/>
-        <sbol:displayId>CDS_Component</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="http://michael.zhang/CDS/1"/>
-      </sbol:Component>
-    </sbol:component>
-    <sbol:component>
-      <sbol:Component rdf:about="http://michael.zhang/GFP_Reporter_Template/RBS_Component/1">
-        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/RBS_Component"/>
-        <sbol:displayId>RBS_Component</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_B0034/1"/>
-      </sbol:Component>
-    </sbol:component>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation/1">
-        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation"/>
-        <sbol:displayId>GFP_Reporter_Template_SequenceAnnotation</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <sbol:location>
-          <sbol:GenericLocation rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation/GenericLocation/1">
-            <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation/GenericLocation"/>
-            <sbol:displayId>GenericLocation</sbol:displayId>
-            <sbol:version>1</sbol:version>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:GenericLocation>
-        </sbol:location>
-        <sbol:component rdf:resource="http://michael.zhang/GFP_Reporter_Template/Pro_Component/1"/>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation1/1">
-        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation1"/>
-        <sbol:displayId>GFP_Reporter_Template_SequenceAnnotation1</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <sbol:location>
-          <sbol:Range rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation1/GFP_Reporter_Template_SequenceAnnotation1_Range/1">
-            <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation1/GFP_Reporter_Template_SequenceAnnotation1_Range"/>
-            <sbol:displayId>GFP_Reporter_Template_SequenceAnnotation1_Range</sbol:displayId>
-            <sbol:version>1</sbol:version>
-            <sbol:start>1</sbol:start>
-            <sbol:end>12</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-        <sbol:component rdf:resource="http://michael.zhang/GFP_Reporter_Template/RBS_Component/1"/>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation2/1">
-        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation2"/>
-        <sbol:displayId>GFP_Reporter_Template_SequenceAnnotation2</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <sbol:location>
-          <sbol:GenericLocation rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation2/GenericLocation/1">
-            <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation2/GenericLocation"/>
-            <sbol:displayId>GenericLocation</sbol:displayId>
-            <sbol:version>1</sbol:version>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:GenericLocation>
-        </sbol:location>
-        <sbol:component rdf:resource="http://michael.zhang/GFP_Reporter_Template/CDS_Component/1"/>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation3/1">
-        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation3"/>
-        <sbol:displayId>GFP_Reporter_Template_SequenceAnnotation3</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <sbol:location>
-          <sbol:Range rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation3/GFP_Reporter_Template_SequenceAnnotation3_Range/1">
-            <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation3/GFP_Reporter_Template_SequenceAnnotation3_Range"/>
-            <sbol:displayId>GFP_Reporter_Template_SequenceAnnotation3_Range</sbol:displayId>
-            <sbol:version>1</sbol:version>
-            <sbol:start>13</sbol:start>
-            <sbol:end>107</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-        <sbol:component rdf:resource="http://michael.zhang/GFP_Reporter_Template/Ter_Component/1"/>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceConstraint>
-      <sbol:SequenceConstraint rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint1/1">
-        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint1"/>
-        <sbol:displayId>GFP_Reporter_Template_SequenceConstraint1</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <sbol:restriction rdf:resource="http://sbols.org/v2#precedes"/>
-        <sbol:subject rdf:resource="http://michael.zhang/GFP_Reporter_Template/RBS_Component/1"/>
-        <sbol:object rdf:resource="http://michael.zhang/GFP_Reporter_Template/CDS_Component/1"/>
-      </sbol:SequenceConstraint>
-    </sbol:sequenceConstraint>
-    <sbol:sequenceConstraint>
-      <sbol:SequenceConstraint rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint2/1">
-        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint2"/>
-        <sbol:displayId>GFP_Reporter_Template_SequenceConstraint2</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <sbol:restriction rdf:resource="http://sbols.org/v2#precedes"/>
-        <sbol:subject rdf:resource="http://michael.zhang/GFP_Reporter_Template/CDS_Component/1"/>
-        <sbol:object rdf:resource="http://michael.zhang/GFP_Reporter_Template/Ter_Component/1"/>
-      </sbol:SequenceConstraint>
-    </sbol:sequenceConstraint>
-    <sbol:sequenceConstraint>
-      <sbol:SequenceConstraint rdf:about="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint/1">
-        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceConstraint"/>
-        <sbol:displayId>GFP_Reporter_Template_SequenceConstraint</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <sbol:restriction rdf:resource="http://sbols.org/v2#precedes"/>
-        <sbol:subject rdf:resource="http://michael.zhang/GFP_Reporter_Template/Pro_Component/1"/>
-        <sbol:object rdf:resource="http://michael.zhang/GFP_Reporter_Template/RBS_Component/1"/>
-      </sbol:SequenceConstraint>
-    </sbol:sequenceConstraint>
-    <sbol:sequence rdf:resource="http://michael.zhang/GFP_Reporter_TemplateSequence/1"/>
-  </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="http://michael.zhang/CDS/1">
-    <sbol:persistentIdentity rdf:resource="http://michael.zhang/CDS"/>
-    <sbol:displayId>CDS</sbol:displayId>
-    <sbol:version>1</sbol:version>
-    <prov:wasGeneratedBy rdf:resource="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/1"/>
-    <prov:wasGeneratedBy rdf:resource="http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1"/>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
-    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
-  </sbol:ComponentDefinition>
   <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_B0012/1">
     <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0012"/>
     <sbol:displayId>BBa_B0012</sbol:displayId>
@@ -482,22 +565,45 @@
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000141"/>
     <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#partType/Terminator"/>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="https://synbiohub.org/public/igem/BBa_B0012/annotation7020/1">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/annotation7020"/>
-        <sbol:displayId>annotation7020</sbol:displayId>
+      <sbol:SequenceAnnotation rdf:about="https://synbiohub.org/public/igem/BBa_B0012/annotation1686/1">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/annotation1686"/>
+        <sbol:displayId>annotation1686</sbol:displayId>
         <sbol:version>1</sbol:version>
-        <dcterms:title>BBa_B0012</dcterms:title>
+        <dcterms:title>T7 TE</dcterms:title>
         <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/1"/>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000804"/>
-        <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#feature/BioBrick"/>
+        <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#feature/stem_loop"/>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000313"/>
         <sbol:location>
-          <sbol:Range rdf:about="https://synbiohub.org/public/igem/BBa_B0012/annotation7020/range7020/1">
-            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/annotation7020/range7020"/>
-            <sbol:displayId>range7020</sbol:displayId>
+          <sbol:Range rdf:about="https://synbiohub.org/public/igem/BBa_B0012/annotation1686/range1686/1">
+            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/annotation1686/range1686"/>
+            <sbol:displayId>range1686</sbol:displayId>
+            <sbol:version>1</sbol:version>
+            <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/1"/>
+            <igem:direction rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward"/>
+            <sbol:start>8</sbol:start>
+            <sbol:end>27</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="https://synbiohub.org/public/igem/BBa_B0012/annotation1690/1">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/annotation1690"/>
+        <sbol:displayId>annotation1690</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <dcterms:title>polya</dcterms:title>
+        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/1"/>
+        <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#feature/polya"/>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000553"/>
+        <sbol:location>
+          <sbol:Range rdf:about="https://synbiohub.org/public/igem/BBa_B0012/annotation1690/range1690/1">
+            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/annotation1690/range1690"/>
+            <sbol:displayId>range1690</sbol:displayId>
             <sbol:version>1</sbol:version>
             <igem:direction rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward"/>
             <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/1"/>
-            <sbol:start>1</sbol:start>
+            <sbol:start>28</sbol:start>
             <sbol:end>41</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
@@ -528,46 +634,23 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="https://synbiohub.org/public/igem/BBa_B0012/annotation1690/1">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/annotation1690"/>
-        <sbol:displayId>annotation1690</sbol:displayId>
+      <sbol:SequenceAnnotation rdf:about="https://synbiohub.org/public/igem/BBa_B0012/annotation7020/1">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/annotation7020"/>
+        <sbol:displayId>annotation7020</sbol:displayId>
         <sbol:version>1</sbol:version>
-        <dcterms:title>polya</dcterms:title>
+        <dcterms:title>BBa_B0012</dcterms:title>
         <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/1"/>
-        <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#feature/polya"/>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000553"/>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000804"/>
+        <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#feature/BioBrick"/>
         <sbol:location>
-          <sbol:Range rdf:about="https://synbiohub.org/public/igem/BBa_B0012/annotation1690/range1690/1">
-            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/annotation1690/range1690"/>
-            <sbol:displayId>range1690</sbol:displayId>
+          <sbol:Range rdf:about="https://synbiohub.org/public/igem/BBa_B0012/annotation7020/range7020/1">
+            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/annotation7020/range7020"/>
+            <sbol:displayId>range7020</sbol:displayId>
             <sbol:version>1</sbol:version>
             <igem:direction rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward"/>
             <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/1"/>
-            <sbol:start>28</sbol:start>
+            <sbol:start>1</sbol:start>
             <sbol:end>41</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="https://synbiohub.org/public/igem/BBa_B0012/annotation1686/1">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/annotation1686"/>
-        <sbol:displayId>annotation1686</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <dcterms:title>T7 TE</dcterms:title>
-        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/1"/>
-        <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#feature/stem_loop"/>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000313"/>
-        <sbol:location>
-          <sbol:Range rdf:about="https://synbiohub.org/public/igem/BBa_B0012/annotation1686/range1686/1">
-            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/annotation1686/range1686"/>
-            <sbol:displayId>range1686</sbol:displayId>
-            <sbol:version>1</sbol:version>
-            <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0012/1"/>
-            <igem:direction rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward"/>
-            <sbol:start>8</sbol:start>
-            <sbol:end>27</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
@@ -575,143 +658,60 @@
     </sbol:sequenceAnnotation>
     <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_B0012_sequence/1"/>
   </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_B0034/1">
-    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0034"/>
-    <sbol:displayId>BBa_B0034</sbol:displayId>
+  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_K1545001/1">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_K1545001"/>
+    <sbol:displayId>BBa_K1545001</sbol:displayId>
     <sbol:version>1</sbol:version>
-    <prov:wasDerivedFrom rdf:resource="http://parts.igem.org/Part:BBa_B0034"/>
+    <prov:wasDerivedFrom rdf:resource="http://parts.igem.org/Part:BBa_K1545001"/>
     <prov:wasGeneratedBy rdf:resource="https://synbiohub.org/public/igem/igem2sbol/1"/>
-    <dcterms:title>BBa_B0034</dcterms:title>
-    <dcterms:description>RBS (Elowitz 1999) -- defines RBS efficiency</dcterms:description>
-    <dcterms:modified>2015-08-31T04:07:20Z</dcterms:modified>
+    <dcterms:title>BBa_K1545001</dcterms:title>
+    <dcterms:description>6xGFP1 decoy</dcterms:description>
+    <sbh:mutableDescription>Array of 6 binding sites for gRNAs matching CCATCTAATTCAACAAGAATTGG + 7 bp spacer</sbh:mutableDescription>
+    <dcterms:modified>2015-05-08T01:10:53Z</dcterms:modified>
     <sbh:ownedBy rdf:resource="https://synbiohub.org/user/james"/>
-    <sbh:mutableNotes>Varies from -6 to +1 region from original sequence to accomodate BioBricks      suffix.   &lt;p&gt;No secondary structures are formed in the given RBS region. Users should check      for secondary structures induced in the RBS by upstream and downstream elements      in the +50 to -50 region, as such structures will greatly affect the strength      of the RBS.
-
-Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian Chow&lt;/a&gt;</sbh:mutableNotes>
-    <igem:discontinued>false</igem:discontinued>
-    <dc:creator>Vinay S Mahajan, Voichita D. Marinescu, Brian Chow, Alexander      D Wissner-Gross and Peter Carr IAP, 2003.</dc:creator>
-    <igem:status rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#status/Available"/>
-    <igem:dominant>true</igem:dominant>
-    <sbh:mutableDescription>RBS based on Elowitz repressilator.</sbh:mutableDescription>
-    <sbh:ownedBy rdf:resource="https://synbiohub.org/user/myers"/>
-    <igem:owning_group_id>7</igem:owning_group_id>
-    <sbh:bookmark>false</sbh:bookmark>
-    <igem:m_user_id>0</igem:m_user_id>
-    <igem:owner_id>24</igem:owner_id>
-    <sbh:star>true</sbh:star>
-    <igem:experience rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#experience/Works"/>
-    <igem:partStatus>Released HQ 2013</igem:partStatus>
-    <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0034/1"/>
-    <igem:group_u_list>_1_</igem:group_u_list>
     <igem:sampleStatus>In stock</igem:sampleStatus>
-    <dcterms:created>2003-01-31T12:00:00Z</dcterms:created>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
-    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000139"/>
-    <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#partType/RBS"/>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="https://synbiohub.org/public/igem/BBa_B0034/annotation23325/1">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0034/annotation23325"/>
-        <sbol:displayId>annotation23325</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <dcterms:title>conserved</dcterms:title>
-        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0034/1"/>
-        <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#feature/conserved"/>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000330"/>
-        <sbol:location>
-          <sbol:Range rdf:about="https://synbiohub.org/public/igem/BBa_B0034/annotation23325/range23325/1">
-            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0034/annotation23325/range23325"/>
-            <sbol:displayId>range23325</sbol:displayId>
-            <sbol:version>1</sbol:version>
-            <igem:direction rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward"/>
-            <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0034/1"/>
-            <sbol:start>5</sbol:start>
-            <sbol:end>8</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_B0034_sequence/1"/>
-  </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_B0011/1">
-    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0011"/>
-    <sbol:displayId>BBa_B0011</sbol:displayId>
-    <sbol:version>1</sbol:version>
-    <prov:wasDerivedFrom rdf:resource="http://parts.igem.org/Part:BBa_B0011"/>
-    <prov:wasGeneratedBy rdf:resource="https://synbiohub.org/public/igem/igem2sbol/1"/>
-    <dcterms:title>BBa_B0011</dcterms:title>
-    <dcterms:description>LuxICDABEG (+/-)</dcterms:description>
-    <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0011/1"/>
-    <sbh:star>true</sbh:star>
-    <sbh:ownedBy rdf:resource="https://synbiohub.org/user/myers"/>
-    <sbh:bookmark>false</sbh:bookmark>
-    <igem:m_user_id>0</igem:m_user_id>
-    <sbh:mutableDescription>Bidirectional transcriptional terminator consisting of a 22 bp stem-loop.&lt;/p&gt;</sbh:mutableDescription>
-    <igem:owning_group_id>7</igem:owning_group_id>
-    <sbh:mutableProvenance>Derived from luxICDABEG operon terminator of Vibrio fischeri &lt;genbank&gt;AF170104&lt;/genbank&gt;.</sbh:mutableProvenance>
     <igem:status rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#status/Available"/>
-    <igem:group_u_list>_1_</igem:group_u_list>
-    <sbh:ownedBy rdf:resource="https://synbiohub.org/user/james"/>
+    <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_K1545001/1"/>
+    <igem:owner_id>23396</igem:owner_id>
     <igem:dominant>false</igem:dominant>
-    <igem:sampleStatus>In stock</igem:sampleStatus>
+    <igem:owning_group_id>9</igem:owning_group_id>
+    <igem:m_user_id>0</igem:m_user_id>
+    <igem:group_u_list>_1928_</igem:group_u_list>
+    <sbh:mutableProvenance>synthesized</sbh:mutableProvenance>
+    <dcterms:created>2014-10-08T11:00:00Z</dcterms:created>
     <igem:discontinued>false</igem:discontinued>
-    <dc:creator>Reshma Shetty</dc:creator>
-    <igem:experience rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#experience/Works"/>
-    <sbh:mutableNotes>&lt;P&gt; &lt;P&gt;In the naturally-occuring sequence there is a mismatch in the stem of the      stem loop. This can be corrected via an A-&amp;gt;G mutation (at position 40 -- sequence coordinate/not MFOLD coordinate). The above sequence does not reflect this mutation (but the MFOLD image does). This terminator's location cannot be      found using some inverted repeat detectors like PALINDROME because it is too      short and contains a mismatch. This one was found with the help of Tom Knight.      It lies between two coding regions that point towards eachother.&lt;P&gt;</sbh:mutableNotes>
-    <igem:owner_id>24</igem:owner_id>
-    <dcterms:modified>2015-08-31T04:07:20Z</dcterms:modified>
-    <dcterms:created>2003-01-31T12:00:00Z</dcterms:created>
-    <igem:partStatus>Released HQ 2013</igem:partStatus>
+    <dc:creator>Mike Zhu</dc:creator>
+    <sbh:bookmark>false</sbh:bookmark>
+    <sbh:star>false</sbh:star>
+    <sbh:ownedBy rdf:resource="https://synbiohub.org/user/myers"/>
+    <sbh:mutableNotes>n/a</sbh:mutableNotes>
     <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
-    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000141"/>
-    <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#partType/Terminator"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
+    <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#partType/Regulatory"/>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="https://synbiohub.org/public/igem/BBa_B0011/annotation7019/1">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0011/annotation7019"/>
-        <sbol:displayId>annotation7019</sbol:displayId>
+      <sbol:SequenceAnnotation rdf:about="https://synbiohub.org/public/igem/BBa_K1545001/annotation2407780/1">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_K1545001/annotation2407780"/>
+        <sbol:displayId>annotation2407780</sbol:displayId>
         <sbol:version>1</sbol:version>
-        <dcterms:title>BBa_B0011</dcterms:title>
-        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0011/1"/>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000804"/>
-        <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#feature/BioBrick"/>
+        <dcterms:title>GFP1 binding site + NGG</dcterms:title>
+        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_K1545001/1"/>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
+        <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#feature/misc"/>
         <sbol:location>
-          <sbol:Range rdf:about="https://synbiohub.org/public/igem/BBa_B0011/annotation7019/range7019/1">
-            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0011/annotation7019/range7019"/>
-            <sbol:displayId>range7019</sbol:displayId>
+          <sbol:Range rdf:about="https://synbiohub.org/public/igem/BBa_K1545001/annotation2407780/range2407780/1">
+            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_K1545001/annotation2407780/range2407780"/>
+            <sbol:displayId>range2407780</sbol:displayId>
             <sbol:version>1</sbol:version>
+            <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_K1545001/1"/>
             <igem:direction rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward"/>
-            <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0011/1"/>
             <sbol:start>1</sbol:start>
-            <sbol:end>46</sbol:end>
+            <sbol:end>24</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="https://synbiohub.org/public/igem/BBa_B0011/annotation1683/1">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0011/annotation1683"/>
-        <sbol:displayId>annotation1683</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <dcterms:title>stem_loop</dcterms:title>
-        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0011/1"/>
-        <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#feature/stem_loop"/>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000313"/>
-        <sbol:location>
-          <sbol:Range rdf:about="https://synbiohub.org/public/igem/BBa_B0011/annotation1683/range1683/1">
-            <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0011/annotation1683/range1683"/>
-            <sbol:displayId>range1683</sbol:displayId>
-            <sbol:version>1</sbol:version>
-            <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0011/1"/>
-            <igem:direction rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward"/>
-            <sbol:start>13</sbol:start>
-            <sbol:end>35</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_B0011_sequence/1"/>
+    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_K1545001_sequence/1"/>
   </sbol:ComponentDefinition>
   <sbol:Sequence rdf:about="http://michael.zhang/GFP_Reporter_TemplateSequence/1">
     <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_TemplateSequence"/>

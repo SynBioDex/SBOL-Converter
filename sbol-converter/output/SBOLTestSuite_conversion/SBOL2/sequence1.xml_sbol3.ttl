@@ -55,19 +55,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:role                     SO:0000234;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation7/1> .
 
-<http://www.async.ece.utah.edu/1/U49845/annotation6/range>
-        rdf:type                      sbol:Range;
-        gbConv:endGreaterThan         "true";
-        gbConv:startLessThan          "true";
-        sbol:displayId                "range";
-        sbol:end                      "4037";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/1/U49845_seq>;
-        sbol:orientation              SO:0001031;
-        sbol:start                    "3300";
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation6/range/1> .
-
 <http://www.async.ece.utah.edu/1/U49845/annotation2>
         rdf:type                      sbol:SequenceFeature;
         gbConv:codon_start            "3";
@@ -80,6 +67,19 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:name                     "TCP1-beta";
         sbol:role                     SO:0000316;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation2/1> .
+
+<http://www.async.ece.utah.edu/1/U49845/annotation6/range>
+        rdf:type                      sbol:Range;
+        gbConv:endGreaterThan         "true";
+        gbConv:startLessThan          "true";
+        sbol:displayId                "range";
+        sbol:end                      "4037";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/U49845_seq>;
+        sbol:orientation              SO:0001031;
+        sbol:start                    "3300";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation6/range/1> .
 
 <http://www.async.ece.utah.edu/1/U49845/reference1>
         rdf:type         genbank:Reference , sbol:Identified;

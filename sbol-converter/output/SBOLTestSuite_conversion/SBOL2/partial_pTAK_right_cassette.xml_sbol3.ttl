@@ -22,7 +22,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/Reporter/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/Reporter/rbsB> , <http://www.async.ece.utah.edu/Reporter/BBa_E0040> .
+        sbol:nondirectional  <http://www.async.ece.utah.edu/Reporter/BBa_E0040> , <http://www.async.ece.utah.edu/Reporter/rbsB> .
 
 <http://www.async.ece.utah.edu/pTAKRightCasette/BBa_R0010>
         rdf:type                      sbol:SubComponent;
@@ -204,7 +204,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pTAKRightCasette/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKRightCasette/Terminator> , <http://www.async.ece.utah.edu/pTAKRightCasette/Reporter> , <http://www.async.ece.utah.edu/pTAKRightCasette/BBa_R0010> , <http://www.async.ece.utah.edu/pTAKRightCasette/Repressor1> .
+        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKRightCasette/Reporter> , <http://www.async.ece.utah.edu/pTAKRightCasette/Terminator> , <http://www.async.ece.utah.edu/pTAKRightCasette/BBa_R0010> , <http://www.async.ece.utah.edu/pTAKRightCasette/Repressor1> .
 
 <http://www.async.ece.utah.edu/Reporter/BBa_E0040>
         rdf:type                      sbol:SubComponent;

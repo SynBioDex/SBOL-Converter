@@ -282,12 +282,6 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         sbol:displayId       "Interface1";
         sbol:nondirectional  <http://www.virtualparts.org/part/pIKELeftCassette_1/ECK120029600> , <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_J61101> , <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_R0040> , <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_C0012> .
 
-<http://www.virtualparts.org/part/pIKE_Toggle_1_seq>
-        rdf:type           sbol:Sequence;
-        sbol:displayId     "pIKE_Toggle_1_seq";
-        sbol:encoding      EDAM:format_1207;
-        sbol:hasNamespace  <http://www.virtualparts.org/part> .
-
 <http://www.virtualparts.org/part/pIKELeftCassette_1/ECK120029600/location4>
         rdf:type                      sbol:Range;
         sbol:displayId                "location4";
@@ -298,6 +292,12 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/pIKELeftCassette_1/anno4/location4> .
+
+<http://www.virtualparts.org/part/pIKE_Toggle_1_seq>
+        rdf:type           sbol:Sequence;
+        sbol:displayId     "pIKE_Toggle_1_seq";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <http://www.virtualparts.org/part> .
 
 <http://www.virtualparts.org/part/pIKERightCassette_1/ECK120033736/location6>
         rdf:type                      sbol:Range;

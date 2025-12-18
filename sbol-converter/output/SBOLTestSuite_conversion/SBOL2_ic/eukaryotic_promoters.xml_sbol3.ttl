@@ -144,6 +144,15 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_R0011/annotation2000/range2000/1> .
 
+<https://synbiohub.org/public/igem/1/BBa_I741109/annotation1936879>
+        rdf:type                      sbol:SequenceFeature;
+        sbol:displayId                "annotation1936879";
+        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_I741109/annotation1936879/range1936879>;
+        sbol:name                     "-10 region";
+        sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#feature/promoter> , SO:0000167;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_I741109/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_I741109/annotation1936879/1> .
+
 <https://synbiohub.org/public/igem/1/BBa_I13603/component2221496>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "component2221496";
@@ -154,15 +163,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2OriginalSequenceAnnotationURI
                 <https://synbiohub.org/public/igem/BBa_I13603/annotation2221496/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_I13603/annotation2221496/1> , <https://synbiohub.org/public/igem/BBa_I13603/component2221496/1> .
-
-<https://synbiohub.org/public/igem/1/BBa_I741109/annotation1936879>
-        rdf:type                      sbol:SequenceFeature;
-        sbol:displayId                "annotation1936879";
-        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_I741109/annotation1936879/range1936879>;
-        sbol:name                     "-10 region";
-        sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#feature/promoter> , SO:0000167;
-        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_I741109/1>;
-        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_I741109/annotation1936879/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_E0422/component942823/range942823>
         rdf:type                      sbol:Range;

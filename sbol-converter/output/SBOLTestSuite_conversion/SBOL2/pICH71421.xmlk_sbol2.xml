@@ -44,25 +44,6 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation0">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation0"/>
-        <sbol:displayId>annotation0</sbol:displayId>
-        <dcterms:title>synthetic DNA construct</dcterms:title>
-        <gbConv:organism>synthetic DNA construct</gbConv:organism>
-        <gbConv:mol_type>other DNA</gbConv:mol_type>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0002206"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation0/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation0/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>1</sbol:start>
-            <sbol:end>2527</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
       <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation2">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation2"/>
         <sbol:displayId>annotation2</sbol:displayId>
@@ -104,26 +85,6 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation5">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation5"/>
-        <sbol:displayId>annotation5</sbol:displayId>
-        <dcterms:title>tom H4 term</dcterms:title>
-        <gbConv:label>tom H4 term</gbConv:label>
-        <gbConv:note>tom H4 term</gbConv:note>
-        <gbConv:note>color: #3366cc</gbConv:note>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000141"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation5/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation5/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2252</sbol:start>
-            <sbol:end>2527</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
       <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation6">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation6"/>
         <sbol:displayId>annotation6</sbol:displayId>
@@ -138,6 +99,25 @@
             <sbol:displayId>range</sbol:displayId>
             <sbol:start>2395</sbol:start>
             <sbol:end>2395</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation0">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation0"/>
+        <sbol:displayId>annotation0</sbol:displayId>
+        <dcterms:title>synthetic DNA construct</dcterms:title>
+        <gbConv:organism>synthetic DNA construct</gbConv:organism>
+        <gbConv:mol_type>other DNA</gbConv:mol_type>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0002206"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation0/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation0/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>1</sbol:start>
+            <sbol:end>2527</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
@@ -159,6 +139,26 @@
             <sbol:displayId>range</sbol:displayId>
             <sbol:start>2000</sbol:start>
             <sbol:end>2000</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation5">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation5"/>
+        <sbol:displayId>annotation5</sbol:displayId>
+        <dcterms:title>tom H4 term</dcterms:title>
+        <gbConv:label>tom H4 term</gbConv:label>
+        <gbConv:note>tom H4 term</gbConv:note>
+        <gbConv:note>color: #3366cc</gbConv:note>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000141"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation5/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation5/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>2252</sbol:start>
+            <sbol:end>2527</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>

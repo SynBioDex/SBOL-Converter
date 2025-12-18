@@ -191,62 +191,6 @@
     <sbol:language rdf:resource="http://identifiers.org/edam/format_2585"/>
     <sbol:framework rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000062"/>
   </sbol:Model>
-  <sbol:ComponentDefinition rdf:about="http://www.virtualparts.org/part/pIKE_Toggle_1">
-    <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1"/>
-    <sbol:displayId>pIKE_Toggle_1</sbol:displayId>
-    <dcterms:title>LacI/TetR Toggle Switch</dcterms:title>
-    <dcterms:description>LacI/TetR Toggle Switch</dcterms:description>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
-    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000280"/>
-    <sbol:component>
-      <sbol:Component rdf:about="http://www.virtualparts.org/part/pIKE_Toggle_1/pIKELeftCassette_1">
-        <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/pIKELeftCassette_1"/>
-        <sbol:displayId>pIKELeftCassette_1</sbol:displayId>
-        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1"/>
-      </sbol:Component>
-    </sbol:component>
-    <sbol:component>
-      <sbol:Component rdf:about="http://www.virtualparts.org/part/pIKE_Toggle_1/pIKERightCassette_1">
-        <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/pIKERightCassette_1"/>
-        <sbol:displayId>pIKERightCassette_1</sbol:displayId>
-        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1"/>
-      </sbol:Component>
-    </sbol:component>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.virtualparts.org/part/pIKE_Toggle_1/anno2">
-        <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/anno2"/>
-        <sbol:displayId>anno2</sbol:displayId>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKE_Toggle_1/anno2/location2">
-            <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/anno2/location2"/>
-            <sbol:displayId>location2</sbol:displayId>
-            <sbol:start>1286</sbol:start>
-            <sbol:end>2834</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-        <sbol:component rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/pIKERightCassette_1"/>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.virtualparts.org/part/pIKE_Toggle_1/anno1">
-        <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/anno1"/>
-        <sbol:displayId>anno1</sbol:displayId>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKE_Toggle_1/anno1/location1">
-            <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/anno1/location1"/>
-            <sbol:displayId>location1</sbol:displayId>
-            <sbol:start>1</sbol:start>
-            <sbol:end>1285</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-        <sbol:component rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/pIKELeftCassette_1"/>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-  </sbol:ComponentDefinition>
   <sbol:ComponentDefinition rdf:about="http://www.partsregistry.org/ECK120033736">
     <sbol:persistentIdentity rdf:resource="http://www.partsregistry.org/ECK120033736"/>
     <sbol:displayId>ECK120033736</sbol:displayId>
@@ -255,29 +199,6 @@
     <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000141"/>
     <sbol:sequence rdf:resource="http://www.virtualparts.org/part/ECK120033736"/>
-  </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="http://www.virtualparts.org/part/BBa_J23119">
-    <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/BBa_J23119"/>
-    <sbol:displayId>BBa_J23119</sbol:displayId>
-    <prov:wasDerivedFrom rdf:resource="http://partsregistry.org/Part:BBa_J23119"/>
-    <dcterms:title>J23119 promoter</dcterms:title>
-    <dcterms:description>Constitutive promoter</dcterms:description>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
-    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.virtualparts.org/part/BBa_J23119/cutat12">
-        <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/BBa_J23119/cutat12"/>
-        <sbol:displayId>cutat12</sbol:displayId>
-        <sbol:location>
-          <sbol:Cut rdf:about="http://www.virtualparts.org/part/BBa_J23119/cutat12/cut">
-            <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/BBa_J23119/cutat12/cut"/>
-            <sbol:displayId>cut</sbol:displayId>
-            <sbol:at>12</sbol:at>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Cut>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
   </sbol:ComponentDefinition>
   <sbol:ComponentDefinition rdf:about="http://www.partsregistry.org/BBa_C0040">
     <sbol:persistentIdentity rdf:resource="http://www.partsregistry.org/BBa_C0040"/>
@@ -378,6 +299,22 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/anno4">
+        <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/anno4"/>
+        <sbol:displayId>anno4</sbol:displayId>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/anno4/location4">
+            <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/anno4/location4"/>
+            <sbol:displayId>location4</sbol:displayId>
+            <sbol:start>1198</sbol:start>
+            <sbol:end>1288</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+        <sbol:component rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/ECK120029600"/>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
       <sbol:SequenceAnnotation rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/anno1">
         <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/anno1"/>
         <sbol:displayId>anno1</sbol:displayId>
@@ -393,20 +330,60 @@
         <sbol:component rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_R0040"/>
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
+  </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="http://www.virtualparts.org/part/pIKE_Toggle_1">
+    <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1"/>
+    <sbol:displayId>pIKE_Toggle_1</sbol:displayId>
+    <dcterms:title>LacI/TetR Toggle Switch</dcterms:title>
+    <dcterms:description>LacI/TetR Toggle Switch</dcterms:description>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000280"/>
+    <sbol:component>
+      <sbol:Component rdf:about="http://www.virtualparts.org/part/pIKE_Toggle_1/pIKELeftCassette_1">
+        <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/pIKELeftCassette_1"/>
+        <sbol:displayId>pIKELeftCassette_1</sbol:displayId>
+        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
+        <sbol:definition rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1"/>
+      </sbol:Component>
+    </sbol:component>
+    <sbol:component>
+      <sbol:Component rdf:about="http://www.virtualparts.org/part/pIKE_Toggle_1/pIKERightCassette_1">
+        <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/pIKERightCassette_1"/>
+        <sbol:displayId>pIKERightCassette_1</sbol:displayId>
+        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
+        <sbol:definition rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1"/>
+      </sbol:Component>
+    </sbol:component>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/anno4">
-        <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/anno4"/>
-        <sbol:displayId>anno4</sbol:displayId>
+      <sbol:SequenceAnnotation rdf:about="http://www.virtualparts.org/part/pIKE_Toggle_1/anno2">
+        <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/anno2"/>
+        <sbol:displayId>anno2</sbol:displayId>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKELeftCassette_1/anno4/location4">
-            <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/anno4/location4"/>
-            <sbol:displayId>location4</sbol:displayId>
-            <sbol:start>1198</sbol:start>
-            <sbol:end>1288</sbol:end>
+          <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKE_Toggle_1/anno2/location2">
+            <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/anno2/location2"/>
+            <sbol:displayId>location2</sbol:displayId>
+            <sbol:start>1286</sbol:start>
+            <sbol:end>2834</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
-        <sbol:component rdf:resource="http://www.virtualparts.org/part/pIKELeftCassette_1/ECK120029600"/>
+        <sbol:component rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/pIKERightCassette_1"/>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.virtualparts.org/part/pIKE_Toggle_1/anno1">
+        <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/anno1"/>
+        <sbol:displayId>anno1</sbol:displayId>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKE_Toggle_1/anno1/location1">
+            <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/anno1/location1"/>
+            <sbol:displayId>location1</sbol:displayId>
+            <sbol:start>1</sbol:start>
+            <sbol:end>1285</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+        <sbol:component rdf:resource="http://www.virtualparts.org/part/pIKE_Toggle_1/pIKELeftCassette_1"/>
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
   </sbol:ComponentDefinition>
@@ -471,6 +448,55 @@
     <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Protein"/>
     <sbol:role rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000020"/>
   </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="http://identifiers.org/uniprot/P42212">
+    <sbol:persistentIdentity rdf:resource="http://identifiers.org/uniprot/P42212"/>
+    <sbol:displayId>P42212</sbol:displayId>
+    <dcterms:title>GFP</dcterms:title>
+    <dcterms:description>GFP protein</dcterms:description>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Protein"/>
+    <sbol:role rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000011"/>
+  </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="http://www.partsregistry.org/BBa_R0040">
+    <sbol:persistentIdentity rdf:resource="http://www.partsregistry.org/BBa_R0040"/>
+    <sbol:displayId>BBa_R0040</sbol:displayId>
+    <dcterms:title>pTetR</dcterms:title>
+    <dcterms:description>pTet promoter</dcterms:description>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
+    <sbol:sequence rdf:resource="http://www.virtualparts.org/part/BBa_R0040"/>
+  </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="http://www.virtualparts.org/part/BBa_J23119">
+    <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/BBa_J23119"/>
+    <sbol:displayId>BBa_J23119</sbol:displayId>
+    <prov:wasDerivedFrom rdf:resource="http://partsregistry.org/Part:BBa_J23119"/>
+    <dcterms:title>J23119 promoter</dcterms:title>
+    <dcterms:description>Constitutive promoter</dcterms:description>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.virtualparts.org/part/BBa_J23119/cutat12">
+        <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/BBa_J23119/cutat12"/>
+        <sbol:displayId>cutat12</sbol:displayId>
+        <sbol:location>
+          <sbol:Cut rdf:about="http://www.virtualparts.org/part/BBa_J23119/cutat12/cut">
+            <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/BBa_J23119/cutat12/cut"/>
+            <sbol:displayId>cut</sbol:displayId>
+            <sbol:at>12</sbol:at>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Cut>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+  </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="http://www.partsregistry.org/BBa_E0040">
+    <sbol:persistentIdentity rdf:resource="http://www.partsregistry.org/BBa_E0040"/>
+    <sbol:displayId>BBa_E0040</sbol:displayId>
+    <dcterms:title>gfp</dcterms:title>
+    <dcterms:description>gfp coding sequence</dcterms:description>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
+    <sbol:sequence rdf:resource="http://www.virtualparts.org/part/BBa_E0040"/>
+  </sbol:ComponentDefinition>
   <sbol:ComponentDefinition rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1">
     <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1"/>
     <sbol:displayId>pIKERightCassette_1</sbol:displayId>
@@ -527,19 +553,19 @@
       </sbol:Component>
     </sbol:component>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/anno4">
-        <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/anno4"/>
-        <sbol:displayId>anno4</sbol:displayId>
+      <sbol:SequenceAnnotation rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/anno2">
+        <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/anno2"/>
+        <sbol:displayId>anno2</sbol:displayId>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/anno4/location4">
-            <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/anno4/location4"/>
-            <sbol:displayId>location4</sbol:displayId>
-            <sbol:start>730</sbol:start>
-            <sbol:end>742</sbol:end>
+          <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/anno2/location2">
+            <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/anno2/location2"/>
+            <sbol:displayId>location2</sbol:displayId>
+            <sbol:start>56</sbol:start>
+            <sbol:end>68</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
-        <sbol:component rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61130"/>
+        <sbol:component rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120"/>
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
@@ -556,22 +582,6 @@
           </sbol:Range>
         </sbol:location>
         <sbol:component rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/ECK120033736"/>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/anno1">
-        <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/anno1"/>
-        <sbol:displayId>anno1</sbol:displayId>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/anno1/location1">
-            <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/anno1/location1"/>
-            <sbol:displayId>location1</sbol:displayId>
-            <sbol:start>1</sbol:start>
-            <sbol:end>55</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-        <sbol:component rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_R0010"/>
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
@@ -607,47 +617,37 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/anno2">
-        <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/anno2"/>
-        <sbol:displayId>anno2</sbol:displayId>
+      <sbol:SequenceAnnotation rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/anno1">
+        <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/anno1"/>
+        <sbol:displayId>anno1</sbol:displayId>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/anno2/location2">
-            <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/anno2/location2"/>
-            <sbol:displayId>location2</sbol:displayId>
-            <sbol:start>56</sbol:start>
-            <sbol:end>68</sbol:end>
+          <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/anno1/location1">
+            <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/anno1/location1"/>
+            <sbol:displayId>location1</sbol:displayId>
+            <sbol:start>1</sbol:start>
+            <sbol:end>55</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
-        <sbol:component rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120"/>
+        <sbol:component rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_R0010"/>
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
-  </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="http://identifiers.org/uniprot/P42212">
-    <sbol:persistentIdentity rdf:resource="http://identifiers.org/uniprot/P42212"/>
-    <sbol:displayId>P42212</sbol:displayId>
-    <dcterms:title>GFP</dcterms:title>
-    <dcterms:description>GFP protein</dcterms:description>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Protein"/>
-    <sbol:role rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000011"/>
-  </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="http://www.partsregistry.org/BBa_R0040">
-    <sbol:persistentIdentity rdf:resource="http://www.partsregistry.org/BBa_R0040"/>
-    <sbol:displayId>BBa_R0040</sbol:displayId>
-    <dcterms:title>pTetR</dcterms:title>
-    <dcterms:description>pTet promoter</dcterms:description>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
-    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
-    <sbol:sequence rdf:resource="http://www.virtualparts.org/part/BBa_R0040"/>
-  </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="http://www.partsregistry.org/BBa_E0040">
-    <sbol:persistentIdentity rdf:resource="http://www.partsregistry.org/BBa_E0040"/>
-    <sbol:displayId>BBa_E0040</sbol:displayId>
-    <dcterms:title>gfp</dcterms:title>
-    <dcterms:description>gfp coding sequence</dcterms:description>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
-    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
-    <sbol:sequence rdf:resource="http://www.virtualparts.org/part/BBa_E0040"/>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/anno4">
+        <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/anno4"/>
+        <sbol:displayId>anno4</sbol:displayId>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.virtualparts.org/part/pIKERightCassette_1/anno4/location4">
+            <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/anno4/location4"/>
+            <sbol:displayId>location4</sbol:displayId>
+            <sbol:start>730</sbol:start>
+            <sbol:end>742</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+        <sbol:component rdf:resource="http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61130"/>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
   </sbol:ComponentDefinition>
   <sbol:ComponentDefinition rdf:about="http://www.partsregistry.org/BBa_J61130">
     <sbol:persistentIdentity rdf:resource="http://www.partsregistry.org/BBa_J61130"/>
