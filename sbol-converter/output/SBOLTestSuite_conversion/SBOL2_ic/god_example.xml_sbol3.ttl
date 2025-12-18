@@ -210,7 +210,9 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
 <http://sbolstandard.org/example/toggle_switch/laci_inverter>
         rdf:type         sbol:SubComponent;
         sbol:displayId   "laci_inverter";
-        sbol:instanceOf  <http://sbolstandard.org/example/laci_inverter> .
+        sbol:instanceOf  <http://sbolstandard.org/example/laci_inverter>;
+        backport2_3:sbol2OriginatesFromModule
+                "true" .
 
 <http://sbolstandard.org/example/tetr_inverter/promoter>
         rdf:type                      sbol:SubComponent;
@@ -399,6 +401,14 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/pIKERightCassette_1/anno3/location3> .
 
+<http://www.virtualparts.org/part/BBa_J61101>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "BBa_J61101";
+        sbol:elements                 "aaagacaggacc";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.virtualparts.org/part>;
+        backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/BBa_J61101> .
+
 <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "BBa_J61120";
@@ -407,14 +417,6 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         backport2_3:sbol2OriginalSequenceAnnotationURI
                 <http://www.virtualparts.org/part/pIKERightCassette_1/anno2>;
         backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/pIKERightCassette_1/anno2> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120> .
-
-<http://www.virtualparts.org/part/BBa_J61101>
-        rdf:type                      sbol:Sequence;
-        sbol:displayId                "BBa_J61101";
-        sbol:elements                 "aaagacaggacc";
-        sbol:encoding                 EDAM:format_1207;
-        sbol:hasNamespace             <http://www.virtualparts.org/part>;
-        backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/BBa_J61101> .
 
 <http://www.virtualparts.org/part/ECK120029600>
         rdf:type                      sbol:Sequence;
@@ -582,7 +584,9 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
 <http://sbolstandard.org/example/toggle_switch/tetr_inverter>
         rdf:type         sbol:SubComponent;
         sbol:displayId   "tetr_inverter";
-        sbol:instanceOf  <http://sbolstandard.org/example/tetr_inverter> .
+        sbol:instanceOf  <http://sbolstandard.org/example/tetr_inverter>;
+        backport2_3:sbol2OriginatesFromModule
+                "true" .
 
 <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_J61101>
         rdf:type                      sbol:SubComponent;

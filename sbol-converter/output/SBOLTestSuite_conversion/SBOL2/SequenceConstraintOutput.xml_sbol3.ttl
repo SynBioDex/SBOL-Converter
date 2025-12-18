@@ -34,7 +34,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://partsregistry.org/cd/BBa_K174004/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://partsregistry.org/cd/BBa_K174004/LacI_operator> , <http://partsregistry.org/cd/BBa_K174004/pspac> .
+        sbol:nondirectional  <http://partsregistry.org/cd/BBa_K174004/pspac> , <http://partsregistry.org/cd/BBa_K174004/LacI_operator> .
 
 <http://partsregistry.org/cd/LacI_operator>
         rdf:type                      sbol:Component;
@@ -54,14 +54,14 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:type                     SBO:0000251;
         backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/pspac> .
 
-<http://partsregistry.org/cd/BBa_K174004/pspac>
-        rdf:type                      sbol:SubComponent;
-        sbol:displayId                "pspac";
-        sbol:instanceOf               <http://partsregistry.org/cd/pspac>;
-        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_K174004/pspac> .
-
 <http://partsregistry.org/cd/BBa_K174004/LacI_operator>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "LacI_operator";
         sbol:instanceOf               <http://partsregistry.org/cd/LacI_operator>;
         backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_K174004/LacI_operator> .
+
+<http://partsregistry.org/cd/BBa_K174004/pspac>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "pspac";
+        sbol:instanceOf               <http://partsregistry.org/cd/pspac>;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_K174004/pspac> .

@@ -13,12 +13,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbolstandard.org/example/toggle_switch/tetr_inverter>
         rdf:type         sbol:SubComponent;
         sbol:displayId   "tetr_inverter";
-        sbol:instanceOf  <http://sbolstandard.org/example/tetr_inverter> .
+        sbol:instanceOf  <http://sbolstandard.org/example/tetr_inverter>;
+        backport2_3:sbol2OriginatesFromModule
+                "true" .
 
 <http://sbolstandard.org/example/toggle_switch/laci_inverter>
         rdf:type         sbol:SubComponent;
         sbol:displayId   "laci_inverter";
-        sbol:instanceOf  <http://sbolstandard.org/example/laci_inverter> .
+        sbol:instanceOf  <http://sbolstandard.org/example/laci_inverter>;
+        backport2_3:sbol2OriginatesFromModule
+                "true" .
 
 <http://sbolstandard.org/example/toggle_switch>
         rdf:type                      sbol:Component;

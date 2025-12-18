@@ -113,8 +113,10 @@ public class TempTest {
                 //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/eukaryotic_transcriptional_cd_com_sa_sc_range_ann.xml"), true, "output/tmp/eukaryotic_transcriptional_cd_com_sa_sc_range_ann.xml", true);                
                 //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/ModuleDefinitionOutput_pa_maps_mod_int_md.xml"), true, "output/tmp/ModuleDefinitionOutput_pa_maps_mod_int_md.xml", true);                
                 //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/attachment_pointers.xml"), false, "output/tmp/attachment_pointers.xml", true);                
-                List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/ModuleDefinitionOutput_pa_int_md_mod_fc.xml"), false, "output/tmp/ModuleDefinitionOutput_pa_int_md_mod_fc.xml", true);                
-                
+                //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/ModuleDefinitionOutput_pa_int_md_mod_fc.xml"), false, "output/tmp/ModuleDefinitionOutput_pa_int_md_mod_fc.xml", true);                
+                //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/gfp_reporter_combDeri.xml"), false, "output/tmp/gfp_reporter_combDeri.xml", true);                
+                List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/eukaryotic_transcriptional_unit_enumerated.xml"), false, "output/tmp/eukaryotic_transcriptional_unit_enumerated.xml", true);                
+               
                 TestUtil.DisplayErrors(errors);
                 if (errors != null && errors.size() > 0) {
                         // throw new Exception("Conversion produced errors");

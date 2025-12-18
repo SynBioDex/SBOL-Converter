@@ -775,6 +775,7 @@
             <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/toggle_switch/laci_inverter/LacI_mapping"/>
             <sbol:inChildOf>
                <sbol:SubComponent rdf:about="http://sbolstandard.org/example/toggle_switch/laci_inverter">
+                  <backport2_3:sbol2OriginatesFromModule>true</backport2_3:sbol2OriginatesFromModule>
                   <sbol:instanceOf rdf:resource="http://sbolstandard.org/example/laci_inverter"/>
                   <sbol:displayId>laci_inverter</sbol:displayId>
                </sbol:SubComponent>
@@ -792,6 +793,8 @@
                   <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/toggle_switch/tetr_inverter/TetR_mapping"/>
                   <sbol:inChildOf>
                      <sbol:SubComponent rdf:about="http://sbolstandard.org/example/toggle_switch/tetr_inverter">
+                        <backport2_3:sbol2OriginatesFromModule
+                        >true</backport2_3:sbol2OriginatesFromModule>
                         <sbol:instanceOf rdf:resource="http://sbolstandard.org/example/tetr_inverter"/>
                         <sbol:displayId>tetr_inverter</sbol:displayId>
                      </sbol:SubComponent>

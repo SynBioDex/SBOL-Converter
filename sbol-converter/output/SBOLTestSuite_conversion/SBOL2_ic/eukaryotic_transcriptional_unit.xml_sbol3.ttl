@@ -1496,19 +1496,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_J45000_sequence/1> .
 
-<https://synbiohub.org/public/igem/1/BBa_I741109/annotation1936874/range1936874>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range1936874";
-        sbol:end                      "27";
-        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_I741109_sequence>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "11";
-        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
-        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_I741109/1>;
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_I741109/annotation1936874/range1936874/1> .
-
 <https://synbiohub.org/public/igem/1/BBa_K1606010>
         rdf:type                      sbol:Component;
         dc:creator                    "Dorukcan ??zk??se";
@@ -1566,6 +1553,19 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0022/annotation2153/range2153/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_I741109/annotation1936874/range1936874>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range1936874";
+        sbol:end                      "27";
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_I741109_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "11";
+        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_I741109/1>;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_I741109/annotation1936874/range1936874/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_K1606010/component2438689/range2438689>
         rdf:type                      sbol:Range;
@@ -1680,19 +1680,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_I741109/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_I741109/annotation1936875/1> .
 
-<https://synbiohub.org/public/igem/1/BBa_I741109/annotation1936875/range1936875>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range1936875";
-        sbol:end                      "35";
-        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_I741109_sequence>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "30";
-        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/reverse>;
-        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_I741109/1>;
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_I741109/annotation1936875/range1936875/1> .
-
 <https://synbiohub.org/public/igem/1/BBa_I741109>
         rdf:type                      sbol:Component;
         dc:creator                    "Galen Lynch";
@@ -1725,6 +1712,19 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_I741109>;
         prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_I741109/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_I741109/annotation1936875/range1936875>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range1936875";
+        sbol:end                      "35";
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_I741109_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "30";
+        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/reverse>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_I741109/1>;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_I741109/annotation1936875/range1936875/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_B0015_sequence>
         rdf:type                      sbol:Sequence;

@@ -27,12 +27,14 @@
    <sbol:Component rdf:about="http://sbolstandard.org/example/toggle_switch2">
       <sbol:hasFeature>
          <sbol:SubComponent rdf:about="http://sbolstandard.org/example/toggle_switch2/laci_inverter_module">
+            <backport2_3:sbol2OriginatesFromModule>true</backport2_3:sbol2OriginatesFromModule>
             <sbol:instanceOf rdf:resource="http://sbolstandard.org/example/laci_inverter_module"/>
             <sbol:displayId>laci_inverter_module</sbol:displayId>
          </sbol:SubComponent>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SubComponent rdf:about="http://sbolstandard.org/example/toggle_switch2/tetr_inverter">
+            <backport2_3:sbol2OriginatesFromModule>true</backport2_3:sbol2OriginatesFromModule>
             <sbol:instanceOf>
                <sbol:Component rdf:about="http://sbolstandard.org/example/tetr_inverter"/>
             </sbol:instanceOf>

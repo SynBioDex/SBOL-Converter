@@ -10,7 +10,7 @@ public class Parameters {
 	private Map<URI,URI> mappings=new HashMap<URI, URI>();
 	private Model model=null;
 	
-	public void addMapping(URI sbol2, URI sbol3)	{
+	public void addMappingGM(URI sbol2, URI sbol3)	{
 		mappings.put(sbol2, sbol3);
 	}
 	
