@@ -24,6 +24,7 @@
   <sbol:ComponentDefinition rdf:about="http://sbolstandard.org/build/my_amplified_dna">
     <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/build/my_amplified_dna"/>
     <sbol:displayId>my_amplified_dna</sbol:displayId>
+    <prov:wasGeneratedBy rdf:resource="http://sbolstandard.org/build/amplify_dna_construct_with_five_primer_and_three_primer"/>
     <dcterms:title>my_amplified_dna</dcterms:title>
     <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
     <sbol:type rdf:resource="http://identifiers.org/so/SO:0000987"/>

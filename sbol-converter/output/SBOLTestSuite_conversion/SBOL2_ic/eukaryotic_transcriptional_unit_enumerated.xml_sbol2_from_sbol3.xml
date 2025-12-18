@@ -4361,28 +4361,12 @@ gatcgc</sbh:mutableNotes>
     <sbol:elements>ggatcataatcagccataccacatttgtagaggttttacttgctttaaaaaacctcccacacctccccctgaacctgaaacataaaatgaatgcaattgttgttgttaacttgtttattgcagcttataatggttacaaataaagcaatagcatcacaaatttcacaaataaagcatttttttcactgcct</sbol:elements>
     <sbol:encoding rdf:resource="http://www.chem.qmul.ac.uk/iubmb/misc/naseq.html"/>
   </sbol:Sequence>
-  <prov:Activity rdf:about="http://michael.zhang/Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity/1">
-    <sbol:persistentIdentity rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity"/>
-    <sbol:displayId>Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity</sbol:displayId>
-    <sbol:version>1</sbol:version>
-    <dc:creator>Michael Zhang</dc:creator>
-    <prov:endedAtTime>2018-01-23T00:17:34.000Z</prov:endedAtTime>
-    <prov:qualifiedAssociation>
-      <prov:Association rdf:about="http://michael.zhang/Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity/Association/1">
-        <sbol:persistentIdentity rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity/Association"/>
-        <sbol:displayId>Association</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <prov:hadRole rdf:resource="http://sbols.org/v2#sequenceEditor"/>
-        <prov:agent rdf:resource="https://synbiohub.org/public/SBOL_Software/SBOLDesigner/2.2"/>
-      </prov:Association>
-    </prov:qualifiedAssociation>
-  </prov:Activity>
   <prov:Activity rdf:about="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance42_SBOLDesignerActivity/1">
     <sbol:persistentIdentity rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance42_SBOLDesignerActivity"/>
     <sbol:displayId>Eukaryotic_Transcriptional_Unit_GeneratedInstance42_SBOLDesignerActivity</sbol:displayId>
     <sbol:version>1</sbol:version>
     <dc:creator>Michael Zhang</dc:creator>
-    <prov:endedAtTime>2018-01-23T00:17:42.000Z</prov:endedAtTime>
+    <prov:endedAtTime>2018-01-23T00:17:42.711Z</prov:endedAtTime>
     <prov:qualifiedAssociation>
       <prov:Association rdf:about="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance42_SBOLDesignerActivity/Association/1">
         <sbol:persistentIdentity rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance42_SBOLDesignerActivity/Association"/>
@@ -4402,4 +4386,67 @@ gatcgc</sbh:mutableNotes>
       </prov:Usage>
     </prov:qualifiedUsage>
   </prov:Activity>
+  <prov:Activity rdf:about="http://michael.zhang/Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity/1">
+    <sbol:persistentIdentity rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity"/>
+    <sbol:displayId>Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity</sbol:displayId>
+    <sbol:version>1</sbol:version>
+    <dc:creator>Michael Zhang</dc:creator>
+    <prov:endedAtTime>2018-01-23T00:17:34.913Z</prov:endedAtTime>
+    <prov:qualifiedAssociation>
+      <prov:Association rdf:about="http://michael.zhang/Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity/Association/1">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity/Association"/>
+        <sbol:displayId>Association</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <prov:hadRole rdf:resource="http://sbols.org/v2#sequenceEditor"/>
+        <prov:agent rdf:resource="https://synbiohub.org/public/SBOL_Software/SBOLDesigner/2.2"/>
+      </prov:Association>
+    </prov:qualifiedAssociation>
+  </prov:Activity>
+  <sbol:CombinatorialDerivation rdf:about="http://michael.zhang/Pro_CombinatorialDerivation">
+    <sbol:persistentIdentity rdf:resource="http://michael.zhang/Pro_CombinatorialDerivation"/>
+    <sbol:displayId>Pro_CombinatorialDerivation</sbol:displayId>
+    <prov:wasGeneratedBy rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity/1"/>
+    <sbol:template rdf:resource="http://michael.zhang/Pro/1"/>
+    <sbol:strategy rdf:resource="http://sbols.org/v2#enumerate"/>
+    <sbol:variableComponent>
+      <sbol:VariableComponent rdf:about="http://michael.zhang/Pro_CombinatorialDerivation/Op_Component_VariableComponent">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/Pro_CombinatorialDerivation/Op_Component_VariableComponent"/>
+        <sbol:displayId>Op_Component_VariableComponent</sbol:displayId>
+        <sbol:variable rdf:resource="http://michael.zhang/Pro/Op_Component/1"/>
+        <sbol:operator rdf:resource="http://sbols.org/v2#zeroOrOne"/>
+        <sbol:variant rdf:resource="https://synbiohub.org/public/igem/BBa_K119002/1"/>
+        <sbol:variant rdf:resource="https://synbiohub.org/public/igem/BBa_I741109/1"/>
+        <sbol:variant rdf:resource="https://synbiohub.org/public/igem/BBa_I9201/1"/>
+        <sbol:variant rdf:resource="https://synbiohub.org/public/igem/BBa_I13603/1"/>
+      </sbol:VariableComponent>
+    </sbol:variableComponent>
+  </sbol:CombinatorialDerivation>
+  <sbol:CombinatorialDerivation rdf:about="http://michael.zhang/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation">
+    <sbol:persistentIdentity rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation"/>
+    <sbol:displayId>Eukaryotic_Transcriptional_Unit_CombinatorialDerivation</sbol:displayId>
+    <prov:wasGeneratedBy rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity/1"/>
+    <sbol:template rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit/1"/>
+    <sbol:strategy rdf:resource="http://sbols.org/v2#enumerate"/>
+    <sbol:variableComponent>
+      <sbol:VariableComponent rdf:about="http://michael.zhang/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation/CDS_Component_VariableComponent">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation/CDS_Component_VariableComponent"/>
+        <sbol:displayId>CDS_Component_VariableComponent</sbol:displayId>
+        <sbol:variable rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit/CDS_Component/1"/>
+        <sbol:operator rdf:resource="http://sbols.org/v2#one"/>
+        <sbol:variant rdf:resource="https://synbiohub.org/public/igem/BBa_K1606010/1"/>
+        <sbol:variant rdf:resource="https://synbiohub.org/public/igem/BBa_K1606007/1"/>
+        <sbol:variant rdf:resource="https://synbiohub.org/public/igem/BBa_C0100/1"/>
+        <sbol:variant rdf:resource="https://synbiohub.org/public/igem/BBa_J45000/1"/>
+      </sbol:VariableComponent>
+    </sbol:variableComponent>
+    <sbol:variableComponent>
+      <sbol:VariableComponent rdf:about="http://michael.zhang/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation/Pro_Component_VariableComponent">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation/Pro_Component_VariableComponent"/>
+        <sbol:displayId>Pro_Component_VariableComponent</sbol:displayId>
+        <sbol:variable rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit/Pro_Component/1"/>
+        <sbol:operator rdf:resource="http://sbols.org/v2#one"/>
+        <sbol:variantDerivation rdf:resource="http://michael.zhang/Pro_CombinatorialDerivation"/>
+      </sbol:VariableComponent>
+    </sbol:variableComponent>
+  </sbol:CombinatorialDerivation>
 </rdf:RDF>

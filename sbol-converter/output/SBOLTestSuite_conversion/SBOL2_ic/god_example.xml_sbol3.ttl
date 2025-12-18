@@ -495,6 +495,14 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/pIKELeftCassette_1/anno1/location1> .
 
+<http://www.virtualparts.org/part/1/GFP_Reporter_Template_CombinatorialDerivation_Sample>
+        rdf:type                      sbol:CombinatorialDerivation;
+        sbol:displayId                "GFP_Reporter_Template_CombinatorialDerivation_Sample";
+        sbol:hasNamespace             <http://www.virtualparts.org/part>;
+        sbol:strategy                 sbol:sample;
+        sbol:template                 <http://www.virtualparts.org/part/1/GFP_Reporter_Template>;
+        backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/GFP_Reporter_Template_CombinatorialDerivation_Sample/1> .
+
 <http://www.virtualparts.org/part/pIKELeftCassette_1/ECK120029600>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "ECK120029600";

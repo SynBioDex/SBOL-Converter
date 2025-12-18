@@ -1,0 +1,20 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX pr:          <http://partsregistry.org/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+
+<http://partsregistry.org/act/TEST_ACTIVITY>
+        rdf:type                      sbol:TopLevel , prov:Activity;
+        sbol:displayId                "TEST_ACTIVITY";
+        sbol:hasNamespace             pr:act;
+        prov:endedAtTime              "2025-12-18T19:22:52.426Z";
+        prov:startedAtTime            "2025-12-08T19:22:52.426Z";
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/act/TEST_ACTIVITY> .

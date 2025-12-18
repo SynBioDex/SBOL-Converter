@@ -34,7 +34,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://partsregistry.org/cd/BBa_K174004/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://partsregistry.org/cd/BBa_K174004/pspac> , <http://partsregistry.org/cd/BBa_K174004/LacI_operator> .
+        sbol:nondirectional  <http://partsregistry.org/cd/BBa_K174004/LacI_operator> , <http://partsregistry.org/cd/BBa_K174004/pspac> .
 
 <http://partsregistry.org/cd/LacI_operator>
         rdf:type                      sbol:Component;

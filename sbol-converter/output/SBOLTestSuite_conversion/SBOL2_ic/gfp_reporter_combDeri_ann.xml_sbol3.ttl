@@ -12,3 +12,12 @@ PREFIX prov:        <http://www.w3.org/ns/prov#>
 PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX sbh:         <http://wiki.synbiohub.org/wiki/Terms/synbiohub#>
 PREFIX sbol:        <http://sbols.org/v3#>
+
+<http://michael.zhang/1/GFP_Reporter_Template_CombinatorialDerivation_Sample>
+        rdf:type                      sbol:CombinatorialDerivation;
+        dc:creator                    "Michael Zhang";
+        sbol:displayId                "GFP_Reporter_Template_CombinatorialDerivation_Sample";
+        sbol:hasNamespace             <http://michael.zhang>;
+        sbol:strategy                 sbol:sample;
+        sbol:template                 <http://michael.zhang/1/GFP_Reporter_Template>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample/1> .

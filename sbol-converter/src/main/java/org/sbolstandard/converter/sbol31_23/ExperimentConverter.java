@@ -16,7 +16,7 @@ public class ExperimentConverter implements EntityConverter<Experiment, org.sbol
 		Util.copyIdentified(input, exp, doc);
 		if (input.getMembers() != null) {
 			for (URI uri : input.getMembers()) {
-				exp.addExperimentalData(Util.createSBOL2Uri(uri));//TODO: update URIs
+				exp.addExperimentalData(Util.createSBOL2Uri(uri));
 			}
 		}
 		return exp;

@@ -933,11 +933,45 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
             <rdf:type rdf:resource="http://www.w3.org/ns/prov#Association"/>
          </sbol:Identified>
       </prov:qualifiedAssociation>
-      <prov:endedAtTime>2018-01-16T05:33:17Z</prov:endedAtTime>
+      <prov:endedAtTime>2018-01-16T05:33:17.052Z</prov:endedAtTime>
       <sbol:hasNamespace rdf:resource="http://michael.zhang"/>
       <sbol:displayId>GFP_Reporter_Template_SBOLDesignerActivity</sbol:displayId>
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
    </sbol:TopLevel>
+   <sbol:CombinatorialDerivation rdf:about="http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation">
+      <sbol:hasVariableFeature>
+         <sbol:VariableFeature rdf:about="http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation/CDS_Component_VariableComponent">
+            <sbol:variant rdf:resource="https://synbiohub.org/public/igem/1/BBa_I766210"/>
+            <sbol:variant rdf:resource="https://synbiohub.org/public/igem/1/BBa_M36577"/>
+            <sbol:variant rdf:resource="https://synbiohub.org/public/igem/1/BBa_E0040"/>
+            <sbol:variable rdf:resource="http://michael.zhang/1/GFP_Reporter_Template/CDS_Component"/>
+            <sbol:cardinality rdf:resource="http://sbols.org/v3#one"/>
+            <sbol:displayId>CDS_Component_VariableComponent</sbol:displayId>
+         </sbol:VariableFeature>
+      </sbol:hasVariableFeature>
+      <sbol:strategy rdf:resource="http://sbols.org/v3#enumerate"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation"/>
+      <prov:wasGeneratedBy rdf:resource="http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1"/>
+      <sbol:hasNamespace rdf:resource="http://michael.zhang"/>
+      <sbol:template rdf:resource="http://michael.zhang/1/GFP_Reporter_Template"/>
+      <sbol:displayId>GFP_Reporter_Template_CombinatorialDerivation</sbol:displayId>
+   </sbol:CombinatorialDerivation>
+   <sbol:CombinatorialDerivation rdf:about="http://michael.zhang/1/GFP_Reporter_Template_CombinatorialDerivation_Sample">
+      <sbol:hasVariableFeature>
+         <sbol:VariableFeature rdf:about="http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample/1/Pro_Component_VariableComponent">
+            <sbol:variant rdf:resource="https://synbiohub.org/public/igem/1/BBa_K1545000"/>
+            <sbol:variant rdf:resource="https://synbiohub.org/public/igem/1/BBa_K1545001"/>
+            <sbol:variable rdf:resource="http://michael.zhang/1/GFP_Reporter_Template/Pro_Component"/>
+            <sbol:cardinality rdf:resource="http://sbols.org/v3#zeroOrOne"/>
+            <sbol:displayId>Pro_Component_VariableComponent</sbol:displayId>
+         </sbol:VariableFeature>
+      </sbol:hasVariableFeature>
+      <sbol:strategy rdf:resource="http://sbols.org/v3#sample"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample/1"/>
+      <sbol:hasNamespace rdf:resource="http://michael.zhang"/>
+      <sbol:template rdf:resource="http://michael.zhang/1/GFP_Reporter_Template"/>
+      <sbol:displayId>GFP_Reporter_Template_CombinatorialDerivation_Sample</sbol:displayId>
+   </sbol:CombinatorialDerivation>
    <prov:Activity rdf:about="https://synbiohub.org/public/igem/1/igem2sbol">
       <sbol:displayId>igem2sbol</sbol:displayId>
       <sbol:name>iGEM to SBOL conversion</sbol:name>

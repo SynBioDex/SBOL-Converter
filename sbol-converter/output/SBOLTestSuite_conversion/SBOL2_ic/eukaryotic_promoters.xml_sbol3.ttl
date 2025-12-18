@@ -419,6 +419,13 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasGeneratedBy           <http://michael.zhang/Eukaryotic_Promoters_SBOLDesignerActivity/1>;
         backport2_3:sbol2OriginalURI  <http://michael.zhang/Eukaryotic_Promoters/1> .
 
+<http://michael.zhang/Eukaryotic_Promoters_CombinatorialDerivation/Op_Component_VariableComponent>
+        rdf:type          sbol:VariableFeature;
+        sbol:cardinality  sbol:zeroOrOne;
+        sbol:displayId    "Op_Component_VariableComponent";
+        sbol:variable     <http://michael.zhang/1/Eukaryotic_Promoters/Op_Component>;
+        sbol:variant      <https://synbiohub.org/public/igem/1/BBa_I13603> , <https://synbiohub.org/public/igem/1/BBa_I9201> , <https://synbiohub.org/public/igem/1/BBa_I741109> , <https://synbiohub.org/public/igem/1/BBa_K119002> .
+
 <https://synbiohub.org/public/igem/1/BBa_R0011/annotation1999/range1999>
         rdf:type                      sbol:Range;
         sbol:displayId                "range1999";
@@ -1183,6 +1190,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_R0011/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_R0011/annotation2001/1> .
 
+<http://michael.zhang/Eukaryotic_Promoters_CombinatorialDerivation>
+        rdf:type                      sbol:CombinatorialDerivation;
+        sbol:displayId                "Eukaryotic_Promoters_CombinatorialDerivation";
+        sbol:hasNamespace             <http://michael.zhang>;
+        sbol:hasVariableFeature       <http://michael.zhang/Eukaryotic_Promoters_CombinatorialDerivation/Op_Component_VariableComponent>;
+        sbol:strategy                 sbol:sample;
+        sbol:template                 <http://michael.zhang/1/Eukaryotic_Promoters>;
+        prov:wasGeneratedBy           <http://michael.zhang/Eukaryotic_Promoters_SBOLDesignerActivity/1>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/Eukaryotic_Promoters_CombinatorialDerivation> .
+
 <https://synbiohub.org/public/igem/1/BBa_K119002_sequence>
         rdf:type                      sbol:Sequence;
         sbol:displayId                "BBa_K119002_sequence";
@@ -1301,7 +1318,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
         dc:creator                    "Michael Zhang";
         sbol:displayId                "Eukaryotic_Promoters_SBOLDesignerActivity";
         sbol:hasNamespace             <http://michael.zhang>;
-        prov:endedAtTime              "2018-01-16T04:40:15Z";
+        prov:endedAtTime              "2018-01-16T04:40:15.886Z";
         prov:qualifiedAssociation     <http://michael.zhang/1/Eukaryotic_Promoters_SBOLDesignerActivity/Association>;
         backport2_3:sbol2OriginalURI  <http://michael.zhang/Eukaryotic_Promoters_SBOLDesignerActivity/1> .
 

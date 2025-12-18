@@ -1558,12 +1558,28 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
     <sbol:elements>tgcaatttagatagtggcgttccctatttatagattgtggcagcgacaactgataaaatggagaccgccactattaccaacg</sbol:elements>
     <sbol:encoding rdf:resource="http://www.chem.qmul.ac.uk/iubmb/misc/naseq.html"/>
   </sbol:Sequence>
+  <prov:Activity rdf:about="http://michael.zhang/Eukaryotic_Promoters_SBOLDesignerActivity/1">
+    <sbol:persistentIdentity rdf:resource="http://michael.zhang/Eukaryotic_Promoters_SBOLDesignerActivity"/>
+    <sbol:displayId>Eukaryotic_Promoters_SBOLDesignerActivity</sbol:displayId>
+    <sbol:version>1</sbol:version>
+    <dc:creator>Michael Zhang</dc:creator>
+    <prov:endedAtTime>2018-01-23T00:14:51.528Z</prov:endedAtTime>
+    <prov:qualifiedAssociation>
+      <prov:Association rdf:about="http://michael.zhang/Eukaryotic_Promoters_SBOLDesignerActivity/Association/1">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/Eukaryotic_Promoters_SBOLDesignerActivity/Association"/>
+        <sbol:displayId>Association</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <prov:hadRole rdf:resource="http://sbols.org/v2#sequenceEditor"/>
+        <prov:agent rdf:resource="https://synbiohub.org/public/SBOL_Software/SBOLDesigner/2.2"/>
+      </prov:Association>
+    </prov:qualifiedAssociation>
+  </prov:Activity>
   <prov:Activity rdf:about="http://michael.zhang/Eukaryotic_Promoters_GeneratedInstance3_SBOLDesignerActivity/1">
     <sbol:persistentIdentity rdf:resource="http://michael.zhang/Eukaryotic_Promoters_GeneratedInstance3_SBOLDesignerActivity"/>
     <sbol:displayId>Eukaryotic_Promoters_GeneratedInstance3_SBOLDesignerActivity</sbol:displayId>
     <sbol:version>1</sbol:version>
     <dc:creator>Michael Zhang</dc:creator>
-    <prov:endedAtTime>2018-01-23T00:14:56.000Z</prov:endedAtTime>
+    <prov:endedAtTime>2018-01-23T00:14:56.405Z</prov:endedAtTime>
     <prov:qualifiedAssociation>
       <prov:Association rdf:about="http://michael.zhang/Eukaryotic_Promoters_GeneratedInstance3_SBOLDesignerActivity/Association/1">
         <sbol:persistentIdentity rdf:resource="http://michael.zhang/Eukaryotic_Promoters_GeneratedInstance3_SBOLDesignerActivity/Association"/>
@@ -1583,20 +1599,23 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
       </prov:Usage>
     </prov:qualifiedUsage>
   </prov:Activity>
-  <prov:Activity rdf:about="http://michael.zhang/Eukaryotic_Promoters_SBOLDesignerActivity/1">
-    <sbol:persistentIdentity rdf:resource="http://michael.zhang/Eukaryotic_Promoters_SBOLDesignerActivity"/>
-    <sbol:displayId>Eukaryotic_Promoters_SBOLDesignerActivity</sbol:displayId>
-    <sbol:version>1</sbol:version>
-    <dc:creator>Michael Zhang</dc:creator>
-    <prov:endedAtTime>2018-01-23T00:14:51.000Z</prov:endedAtTime>
-    <prov:qualifiedAssociation>
-      <prov:Association rdf:about="http://michael.zhang/Eukaryotic_Promoters_SBOLDesignerActivity/Association/1">
-        <sbol:persistentIdentity rdf:resource="http://michael.zhang/Eukaryotic_Promoters_SBOLDesignerActivity/Association"/>
-        <sbol:displayId>Association</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <prov:hadRole rdf:resource="http://sbols.org/v2#sequenceEditor"/>
-        <prov:agent rdf:resource="https://synbiohub.org/public/SBOL_Software/SBOLDesigner/2.2"/>
-      </prov:Association>
-    </prov:qualifiedAssociation>
-  </prov:Activity>
+  <sbol:CombinatorialDerivation rdf:about="http://michael.zhang/Eukaryotic_Promoters_CombinatorialDerivation">
+    <sbol:persistentIdentity rdf:resource="http://michael.zhang/Eukaryotic_Promoters_CombinatorialDerivation"/>
+    <sbol:displayId>Eukaryotic_Promoters_CombinatorialDerivation</sbol:displayId>
+    <prov:wasGeneratedBy rdf:resource="http://michael.zhang/Eukaryotic_Promoters_SBOLDesignerActivity/1"/>
+    <sbol:template rdf:resource="http://michael.zhang/Eukaryotic_Promoters/1"/>
+    <sbol:strategy rdf:resource="http://sbols.org/v2#enumerate"/>
+    <sbol:variableComponent>
+      <sbol:VariableComponent rdf:about="http://michael.zhang/Eukaryotic_Promoters_CombinatorialDerivation/Op_Component_VariableComponent">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/Eukaryotic_Promoters_CombinatorialDerivation/Op_Component_VariableComponent"/>
+        <sbol:displayId>Op_Component_VariableComponent</sbol:displayId>
+        <sbol:variable rdf:resource="http://michael.zhang/Eukaryotic_Promoters/Op_Component/1"/>
+        <sbol:operator rdf:resource="http://sbols.org/v2#zeroOrOne"/>
+        <sbol:variant rdf:resource="https://synbiohub.org/public/igem/BBa_K119002/1"/>
+        <sbol:variant rdf:resource="https://synbiohub.org/public/igem/BBa_I741109/1"/>
+        <sbol:variant rdf:resource="https://synbiohub.org/public/igem/BBa_I9201/1"/>
+        <sbol:variant rdf:resource="https://synbiohub.org/public/igem/BBa_I13603/1"/>
+      </sbol:VariableComponent>
+    </sbol:variableComponent>
+  </sbol:CombinatorialDerivation>
 </rdf:RDF>

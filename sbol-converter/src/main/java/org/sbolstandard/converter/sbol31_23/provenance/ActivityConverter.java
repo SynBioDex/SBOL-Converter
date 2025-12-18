@@ -52,6 +52,16 @@ public class ActivityConverter implements EntityConverter<Activity, org.sbolstan
 
 	}
 
+	private static DateTime convertToDateTimeNew(XSDDateTime xsdDateTime) {
+		if (xsdDateTime == null) return null;
+		return DateTime.parse(xsdDateTime.toString());
+		// Convert XSDDateTime to java.util.Calendar
+        //java.util.Calendar calendar = xsdDateTime.asCalendar();
+        // Wrap calendar in Joda DateTime
+        //return new DateTime(calendar);
+		
+	}
+
 	private static DateTime convertToDateTime(XSDDateTime xsdDateTime) {
 		if (xsdDateTime == null) return null;
 		

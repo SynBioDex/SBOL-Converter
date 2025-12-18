@@ -30,7 +30,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
         dc:creator                    "Michael Zhang";
         sbol:displayId                "GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity";
         sbol:hasNamespace             <http://michael.zhang>;
-        prov:endedAtTime              "2018-01-23T00:15:46Z";
+        prov:endedAtTime              "2018-01-23T00:15:46.461Z";
         prov:qualifiedAssociation     <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/Association>;
         prov:qualifiedUsage           <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/GFP_Reporter_Template_CombinatorialDerivation_Sample_Usage>;
         backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/1> .
@@ -47,7 +47,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
         dc:creator                    "Michael Zhang";
         sbol:displayId                "GFP_Reporter_Template_SBOLDesignerActivity";
         sbol:hasNamespace             <http://michael.zhang>;
-        prov:endedAtTime              "2018-01-23T00:15:40Z";
+        prov:endedAtTime              "2018-01-23T00:15:40.442Z";
         prov:qualifiedAssociation     <http://michael.zhang/1/GFP_Reporter_Template_SBOLDesignerActivity/Association>;
         backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1> .
 

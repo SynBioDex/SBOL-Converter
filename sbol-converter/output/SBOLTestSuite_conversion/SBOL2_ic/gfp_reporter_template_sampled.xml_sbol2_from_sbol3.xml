@@ -794,12 +794,37 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
     <sbol:elements>ccatctaattcaacaagaattggtgatgttaatccatctaattcaacaagaattggtgatgttaatccatctaattcaacaagaattggtgatgttaatccatctaattcaacaagaattggtgatgttaatccatctaattcaacaagaattggtgatgttaatccatctaattcaacaagaattggtgatgttaat</sbol:elements>
     <sbol:encoding rdf:resource="http://www.chem.qmul.ac.uk/iubmb/misc/naseq.html"/>
   </sbol:Sequence>
+  <prov:Activity rdf:about="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/1">
+    <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity"/>
+    <sbol:displayId>GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity</sbol:displayId>
+    <sbol:version>1</sbol:version>
+    <dc:creator>Michael Zhang</dc:creator>
+    <prov:endedAtTime>2018-01-23T00:15:46.461Z</prov:endedAtTime>
+    <prov:qualifiedAssociation>
+      <prov:Association rdf:about="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/Association/1">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/Association"/>
+        <sbol:displayId>Association</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <prov:hadRole rdf:resource="http://sbols.org/v2#sequenceEditor"/>
+        <prov:agent rdf:resource="https://synbiohub.org/public/SBOL_Software/SBOLDesigner/2.2"/>
+      </prov:Association>
+    </prov:qualifiedAssociation>
+    <prov:qualifiedUsage>
+      <prov:Usage rdf:about="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/GFP_Reporter_Template_CombinatorialDerivation_Sample_Usage/1">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/GFP_Reporter_Template_CombinatorialDerivation_Sample_Usage"/>
+        <sbol:displayId>GFP_Reporter_Template_CombinatorialDerivation_Sample_Usage</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <prov:hadRole rdf:resource="http://sbols.org/v2#sequenceEditor"/>
+        <prov:entity rdf:resource="http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample/1"/>
+      </prov:Usage>
+    </prov:qualifiedUsage>
+  </prov:Activity>
   <prov:Activity rdf:about="http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1">
     <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity"/>
     <sbol:displayId>GFP_Reporter_Template_SBOLDesignerActivity</sbol:displayId>
     <sbol:version>1</sbol:version>
     <dc:creator>Michael Zhang</dc:creator>
-    <prov:endedAtTime>2018-01-23T00:15:40.000Z</prov:endedAtTime>
+    <prov:endedAtTime>2018-01-23T00:15:40.442Z</prov:endedAtTime>
     <prov:qualifiedAssociation>
       <prov:Association rdf:about="http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/Association/1">
         <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/Association"/>
@@ -823,29 +848,22 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
     <sbh:ownedBy rdf:resource="https://synbiohub.org/user/myers"/>
     <prov:endedAtTime>2017-03-06T15:00:00.000Z</prov:endedAtTime>
   </prov:Activity>
-  <prov:Activity rdf:about="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/1">
-    <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity"/>
-    <sbol:displayId>GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity</sbol:displayId>
+  <sbol:CombinatorialDerivation rdf:about="http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample/1">
+    <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample"/>
+    <sbol:displayId>GFP_Reporter_Template_CombinatorialDerivation_Sample</sbol:displayId>
     <sbol:version>1</sbol:version>
-    <dc:creator>Michael Zhang</dc:creator>
-    <prov:endedAtTime>2018-01-23T00:15:46.000Z</prov:endedAtTime>
-    <prov:qualifiedAssociation>
-      <prov:Association rdf:about="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/Association/1">
-        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/Association"/>
-        <sbol:displayId>Association</sbol:displayId>
+    <sbol:template rdf:resource="http://michael.zhang/GFP_Reporter_Template/1"/>
+    <sbol:strategy rdf:resource="http://sbols.org/v2#sample"/>
+    <sbol:variableComponent>
+      <sbol:VariableComponent rdf:about="http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample/Pro_Component_VariableComponent/1">
+        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample/Pro_Component_VariableComponent"/>
+        <sbol:displayId>Pro_Component_VariableComponent</sbol:displayId>
         <sbol:version>1</sbol:version>
-        <prov:hadRole rdf:resource="http://sbols.org/v2#sequenceEditor"/>
-        <prov:agent rdf:resource="https://synbiohub.org/public/SBOL_Software/SBOLDesigner/2.2"/>
-      </prov:Association>
-    </prov:qualifiedAssociation>
-    <prov:qualifiedUsage>
-      <prov:Usage rdf:about="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/GFP_Reporter_Template_CombinatorialDerivation_Sample_Usage/1">
-        <sbol:persistentIdentity rdf:resource="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/GFP_Reporter_Template_CombinatorialDerivation_Sample_Usage"/>
-        <sbol:displayId>GFP_Reporter_Template_CombinatorialDerivation_Sample_Usage</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <prov:hadRole rdf:resource="http://sbols.org/v2#sequenceEditor"/>
-        <prov:entity rdf:resource="http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample/1"/>
-      </prov:Usage>
-    </prov:qualifiedUsage>
-  </prov:Activity>
+        <sbol:variable rdf:resource="http://michael.zhang/GFP_Reporter_Template/Pro_Component/1"/>
+        <sbol:operator rdf:resource="http://sbols.org/v2#zeroOrOne"/>
+        <sbol:variant rdf:resource="https://synbiohub.org/public/igem/BBa_K1545001/1"/>
+        <sbol:variant rdf:resource="https://synbiohub.org/public/igem/BBa_K1545000/1"/>
+      </sbol:VariableComponent>
+    </sbol:variableComponent>
+  </sbol:CombinatorialDerivation>
 </rdf:RDF>

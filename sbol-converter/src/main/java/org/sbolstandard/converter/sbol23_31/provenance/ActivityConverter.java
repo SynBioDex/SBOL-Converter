@@ -1,5 +1,6 @@
 package org.sbolstandard.converter.sbol23_31.provenance;
 
+import org.apache.jena.datatypes.xsd.XSDDateTime;
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.converter.sbol23_31.EntityConverter;
 import org.sbolstandard.converter.sbol23_31.Parameters;
@@ -19,13 +20,23 @@ public class ActivityConverter implements EntityConverter<org.sbolstandard.core2
 		}
 
 		if (input.getStartedAtTime() != null) {
-			activity.setStartedAtTime (input.getStartedAtTime().getYear(), input.getStartedAtTime().getMonthOfYear(), input.getStartedAtTime().getDayOfMonth(),
-					input.getStartedAtTime().getHourOfDay(), input.getStartedAtTime().getMinuteOfHour(), input.getStartedAtTime().getSecondOfMinute());
+			activity.setStartedAtTime(input.getStartedAtTime().toDate());
+			//activity.setStartedAtTime (input.getStartedAtTime().getYear(), input.getStartedAtTime().getMonthOfYear(), input.getStartedAtTime().getDayOfMonth(),
+			//		input.getStartedAtTime().getHourOfDay(), input.getStartedAtTime().getMinuteOfHour(), input.getStartedAtTime().getSecondOfMinute());
+			//activity.setStartedAtTime (input.getStartedAtTime().getYear(), input.getStartedAtTime().getMonthOfYear(), input.getStartedAtTime().getDayOfMonth(),
+			//		input.getStartedAtTime().getHourOfDay(), input.getStartedAtTime().getMinuteOfHour(), input.getStartedAtTime().getSecondOfMinute(), input.getStartedAtTime().getMillisOfSecond());
+
 		}
 		if (input.getEndedAtTime() != null) {
-			activity.setEndedAtTime(input.getEndedAtTime().getYear(), input.getEndedAtTime().getMonthOfYear(), input.getEndedAtTime().getDayOfMonth(),
-					input.getEndedAtTime().getHourOfDay(), input.getEndedAtTime().getMinuteOfHour(), input.getEndedAtTime().getSecondOfMinute());
+			activity.setEndedAtTime(input.getEndedAtTime().toDate());
+			//activity.setEndedAtTime(input.getEndedAtTime().getYear(), input.getEndedAtTime().getMonthOfYear(), input.getEndedAtTime().getDayOfMonth(),
+			//		input.getEndedAtTime().getHourOfDay(), input.getEndedAtTime().getMinuteOfHour(), input.getEndedAtTime().getSecondOfMinute());
+			//activity.setEndedAtTime(input.getEndedAtTime().getYear(), input.getEndedAtTime().getMonthOfYear(), input.getEndedAtTime().getDayOfMonth(),
+			//		input.getEndedAtTime().getHourOfDay(), input.getEndedAtTime().getMinuteOfHour(), input.getEndedAtTime().getSecondOfMinute(), input.getEndedAtTime().getMillisOfSecond());
+
 		}
+		
+
 
 		// Associations and usages must be converted but in here as the child entities of activity
 		AssociationConverter associationConverter = new AssociationConverter();

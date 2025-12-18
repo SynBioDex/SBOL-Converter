@@ -30,6 +30,9 @@
    </sbol:Component>
    <sbol:Component rdf:about="http://sbolstandard.org/build/joined_dna_part">
       <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/build/joined_dna_part"/>
+      <prov:wasGeneratedBy>
+         <sbol:TopLevel rdf:about="http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2"/>
+      </prov:wasGeneratedBy>
       <sbol:name>joined_dna_part</sbol:name>
       <sbol:hasNamespace rdf:resource="http://sbolstandard.org/build"/>
       <sbol:type rdf:resource="https://identifiers.org/SO:0000985"/>

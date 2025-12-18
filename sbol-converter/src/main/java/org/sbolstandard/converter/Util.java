@@ -406,30 +406,39 @@ public class Util {
 
 
 
-	public static URI createSBOL3Uri(URI inputUri, Parameters parameters) throws SBOLGraphException {
+	public static URI createSBOL3Uri(URI inputUri, Parameters parameters) throws SBOLGraphException {		
 		Model rdfModel = parameters.getRdfModel();
 		inputUri=getLatestUri(inputUri, rdfModel);
-		String sbol3Uri = "";
-		sbol3Uri = Util.extractURIPrefixSBOL2Uri(inputUri.toString());
-		String version = extractVersionSBOL2Uri(inputUri.toString());
-		String displayId = extractDisplayIdSBOL2Uri(inputUri.toString());
-		if (version != null && !version.equals("")) {
-			sbol3Uri += "/" + version;
-		}
-		if (displayId != null && !displayId.equals("")) {
-			sbol3Uri += "/" + displayId;
-		}
 
-		if (sbol3Uri == null){
-			String inputUriString = inputUri.toString();
-			if (!inputUriString.toLowerCase().startsWith("urn") && !inputUriString.contains("://")){				
-				return SBOLAPI.append("https://sbolstandard.org/SBOL3-Converter", inputUriString);
-			}
-			else{
-				return URI.create(inputUri.toString());
-			}
+		URI mapped = parameters.getMapping(inputUri);
+		if (mapped != null){
+			return mapped;
 		}
-		return URI.create(sbol3Uri);
+		else{
+			String sbol3Uri = "";
+			sbol3Uri = Util.extractURIPrefixSBOL2Uri(inputUri.toString());
+			String version = extractVersionSBOL2Uri(inputUri.toString());
+			String displayId = extractDisplayIdSBOL2Uri(inputUri.toString());
+			if (version != null && !version.equals("")) {
+				sbol3Uri += "/" + version;
+			}
+			if (displayId != null && !displayId.equals("")) {
+				sbol3Uri += "/" + displayId;
+			}
+
+			if (sbol3Uri == null){
+				String inputUriString = inputUri.toString();
+				if (!inputUriString.toLowerCase().startsWith("urn") && !inputUriString.contains("://")){				
+					sbol3Uri= SBOLAPI.append("https://sbolstandard.org/SBOL3-Converter", inputUriString).toString();
+				}
+				else{
+					sbol3Uri= inputUri.toString();
+				}
+			}
+			URI result=URI.create(sbol3Uri);
+			parameters.addMapping(inputUri, result);
+			return result;
+		}
 	}
 
 
@@ -723,7 +732,16 @@ public class Util {
 		output.setWasGeneratedByURIs(toList(input.getWasGeneratedBys()));
 		convertIfTopLevel(input, output,parameters);
 		output.addAnnotation(ConverterVocabulary.Two_to_Three.sbol2OriginalURI, input.getIdentity());
-		convertAnnotations_2_to3(input.getAnnotations(), output);
+		convertAnnotations_2_to3(input.getAnnotations(), output);		
+		//If the mapping has been added, it skips adding it again
+		parameters.addMapping(input.getIdentity(), output.getUri());
+
+		String debug="http://michael.zhang/Eukaryotic_Transcriptional_Unit/Eukaryotic_Transcriptional_Unit_SequenceAnnotation/1";
+		if (input.getIdentity().toString().equals(debug))
+		{
+			String str="";
+			str="fg";
+		}
 	}
 
 	private static void convertIfTopLevel(org.sbolstandard.core2.Identified input, Identified output, Parameters parameters) throws SBOLGraphException {

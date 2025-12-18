@@ -338,6 +338,13 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_I741109/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_I741109/annotation1936873/1> .
 
+<http://michael.zhang/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation/Pro_Component_VariableComponent>
+        rdf:type                sbol:VariableFeature;
+        sbol:cardinality        sbol:one;
+        sbol:displayId          "Pro_Component_VariableComponent";
+        sbol:variable           <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit/Pro_Component>;
+        sbol:variantDerivation  <http://michael.zhang/Pro_CombinatorialDerivation> .
+
 <https://synbiohub.org/public/igem/1/BBa_R0010/annotation1961227/range1961227>
         rdf:type                      sbol:Range;
         sbol:displayId                "range1961227";
@@ -901,6 +908,13 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0010/annotation7018/range7018/1> .
 
+<http://michael.zhang/Pro_CombinatorialDerivation/Op_Component_VariableComponent>
+        rdf:type          sbol:VariableFeature;
+        sbol:cardinality  sbol:zeroOrOne;
+        sbol:displayId    "Op_Component_VariableComponent";
+        sbol:variable     <http://michael.zhang/1/Pro/Op_Component>;
+        sbol:variant      <https://synbiohub.org/public/igem/1/BBa_I13603> , <https://synbiohub.org/public/igem/1/BBa_I9201> , <https://synbiohub.org/public/igem/1/BBa_I741109> , <https://synbiohub.org/public/igem/1/BBa_K119002> .
+
 <https://synbiohub.org/public/igem/1/BBa_B0012/annotation1687>
         rdf:type                      sbol:SequenceFeature;
         sbol:displayId                "annotation1687";
@@ -1184,6 +1198,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_R0010/annotation1961225/range1961225/1> .
 
+<http://michael.zhang/Pro_CombinatorialDerivation>
+        rdf:type                      sbol:CombinatorialDerivation;
+        sbol:displayId                "Pro_CombinatorialDerivation";
+        sbol:hasNamespace             <http://michael.zhang>;
+        sbol:hasVariableFeature       <http://michael.zhang/Pro_CombinatorialDerivation/Op_Component_VariableComponent>;
+        sbol:strategy                 sbol:enumerate;
+        sbol:template                 <http://michael.zhang/1/Pro>;
+        prov:wasGeneratedBy           <http://michael.zhang/Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity/1>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/Pro_CombinatorialDerivation> .
+
 <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
@@ -1253,7 +1277,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
         dc:creator                    "Michael Zhang";
         sbol:displayId                "Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity";
         sbol:hasNamespace             <http://michael.zhang>;
-        prov:endedAtTime              "2018-01-16T04:45:36Z";
+        prov:endedAtTime              "2018-01-16T04:45:36.544Z";
         prov:qualifiedAssociation     <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity/Association>;
         backport2_3:sbol2OriginalURI  <http://michael.zhang/Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity/1> .
 
@@ -2109,6 +2133,13 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_I741109/annotation1936878/range1936878/1> .
 
+<http://michael.zhang/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation/CDS_Component_VariableComponent>
+        rdf:type          sbol:VariableFeature;
+        sbol:cardinality  sbol:one;
+        sbol:displayId    "CDS_Component_VariableComponent";
+        sbol:variable     <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit/CDS_Component>;
+        sbol:variant      <https://synbiohub.org/public/igem/1/BBa_J45000> , <https://synbiohub.org/public/igem/1/BBa_C0100> , <https://synbiohub.org/public/igem/1/BBa_K1606007> , <https://synbiohub.org/public/igem/1/BBa_K1606010> .
+
 <https://synbiohub.org/public/igem/1/BBa_E0422/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
@@ -2157,6 +2188,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:role                     SO:0001091 , <https://wiki.synbiohub.org/wiki/Terms/igem#feature/binding>;
         sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_I741109/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_I741109/annotation1936874/1> .
+
+<http://michael.zhang/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation>
+        rdf:type                      sbol:CombinatorialDerivation;
+        sbol:displayId                "Eukaryotic_Transcriptional_Unit_CombinatorialDerivation";
+        sbol:hasNamespace             <http://michael.zhang>;
+        sbol:hasVariableFeature       <http://michael.zhang/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation/Pro_Component_VariableComponent> , <http://michael.zhang/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation/CDS_Component_VariableComponent>;
+        sbol:strategy                 sbol:enumerate;
+        sbol:template                 <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit>;
+        prov:wasGeneratedBy           <http://michael.zhang/Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity/1>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/Eukaryotic_Transcriptional_Unit_CombinatorialDerivation> .
 
 <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit/Pro_Component/Eukaryotic_Transcriptional_Unit_SequenceAnnotation_Range>
         rdf:type                      sbol:Range;

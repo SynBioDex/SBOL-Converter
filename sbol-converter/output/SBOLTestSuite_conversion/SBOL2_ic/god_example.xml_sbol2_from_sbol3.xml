@@ -796,6 +796,13 @@
     <sbolhub:name>LacI/TetR Toggle Switch</sbolhub:name>
     <sbolhub:keywords></sbolhub:keywords>
   </sbolhub:UploadData>
+  <sbol:CombinatorialDerivation rdf:about="http://www.virtualparts.org/part/GFP_Reporter_Template_CombinatorialDerivation_Sample/1">
+    <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/GFP_Reporter_Template_CombinatorialDerivation_Sample"/>
+    <sbol:displayId>GFP_Reporter_Template_CombinatorialDerivation_Sample</sbol:displayId>
+    <sbol:version>1</sbol:version>
+    <sbol:template rdf:resource="http://www.virtualparts.org/part/GFP_Reporter_Template/1"/>
+    <sbol:strategy rdf:resource="http://sbols.org/v2#sample"/>
+  </sbol:CombinatorialDerivation>
   <sbol:Implementation rdf:about="http://www.virtualparts.org/part/build/1.0.0">
     <sbol:persistentIdentity rdf:resource="http://www.virtualparts.org/part/build"/>
     <sbol:displayId>build</sbol:displayId>

@@ -34,7 +34,7 @@
             <rdf:type rdf:resource="http://www.w3.org/ns/prov#Association"/>
          </sbol:Identified>
       </prov:qualifiedAssociation>
-      <prov:endedAtTime>2018-01-23T00:15:46Z</prov:endedAtTime>
+      <prov:endedAtTime>2018-01-23T00:15:46.461Z</prov:endedAtTime>
       <sbol:hasNamespace rdf:resource="http://michael.zhang"/>
       <sbol:displayId>GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity</sbol:displayId>
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
@@ -51,7 +51,7 @@
             <rdf:type rdf:resource="http://www.w3.org/ns/prov#Association"/>
          </sbol:Identified>
       </prov:qualifiedAssociation>
-      <prov:endedAtTime>2018-01-23T00:15:40Z</prov:endedAtTime>
+      <prov:endedAtTime>2018-01-23T00:15:40.442Z</prov:endedAtTime>
       <sbol:hasNamespace rdf:resource="http://michael.zhang"/>
       <sbol:displayId>GFP_Reporter_Template_SBOLDesignerActivity</sbol:displayId>
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>

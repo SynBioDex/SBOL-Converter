@@ -85,17 +85,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:role                     SO:0000110;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH41414/annotation2> .
 
-<http://www.async.ece.utah.edu/pICH41414/annotation0/range>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range";
-        sbol:end                      "4";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/pICH41414_seq>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "1";
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH41414/annotation0/range> .
-
 <http://www.async.ece.utah.edu/pICH41414/annotation5/range>
         rdf:type                      sbol:Range;
         sbol:displayId                "range";
@@ -106,6 +95,17 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH41414/annotation5/range> .
+
+<http://www.async.ece.utah.edu/pICH41414/annotation0/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "4";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICH41414_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH41414/annotation0/range> .
 
 <http://www.async.ece.utah.edu/pICH41414/annotation4>
         rdf:type                      sbol:SequenceFeature;
@@ -135,7 +135,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pICH41414>
         rdf:type                      sbol:Component;
         sbol:displayId                "pICH41414";
-        sbol:hasFeature               <http://www.async.ece.utah.edu/pICH41414/annotation6> , <http://www.async.ece.utah.edu/pICH41414/annotation5> , <http://www.async.ece.utah.edu/pICH41414/annotation4> , <http://www.async.ece.utah.edu/pICH41414/annotation2> , <http://www.async.ece.utah.edu/pICH41414/annotation1> , <http://www.async.ece.utah.edu/pICH41414/annotation3> , <http://www.async.ece.utah.edu/pICH41414/annotation0>;
+        sbol:hasFeature               <http://www.async.ece.utah.edu/pICH41414/annotation6> , <http://www.async.ece.utah.edu/pICH41414/annotation5> , <http://www.async.ece.utah.edu/pICH41414/annotation2> , <http://www.async.ece.utah.edu/pICH41414/annotation4> , <http://www.async.ece.utah.edu/pICH41414/annotation1> , <http://www.async.ece.utah.edu/pICH41414/annotation3> , <http://www.async.ece.utah.edu/pICH41414/annotation0>;
         sbol:hasNamespace             <http://www.async.ece.utah.edu>;
         sbol:hasSequence              <http://www.async.ece.utah.edu/pICH41414_seq>;
         sbol:role                     SO:0000804;

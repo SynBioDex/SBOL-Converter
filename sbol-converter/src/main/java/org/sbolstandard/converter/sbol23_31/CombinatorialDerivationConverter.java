@@ -42,7 +42,12 @@ public class CombinatorialDerivationConverter implements EntityConverter<org.sbo
      */
     private VariableFeature convertVariableComponent(CombinatorialDerivation cDerivation, VariableComponent vComponent, Parameters parameters)  throws SBOLGraphException
     {
-    	List<Feature> sbol3Features = cDerivation.getTemplate().getFeatures();
+    	if (cDerivation.getTemplate()==null)
+		{
+			System.out.println("*****CONVERSION ERROR:*****: Template is not set for CombinatorialDerivation " + cDerivation.getUri() +  ". Can't proceed to create the VariableFeature.");
+			return null;
+		}
+		List<Feature> sbol3Features = cDerivation.getTemplate().getFeatures();
 		URI sbol3FeatureURI=Util.createSBOL3Uri(vComponent.getVariableURI(), parameters);
 		Feature foundFeature=null;
 		for (Feature feature : sbol3Features){

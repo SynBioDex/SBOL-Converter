@@ -79,17 +79,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70002/annotation5/range> .
 
-<http://www.async.ece.utah.edu/pICSL70002/annotation4>
-        rdf:type                      sbol:SequenceFeature;
-        gbConv:featureType            "Replication_ori";
-        gbConv:label                  "ORI";
-        gbConv:note                   " RNaseH cleavage point ";
-        gbConv:vntifkey               "33";
-        sbol:displayId                "annotation4";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL70002/annotation4/range>;
-        sbol:name                     "ORI";
-        sbol:role                     SO:0000110;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70002/annotation4> .
+<http://www.async.ece.utah.edu/pICSL70002/annotation11/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "4673";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL70002_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "3663";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70002/annotation11/range> .
 
 <http://www.async.ece.utah.edu/pICSL70002/annotation8/range>
         rdf:type                      sbol:Range;
@@ -102,16 +101,17 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70002/annotation8/range> .
 
-<http://www.async.ece.utah.edu/pICSL70002/annotation11/range>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range";
-        sbol:end                      "4673";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL70002_seq>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "3663";
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70002/annotation11/range> .
+<http://www.async.ece.utah.edu/pICSL70002/annotation4>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "Replication_ori";
+        gbConv:label                  "ORI";
+        gbConv:note                   " RNaseH cleavage point ";
+        gbConv:vntifkey               "33";
+        sbol:displayId                "annotation4";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL70002/annotation4/range>;
+        sbol:name                     "ORI";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70002/annotation4> .
 
 <http://www.async.ece.utah.edu/pICSL70002/annotation11>
         rdf:type                      sbol:SequenceFeature;

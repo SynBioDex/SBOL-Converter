@@ -3,6 +3,7 @@
   <sbol:ComponentDefinition rdf:about="http://sbolstandard.org/build/joined_dna_part">
     <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/build/joined_dna_part"/>
     <sbol:displayId>joined_dna_part</sbol:displayId>
+    <prov:wasGeneratedBy rdf:resource="http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2"/>
     <dcterms:title>joined_dna_part</dcterms:title>
     <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
     <sbol:type rdf:resource="http://identifiers.org/so/SO:0000987"/>
