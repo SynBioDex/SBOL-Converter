@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sbol="http://sbols.org/v2#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:sys-bio="http://sys-bio.org#" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
+  <prov:Plan rdf:about="http://sys-bio.org/Plan/characterization_protocol/1.0.0">
+    <sbol:persistentIdentity rdf:resource="http://sys-bio.org/Plan/characterization_protocol"/>
+    <sbol:displayId>characterization_protocol</sbol:displayId>
+    <sbol:version>1.0.0</sbol:version>
+    <sbol:attachment rdf:resource="http://sys-bio.org/Attachment/characterization_protocol/1.0.0"/>
+  </prov:Plan>
+  <sbol:Attachment rdf:about="http://sys-bio.org/Attachment/characterization_protocol/1.0.0">
+    <sbol:persistentIdentity rdf:resource="http://sys-bio.org/Attachment/characterization_protocol"/>
+    <sbol:displayId>characterization_protocol</sbol:displayId>
+    <sbol:version>1.0.0</sbol:version>
+    <sbol:source rdf:resource="https://sbolstandard.org/SBOL3-Converter/dynamic_measurement.mdx"/>
+  </sbol:Attachment>
+</rdf:RDF>

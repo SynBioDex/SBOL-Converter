@@ -74,7 +74,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbolstandard.org/example/tetr_inverter/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://sbolstandard.org/example/tetr_inverter/TF> , <http://sbolstandard.org/example/tetr_inverter/promoter> .
+        sbol:nondirectional  <http://sbolstandard.org/example/tetr_inverter/promoter> , <http://sbolstandard.org/example/tetr_inverter/TF> .
 
 <http://sbolstandard.org/example/tetr_inverter/LacI_pLacI>
         rdf:type                      sbol:Interaction;
@@ -99,7 +99,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbolstandard.org/example/toggle_switch>
         rdf:type                      sbol:Component;
         sbol:displayId                "toggle_switch";
-        sbol:hasFeature               <http://sbolstandard.org/example/toggle_switch/TetR> , <http://sbolstandard.org/example/toggle_switch/LacI>;
+        sbol:hasFeature               <http://sbolstandard.org/example/toggle_switch/LacI> , <http://sbolstandard.org/example/toggle_switch/TetR>;
         sbol:hasInterface             <http://sbolstandard.org/example/toggle_switch/Interface1>;
         sbol:hasNamespace             <http://sbolstandard.org/example>;
         sbol:role                     <https://sbolstandard.org/example/module_role/toggle_switch>;
@@ -133,4 +133,4 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbolstandard.org/example/toggle_switch/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://sbolstandard.org/example/toggle_switch/TetR> , <http://sbolstandard.org/example/toggle_switch/LacI> .
+        sbol:nondirectional  <http://sbolstandard.org/example/toggle_switch/LacI> , <http://sbolstandard.org/example/toggle_switch/TetR> .

@@ -1,0 +1,267 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+
+<http://www.async.ece.utah.edu/Part_ori_009_seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "Part_ori_009_seq";
+        sbol:elements                 "ttgagatcctttttttctgcgcgtaatctgctgcttgcaaacaaaaaaaccaccgctaccagcggtggtttgtttgccggatcaagagctaccaactctttttccgaaggtaactggcttcagcagagcgcagataccaaatactgtccttctagtgtagccgtagttaggccaccacttcaagaactctgtagcaccgcctacatacctcgctctgctaatcctgttaccagtggctgctgccagtggcgataagtcgtgtcttaccgggttggactcaagacgatagttaccggataaggcgcagcggtcgggctgaacggggggttcgtgcacacagcccagcttggagcgaacgacctacaccgaactgagatacctacagcgtgagcattgagaaagcgccacgcttcccgaagggagaaaggcggacaggtatccggtaagcggcagggtcggaacaggagagcgcacgagggagcttccagggggaaacgcctggtatctttatagtcctgtcgggtttcgccacctctgacttgagcgtcgatttttgtgatgctcgtcaggggggcggagcctatggaaa";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:ori-009#seq>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/Part_ori_009_seq> .
+
+<http://www.async.ece.utah.edu/Part_SV40_poly_A__signal_004_seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "Part_SV40_poly_A__signal_004_seq";
+        sbol:elements                 "aacttgtttattgcagcttataatggttacaaataaagcaatagcatcacaaatttcacaaataaagcatttttttcactgcattctagttgtggtttgtccaaactcatcaatgtatcttatcatgtctggatc";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:SV40_poly(A)_signal-004#seq>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/Part_SV40_poly_A__signal_004_seq> .
+
+<http://www.async.ece.utah.edu/Part_P_element_5__end_seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "Part_P_element_5__end_seq";
+        sbol:elements                 "gctgctgctctaaacgacgcatttcgtactccaaagtacgaattttttccctcaagctcttattttcattaaacaatgaacaggacctaacgcacagtcacgttattgtttacataaatgattttttttactattcaaacttactctgtttgtgtactcccactggtatagccttcttttatcttttctggttcaggctctatcactttactaggtacggcatctgcgttgagtcgcctccttttaaatgtctgaccttttgcaggtgcagccttccactgcgaatcattaaagtgggtatcacaaatttgggagttttcaccaaggctgcacccaaggctctgctcccacaattttctcttaatagcacacttcggcacgtgaattaattttactccagtcacagctttgcagcaaaatttgcaatatttcatttttttttattccacgtaagggttaatgttttcaaaaaaaaattcgtccgcacacaacctttcctctcaacaagcaaacgtgcactgaatttaagtgtatacttcggtaagcttcggctatcgacgggaccaccttatgttatttcatcatg";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:P_element_5'_end#seq>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/Part_P_element_5__end_seq> .
+
+<http://www.async.ece.utah.edu/Part_P_element_3__end_seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "Part_P_element_3__end_seq";
+        sbol:elements                 "catgatgaaataacataaggtggtcccgtcggcaagagacatccacttaacgtatgcttgcaataagtgcgagtgaaaggaatagtattctgagtgtcgtattgagtctgagtgagacagcgatatgattgttgattaacccttagcatgtccgtggggtttgaattaactcataatattaattagacgaaattatttttaaagttttatttttaataatttgcgagtacgca";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:P_element_3'_end#seq>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/Part_P_element_3__end_seq> .
+
+<http://www.async.ece.utah.edu/white_linker_sequence_001>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "white_linker_sequence_001";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/Part_white_linker_sequence_001_seq>;
+        sbol:name                     "white linker sequence-001";
+        sbol:role                     SO:0000001;
+        sbol:type                     SO:0000987 , SBO:0000251;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:white_linker_sequence-001>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/white_linker_sequence_001> .
+
+<http://www.async.ece.utah.edu/ori_009>
+        rdf:type                      sbol:Component;
+        sbol:description              "high-copy-number ColE1/pMB1/pBR322/pUC origin of replication";
+        sbol:displayId                "ori_009";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/Part_ori_009_seq>;
+        sbol:name                     "ori-009";
+        sbol:role                     SO:0000296;
+        sbol:type                     SO:0000987 , SBO:0000251;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:ori-009>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/ori_009> .
+
+<http://www.async.ece.utah.edu/AmpR_promoter_009>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "AmpR_promoter_009";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/Part_AmpR_promoter_009_seq>;
+        sbol:name                     "AmpR promoter-009";
+        sbol:role                     SO:0000167;
+        sbol:type                     SO:0000987 , SBO:0000251;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:AmpR_promoter-009>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AmpR_promoter_009> .
+
+<http://www.async.ece.utah.edu/Gal4_UAS_001>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "Gal4_UAS_001";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/Part_Gal4_UAS_001_seq>;
+        sbol:name                     "Gal4 UAS-001";
+        sbol:role                     SO:0000410;
+        sbol:type                     SO:0000987 , SBO:0000251;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:Gal4_UAS-001>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/Gal4_UAS_001> .
+
+<http://www.async.ece.utah.edu/P_element_5__end>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "P_element_5__end";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/Part_P_element_5__end_seq>;
+        sbol:name                     "P element 5' end";
+        sbol:role                     SO:0000001;
+        sbol:type                     SBO:0000251 , SO:0000987;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:P_element_5'_end>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/P_element_5__end> .
+
+<http://www.async.ece.utah.edu/MCS_010>
+        rdf:type                      sbol:Component;
+        sbol:description              "multiple cloning site";
+        sbol:displayId                "MCS_010";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/Part_MCS_010_seq>;
+        sbol:name                     "MCS-010";
+        sbol:role                     SO:0000001;
+        sbol:type                     SBO:0000251 , SO:0000987;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:MCS-010>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/MCS_010> .
+
+<http://www.async.ece.utah.edu/small_t_intron_001>
+        rdf:type                      sbol:Component;
+        sbol:description              "simian virus 40 (SV40) small t antigen intron";
+        sbol:displayId                "small_t_intron_001";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/Part_small_t_intron_001_seq>;
+        sbol:name                     "small t intron-001";
+        sbol:role                     SO:0000188;
+        sbol:type                     SO:0000987 , SBO:0000251;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:small_t_intron-001>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/small_t_intron_001> .
+
+<http://www.async.ece.utah.edu/Part_white_linker_sequence_001_seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "Part_white_linker_sequence_001_seq";
+        sbol:elements                 "ggccagacccacgtagtccagcggcagatcggcggcggagaagttaagcgtctccaggatgaccttgcccgaactggggcacgtggtgttcgacgatgtgcagctaatttcgcccggctccacgtccgcccattggttaatcagcagaccctcgttggcgtaacggaaccatgagaggtacgacaaccatttgaggtatactggcaccgagcccgagttcaagaagaag";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:white_linker_sequence-001#seq>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/Part_white_linker_sequence_001_seq> .
+
+<http://www.async.ece.utah.edu/white_linker_sequence_002>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "white_linker_sequence_002";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/Part_white_linker_sequence_002_seq>;
+        sbol:name                     "white linker sequence-002";
+        sbol:role                     SO:0000001;
+        sbol:type                     SO:0000987 , SBO:0000251;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:white_linker_sequence-002>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/white_linker_sequence_002> .
+
+<http://www.async.ece.utah.edu/SV40_poly_A__signal_004>
+        rdf:type                      sbol:Component;
+        sbol:description              "SV40 polyadenylation signal";
+        sbol:displayId                "SV40_poly_A__signal_004";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/Part_SV40_poly_A__signal_004_seq>;
+        sbol:name                     "SV40 poly(A) signal-004";
+        sbol:role                     SO:0000551;
+        sbol:type                     SBO:0000251 , SO:0000987;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:SV40_poly(A)_signal-004>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/SV40_poly_A__signal_004> .
+
+<http://www.async.ece.utah.edu/Hsp70_TATA_box>
+        rdf:type                      sbol:Component;
+        sbol:description              "TATA element from the Drosophila Hsp70Bb promoter";
+        sbol:displayId                "Hsp70_TATA_box";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/Part_Hsp70_TATA_box_seq>;
+        sbol:name                     "Hsp70 TATA box";
+        sbol:role                     SO:0000174;
+        sbol:type                     SO:0000987 , SBO:0000251;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:Hsp70_TATA_box>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/Hsp70_TATA_box> .
+
+<http://www.async.ece.utah.edu/Part_small_t_intron_001_seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "Part_small_t_intron_001_seq";
+        sbol:elements                 "ctaaaatacacaaacaattagaatcagtagtttaacacattatacacttaaaaattttatattta";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:small_t_intron-001#seq>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/Part_small_t_intron_001_seq> .
+
+<http://www.async.ece.utah.edu/Part_Hsp70_TATA_box_seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "Part_Hsp70_TATA_box_seq";
+        sbol:elements                 "gagcgccggagtataaatagaggcgcttcgtctacggagcgacaattcaattcaaacaagcaaagtgaacacgtcgctaagcgaaagctaagcaaataaacaagcgcagctgaacaagctaaacaatctgcagtaaagtgcaagttaaagtgaatcaattaaaagtaaccagcaaccaagtaaatcaactgcaactactgaaatctgccaagaagtaattattgaatacaagaagagaactctgaat";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:Hsp70_TATA_box#seq>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/Part_Hsp70_TATA_box_seq> .
+
+<http://www.async.ece.utah.edu/Part_AmpR_016_seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "Part_AmpR_016_seq";
+        sbol:elements                 "atgagtattcaacatttccgtgtcgcccttattcccttttttgcggcattttgccttcctgtttttgctcacccagaaacgctggtgaaagtaaaagatgctgaagatcagttgggtgcacgagtgggttacatcgaactggatctcaacagcggtaagatccttgagagttttcgccccgaagaacgttttccaatgatgagcacttttaaagttctgctatgtggcgcggtattatcccgtgttgacgccgggcaagagcaactcggtcgccgcatacactattctcagaatgacttggttgagtactcaccagtcacagaaaagcatcttacggatggcatgacagtaagagaattatgcagtgctgccataaccatgagtgataacactgcggccaacttacttctgacaacgatcggaggaccgaaggagctaaccgcttttttgcacaacatgggggatcatgtaactcgccttgatcgttgggaaccggagctgaatgaagccataccaaacgacgagcgtgacaccacgatgcctgtagcaatggcaacaacgttgcgcaaactattaactggcgaactacttactctagcttcccggcaacaattaatagactggatggaggcggataaagttgcaggaccacttctgcgctcggcccttccggctggctggtttattgctgataaatctggagccggtgagcgtgggtctcgcggtatcattgcagcactggggccagatggtaagccctcccgtatcgtagttatctacacgacggggagtcaggcaactatggatgaacgaaatagacagatcgctgagataggtgcctcactgattaagcattggtaa";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:AmpR-016#seq>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/Part_AmpR_016_seq> .
+
+<http://www.async.ece.utah.edu/Part_MCS_010_seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "Part_MCS_010_seq";
+        sbol:elements                 "gaattcgttaacagatctgcggccgcggctcgagggtacctctaga";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:MCS-010#seq>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/Part_MCS_010_seq> .
+
+<http://www.async.ece.utah.edu/P_element_3__end>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "P_element_3__end";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/Part_P_element_3__end_seq>;
+        sbol:name                     "P element 3' end";
+        sbol:role                     SO:0000001;
+        sbol:type                     SO:0000987 , SBO:0000251;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:P_element_3'_end>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/P_element_3__end> .
+
+<http://www.async.ece.utah.edu/Part_AmpR_promoter_009_seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "Part_AmpR_promoter_009_seq";
+        sbol:elements                 "cgcggaacccctatttgtttatttttctaaatacattcaaatatgtatccgctcatgagacaataaccctgataaatgcttcaataatattgaaaaaggaagagt";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:AmpR_promoter-009#seq>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/Part_AmpR_promoter_009_seq> .
+
+<http://www.async.ece.utah.edu/Part_white_linker_sequence_002_seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "Part_white_linker_sequence_002_seq";
+        sbol:elements                 "ccgaatcgcgcggaactaacgacagtcgctccaaggtcgtcgaacaaaaggtgaatgtgttgcggagagcgggtgggagacagcgaaagagcaactacgaaacgtggtgtggtggaggtgaattatgaagagggcgcgcgatttgaaaagtatgtatataaaaaatatatcccggtgttttatgtagcgataaacgagtttttgatgtaaggtatgcaggtgtgtaagtcttttggttagaagacaaatccaaagtctacttgtggggatgttcgaaggggaaatacttgtattctataggtcatatcttgtttttattggcacaaatataattacattagctttttgagggggcaataaacagtaaacacgatggtaataatggtaaaaaaaaaaacaagcagttatttcggatatatgtcggctactccttgcgtcgggcccgaagtcttagagccagatatgcgagcacccggaagctcacgatgagaatggccagac";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:white_linker_sequence-002#seq>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/Part_white_linker_sequence_002_seq> .
+
+<http://www.async.ece.utah.edu/Drosophila_melanogaster>
+        rdf:type                      sbol:Collection;
+        sbol:description              "This is a collection of features that have been associated with Drosophila melanogaster plasmids downloaded from the SnapGene Resources repository (http://www.snapgene.com).";
+        sbol:displayId                "Drosophila_melanogaster";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:member                   <http://www.async.ece.utah.edu/Hsp70_TATA_box> , <http://www.async.ece.utah.edu/MCS_010> , <http://www.async.ece.utah.edu/P_element_3__end> , <http://www.async.ece.utah.edu/white_linker_sequence_001> , <http://www.async.ece.utah.edu/white_linker_sequence_002> , <http://www.async.ece.utah.edu/AmpR_016> , <http://www.async.ece.utah.edu/Gal4_UAS_001> , <http://www.async.ece.utah.edu/SV40_poly_A__signal_004> , <http://www.async.ece.utah.edu/small_t_intron_001> , <http://www.async.ece.utah.edu/ori_009> , <http://www.async.ece.utah.edu/AmpR_promoter_009> , <http://www.async.ece.utah.edu/P_element_5__end>;
+        sbol:name                     "Collection of Drosophila melanogaster features";
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Collection:Drosophila_melanogaster>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/Drosophila_melanogaster> .
+
+<http://www.async.ece.utah.edu/AmpR_016>
+        rdf:type                      sbol:Component;
+        sbol:description              "confers resistance to ampicillin, carbenicillin, and related antibiotics";
+        sbol:displayId                "AmpR_016";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/Part_AmpR_016_seq>;
+        sbol:name                     "AmpR-016";
+        sbol:role                     SO:0000316;
+        sbol:type                     SBO:0000251 , SO:0000987;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:AmpR-016>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AmpR_016> .
+
+<http://www.async.ece.utah.edu/Part_Gal4_UAS_001_seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "Part_Gal4_UAS_001_seq";
+        sbol:elements                 "cggagtactgtcctccg";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        prov:wasDerivedFrom           <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:Gal4_UAS-001#seq>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/Part_Gal4_UAS_001_seq> .

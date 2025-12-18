@@ -1,0 +1,36 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+PREFIX sys-bio:     <http://sys-bio.org#>
+
+<http://examples.org/Implementation/1.0.0/build>
+        rdf:type                      sbol:Implementation;
+        sbol:built                    <http://examples.org/ComponentDefinition/1.0.0/mutant>;
+        sbol:displayId                "build";
+        sbol:hasNamespace             <http://examples.org/Implementation>;
+        prov:wasDerivedFrom           <http://examples.org/ComponentDefinition/design/1.0.0>;
+        backport2_3:sbol2OriginalURI  <http://examples.org/Implementation/build/1.0.0> .
+
+<http://examples.org/ComponentDefinition/1.0.0/design>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "design";
+        sbol:hasNamespace             <http://examples.org/ComponentDefinition>;
+        sbol:role                     SO:0000167;
+        sbol:type                     SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://examples.org/ComponentDefinition/design/1.0.0> .
+
+<http://examples.org/ComponentDefinition/1.0.0/mutant>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "mutant";
+        sbol:hasNamespace             <http://examples.org/ComponentDefinition>;
+        sbol:role                     SO:0000167;
+        sbol:type                     SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://examples.org/ComponentDefinition/mutant/1.0.0> .

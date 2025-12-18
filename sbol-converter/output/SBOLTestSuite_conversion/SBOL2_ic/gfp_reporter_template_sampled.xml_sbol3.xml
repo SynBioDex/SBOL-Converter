@@ -412,7 +412,6 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
                   <sbol:displayId>RBS_Component</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/GFP_Reporter_Template/Ter_Component"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://michael.zhang/1/GFP_Reporter_Template/Pro_Component">
                   <sbol:hasLocation>
@@ -435,6 +434,7 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
                   <sbol:displayId>Pro_Component</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/GFP_Reporter_Template/Ter_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/GFP_Reporter_Template/CDS_Component"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
@@ -592,34 +592,6 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
       <sbol:hasInterface>
          <sbol:Interface rdf:about="https://synbiohub.org/public/igem/1/BBa_B0014/Interface1">
             <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="https://synbiohub.org/public/igem/1/BBa_B0014/component939311">
-                  <sbol:hasLocation>
-                     <sbol:Range rdf:about="https://synbiohub.org/public/igem/1/BBa_B0014/component939311/range939311">
-                        <sbol:start>50</sbol:start>
-                        <sbol:hasSequence>
-                           <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/1/BBa_B0014_sequence"/>
-                        </sbol:hasSequence>
-                        <backport2_3:sbol2LocationSequenceNull
-                         rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-                        >true</backport2_3:sbol2LocationSequenceNull>
-                        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0014/1"/>
-                        <igem:direction rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward"/>
-                        <sbol:end>95</sbol:end>
-                        <sbol:displayId>range939311</sbol:displayId>
-                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                        <backport2_3:sbol2OriginalURI rdf:resource="https://synbiohub.org/public/igem/BBa_B0014/annotation939311/range939311/1"/>
-                     </sbol:Range>
-                  </sbol:hasLocation>
-                  <backport2_3:sbol2OriginalURI rdf:resource="https://synbiohub.org/public/igem/BBa_B0014/annotation939311/1"/>
-                  <sbol:name>BBa_B0011</sbol:name>
-                  <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0014/1"/>
-                  <backport2_3:sbol2OriginalURI rdf:resource="https://synbiohub.org/public/igem/BBa_B0014/component939311/1"/>
-                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="https://synbiohub.org/public/igem/BBa_B0014/annotation939311/1"/>
-                  <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_B0011"/>
-                  <sbol:displayId>component939311</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional>
                <sbol:SubComponent rdf:about="https://synbiohub.org/public/igem/1/BBa_B0014/component939303">
                   <sbol:hasLocation>
                      <sbol:Range rdf:about="https://synbiohub.org/public/igem/1/BBa_B0014/component939303/range939303">
@@ -645,6 +617,34 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
                   <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="https://synbiohub.org/public/igem/BBa_B0014/annotation939303/1"/>
                   <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_B0012"/>
                   <sbol:displayId>component939303</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:nondirectional>
+            <sbol:nondirectional>
+               <sbol:SubComponent rdf:about="https://synbiohub.org/public/igem/1/BBa_B0014/component939311">
+                  <sbol:hasLocation>
+                     <sbol:Range rdf:about="https://synbiohub.org/public/igem/1/BBa_B0014/component939311/range939311">
+                        <sbol:start>50</sbol:start>
+                        <sbol:hasSequence>
+                           <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/1/BBa_B0014_sequence"/>
+                        </sbol:hasSequence>
+                        <backport2_3:sbol2LocationSequenceNull
+                         rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</backport2_3:sbol2LocationSequenceNull>
+                        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0014/1"/>
+                        <igem:direction rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward"/>
+                        <sbol:end>95</sbol:end>
+                        <sbol:displayId>range939311</sbol:displayId>
+                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                        <backport2_3:sbol2OriginalURI rdf:resource="https://synbiohub.org/public/igem/BBa_B0014/annotation939311/range939311/1"/>
+                     </sbol:Range>
+                  </sbol:hasLocation>
+                  <backport2_3:sbol2OriginalURI rdf:resource="https://synbiohub.org/public/igem/BBa_B0014/annotation939311/1"/>
+                  <sbol:name>BBa_B0011</sbol:name>
+                  <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_B0014/1"/>
+                  <backport2_3:sbol2OriginalURI rdf:resource="https://synbiohub.org/public/igem/BBa_B0014/component939311/1"/>
+                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="https://synbiohub.org/public/igem/BBa_B0014/annotation939311/1"/>
+                  <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_B0011"/>
+                  <sbol:displayId>component939311</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:displayId>Interface1</sbol:displayId>
@@ -691,6 +691,13 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:nondirectional>
+               <sbol:SubComponent rdf:about="http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/RBS_Component">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2/RBS_Component/1"/>
+                  <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_B0034"/>
+                  <sbol:displayId>RBS_Component</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:nondirectional>
+            <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/CDS_Component">
                   <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2/CDS_Component/1"/>
                   <sbol:instanceOf rdf:resource="http://michael.zhang/1/CDS"/>
@@ -702,13 +709,6 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
                   <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2/Pro_Component/1"/>
                   <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_K1545001"/>
                   <sbol:displayId>Pro_Component</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/RBS_Component">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2/RBS_Component/1"/>
-                  <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_B0034"/>
-                  <sbol:displayId>RBS_Component</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:displayId>Interface1</sbol:displayId>

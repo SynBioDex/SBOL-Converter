@@ -1,0 +1,26 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX myapp:       <http://myapp.com/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+
+myapp:codon_optimization_activity
+        rdf:type                      sbol:TopLevel , prov:Activity;
+        sbol:displayId                "codon_optimization_activity";
+        sbol:hasNamespace             <http://myapp.com>;
+        sbol:name                     "Codon Optimization Activity";
+        backport2_3:sbol2OriginalURI  myapp:codon_optimization_activity .
+
+myapp:codon_optimization_software
+        rdf:type                      sbol:TopLevel , prov:Agent;
+        sbol:displayId                "codon_optimization_software";
+        sbol:hasNamespace             <http://myapp.com>;
+        sbol:name                     "Codon Optimization Software";
+        backport2_3:sbol2OriginalURI  myapp:codon_optimization_software .

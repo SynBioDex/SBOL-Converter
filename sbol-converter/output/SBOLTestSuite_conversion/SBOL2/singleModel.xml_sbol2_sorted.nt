@@ -1,0 +1,7 @@
+<http://www.async.ece.utah.edu/ToggleModel/1.0> <http://sbols.org/v2#displayId> "ToggleModel" .
+<http://www.async.ece.utah.edu/ToggleModel/1.0> <http://sbols.org/v2#framework> <http://identifiers.org/biomodels.sbo/SBO:0000062> .
+<http://www.async.ece.utah.edu/ToggleModel/1.0> <http://sbols.org/v2#language> <http://identifiers.org/edam/format_2585> .
+<http://www.async.ece.utah.edu/ToggleModel/1.0> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/ToggleModel> .
+<http://www.async.ece.utah.edu/ToggleModel/1.0> <http://sbols.org/v2#source> <file:///Users/metehanunal/work/SBOL-Converter/sbol-converter/output/SBOLTestSuite_conversion/SBOL2/ToggleModel_source> .
+<http://www.async.ece.utah.edu/ToggleModel/1.0> <http://sbols.org/v2#version> "1.0" .
+<http://www.async.ece.utah.edu/ToggleModel/1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#Model> .

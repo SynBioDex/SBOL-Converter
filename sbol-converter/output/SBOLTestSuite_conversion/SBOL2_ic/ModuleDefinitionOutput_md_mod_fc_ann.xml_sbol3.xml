@@ -75,7 +75,6 @@
       <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/toggle_switch"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbolstandard.org/example/toggle_switch/Interface1">
-            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/toggle_switch/TetR"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://sbolstandard.org/example/toggle_switch/LacI">
                   <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/toggle_switch/LacI"/>
@@ -83,6 +82,7 @@
                   <sbol:displayId>LacI</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
+            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/toggle_switch/TetR"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -92,26 +92,26 @@
    </sbol:Component>
    <sbol:Component rdf:about="http://sbolstandard.org/example/tetr_inverter">
       <sbol:hasFeature>
-         <sbol:SubComponent rdf:about="http://sbolstandard.org/example/tetr_inverter/TF">
-            <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/tetr_inverter/TF"/>
-            <sbol:instanceOf rdf:resource="http://identifiers.org/uniprot/Q6QR72"/>
-            <sbol:displayId>TF</sbol:displayId>
+         <sbol:SubComponent rdf:about="http://sbolstandard.org/example/tetr_inverter/promoter">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/tetr_inverter/promoter"/>
+            <sbol:instanceOf rdf:resource="http://www.partsregistry.org/BBa_R0040"/>
+            <sbol:displayId>promoter</sbol:displayId>
          </sbol:SubComponent>
       </sbol:hasFeature>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbolstandard.org/example/tetr_inverter/Interface1">
-            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/tetr_inverter/TF"/>
+            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/tetr_inverter/promoter"/>
             <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://sbolstandard.org/example/tetr_inverter/promoter">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/tetr_inverter/promoter"/>
-                  <sbol:instanceOf rdf:resource="http://www.partsregistry.org/BBa_R0040"/>
-                  <sbol:displayId>promoter</sbol:displayId>
+               <sbol:SubComponent rdf:about="http://sbolstandard.org/example/tetr_inverter/TF">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/tetr_inverter/TF"/>
+                  <sbol:instanceOf rdf:resource="http://identifiers.org/uniprot/Q6QR72"/>
+                  <sbol:displayId>TF</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
-      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/tetr_inverter/promoter"/>
+      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/tetr_inverter/TF"/>
       <sbol:role rdf:resource="https://parts.igem.org/cgi/partsdb/pgroup.cgi?pgroup=inverter"/>
       <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/tetr_inverter"/>
       <sbol:hasNamespace rdf:resource="http://sbolstandard.org/example"/>

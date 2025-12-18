@@ -1,0 +1,305 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX gbConv:      <http://sbols.org/genBankConversion#>
+PREFIX genbank:     <http://www.ncbi.nlm.nih.gov/genbank#>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation0>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:label                  "Sm/Sp no DraIII";
+        gbConv:vntifkey               "4";
+        sbol:displayId                "annotation0";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL70008_1/annotation0/range>;
+        sbol:name                     "Sm/Sp no DraIII";
+        sbol:role                     SO:0000316;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation0> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "pICSL70008_1";
+        sbol:hasFeature               <http://www.async.ece.utah.edu/pICSL70008_1/annotation5> , <http://www.async.ece.utah.edu/pICSL70008_1/annotation8> , <http://www.async.ece.utah.edu/pICSL70008_1/annotation11> , <http://www.async.ece.utah.edu/pICSL70008_1/annotation4> , <http://www.async.ece.utah.edu/pICSL70008_1/annotation7> , <http://www.async.ece.utah.edu/pICSL70008_1/annotation10> , <http://www.async.ece.utah.edu/pICSL70008_1/annotation2> , <http://www.async.ece.utah.edu/pICSL70008_1/annotation3> , <http://www.async.ece.utah.edu/pICSL70008_1/annotation1> , <http://www.async.ece.utah.edu/pICSL70008_1/annotation6> , <http://www.async.ece.utah.edu/pICSL70008_1/annotation0> , <http://www.async.ece.utah.edu/pICSL70008_1/annotation9>;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL70008_1_seq>;
+        sbol:role                     SO:0000804;
+        sbol:type                     SO:0000988 , SBO:0000251;
+        genbank:comment               "This file is created by Vector NTI http://www.invitrogen.com/";
+        genbank:date                  "30-NOV-2009";
+        genbank:division              "UNA";
+        genbank:locus                 "pICSL70008-1";
+        genbank:molecule              "DNA";
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation8>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:label                  "Olesin (A. thaliana)";
+        gbConv:multiRangeType         "join";
+        gbConv:note                   "<enter text here>";
+        sbol:displayId                "annotation8";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL70008_1/annotation8/range1> , <http://www.async.ece.utah.edu/pICSL70008_1/annotation8/range0>;
+        sbol:name                     "Olesin (A. thaliana)";
+        sbol:role                     SO:0000316;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation8> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation8/range1>
+        rdf:type                      sbol:Range;
+        gbConv:position               "position1";
+        sbol:displayId                "range1";
+        sbol:end                      "3430";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL70008_1_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "3265";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation8/range1> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation4/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "2603";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL70008_1_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "2258";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation4/range> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation10/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "4126";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL70008_1_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "3431";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation10/range> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation3>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "Replication_ori";
+        gbConv:label                  "ORI";
+        gbConv:note                   " RNaseH cleavage point ";
+        gbConv:vntifkey               "33";
+        sbol:displayId                "annotation3";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL70008_1/annotation3/range>;
+        sbol:name                     "ORI";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation3> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation7/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "2671";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL70008_1_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "2604";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation7/range> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation0/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "1241";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL70008_1_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "231";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation0/range> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation11>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "Terminator";
+        gbConv:label                  "olesin Terminator (A. thaliana)";
+        sbol:displayId                "annotation11";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL70008_1/annotation11/range>;
+        sbol:name                     "olesin Terminator (A. thaliana)";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation11> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation3/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "2000";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL70008_1_seq>;
+        sbol:orientation              SO:0001031;
+        sbol:start                    "2000";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation3/range> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation6/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "2604";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL70008_1_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "2604";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation6/range> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation6>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "Misc._signal";
+        gbConv:label                  "Start of transcription";
+        sbol:displayId                "annotation6";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL70008_1/annotation6/range>;
+        sbol:name                     "Start of transcription";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation6> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation1>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "Mutation";
+        gbConv:label                  "G to A";
+        gbConv:vntifkey               "62";
+        sbol:displayId                "annotation1";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL70008_1/annotation1/range>;
+        sbol:name                     "G to A";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation1> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation9>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "Intron";
+        gbConv:label                  "Intron olesin (A.thaliana)";
+        sbol:displayId                "annotation9";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL70008_1/annotation9/range>;
+        sbol:name                     "Intron olesin (A.thaliana)";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation9> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation4>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "Promoter";
+        gbConv:label                  "Promoter Olesin (A. thaliana)";
+        sbol:displayId                "annotation4";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL70008_1/annotation4/range>;
+        sbol:name                     "Promoter Olesin (A. thaliana)";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation4> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation9/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "3264";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL70008_1_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "3025";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation9/range> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1_seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "pICSL70008_1_seq";
+        sbol:elements                 "CGCTTGAGACCACGAAGTGGCTCTTCAGTGGACGAAAGGGCCTCGTGATACGCCTATTTTTATAGGTTAATGTCATGATAATAATGGTTTCTTAGACGTCAGGTGGCACTTTTCGGGGAAATGTGCGCGGAACCCCTATTTGTTTATTTTTCTAAATACATTCAAATATGTATCCGCTCATGAGACAATAACCCTGATAAATGCTTCAATAATATTGAAAAAGGAAGAGTATGCGCTCACGCAACTGGTCCAGAACCTTGACCGAACGCAGCGGTGGTAACGGCGCAGTGGCGGTTTTCATGGCTTGTTATGACTGTTTTTTTGGGGTACAGTCTATGCCTCGGGCATCCAAGCAGCAAGCGCGTTACGCCGTGGGTCGATGTTTGATGTTATGGAGCAGCAACGATGTTACGCAGCAGGGCAGTCGCCCTAAAACAAAGTTAAACATCATGAGGGAAGCGGTGATCGCCGAAGTATCGACTCAACTATCAGAGGTAGTTGGCGTCATCGAGCGCCATCTCGAACCGACGTTGCTGGCCGTACATTTGTACGGCTCCGCAGTGGATGGCGGCCTGAAGCCACACAGCGATATTGATTTGCTGGTTACGGTGACCGTAAGGCTTGATGAAACAACGCGGCGAGCTTTGATCAACGACCTTTTGGAAACTTCGGCTTCCCCTGGAGAGAGCGAGATTCTCCGCGCTGTAGAAGTCACCATTGTTGTGCACGACGACATCATTCCGTGGCGTTATCCAGCTAAGCGCGAACTGCAATTTGGAGAATGGCAGCGCAATGACATTCTTGCAGGTATCTTCGAGCCAGCCACGATCGACATTGATCTGGCTATCTTGCTGACAAAAGCAAGAGAACATAGCGTTGCCTTGGTAGGTCCAGCGGCGGAGGAACTCTTTGATCCGGTTCCTGAACAGGATCTATTTGAGGCGCTAAATGAAACCTTAACGCTATGGAACTCGCCGCCCGACTGGGCTGGCGATGAGCGAAATGTAGTGCTTACGTTGTCCCGCATTTGGTACAGCGCAGTAACCGGCAAAATCGCGCCGAAGGATGTCGCTGCCGACTGGGCAATGGAGCGCCTGCCGGCCCAGTATCAGCCCGTCATACTTGAAGCTAGACAGGCTTATCTTGGACAAGAAGAAGATCGCTTGGCCTCGCGCGCAGATCAGTTGGAAGAATTTGTCCATTACGTAAAAGGCGAGATCACCAAGGTAGTCGGCAAATAACTGTCAGACCAAGTTTACTCATATATACTTTAGATTGATTTAAAACTTCATTTTTAATTTAAAAGGATCTAGGTGAAGATCCTTTTTGATAATCTCATGACCAAAATCCCTTAACGTGAGTTTTCGTTCCACTGAGCGTCAGACCCCGTAGAAAAGATCAAAGGATCTTCTTGAGATCCTTTTTTTCTGCGCGTAATCTGCTGCTTGCAAACAAAAAAACCACCGCTACCAGCGGTGGTTTGTTTGCCGGATCAAGAGCTACCAACTCTTTTTCCGAAGGTAACTGGCTTCAGCAGAGCGCAGATACCAAATACTGTCCTTCTAGTGTAGCCGTAGTTAGGCCACCACTTCAAGAACTCTGTAGCACCGCCTACATACCTCGCTCTGCTAATCCTGTTACCAGTGGCTGCTGCCAGTGGCGATAAGTCGTGTCTTACCGGGTTGGACTCAAGACGATAGTTACCGGATAAGGCGCAGCGGTCGGGCTGAACGGGGGGTTCGTGCACACAGCCCAGCTTGGAGCGAACGACCTACACCGAACTGAGATACCTACAGCGTGAGCTATGAGAAAGCGCCACGCTTCCCGAAGGGAGAAAGGCGGACAGGTATCCGGTAAGCGGCAGGGTCGGAACAGGAGAGCGCACGAGGGAGCTTCCAGGGGGAAACGCCTGGTATCTTTATAGTCCTGTCGGGTTTCGCCACCTCTGACTTGAGCGTCGATTTTTGTGATGCTCGTCAGGGGGGCGGAGCCTATGGAAAAACGCCAGCAACGCGGCCTTTTTACGGTTCCTGGCCTTTTGCTGGCCTTTTGCTCACATGTTCTTTCCTGCGTTATCCCCTGATTCTGTGGATAACCGTATTACCGCCTTTGAGTGAGCTGATACCGCTCGCCGCAGCCGAACGACCGAGCGCAGCGAGTCAGTGAGCGAGGAAGCGGAAGAGCGCCCAATACGCAAACCGCCTCTCCCCGCGCGTTGGCCGATTCATTAATCACTCTGTGGTCTCAGGAGTTCTAGAATGTCGCGGAACAAATTTTAAAACTAAATCCTAAATTTTTCTAATTTTGTTGCCAATAGTGGATATGTGGGCCGTATAGAAGGAATCTATTGAAGGCCCAAACCCATACTGACGAGCCCAAAGGTTCGTTTTGCGTTTTATGTTTCGGTTCGATGCCAACGCCACATTCTGAGCTAGGCAAAAAACAAACGTGTCTTTGAATAGACTCCTCTCGTTAACACATGCAGCGGCTGCATGGTGACGCCATTAACACGTGGCCTACAATTGCATGATGTCTCCATTGACACGTGACTTCTCGTCTCCTTTCTTAATATATCTAACAAACACTCCTACCTCTTCCAAAATATATACACATCTTTTTGATCAATCTCTCATTCAAAATCTCATTCTCTCTAGTAAACAAGAACAAAAAAATGGCGGATACAGCTAGAGGAACCCATCACGATATCATCGGCAGAGATCAGTACCCGATGATGGGCCGAGATCGTGACCAGTACCAGATGTCCGGACGAGGATCTGACTACTCCAAGTCTAGGCAGATTGCTAAAGCTGCAACTGCTGTCACAGCTGGTGGTTCCCTCCTTGTTCTCTCCAGCCTTACCCTTGTTGGAACTGTCATAGCTTTGACTGTTGCAACACCTCTGCTCGTTATCTTCAGCCCAATCCTTGTCCCGGCTCTCATCACAGTTGCACTCCTCATCACCGGTTTTCTTTCCTCTGGAGGGTTTGGCATTGCCGCTATAACCGTTTTCTCTTGGATTTACAAGTAAGCACACATTTATCATCTTACTTCATAATTTTGTGCAATATGTGCATGCATGTGTTGAGCCAGTAGCTTTGGATCAATTTTTTTGGTCGAATAACAAATGTAACAATAAGAAATTGCAAATTCTAGGGAACATTTGGTTAACTAAATACGAAATTTGACCTAGCTAGCTTGAATGTGTCTGTGTATATCATCTATATAGGTAAAATGCTTGGTATGATACCTATTGATTGTGAATAGGTACGCAACGGGAGAGCACCCACAGGGATCAGACAAGTTGGACAGTGCAAGGATGAAGTTGGGAAGCAAAGCTCAGGATCTGAAAGACAGAGCTCAGTACTACGGACAGCAACATACTGGTGGGGAACATGACCGTGACCGTACTCGTGGTGGCCAGCACACTACTATGAGCGAGCTGATTAAGGAGAACATGCACATGAAGCTGTACATGGAGGGCACCGTGAACAACCACCACTTCAAGTGCACATCCGAGGGCGAAGGCAAGCCCTACGAGGGCACCCAGACCATGAGAATCAAGGTGGTCGAGGGCGGCCCTCTCCCCTTCGCCTTCGACATCCTGGCTACCAGCTTCATGTACGGCAGCAGAACCTTCATCAACCACACCCAGGGCATCCCCGACTTCTTTAAGCAGTCCTTCCCTGAGGGCTTCACATGGGAGAGAGTCACCACATACGAAGATGGGGGCGTGCTGACCGCTACCCAGGACACCAGCCTCCAGGACGGCTGCCTCATCTACAACGTCAAGATCAGAGGGGTGAACTTCCCATCCAACGGCCCTGTGATGCAGAAGAAAACACTCGGCTGGGAGGCCAACACCGAGATGCTGTACCCCGCTGACGGCGGCCTGGAAGGCAGAAGCGACATGGCCCTGAAGCTCGTGGGCGGGGGCCACCTGATCTGCAACTTCAAGACCACATACAGATCCAAGAAACCCGCTAAGAACCTCAAGATGCCCGGCGTCTACTATGTGGACCACAGACTGGAAAGAATCAAGGAGGCCGACAAAGAAACCTACGTCGAGCAGCACGAGGTGGCTGTGGCCAGATACTGCGACCTCCCTAGCAAACTGGGGCACAAGTGAGCTTACCCCACTGATGTCATCGTCATAGTCCAATAACTCCAATGTCGGGGAGTTAGTTTATGAGGAATAAAGTGTTTAGAATTTGATCAGGGGGAGATAATAAAAGCCGAGTTTGAATCTTTTTGTTATAAGTAATGTTTATGTGTGTTTCTATATGTTGTCAAATGGTACCATGTTTTTTTTCCTCTCTTTTTGTAACTTGCAAGTGTTGTGTTGTACTTTATTTGGCTTCTTTGTAAGTTGGTAACGGTGGTCTATATATGGAAAAGGTCTTGTTTTGTTAAACTTATGTTAGTTAACTGGATTCGTCTTTAACCACAAAAAGTTTTCAATAAGCTACAAATTTAGACACGCAAGCCGATGCAGTCATTAGTACATATATTTATTGCAAGTGATTACATGGCAACCCAAACTTCAAAAACAGTAGGTTGCTCCATTTAGT";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1_seq> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation2/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "2015";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL70008_1_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1401";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation2/range> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation5/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "2573";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL70008_1_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "2567";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation5/range> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation7>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "5'_UTR";
+        gbConv:label                  "5'UTR Olesin (A. thaliana)";
+        sbol:displayId                "annotation7";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL70008_1/annotation7/range>;
+        sbol:name                     "5'UTR Olesin (A. thaliana)";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation7> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation8/range0>
+        rdf:type                      sbol:Range;
+        gbConv:position               "position0";
+        sbol:displayId                "range0";
+        sbol:end                      "3024";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL70008_1_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "2672";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation8/range0> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation11/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "4568";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL70008_1_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "4131";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation11/range> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation2>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "Misc._feature";
+        gbConv:label                  "rep (pMB1)";
+        gbConv:vntifkey               "21";
+        sbol:displayId                "annotation2";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL70008_1/annotation2/range>;
+        sbol:name                     "rep (pMB1)";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation2> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation1/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "1208";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL70008_1_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1208";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation1/range> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation10>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:label                  "TagRFP (Entacmaea quadricolor)";
+        sbol:displayId                "annotation10";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL70008_1/annotation10/range>;
+        sbol:name                     "TagRFP (Entacmaea quadricolor)";
+        sbol:role                     SO:0000316;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation10> .
+
+<http://www.async.ece.utah.edu/pICSL70008_1/annotation5>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "TATA_box";
+        gbConv:label                  "TATA box";
+        sbol:displayId                "annotation5";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL70008_1/annotation5/range>;
+        sbol:name                     "TATA box";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70008_1/annotation5> .

@@ -1,0 +1,55 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+PREFIX sys-bio:     <http://sys-bio.org#>
+
+<http://sys-bio.org/1.0.0/Activity_design_generation/predicted_usage>
+        rdf:type                      sbol:Identified , prov:Usage;
+        sbol:displayId                "predicted_usage";
+        prov:entity                   <http://sys-bio.org/1.0.0/Model_predicted>;
+        prov:hadRole                  <http://sbols.org/v2#learn>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Activity_design_generation/predicted_usage/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Activity_design_generation>
+        rdf:type                      sbol:TopLevel , prov:Activity;
+        sbol:displayId                "Activity_design_generation";
+        sbol:hasNamespace             <http://sys-bio.org>;
+        prov:qualifiedUsage           <http://sys-bio.org/1.0.0/Activity_design_generation/predicted_usage>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Activity_design_generation/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Activity_fit_model_generation>
+        rdf:type                      sbol:TopLevel , prov:Activity;
+        dcterms:created               "2003-12-04T12:00:00Z";
+        sbol:displayId                "Activity_fit_model_generation";
+        sbol:hasNamespace             <http://sys-bio.org>;
+        prov:qualifiedUsage           <http://sys-bio.org/1.0.0/Activity_fit_model_generation/raw_data_usage>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Activity_fit_model_generation/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Activity_raw_data_generation>
+        rdf:type                      sbol:TopLevel , prov:Activity;
+        sbol:displayId                "Activity_raw_data_generation";
+        sbol:hasNamespace             <http://sys-bio.org>;
+        prov:qualifiedUsage           <http://sys-bio.org/1.0.0/Activity_raw_data_generation/build_usage>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Activity_raw_data_generation/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Activity_fit_model_generation/raw_data_usage>
+        rdf:type                      sbol:Identified , prov:Usage;
+        sbol:displayId                "raw_data_usage";
+        prov:entity                   <http://sys-bio.org/1.0.0/Attachment_raw_data>;
+        prov:hadRole                  <http://sbols.org/v2#test>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Activity_fit_model_generation/raw_data_usage/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Activity_raw_data_generation/build_usage>
+        rdf:type                      sbol:Identified , prov:Usage;
+        sbol:displayId                "build_usage";
+        prov:entity                   <http://sys-bio.org/1.0.0/Implementation_build>;
+        prov:hadRole                  <http://sbols.org/v2#build>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Activity_raw_data_generation/build_usage/1.0.0> .

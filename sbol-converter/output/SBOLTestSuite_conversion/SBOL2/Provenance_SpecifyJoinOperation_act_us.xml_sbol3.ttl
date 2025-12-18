@@ -1,0 +1,33 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+
+<http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2>
+        rdf:type                      sbol:TopLevel , prov:Activity;
+        sbol:displayId                "join_dna_part_1_with_dna_part_2";
+        sbol:hasNamespace             <http://sbolstandard.org/build>;
+        sbol:name                     "join(dna_part_1, dna_part_2)";
+        prov:qualifiedUsage           <http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_2> , <http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_1>;
+        backport2_3:sbol2OriginalURI  <http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2> .
+
+<http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_1>
+        rdf:type                      sbol:Identified , prov:Usage;
+        sbol:displayId                "dna_part_1";
+        prov:entity                   <http://sbolstandard.org/build/dna_part_1>;
+        prov:hadRole                  <http://identifiers.org/so/SO:0001631>;
+        backport2_3:sbol2OriginalURI  <http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_1> .
+
+<http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_2>
+        rdf:type                      sbol:Identified , prov:Usage;
+        sbol:displayId                "dna_part_2";
+        prov:entity                   <http://sbolstandard.org/build/dna_part_2>;
+        prov:hadRole                  <http://identifiers.org/so/SO:0001632>;
+        backport2_3:sbol2OriginalURI  <http://sbolstandard.org/build/join_dna_part_1_with_dna_part_2/dna_part_2> .

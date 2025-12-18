@@ -1,0 +1,62 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX myapp:       <http://myapp.com/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+
+myapp:non_codon_optimized
+        rdf:type                      sbol:Component;
+        sbol:displayId                "non_codon_optimized";
+        sbol:hasNamespace             <http://myapp.com>;
+        sbol:name                     "Non Codon optimised CDS";
+        sbol:role                     SO:0000316;
+        sbol:type                     SBO:0000251;
+        backport2_3:sbol2OriginalURI  myapp:non_codon_optimized .
+
+<http://myapp.com/codon_optimization_activity/usage>
+        rdf:type                      sbol:Identified , prov:Usage;
+        sbol:displayId                "usage";
+        prov:entity                   myapp:non_codon_optimized;
+        prov:hadRole                  <http://sbols.org/v2#source>;
+        backport2_3:sbol2OriginalURI  <http://myapp.com/codon_optimization_activity/usage> .
+
+myapp:codon_optimization_software
+        rdf:type                      sbol:TopLevel , prov:Agent;
+        sbol:displayId                "codon_optimization_software";
+        sbol:hasNamespace             <http://myapp.com>;
+        sbol:name                     "Codon Optimization Software";
+        backport2_3:sbol2OriginalURI  myapp:codon_optimization_software .
+
+<http://myapp.com/codon_optimization_activity/association>
+        rdf:type                      sbol:Identified , prov:Association;
+        sbol:displayId                "association";
+        prov:agent                    myapp:codon_optimization_software;
+        prov:hadRole                  myapp:codonoptimiser;
+        backport2_3:sbol2OriginalURI  <http://myapp.com/codon_optimization_activity/association> .
+
+myapp:codon_optimized
+        rdf:type                      sbol:Component;
+        sbol:displayId                "codon_optimized";
+        sbol:hasNamespace             <http://myapp.com>;
+        sbol:name                     "Codon optimised CDS";
+        sbol:role                     SO:0000316;
+        sbol:type                     SBO:0000251;
+        prov:wasDerivedFrom           myapp:non_codon_optimized;
+        prov:wasGeneratedBy           myapp:codon_optimization_activity;
+        backport2_3:sbol2OriginalURI  myapp:codon_optimized .
+
+myapp:codon_optimization_activity
+        rdf:type                      sbol:TopLevel , prov:Activity;
+        sbol:displayId                "codon_optimization_activity";
+        sbol:hasNamespace             <http://myapp.com>;
+        sbol:name                     "Codon Optimization Activity";
+        prov:qualifiedAssociation     <http://myapp.com/codon_optimization_activity/association>;
+        prov:qualifiedUsage           <http://myapp.com/codon_optimization_activity/usage>;
+        backport2_3:sbol2OriginalURI  myapp:codon_optimization_activity .

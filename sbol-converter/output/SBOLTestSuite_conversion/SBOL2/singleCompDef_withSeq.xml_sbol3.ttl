@@ -1,0 +1,30 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX annot:       <http://myannotation.org/>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX grn:         <urn:bbn.com:tasbe:grn/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+
+<http://www.async.ece.utah.edu/1.0/pLac>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "pLac";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1.0/pLacSeq>;
+        sbol:role                     SO:0000167;
+        sbol:type                     SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pLac/1.0> .
+
+<http://www.async.ece.utah.edu/1.0/pLacSeq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "pLacSeq";
+        sbol:elements                 "ACGTURYSWKMBDHVN-.";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pLacSeq/1.0> .

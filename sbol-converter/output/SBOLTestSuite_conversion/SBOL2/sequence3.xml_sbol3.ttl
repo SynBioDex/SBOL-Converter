@@ -1,0 +1,449 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX gbConv:      <http://sbols.org/genBankConversion#>
+PREFIX genbank:     <http://www.ncbi.nlm.nih.gov/genbank#>
+PREFIX obo:         <http://purl.obolibrary.org/obo/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation6/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "1234";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1225";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation6/range/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation13/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "4638";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "4629";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation13/range/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation9/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "1588";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1579";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation9/range/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation2/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "175";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "166";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation2/range/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation5/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "1016";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1007";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation5/range/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation7>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:bound_moiety           "MEF2";
+        gbConv:featureType            "protein_bind";
+        gbConv:gene                   "Mlp84B";
+        gbConv:note                   "site C";
+        sbol:displayId                "annotation7";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation7/range>;
+        sbol:name                     "Mlp84B";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation7/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation11>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:codon_start            "1";
+        gbConv:db_xref                "GI:3659881";
+        gbConv:gene                   "Mlp84B";
+        gbConv:note                   "MLP84B";
+        gbConv:product                "muscle LIM protein at 84B";
+        gbConv:protein_id             "AAC61591.1";
+        gbConv:translation            "MPSFQPIEAPKCPRCGKSVYAAEERLAGGYVFHKNCFKCGMCNKSLDSTNCTEHERELYCKTCHGRKFGPKGYGFGTGAGTLSMDNGSQFLRENGDVPSVRNGARLEPRAIARAPEGEGCPRCGGYVYAAEQMLARGRSWHKECFKCGTCKKGLDSILCCEAPDKNIYCKGCYAKKFGPKGYGYGQGGGALQSDCYAHDDGAPQIRAAIDVDKIQARPGEGCPRCGGVVYAAEQKLSKGREWHKKCFNCKDCHKTLDSINASDGPDRDVYCRTCYGKKWGPHGYGFACGSGFLQTDGLTEDQISANRPFYNPDTTSIKARDGEGCPRCGGAVFAAEQQLSKGKVWHKKCYNCADCHRPLDSVLACDGPDGDIHCRACYGKLFGPKGFGYGHAPTLVSTSGESTIQFPDGRPLAGPKTSGGCPRCGFAVFAAEQMISKTRIWHKRCFYCSDCRKSLDSTNLNDGPDGDIYCRACYGRNFGPKGVGYGLGAGALTTF";
+        sbol:displayId                "annotation11";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation11/range>;
+        sbol:name                     "muscle LIM protein at 84B";
+        sbol:role                     SO:0000316;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation11/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation1/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "5010";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "166";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation1/range/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation2>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:bound_moiety           "MEF2";
+        gbConv:featureType            "protein_bind";
+        gbConv:gene                   "Mlp84B";
+        gbConv:note                   "matches consensus at only 9 of 10 positions";
+        sbol:displayId                "annotation2";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation2/range>;
+        sbol:name                     "Mlp84B";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation2/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation4/range1>
+        rdf:type                      sbol:Range;
+        gbConv:position               "position1";
+        sbol:displayId                "range1";
+        sbol:end                      "2946";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "2868";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation4/range1/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/reference1>
+        rdf:type         genbank:Reference , sbol:Identified;
+        sbol:displayId   "reference1";
+        genbank:authors  "Stronach,B.E., Renfranz,P.J., Lilly,B. and Beckerle,M.C.";
+        genbank:journal  "Submitted (09-SEP-1998) Biology, University of Utah, 257 S. 1400 East, Salt Lake City, UT 84112-0840, USA";
+        genbank:label    "2  (bases 1 to 5086)";
+        genbank:title    "Direct Submission" .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation14>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:bound_moiety           "MEF2";
+        gbConv:featureType            "protein_bind";
+        gbConv:gene                   "Mlp84B";
+        gbConv:note                   "matches consensus at only 9 of 10 positions";
+        sbol:displayId                "annotation14";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation14/range>;
+        sbol:name                     "Mlp84B";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation14/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation5>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:bound_moiety           "MEF2";
+        gbConv:featureType            "protein_bind";
+        gbConv:gene                   "Mlp84B";
+        gbConv:note                   "site A";
+        sbol:displayId                "annotation5";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation5/range>;
+        sbol:name                     "Mlp84B";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation5/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation12/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "4655";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "4435";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation12/range/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation0>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:chromosome             "3";
+        gbConv:db_xref                "taxon:7227";
+        gbConv:map                    "3R; 84B-C";
+        gbConv:mol_type               "genomic DNA";
+        gbConv:organism               "Drosophila melanogaster";
+        sbol:displayId                "annotation0";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation0/range>;
+        sbol:name                     "Drosophila melanogaster";
+        sbol:role                     SO:0002206;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation0/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation8/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "1333";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1324";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation8/range/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation15/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "5010";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "5001";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation15/range/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation3/range0>
+        rdf:type                      sbol:Range;
+        gbConv:position               "position0";
+        sbol:displayId                "range0";
+        sbol:end                      "1055";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1001";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation3/range0/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation11/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "4434";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "2947";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation11/range/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation7/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "1330";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1321";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation7/range/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation8>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:bound_moiety           "MEF2";
+        gbConv:experiment             "experimental evidence, no additional details recorded";
+        gbConv:featureType            "protein_bind";
+        gbConv:gene                   "Mlp84B";
+        gbConv:note                   "site D; shown to bind Drosophila MEF2 in an in vitro gel shift assay";
+        sbol:displayId                "annotation8";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation8/range>;
+        sbol:name                     "Mlp84B";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation8/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation12>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:gene                   "Mlp84B";
+        sbol:displayId                "annotation12";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation12/range>;
+        sbol:name                     "Mlp84B";
+        sbol:role                     SO:0000205;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation12/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation3>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:gene                   "Mlp84B";
+        gbConv:multiRangeType         "join";
+        sbol:displayId                "annotation3";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation3/range0> , <http://www.async.ece.utah.edu/1/AF090832/annotation3/range1>;
+        sbol:name                     "Mlp84B";
+        sbol:role                     SO:0000234;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation3/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation0/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "5086";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation0/range/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation15>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:bound_moiety           "MEF2";
+        gbConv:featureType            "protein_bind";
+        gbConv:gene                   "Mlp84B";
+        gbConv:note                   "site F";
+        sbol:displayId                "annotation15";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation15/range>;
+        sbol:name                     "Mlp84B";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation15/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation6>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:bound_moiety           "MEF2";
+        gbConv:featureType            "protein_bind";
+        gbConv:gene                   "Mlp84B";
+        gbConv:note                   "site B";
+        sbol:displayId                "annotation6";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation6/range>;
+        sbol:name                     "Mlp84B";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation6/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation10>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:bound_moiety           "MEF2";
+        gbConv:featureType            "protein_bind";
+        gbConv:gene                   "Mlp84B";
+        gbConv:note                   "matches consensus at only 9 of 10 positions";
+        sbol:displayId                "annotation10";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation10/range>;
+        sbol:name                     "Mlp84B";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation10/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation1>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:gene                   "Mlp84B";
+        sbol:displayId                "annotation1";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation1/range>;
+        sbol:name                     "Mlp84B";
+        sbol:role                     SO:0000704;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation1/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation14/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "4964";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "4955";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation14/range/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832>
+        rdf:type                      sbol:Component;
+        obo:OBI_0001617               "10397768";
+        sbol:description              "Drosophila melanogaster muscle LIM protein at 84B (Mlp84B) gene, complete cds.";
+        sbol:displayId                "AF090832";
+        sbol:hasFeature               <http://www.async.ece.utah.edu/1/AF090832/annotation7> , <http://www.async.ece.utah.edu/1/AF090832/annotation12> , <http://www.async.ece.utah.edu/1/AF090832/annotation2> , <http://www.async.ece.utah.edu/1/AF090832/annotation1> , <http://www.async.ece.utah.edu/1/AF090832/annotation6> , <http://www.async.ece.utah.edu/1/AF090832/annotation11> , <http://www.async.ece.utah.edu/1/AF090832/annotation5> , <http://www.async.ece.utah.edu/1/AF090832/annotation0> , <http://www.async.ece.utah.edu/1/AF090832/annotation15> , <http://www.async.ece.utah.edu/1/AF090832/annotation9> , <http://www.async.ece.utah.edu/1/AF090832/annotation4> , <http://www.async.ece.utah.edu/1/AF090832/annotation10> , <http://www.async.ece.utah.edu/1/AF090832/annotation8> , <http://www.async.ece.utah.edu/1/AF090832/annotation14> , <http://www.async.ece.utah.edu/1/AF090832/annotation3> , <http://www.async.ece.utah.edu/1/AF090832/annotation13>;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:role                     SO:0000804;
+        sbol:type                     SBO:0000251 , SO:0000987;
+        genbank:GInumber              "GI:3659880";
+        genbank:date                  "04-AUG-1999";
+        genbank:division              "INV";
+        genbank:keywords              ".";
+        genbank:locus                 "AF090832";
+        genbank:molecule              "DNA";
+        genbank:organism              "Drosophila melanogaster Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta; Pterygota; Neoptera; Endopterygota; Diptera; Brachycera; Muscomorpha; Ephydroidea; Drosophilidae; Drosophila; Sophophora.";
+        genbank:reference             <http://www.async.ece.utah.edu/1/AF090832/reference0> , <http://www.async.ece.utah.edu/1/AF090832/reference1>;
+        genbank:source                "Drosophila melanogaster (fruit fly)";
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation3/range1>
+        rdf:type                      sbol:Range;
+        gbConv:position               "position1";
+        sbol:displayId                "range1";
+        sbol:end                      "4655";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "2868";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation3/range1/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation4/range0>
+        rdf:type                      sbol:Range;
+        gbConv:position               "position0";
+        sbol:displayId                "range0";
+        sbol:end                      "1055";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1001";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation4/range0/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation10/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "2344";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "2335";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation10/range/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/reference0>
+        rdf:type         genbank:Reference , sbol:Identified;
+        sbol:displayId   "reference0";
+        genbank:authors  "Stronach,B.E., Renfranz,P.J., Lilly,B. and Beckerle,M.C.";
+        genbank:journal  "Mol. Biol. Cell 10 (7), 2329-2342 (1999)";
+        genbank:label    "1  (bases 1 to 5086)";
+        genbank:pubmed   "10397768";
+        genbank:title    "Muscle LIM proteins are associated with muscle sarcomeres and require dMEF2 for their expression during Drosophila myogenesis" .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation13>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:bound_moiety           "MEF2";
+        gbConv:featureType            "protein_bind";
+        gbConv:gene                   "Mlp84B";
+        gbConv:note                   "matches consensus at only 9 of 10 positions";
+        sbol:displayId                "annotation13";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation13/range>;
+        sbol:name                     "Mlp84B";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation13/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation9>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:bound_moiety           "MEF2";
+        gbConv:featureType            "protein_bind";
+        gbConv:gene                   "Mlp84B";
+        gbConv:note                   "site E";
+        sbol:displayId                "annotation9";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation9/range>;
+        sbol:name                     "Mlp84B";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation9/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation4>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:gene                   "Mlp84B";
+        gbConv:multiRangeType         "join";
+        sbol:displayId                "annotation4";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation4/range0> , <http://www.async.ece.utah.edu/1/AF090832/annotation4/range1>;
+        sbol:name                     "Mlp84B";
+        sbol:role                     SO:0000204;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation4/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832_seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "AF090832_seq";
+        sbol:elements                 "tgatcaaacctaaagagtgggacagagagtactactatattcgtttcactcgccaaaagttttgaacgcaggcgccttgccaatttttgtatcatacttataagtggaaatgcaattgcaaatgcatgttaaaaatgttttgagaaattctgccgaaggtgcgcgttaattatacaaaaggtgttgcccacccgttcttgtctttaagaaattccgtgtttttcaatgctaccccttgaacttcggaattttcgatcgatccattttttaaaatggtgtgtgtttcgatcgaaatactgtaataaatcaaatattaaattagtttgttataaatttgagaaacttactactactactttgatttcaaaactaaaataatcggtaaaatcataccattagaactaatatcaaaatgaaatcattcttagtaatgatattaagaggtattttctggccgagttggcccccgccatgtctggttctattttgccgatctgattgatgctcaatgatgtaccccatgccccattaatttccttttgaaccaaaaatgcatggcaaaatatcgaattttaattaaatgcaaatgcggcatgttaatttattgatgttgaagtgccaatgttccgaaaggcaggcaggcagtggctttgaacaagacagttgaaccatgttgttggtccaataaaataccaacatcatctttttcgccttgtcatgagcacgatcacctggaatattctgctataaaatgaccgtatatacaatttatgaaagcacatttttcttgtatactagcatattgtatatgtgagancagatattttgtgatttgttgggattcttgttcggatggctaatgtatttattgttggggctatatagtcatccctatcattttctctggcgacaaagttgccttcgtgccgtgtgcagacaaagactgaaagcgcttgacaaatttttcagcgcgatcagtcgaaaatcgttgttaatcgaagctaaactaaaattaaggatatttctcttgcgaacctttttattacgaacgaaaagtaaatatcagtttttgtcaatggaaaacgaaaaccaaaaccaaaaccaatcacgcataacccagtaaattccaatattttgtgttgtgcttgtctaaaaaatatcggttcaagctctgctacaaaccaaacgcgaagcgatgaaaatacagttttgtcaagcgatcgtttaaatttagaacttgtgcgtaatttggaccataatttgacccacaaatgagaggaggaatgtatggctccacacaggaagcatttttcccacacactattattaatagattccgttttttcgagtgtgaaaaaactttacggaaactgtctcactcaataaaatgagaactatttgcgaggagtttttttttcaatcgagttttattcaagtacaaatcgatcatcttttcatcagatcaaatcgaatagtcactatccttgaatagagaaaaattaaagatacagtccttactcgacgtaaaaaacacgtacattttgatgagttttataatcttattgcatgcaaaaagtattatatttagtcgggaatataaacaaactcccagatgcctgaggtttccaatgatatgcaacttttcgatcatctttgataatctcccactgggataaatgtgcatataatatacacaaaagttagcaaacatccaagaatgagatacggtcaagaaaaaacgagtgaaggatatggaataaaaaactttttcgaagaatcgaaaaagtttaaaaaccgcagatgcataccaatatgtttccatcccactctctggcgttatttgatgaaaactgaaataaaacgaaggaaaactgctccgtgttgccgcatcttaagtttctcaactcggtgtgctgagcaggaaaactcagtggcagcggcgaaaagtcgaccgcgttgccgtgccgtgtgcactcacaattatatagactagtttgctttgagcaatcttccagttcagtactcggcgcttccgtgtgtggttttagtgcgttgtaggttccgttctatcttggctataatacactcacacccaacggttggatatcgccagctcttaaccgatttttttgcacgcagcaaaagaccattgcaaagcacctgactaatccatcgcaaccgctagataaccagattaccggccagggacgatgctcatctgatggtggtgctttagctctgactcagttttagaacacccagatatgtacatatatatatctgccacagttattttttgtgtgtgcttttcccaaatctatctacctgtctgcgttatttttatacaacattttctgtatagatagatacacatttattgctcatgtttttctctgtgttctgtgatttgaaaaattcctcctttattttttgttgtcatgagaaagatgttattttctgatcattaacataggaatcttcaatatgaattacgtatacatacgtccggttgggtaattttctggcacgggcgatgacgtctcgactgacagataagaatcttgatagatgatctacataatgcaaattgaggagaaattcgcgactgtcaagttgaatttgtaatagttcattgtaaacttaagataaaacaagcgtcttaatcgtccaaataggttaacatgtagattagcttgaattaactagttgggcttagaataatttggaaaccatttaacatacaaaaatgacagatgcttacctcatcgctttcatcgccaccaaagcttccactctgctgcatttcccagcaggacttacgccacgatcccatcgactctatgtgttcttctattttgctatttcagataataaacttaataagtaaagtaattgtactcgcgtagatcattttgatagcgttaaaaaaaccgaaacacagacagaatgccttccttccaaccgattgaggcccccaagtgtccgcgctgcggcaagagtgtctacgctgccgaagagcgtctggctggcggctatgtattccacaagaactgcttcaagtgcggaatgtgcaacaaatccctggactccaccaactgcacagagcacgagcgcgagctctactgcaagacgtgccacggtcgcaagttcgggccgaaaggttacggcttcggcactggagctggcaccctctccatggacaacgggtcacagttcctgcgcgagaacggcgatgtgccgtccgtaaggaatggagcccgcctggaacccagggctattgctcgtgcccccgaaggtgagggctgtcctcgttgcggtggctatgtgtacgccgccgaacagatgttagcccgcggtcgcagctggcacaaggagtgcttcaagtgcggtacctgcaagaagggtctggactcgatcctgtgctgcgaggctccggacaagaacatctactgcaagggctgctatgccaagaagtttggacccaagggctatggttatggccagggcggtggtgctctccagtccgactgctatgctcacgacgacggagcaccgcaaatccgtgccgccattgatgtggacaagatccaggcccgtccgggtgagggttgcccacgttgcggcggtgtggtctacgcagcggagcagaagctttccaagggtcgggagtggcacaagaagtgcttcaactgcaaggattgccacaagactctggactcgatcaatgccagygatggtcccgatcgtgatgtgtactgccgcacctgctacggcaagaagtggggaccacatggctatggattcgcatgcggctctggtttcctgcagaccgatggcttgaccgaggatcagatcagcgccaacaggcccttctataacccggacaccacgtcaattaaggcccgtgacggcgaaggctgtccccggtgcggaggagccgtattcgccgccgagcaacagctgtccaagggcaaggtgtggcacaagaagtgctacaactgcgccgactgccaccggccattggactcggtcctggcctgcgatggacccgatggcgacatccactgccgcgcctgctacggcaagctcttcggccccaagggctttggttacggccacgcccccactctagtgtcaaccagtggcgagagcaccatccagttcccagatggccgtcctctggccggacccaagacttcgggcggctgcccgcgttgcggtttcgccgtgttcgccgccgagcagatgatcagcaagaccaggatctggcacaagaggtgcttctactgctcggattgccgcaaatcgctggactcgaccaacctgaacgatggacccgacggcgatatctactgccgagcctgctacggccgcaattttggacccaagggagtgggctacggtctgggcgcgggcgctttgacaacgttctaaacgagcctattttatgtatatccaatcgaaacccacatccatgtctgtgaaccgttccgatgcatctgtctaatgaccaatctgttttaactaactatccctgaaattagctaacttagtcttcgttttgcttccaacgatttttgatcaacgatgcactgaatgcaattcaattttctttaggttatgtgagattaagtttaatatgaaaacaagaaaaaaagaataaatgccaaaaacataaaacttacgactcaaagcgaaactaaccatcgaacacagactaacgaactaaacgacattgaccacatcgagaaaagcaaaactttctgcaggtgaaactgctgcgagccaaagtcgttattacttttttgtatcttaaactatttattttcgaagaccagccaagtatgtcttatgctccaaatcgaattacccaaaagcatactttgtgcaaatggaaaaattttatacacataaatatactcttacgacgaacaatgatgaaagatatgatgttgtatatttagctgatttagttcttacgatatacttatgaaatctgattatttataatgatgtttgaatggatttctcacccatctaatctcttgcattctgttttggggatgccagccatgggcagatatta";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832_seq/1> .

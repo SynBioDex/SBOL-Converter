@@ -374,7 +374,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <https://synbiohub.org/public/igem/1/BBa_I13603/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_I13603/component2221478> , <https://synbiohub.org/public/igem/1/BBa_I13603/component2221496> .
+        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_I13603/component2221496> , <https://synbiohub.org/public/igem/1/BBa_I13603/component2221478> .
 
 <https://synbiohub.org/public/igem/1/BBa_R0010/annotation1961227>
         rdf:type                      sbol:SequenceFeature;
@@ -418,6 +418,17 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0015/1> .
 
+<http://michael.zhang/1/Pro/Pro1_Component/Pro_SequenceAnnotation1_Range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "Pro_SequenceAnnotation1_Range";
+        sbol:end                      "654";
+        sbol:hasSequence              <http://michael.zhang/1/ProSequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/Pro/Pro_SequenceAnnotation1/Pro_SequenceAnnotation1_Range/1> .
+
 <https://synbiohub.org/public/igem/1/BBa_R0011_sequence>
         rdf:type                      sbol:Sequence;
         sbol:displayId                "BBa_R0011_sequence";
@@ -429,17 +440,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_R0011>;
         prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_R0011_sequence/1> .
-
-<http://michael.zhang/1/Pro/Pro1_Component/Pro_SequenceAnnotation1_Range>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "Pro_SequenceAnnotation1_Range";
-        sbol:end                      "654";
-        sbol:hasSequence              <http://michael.zhang/1/ProSequence>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "1";
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://michael.zhang/Pro/Pro_SequenceAnnotation1/Pro_SequenceAnnotation1_Range/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_K1606007/component2438810/range2438810>
         rdf:type                      sbol:Range;
@@ -468,7 +468,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <https://synbiohub.org/public/igem/1/BBa_K1606010/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_K1606010/component2438689> , <https://synbiohub.org/public/igem/1/BBa_K1606010/component2438705> , <https://synbiohub.org/public/igem/1/BBa_K1606010/component2438698> , <https://synbiohub.org/public/igem/1/BBa_K1606010/component2438697> .
+        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_K1606010/component2438697> , <https://synbiohub.org/public/igem/1/BBa_K1606010/component2438705> , <https://synbiohub.org/public/igem/1/BBa_K1606010/component2438689> , <https://synbiohub.org/public/igem/1/BBa_K1606010/component2438698> .
 
 <https://synbiohub.org/public/igem/1/BBa_R0010/annotation1961222>
         rdf:type                      sbol:SequenceFeature;
@@ -1059,7 +1059,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <https://synbiohub.org/public/igem/1/BBa_K1606007/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_K1606007/component2438803> , <https://synbiohub.org/public/igem/1/BBa_K1606007/component2438801> , <https://synbiohub.org/public/igem/1/BBa_K1606007/component2438810> , <https://synbiohub.org/public/igem/1/BBa_K1606007/component2438793> , <https://synbiohub.org/public/igem/1/BBa_K1606007/component2438802> .
+        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_K1606007/component2438803> , <https://synbiohub.org/public/igem/1/BBa_K1606007/component2438801> , <https://synbiohub.org/public/igem/1/BBa_K1606007/component2438793> , <https://synbiohub.org/public/igem/1/BBa_K1606007/component2438810> , <https://synbiohub.org/public/igem/1/BBa_K1606007/component2438802> .
 
 <https://synbiohub.org/public/igem/1/BBa_K590087_sequence>
         rdf:type                      sbol:Sequence;
@@ -1187,7 +1187,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit/Pro_Component> , <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit/Ter_Component> , <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit/CDS_Component> .
+        sbol:nondirectional  <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit/Ter_Component> , <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit/Pro_Component> , <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit/CDS_Component> .
 
 <https://synbiohub.org/public/igem/1/BBa_I741109/annotation1936876>
         rdf:type                      sbol:SequenceFeature;
@@ -1796,14 +1796,13 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:displayId       "Interface1";
         sbol:nondirectional  <http://michael.zhang/1/Pro/Pro1_Component> , <http://michael.zhang/1/Pro/Op_Component> .
 
-<https://synbiohub.org/public/igem/1/BBa_J45000/annotation1880473>
-        rdf:type                      sbol:SequenceFeature;
-        sbol:displayId                "annotation1880473";
-        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_J45000/annotation1880473/range1880473>;
-        sbol:name                     "Start Codon";
-        sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#feature/start> , SO:0000318;
-        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_J45000/1>;
-        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_J45000/annotation1880473/1> .
+<http://michael.zhang/1/Pro/Pro_SequenceConstraint>
+        rdf:type                      sbol:Constraint;
+        sbol:displayId                "Pro_SequenceConstraint";
+        sbol:object                   <http://michael.zhang/1/Pro/Pro1_Component>;
+        sbol:restriction              sbol:precedes;
+        sbol:subject                  <http://michael.zhang/1/Pro/Op_Component>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/Pro/Pro_SequenceConstraint/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_E0422>
         rdf:type                      sbol:Component;
@@ -1837,13 +1836,14 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0422/1> .
 
-<http://michael.zhang/1/Pro/Pro_SequenceConstraint>
-        rdf:type                      sbol:Constraint;
-        sbol:displayId                "Pro_SequenceConstraint";
-        sbol:object                   <http://michael.zhang/1/Pro/Pro1_Component>;
-        sbol:restriction              sbol:precedes;
-        sbol:subject                  <http://michael.zhang/1/Pro/Op_Component>;
-        backport2_3:sbol2OriginalURI  <http://michael.zhang/Pro/Pro_SequenceConstraint/1> .
+<https://synbiohub.org/public/igem/1/BBa_R0011/annotation1999>
+        rdf:type                      sbol:SequenceFeature;
+        sbol:displayId                "annotation1999";
+        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_R0011/annotation1999/range1999>;
+        sbol:name                     "lac O1";
+        sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#feature/operator> , SO:0000057;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_R0011/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_R0011/annotation1999/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_K1606007/component2438803>
         rdf:type                      sbol:SubComponent;
@@ -1856,14 +1856,14 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 <https://synbiohub.org/public/igem/BBa_K1606007/annotation2438803/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_K1606007/annotation2438803/1> , <https://synbiohub.org/public/igem/BBa_K1606007/component2438803/1> .
 
-<https://synbiohub.org/public/igem/1/BBa_R0011/annotation1999>
+<https://synbiohub.org/public/igem/1/BBa_J45000/annotation1880473>
         rdf:type                      sbol:SequenceFeature;
-        sbol:displayId                "annotation1999";
-        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_R0011/annotation1999/range1999>;
-        sbol:name                     "lac O1";
-        sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#feature/operator> , SO:0000057;
-        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_R0011/1>;
-        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_R0011/annotation1999/1> .
+        sbol:displayId                "annotation1880473";
+        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_J45000/annotation1880473/range1880473>;
+        sbol:name                     "Start Codon";
+        sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#feature/start> , SO:0000318;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_J45000/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_J45000/annotation1880473/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_I9201/annotation302665>
         rdf:type                      sbol:SequenceFeature;
@@ -2015,19 +2015,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0012/annotation1686/range1686/1> .
 
-<https://synbiohub.org/public/igem/1/BBa_I13603/component2221496/range2221496>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range2221496";
-        sbol:end                      "980";
-        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_I13603_sequence>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "64";
-        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/reverse>;
-        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_I13603/1>;
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_I13603/annotation2221496/range2221496/1> .
-
 <https://synbiohub.org/public/igem/1/BBa_E0022/annotation2153>
         rdf:type                      sbol:SequenceFeature;
         sbol:displayId                "annotation2153";
@@ -2036,6 +2023,18 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#feature/tag> , SO:0000324;
         sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_E0022/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0022/annotation2153/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_E0022_sequence>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "BBa_E0022_sequence";
+        sbol:elements                 "atggtgagcaagggcgaggagctgttcaccggggtggtgcccatcctggtcgagctggacggcgacgtgaacggccacaagttcagcgtgtccggcgagggcgagggcgatgccacctacggcaagctgaccctgaagttcatctgcaccaccggcaagctgcccgtgccctggcccaccctcgtgaccaccctgacctggggcgtgcagtgcttcagccgctaccccgaccacatgaagcagcacgacttcttcaagtccgccatgcccgaaggctacgtccaggagcgcaccatcttcttcaaggacgacggcaactacaagacccgcgccgaggtgaagttcgagggcgacaccctggtgaaccgcatcgagctgaagggcatcgacttcaaggaggacggcaacatcctggggcacaagctggagtacaactacatcagccacaacgtctatatcaccgccgacaagcagaagaacggcatcaaggccaacttcaagatccgccacaacatcgaggacggcagcgtgcagctcgccgaccactaccagcagaacacccccatcggcgacggccccgtgctgctgcccgacaaccactacctgagcacccagtccgccctgagcaaagaccccaacgagaagcgcgatcacatggtcctgctggagttcgtgaccgccgccgggatcactctcggcatggacgagctgtacaagaggcctgctgcaaacgacgaaaactacgctttagtagcttaataa";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <https://synbiohub.org/public/igem>;
+        sbh:ownedBy                   <https://synbiohub.org/user/james> , <https://synbiohub.org/user/myers>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_E0022_sequence/1>;
+        prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_E0022>;
+        prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0022_sequence/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_K1606007/component2438803/range2438803>
         rdf:type                      sbol:Range;
@@ -2050,17 +2049,18 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_K1606007/annotation2438803/range2438803/1> .
 
-<https://synbiohub.org/public/igem/1/BBa_E0022_sequence>
-        rdf:type                      sbol:Sequence;
-        sbol:displayId                "BBa_E0022_sequence";
-        sbol:elements                 "atggtgagcaagggcgaggagctgttcaccggggtggtgcccatcctggtcgagctggacggcgacgtgaacggccacaagttcagcgtgtccggcgagggcgagggcgatgccacctacggcaagctgaccctgaagttcatctgcaccaccggcaagctgcccgtgccctggcccaccctcgtgaccaccctgacctggggcgtgcagtgcttcagccgctaccccgaccacatgaagcagcacgacttcttcaagtccgccatgcccgaaggctacgtccaggagcgcaccatcttcttcaaggacgacggcaactacaagacccgcgccgaggtgaagttcgagggcgacaccctggtgaaccgcatcgagctgaagggcatcgacttcaaggaggacggcaacatcctggggcacaagctggagtacaactacatcagccacaacgtctatatcaccgccgacaagcagaagaacggcatcaaggccaacttcaagatccgccacaacatcgaggacggcagcgtgcagctcgccgaccactaccagcagaacacccccatcggcgacggccccgtgctgctgcccgacaaccactacctgagcacccagtccgccctgagcaaagaccccaacgagaagcgcgatcacatggtcctgctggagttcgtgaccgccgccgggatcactctcggcatggacgagctgtacaagaggcctgctgcaaacgacgaaaactacgctttagtagcttaataa";
-        sbol:encoding                 EDAM:format_1207;
-        sbol:hasNamespace             <https://synbiohub.org/public/igem>;
-        sbh:ownedBy                   <https://synbiohub.org/user/james> , <https://synbiohub.org/user/myers>;
-        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_E0022_sequence/1>;
-        prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_E0022>;
-        prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
-        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0022_sequence/1> .
+<https://synbiohub.org/public/igem/1/BBa_I13603/component2221496/range2221496>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range2221496";
+        sbol:end                      "980";
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_I13603_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "64";
+        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/reverse>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_I13603/1>;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_I13603/annotation2221496/range2221496/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_E0022/annotation2150/range2150>
         rdf:type                      sbol:Range;
@@ -2112,7 +2112,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <https://synbiohub.org/public/igem/1/BBa_E0422/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_E0422/component942803> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942823> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942833> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942815> .
+        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_E0422/component942823> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942815> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942803> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942833> .
 
 <https://synbiohub.org/public/igem/1/BBa_R0011/annotation2002>
         rdf:type                      sbol:SequenceFeature;

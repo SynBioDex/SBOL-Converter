@@ -1,0 +1,5 @@
+<http://sys-bio.org/Attachment/characterization_protocol/1.0.0> <http://sbols.org/v2#displayId> "characterization_protocol" .
+<http://sys-bio.org/Attachment/characterization_protocol/1.0.0> <http://sbols.org/v2#persistentIdentity> <http://sys-bio.org/Attachment/characterization_protocol> .
+<http://sys-bio.org/Attachment/characterization_protocol/1.0.0> <http://sbols.org/v2#source> <file:///Users/metehanunal/work/SBOL-Converter/sbol-converter/output/SBOLTestSuite_conversion/SBOL2/dynamic_measurement.mdx> .
+<http://sys-bio.org/Attachment/characterization_protocol/1.0.0> <http://sbols.org/v2#version> "1.0.0" .
+<http://sys-bio.org/Attachment/characterization_protocol/1.0.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#Attachment> .

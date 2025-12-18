@@ -1,0 +1,67 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+
+<http://partsregistry.org/cd/BBa_K174004>
+        rdf:type                      sbol:Component;
+        sbol:description              "pspac core promoter region";
+        sbol:displayId                "BBa_K174004";
+        sbol:hasConstraint            <http://partsregistry.org/cd/BBa_K174004/r1>;
+        sbol:hasFeature               <http://partsregistry.org/cd/BBa_K174004/LacI_operator> , <http://partsregistry.org/cd/BBa_K174004/pspac>;
+        sbol:hasInterface             <http://partsregistry.org/cd/BBa_K174004/Interface1>;
+        sbol:hasNamespace             <http://partsregistry.org/cd>;
+        sbol:name                     "constitutive promoter";
+        sbol:role                     SO:0000167;
+        sbol:type                     SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_K174004> .
+
+<http://partsregistry.org/cd/BBa_K174004/r1>
+        rdf:type                      sbol:Constraint;
+        sbol:displayId                "r1";
+        sbol:object                   <http://partsregistry.org/cd/BBa_K174004/LacI_operator>;
+        sbol:restriction              sbol:precedes;
+        sbol:subject                  <http://partsregistry.org/cd/BBa_K174004/pspac>;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_K174004/r1> .
+
+<http://partsregistry.org/cd/BBa_K174004/Interface1>
+        rdf:type             sbol:Interface;
+        sbol:displayId       "Interface1";
+        sbol:nondirectional  <http://partsregistry.org/cd/BBa_K174004/LacI_operator> , <http://partsregistry.org/cd/BBa_K174004/pspac> .
+
+<http://partsregistry.org/cd/LacI_operator>
+        rdf:type                      sbol:Component;
+        sbol:description              "LacI binding site";
+        sbol:displayId                "LacI_operator";
+        sbol:hasNamespace             <http://partsregistry.org/cd>;
+        sbol:name                     "LacI operator";
+        sbol:role                     SO:0000057;
+        sbol:type                     SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/LacI_operator> .
+
+<http://partsregistry.org/cd/pspac>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "pspac";
+        sbol:hasNamespace             <http://partsregistry.org/cd>;
+        sbol:role                     SO:0000167;
+        sbol:type                     SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/pspac> .
+
+<http://partsregistry.org/cd/BBa_K174004/LacI_operator>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "LacI_operator";
+        sbol:instanceOf               <http://partsregistry.org/cd/LacI_operator>;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_K174004/LacI_operator> .
+
+<http://partsregistry.org/cd/BBa_K174004/pspac>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "pspac";
+        sbol:instanceOf               <http://partsregistry.org/cd/pspac>;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_K174004/pspac> .

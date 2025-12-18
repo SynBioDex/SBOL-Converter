@@ -1,0 +1,165 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX annot:       <http://myannotation.org/>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX grn:         <urn:bbn.com:tasbe:grn/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+
+<http://www.async.ece.utah.edu/1.0/someCompDef/someSequenceAnnotation>
+        rdf:type                      sbol:SequenceFeature;
+        annot:thisAnnotation          "turtleString";
+        sbol:displayId                "someSequenceAnnotation";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1.0/someCompDef/someSequenceAnnotation/cut>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/someCompDef/someSequenceAnnotation/1.0> .
+
+<http://www.async.ece.utah.edu/1.0/someCompDef/someSequenceAnnotation2>
+        rdf:type                      sbol:SequenceFeature;
+        sbol:displayId                "someSequenceAnnotation2";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1.0/someCompDef/someSequenceAnnotation2/cut>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/someCompDef/someSequenceAnnotation2/1.0> .
+
+<http://www.async.ece.utah.edu/1.0/someCompDef/someSequenceAnnotation2/cut>
+        rdf:type                      sbol:Cut;
+        sbol:at                       "1";
+        sbol:displayId                "cut";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1.0/someCompDef_seq>;
+        sbol:orientation              SO:0001030;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/someCompDef/someSequenceAnnotation2/cut/1.0> .
+
+<http://www.async.ece.utah.edu/1.0/someCompDef_seq>
+        rdf:type           sbol:Sequence;
+        sbol:displayId     "someCompDef_seq";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <http://www.async.ece.utah.edu> .
+
+<http://www.async.ece.utah.edu/1.0/someSeq>
+        rdf:type                      sbol:Sequence;
+        annot:thisAnnotation          "turtleString";
+        sbol:displayId                "someSeq";
+        sbol:elements                 "ACGTURYSWKMBDHVN-.";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/someSeq/1.0> .
+
+<http://www.async.ece.utah.edu/1.0/someModuleDef/someModule>
+        rdf:type         sbol:SubComponent;
+        sbol:displayId   "someModule";
+        sbol:instanceOf  <http://www.async.ece.utah.edu/1.0/someModuleDefSub>;
+        backport2_3:sbol2OriginatesFromModule
+                "true" .
+
+<http://www.async.ece.utah.edu/1.0/someCompDefCDS>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "someCompDefCDS";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:role                     SO:0000316;
+        sbol:type                     SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/someCompDefCDS/1.0> .
+
+<http://www.async.ece.utah.edu/1.0/myParts>
+        rdf:type                      sbol:Collection;
+        annot:thisAnnotation          "turtleString";
+        sbol:displayId                "myParts";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/myParts/1.0> .
+
+<http://www.async.ece.utah.edu/1.0/someCompDef/someSequenceConstraint>
+        rdf:type                      sbol:Constraint;
+        annot:thisAnnotation          "turtleString";
+        sbol:displayId                "someSequenceConstraint";
+        sbol:object                   <http://www.async.ece.utah.edu/1.0/someCompDef/someOtherComponent>;
+        sbol:restriction              sbol:precedes;
+        sbol:subject                  <http://www.async.ece.utah.edu/1.0/someCompDef/someComponent>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/someCompDef/someSequenceConstraint/1.0> .
+
+<http://www.async.ece.utah.edu/1.0/someGenericTopLevel>
+        rdf:type                      grn:RegulatoryReaction , sbol:TopLevel;
+        annot:thisAnnotation          "turtleString";
+        sbol:displayId                "someGenericTopLevel";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/someGenericTopLevel/1.0> .
+
+<http://www.async.ece.utah.edu/1.0/someModuleDefSub>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "someModuleDefSub";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:type                     SBO:0000241;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/someModuleDefSub/1.0> .
+
+<http://www.async.ece.utah.edu/1.0/someModuleDef>
+        rdf:type                      sbol:Component;
+        annot:thisAnnotation          "turtleString";
+        sbol:displayId                "someModuleDef";
+        sbol:hasFeature               <http://www.async.ece.utah.edu/1.0/someModuleDef/someModule>;
+        sbol:hasInteraction           <http://www.async.ece.utah.edu/1.0/someModuleDef/someInteraction>;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:type                     SBO:0000241;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/someModuleDef/1.0> .
+
+<http://www.async.ece.utah.edu/1.0/someCompDef/someOtherComponent>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "someOtherComponent";
+        sbol:instanceOf               <http://www.async.ece.utah.edu/1.0/someCompDefCDS>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/someCompDef/someOtherComponent/1.0> .
+
+<http://www.async.ece.utah.edu/1.0/someModel>
+        rdf:type                      sbol:Model;
+        annot:thisAnnotation          "turtleString";
+        sbol:displayId                "someModel";
+        sbol:framework                SBO:0000062;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:language                 EDAM:format_2585;
+        sbol:source                   <https://sbolstandard.org/SBOL3-Converter/someModel_source>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/someModel/1.0> .
+
+<http://www.async.ece.utah.edu/1.0/someCompDef/Interface1>
+        rdf:type             sbol:Interface;
+        sbol:displayId       "Interface1";
+        sbol:nondirectional  <http://www.async.ece.utah.edu/1.0/someCompDef/someComponent> , <http://www.async.ece.utah.edu/1.0/someCompDef/someOtherComponent> .
+
+<http://www.async.ece.utah.edu/1.0/someCompDef/someComponent>
+        rdf:type                      sbol:SubComponent;
+        annot:thisAnnotation          "turtleString";
+        sbol:displayId                "someComponent";
+        sbol:instanceOf               <http://www.async.ece.utah.edu/1.0/someCompDefCDS>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/someCompDef/someComponent/1.0> .
+
+<http://www.async.ece.utah.edu/1.0/someCompDef/someSequenceAnnotation/cut>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "cut";
+        sbol:end                      "10";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1.0/someCompDef_seq>;
+        sbol:start                    "1";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/someCompDef/someSequenceAnnotation/cut/1.0> .
+
+<http://www.async.ece.utah.edu/1.0/someCompDef>
+        rdf:type                      sbol:Component;
+        annot:thisAnnotation          "turtleString";
+        sbol:displayId                "someCompDef";
+        sbol:hasConstraint            <http://www.async.ece.utah.edu/1.0/someCompDef/someSequenceConstraint>;
+        sbol:hasFeature               <http://www.async.ece.utah.edu/1.0/someCompDef/someSequenceAnnotation> , <http://www.async.ece.utah.edu/1.0/someCompDef/someComponent> , <http://www.async.ece.utah.edu/1.0/someCompDef/someOtherComponent> , <http://www.async.ece.utah.edu/1.0/someCompDef/someSequenceAnnotation2>;
+        sbol:hasInterface             <http://www.async.ece.utah.edu/1.0/someCompDef/Interface1>;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1.0/someCompDef_seq>;
+        sbol:role                     SO:0000167;
+        sbol:type                     SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/someCompDef/1.0>;
+        backport2_3:sbol3TempSequenceURI
+                <http://www.async.ece.utah.edu/1.0/someCompDef_seq> .
+
+<http://www.async.ece.utah.edu/1.0/someModuleDef/someInteraction>
+        rdf:type                      sbol:Interaction;
+        sbol:displayId                "someInteraction";
+        sbol:type                     SBO:0000177;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/someModuleDef/someInteraction/1.0> .

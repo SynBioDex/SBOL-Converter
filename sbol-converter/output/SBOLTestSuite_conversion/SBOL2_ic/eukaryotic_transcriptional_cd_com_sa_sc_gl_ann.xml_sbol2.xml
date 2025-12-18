@@ -68,6 +68,28 @@
     <sbol:role rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#partType/Reporter"/>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000804"/>
     <sbol:component>
+      <sbol:Component rdf:about="https://synbiohub.org/public/igem/BBa_E0422/component942803/1">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/component942803"/>
+        <sbol:displayId>component942803</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <dcterms:title>BBa_B0034</dcterms:title>
+        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/1"/>
+        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
+        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_B0034/1"/>
+      </sbol:Component>
+    </sbol:component>
+    <sbol:component>
+      <sbol:Component rdf:about="https://synbiohub.org/public/igem/BBa_E0422/component942815/1">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/component942815"/>
+        <sbol:displayId>component942815</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <dcterms:title>BBa_E0022</dcterms:title>
+        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/1"/>
+        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
+        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_E0022/1"/>
+      </sbol:Component>
+    </sbol:component>
+    <sbol:component>
       <sbol:Component rdf:about="https://synbiohub.org/public/igem/BBa_E0422/component942833/1">
         <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/component942833"/>
         <sbol:displayId>component942833</sbol:displayId>
@@ -87,28 +109,6 @@
         <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/1"/>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
         <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_B0010/1"/>
-      </sbol:Component>
-    </sbol:component>
-    <sbol:component>
-      <sbol:Component rdf:about="https://synbiohub.org/public/igem/BBa_E0422/component942815/1">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/component942815"/>
-        <sbol:displayId>component942815</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <dcterms:title>BBa_E0022</dcterms:title>
-        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/1"/>
-        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_E0022/1"/>
-      </sbol:Component>
-    </sbol:component>
-    <sbol:component>
-      <sbol:Component rdf:about="https://synbiohub.org/public/igem/BBa_E0422/component942803/1">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/component942803"/>
-        <sbol:displayId>component942803</sbol:displayId>
-        <sbol:version>1</sbol:version>
-        <dcterms:title>BBa_B0034</dcterms:title>
-        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/1"/>
-        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_B0034/1"/>
       </sbol:Component>
     </sbol:component>
     <sbol:sequenceAnnotation>

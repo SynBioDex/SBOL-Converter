@@ -1,0 +1,28 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX annot:       <http://myannotation.org/>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX grn:         <urn:bbn.com:tasbe:grn/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+
+<http://www.async.ece.utah.edu/1.0/someModuleDefSub>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "someModuleDefSub";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:type                     SBO:0000241;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/someModuleDefSub/1.0> .
+
+<http://www.async.ece.utah.edu/1.0/someModuleDef>
+        rdf:type                      sbol:Component;
+        annot:thisAnnotation          "turtleString";
+        sbol:displayId                "someModuleDef";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:type                     SBO:0000241;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/someModuleDef/1.0> .
