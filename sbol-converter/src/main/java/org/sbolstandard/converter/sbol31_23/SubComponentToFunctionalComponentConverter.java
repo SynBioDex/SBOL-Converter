@@ -60,11 +60,9 @@ public class SubComponentToFunctionalComponentConverter
 			}
 		}
 		
-		// The SBOL2 FunctionalComponent must reference a ComponentDefinition, which
-		// comes from
-		// the "instanceOf" property of the SubComponent in SBOL3 (converted to SBOL2
-		// URI)
-		URI sbol2ChildComponentDefinitionURI = Util.createSBOL2Uri(sbol3SubComponent.getInstanceOf().getUri());
+		// The SBOL2 FunctionalComponent must reference a ComponentDefinition, which comes from
+		// the "instanceOf" property of the SubComponent in SBOL3 (converted to SBOL2 URI)
+		URI sbol2ChildComponentDefinitionURI = Util.createSBOL2Uri(sbol3SubComponent.getInstanceOfURI());
 
 		// Create the FunctionalComponent in the SBOL2 ModuleDefinition
 		FunctionalComponent sbol2FuncComp = sbol2ModuleDefinition.createFunctionalComponent(

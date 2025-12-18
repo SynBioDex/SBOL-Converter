@@ -26,6 +26,7 @@
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/md">
       <sbol:hasFeature>
          <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/md/m">
+            <backport2_3:sbol2OriginatesFromModule>true</backport2_3:sbol2OriginatesFromModule>
             <sbol:hasMeasure>
                <sbol:Identified rdf:about="http://www.async.ece.utah.edu/md/m/md_measure">
                   <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/md/m/md_measure"/>

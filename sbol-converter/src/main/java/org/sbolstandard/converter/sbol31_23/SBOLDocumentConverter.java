@@ -136,6 +136,13 @@ public class SBOLDocumentConverter {
 				activityConverter.convert(sbol2Doc, activity);
 			}
 		}
+
+		/*if (sbol3Doc.getCombinatorialDerivations() != null) {
+			CombinatorialDerivationConverter combinatorialDerivationConverter = new CombinatorialDerivationConverter();
+			for (org.sbolstandard.core3.entity.CombinatorialDerivation combinatorialDerivation : sbol3Doc.getCombinatorialDerivations()) {
+				combinatorialDerivationConverter.convert(sbol2Doc, combinatorialDerivation);
+			}
+		}*/
 		
 		return sbol2Doc;
 	}

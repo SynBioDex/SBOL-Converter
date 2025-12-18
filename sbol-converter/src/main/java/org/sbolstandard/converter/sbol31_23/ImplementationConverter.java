@@ -12,8 +12,8 @@ public class ImplementationConverter implements EntityConverter<Implementation, 
     public  org.sbolstandard.core2.Implementation convert(SBOLDocument doc, Implementation input) throws SBOLGraphException, SBOLValidationException {      	
     	org.sbolstandard.core2.Implementation impl = doc.createImplementation(Util.getURIPrefix(input), input.getDisplayId(), Util.getVersion(input));
 		Util.copyIdentified(input, impl, doc);
-		if (input.getComponent() != null) {
-			impl.setBuilt(Util.createSBOL2Uri(input.getComponent()));
+		if (input.getComponentURI() != null) {
+			impl.setBuilt(Util.createSBOL2Uri(input.getComponentURI()));
 		}
 		return impl;
 	}

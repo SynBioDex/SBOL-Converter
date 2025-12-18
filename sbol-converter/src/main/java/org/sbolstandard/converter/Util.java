@@ -28,6 +28,7 @@ import org.sbolstandard.core3.entity.Identified;
 import org.sbolstandard.core3.entity.Metadata;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.Sequence;
+import org.sbolstandard.core3.entity.SubComponent;
 import org.sbolstandard.core3.entity.TopLevel;
 import org.sbolstandard.core3.entity.TopLevelMetadata;
 import org.sbolstandard.core3.util.SBOLGraphException;
@@ -1288,6 +1289,26 @@ public class Util {
 						if (uri!=null && item.getUri().equals(uri)) {
 							return item;
 						}
+					}
+				}
+			}
+			return null;
+		}
+		
+
+		public static <T extends Identified> T getSBOL3Entity(List<T> items, URI sbol2EntityIdentityURI, Parameters parameters) throws SBOLGraphException
+		{
+			URI uri= parameters.getMapping(sbol2EntityIdentityURI);						
+			if (items != null) {
+				for (T item : items) {
+					if (item.getUri().equals(sbol2EntityIdentityURI)) {
+						return item;
+					}					
+					else
+					{
+						if (uri!=null && item.getUri().equals(uri)) {
+							return item;
+						}
 						/*List<Object> annoItems=item.getAnnotion(URI.create("http//sbolstandard.org/sbol-converter/23_to_31"));
 						if (annoItems != null && !annoItems.isEmpty() && annoItems.get(0) instanceof URI) {
 							URI uri = (URI) annoItems.get(0);
@@ -1386,6 +1407,4 @@ public class Util {
 		}
 		return false;
 	}
-
-
 }

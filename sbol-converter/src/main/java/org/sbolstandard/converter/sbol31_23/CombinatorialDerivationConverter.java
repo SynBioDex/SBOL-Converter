@@ -1,5 +1,7 @@
 package org.sbolstandard.converter.sbol31_23;
 
+import java.net.URI;
+
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.core3.entity.Collection;
 import org.sbolstandard.core3.entity.CombinatorialDerivation;
@@ -18,7 +20,7 @@ public class CombinatorialDerivationConverter implements EntityConverter<Combina
 
     @Override
 	public org.sbolstandard.core2.CombinatorialDerivation convert(SBOLDocument doc, CombinatorialDerivation input) throws SBOLGraphException, SBOLValidationException {
-		org.sbolstandard.core2.CombinatorialDerivation cd = doc.createCombinatorialDerivation(Util.getURIPrefix(input),	input.getDisplayId(), Util.getVersion(input), Util.createSBOL2Uri(input.getTemplate()));
+		org.sbolstandard.core2.CombinatorialDerivation cd = doc.createCombinatorialDerivation(Util.getURIPrefix(input),	input.getDisplayId(), Util.getVersion(input), Util.createSBOL2Uri(input.getTemplateURI()));
 		Util.copyIdentified(input, cd, doc);
 		if (input.getStrategy() != null) {
 			cd.setStrategy(convertStrategy31_23(input.getStrategy()));
@@ -37,18 +39,18 @@ public class CombinatorialDerivationConverter implements EntityConverter<Combina
      */
     private VariableComponent convertVariableFeature(org.sbolstandard.core2.CombinatorialDerivation cDerivation, VariableFeature vFeature)  throws SBOLGraphException, SBOLValidationException {
     	VariableComponent vComponent = cDerivation.createVariableComponent(vFeature.getDisplayId(), convertCardinality(vFeature.getCardinality()), Util.createSBOL2Uri(vFeature.getVariable().getUri()));
-		if (vFeature.getVariantCollections() != null) {
-			for (Collection collection : vFeature.getVariantCollections()) {
-				vComponent.addVariantCollection(Util.createSBOL2Uri(collection));
+		if (vFeature.getVariantCollectionURIs() != null) {
+			for (URI uri : vFeature.getVariantCollectionURIs()) {
+				vComponent.addVariantCollection(Util.createSBOL2Uri(uri));
 			}
 		}
-		if (vFeature.getVariantDerivations() != null) {
-			for (CombinatorialDerivation cd : vFeature.getVariantDerivations()) {
-				vComponent.addVariantDerivation(Util.createSBOL2Uri(cd));
+		if (vFeature.getVariantDerivationURIs() != null) {
+			for (URI uri : vFeature.getVariantDerivationURIs()) {
+				vComponent.addVariantDerivation(Util.createSBOL2Uri(uri));
 			}
 		}
-		if (vFeature.getVariants() != null) {
-			for (Component c : vFeature.getVariants()) {
+		if (vFeature.getVariantURIs() != null) {
+			for (URI c : vFeature.getVariantURIs()) {
 				vComponent.addVariant(Util.createSBOL2Uri(c));
 			}
 		}

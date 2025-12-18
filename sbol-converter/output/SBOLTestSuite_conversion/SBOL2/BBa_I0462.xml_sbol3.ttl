@@ -41,6 +41,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 <http://www.async.ece.utah.edu/BBa_I0462/BBa_C0062_annotation>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_I0462/BBa_C0062_annotation> , <http://www.async.ece.utah.edu/BBa_I0462/BBa_C0062> .
 
+<http://www.async.ece.utah.edu/BBa_B0034>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "BBa_B0034";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:name                     "B0034";
+        sbol:role                     SO:0000139;
+        sbol:type                     SO:0000987 , SBO:0000251;
+        prov:wasDerivedFrom           <http://partsregistry.org/Part:BBa_B0034>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_B0034> .
+
 <http://www.async.ece.utah.edu/BBa_I0462/BBa_B0015>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "BBa_B0015";
@@ -54,17 +64,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/BBa_I0462/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/BBa_I0462/BBa_B0015> , <http://www.async.ece.utah.edu/BBa_I0462/BBa_B0034> , <http://www.async.ece.utah.edu/BBa_I0462/BBa_C0062> .
-
-<http://www.async.ece.utah.edu/BBa_B0034>
-        rdf:type                      sbol:Component;
-        sbol:displayId                "BBa_B0034";
-        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
-        sbol:name                     "B0034";
-        sbol:role                     SO:0000139;
-        sbol:type                     SO:0000987 , SBO:0000251;
-        prov:wasDerivedFrom           <http://partsregistry.org/Part:BBa_B0034>;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_B0034> .
+        sbol:nondirectional  <http://www.async.ece.utah.edu/BBa_I0462/BBa_B0034> , <http://www.async.ece.utah.edu/BBa_I0462/BBa_B0015> , <http://www.async.ece.utah.edu/BBa_I0462/BBa_C0062> .
 
 <http://www.async.ece.utah.edu/BBa_C0062>
         rdf:type                      sbol:Component;

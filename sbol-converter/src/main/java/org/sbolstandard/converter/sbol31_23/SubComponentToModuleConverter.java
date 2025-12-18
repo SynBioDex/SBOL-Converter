@@ -33,13 +33,8 @@ public class SubComponentToModuleConverter
 
 		Component sbol3ParentComponent = (Component) inputParent;
 
-		URI sbol2ChildModuleDefUri = Util.createSBOL2Uri(sbol3SubComponent.getInstanceOf());
+		URI sbol2ChildModuleDefUri = Util.createSBOL2Uri(sbol3SubComponent.getInstanceOfURI());
 
-		// Assumed that DisplayId always exists for SubComponent
-
-		if (sbol3SubComponent.getDisplayId() == null) {
-			System.out.println("DISPLAY ID NULL");
-		}
 		org.sbolstandard.core2.Module module  = sbol2ModuleDefinition.createModule(sbol3SubComponent.getDisplayId(), sbol2ChildModuleDefUri);
 		
 		// Measurement conversion

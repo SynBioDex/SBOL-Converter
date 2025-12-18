@@ -9,6 +9,7 @@ import java.util.List;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.riot.RDFFormat;
 import org.junit.jupiter.api.Test;
+import org.sbolstandard.core3.util.Configuration;
 import org.sbolstandard.core3.util.RDFUtil;
 import org.sbolstandard.core3.util.SBOLGraphException;
 import org.sbolstandard.core3.util.SBOLUtil;
@@ -102,28 +103,26 @@ public class TempTest {
                 // List<String> errors=TestUtil.roundTripConvert(new
                 // File("../SBOLTestSuite/SBOL2/Provenance_CodonOptimization.xml"));
 
-                File file = new File("../SBOLTestSuite/SBOL2/sequence1.xml");
-                File fileOutputNt = new File("output/tmp/sequence1.xml_org_nt");
-                File fileOutputNtSorted = new File("output/tmp/sequence1.xml_org_nt_sorted");
                 //createSortedNtriples(file, fileOutputNt, fileOutputNtSorted);
-                List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/sequence1.xml"), true, "output/tmp/sequence1.xml", true);
+                //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/sequence1.xml"), true, "output/tmp/sequence1.xml", true);
+                //Incomplete:
+                Configuration.getInstance().setCompleteDocument(false);
+                Configuration.getInstance().setValidateAfterSettingProperties(false);
 
+                //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/ModuleDefinitionOutput_maps_md_mod.xml"), true, "output/tmp/ModuleDefinitionOutput_maps_md_mod.xml", true);                
+                //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/eukaryotic_transcriptional_cd_com_sa_sc_range_ann.xml"), true, "output/tmp/eukaryotic_transcriptional_cd_com_sa_sc_range_ann.xml", true);                
+                //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/ModuleDefinitionOutput_pa_maps_mod_int_md.xml"), true, "output/tmp/ModuleDefinitionOutput_pa_maps_mod_int_md.xml", true);                
+                //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/attachment_pointers.xml"), false, "output/tmp/attachment_pointers.xml", true);                
+                //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/ModuleDefinitionOutput_pa_int_md_mod_fc.xml"), false, "output/tmp/ModuleDefinitionOutput_pa_int_md_mod_fc.xml", true);                
+                //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/gfp_reporter_combDeri.xml"), false, "output/tmp/gfp_reporter_combDeri.xml", true);                
+                List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/eukaryotic_transcriptional_unit_enumerated.xml"), false, "output/tmp/eukaryotic_transcriptional_unit_enumerated.xml", true);                
+               
                 TestUtil.DisplayErrors(errors);
                 if (errors != null && errors.size() > 0) {
                         // throw new Exception("Conversion produced errors");
                 }
-               /*createSortedNtriples(new File("output/SBOLTestSuite_conversion/SBOL2/sequence1.xml_sbol2_from_sbol3.xml"), new
-                 File("output/tmp/sequence1.xml_sbol2_from_sbol3.xml_converted_nt"), new
-                 File("output/tmp/sequence1.xml_sbol2_from_sbol3.xml_converted_nt_sorted"));*/
         }
 
-        private void createSortedNtriples(File input, File tmp, File output)
-                        throws FileNotFoundException, IOException, SBOLGraphException {
-                Model model = RDFUtil.read(input, RDFFormat.RDFXML);
-                RDFUtil.write(model, tmp, RDFFormat.NTRIPLES);
-                SBOLUtil.sort(tmp, output, Charset.forName("ASCII"));
-
-        }
 
 }
 

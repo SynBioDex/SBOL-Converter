@@ -171,6 +171,12 @@ public class SBOLDocumentConverter {
             activityConverter.convert(sbol3Doc, sbol2Activity, parameters);
         }
 
+        // CD conversion
+        /*CombinatorialDerivationConverter combinatorialDerivationConverter = new CombinatorialDerivationConverter();
+        for (org.sbolstandard.core2.CombinatorialDerivation sbol2CombinatorialDerivation : sbol2Doc.getCombinatorialDerivations()) {
+            combinatorialDerivationConverter.convert(sbol3Doc, sbol2CombinatorialDerivation, parameters);
+        }*/
+
 
         Util.copyNamespacesFrom2_to_3(sbol2Doc, sbol3Doc);
         

@@ -18,7 +18,7 @@ public class SubComponentToComponentConverter implements ChildEntityConverter<Su
 			throws SBOLGraphException, SBOLValidationException {
 		
 		ComponentDefinition sbol2CD = (ComponentDefinition) parent;
-		org.sbolstandard.core2.Component sbol2Comp=sbol2CD.createComponent(input.getDisplayId(), AccessType.PUBLIC, Util.createSBOL2Uri(input.getInstanceOf().getUri()));
+		org.sbolstandard.core2.Component sbol2Comp=sbol2CD.createComponent(input.getDisplayId(), AccessType.PUBLIC, Util.createSBOL2Uri(input.getInstanceOfURI()));
 		
 		sbol2Comp.setRoles(Util.convertSORoles3_to_2(input.getRoles()));
 

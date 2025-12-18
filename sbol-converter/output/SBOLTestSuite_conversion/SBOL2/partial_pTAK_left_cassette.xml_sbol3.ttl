@@ -74,15 +74,15 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasDerivedFrom           <urn:c26b0115-3c37-4aa7-9e98-c491b3db9a53>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/RBS> .
 
-<http://www.async.ece.utah.edu/pTAKLeftCassete_seq>
-        rdf:type           sbol:Sequence;
-        sbol:displayId     "pTAKLeftCassete_seq";
-        sbol:encoding      EDAM:format_1207;
-        sbol:hasNamespace  <http://www.async.ece.utah.edu> .
-
 <http://www.async.ece.utah.edu/Repressor2_seq>
         rdf:type           sbol:Sequence;
         sbol:displayId     "Repressor2_seq";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <http://www.async.ece.utah.edu> .
+
+<http://www.async.ece.utah.edu/pTAKLeftCassete_seq>
+        rdf:type           sbol:Sequence;
+        sbol:displayId     "pTAKLeftCassete_seq";
         sbol:encoding      EDAM:format_1207;
         sbol:hasNamespace  <http://www.async.ece.utah.edu> .
 
@@ -128,7 +128,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pTAKLeftCassete/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKLeftCassete/Terminator> , <http://www.async.ece.utah.edu/pTAKLeftCassete/BBa_K121014> , <http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2> .
+        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKLeftCassete/BBa_K121014> , <http://www.async.ece.utah.edu/pTAKLeftCassete/Terminator> , <http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2> .
 
 <http://www.async.ece.utah.edu/BBa_C0012>
         rdf:type                      sbol:Component;

@@ -54,12 +54,17 @@ public class MapstoToMainConverter {
 				SubComponent sbol3SubComponentForModule = Util.getSBOL3Entity(sbol3ParentComponent.getSubComponents(), sbol2Module, parameters);
 				
 				ComponentReference sbol3CompRef = MapstoToComponentReferenceConverter.convertForModule(document, sbol2Module, sbol3ParentComponent, mapsTo, sbol3SubComponentForModule, parameters);
+				if (sbol3CompRef!=null){			
+					Constraint sbol3Constraint = MapstoToConstraintConverter.convert(sbol3ParentComponent, mapsTo, sbol3CompRef, parameters);
 				
-				Constraint sbol3Constraint = MapstoToConstraintConverter.convert(sbol3ParentComponent, mapsTo, sbol3CompRef, parameters);
-				
-				if (sbol3Constraint == null) {
-					// sbol3SubComponentForModule.addConstraint(sbol3Constraint);
-					System.out.println("Constraint is null for " + mapsTo.getIdentity() + ". This should not happen.");
+					if (sbol3Constraint == null) {
+						String message="***CONVERSION ERROR***: sbol2:MapsTo_sbol3:Constraint conversion could not be completed for MapsTo:"+ mapsTo.getIdentity() + ".";
+						System.out.println(message);
+					}
+				}
+				else{
+					String message="***CONVERSION ERROR***: sbol2:MapsTo_sbol3:ComponentReference conversion could not be completed for MapsTo:"+ mapsTo.getIdentity() + ".";
+					System.out.println(message);
 				}
 				
 			}

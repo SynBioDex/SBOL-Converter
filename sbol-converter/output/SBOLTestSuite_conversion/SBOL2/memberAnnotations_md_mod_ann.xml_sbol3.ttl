@@ -31,4 +31,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/1.0/someModuleDef/someModule>
         rdf:type         sbol:SubComponent;
         sbol:displayId   "someModule";
-        sbol:instanceOf  <http://www.async.ece.utah.edu/1.0/someModuleDefSub> .
+        sbol:instanceOf  <http://www.async.ece.utah.edu/1.0/someModuleDefSub>;
+        backport2_3:sbol2OriginatesFromModule
+                "true" .

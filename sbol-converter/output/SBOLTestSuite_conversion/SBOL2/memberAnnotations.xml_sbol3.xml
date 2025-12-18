@@ -128,6 +128,7 @@
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/1.0/someModuleDef">
       <sbol:hasFeature>
          <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/1.0/someModuleDef/someModule">
+            <backport2_3:sbol2OriginatesFromModule>true</backport2_3:sbol2OriginatesFromModule>
             <sbol:instanceOf rdf:resource="http://www.async.ece.utah.edu/1.0/someModuleDefSub"/>
             <sbol:displayId>someModule</sbol:displayId>
          </sbol:SubComponent>

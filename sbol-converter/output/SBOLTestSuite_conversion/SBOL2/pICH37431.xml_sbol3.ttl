@@ -79,6 +79,17 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH37431/annotation12/range> .
 
+<http://www.async.ece.utah.edu/pICH37431/annotation5/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "667";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICH37431_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "648";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH37431/annotation5/range> .
+
 <http://www.async.ece.utah.edu/pICH37431/annotation9>
         rdf:type                      sbol:SequenceFeature;
         gbConv:featureType            "Primer";
@@ -89,21 +100,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:name                     "kanseqf";
         sbol:role                     SO:0000110;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH37431/annotation9> .
-
-<http://www.async.ece.utah.edu/pICH37431>
-        rdf:type                      sbol:Component;
-        sbol:displayId                "pICH37431";
-        sbol:hasFeature               <http://www.async.ece.utah.edu/pICH37431/annotation2> , <http://www.async.ece.utah.edu/pICH37431/annotation3> , <http://www.async.ece.utah.edu/pICH37431/annotation8> , <http://www.async.ece.utah.edu/pICH37431/annotation10> , <http://www.async.ece.utah.edu/pICH37431/annotation4> , <http://www.async.ece.utah.edu/pICH37431/annotation11> , <http://www.async.ece.utah.edu/pICH37431/annotation0> , <http://www.async.ece.utah.edu/pICH37431/annotation12> , <http://www.async.ece.utah.edu/pICH37431/annotation9> , <http://www.async.ece.utah.edu/pICH37431/annotation5> , <http://www.async.ece.utah.edu/pICH37431/annotation13> , <http://www.async.ece.utah.edu/pICH37431/annotation1> , <http://www.async.ece.utah.edu/pICH37431/annotation6> , <http://www.async.ece.utah.edu/pICH37431/annotation7>;
-        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
-        sbol:hasSequence              <http://www.async.ece.utah.edu/pICH37431_seq>;
-        sbol:role                     SO:0000804;
-        sbol:type                     SO:0000988 , SBO:0000251;
-        genbank:comment               "This file is created by Vector NTI http://www.invitrogen.com/";
-        genbank:date                  "7-JUL-2008";
-        genbank:division              "UNA";
-        genbank:locus                 "pICH37431";
-        genbank:molecule              "DNA";
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH37431> .
 
 <http://www.async.ece.utah.edu/pICH37431/annotation13>
         rdf:type                      sbol:SequenceFeature;
@@ -127,16 +123,20 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:role                     SO:0000110;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH37431/annotation4> .
 
-<http://www.async.ece.utah.edu/pICH37431/annotation5/range>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range";
-        sbol:end                      "667";
+<http://www.async.ece.utah.edu/pICH37431>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "pICH37431";
+        sbol:hasFeature               <http://www.async.ece.utah.edu/pICH37431/annotation2> , <http://www.async.ece.utah.edu/pICH37431/annotation3> , <http://www.async.ece.utah.edu/pICH37431/annotation8> , <http://www.async.ece.utah.edu/pICH37431/annotation10> , <http://www.async.ece.utah.edu/pICH37431/annotation4> , <http://www.async.ece.utah.edu/pICH37431/annotation0> , <http://www.async.ece.utah.edu/pICH37431/annotation11> , <http://www.async.ece.utah.edu/pICH37431/annotation12> , <http://www.async.ece.utah.edu/pICH37431/annotation9> , <http://www.async.ece.utah.edu/pICH37431/annotation5> , <http://www.async.ece.utah.edu/pICH37431/annotation13> , <http://www.async.ece.utah.edu/pICH37431/annotation1> , <http://www.async.ece.utah.edu/pICH37431/annotation6> , <http://www.async.ece.utah.edu/pICH37431/annotation7>;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
         sbol:hasSequence              <http://www.async.ece.utah.edu/pICH37431_seq>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "648";
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH37431/annotation5/range> .
+        sbol:role                     SO:0000804;
+        sbol:type                     SO:0000988 , SBO:0000251;
+        genbank:comment               "This file is created by Vector NTI http://www.invitrogen.com/";
+        genbank:date                  "7-JUL-2008";
+        genbank:division              "UNA";
+        genbank:locus                 "pICH37431";
+        genbank:molecule              "DNA";
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH37431> .
 
 <http://www.async.ece.utah.edu/pICH37431/annotation8/range>
         rdf:type                      sbol:Range;

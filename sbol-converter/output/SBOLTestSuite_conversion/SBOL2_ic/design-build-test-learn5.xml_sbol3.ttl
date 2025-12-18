@@ -1,0 +1,49 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+PREFIX sys-bio:     <http://sys-bio.org#>
+
+<http://sys-bio.org/1.0.0/Model_fit_model>
+        rdf:type                      sbol:Model;
+        sbol:displayId                "Model_fit_model";
+        sbol:framework                SBO:0000062;
+        sbol:hasNamespace             <http://sys-bio.org>;
+        sbol:language                 EDAM:format_2585;
+        sbol:source                   <file://server.sys-bio.org/models/model_fit.xml>;
+        prov:wasDerivedFrom           <http://sys-bio.org/Attachment_raw_data/1.0.0>;
+        prov:wasGeneratedBy           <http://sys-bio.org/Activity_fit_model_generation/1.0.0>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Model_fit_model/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Model_predicted>
+        rdf:type                      sbol:Model;
+        sbol:displayId                "Model_predicted";
+        sbol:framework                SBO:0000062;
+        sbol:hasNamespace             <http://sys-bio.org>;
+        sbol:language                 EDAM:format_2585;
+        sbol:source                   <file://server.sys-bio.org/circuit_simulation.xml>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Model_predicted/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Implementation_build>
+        rdf:type                      sbol:Implementation;
+        sbol:displayId                "Implementation_build";
+        sbol:hasNamespace             <http://sys-bio.org>;
+        prov:wasDerivedFrom           <http://sys-bio.org/ModuleDefinition_design/1.0.0>;
+        prov:wasGeneratedBy           <http://sys-bio.org/Activity_build_generation/1.0.0>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Implementation_build/1.0.0> .
+
+<http://sys-bio.org/1.0.0/ModuleDefinition_design>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "ModuleDefinition_design";
+        sbol:hasNamespace             <http://sys-bio.org>;
+        sbol:type                     SBO:0000241;
+        prov:wasDerivedFrom           <http://sys-bio.org/Model_predicted/1.0.0>;
+        prov:wasGeneratedBy           <http://sys-bio.org/Activity_design_generation/1.0.0>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/ModuleDefinition_design/1.0.0> .

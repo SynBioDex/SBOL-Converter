@@ -1,0 +1,66 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dc:          <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX igem:        <http://wiki.synbiohub.org/wiki/Terms/igem#>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbh:         <http://wiki.synbiohub.org/wiki/Terms/synbiohub#>
+PREFIX sbol:        <http://sbols.org/v3#>
+
+<https://synbiohub.org/public/igem/1/igem2sbol>
+        rdf:type                      prov:Activity , sbol:TopLevel;
+        dc:creator                    "James Alastair McLaughlin" , "Chris J. Myers";
+        sbol:description              "Conversion of the iGEM parts registry to SBOL2.1";
+        sbol:displayId                "igem2sbol";
+        sbol:hasNamespace             <https://synbiohub.org/public/igem>;
+        sbol:name                     "iGEM to SBOL conversion";
+        sbh:ownedBy                   <https://synbiohub.org/user/james> , <https://synbiohub.org/user/myers>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/igem2sbol/1>;
+        prov:endedAtTime              "2017-03-06T15:00:00Z";
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/igem2sbol/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity>
+        rdf:type                      sbol:TopLevel , prov:Activity;
+        dc:creator                    "Michael Zhang";
+        sbol:displayId                "GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity";
+        sbol:hasNamespace             <http://michael.zhang>;
+        prov:endedAtTime              "2018-01-23T00:15:46Z";
+        prov:qualifiedAssociation     <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/Association>;
+        prov:qualifiedUsage           <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/GFP_Reporter_Template_CombinatorialDerivation_Sample_Usage>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_SBOLDesignerActivity/Association>
+        rdf:type                      sbol:Identified , prov:Association;
+        sbol:displayId                "Association";
+        prov:agent                    <https://synbiohub.org/public/SBOL_Software/2.2/SBOLDesigner>;
+        prov:hadRole                  <http://sbols.org/v2#sequenceEditor>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/Association/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_SBOLDesignerActivity>
+        rdf:type                      sbol:TopLevel , prov:Activity;
+        dc:creator                    "Michael Zhang";
+        sbol:displayId                "GFP_Reporter_Template_SBOLDesignerActivity";
+        sbol:hasNamespace             <http://michael.zhang>;
+        prov:endedAtTime              "2018-01-23T00:15:40Z";
+        prov:qualifiedAssociation     <http://michael.zhang/1/GFP_Reporter_Template_SBOLDesignerActivity/Association>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/GFP_Reporter_Template_CombinatorialDerivation_Sample_Usage>
+        rdf:type                      sbol:Identified , prov:Usage;
+        sbol:displayId                "GFP_Reporter_Template_CombinatorialDerivation_Sample_Usage";
+        prov:entity                   <http://michael.zhang/1/GFP_Reporter_Template_CombinatorialDerivation_Sample>;
+        prov:hadRole                  <http://sbols.org/v2#sequenceEditor>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/GFP_Reporter_Template_CombinatorialDerivation_Sample_Usage/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/Association>
+        rdf:type                      sbol:Identified , prov:Association;
+        sbol:displayId                "Association";
+        prov:agent                    <https://synbiohub.org/public/SBOL_Software/2.2/SBOLDesigner>;
+        prov:hadRole                  <http://sbols.org/v2#sequenceEditor>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_GeneratedInstance2_SBOLDesignerActivity/Association/1> .

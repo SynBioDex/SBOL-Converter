@@ -10,6 +10,8 @@ public class ConverterVocabulary {
         public static final URI sbol3TempSequenceURI = ConverterNameSpace.BackPort_2_3.local("sbol3TempSequenceURI");
         public static final URI sbol2LocationSequenceNull = ConverterNameSpace.BackPort_2_3.local("sbol2LocationSequenceNull");
         public static final URI sbol2OriginalURI = ConverterNameSpace.BackPort_2_3.local("sbol2OriginalURI");
+        public static final URI sbol2OriginatesFromModule = ConverterNameSpace.BackPort_2_3.local("sbol2OriginatesFromModule");
+        
         
     }
 		
