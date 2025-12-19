@@ -18,6 +18,7 @@
          <sbol:Identified rdf:about="http://sys-bio.org/1.0.0/Activity_build_generation/build_generation_association">
             <backport2_3:sbol2OriginalURI rdf:resource="http://sys-bio.org/Activity_build_generation/build_generation_association/1.0.0"/>
             <prov:hadRole rdf:resource="http://sbols.org/v2#build"/>
+            <prov:hadPlan rdf:resource="http://sys-bio.org/1.0.0/Plan_gibson_assembly"/>
             <prov:agent rdf:resource="https://synbiohub.org/1.0.0/jdoe"/>
             <sbol:displayId>build_generation_association</sbol:displayId>
             <rdf:type rdf:resource="http://www.w3.org/ns/prov#Association"/>

@@ -277,15 +277,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasGeneratedBy           <http://michael.zhang/Eukaryotic_Promoters_GeneratedInstance3_SBOLDesignerActivity/1> , <http://michael.zhang/Eukaryotic_Promoters_SBOLDesignerActivity/1>;
         backport2_3:sbol2OriginalURI  <http://michael.zhang/Eukaryotic_PromotersSequence/1> .
 
-<https://synbiohub.org/public/igem/1/BBa_R0011/annotation1999>
-        rdf:type                      sbol:SequenceFeature;
-        sbol:displayId                "annotation1999";
-        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_R0011/annotation1999/range1999>;
-        sbol:name                     "lac O1";
-        sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#feature/operator> , SO:0000057;
-        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_R0011/1>;
-        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_R0011/annotation1999/1> .
-
 <https://synbiohub.org/public/igem/1/BBa_B0034>
         rdf:type                      sbol:Component;
         dc:creator                    "Vinay S Mahajan, Voichita D. Marinescu, Brian Chow, Alexander      D Wissner-Gross and Peter Carr IAP, 2003.";
@@ -318,6 +309,15 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_B0034>;
         prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0034/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_R0011/annotation1999>
+        rdf:type                      sbol:SequenceFeature;
+        sbol:displayId                "annotation1999";
+        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_R0011/annotation1999/range1999>;
+        sbol:name                     "lac O1";
+        sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#feature/operator> , SO:0000057;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_R0011/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_R0011/annotation1999/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_B0012/annotation1687/range1687>
         rdf:type                      sbol:Range;
@@ -584,7 +584,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <https://synbiohub.org/public/igem/1/BBa_I13603/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_I13603/component2221496> , <https://synbiohub.org/public/igem/1/BBa_I13603/component2221478> .
+        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_I13603/component2221478> , <https://synbiohub.org/public/igem/1/BBa_I13603/component2221496> .
 
 <https://synbiohub.org/public/igem/1/BBa_I13603_sequence>
         rdf:type                      sbol:Sequence;
@@ -772,19 +772,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0010/1> .
 
-<https://synbiohub.org/public/igem/1/BBa_E0022/annotation7040/range7040>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range7040";
-        sbol:end                      "762";
-        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_E0022_sequence>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "1";
-        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
-        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_E0022/1>;
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0022/annotation7040/range7040/1> .
-
 <https://synbiohub.org/public/igem/1/BBa_B0012/annotation7020/range7020>
         rdf:type                      sbol:Range;
         sbol:displayId                "range7020";
@@ -797,6 +784,19 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0012/annotation7020/range7020/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_E0022/annotation7040/range7040>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range7040";
+        sbol:end                      "762";
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_E0022_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1";
+        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_E0022/1>;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0022/annotation7040/range7040/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_I741109/annotation1936878>
         rdf:type                      sbol:SequenceFeature;
@@ -933,7 +933,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://michael.zhang/1/Eukaryotic_Promoters/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://michael.zhang/1/Eukaryotic_Promoters/Pro_Component> , <http://michael.zhang/1/Eukaryotic_Promoters/Op_Component> .
+        sbol:nondirectional  <http://michael.zhang/1/Eukaryotic_Promoters/Op_Component> , <http://michael.zhang/1/Eukaryotic_Promoters/Pro_Component> .
 
 <https://synbiohub.org/public/igem/1/BBa_I9201>
         rdf:type                      sbol:Component;
@@ -1113,7 +1113,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <https://synbiohub.org/public/igem/1/BBa_E0422/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_E0422/component942823> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942815> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942803> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942833> .
+        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_E0422/component942803> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942823> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942833> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942815> .
 
 <http://michael.zhang/1/Eukaryotic_Promoters_GeneratedInstance3_SBOLDesignerActivity/Eukaryotic_Promoters_CombinatorialDerivation_Usage>
         rdf:type                      sbol:Identified , prov:Usage;
@@ -1218,12 +1218,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_R0011/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_R0011/annotation7064/1> .
 
-<http://michael.zhang/1/Eukaryotic_Promoters_GeneratedInstance3/Pro_Component>
-        rdf:type                      sbol:SubComponent;
-        sbol:displayId                "Pro_Component";
-        sbol:instanceOf               <https://synbiohub.org/public/igem/1/BBa_I712004>;
-        backport2_3:sbol2OriginalURI  <http://michael.zhang/Eukaryotic_Promoters_GeneratedInstance3/Pro_Component/1> .
-
 <https://synbiohub.org/public/igem/1/BBa_R0011/annotation2001>
         rdf:type                      sbol:SequenceFeature;
         sbol:displayId                "annotation2001";
@@ -1232,6 +1226,12 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#feature/operator> , SO:0000057;
         sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_R0011/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_R0011/annotation2001/1> .
+
+<http://michael.zhang/1/Eukaryotic_Promoters_GeneratedInstance3/Pro_Component>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "Pro_Component";
+        sbol:instanceOf               <https://synbiohub.org/public/igem/1/BBa_I712004>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/Eukaryotic_Promoters_GeneratedInstance3/Pro_Component/1> .
 
 <http://michael.zhang/Eukaryotic_Promoters_CombinatorialDerivation>
         rdf:type                      sbol:CombinatorialDerivation;

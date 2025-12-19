@@ -90,5 +90,5 @@
 <https://dummy.org/public/ACS_SynBio/attachment_00009Les8pDTQCmKA7A5T6> <http://sbols.org/v2#hash> "404966a5062857f63edb5c3ba16bb581d7fb6a1e" .
 <https://dummy.org/public/ACS_SynBio/attachment_00009Les8pDTQCmKA7A5T6> <http://sbols.org/v2#persistentIdentity> <https://dummy.org/public/ACS_SynBio/attachment_00009Les8pDTQCmKA7A5T6> .
 <https://dummy.org/public/ACS_SynBio/attachment_00009Les8pDTQCmKA7A5T6> <http://sbols.org/v2#size> "31399" .
-<https://dummy.org/public/ACS_SynBio/attachment_00009Les8pDTQCmKA7A5T6> <http://sbols.org/v2#source> <https://dummy.org/public/ACS_SynBio/attachment_00009Les8pDTQCmKA7A5T6/download/1> .
+<https://dummy.org/public/ACS_SynBio/attachment_00009Les8pDTQCmKA7A5T6> <http://sbols.org/v2#source> <https://dummy.org/public/ACS_SynBio/attachment_00009Les8pDTQCmKA7A5T6/1/download> .
 <https://dummy.org/public/ACS_SynBio/attachment_00009Les8pDTQCmKA7A5T6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#Attachment> .

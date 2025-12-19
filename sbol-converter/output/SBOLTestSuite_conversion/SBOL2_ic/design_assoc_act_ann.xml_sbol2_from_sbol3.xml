@@ -12,6 +12,7 @@
         <sbol:version>1.0.0</sbol:version>
         <prov:hadRole rdf:resource="http://sbols.org/v2#build"/>
         <prov:agent rdf:resource="https://synbiohub.org/jdoe/1.0.0"/>
+        <prov:hadPlan rdf:resource="http://sys-bio.org/Plan_gibson_assembly/1.0.0"/>
       </prov:Association>
     </prov:qualifiedAssociation>
   </prov:Activity>

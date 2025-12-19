@@ -39,7 +39,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbolstandard.org/example/toggle_switch/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://sbolstandard.org/example/toggle_switch/LacI> , <http://sbolstandard.org/example/toggle_switch/TetR> .
+        sbol:nondirectional  <http://sbolstandard.org/example/toggle_switch/TetR> , <http://sbolstandard.org/example/toggle_switch/LacI> .
 
 <http://sbolstandard.org/example/toggle_switch>
         rdf:type                      sbol:Component;

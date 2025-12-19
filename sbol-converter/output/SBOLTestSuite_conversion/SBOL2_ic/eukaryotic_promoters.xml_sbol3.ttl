@@ -559,7 +559,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <https://synbiohub.org/public/igem/1/BBa_I13603/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_I13603/component2221496> , <https://synbiohub.org/public/igem/1/BBa_I13603/component2221478> .
+        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_I13603/component2221478> , <https://synbiohub.org/public/igem/1/BBa_I13603/component2221496> .
 
 <https://synbiohub.org/public/igem/1/BBa_I13603_sequence>
         rdf:type                      sbol:Sequence;
@@ -747,19 +747,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0010/1> .
 
-<https://synbiohub.org/public/igem/1/BBa_E0022/annotation7040/range7040>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range7040";
-        sbol:end                      "762";
-        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_E0022_sequence>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "1";
-        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
-        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_E0022/1>;
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0022/annotation7040/range7040/1> .
-
 <https://synbiohub.org/public/igem/1/BBa_B0012/annotation7020/range7020>
         rdf:type                      sbol:Range;
         sbol:displayId                "range7020";
@@ -772,6 +759,19 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0012/annotation7020/range7020/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_E0022/annotation7040/range7040>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range7040";
+        sbol:end                      "762";
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_E0022_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1";
+        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_E0022/1>;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0022/annotation7040/range7040/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_I741109/annotation1936878>
         rdf:type                      sbol:SequenceFeature;
@@ -903,7 +903,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://michael.zhang/1/Eukaryotic_Promoters/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://michael.zhang/1/Eukaryotic_Promoters/Pro_Component> , <http://michael.zhang/1/Eukaryotic_Promoters/Op_Component> .
+        sbol:nondirectional  <http://michael.zhang/1/Eukaryotic_Promoters/Op_Component> , <http://michael.zhang/1/Eukaryotic_Promoters/Pro_Component> .
 
 <https://synbiohub.org/public/igem/1/BBa_I9201>
         rdf:type                      sbol:Component;
@@ -1083,7 +1083,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <https://synbiohub.org/public/igem/1/BBa_E0422/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_E0422/component942823> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942815> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942803> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942833> .
+        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_E0422/component942803> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942823> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942833> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942815> .
 
 <https://synbiohub.org/public/igem/1/BBa_I741109/annotation1936875>
         rdf:type                      sbol:SequenceFeature;

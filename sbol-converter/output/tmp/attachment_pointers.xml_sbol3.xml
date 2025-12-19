@@ -139,12 +139,13 @@
    </sbol:Attachment>
    <sbol:Attachment rdf:about="https://dummy.org/public/ACS_SynBio/attachment_00009Les8pDTQCmKA7A5T6">
       <sbol:hasNamespace rdf:resource="https://dummy.org/public/ACS_SynBio"/>
+      <sbol:hashAlgorithm>sha-256</sbol:hashAlgorithm>
       <sbol:hasAttachment rdf:resource="http://sys-bio.org/Attachment/1.0.0/characterization_protocol"/>
       <sbol:size>31399</sbol:size>
       <sbol:displayId>attachment_00009Les8pDTQCmKA7A5T6</sbol:displayId>
       <sbol:source rdf:resource="https://dummy.org/public/ACS_SynBio/attachment_00009Les8pDTQCmKA7A5T6/1/download"/>
       <sbol:name>NicePlot.png</sbol:name>
-      <sbol:format rdf:resource="http://identifiers.org/edam/format_3603"/>
+      <sbol:format rdf:resource="https://identifiers.org/edam:format_3603"/>
       <sbol:hash>404966a5062857f63edb5c3ba16bb581d7fb6a1e</sbol:hash>
       <backport2_3:sbol2OriginalURI rdf:resource="https://dummy.org/public/ACS_SynBio/attachment_00009Les8pDTQCmKA7A5T6"/>
    </sbol:Attachment>

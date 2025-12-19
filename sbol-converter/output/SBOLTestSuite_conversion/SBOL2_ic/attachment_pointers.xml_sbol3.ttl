@@ -15,10 +15,11 @@ PREFIX sys-bio:     <http://sys-bio.org#>
 <https://dummy.org/public/ACS_SynBio/attachment_00009Les8pDTQCmKA7A5T6>
         rdf:type                      sbol:Attachment;
         sbol:displayId                "attachment_00009Les8pDTQCmKA7A5T6";
-        sbol:format                   <http://identifiers.org/edam/format_3603>;
+        sbol:format                   EDAM:format_3603;
         sbol:hasAttachment            <http://sys-bio.org/Attachment/1.0.0/characterization_protocol>;
         sbol:hasNamespace             <https://dummy.org/public/ACS_SynBio>;
         sbol:hash                     "404966a5062857f63edb5c3ba16bb581d7fb6a1e";
+        sbol:hashAlgorithm            "sha-256";
         sbol:name                     "NicePlot.png";
         sbol:size                     "31399";
         sbol:source                   <https://dummy.org/public/ACS_SynBio/attachment_00009Les8pDTQCmKA7A5T6/1/download>;

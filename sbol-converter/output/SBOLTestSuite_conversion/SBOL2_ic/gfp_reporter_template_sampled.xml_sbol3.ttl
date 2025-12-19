@@ -420,7 +420,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <https://synbiohub.org/public/igem/1/BBa_B0014/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_B0014/component939303> , <https://synbiohub.org/public/igem/1/BBa_B0014/component939311> .
+        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_B0014/component939311> , <https://synbiohub.org/public/igem/1/BBa_B0014/component939303> .
 
 <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/CDS_Component>
         rdf:type                      sbol:SubComponent;
@@ -543,12 +543,12 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/Ter_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/RBS_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/CDS_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/Pro_Component> .
+        sbol:nondirectional  <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/Ter_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/CDS_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/Pro_Component> , <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance2/RBS_Component> .
 
 <http://michael.zhang/1/GFP_Reporter_Template/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://michael.zhang/1/GFP_Reporter_Template/RBS_Component> , <http://michael.zhang/1/GFP_Reporter_Template/Pro_Component> , <http://michael.zhang/1/GFP_Reporter_Template/Ter_Component> , <http://michael.zhang/1/GFP_Reporter_Template/CDS_Component> .
+        sbol:nondirectional  <http://michael.zhang/1/GFP_Reporter_Template/RBS_Component> , <http://michael.zhang/1/GFP_Reporter_Template/Ter_Component> , <http://michael.zhang/1/GFP_Reporter_Template/Pro_Component> , <http://michael.zhang/1/GFP_Reporter_Template/CDS_Component> .
 
 <http://michael.zhang/1/GFP_Reporter_Template/Pro_Component/GenericLocation>
         rdf:type                      sbol:EntireSequence;

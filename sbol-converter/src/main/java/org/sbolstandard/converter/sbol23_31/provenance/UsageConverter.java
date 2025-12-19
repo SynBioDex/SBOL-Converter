@@ -28,7 +28,7 @@ public class UsageConverter implements ChildEntityConverter<org.sbolstandard.cor
 			parameters.addMapping(sbol2Usage.getIdentity(), sbol3Usage.getUri());
 		}
 		sbol3Usage.setRoles(Util.toList(sbol2Usage.getRoles()));
-
+		
 		Util.copyIdentified(sbol2Usage, sbol3Usage, parameters);
 
 		return sbol3Usage;

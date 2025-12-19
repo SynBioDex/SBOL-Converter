@@ -10,21 +10,21 @@ PREFIX prov:        <http://www.w3.org/ns/prov#>
 PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX sbol:        <http://sbols.org/v3#>
 
-<http://sbolstandard.org/example/tetr_inverter>
-        rdf:type                      sbol:Component;
-        sbol:displayId                "tetr_inverter";
-        sbol:hasFeature               <http://sbolstandard.org/example/tetr_inverter/promoter> , <http://sbolstandard.org/example/tetr_inverter/TF>;
-        sbol:hasInterface             <http://sbolstandard.org/example/tetr_inverter/Interface1>;
-        sbol:hasNamespace             <http://sbolstandard.org/example>;
-        sbol:role                     <https://parts.igem.org/cgi/partsdb/pgroup.cgi?pgroup=inverter>;
-        sbol:type                     SBO:0000241;
-        backport2_3:sbol2OriginalURI  <http://sbolstandard.org/example/tetr_inverter> .
-
 <http://sbolstandard.org/example/toggle_switch/LacI>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "LacI";
         sbol:instanceOf               <http://identifiers.org/uniprot/P03023>;
         backport2_3:sbol2OriginalURI  <http://sbolstandard.org/example/toggle_switch/LacI> .
+
+<http://sbolstandard.org/example/tetr_inverter>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "tetr_inverter";
+        sbol:hasFeature               <http://sbolstandard.org/example/tetr_inverter/TF> , <http://sbolstandard.org/example/tetr_inverter/promoter>;
+        sbol:hasInterface             <http://sbolstandard.org/example/tetr_inverter/Interface1>;
+        sbol:hasNamespace             <http://sbolstandard.org/example>;
+        sbol:role                     <https://parts.igem.org/cgi/partsdb/pgroup.cgi?pgroup=inverter>;
+        sbol:type                     SBO:0000241;
+        backport2_3:sbol2OriginalURI  <http://sbolstandard.org/example/tetr_inverter> .
 
 <http://sbolstandard.org/example/tetr_inverter/TF>
         rdf:type                      sbol:SubComponent;
@@ -32,16 +32,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:instanceOf               <http://identifiers.org/uniprot/Q6QR72>;
         backport2_3:sbol2OriginalURI  <http://sbolstandard.org/example/tetr_inverter/TF> .
 
+<http://sbolstandard.org/example/toggle_switch/Interface1>
+        rdf:type             sbol:Interface;
+        sbol:displayId       "Interface1";
+        sbol:nondirectional  <http://sbolstandard.org/example/toggle_switch/TetR> , <http://sbolstandard.org/example/toggle_switch/LacI> .
+
 <http://sbolstandard.org/example/toggle_switch/TetR>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "TetR";
         sbol:instanceOf               <http://identifiers.org/uniprot/Q6QR72>;
         backport2_3:sbol2OriginalURI  <http://sbolstandard.org/example/toggle_switch/TetR> .
-
-<http://sbolstandard.org/example/toggle_switch/Interface1>
-        rdf:type             sbol:Interface;
-        sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://sbolstandard.org/example/toggle_switch/LacI> , <http://sbolstandard.org/example/toggle_switch/TetR> .
 
 <http://sbolstandard.org/example/toggle_switch2/laci_inverter_module>
         rdf:type         sbol:SubComponent;
@@ -113,4 +113,4 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbolstandard.org/example/tetr_inverter/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://sbolstandard.org/example/tetr_inverter/promoter> , <http://sbolstandard.org/example/tetr_inverter/TF> .
+        sbol:nondirectional  <http://sbolstandard.org/example/tetr_inverter/TF> , <http://sbolstandard.org/example/tetr_inverter/promoter> .

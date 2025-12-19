@@ -52,7 +52,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <https://synbiohub.org/public/igem/1/BBa_E0422/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_E0422/component942823> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942815> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942803> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942833> .
+        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_E0422/component942803> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942823> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942833> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942815> .
 
 <https://synbiohub.org/public/igem/1/BBa_E0422>
         rdf:type                      sbol:Component;

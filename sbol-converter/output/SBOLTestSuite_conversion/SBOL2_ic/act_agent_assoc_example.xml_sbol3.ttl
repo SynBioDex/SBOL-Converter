@@ -28,5 +28,6 @@ PREFIX sys-bio:     <http://sys-bio.org#>
         rdf:type                      sbol:Identified , prov:Association;
         sbol:displayId                "build_generation_association";
         prov:agent                    <http://www.async.ece.utah.edu/unknown>;
+        prov:hadPlan                  <http://sys-bio.org/1.0.0/Plan_gibson_assembly>;
         prov:hadRole                  <http://sbols.org/v2#build>;
         backport2_3:sbol2OriginalURI  <http://sys-bio.org/Activity_build_generation/build_generation_association/1.0.0> .

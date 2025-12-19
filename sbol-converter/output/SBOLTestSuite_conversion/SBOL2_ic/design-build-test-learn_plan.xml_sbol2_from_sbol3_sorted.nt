@@ -1,3 +1,4 @@
+<http://sys-bio.org/Plan_model_fitting/1.0.0> <http://sbols.org/v2#attachment> <http://sys-bio.org/Attachment_model_fitting_script/1.0.0> .
 <http://sys-bio.org/Plan_model_fitting/1.0.0> <http://sbols.org/v2#displayId> "Plan_model_fitting" .
 <http://sys-bio.org/Plan_model_fitting/1.0.0> <http://sbols.org/v2#persistentIdentity> <http://sys-bio.org/Plan_model_fitting> .
 <http://sys-bio.org/Plan_model_fitting/1.0.0> <http://sbols.org/v2#version> "1.0.0" .
