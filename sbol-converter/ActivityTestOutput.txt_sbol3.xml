@@ -13,8 +13,13 @@
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:TopLevel rdf:about="http://partsregistry.org/act/TEST_ACTIVITY">
       <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/act/TEST_ACTIVITY"/>
+<<<<<<< HEAD
       <prov:endedAtTime>2025-12-18T11:56:14Z</prov:endedAtTime>
       <prov:startedAtTime>2025-12-08T11:56:14Z</prov:startedAtTime>
+=======
+      <prov:endedAtTime>2025-12-18T19:22:52.426Z</prov:endedAtTime>
+      <prov:startedAtTime>2025-12-08T19:22:52.426Z</prov:startedAtTime>
+>>>>>>> feature/combder
       <sbol:hasNamespace rdf:resource="http://partsregistry.org/act"/>
       <sbol:displayId>TEST_ACTIVITY</sbol:displayId>
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>

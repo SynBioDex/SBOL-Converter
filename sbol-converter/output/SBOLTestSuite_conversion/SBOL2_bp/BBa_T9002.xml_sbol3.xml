@@ -1660,8 +1660,8 @@
             <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/BBa_T9002/component13"/>
             <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/BBa_T9002/component7"/>
             <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/BBa_T9002/BBa_E0240"/>
-            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/BBa_T9002/f_1565191"/>
             <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/BBa_T9002/BBa_B0010"/>
+            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/BBa_T9002/f_1565191"/>
             <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/BBa_T9002/f_1565252"/>
             <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/BBa_T9002/BBa_B0012"/>
             <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/BBa_T9002/component9"/>

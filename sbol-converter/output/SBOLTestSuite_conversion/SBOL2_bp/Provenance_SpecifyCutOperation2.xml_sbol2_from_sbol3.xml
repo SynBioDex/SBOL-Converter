@@ -3,6 +3,7 @@
   <sbol:ComponentDefinition rdf:about="http://sbolstandard.org/build/linearized_vector">
     <sbol:persistentIdentity rdf:resource="http://sbolstandard.org/build/linearized_vector"/>
     <sbol:displayId>linearized_vector</sbol:displayId>
+    <prov:wasGeneratedBy rdf:resource="http://sbolstandard.org/build/cut_vector_with_restriction_enzyme"/>
     <dcterms:title>linearized_vector</dcterms:title>
     <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
     <sbol:type rdf:resource="http://identifiers.org/so/SO:0000987"/>

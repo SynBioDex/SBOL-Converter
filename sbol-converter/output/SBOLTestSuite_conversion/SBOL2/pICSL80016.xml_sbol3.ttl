@@ -54,6 +54,19 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL80016/annotation7/range> .
 
+<<<<<<< HEAD
+=======
+<http://www.async.ece.utah.edu/pICSL80016/annotation1>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:label                  "Sm/Sp no DraIII";
+        gbConv:vntifkey               "4";
+        sbol:displayId                "annotation1";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL80016/annotation1/range>;
+        sbol:name                     "Sm/Sp no DraIII";
+        sbol:role                     SO:0000316;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL80016/annotation1> .
+
+>>>>>>> feature/combder
 <http://www.async.ece.utah.edu/pICSL80016>
         rdf:type                      sbol:Component;
         sbol:displayId                "pICSL80016";

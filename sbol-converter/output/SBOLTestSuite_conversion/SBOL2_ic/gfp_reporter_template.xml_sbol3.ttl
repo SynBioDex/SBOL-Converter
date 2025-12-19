@@ -188,7 +188,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
         dc:creator                    "Michael Zhang";
         sbol:displayId                "GFP_Reporter_Template_SBOLDesignerActivity";
         sbol:hasNamespace             <http://michael.zhang>;
-        prov:endedAtTime              "2018-01-16T05:33:17Z";
+        prov:endedAtTime              "2018-01-16T05:33:17.052Z";
         prov:qualifiedAssociation     <http://michael.zhang/1/GFP_Reporter_Template_SBOLDesignerActivity/Association>;
         backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1> .
 
@@ -280,19 +280,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0014/annotation939311/range939311/1> .
 
-<https://synbiohub.org/public/igem/1/BBa_B0012/annotation1687/range1687>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range1687";
-        sbol:end                      "34";
-        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_B0012_sequence>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "34";
-        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
-        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0012/1>;
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0012/annotation1687/range1687/1> .
-
 <https://synbiohub.org/public/igem/1/BBa_E0040/annotation1934520/range1934520>
         rdf:type                      sbol:Range;
         sbol:displayId                "range1934520";
@@ -305,6 +292,19 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0040/annotation1934520/range1934520/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0012/annotation1687/range1687>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range1687";
+        sbol:end                      "34";
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_B0012_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "34";
+        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0012/1>;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0012/annotation1687/range1687/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_E0040_sequence>
         rdf:type                      sbol:Sequence;
@@ -337,6 +337,15 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:role                     SO:0000330 , <https://wiki.synbiohub.org/wiki/Terms/igem#feature/conserved>;
         sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0034/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0034/annotation23325/1> .
+
+<http://michael.zhang/1/GFP_Reporter_Template_CombinatorialDerivation_Sample>
+        rdf:type                      sbol:CombinatorialDerivation;
+        sbol:displayId                "GFP_Reporter_Template_CombinatorialDerivation_Sample";
+        sbol:hasNamespace             <http://michael.zhang>;
+        sbol:hasVariableFeature       <http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample/1/Pro_Component_VariableComponent>;
+        sbol:strategy                 sbol:sample;
+        sbol:template                 <http://michael.zhang/1/GFP_Reporter_Template>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_B0011/annotation7019>
         rdf:type                      sbol:SequenceFeature;
@@ -567,6 +576,13 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:endedAtTime              "2017-03-06T15:00:00Z";
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/igem2sbol/1> .
 
+<http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample/1/Pro_Component_VariableComponent>
+        rdf:type          sbol:VariableFeature;
+        sbol:cardinality  sbol:zeroOrOne;
+        sbol:displayId    "Pro_Component_VariableComponent";
+        sbol:variable     <http://michael.zhang/1/GFP_Reporter_Template/Pro_Component>;
+        sbol:variant      <https://synbiohub.org/public/igem/1/BBa_K1545000> , <https://synbiohub.org/public/igem/1/BBa_K1545001> .
+
 <http://michael.zhang/1/GFP_Reporter_Template/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
@@ -580,6 +596,13 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template/GFP_Reporter_Template_SequenceAnnotation/GenericLocation/1> .
+
+<http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation/CDS_Component_VariableComponent>
+        rdf:type          sbol:VariableFeature;
+        sbol:cardinality  sbol:one;
+        sbol:displayId    "CDS_Component_VariableComponent";
+        sbol:variable     <http://michael.zhang/1/GFP_Reporter_Template/CDS_Component>;
+        sbol:variant      <https://synbiohub.org/public/igem/1/BBa_I766210> , <https://synbiohub.org/public/igem/1/BBa_M36577> , <https://synbiohub.org/public/igem/1/BBa_E0040> .
 
 <http://michael.zhang/1/GFP_Reporter_Template/Ter_Component/GFP_Reporter_Template_SequenceAnnotation3_Range>
         rdf:type                      sbol:Range;
@@ -730,6 +753,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_B0014>;
         prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0014/1> .
+
+<http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation>
+        rdf:type                      sbol:CombinatorialDerivation;
+        sbol:displayId                "GFP_Reporter_Template_CombinatorialDerivation";
+        sbol:hasNamespace             <http://michael.zhang>;
+        sbol:hasVariableFeature       <http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation/CDS_Component_VariableComponent>;
+        sbol:strategy                 sbol:enumerate;
+        sbol:template                 <http://michael.zhang/1/GFP_Reporter_Template>;
+        prov:wasGeneratedBy           <http://michael.zhang/GFP_Reporter_Template_SBOLDesignerActivity/1>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation> .
 
 <http://michael.zhang/1/GFP_Reporter_Template/CDS_Component>
         rdf:type                      sbol:SubComponent;

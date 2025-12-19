@@ -19,26 +19,26 @@
          </sbol:Interaction>
       </sbol:hasInteraction>
       <sbol:hasFeature>
-         <sbol:SubComponent rdf:about="http://sbolstandard.org/example/md/GFP_expression/GFP_protein">
-            <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/md/GFP_expression/GFP_protein"/>
-            <sbol:instanceOf rdf:resource="http://sbolstandard.org/example/GFP"/>
-            <sbol:displayId>GFP_protein</sbol:displayId>
+         <sbol:SubComponent rdf:about="http://sbolstandard.org/example/md/GFP_expression/Constitutive_GFP">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/md/GFP_expression/Constitutive_GFP"/>
+            <sbol:instanceOf rdf:resource="http://sbolstandard.org/example/GFP_generator"/>
+            <sbol:displayId>Constitutive_GFP</sbol:displayId>
          </sbol:SubComponent>
       </sbol:hasFeature>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbolstandard.org/example/md/GFP_expression/Interface1">
-            <sbol:output rdf:resource="http://sbolstandard.org/example/md/GFP_expression/GFP_protein"/>
-            <sbol:input>
-               <sbol:SubComponent rdf:about="http://sbolstandard.org/example/md/GFP_expression/Constitutive_GFP">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/md/GFP_expression/Constitutive_GFP"/>
-                  <sbol:instanceOf rdf:resource="http://sbolstandard.org/example/GFP_generator"/>
-                  <sbol:displayId>Constitutive_GFP</sbol:displayId>
+            <sbol:input rdf:resource="http://sbolstandard.org/example/md/GFP_expression/Constitutive_GFP"/>
+            <sbol:output>
+               <sbol:SubComponent rdf:about="http://sbolstandard.org/example/md/GFP_expression/GFP_protein">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/md/GFP_expression/GFP_protein"/>
+                  <sbol:instanceOf rdf:resource="http://sbolstandard.org/example/GFP"/>
+                  <sbol:displayId>GFP_protein</sbol:displayId>
                </sbol:SubComponent>
-            </sbol:input>
+            </sbol:output>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
-      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/md/GFP_expression/Constitutive_GFP"/>
+      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/md/GFP_expression/GFP_protein"/>
       <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/md/GFP_expression"/>
       <sbol:hasNamespace rdf:resource="http://sbolstandard.org/example/md"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>

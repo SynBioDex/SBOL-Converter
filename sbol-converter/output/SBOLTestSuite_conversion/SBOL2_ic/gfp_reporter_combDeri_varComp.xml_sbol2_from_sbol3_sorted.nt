@@ -1,0 +1,6 @@
+<http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample/1> <http://sbols.org/v2#displayId> "GFP_Reporter_Template_CombinatorialDerivation_Sample" .
+<http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample/1> <http://sbols.org/v2#persistentIdentity> <http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample> .
+<http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample/1> <http://sbols.org/v2#strategy> <http://sbols.org/v2#sample> .
+<http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample/1> <http://sbols.org/v2#template> <http://michael.zhang/GFP_Reporter_Template/1> .
+<http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample/1> <http://sbols.org/v2#version> "1" .
+<http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#CombinatorialDerivation> .

@@ -23,16 +23,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH75111/annotation0/range> .
 
-<http://www.async.ece.utah.edu/pICH75111/annotation5>
-        rdf:type                      sbol:SequenceFeature;
-        gbConv:featureType            "MIsc._Feature";
-        gbConv:label                  "AATG 4bp overhang";
-        sbol:displayId                "annotation5";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH75111/annotation5/range>;
-        sbol:name                     "AATG 4bp overhang";
-        sbol:role                     SO:0000110;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH75111/annotation5> .
-
 <http://www.async.ece.utah.edu/pICH75111/annotation3/range>
         rdf:type                      sbol:Range;
         sbol:displayId                "range";
@@ -43,6 +33,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH75111/annotation3/range> .
+
+<http://www.async.ece.utah.edu/pICH75111/annotation5>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "MIsc._Feature";
+        gbConv:label                  "AATG 4bp overhang";
+        sbol:displayId                "annotation5";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH75111/annotation5/range>;
+        sbol:name                     "AATG 4bp overhang";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH75111/annotation5> .
 
 <http://www.async.ece.utah.edu/pICH75111/annotation0>
         rdf:type                      sbol:SequenceFeature;

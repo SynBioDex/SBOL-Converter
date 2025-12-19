@@ -277,6 +277,15 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasGeneratedBy           <http://michael.zhang/Eukaryotic_Promoters_GeneratedInstance3_SBOLDesignerActivity/1> , <http://michael.zhang/Eukaryotic_Promoters_SBOLDesignerActivity/1>;
         backport2_3:sbol2OriginalURI  <http://michael.zhang/Eukaryotic_PromotersSequence/1> .
 
+<https://synbiohub.org/public/igem/1/BBa_R0011/annotation1999>
+        rdf:type                      sbol:SequenceFeature;
+        sbol:displayId                "annotation1999";
+        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_R0011/annotation1999/range1999>;
+        sbol:name                     "lac O1";
+        sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#feature/operator> , SO:0000057;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_R0011/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_R0011/annotation1999/1> .
+
 <https://synbiohub.org/public/igem/1/BBa_B0034>
         rdf:type                      sbol:Component;
         dc:creator                    "Vinay S Mahajan, Voichita D. Marinescu, Brian Chow, Alexander      D Wissner-Gross and Peter Carr IAP, 2003.";
@@ -309,15 +318,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_B0034>;
         prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0034/1> .
-
-<https://synbiohub.org/public/igem/1/BBa_R0011/annotation1999>
-        rdf:type                      sbol:SequenceFeature;
-        sbol:displayId                "annotation1999";
-        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_R0011/annotation1999/range1999>;
-        sbol:name                     "lac O1";
-        sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#feature/operator> , SO:0000057;
-        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_R0011/1>;
-        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_R0011/annotation1999/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_B0012/annotation1687/range1687>
         rdf:type                      sbol:Range;
@@ -434,6 +434,13 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasGeneratedBy           <http://michael.zhang/Eukaryotic_Promoters_GeneratedInstance3_SBOLDesignerActivity/1> , <http://michael.zhang/Eukaryotic_Promoters_SBOLDesignerActivity/1>;
         backport2_3:sbol2OriginalURI  <http://michael.zhang/Eukaryotic_Promoters/1> .
 
+<http://michael.zhang/Eukaryotic_Promoters_CombinatorialDerivation/Op_Component_VariableComponent>
+        rdf:type          sbol:VariableFeature;
+        sbol:cardinality  sbol:zeroOrOne;
+        sbol:displayId    "Op_Component_VariableComponent";
+        sbol:variable     <http://michael.zhang/1/Eukaryotic_Promoters/Op_Component>;
+        sbol:variant      <https://synbiohub.org/public/igem/1/BBa_I13603> , <https://synbiohub.org/public/igem/1/BBa_I9201> , <https://synbiohub.org/public/igem/1/BBa_I741109> , <https://synbiohub.org/public/igem/1/BBa_K119002> .
+
 <https://synbiohub.org/public/igem/1/BBa_R0011/annotation1999/range1999>
         rdf:type                      sbol:Range;
         sbol:displayId                "range1999";
@@ -523,7 +530,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
         dc:creator                    "Michael Zhang";
         sbol:displayId                "Eukaryotic_Promoters_GeneratedInstance3_SBOLDesignerActivity";
         sbol:hasNamespace             <http://michael.zhang>;
-        prov:endedAtTime              "2018-01-23T00:13:53Z";
+        prov:endedAtTime              "2018-01-23T00:13:53.021Z";
         prov:qualifiedAssociation     <http://michael.zhang/1/Eukaryotic_Promoters_GeneratedInstance3_SBOLDesignerActivity/Association>;
         prov:qualifiedUsage           <http://michael.zhang/1/Eukaryotic_Promoters_GeneratedInstance3_SBOLDesignerActivity/Eukaryotic_Promoters_CombinatorialDerivation_Usage>;
         backport2_3:sbol2OriginalURI  <http://michael.zhang/Eukaryotic_Promoters_GeneratedInstance3_SBOLDesignerActivity/1> .
@@ -1226,6 +1233,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_R0011/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_R0011/annotation2001/1> .
 
+<http://michael.zhang/Eukaryotic_Promoters_CombinatorialDerivation>
+        rdf:type                      sbol:CombinatorialDerivation;
+        sbol:displayId                "Eukaryotic_Promoters_CombinatorialDerivation";
+        sbol:hasNamespace             <http://michael.zhang>;
+        sbol:hasVariableFeature       <http://michael.zhang/Eukaryotic_Promoters_CombinatorialDerivation/Op_Component_VariableComponent>;
+        sbol:strategy                 sbol:sample;
+        sbol:template                 <http://michael.zhang/1/Eukaryotic_Promoters>;
+        prov:wasGeneratedBy           <http://michael.zhang/Eukaryotic_Promoters_SBOLDesignerActivity/1>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/Eukaryotic_Promoters_CombinatorialDerivation> .
+
 <https://synbiohub.org/public/igem/1/BBa_K119002_sequence>
         rdf:type                      sbol:Sequence;
         sbol:displayId                "BBa_K119002_sequence";
@@ -1364,7 +1381,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
         dc:creator                    "Michael Zhang";
         sbol:displayId                "Eukaryotic_Promoters_SBOLDesignerActivity";
         sbol:hasNamespace             <http://michael.zhang>;
-        prov:endedAtTime              "2018-01-23T00:13:45Z";
+        prov:endedAtTime              "2018-01-23T00:13:45.39Z";
         prov:qualifiedAssociation     <http://michael.zhang/1/Eukaryotic_Promoters_SBOLDesignerActivity/Association>;
         backport2_3:sbol2OriginalURI  <http://michael.zhang/Eukaryotic_Promoters_SBOLDesignerActivity/1> .
 

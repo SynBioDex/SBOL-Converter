@@ -112,11 +112,30 @@ public class TempTest {
                 //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/ModuleDefinitionOutput_maps_md_mod.xml"), true, "output/tmp/ModuleDefinitionOutput_maps_md_mod.xml", true);                
                 //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/eukaryotic_transcriptional_cd_com_sa_sc_range_ann.xml"), true, "output/tmp/eukaryotic_transcriptional_cd_com_sa_sc_range_ann.xml", true);                
                 //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/ModuleDefinitionOutput_pa_maps_mod_int_md.xml"), true, "output/tmp/ModuleDefinitionOutput_pa_maps_mod_int_md.xml", true);                
-                //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/attachment_pointers.xml"), false, "output/tmp/attachment_pointers.xml", true);                
+                List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/attachment_pointers.xml"), true, "output/tmp/attachment_pointers.xml", true);                
                 //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/ModuleDefinitionOutput_pa_int_md_mod_fc.xml"), false, "output/tmp/ModuleDefinitionOutput_pa_int_md_mod_fc.xml", true);                
                 //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/gfp_reporter_combDeri.xml"), false, "output/tmp/gfp_reporter_combDeri.xml", true);                
-                List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/eukaryotic_transcriptional_unit_enumerated.xml"), false, "output/tmp/eukaryotic_transcriptional_unit_enumerated.xml", true);                
-               
+               // List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/eukaryotic_transcriptional_unit_enumerated.xml"), false, "output/tmp/eukaryotic_transcriptional_unit_enumerated.xml", true);                
+               // List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/god_example.xml"), false, "output/tmp/god_example.xml", true);                
+           /*     
+               Twice:
+               backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit/Eukaryotic_Transcriptional_Unit_SequenceAnnotation/1
+                <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit/Pro_Component/1"/>
+                
+<sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit/Pro_Component">
+<sbol:hasLocation>
+<sbol:Range rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit/Pro_Component/Eukaryotic_Transcriptional_Unit_SequenceAnnotation_Range">
+...
+</sbol:Range>
+</sbol:hasLocation>
+<backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit/Eukaryotic_Transcriptional_Unit_SequenceAnnotation/1"/>
+<backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit/Eukaryotic_Transcriptional_Unit_SequenceAnnotation/1"/>
+<backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit/Pro_Component/1"/>
+<sbol:instanceOf rdf:resource="http://michael.zhang/1/Pro"/>
+<sbol:displayId>Pro_Component</sbol:displayId>
+</sbol:SubComponent>
+
+ */
                 TestUtil.DisplayErrors(errors);
                 if (errors != null && errors.size() > 0) {
                         // throw new Exception("Conversion produced errors");

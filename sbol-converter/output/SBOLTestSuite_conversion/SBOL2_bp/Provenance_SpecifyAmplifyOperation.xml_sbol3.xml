@@ -28,14 +28,17 @@
       <sbol:displayId>three_primer</sbol:displayId>
    </sbol:Component>
    <sbol:Component rdf:about="http://sbolstandard.org/build/my_amplified_dna">
-      <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/build/my_amplified_dna"/>
-      <sbol:name>my_amplified_dna</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://sbolstandard.org/build"/>
-      <sbol:type rdf:resource="https://identifiers.org/SO:0000985"/>
       <sbol:type rdf:resource="https://identifiers.org/SO:0000006"/>
+      <sbol:hasNamespace rdf:resource="http://sbolstandard.org/build"/>
+      <sbol:name>my_amplified_dna</sbol:name>
       <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <prov:wasGeneratedBy>
+         <sbol:TopLevel rdf:about="http://sbolstandard.org/build/amplify_dna_construct_with_five_primer_and_three_primer"/>
+      </prov:wasGeneratedBy>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/build/my_amplified_dna"/>
       <sbol:displayId>my_amplified_dna</sbol:displayId>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <sbol:type rdf:resource="https://identifiers.org/SO:0000985"/>
    </sbol:Component>
    <sbol:Component rdf:about="http://sbolstandard.org/build/five_primer">
       <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/build/five_primer"/>

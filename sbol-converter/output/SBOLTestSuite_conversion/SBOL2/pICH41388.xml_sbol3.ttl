@@ -133,6 +133,18 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH41388/annotation2/range> .
 
+<http://www.async.ece.utah.edu/pICH41388/annotation5>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:dnas_title             "35S pro short (no BpiI and BsaI)";
+        gbConv:featureType            "Promoter";
+        gbConv:label                  "35S pro short (no BpiI and BsaI)";
+        gbConv:vntifkey               "29";
+        sbol:displayId                "annotation5";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH41388/annotation5/range>;
+        sbol:name                     "35S pro short (no BpiI and BsaI)";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH41388/annotation5> .
+
 <http://www.async.ece.utah.edu/pICH41388>
         rdf:type                      sbol:Component;
         sbol:displayId                "pICH41388";
@@ -147,18 +159,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         genbank:locus                 "pICH41388";
         genbank:molecule              "DNA";
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH41388> .
-
-<http://www.async.ece.utah.edu/pICH41388/annotation5>
-        rdf:type                      sbol:SequenceFeature;
-        gbConv:dnas_title             "35S pro short (no BpiI and BsaI)";
-        gbConv:featureType            "Promoter";
-        gbConv:label                  "35S pro short (no BpiI and BsaI)";
-        gbConv:vntifkey               "29";
-        sbol:displayId                "annotation5";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH41388/annotation5/range>;
-        sbol:name                     "35S pro short (no BpiI and BsaI)";
-        sbol:role                     SO:0000110;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH41388/annotation5> .
 
 <http://www.async.ece.utah.edu/pICH41388/annotation5/range>
         rdf:type                      sbol:Range;

@@ -12,6 +12,7 @@
     <sbol:type rdf:resource="http://identifiers.org/so/SO:0000988"/>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000804"/>
     <sbol:sequenceAnnotation>
+<<<<<<< HEAD
       <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL30008/annotation2">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30008/annotation2"/>
         <sbol:displayId>annotation2</sbol:displayId>
@@ -25,6 +26,20 @@
             <sbol:displayId>range</sbol:displayId>
             <sbol:start>1395</sbol:start>
             <sbol:end>1576</sbol:end>
+=======
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL30008/annotation3">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30008/annotation3"/>
+        <sbol:displayId>annotation3</sbol:displayId>
+        <dcterms:title>Hellfire</dcterms:title>
+        <gbConv:label>Hellfire</gbConv:label>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL30008/annotation3/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30008/annotation3/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>1397</sbol:start>
+            <sbol:end>1573</sbol:end>
+>>>>>>> feature/combder
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
@@ -111,6 +126,7 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
+<<<<<<< HEAD
       <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL30008/annotation3">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30008/annotation3"/>
         <sbol:displayId>annotation3</sbol:displayId>
@@ -123,6 +139,21 @@
             <sbol:displayId>range</sbol:displayId>
             <sbol:start>1397</sbol:start>
             <sbol:end>1573</sbol:end>
+=======
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL30008/annotation2">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30008/annotation2"/>
+        <sbol:displayId>annotation2</sbol:displayId>
+        <dcterms:title>NT-Hellfire</dcterms:title>
+        <gbConv:label>NT-Hellfire</gbConv:label>
+        <gbConv:featureType>Golden_Gate_Par</gbConv:featureType>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL30008/annotation2/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30008/annotation2/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>1395</sbol:start>
+            <sbol:end>1576</sbol:end>
+>>>>>>> feature/combder
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>

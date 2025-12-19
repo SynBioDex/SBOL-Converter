@@ -386,6 +386,7 @@
             <sbol:displayId>annotation48</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
+      <obo:OBI_0001617>1546326</obo:OBI_0001617>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation34">
             <sbol:hasLocation>
@@ -410,7 +411,6 @@
             <sbol:displayId>annotation34</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
-      <obo:OBI_0001617>1546326</obo:OBI_0001617>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation32">
             <sbol:hasLocation>
@@ -2735,22 +2735,6 @@
                </sbol:Range>
             </sbol:hasLocation>
             <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation22/range12">
-                  <gbConv:position>position12</gbConv:position>
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/L00727/annotation22/range12/1"/>
-                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
-                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>10448</sbol:end>
-                  <sbol:start>10296</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range12</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
-            <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation22/range2">
                   <gbConv:position>position2</gbConv:position>
                   <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/L00727/annotation22/range2/1"/>
@@ -2763,6 +2747,22 @@
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
                   </sbol:hasSequence>
                   <sbol:displayId>range2</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation22/range12">
+                  <gbConv:position>position12</gbConv:position>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/L00727/annotation22/range12/1"/>
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>10448</sbol:end>
+                  <sbol:start>10296</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/L00727_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range12</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
             <gbConv:product>myotonin-protein kinase, Form II,III,IV</gbConv:product>
@@ -3866,7 +3866,6 @@
                </sbol:Range>
             </sbol:hasLocation>
             <gbConv:gene>Mt-PK</gbConv:gene>
-            <gbConv:multiRangeType>join</gbConv:multiRangeType>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation6/range6">
                   <gbConv:position>position6</gbConv:position>
@@ -3882,6 +3881,7 @@
                   <sbol:displayId>range6</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <gbConv:multiRangeType>join</gbConv:multiRangeType>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/L00727/annotation6/range4">
                   <gbConv:position>position4</gbConv:position>

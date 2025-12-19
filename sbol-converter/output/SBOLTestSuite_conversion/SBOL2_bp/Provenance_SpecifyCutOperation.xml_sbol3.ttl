@@ -1,62 +1,59 @@
-<rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:dcterms="http://purl.org/dc/terms/"
-    xmlns:SO="https://identifiers.org/SO:"
-    xmlns:EDAM="https://identifiers.org/edam:"
-    xmlns:sbol="http://sbols.org/v3#"
-    xmlns:CHEBI="https://identifiers.org/CHEBI:"
-    xmlns:prov="http://www.w3.org/ns/prov#"
-    xmlns:SBO="https://identifiers.org/SBO:"
-    xmlns:GO="https://identifiers.org/GO:"
-    xmlns:backport2_3="https://sbols.org/backport/2_3#"
-    xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
-   <sbol:Component rdf:about="http://sbolstandard.org/build/linearized_vector">
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
-      <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/build/linearized_vector"/>
-      <sbol:name>linearized_vector</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://sbolstandard.org/build"/>
-      <sbol:type rdf:resource="https://identifiers.org/SO:0000985"/>
-      <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>linearized_vector</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://sbolstandard.org/build/restriction_enzyme">
-      <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/build/restriction_enzyme"/>
-      <sbol:name>restriction_enzyme</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://sbolstandard.org/build"/>
-      <sbol:type rdf:resource="http://purl.obolibrary.org/obo/GO_0009036"/>
-      <sbol:displayId>restriction_enzyme</sbol:displayId>
-   </sbol:Component>
-   <sbol:Component rdf:about="http://sbolstandard.org/build/vector">
-      <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/build/vector"/>
-      <sbol:name>vector</sbol:name>
-      <sbol:hasNamespace rdf:resource="http://sbolstandard.org/build"/>
-      <sbol:type rdf:resource="https://identifiers.org/SO:0000755"/>
-      <sbol:displayId>vector</sbol:displayId>
-   </sbol:Component>
-   <sbol:TopLevel rdf:about="http://sbolstandard.org/build/cut_vector_with_restriction_enzyme">
-      <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/build/cut_vector_with_restriction_enzyme"/>
-      <sbol:name>cut(vector, restriction_enzyme)</sbol:name>
-      <prov:qualifiedUsage>
-         <sbol:Identified rdf:about="http://sbolstandard.org/build/cut_vector_with_restriction_enzyme/vector">
-            <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/build/cut_vector_with_restriction_enzyme/vector"/>
-            <prov:hadRole rdf:resource="http://identifiers.org/so/SO:0000755"/>
-            <prov:entity rdf:resource="http://sbolstandard.org/build/vector"/>
-            <sbol:displayId>vector</sbol:displayId>
-            <rdf:type rdf:resource="http://www.w3.org/ns/prov#Usage"/>
-         </sbol:Identified>
-      </prov:qualifiedUsage>
-      <prov:qualifiedUsage>
-         <sbol:Identified rdf:about="http://sbolstandard.org/build/cut_vector_with_restriction_enzyme/enzyme">
-            <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/build/cut_vector_with_restriction_enzyme/enzyme"/>
-            <prov:hadRole rdf:resource="http://purl.obolibrary.org/obo/GO_0009036"/>
-            <prov:entity rdf:resource="http://sbolstandard.org/build/restriction_enzyme"/>
-            <sbol:displayId>enzyme</sbol:displayId>
-            <rdf:type rdf:resource="http://www.w3.org/ns/prov#Usage"/>
-         </sbol:Identified>
-      </prov:qualifiedUsage>
-      <sbol:hasNamespace rdf:resource="http://sbolstandard.org/build"/>
-      <sbol:displayId>cut_vector_with_restriction_enzyme</sbol:displayId>
-      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-   </sbol:TopLevel>
-</rdf:RDF>
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+
+<http://sbolstandard.org/build/vector>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "vector";
+        sbol:hasNamespace             <http://sbolstandard.org/build>;
+        sbol:name                     "vector";
+        sbol:type                     SO:0000755;
+        backport2_3:sbol2OriginalURI  <http://sbolstandard.org/build/vector> .
+
+<http://sbolstandard.org/build/cut_vector_with_restriction_enzyme/vector>
+        rdf:type                      sbol:Identified , prov:Usage;
+        sbol:displayId                "vector";
+        prov:entity                   <http://sbolstandard.org/build/vector>;
+        prov:hadRole                  <http://identifiers.org/so/SO:0000755>;
+        backport2_3:sbol2OriginalURI  <http://sbolstandard.org/build/cut_vector_with_restriction_enzyme/vector> .
+
+<http://sbolstandard.org/build/cut_vector_with_restriction_enzyme/enzyme>
+        rdf:type                      sbol:Identified , prov:Usage;
+        sbol:displayId                "enzyme";
+        prov:entity                   <http://sbolstandard.org/build/restriction_enzyme>;
+        prov:hadRole                  <http://purl.obolibrary.org/obo/GO_0009036>;
+        backport2_3:sbol2OriginalURI  <http://sbolstandard.org/build/cut_vector_with_restriction_enzyme/enzyme> .
+
+<http://sbolstandard.org/build/restriction_enzyme>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "restriction_enzyme";
+        sbol:hasNamespace             <http://sbolstandard.org/build>;
+        sbol:name                     "restriction_enzyme";
+        sbol:type                     <http://purl.obolibrary.org/obo/GO_0009036>;
+        backport2_3:sbol2OriginalURI  <http://sbolstandard.org/build/restriction_enzyme> .
+
+<http://sbolstandard.org/build/cut_vector_with_restriction_enzyme>
+        rdf:type                      sbol:TopLevel , prov:Activity;
+        sbol:displayId                "cut_vector_with_restriction_enzyme";
+        sbol:hasNamespace             <http://sbolstandard.org/build>;
+        sbol:name                     "cut(vector, restriction_enzyme)";
+        prov:qualifiedUsage           <http://sbolstandard.org/build/cut_vector_with_restriction_enzyme/vector> , <http://sbolstandard.org/build/cut_vector_with_restriction_enzyme/enzyme>;
+        backport2_3:sbol2OriginalURI  <http://sbolstandard.org/build/cut_vector_with_restriction_enzyme> .
+
+<http://sbolstandard.org/build/linearized_vector>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "linearized_vector";
+        sbol:hasNamespace             <http://sbolstandard.org/build>;
+        sbol:name                     "linearized_vector";
+        sbol:role                     SO:0000167;
+        sbol:type                     SO:0000987 , SBO:0000251 , SO:0000985;
+        prov:wasGeneratedBy           <http://sbolstandard.org/build/cut_vector_with_restriction_enzyme>;
+        backport2_3:sbol2OriginalURI  <http://sbolstandard.org/build/linearized_vector> .

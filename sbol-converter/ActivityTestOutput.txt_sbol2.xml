@@ -3,7 +3,12 @@
   <prov:Activity rdf:about="http://partsregistry.org/act/TEST_ACTIVITY">
     <sbol:persistentIdentity rdf:resource="http://partsregistry.org/act/TEST_ACTIVITY"/>
     <sbol:displayId>TEST_ACTIVITY</sbol:displayId>
+<<<<<<< HEAD
     <prov:startedAtTime>2025-12-08T11:56:14.330Z</prov:startedAtTime>
     <prov:endedAtTime>2025-12-18T11:56:14.330Z</prov:endedAtTime>
+=======
+    <prov:startedAtTime>2025-12-08T19:49:18.685Z</prov:startedAtTime>
+    <prov:endedAtTime>2025-12-18T19:49:18.685Z</prov:endedAtTime>
+>>>>>>> feature/combder
   </prov:Activity>
 </rdf:RDF>

@@ -18,6 +18,7 @@
         <dcterms:title>NT-Myc</dcterms:title>
         <gbConv:label>NT-Myc</gbConv:label>
         <gbConv:featureType>Golden_Gate_Par</gbConv:featureType>
+<<<<<<< HEAD
         <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
         <sbol:location>
           <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL30009/annotation2/range">
@@ -39,13 +40,15 @@
         <gbConv:vntifkey>33</gbConv:vntifkey>
         <gbConv:label>ORI</gbConv:label>
         <gbConv:note> RNaseH cleavage point </gbConv:note>
+=======
+>>>>>>> feature/combder
         <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL30009/annotation5/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30009/annotation5/range"/>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL30009/annotation2/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30009/annotation2/range"/>
             <sbol:displayId>range</sbol:displayId>
-            <sbol:start>1772</sbol:start>
-            <sbol:end>1772</sbol:end>
+            <sbol:start>1395</sbol:start>
+            <sbol:end>1525</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
@@ -109,6 +112,68 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
+<<<<<<< HEAD
+=======
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL30009/annotation4">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30009/annotation4"/>
+        <sbol:displayId>annotation4</sbol:displayId>
+        <dcterms:title>rep (pMB1)</dcterms:title>
+        <gbConv:label>rep (pMB1)</gbConv:label>
+        <gbConv:vntifkey>21</gbConv:vntifkey>
+        <gbConv:featureType>Misc._feature</gbConv:featureType>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL30009/annotation4/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30009/annotation4/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>1757</sbol:start>
+            <sbol:end>2371</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#reverseComplement"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL30009/annotation5">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30009/annotation5"/>
+        <sbol:displayId>annotation5</sbol:displayId>
+        <dcterms:title>ORI</dcterms:title>
+        <gbConv:featureType>Replication_ori</gbConv:featureType>
+        <gbConv:vntifkey>33</gbConv:vntifkey>
+        <gbConv:label>ORI</gbConv:label>
+        <gbConv:note> RNaseH cleavage point </gbConv:note>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL30009/annotation5/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30009/annotation5/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>1772</sbol:start>
+            <sbol:end>1772</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL30009/annotation3">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30009/annotation3"/>
+        <sbol:displayId>annotation3</sbol:displayId>
+        <dcterms:title>Myc</dcterms:title>
+        <gbConv:label>Myc</gbConv:label>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL30009/annotation3/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30009/annotation3/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>1397</sbol:start>
+            <sbol:end>1522</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+>>>>>>> feature/combder
       <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL30009/annotation1">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30009/annotation1"/>
         <sbol:displayId>annotation1</sbol:displayId>
