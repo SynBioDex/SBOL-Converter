@@ -749,6 +749,14 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_R0011/annotation2001/range2001/1> .
 
+<http://michael.zhang/1/Pro/Pro_SequenceConstraint>
+        rdf:type                      sbol:Constraint;
+        sbol:displayId                "Pro_SequenceConstraint";
+        sbol:object                   <http://michael.zhang/1/Pro/Pro1_Component>;
+        sbol:restriction              sbol:precedes;
+        sbol:subject                  <http://michael.zhang/1/Pro/Op_Component>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/Pro/Pro_SequenceConstraint/1> .
+
 <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance33/CDS_Component>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "CDS_Component";
@@ -766,14 +774,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_I741109>;
         prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_I741109_sequence/1> .
-
-<http://michael.zhang/1/Pro/Pro_SequenceConstraint>
-        rdf:type                      sbol:Constraint;
-        sbol:displayId                "Pro_SequenceConstraint";
-        sbol:object                   <http://michael.zhang/1/Pro/Pro1_Component>;
-        sbol:restriction              sbol:precedes;
-        sbol:subject                  <http://michael.zhang/1/Pro/Op_Component>;
-        backport2_3:sbol2OriginalURI  <http://michael.zhang/Pro/Pro_SequenceConstraint/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_R0010/annotation1961226>
         rdf:type                      sbol:SequenceFeature;
@@ -912,6 +912,28 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0422/annotation942833/range942833/1> .
 
+<http://michael.zhang/1/Pro_GeneratedInstance65/Op_Component>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "Op_Component";
+        sbol:instanceOf               <https://synbiohub.org/public/igem/1/BBa_I9201>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/Pro_GeneratedInstance65/Op_Component/1> .
+
+<http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance21/Eukaryotic_Transcriptional_Unit_SequenceConstraint>
+        rdf:type                      sbol:Constraint;
+        sbol:displayId                "Eukaryotic_Transcriptional_Unit_SequenceConstraint";
+        sbol:object                   <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance21/CDS_Component>;
+        sbol:restriction              sbol:precedes;
+        sbol:subject                  <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance21/Pro_Component>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance21/Eukaryotic_Transcriptional_Unit_SequenceConstraint/1> .
+
+<http://michael.zhang/1/Pro_GeneratedInstance62/Pro_SequenceConstraint>
+        rdf:type                      sbol:Constraint;
+        sbol:displayId                "Pro_SequenceConstraint";
+        sbol:object                   <http://michael.zhang/1/Pro_GeneratedInstance62/Pro1_Component>;
+        sbol:restriction              sbol:precedes;
+        sbol:subject                  <http://michael.zhang/1/Pro_GeneratedInstance62/Op_Component>;
+        backport2_3:sbol2OriginalURI  <http://michael.zhang/Pro_GeneratedInstance62/Pro_SequenceConstraint/1> .
+
 <https://synbiohub.org/public/igem/1/BBa_I13603>
         rdf:type                      sbol:Component;
         dc:creator                    "Christopher Batten, Victoria Chou, Kenneth Nesmith";
@@ -943,28 +965,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_I13603>;
         prov:wasGeneratedBy           <https://synbiohub.org/public/igem/igem2sbol/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_I13603/1> .
-
-<http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance21/Eukaryotic_Transcriptional_Unit_SequenceConstraint>
-        rdf:type                      sbol:Constraint;
-        sbol:displayId                "Eukaryotic_Transcriptional_Unit_SequenceConstraint";
-        sbol:object                   <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance21/CDS_Component>;
-        sbol:restriction              sbol:precedes;
-        sbol:subject                  <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance21/Pro_Component>;
-        backport2_3:sbol2OriginalURI  <http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance21/Eukaryotic_Transcriptional_Unit_SequenceConstraint/1> .
-
-<http://michael.zhang/1/Pro_GeneratedInstance62/Pro_SequenceConstraint>
-        rdf:type                      sbol:Constraint;
-        sbol:displayId                "Pro_SequenceConstraint";
-        sbol:object                   <http://michael.zhang/1/Pro_GeneratedInstance62/Pro1_Component>;
-        sbol:restriction              sbol:precedes;
-        sbol:subject                  <http://michael.zhang/1/Pro_GeneratedInstance62/Op_Component>;
-        backport2_3:sbol2OriginalURI  <http://michael.zhang/Pro_GeneratedInstance62/Pro_SequenceConstraint/1> .
-
-<http://michael.zhang/1/Pro_GeneratedInstance65/Op_Component>
-        rdf:type                      sbol:SubComponent;
-        sbol:displayId                "Op_Component";
-        sbol:instanceOf               <https://synbiohub.org/public/igem/1/BBa_I9201>;
-        backport2_3:sbol2OriginalURI  <http://michael.zhang/Pro_GeneratedInstance65/Op_Component/1> .
 
 <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance31/Interface1>
         rdf:type             sbol:Interface;
@@ -1463,6 +1463,11 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:displayId       "Interface1";
         sbol:nondirectional  <http://michael.zhang/1/Pro_GeneratedInstance83/Op_Component> , <http://michael.zhang/1/Pro_GeneratedInstance83/Pro1_Component> .
 
+<http://michael.zhang/1/Pro/Interface1>
+        rdf:type             sbol:Interface;
+        sbol:displayId       "Interface1";
+        sbol:nondirectional  <http://michael.zhang/1/Pro/Pro1_Component> , <http://michael.zhang/1/Pro/Op_Component> .
+
 <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance25>
         rdf:type                      sbol:Component;
         sbol:displayId                "Eukaryotic_Transcriptional_Unit_GeneratedInstance25";
@@ -1476,11 +1481,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasDerivedFrom           <http://michael.zhang/UnnamedPart/1> , <http://michael.zhang/Eukaryotic_Transcriptional_Unit/1>;
         prov:wasGeneratedBy           <http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance42_SBOLDesignerActivity/1> , <http://michael.zhang/Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity/1>;
         backport2_3:sbol2OriginalURI  <http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance25/1> .
-
-<http://michael.zhang/1/Pro/Interface1>
-        rdf:type             sbol:Interface;
-        sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://michael.zhang/1/Pro/Pro1_Component> , <http://michael.zhang/1/Pro/Op_Component> .
 
 <http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance23/Eukaryotic_Transcriptional_Unit_SequenceConstraint1>
         rdf:type                      sbol:Constraint;
