@@ -136,7 +136,7 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
 <http://sbolstandard.org/example/tetr_inverter/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://sbolstandard.org/example/tetr_inverter/promoter> , <http://sbolstandard.org/example/tetr_inverter/TF> .
+        sbol:nondirectional  <http://sbolstandard.org/example/tetr_inverter/TF> , <http://sbolstandard.org/example/tetr_inverter/promoter> .
 
 <http://sbolstandard.org/example/toggle_switch>
         rdf:type                      sbol:Component;
@@ -205,7 +205,7 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
 <http://www.virtualparts.org/part/pIKE_Toggle_1/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKELeftCassette_1> , <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKERightCassette_1> .
+        sbol:nondirectional  <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKERightCassette_1> , <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKELeftCassette_1> .
 
 <http://sbolstandard.org/example/toggle_switch/laci_inverter>
         rdf:type         sbol:SubComponent;
@@ -261,11 +261,6 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/pIKE_Toggle_1/anno2/location2> .
 
-<http://www.virtualparts.org/part/pIKERightCassette_1/Interface1>
-        rdf:type             sbol:Interface;
-        sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.virtualparts.org/part/pIKERightCassette_1/ECK120033736> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_E0040> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_R0010> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61130> .
-
 <http://www.partsregistry.org/BBa_J61130>
         rdf:type                      sbol:Component;
         sbol:description              "RBS2";
@@ -277,16 +272,15 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         sbol:type                     SBO:0000251;
         backport2_3:sbol2OriginalURI  <http://www.partsregistry.org/BBa_J61130> .
 
+<http://www.virtualparts.org/part/pIKERightCassette_1/Interface1>
+        rdf:type             sbol:Interface;
+        sbol:displayId       "Interface1";
+        sbol:nondirectional  <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61130> , <http://www.virtualparts.org/part/pIKERightCassette_1/ECK120033736> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_R0010> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_E0040> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120> .
+
 <http://www.virtualparts.org/part/pIKELeftCassette_1/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.virtualparts.org/part/pIKELeftCassette_1/ECK120029600> , <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_J61101> , <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_C0012> , <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_R0040> .
-
-<http://www.virtualparts.org/part/pIKE_Toggle_1_seq>
-        rdf:type           sbol:Sequence;
-        sbol:displayId     "pIKE_Toggle_1_seq";
-        sbol:encoding      EDAM:format_1207;
-        sbol:hasNamespace  <http://www.virtualparts.org/part> .
+        sbol:nondirectional  <http://www.virtualparts.org/part/pIKELeftCassette_1/ECK120029600> , <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_J61101> , <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_R0040> , <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_C0012> .
 
 <http://www.virtualparts.org/part/pIKE_Toggle_1_seq>
         rdf:type           sbol:Sequence;
@@ -407,6 +401,14 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/pIKERightCassette_1/anno3/location3> .
 
+<http://www.virtualparts.org/part/BBa_J61101>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "BBa_J61101";
+        sbol:elements                 "aaagacaggacc";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.virtualparts.org/part>;
+        backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/BBa_J61101> .
+
 <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "BBa_J61120";
@@ -416,14 +418,6 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
                 <http://www.virtualparts.org/part/pIKERightCassette_1/anno2>;
         backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/pIKERightCassette_1/anno2> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120> .
 
-<http://www.virtualparts.org/part/BBa_J61101>
-        rdf:type                      sbol:Sequence;
-        sbol:displayId                "BBa_J61101";
-        sbol:elements                 "aaagacaggacc";
-        sbol:encoding                 EDAM:format_1207;
-        sbol:hasNamespace             <http://www.virtualparts.org/part>;
-        backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/BBa_J61101> .
-
 <http://www.virtualparts.org/part/ECK120029600>
         rdf:type                      sbol:Sequence;
         sbol:displayId                "ECK120029600";
@@ -431,17 +425,6 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         sbol:encoding                 EDAM:format_1207;
         sbol:hasNamespace             <http://www.virtualparts.org/part>;
         backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/ECK120029600> .
-
-<http://www.virtualparts.org/part/BBa_K174004/Interface1>
-        rdf:type             sbol:Interface;
-        sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.virtualparts.org/part/BBa_K174004/pspac> , <http://www.virtualparts.org/part/BBa_K174004/LacI_operator> .
-
-<http://www.virtualparts.org/part/GenericLocationComponent/gl_seqAnn>
-        rdf:type                      sbol:SequenceFeature;
-        sbol:displayId                "gl_seqAnn";
-        sbol:hasLocation              <http://www.virtualparts.org/part/GenericLocationComponent/gl_seqAnn/gl>;
-        backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/GenericLocationComponent/gl_seqAnn> .
 
 <http://www.virtualparts.org/part/BBa_C0040>
         rdf:type                      sbol:Sequence;
@@ -451,10 +434,22 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         sbol:hasNamespace             <http://www.virtualparts.org/part>;
         backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/BBa_C0040> .
 
+<http://www.virtualparts.org/part/GenericLocationComponent/gl_seqAnn>
+        rdf:type                      sbol:SequenceFeature;
+        sbol:displayId                "gl_seqAnn";
+        sbol:hasLocation              <http://www.virtualparts.org/part/GenericLocationComponent/gl_seqAnn/gl>;
+        backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/GenericLocationComponent/gl_seqAnn> .
+
+<http://www.virtualparts.org/part/BBa_K174004/Interface1>
+        rdf:type             sbol:Interface;
+        sbol:displayId       "Interface1";
+        sbol:nondirectional  <http://www.virtualparts.org/part/BBa_K174004/pspac> , <http://www.virtualparts.org/part/BBa_K174004/LacI_operator> .
+
 <http://www.virtualparts.org/part/1.0.0/Activity_build_generation/build_generation_association>
         rdf:type                      sbol:Identified , prov:Association;
         sbol:displayId                "build_generation_association";
         prov:agent                    <https://synbiohub.org/1.0.0/jdoe>;
+        prov:hadPlan                  <http://sys-bio.org/1.0.0/Plan_gibson_assembly>;
         prov:hadRole                  <http://sbols.org/v2#build>;
         backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/Activity_build_generation/build_generation_association/1.0.0> .
 
@@ -718,7 +713,7 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
 <http://sbolstandard.org/example/toggle_switch/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://sbolstandard.org/example/toggle_switch/LacI> , <http://sbolstandard.org/example/toggle_switch/TetR> .
+        sbol:nondirectional  <http://sbolstandard.org/example/toggle_switch/TetR> , <http://sbolstandard.org/example/toggle_switch/LacI> .
 
 <http://www.virtualparts.org/part/BBa_J23119_seq>
         rdf:type           sbol:Sequence;
@@ -828,7 +823,7 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         rdf:type                      sbol:Component;
         sbol:description              "LacI/TetR Toggle Switch";
         sbol:displayId                "pIKE_Toggle_1";
-        sbol:hasFeature               <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKERightCassette_1> , <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKELeftCassette_1>;
+        sbol:hasFeature               <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKELeftCassette_1> , <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKERightCassette_1>;
         sbol:hasInterface             <http://www.virtualparts.org/part/pIKE_Toggle_1/Interface1>;
         sbol:hasNamespace             <http://www.virtualparts.org/part>;
         sbol:hasSequence              <http://www.virtualparts.org/part/pIKE_Toggle_1_seq>;

@@ -405,6 +405,29 @@ public class Util {
 	}
 
 
+	public static URI enforceURI(URI inputUri, Parameters parameters) throws SBOLGraphException {	
+		URI mapped = parameters.getMapping(inputUri);
+		if (mapped != null){
+			return mapped;
+		}
+		String uriString = getSBOLConverterURI(inputUri);
+		URI result= URI.create(uriString);
+		parameters.addMapping(inputUri, result);
+		return result;
+	}	
+	
+	private static String getSBOLConverterURI(URI inputUri)
+	{
+		String sbol3Uri = "";
+		String inputUriString = inputUri.toString();
+		if (!inputUriString.toLowerCase().startsWith("urn") && !inputUriString.contains("://")){				
+			sbol3Uri= SBOLAPI.append("https://sbolstandard.org/SBOL3-Converter", inputUriString).toString();
+		}
+		else{
+			sbol3Uri= inputUri.toString();
+		}
+		return sbol3Uri;
+	}
 
 	public static URI createSBOL3Uri(URI inputUri, Parameters parameters) throws SBOLGraphException {		
 		Model rdfModel = parameters.getRdfModel();
@@ -427,15 +450,9 @@ public class Util {
 			}
 
 			if (sbol3Uri == null){
-				String inputUriString = inputUri.toString();
-				if (!inputUriString.toLowerCase().startsWith("urn") && !inputUriString.contains("://")){				
-					sbol3Uri= SBOLAPI.append("https://sbolstandard.org/SBOL3-Converter", inputUriString).toString();
-				}
-				else{
-					sbol3Uri= inputUri.toString();
-				}
+				sbol3Uri=getSBOLConverterURI(inputUri);				
 			}
-			URI result=URI.create(sbol3Uri);
+			URI result= URI.create(sbol3Uri);
 			parameters.addMapping(inputUri, result);
 			return result;
 		}
@@ -591,10 +608,6 @@ public class Util {
 				output.addAnnotation(annotation);
 			}
 		}*/
-
-
-		// TODO: FIX ME
-		// output.setWasGeneratedBy(toSet(input.getWasGeneratedBys()));
 	}
 
 	private static void convertIfTopLevel3to2(Identified input, org.sbolstandard.core2.Identified output) throws SBOLGraphException, SBOLValidationException {
@@ -602,10 +615,10 @@ public class Util {
 			org.sbolstandard.core3.entity.TopLevel topLevelInput = (org.sbolstandard.core3.entity.TopLevel) input;
 			if (output instanceof org.sbolstandard.core2.TopLevel) {
 				org.sbolstandard.core2.TopLevel topLevelOutput = (org.sbolstandard.core2.TopLevel) output;
-				if(topLevelInput.getAttachments()!=null) {
+				if(topLevelInput.getAttachmentURIs()!=null) {
 					Set<URI> sbol2AttachmentURIs = new HashSet<>();
-					for(org.sbolstandard.core3.entity.Attachment sbol3Attachment : topLevelInput.getAttachments()) {
-						URI sbol2Uri = Util.createSBOL2Uri(sbol3Attachment.getUri());
+					for(URI sbol3AttachmentURI : topLevelInput.getAttachmentURIs()) {
+						URI sbol2Uri = Util.createSBOL2Uri(sbol3AttachmentURI);
 						sbol2AttachmentURIs.add(sbol2Uri);
 					}
 					// It does not have setAttachmentURIs method
@@ -734,14 +747,7 @@ public class Util {
 		output.addAnnotation(ConverterVocabulary.Two_to_Three.sbol2OriginalURI, input.getIdentity());
 		convertAnnotations_2_to3(input.getAnnotations(), output);		
 		//If the mapping has been added, it skips adding it again
-		parameters.addMapping(input.getIdentity(), output.getUri());
-
-		String debug="http://michael.zhang/Eukaryotic_Transcriptional_Unit/Eukaryotic_Transcriptional_Unit_SequenceAnnotation/1";
-		if (input.getIdentity().toString().equals(debug))
-		{
-			String str="";
-			str="fg";
-		}
+		parameters.addMapping(input.getIdentity(), output.getUri());		
 	}
 
 	private static void convertIfTopLevel(org.sbolstandard.core2.Identified input, Identified output, Parameters parameters) throws SBOLGraphException {
@@ -903,6 +909,23 @@ public class Util {
 		return URI.create(uriString);
 	}
 	
+	public static URI convertEDAMUri_2_to_3(URI edamUri)
+	{//http://identifiers.org/edam/format_3603 --> 
+	// https://identifiers.org/edam:format_2585
+		String uriString = edamUri.toString().replaceAll("(?i)/edam/", "/edam:");
+		uriString= uriString.replaceAll("(?i)http://", "https://");
+		return URI.create(uriString);
+	}
+
+	public static URI convertEDAMUri_3_to_2(URI edamUri)
+	{//http://identifiers.org/edam/format_3603 --> 
+	// https://identifiers.org/edam:format_2585
+		String uriString = edamUri.toString().replaceAll("(?i)/edam:", "/edam/");
+		uriString= uriString.replaceAll("(?i)https://", "http://");
+		return URI.create(uriString);
+	}
+	
+
 	private static URI convertSOUri_3_to_2(URI soUri)
 	{
 		String soUriString = soUri.toString().replaceAll("(?i)so:", "so/SO:");

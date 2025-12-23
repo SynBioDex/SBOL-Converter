@@ -275,6 +275,7 @@
 <http://www.virtualparts.org/part/Activity_build_generation/build_generation_association/1.0.0> <http://sbols.org/v2#version> "1.0.0" .
 <http://www.virtualparts.org/part/Activity_build_generation/build_generation_association/1.0.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Association> .
 <http://www.virtualparts.org/part/Activity_build_generation/build_generation_association/1.0.0> <http://www.w3.org/ns/prov#agent> <https://synbiohub.org/jdoe/1.0.0> .
+<http://www.virtualparts.org/part/Activity_build_generation/build_generation_association/1.0.0> <http://www.w3.org/ns/prov#hadPlan> <http://sys-bio.org/Plan_gibson_assembly/1.0.0> .
 <http://www.virtualparts.org/part/Activity_build_generation/build_generation_association/1.0.0> <http://www.w3.org/ns/prov#hadRole> <http://sbols.org/v2#build> .
 <http://www.virtualparts.org/part/Activity_build_generation/design_usage/1.0.0> <http://sbols.org/v2#displayId> "design_usage" .
 <http://www.virtualparts.org/part/Activity_build_generation/design_usage/1.0.0> <http://sbols.org/v2#persistentIdentity> <http://www.virtualparts.org/part/Activity_build_generation/design_usage> .

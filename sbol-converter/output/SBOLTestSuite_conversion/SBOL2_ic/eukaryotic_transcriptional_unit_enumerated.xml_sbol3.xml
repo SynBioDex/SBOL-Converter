@@ -436,6 +436,7 @@
                   <sbol:displayId>component2438801</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
+            <sbol:nondirectional rdf:resource="https://synbiohub.org/public/igem/1/BBa_K1606007/component2438810"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="https://synbiohub.org/public/igem/1/BBa_K1606007/component2438793">
                   <sbol:hasLocation>
@@ -466,7 +467,6 @@
                   <sbol:displayId>component2438793</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="https://synbiohub.org/public/igem/1/BBa_K1606007/component2438810"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="https://synbiohub.org/public/igem/1/BBa_K1606007/component2438802">
                   <sbol:hasLocation>
@@ -801,9 +801,9 @@
       <sbol:hasFeature rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance45/Ter_Component"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance45/Interface1">
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance45/Pro_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance45/CDS_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance45/Ter_Component"/>
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance45/Pro_Component"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -898,9 +898,9 @@
       <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance44/1"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance44/Interface1">
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance44/Pro_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance44/Ter_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance44/CDS_Component"/>
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance44/Pro_Component"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -943,6 +943,7 @@
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance43/Interface1">
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance43/CDS_Component"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance43/Ter_Component">
                   <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance43/Ter_Component/1"/>
@@ -952,7 +953,6 @@
                   <sbol:displayId>Ter_Component</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance43/CDS_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance43/Pro_Component"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
@@ -1015,8 +1015,8 @@
          </sbol:Constraint>
       </sbol:hasConstraint>
       <sbol:hasNamespace rdf:resource="http://michael.zhang"/>
-      <sbol:hasFeature rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance42/Pro_Component"/>
       <sbol:hasFeature rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance42/CDS_Component"/>
+      <sbol:hasFeature rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance42/Pro_Component"/>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
       <prov:wasGeneratedBy rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity/1"/>
       <sbol:hasSequence>
@@ -1034,9 +1034,9 @@
       <prov:wasGeneratedBy rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance42_SBOLDesignerActivity/1"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance42/Interface1">
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance42/CDS_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance42/Pro_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance42/Ter_Component"/>
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance42/CDS_Component"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -1089,8 +1089,8 @@
       <sbol:displayId>Pro_GeneratedInstance64</sbol:displayId>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Pro_GeneratedInstance64/Interface1">
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance64/Pro1_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance64/Op_Component"/>
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance64/Pro1_Component"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -1136,8 +1136,8 @@
       <prov:wasGeneratedBy rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance42_SBOLDesignerActivity/1"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Pro_GeneratedInstance65/Interface1">
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance65/Pro1_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance65/Op_Component"/>
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance65/Pro1_Component"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -1153,12 +1153,12 @@
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance41/Interface1">
             <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance41/Ter_Component">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance41/Ter_Component/1"/>
+               <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance41/CDS_Component">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance41/CDS_Component/1"/>
                   <sbol:instanceOf>
-                     <sbol:Component rdf:about="https://synbiohub.org/public/igem/1/BBa_K364302"/>
+                     <sbol:Component rdf:about="https://synbiohub.org/public/igem/1/BBa_K1606010"/>
                   </sbol:instanceOf>
-                  <sbol:displayId>Ter_Component</sbol:displayId>
+                  <sbol:displayId>CDS_Component</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:nondirectional>
@@ -1171,12 +1171,12 @@
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance41/CDS_Component">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance41/CDS_Component/1"/>
+               <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance41/Ter_Component">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance41/Ter_Component/1"/>
                   <sbol:instanceOf>
-                     <sbol:Component rdf:about="https://synbiohub.org/public/igem/1/BBa_K1606010"/>
+                     <sbol:Component rdf:about="https://synbiohub.org/public/igem/1/BBa_K364302"/>
                   </sbol:instanceOf>
-                  <sbol:displayId>CDS_Component</sbol:displayId>
+                  <sbol:displayId>Ter_Component</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:displayId>Interface1</sbol:displayId>
@@ -1246,8 +1246,8 @@
       <sbol:hasFeature rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance62/Op_Component"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Pro_GeneratedInstance62/Interface1">
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance62/Pro1_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance62/Op_Component"/>
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance62/Pro1_Component"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -1281,6 +1281,7 @@
       <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Pro_GeneratedInstance63/1"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Pro_GeneratedInstance63/Interface1">
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance63/Op_Component"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://michael.zhang/1/Pro_GeneratedInstance63/Pro1_Component">
                   <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Pro_GeneratedInstance63/Pro1_Component/1"/>
@@ -1290,7 +1291,6 @@
                   <sbol:displayId>Pro1_Component</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance63/Op_Component"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -1525,9 +1525,8 @@
       <igem:status rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#status/Unavailable"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="https://synbiohub.org/public/igem/1/BBa_K1606010/Interface1">
-            <sbol:nondirectional rdf:resource="https://synbiohub.org/public/igem/1/BBa_K1606010/component2438697"/>
-            <sbol:nondirectional rdf:resource="https://synbiohub.org/public/igem/1/BBa_K1606010/component2438705"/>
             <sbol:nondirectional rdf:resource="https://synbiohub.org/public/igem/1/BBa_K1606010/component2438689"/>
+            <sbol:nondirectional rdf:resource="https://synbiohub.org/public/igem/1/BBa_K1606010/component2438705"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="https://synbiohub.org/public/igem/1/BBa_K1606010/component2438698">
                   <sbol:hasLocation>
@@ -1558,6 +1557,7 @@
                   <sbol:displayId>component2438698</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
+            <sbol:nondirectional rdf:resource="https://synbiohub.org/public/igem/1/BBa_K1606010/component2438697"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -1653,9 +1653,9 @@
       <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance34/1"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance34/Interface1">
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance34/CDS_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance34/Ter_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance34/Pro_Component"/>
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance34/CDS_Component"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -1694,6 +1694,7 @@
       <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance33/1"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance33/Interface1">
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance33/CDS_Component"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance33/Pro_Component">
                   <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance33/Pro_Component/1"/>
@@ -1701,7 +1702,6 @@
                   <sbol:displayId>Pro_Component</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance33/CDS_Component"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance33/Ter_Component">
                   <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance33/Ter_Component/1"/>
@@ -1789,9 +1789,9 @@
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance32/Interface1">
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance32/Pro_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance32/CDS_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance32/Ter_Component"/>
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance32/Pro_Component"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -1833,20 +1833,20 @@
       <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance31/1"/>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
       <prov:wasDerivedFrom rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit/1"/>
-      <sbol:hasFeature rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance31/CDS_Component"/>
+      <sbol:hasFeature rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance31/Ter_Component"/>
       <prov:wasGeneratedBy rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_SBOLDesignerActivity/1"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance31/Interface1">
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance31/Pro_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance31/Ter_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance31/CDS_Component"/>
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance31/Pro_Component"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
       <sbol:hasSequence>
          <sbol:Sequence rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_UnitSequence"/>
       </sbol:hasSequence>
-      <sbol:hasFeature rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance31/Ter_Component"/>
+      <sbol:hasFeature rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance31/CDS_Component"/>
       <prov:wasDerivedFrom rdf:resource="http://michael.zhang/UnnamedPart/1"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:hasConstraint>
@@ -2283,8 +2283,8 @@
       <igem:status rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#status/Planning"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="https://synbiohub.org/public/igem/1/BBa_I13603/Interface1">
-            <sbol:nondirectional rdf:resource="https://synbiohub.org/public/igem/1/BBa_I13603/component2221496"/>
             <sbol:nondirectional rdf:resource="https://synbiohub.org/public/igem/1/BBa_I13603/component2221478"/>
+            <sbol:nondirectional rdf:resource="https://synbiohub.org/public/igem/1/BBa_I13603/component2221496"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -2484,15 +2484,6 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance23/Interface1">
             <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance23/Pro_Component">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance23/Pro_Component/1"/>
-                  <sbol:instanceOf>
-                     <sbol:Component rdf:about="http://michael.zhang/1/Pro_GeneratedInstance85"/>
-                  </sbol:instanceOf>
-                  <sbol:displayId>Pro_Component</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance23/CDS_Component">
                   <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance23/CDS_Component/1"/>
                   <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_J45000"/>
@@ -2504,6 +2495,15 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
                   <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance23/Ter_Component/1"/>
                   <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_K364302"/>
                   <sbol:displayId>Ter_Component</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:nondirectional>
+            <sbol:nondirectional>
+               <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance23/Pro_Component">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance23/Pro_Component/1"/>
+                  <sbol:instanceOf>
+                     <sbol:Component rdf:about="http://michael.zhang/1/Pro_GeneratedInstance85"/>
+                  </sbol:instanceOf>
+                  <sbol:displayId>Pro_Component</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:displayId>Interface1</sbol:displayId>
@@ -2581,9 +2581,9 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
       <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance22/Interface1">
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance22/Pro_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance22/CDS_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance22/Ter_Component"/>
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance22/Pro_Component"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -2635,6 +2635,7 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
       <sbol:displayId>Eukaryotic_Transcriptional_Unit_GeneratedInstance21</sbol:displayId>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance21/Interface1">
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance21/Pro_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance21/Ter_Component"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance21/CDS_Component">
@@ -2643,7 +2644,6 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
                   <sbol:displayId>CDS_Component</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance21/Pro_Component"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -2714,19 +2714,19 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:nondirectional>
+               <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance25/CDS_Component">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance25/CDS_Component/1"/>
+                  <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_J45000"/>
+                  <sbol:displayId>CDS_Component</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:nondirectional>
+            <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance25/Pro_Component">
                   <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance25/Pro_Component/1"/>
                   <sbol:instanceOf>
                      <sbol:Component rdf:about="http://michael.zhang/1/Pro_GeneratedInstance84"/>
                   </sbol:instanceOf>
                   <sbol:displayId>Pro_Component</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance25/CDS_Component">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance25/CDS_Component/1"/>
-                  <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_J45000"/>
-                  <sbol:displayId>CDS_Component</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:displayId>Interface1</sbol:displayId>
@@ -2771,19 +2771,19 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance24/Interface1">
             <sbol:nondirectional>
+               <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance24/Ter_Component">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance24/Ter_Component/1"/>
+                  <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_K364302"/>
+                  <sbol:displayId>Ter_Component</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:nondirectional>
+            <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance24/Pro_Component">
                   <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance24/Pro_Component/1"/>
                   <sbol:instanceOf>
                      <sbol:Component rdf:about="http://michael.zhang/1/Pro_GeneratedInstance81"/>
                   </sbol:instanceOf>
                   <sbol:displayId>Pro_Component</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance24/Ter_Component">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance24/Ter_Component/1"/>
-                  <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_K364302"/>
-                  <sbol:displayId>Ter_Component</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:nondirectional>
@@ -3084,8 +3084,8 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
       <prov:wasDerivedFrom rdf:resource="http://michael.zhang/Pro/1"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Pro_GeneratedInstance84/Interface1">
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance84/Op_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance84/Pro1_Component"/>
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance84/Op_Component"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -3128,8 +3128,8 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
       <prov:wasDerivedFrom rdf:resource="http://michael.zhang/Pro/1"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Pro_GeneratedInstance85/Interface1">
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance85/Op_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance85/Pro1_Component"/>
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance85/Op_Component"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -3746,7 +3746,36 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
       <igem:dominant>true</igem:dominant>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/Interface1">
+            <sbol:nondirectional>
+               <sbol:SubComponent rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/component942803">
+                  <sbol:hasLocation>
+                     <sbol:Range rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/component942803/range942803">
+                        <sbol:displayId>range942803</sbol:displayId>
+                        <backport2_3:sbol2LocationSequenceNull
+                         rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</backport2_3:sbol2LocationSequenceNull>
+                        <backport2_3:sbol2OriginalURI rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/annotation942803/range942803/1"/>
+                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                        <sbol:hasSequence>
+                           <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422_sequence"/>
+                        </sbol:hasSequence>
+                        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/1"/>
+                        <igem:direction rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward"/>
+                        <sbol:start>1</sbol:start>
+                        <sbol:end>12</sbol:end>
+                     </sbol:Range>
+                  </sbol:hasLocation>
+                  <backport2_3:sbol2OriginalURI rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/annotation942803/1"/>
+                  <sbol:name>BBa_B0034</sbol:name>
+                  <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/1"/>
+                  <backport2_3:sbol2OriginalURI rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/component942803/1"/>
+                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/annotation942803/1"/>
+                  <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_B0034"/>
+                  <sbol:displayId>component942803</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:nondirectional>
             <sbol:nondirectional rdf:resource="https://synbiohub.org/public/igem/1/BBa_E0422/component942823"/>
+            <sbol:nondirectional rdf:resource="https://synbiohub.org/public/igem/1/BBa_E0422/component942833"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/component942815">
                   <sbol:hasLocation>
@@ -3777,35 +3806,6 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
                   <sbol:displayId>component942815</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
-            <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/component942803">
-                  <sbol:hasLocation>
-                     <sbol:Range rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/component942803/range942803">
-                        <sbol:displayId>range942803</sbol:displayId>
-                        <backport2_3:sbol2LocationSequenceNull
-                         rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-                        >true</backport2_3:sbol2LocationSequenceNull>
-                        <backport2_3:sbol2OriginalURI rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/annotation942803/range942803/1"/>
-                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                        <sbol:hasSequence>
-                           <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422_sequence"/>
-                        </sbol:hasSequence>
-                        <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/1"/>
-                        <igem:direction rdf:resource="http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward"/>
-                        <sbol:start>1</sbol:start>
-                        <sbol:end>12</sbol:end>
-                     </sbol:Range>
-                  </sbol:hasLocation>
-                  <backport2_3:sbol2OriginalURI rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/annotation942803/1"/>
-                  <sbol:name>BBa_B0034</sbol:name>
-                  <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/1"/>
-                  <backport2_3:sbol2OriginalURI rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/component942803/1"/>
-                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/annotation942803/1"/>
-                  <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_B0034"/>
-                  <sbol:displayId>component942803</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="https://synbiohub.org/public/igem/1/BBa_E0422/component942833"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -3889,7 +3889,6 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
       <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit/1"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit/Interface1">
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit/Ter_Component"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit/Pro_Component">
                   <sbol:hasLocation>
@@ -3914,6 +3913,7 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
                   <sbol:displayId>Pro_Component</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit/Ter_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit/CDS_Component"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
@@ -4211,8 +4211,8 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
       </sbol:hasConstraint>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance11/Interface1">
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance11/CDS_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance11/Ter_Component"/>
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance11/CDS_Component"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance11/Pro_Component">
                   <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance11/Pro_Component/1"/>
@@ -4282,8 +4282,8 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
                   <sbol:displayId>Pro_Component</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance15/CDS_Component"/>
             <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance15/Ter_Component"/>
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance15/CDS_Component"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -4329,6 +4329,7 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
       <prov:wasGeneratedBy rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance42_SBOLDesignerActivity/1"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance14/Interface1">
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance14/Ter_Component"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance14/CDS_Component">
                   <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance14/CDS_Component/1"/>
@@ -4343,7 +4344,6 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
                   <sbol:displayId>Pro_Component</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance14/Ter_Component"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -4421,17 +4421,17 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance13/CDS_Component">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance13/CDS_Component/1"/>
-                  <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_C0100"/>
-                  <sbol:displayId>CDS_Component</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance13/Pro_Component">
                   <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance13/Pro_Component/1"/>
                   <sbol:instanceOf rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance75"/>
                   <sbol:displayId>Pro_Component</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:nondirectional>
+            <sbol:nondirectional>
+               <sbol:SubComponent rdf:about="http://michael.zhang/1/Eukaryotic_Transcriptional_Unit_GeneratedInstance13/CDS_Component">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Eukaryotic_Transcriptional_Unit_GeneratedInstance13/CDS_Component/1"/>
+                  <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_C0100"/>
+                  <sbol:displayId>CDS_Component</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:displayId>Interface1</sbol:displayId>

@@ -12,6 +12,14 @@ PREFIX prov:        <http://www.w3.org/ns/prov#>
 PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX sbol:        <http://sbols.org/v3#>
 
+<http://www.async.ece.utah.edu/1.0/pLac>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "pLac";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:role                     SO:0000167;
+        sbol:type                     SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pLac/1.0> .
+
 <http://www.async.ece.utah.edu/tetR/component>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "component";
@@ -22,14 +30,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
         sbol:nondirectional  <http://www.async.ece.utah.edu/tetR/component> .
-
-<http://www.async.ece.utah.edu/1.0/pLac>
-        rdf:type                      sbol:Component;
-        sbol:displayId                "pLac";
-        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
-        sbol:role                     SO:0000167;
-        sbol:type                     SBO:0000251;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pLac/1.0> .
 
 <http://www.async.ece.utah.edu/tetR>
         rdf:type                      sbol:Component;

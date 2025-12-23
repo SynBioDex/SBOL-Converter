@@ -4,5 +4,6 @@
     <sbol:persistentIdentity rdf:resource="http://sys-bio.org/Plan_model_fitting"/>
     <sbol:displayId>Plan_model_fitting</sbol:displayId>
     <sbol:version>1.0.0</sbol:version>
+    <sbol:attachment rdf:resource="http://sys-bio.org/Attachment_model_fitting_script/1.0.0"/>
   </prov:Plan>
 </rdf:RDF>

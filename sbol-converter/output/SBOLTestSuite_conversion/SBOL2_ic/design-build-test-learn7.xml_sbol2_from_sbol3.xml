@@ -73,15 +73,11 @@
       </prov:Usage>
     </prov:qualifiedUsage>
   </prov:Activity>
-  <prov:Plan rdf:about="http://sys-bio.org/Plan_characterization_protocol/1.0.0">
-    <sbol:persistentIdentity rdf:resource="http://sys-bio.org/Plan_characterization_protocol"/>
-    <sbol:displayId>Plan_characterization_protocol</sbol:displayId>
-    <sbol:version>1.0.0</sbol:version>
-  </prov:Plan>
   <prov:Plan rdf:about="http://sys-bio.org/Plan_model_fitting/1.0.0">
     <sbol:persistentIdentity rdf:resource="http://sys-bio.org/Plan_model_fitting"/>
     <sbol:displayId>Plan_model_fitting</sbol:displayId>
     <sbol:version>1.0.0</sbol:version>
+    <sbol:attachment rdf:resource="http://sys-bio.org/Attachment_model_fitting_script/1.0.0"/>
   </prov:Plan>
   <prov:Plan rdf:about="http://sys-bio.org/Plan_conversion/1.0.0">
     <sbol:persistentIdentity rdf:resource="http://sys-bio.org/Plan_conversion"/>
@@ -94,6 +90,12 @@
     <sbol:displayId>Plan_gibson_assembly</sbol:displayId>
     <sbol:version>1.0.0</sbol:version>
     <dcterms:description>DNA assembly</dcterms:description>
+  </prov:Plan>
+  <prov:Plan rdf:about="http://sys-bio.org/Plan_characterization_protocol/1.0.0">
+    <sbol:persistentIdentity rdf:resource="http://sys-bio.org/Plan_characterization_protocol"/>
+    <sbol:displayId>Plan_characterization_protocol</sbol:displayId>
+    <sbol:version>1.0.0</sbol:version>
+    <sbol:attachment rdf:resource="http://sys-bio.org/Attachment_characterization_protocol/1.0.0"/>
   </prov:Plan>
   <sbol:Implementation rdf:about="http://sys-bio.org/Implementation_build/1.0.0">
     <sbol:persistentIdentity rdf:resource="http://sys-bio.org/Implementation_build"/>

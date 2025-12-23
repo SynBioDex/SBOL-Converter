@@ -10,7 +10,7 @@ public class AttachmentConverter implements EntityConverter<Attachment, org.sbol
 
     @Override
     public  org.sbolstandard.core2.Attachment convert(SBOLDocument doc, Attachment input) throws SBOLGraphException, SBOLValidationException {      	    	
-		org.sbolstandard.core2.Attachment att = doc.createAttachment(Util.getURIPrefix(input), input.getDisplayId(), Util.getVersion(input), Util.createSBOL2Uri(input.getSource()));
+		org.sbolstandard.core2.Attachment att = doc.createAttachment(Util.getURIPrefix(input), input.getDisplayId(), Util.getVersion(input), input.getSource());
 		
 		Util.copyIdentified(input, att, doc);
 		att.setHash(input.getHash());
@@ -18,7 +18,7 @@ public class AttachmentConverter implements EntityConverter<Attachment, org.sbol
 			att.setSize(input.getSize().getAsLong());
 		}
 		if (input.getFormat() != null) {
-			att.setFormat(input.getFormat());
+			att.setFormat(Util.convertEDAMUri_3_to_2(input.getFormat()));
 		}
 		return att;
 	}

@@ -19,7 +19,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbolstandard.org/example/md/GFP_expression>
         rdf:type                      sbol:Component;
         sbol:displayId                "GFP_expression";
-        sbol:hasFeature               <http://sbolstandard.org/example/md/GFP_expression/Constitutive_GFP> , <http://sbolstandard.org/example/md/GFP_expression/GFP_protein>;
+        sbol:hasFeature               <http://sbolstandard.org/example/md/GFP_expression/GFP_protein> , <http://sbolstandard.org/example/md/GFP_expression/Constitutive_GFP>;
         sbol:hasInteraction           <http://sbolstandard.org/example/md/GFP_expression/express_GFP>;
         sbol:hasInterface             <http://sbolstandard.org/example/md/GFP_expression/Interface1>;
         sbol:hasNamespace             <http://sbolstandard.org/example/md>;

@@ -119,10 +119,11 @@ public class TestUtil {
 		if (printToScreen){
 			SBOLWriter.write(sbol2InputDocument, System.out);
 		}
+		File inputNTFile = new File(outputFile + "_sbol2_sorted.nt");
 		if (outputFile != null) {
 			File sbol2File = new File(outputFile + "_sbol2.xml");			
 			SBOLWriter.write(sbol2InputDocument, sbol2File);
-			createSortedNtriples(sbol2File, new File(outputFile + "_sbol2_sorted.nt"));
+			createSortedNtriples(sbol2File, inputNTFile);
 		}
 
 		SBOLDocumentConverter converter = new SBOLDocumentConverter();
@@ -147,17 +148,83 @@ public class TestUtil {
 		if (printToScreen){		
 			SBOLWriter.write(sbol2Doc, System.out);
 		}
+		File outputNTFile = new File(outputFile + "_sbol2_from_sbol3_sorted.nt");			
 		if (outputFile != null) {			
 			SBOLWriter.write(sbol2Doc, new File(outputFile + "_sbol2_from_sbol3.xml"));
-			createSortedNtriples(new File(outputFile + "_sbol2_from_sbol3.xml"), new File(outputFile + "_sbol2_from_sbol3_sorted.nt"));
+			createSortedNtriples(new File(outputFile + "_sbol2_from_sbol3.xml"), outputNTFile);
 		}
 		SBOLValidate.compareDocuments("SBOL2in", sbol2InputDocument, "SBOL2out", sbol2Doc);
 		
-		return SBOLValidate.getErrors();		
+		List<String> errors = new ArrayList<>() ;
+		errors = SBOLValidate.getErrors();	
+		if (errors.size()>0 && outputFile != null){
+			boolean isSame=compareFiles(inputNTFile, outputNTFile);
+			if (isSame){
+				errors.clear();
+			}
+		}
+		return errors;	
 	}
 
 	public static List<String> roundTripConvert(SBOLDocument sbol2InputDocument) throws Exception {
 		return roundTripConvert(sbol2InputDocument, true,null, true);
+	}
+
+	/**
+	 * Compares two files to check if they have identical content.
+	 * 
+	 * @param file1 First file to compare
+	 * @param file2 Second file to compare
+	 * @return true if files have identical content, false otherwise
+	 */
+	private static boolean compareFiles(File file1, File file2) {
+		if (file1 == null || file2 == null) {
+			return false;
+		}
+		
+		if (!file1.exists() || !file2.exists()) {
+			return false;
+		}
+		
+		// If files are the same file
+		if (file1.equals(file2)) {
+			return true;
+		}
+		
+		// Check file sizes first (quick check)
+		if (file1.length() != file2.length()) {
+			return false;
+		}
+		
+		try (InputStream is1 = new java.io.FileInputStream(file1);
+			 InputStream is2 = new java.io.FileInputStream(file2)) {
+			
+			byte[] buffer1 = new byte[8192];
+			byte[] buffer2 = new byte[8192];
+			
+			int bytesRead1, bytesRead2;
+			
+			while ((bytesRead1 = is1.read(buffer1)) != -1) {
+				bytesRead2 = is2.read(buffer2);
+				
+				if (bytesRead1 != bytesRead2) {
+					return false;
+				}
+				
+				for (int i = 0; i < bytesRead1; i++) {
+					if (buffer1[i] != buffer2[i]) {
+						return false;
+					}
+				}
+			}
+			
+			// Check if second file has more content
+			return is2.read() == -1;
+			
+		} catch (IOException e) {
+			System.err.println("Error comparing files: " + e.getMessage());
+			return false;
+		}
 	}
 
 	public static void runTestSuiteFile2_to_3(File file) throws Exception {
