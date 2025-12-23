@@ -5,6 +5,7 @@
     <sbol:displayId>ModuleDefinition_design</sbol:displayId>
     <sbol:version>1.0.0</sbol:version>
     <prov:wasDerivedFrom rdf:resource="http://sys-bio.org/Model_predicted/1.0.0"/>
+    <prov:wasGeneratedBy rdf:resource="http://sys-bio.org/Activity_design_generation/1.0.0"/>
   </sbol:ModuleDefinition>
   <sbol:Model rdf:about="http://sys-bio.org/Model_predicted/1.0.0">
     <sbol:persistentIdentity rdf:resource="http://sys-bio.org/Model_predicted"/>
@@ -19,6 +20,7 @@
     <sbol:displayId>Model_fit_model</sbol:displayId>
     <sbol:version>1.0.0</sbol:version>
     <prov:wasDerivedFrom rdf:resource="http://sys-bio.org/Attachment_raw_data/1.0.0"/>
+    <prov:wasGeneratedBy rdf:resource="http://sys-bio.org/Activity_fit_model_generation/1.0.0"/>
     <sbol:source rdf:resource="file://server.sys-bio.org/models/model_fit.xml"/>
     <sbol:language rdf:resource="http://identifiers.org/edam/format_2585"/>
     <sbol:framework rdf:resource="http://identifiers.org/biomodels.sbo/SBO:0000062"/>
@@ -173,6 +175,7 @@
     <sbol:displayId>Implementation_build</sbol:displayId>
     <sbol:version>1.0.0</sbol:version>
     <prov:wasDerivedFrom rdf:resource="http://sys-bio.org/ModuleDefinition_design/1.0.0"/>
+    <prov:wasGeneratedBy rdf:resource="http://sys-bio.org/Activity_build_generation/1.0.0"/>
   </sbol:Implementation>
   <sbol:Attachment rdf:about="http://sys-bio.org/Attachment_model_fitting_script/1.0.0">
     <sbol:persistentIdentity rdf:resource="http://sys-bio.org/Attachment_model_fitting_script"/>
@@ -192,6 +195,7 @@
     <sbol:displayId>Attachment_raw_data</sbol:displayId>
     <sbol:version>1.0.0</sbol:version>
     <prov:wasDerivedFrom rdf:resource="http://sys-bio.org/Implementation_build/1.0.0"/>
+    <prov:wasGeneratedBy rdf:resource="http://sys-bio.org/Activity_raw_data_generation/1.0.0"/>
     <sbol:source rdf:resource="file://server.sys-bio.org/data/plate_reader_expt_012218.csv"/>
     <sbol:format rdf:resource="http://edamontology.org/format_3752"/>
   </sbol:Attachment>

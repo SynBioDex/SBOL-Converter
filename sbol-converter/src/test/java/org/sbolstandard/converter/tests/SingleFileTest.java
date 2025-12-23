@@ -11,6 +11,8 @@ import java.util.logging.Logger;
 import org.junit.jupiter.api.Test;
 import org.sbolstandard.core3.util.SBOLGraphException;
 
+import javassist.bytecode.analysis.Util;
+
 /**
  * Unit test for simple App.
  */
@@ -19,8 +21,15 @@ public class SingleFileTest {
 	@Test
 	public void TestSBOL2SingleFile() throws Exception {
 		//TestUtil.runTestSuiteFile2_to_3(new File("../SBOLTestSuite/SBOL2/SequenceConstraintOutput.xml"));
-		Logger logger=getLogger();	
-		testSingleSBOL2File("design-build-test-learn.xml", new File("../SBOLTestSuite/SBOL2_bp/"), "output/SBOLTestSuite_conversion/SBOL2/SingleFileTest", logger);		
+		Logger logger=getLogger();
+		boolean isNonBP=true;
+		boolean isIC=false;
+		boolean isNC=false;
+		testSingleSBOL2File("design-build-test-learn.xml", new File("../SBOLTestSuite/SBOL2_bp/"), 
+			"output/SBOLTestSuite_conversion/SingleFileTest", logger, 
+			isNonBP, 
+			isIC, 
+			isNC);		
 
 	}
 	
@@ -58,13 +67,14 @@ public class SingleFileTest {
         return fileName.substring(dotIndex + 1);
     }
 
-	private static void testSingleSBOL2File(String fileName, File folder, String outputFolder, Logger logger) throws Exception{	
+	private static void testSingleSBOL2File(String fileName, File folder, String outputFolder, Logger logger, boolean isNonBP, boolean isIC, boolean isNC) throws Exception{	
 		logger.info("Testing folder " + folder.getAbsolutePath());
 		File file=new File(folder, fileName);
 		if (!file.exists()){
 			printError("File " + file.getAbsolutePath() + " does not exist.", logger);
 			return;
 		}
+
 		//File[] files=folder.listFiles();
 		int successCounter=0;
 		int successCounterWithNoErrors=0;
@@ -87,7 +97,15 @@ public class SingleFileTest {
 		}
 		String outputFile = folderToSave + File.separator + file.getName();
 		try{
-			errors=TestUtil.roundTripConvertReadFromString(file,true,outputFile,false );
+			if (isNonBP) {
+				errors = TestUtil.roundTripConvertNonBPFromString(file,true,outputFile,false );
+			} else if (isIC) {
+				throw new UnsupportedOperationException("Single file IC conversion from string not implemented yet.");
+			} else if (isNC) {
+				throw new UnsupportedOperationException("Single file NC conversion from string not implemented yet.");
+			} else {
+				errors=TestUtil.roundTripConvertReadFromString(file,true,outputFile,false );
+			}
 			successCounter++;
 			if (errors==null || errors.size()==0){
 				successCounterWithNoErrors++;
@@ -100,7 +118,15 @@ public class SingleFileTest {
 			//Try without validation
 			printError("Converting without SBOL3 validation", logger);
 			try{
-				errors=TestUtil.roundTripConvert(file,false,outputFile,false);
+				if (isNonBP) {
+					errors = TestUtil.roundTripConvertNonBP(file,false,outputFile,false );
+				}else if (isIC) {
+					throw new UnsupportedOperationException("Single file IC W/O VAL conversion from string not implemented yet.");
+				} else if (isNC) {
+					throw new UnsupportedOperationException("Single file NC W/O VAL conversion from string not implemented yet.");
+				} else {
+					errors=TestUtil.roundTripConvert(file,false,outputFile,false);
+				}
 				withoutValidationCounter++;
 			}
 			catch (Exception e2){

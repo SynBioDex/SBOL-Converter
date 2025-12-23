@@ -141,6 +141,19 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 <https://synbiohub.org/public/igem/BBa_K1606010/annotation2438698/1>;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_K1606010/annotation2438698/1> , <https://synbiohub.org/public/igem/BBa_K1606010/component2438698/1> .
 
+<https://synbiohub.org/public/igem/1/BBa_K1606010/component2438697/range2438697>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range2438697";
+        sbol:end                      "220";
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_K1606010_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "209";
+        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/reverse>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_K1606010/1>;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_K1606010/annotation2438697/range2438697/1> .
+
 <https://synbiohub.org/public/igem/1/BBa_E0422/component942823>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "component942823";
@@ -164,19 +177,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_I9201/annotation302665/range302665/1> .
-
-<https://synbiohub.org/public/igem/1/BBa_K1606010/component2438697/range2438697>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range2438697";
-        sbol:end                      "220";
-        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_K1606010_sequence>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "209";
-        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/reverse>;
-        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_K1606010/1>;
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_K1606010/annotation2438697/range2438697/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_R0010_sequence>
         rdf:type                      sbol:Sequence;
@@ -1642,15 +1642,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0022/annotation2153/range2153/1> .
 
-<https://synbiohub.org/public/igem/1/BBa_E0022/annotation2154>
-        rdf:type                      sbol:SequenceFeature;
-        sbol:displayId                "annotation2154";
-        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_E0022/annotation2154/range2154>;
-        sbol:name                     "2";
-        sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#feature/stop> , SO:0000319;
-        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_E0022/1>;
-        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0022/annotation2154/1> .
-
 <https://synbiohub.org/public/igem/1/BBa_K1606010/component2438689/range2438689>
         rdf:type                      sbol:Range;
         sbol:displayId                "range2438689";
@@ -1663,6 +1654,15 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_K1606010/annotation2438689/range2438689/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_E0022/annotation2154>
+        rdf:type                      sbol:SequenceFeature;
+        sbol:displayId                "annotation2154";
+        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_E0022/annotation2154/range2154>;
+        sbol:name                     "2";
+        sbol:role                     <https://wiki.synbiohub.org/wiki/Terms/igem#feature/stop> , SO:0000319;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_E0022/1>;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0022/annotation2154/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_B0010/annotation7018>
         rdf:type                      sbol:SequenceFeature;

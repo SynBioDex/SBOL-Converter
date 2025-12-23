@@ -643,7 +643,6 @@ public class App {
             String outputFile, boolean showDetail, boolean noOutput, boolean changeURIprefix, boolean enumerate) {
         // TODO Auto-generated method stub
         
-
         // CONVERT FROM SBOL2 TO SBOL3
 
 

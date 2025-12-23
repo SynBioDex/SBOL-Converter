@@ -81,6 +81,7 @@ public class TestUtil {
 		Configuration.getInstance().setValidateRecommendedRules(previousSetting);
 		return result;
 	}
+	
 	public static List<String> roundTripConvertForIC(File file, boolean sbol3Validate, String outputFile, boolean printToScreen) throws Exception {
 		System.out.println("Converting the SBOL2 file (Method: IC): " + file.getName());
 		boolean previousSetting = Configuration.getInstance().isCompleteDocument();		
@@ -101,6 +102,21 @@ public class TestUtil {
 		System.out.println("++++++++++++++Read SBOL2 from string:++++++++++++++");
 
 		return roundTripConvert(doc2, sbol3Validate, outputFile, printToScreen);		
+	}
+	public static List<String> roundTripConvertNonBPFromString(File file, boolean sbol3Validate, String outputFile, boolean printToScreen) throws Exception {
+		System.out.println("Converting the SBOL2 file (Method: NonBP): " + file.getName());
+		boolean previousSetting = Configuration.getInstance().isValidateRecommendedRules();
+		Configuration.getInstance().setValidateRecommendedRules(false);	
+		
+		org.sbolstandard.core2.SBOLDocument doc = SBOLReader.read(file);
+		OutputStream os = new ByteArrayOutputStream();		
+		SBOLWriter.write(doc, os);
+		InputStream is = new ByteArrayInputStream(((ByteArrayOutputStream) os).toByteArray());
+		SBOLDocument doc2 = SBOLReader.read(is);
+
+		List<String> result = roundTripConvert(doc2, sbol3Validate, outputFile, printToScreen);	
+		Configuration.getInstance().setValidateRecommendedRules(previousSetting);
+		return result;
 	}
 
 

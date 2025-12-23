@@ -28,7 +28,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
         gbConv:label                  "Bar phosphimothricin acetyl transferase (S. hygroscopicus)";
         gbConv:multiRangeType         "join";
         sbol:displayId                "annotation6";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH43844/annotation6/range0> , <http://www.async.ece.utah.edu/pICH43844/annotation6/range1>;
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH43844/annotation6/range1> , <http://www.async.ece.utah.edu/pICH43844/annotation6/range0>;
         sbol:name                     "Bar phosphimothricin acetyl transferase (S. hygroscopicus)";
         sbol:role                     SO:0000316;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH43844/annotation6> .

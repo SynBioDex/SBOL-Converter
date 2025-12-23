@@ -401,14 +401,6 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/pIKERightCassette_1/anno3/location3> .
 
-<http://www.virtualparts.org/part/BBa_J61101>
-        rdf:type                      sbol:Sequence;
-        sbol:displayId                "BBa_J61101";
-        sbol:elements                 "aaagacaggacc";
-        sbol:encoding                 EDAM:format_1207;
-        sbol:hasNamespace             <http://www.virtualparts.org/part>;
-        backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/BBa_J61101> .
-
 <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "BBa_J61120";
@@ -417,6 +409,14 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         backport2_3:sbol2OriginalSequenceAnnotationURI
                 <http://www.virtualparts.org/part/pIKERightCassette_1/anno2>;
         backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/pIKERightCassette_1/anno2> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120> .
+
+<http://www.virtualparts.org/part/BBa_J61101>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "BBa_J61101";
+        sbol:elements                 "aaagacaggacc";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.virtualparts.org/part>;
+        backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/BBa_J61101> .
 
 <http://www.virtualparts.org/part/ECK120029600>
         rdf:type                      sbol:Sequence;
@@ -757,18 +757,6 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
                 <http://www.virtualparts.org/part/pIKERightCassette_1/anno3>;
         backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/pIKERightCassette_1/anno3> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040> .
 
-<http://www.virtualparts.org/part/GenericLocationComponent>
-        rdf:type                      sbol:Component;
-        sbol:displayId                "GenericLocationComponent";
-        sbol:hasFeature               <http://www.virtualparts.org/part/GenericLocationComponent/gl_seqAnn>;
-        sbol:hasNamespace             <http://www.virtualparts.org/part>;
-        sbol:hasSequence              <http://www.virtualparts.org/part/GenericLocationComponent_seq>;
-        sbol:role                     SO:0000167;
-        sbol:type                     SBO:0000251;
-        backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/GenericLocationComponent>;
-        backport2_3:sbol3TempSequenceURI
-                <http://www.virtualparts.org/part/GenericLocationComponent_seq> .
-
 <http://www.virtualparts.org/part/pIKERightCassette_1>
         rdf:type                      sbol:Component;
         sbol:description              "LacI Inverter";
@@ -783,6 +771,18 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/pIKERightCassette_1>;
         backport2_3:sbol3TempSequenceURI
                 <http://www.virtualparts.org/part/pIKERightCassette_1_seq> .
+
+<http://www.virtualparts.org/part/GenericLocationComponent>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "GenericLocationComponent";
+        sbol:hasFeature               <http://www.virtualparts.org/part/GenericLocationComponent/gl_seqAnn>;
+        sbol:hasNamespace             <http://www.virtualparts.org/part>;
+        sbol:hasSequence              <http://www.virtualparts.org/part/GenericLocationComponent_seq>;
+        sbol:role                     SO:0000167;
+        sbol:type                     SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://www.virtualparts.org/part/GenericLocationComponent>;
+        backport2_3:sbol3TempSequenceURI
+                <http://www.virtualparts.org/part/GenericLocationComponent_seq> .
 
 <http://www.virtualparts.org/part/BBa_R0040>
         rdf:type                      sbol:Sequence;

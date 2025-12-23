@@ -21,6 +21,7 @@
    </sbol:Model>
    <sbol:Model rdf:about="http://sys-bio.org/1.0.0/Model_fit_model">
       <backport2_3:sbol2OriginalURI rdf:resource="http://sys-bio.org/Model_fit_model/1.0.0"/>
+      <prov:wasGeneratedBy rdf:resource="http://sys-bio.org/Activity_fit_model_generation/1.0.0"/>
       <prov:wasDerivedFrom rdf:resource="http://sys-bio.org/Attachment_raw_data/1.0.0"/>
       <sbol:language rdf:resource="https://identifiers.org/edam:format_2585"/>
       <sbol:framework rdf:resource="https://identifiers.org/SBO:0000062"/>
@@ -30,12 +31,14 @@
    </sbol:Model>
    <sbol:Implementation rdf:about="http://sys-bio.org/1.0.0/Implementation_build">
       <backport2_3:sbol2OriginalURI rdf:resource="http://sys-bio.org/Implementation_build/1.0.0"/>
+      <prov:wasGeneratedBy rdf:resource="http://sys-bio.org/Activity_build_generation/1.0.0"/>
       <prov:wasDerivedFrom rdf:resource="http://sys-bio.org/ModuleDefinition_design/1.0.0"/>
       <sbol:hasNamespace rdf:resource="http://sys-bio.org"/>
       <sbol:displayId>Implementation_build</sbol:displayId>
    </sbol:Implementation>
    <sbol:Component rdf:about="http://sys-bio.org/1.0.0/ModuleDefinition_design">
       <backport2_3:sbol2OriginalURI rdf:resource="http://sys-bio.org/ModuleDefinition_design/1.0.0"/>
+      <prov:wasGeneratedBy rdf:resource="http://sys-bio.org/Activity_design_generation/1.0.0"/>
       <prov:wasDerivedFrom rdf:resource="http://sys-bio.org/Model_predicted/1.0.0"/>
       <sbol:hasNamespace rdf:resource="http://sys-bio.org"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
@@ -227,6 +230,7 @@
    <sbol:Attachment rdf:about="http://sys-bio.org/1.0.0/Attachment_raw_data">
       <sbol:format rdf:resource="http://edamontology.org/format_3752"/>
       <backport2_3:sbol2OriginalURI rdf:resource="http://sys-bio.org/Attachment_raw_data/1.0.0"/>
+      <prov:wasGeneratedBy rdf:resource="http://sys-bio.org/Activity_raw_data_generation/1.0.0"/>
       <prov:wasDerivedFrom rdf:resource="http://sys-bio.org/Implementation_build/1.0.0"/>
       <sbol:source rdf:resource="file://server.sys-bio.org/data/plate_reader_expt_012218.csv"/>
       <sbol:hasNamespace rdf:resource="http://sys-bio.org"/>
