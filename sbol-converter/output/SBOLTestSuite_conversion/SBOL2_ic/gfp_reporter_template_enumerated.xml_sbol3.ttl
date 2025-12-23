@@ -275,19 +275,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0014/annotation939311/range939311/1> .
 
-<https://synbiohub.org/public/igem/1/BBa_B0012/annotation1687/range1687>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range1687";
-        sbol:end                      "34";
-        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_B0012_sequence>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "34";
-        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
-        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0012/1>;
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0012/annotation1687/range1687/1> .
-
 <https://synbiohub.org/public/igem/1/BBa_E0040/annotation1934520/range1934520>
         rdf:type                      sbol:Range;
         sbol:displayId                "range1934520";
@@ -300,6 +287,19 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0040/annotation1934520/range1934520/1> .
+
+<https://synbiohub.org/public/igem/1/BBa_B0012/annotation1687/range1687>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range1687";
+        sbol:end                      "34";
+        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_B0012_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "34";
+        igem:direction                <http://wiki.synbiohub.org/wiki/Terms/igem#direction/forward>;
+        sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_B0012/1>;
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_B0012/annotation1687/range1687/1> .
 
 <http://michael.zhang/1/GFP_Reporter_Template_GeneratedInstance3/Ter_Component>
         rdf:type                      sbol:SubComponent;
