@@ -21,12 +21,13 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/Exported_File_seq> .
 
 <http://www.async.ece.utah.edu/Exported_File/reference0>
-        rdf:type         genbank:Reference , sbol:Identified;
-        sbol:displayId   "reference0";
-        genbank:authors  ".";
-        genbank:journal  "Exported Mar 12, 2014 from SnapGene Viewer 1.1.2 http://www.snapgene.com";
-        genbank:label    "1  (bases 1 to 3563)";
-        genbank:title    "Direct Submission" .
+        rdf:type                      genbank:Reference , sbol:Identified;
+        sbol:displayId                "reference0";
+        genbank:authors               ".";
+        genbank:journal               "Exported Mar 12, 2014 from SnapGene Viewer 1.1.2 http://www.snapgene.com";
+        genbank:label                 "1  (bases 1 to 3563)";
+        genbank:title                 "Direct Submission";
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/Exported_File/reference0> .
 
 <http://www.async.ece.utah.edu/Exported_File/annotation0>
         rdf:type                      sbol:SequenceFeature;

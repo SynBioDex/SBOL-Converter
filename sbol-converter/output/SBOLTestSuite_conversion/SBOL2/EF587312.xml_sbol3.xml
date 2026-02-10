@@ -33,6 +33,7 @@
             <genbank:title>Yeast-plant coupled vector system for identification of nuclear proteins</genbank:title>
             <genbank:authors>Zaltsman,A., Yi,B.Y., Krichevsky,A., Gafni,Y. and Citovsky,V.</genbank:authors>
             <genbank:label>1  (bases 1 to 705)</genbank:label>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/EF587312/reference0"/>
             <sbol:displayId>reference0</sbol:displayId>
             <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
          </genbank:Reference>
@@ -71,6 +72,7 @@
             <genbank:title>Direct Submission</genbank:title>
             <genbank:authors>Zaltsman,A.A. and Citovsky,V.</genbank:authors>
             <genbank:label>2  (bases 1 to 705)</genbank:label>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/EF587312/reference1"/>
             <sbol:displayId>reference1</sbol:displayId>
             <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
          </genbank:Reference>

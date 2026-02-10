@@ -53,7 +53,9 @@ public class SourceLocationConverter  implements ChildEntityConverter<org.sbolst
 			}
 			// Set the orientation for the SequenceFeature after each location is processed.
 			if (sbol3Location != null) {
-				sbol3Location.setOrientation(sbol3Orientation);
+				if (sbol3Orientation!=null){
+					sbol3Location.setOrientation(sbol3Orientation);
+				}
 				Util.copyIdentified(sbol2Loc, sbol3Location, parameters);
 				parameters.addMapping(sbol2Loc.getIdentity(), sbol3Location.getUri());		
 			}

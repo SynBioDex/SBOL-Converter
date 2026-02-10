@@ -12,58 +12,26 @@
     <sbol:type rdf:resource="http://identifiers.org/so/SO:0000988"/>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000804"/>
     <sbol:sequenceAnnotation>
-<<<<<<< HEAD
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation10">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation10"/>
-        <sbol:displayId>annotation10</sbol:displayId>
-        <dcterms:title>TagRFP (Entacmaea quadricolor)</dcterms:title>
-        <gbConv:label>TagRFP (Entacmaea quadricolor)</gbConv:label>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation2">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation2"/>
+        <sbol:displayId>annotation2</sbol:displayId>
+        <dcterms:title>rep (pMB1)</dcterms:title>
+        <gbConv:label>rep (pMB1)</gbConv:label>
+        <gbConv:vntifkey>21</gbConv:vntifkey>
+        <gbConv:featureType>Misc._feature</gbConv:featureType>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation10/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation10/range"/>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation2/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation2/range"/>
             <sbol:displayId>range</sbol:displayId>
-            <sbol:start>3431</sbol:start>
-            <sbol:end>4126</sbol:end>
+            <sbol:start>1401</sbol:start>
+            <sbol:end>2015</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation11">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation11"/>
-        <sbol:displayId>annotation11</sbol:displayId>
-        <dcterms:title>olesin Terminator (A. thaliana)</dcterms:title>
-        <gbConv:label>olesin Terminator (A. thaliana)</gbConv:label>
-        <gbConv:featureType>Terminator</gbConv:featureType>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation11/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation11/range"/>
-            <sbol:displayId>range</sbol:displayId>
-=======
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation11">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation11"/>
-        <sbol:displayId>annotation11</sbol:displayId>
-        <dcterms:title>olesin Terminator (A. thaliana)</dcterms:title>
-        <gbConv:label>olesin Terminator (A. thaliana)</gbConv:label>
-        <gbConv:featureType>Terminator</gbConv:featureType>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation11/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation11/range"/>
-            <sbol:displayId>range</sbol:displayId>
->>>>>>> feature/combder
-            <sbol:start>4131</sbol:start>
-            <sbol:end>4568</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-<<<<<<< HEAD
       <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation9">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation9"/>
         <sbol:displayId>annotation9</sbol:displayId>
@@ -77,7 +45,12 @@
             <sbol:displayId>range</sbol:displayId>
             <sbol:start>3025</sbol:start>
             <sbol:end>3264</sbol:end>
-=======
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
       <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation3">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation3"/>
         <sbol:displayId>annotation3</sbol:displayId>
@@ -99,21 +72,19 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation2">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation2"/>
-        <sbol:displayId>annotation2</sbol:displayId>
-        <dcterms:title>rep (pMB1)</dcterms:title>
-        <gbConv:label>rep (pMB1)</gbConv:label>
-        <gbConv:vntifkey>21</gbConv:vntifkey>
-        <gbConv:featureType>Misc._feature</gbConv:featureType>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation11">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation11"/>
+        <sbol:displayId>annotation11</sbol:displayId>
+        <dcterms:title>olesin Terminator (A. thaliana)</dcterms:title>
+        <gbConv:label>olesin Terminator (A. thaliana)</gbConv:label>
+        <gbConv:featureType>Terminator</gbConv:featureType>
         <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation2/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation2/range"/>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation11/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation11/range"/>
             <sbol:displayId>range</sbol:displayId>
-            <sbol:start>1401</sbol:start>
-            <sbol:end>2015</sbol:end>
->>>>>>> feature/combder
+            <sbol:start>4131</sbol:start>
+            <sbol:end>4568</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
@@ -139,95 +110,50 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-<<<<<<< HEAD
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation6">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation6"/>
-        <sbol:displayId>annotation6</sbol:displayId>
-        <dcterms:title>Start of transcription</dcterms:title>
-        <gbConv:label>Start of transcription</gbConv:label>
-        <gbConv:featureType>Misc._signal</gbConv:featureType>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation5">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation5"/>
+        <sbol:displayId>annotation5</sbol:displayId>
+        <dcterms:title>TATA box</dcterms:title>
+        <gbConv:label>TATA box</gbConv:label>
+        <gbConv:featureType>TATA_box</gbConv:featureType>
         <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation6/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation6/range"/>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation5/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation5/range"/>
             <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2604</sbol:start>
-            <sbol:end>2604</sbol:end>
-=======
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation1">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation1"/>
-        <sbol:displayId>annotation1</sbol:displayId>
-        <dcterms:title>G to A</dcterms:title>
-        <gbConv:label>G to A</gbConv:label>
-        <gbConv:vntifkey>62</gbConv:vntifkey>
-        <gbConv:featureType>Mutation</gbConv:featureType>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation1/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation1/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>1208</sbol:start>
-            <sbol:end>1208</sbol:end>
->>>>>>> feature/combder
+            <sbol:start>2567</sbol:start>
+            <sbol:end>2573</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation0">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation0"/>
-        <sbol:displayId>annotation0</sbol:displayId>
-        <dcterms:title>Sm/Sp no DraIII</dcterms:title>
-        <gbConv:label>Sm/Sp no DraIII</gbConv:label>
-        <gbConv:vntifkey>4</gbConv:vntifkey>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation8">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation8"/>
+        <sbol:displayId>annotation8</sbol:displayId>
+        <dcterms:title>Olesin (A. thaliana)</dcterms:title>
+        <gbConv:note>&lt;enter text here&gt;</gbConv:note>
+        <gbConv:label>Olesin (A. thaliana)</gbConv:label>
+        <gbConv:multiRangeType>join</gbConv:multiRangeType>
         <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation0/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation0/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>231</sbol:start>
-            <sbol:end>1241</sbol:end>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation8/range1">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation8/range1"/>
+            <sbol:displayId>range1</sbol:displayId>
+            <gbConv:position>position1</gbConv:position>
+            <sbol:start>3265</sbol:start>
+            <sbol:end>3430</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-<<<<<<< HEAD
-=======
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation9">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation9"/>
-        <sbol:displayId>annotation9</sbol:displayId>
-        <dcterms:title>Intron olesin (A.thaliana)</dcterms:title>
-        <gbConv:label>Intron olesin (A.thaliana)</gbConv:label>
-        <gbConv:featureType>Intron</gbConv:featureType>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation9/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation9/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>3025</sbol:start>
-            <sbol:end>3264</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation6">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation6"/>
-        <sbol:displayId>annotation6</sbol:displayId>
-        <dcterms:title>Start of transcription</dcterms:title>
-        <gbConv:label>Start of transcription</gbConv:label>
-        <gbConv:featureType>Misc._signal</gbConv:featureType>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation6/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation6/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2604</sbol:start>
-            <sbol:end>2604</sbol:end>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation8/range0">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation8/range0"/>
+            <sbol:displayId>range0</sbol:displayId>
+            <gbConv:position>position0</gbConv:position>
+            <sbol:start>2672</sbol:start>
+            <sbol:end>3024</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
@@ -252,25 +178,6 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation5">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation5"/>
-        <sbol:displayId>annotation5</sbol:displayId>
-        <dcterms:title>TATA box</dcterms:title>
-        <gbConv:label>TATA box</gbConv:label>
-        <gbConv:featureType>TATA_box</gbConv:featureType>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation5/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation5/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2567</sbol:start>
-            <sbol:end>2573</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
       <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation4">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation4"/>
         <sbol:displayId>annotation4</sbol:displayId>
@@ -284,88 +191,6 @@
             <sbol:displayId>range</sbol:displayId>
             <sbol:start>2258</sbol:start>
             <sbol:end>2603</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
->>>>>>> feature/combder
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation8">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation8"/>
-        <sbol:displayId>annotation8</sbol:displayId>
-        <dcterms:title>Olesin (A. thaliana)</dcterms:title>
-        <gbConv:note>&lt;enter text here&gt;</gbConv:note>
-        <gbConv:label>Olesin (A. thaliana)</gbConv:label>
-        <gbConv:multiRangeType>join</gbConv:multiRangeType>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation8/range0">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation8/range0"/>
-            <sbol:displayId>range0</sbol:displayId>
-            <gbConv:position>position0</gbConv:position>
-            <sbol:start>2672</sbol:start>
-            <sbol:end>3024</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-<<<<<<< HEAD
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation4">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation4"/>
-        <sbol:displayId>annotation4</sbol:displayId>
-        <dcterms:title>Promoter Olesin (A. thaliana)</dcterms:title>
-        <gbConv:label>Promoter Olesin (A. thaliana)</gbConv:label>
-        <gbConv:featureType>Promoter</gbConv:featureType>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation4/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation4/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2258</sbol:start>
-            <sbol:end>2603</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation3">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation3"/>
-        <sbol:displayId>annotation3</sbol:displayId>
-        <dcterms:title>ORI</dcterms:title>
-        <gbConv:note> RNaseH cleavage point </gbConv:note>
-        <gbConv:featureType>Replication_ori</gbConv:featureType>
-        <gbConv:vntifkey>33</gbConv:vntifkey>
-        <gbConv:label>ORI</gbConv:label>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation3/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation3/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2000</sbol:start>
-            <sbol:end>2000</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#reverseComplement"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation5">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation5"/>
-        <sbol:displayId>annotation5</sbol:displayId>
-        <dcterms:title>TATA box</dcterms:title>
-        <gbConv:label>TATA box</gbConv:label>
-        <gbConv:featureType>TATA_box</gbConv:featureType>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation5/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation5/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2567</sbol:start>
-            <sbol:end>2573</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
@@ -392,29 +217,38 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation2">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation2"/>
-        <sbol:displayId>annotation2</sbol:displayId>
-        <dcterms:title>rep (pMB1)</dcterms:title>
-        <gbConv:label>rep (pMB1)</gbConv:label>
-        <gbConv:vntifkey>21</gbConv:vntifkey>
-        <gbConv:featureType>Misc._feature</gbConv:featureType>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation6">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation6"/>
+        <sbol:displayId>annotation6</sbol:displayId>
+        <dcterms:title>Start of transcription</dcterms:title>
+        <gbConv:label>Start of transcription</gbConv:label>
+        <gbConv:featureType>Misc._signal</gbConv:featureType>
         <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation2/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation2/range"/>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation6/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation6/range"/>
             <sbol:displayId>range</sbol:displayId>
-            <sbol:start>1401</sbol:start>
-            <sbol:end>2015</sbol:end>
-=======
+            <sbol:start>2604</sbol:start>
+            <sbol:end>2604</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation0">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation0"/>
+        <sbol:displayId>annotation0</sbol:displayId>
+        <dcterms:title>Sm/Sp no DraIII</dcterms:title>
+        <gbConv:label>Sm/Sp no DraIII</gbConv:label>
+        <gbConv:vntifkey>4</gbConv:vntifkey>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
         <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation8/range1">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation8/range1"/>
-            <sbol:displayId>range1</sbol:displayId>
-            <gbConv:position>position1</gbConv:position>
-            <sbol:start>3265</sbol:start>
-            <sbol:end>3430</sbol:end>
->>>>>>> feature/combder
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL70008_1/annotation0/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL70008_1/annotation0/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>231</sbol:start>
+            <sbol:end>1241</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>

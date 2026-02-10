@@ -27,13 +27,14 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation3/range/1> .
 
 <http://www.async.ece.utah.edu/1/U49845/reference0>
-        rdf:type         genbank:Reference , sbol:Identified;
-        sbol:displayId   "reference0";
-        genbank:authors  "Roemer,T., Madden,K., Chang,J. and Snyder,M.";
-        genbank:journal  "Genes Dev. 10 (7), 777-793 (1996)";
-        genbank:label    "1  (bases 1 to 5028)";
-        genbank:pubmed   "8846915";
-        genbank:title    "Selection of axial growth sites in yeast requires Axl2p, a novel plasma membrane glycoprotein" .
+        rdf:type                      genbank:Reference , sbol:Identified;
+        sbol:displayId                "reference0";
+        genbank:authors               "Roemer,T., Madden,K., Chang,J. and Snyder,M.";
+        genbank:journal               "Genes Dev. 10 (7), 777-793 (1996)";
+        genbank:label                 "1  (bases 1 to 5028)";
+        genbank:pubmed                "8846915";
+        genbank:title                 "Selection of axial growth sites in yeast requires Axl2p, a novel plasma membrane glycoprotein";
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/reference0> .
 
 <http://www.async.ece.utah.edu/1/U49845/annotation4>
         rdf:type                      sbol:SequenceFeature;
@@ -82,12 +83,13 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation2/1> .
 
 <http://www.async.ece.utah.edu/1/U49845/reference1>
-        rdf:type         genbank:Reference , sbol:Identified;
-        sbol:displayId   "reference1";
-        genbank:authors  "Roemer,T.";
-        genbank:journal  "Submitted (22-FEB-1996) Biology, Yale University, New Haven, CT 06520, USA";
-        genbank:label    "2  (bases 1 to 5028)";
-        genbank:title    "Direct Submission" .
+        rdf:type                      genbank:Reference , sbol:Identified;
+        sbol:displayId                "reference1";
+        genbank:authors               "Roemer,T.";
+        genbank:journal               "Submitted (22-FEB-1996) Biology, Yale University, New Haven, CT 06520, USA";
+        genbank:label                 "2  (bases 1 to 5028)";
+        genbank:title                 "Direct Submission";
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/reference1> .
 
 <http://www.async.ece.utah.edu/1/U49845/annotation2/range>
         rdf:type                      sbol:Range;

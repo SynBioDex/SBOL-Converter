@@ -80,12 +80,13 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF165912/annotation7/1> .
 
 <http://www.async.ece.utah.edu/1/AF165912/reference1>
-        rdf:type         genbank:Reference , sbol:Identified;
-        sbol:displayId   "reference1";
-        genbank:authors  "Choi,Y.H., Choi,S.B. and Cho,S.H.";
-        genbank:journal  "Submitted (06-JUL-1999) Biology, Inha University, Yonghyon-Dong 253, Inchon 402-751, Korea";
-        genbank:label    "2  (bases 1 to 5485)";
-        genbank:title    "Direct Submission" .
+        rdf:type                      genbank:Reference , sbol:Identified;
+        sbol:displayId                "reference1";
+        genbank:authors               "Choi,Y.H., Choi,S.B. and Cho,S.H.";
+        genbank:journal               "Submitted (06-JUL-1999) Biology, Inha University, Yonghyon-Dong 253, Inchon 402-751, Korea";
+        genbank:label                 "2  (bases 1 to 5485)";
+        genbank:title                 "Direct Submission";
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF165912/reference1> .
 
 <http://www.async.ece.utah.edu/1/AF165912/annotation2>
         rdf:type                      sbol:SequenceFeature;
@@ -326,12 +327,13 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF165912/1> .
 
 <http://www.async.ece.utah.edu/1/AF165912/reference0>
-        rdf:type         genbank:Reference , sbol:Identified;
-        sbol:displayId   "reference0";
-        genbank:authors  "Choi,Y.H., Choi,S.B. and Cho,S.H.";
-        genbank:journal  "Unpublished";
-        genbank:label    "1  (bases 1 to 5485)";
-        genbank:title    "Structure of a CTP:Phosphocholine Cytidylyltransferase Gene from Arabidopsis thaliana" .
+        rdf:type                      genbank:Reference , sbol:Identified;
+        sbol:displayId                "reference0";
+        genbank:authors               "Choi,Y.H., Choi,S.B. and Cho,S.H.";
+        genbank:journal               "Unpublished";
+        genbank:label                 "1  (bases 1 to 5485)";
+        genbank:title                 "Structure of a CTP:Phosphocholine Cytidylyltransferase Gene from Arabidopsis thaliana";
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF165912/reference0> .
 
 <http://www.async.ece.utah.edu/1/AF165912/annotation1>
         rdf:type                      sbol:SequenceFeature;

@@ -36,12 +36,13 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/EF587312/annotation0/1> .
 
 <http://www.async.ece.utah.edu/1/EF587312/reference1>
-        rdf:type         genbank:Reference , sbol:Identified;
-        sbol:displayId   "reference1";
-        genbank:authors  "Zaltsman,A.A. and Citovsky,V.";
-        genbank:journal  "Submitted (27-APR-2007) Biochemistry and Cell Bio, State University of New York, Stony Brook, NY 11777, USA";
-        genbank:label    "2  (bases 1 to 705)";
-        genbank:title    "Direct Submission" .
+        rdf:type                      genbank:Reference , sbol:Identified;
+        sbol:displayId                "reference1";
+        genbank:authors               "Zaltsman,A.A. and Citovsky,V.";
+        genbank:journal               "Submitted (27-APR-2007) Biochemistry and Cell Bio, State University of New York, Stony Brook, NY 11777, USA";
+        genbank:label                 "2  (bases 1 to 705)";
+        genbank:title                 "Direct Submission";
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/EF587312/reference1> .
 
 <http://www.async.ece.utah.edu/1/EF587312/annotation0/range>
         rdf:type                      sbol:Range;
@@ -76,21 +77,14 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/EF587312/1> .
 
 <http://www.async.ece.utah.edu/1/EF587312/reference0>
-        rdf:type         genbank:Reference , sbol:Identified;
-        sbol:displayId   "reference0";
-        genbank:authors  "Zaltsman,A., Yi,B.Y., Krichevsky,A., Gafni,Y. and Citovsky,V.";
-        genbank:journal  "Plant Physiol. 145 (4), 1264-1271 (2007)";
-        genbank:label    "1  (bases 1 to 705)";
-        genbank:pubmed   "17704231";
-        genbank:title    "Yeast-plant coupled vector system for identification of nuclear proteins" .
-
-<http://www.async.ece.utah.edu/1/EF587312_seq>
-        rdf:type                      sbol:Sequence;
-        sbol:displayId                "EF587312_seq";
-        sbol:elements                 "gtgattaagcacacaaaggcagcttggagtatgtctgttattaatttcacaggtagttctggtccattggtgaaagtttgcggcttgcagagcacagaggccgcagaatgtgctctagattccgatgctgacttgctgggtattatatgtgtgcccaatagaaagagaacaattgacccggttattgcaaggaaaatttcaagtcttgtaaaagcatataaaaatagttcaggcactccgaaatacttggttggcgtgtttcgtaatcaacctaaggaggatgttttggctctggtcaatgattacggcattgatatcgtccaactgcatggagatgagtcgtggcaagaataccaagagttcctcggtttgccagttattaaaagactcgtatttccaaaagactgcaacatactactcagtgcagcttcacagaaacctcattcgtttattcccttgtttgattcagaagcaggtgggacaggtgaacttttggattggaactcgatttctgactgggttggaaggcaagagagccccgaaagcttacattttatgttagctggtggactgacgccagaaaatgttggtgatgcgcttagattaaatggcgttattggtgttgatgtaagcggaggtgtggagacaaatggtgtaaaagactctaacaaaatagcaaatttcgtcaaaaatgctaagaaatag";
-        sbol:encoding                 EDAM:format_1207;
-        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/EF587312_seq/1> .
+        rdf:type                      genbank:Reference , sbol:Identified;
+        sbol:displayId                "reference0";
+        genbank:authors               "Zaltsman,A., Yi,B.Y., Krichevsky,A., Gafni,Y. and Citovsky,V.";
+        genbank:journal               "Plant Physiol. 145 (4), 1264-1271 (2007)";
+        genbank:label                 "1  (bases 1 to 705)";
+        genbank:pubmed                "17704231";
+        genbank:title                 "Yeast-plant coupled vector system for identification of nuclear proteins";
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/EF587312/reference0> .
 
 <http://www.async.ece.utah.edu/1/EF587312/annotation1>
         rdf:type                      sbol:SequenceFeature;
@@ -104,3 +98,11 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:name                     "TRP1";
         sbol:role                     SO:0000316;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/EF587312/annotation1/1> .
+
+<http://www.async.ece.utah.edu/1/EF587312_seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "EF587312_seq";
+        sbol:elements                 "gtgattaagcacacaaaggcagcttggagtatgtctgttattaatttcacaggtagttctggtccattggtgaaagtttgcggcttgcagagcacagaggccgcagaatgtgctctagattccgatgctgacttgctgggtattatatgtgtgcccaatagaaagagaacaattgacccggttattgcaaggaaaatttcaagtcttgtaaaagcatataaaaatagttcaggcactccgaaatacttggttggcgtgtttcgtaatcaacctaaggaggatgttttggctctggtcaatgattacggcattgatatcgtccaactgcatggagatgagtcgtggcaagaataccaagagttcctcggtttgccagttattaaaagactcgtatttccaaaagactgcaacatactactcagtgcagcttcacagaaacctcattcgtttattcccttgtttgattcagaagcaggtgggacaggtgaacttttggattggaactcgatttctgactgggttggaaggcaagagagccccgaaagcttacattttatgttagctggtggactgacgccagaaaatgttggtgatgcgcttagattaaatggcgttattggtgttgatgtaagcggaggtgtggagacaaatggtgtaaaagactctaacaaaatagcaaatttcgtcaaaaatgctaagaaatag";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/EF587312_seq/1> .

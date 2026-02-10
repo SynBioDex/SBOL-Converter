@@ -690,6 +690,11 @@ public class Util {
 		if (annotations!=null){
 			for (Pair<URI, Object> annotation : annotations) {
 				String property = annotation.getLeft().toString();
+				//If the annotation was added during the conversion from v2 to v3, then remove it when converting it back to v2
+				if (property.toLowerCase().startsWith(ConverterNameSpace.BackPort_2_3.getUri().toString().toLowerCase())){				
+					continue;
+				}
+
 				Object value = annotation.getRight();
 				QName qName=toQName(URI.create(property),sbol2Document);
 				if (value instanceof URI) {
@@ -718,7 +723,10 @@ public class Util {
 
 		Annotation nestedAnnotation=null;
 		if (output instanceof org.sbolstandard.core2.Identified){
-			org.sbolstandard.core2.Identified identifiedOutput = (org.sbolstandard.core2.Identified) output;
+			//new Annotat
+			ComponentDefinition cdOutput = null;
+			
+			org.sbolstandard.core2.Identified identifiedOutput = (org.sbolstandard.core2.Identified) output;			
 			nestedAnnotation = identifiedOutput.createAnnotation(qnameProperty, nestedQName, metadata.getDisplayId(), sbol2Annotations);
 		}
 		else if (output instanceof Annotation){
@@ -786,6 +794,7 @@ public class Util {
 				URI annotationDataType = URI.create(annotationDataTypeString);
 				String displayId = inferDisplayId(annotationURI, URINameSpace.SBOL.local("Identified"), parent.getMetadataEntites());
 				Metadata metadata = parent.createMetadata(displayId, annotationDataType, property);
+				metadata.addAnnotation(ConverterVocabulary.Two_to_Three.sbol2OriginalURI, annotationURI);		
 				convertAnnotations_2_to3(annotation.getAnnotations(), metadata);
 			}
 			else if (annotation.isBooleanValue()){
@@ -838,6 +847,20 @@ public class Util {
 			value=annotation.getURIValue();
 		}
 		return value;		
+	}
+
+	public static boolean isFrom2To3(SBOLDocument sbol3Document){
+		if (sbol3Document!=null)
+		{
+			Model model = sbol3Document.getRDFModel();
+			String ns= ConverterNameSpace.BackPortNameSpace2_3.getInstance().getUri().toString();
+			if (model.getNsPrefixMap().values().contains(ns))
+			{
+				return true;
+			}
+		}
+		return false;
+	
 	}
 
 	public static void copyNamespacesFrom2_to_3(org.sbolstandard.core2.SBOLDocument inputSbol2Doc, SBOLDocument outputSbol3Doc) {

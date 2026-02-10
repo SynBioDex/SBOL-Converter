@@ -131,12 +131,13 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation4/range1/1> .
 
 <http://www.async.ece.utah.edu/1/AF090832/reference1>
-        rdf:type         genbank:Reference , sbol:Identified;
-        sbol:displayId   "reference1";
-        genbank:authors  "Stronach,B.E., Renfranz,P.J., Lilly,B. and Beckerle,M.C.";
-        genbank:journal  "Submitted (09-SEP-1998) Biology, University of Utah, 257 S. 1400 East, Salt Lake City, UT 84112-0840, USA";
-        genbank:label    "2  (bases 1 to 5086)";
-        genbank:title    "Direct Submission" .
+        rdf:type                      genbank:Reference , sbol:Identified;
+        sbol:displayId                "reference1";
+        genbank:authors               "Stronach,B.E., Renfranz,P.J., Lilly,B. and Beckerle,M.C.";
+        genbank:journal               "Submitted (09-SEP-1998) Biology, University of Utah, 257 S. 1400 East, Salt Lake City, UT 84112-0840, USA";
+        genbank:label                 "2  (bases 1 to 5086)";
+        genbank:title                 "Direct Submission";
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/reference1> .
 
 <http://www.async.ece.utah.edu/1/AF090832/annotation14>
         rdf:type                      sbol:SequenceFeature;
@@ -186,17 +187,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:role                     SO:0002206;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation0/1> .
 
-<http://www.async.ece.utah.edu/1/AF090832/annotation8/range>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range";
-        sbol:end                      "1333";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "1324";
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation8/range/1> .
-
 <http://www.async.ece.utah.edu/1/AF090832/annotation15/range>
         rdf:type                      sbol:Range;
         sbol:displayId                "range";
@@ -207,6 +197,17 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation15/range/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation8/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "1333";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1324";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation8/range/1> .
 
 <http://www.async.ece.utah.edu/1/AF090832/annotation3/range0>
         rdf:type                      sbol:Range;
@@ -269,7 +270,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
         gbConv:gene                   "Mlp84B";
         gbConv:multiRangeType         "join";
         sbol:displayId                "annotation3";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation3/range0> , <http://www.async.ece.utah.edu/1/AF090832/annotation3/range1>;
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation3/range1> , <http://www.async.ece.utah.edu/1/AF090832/annotation3/range0>;
         sbol:name                     "Mlp84B";
         sbol:role                     SO:0000234;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation3/1> .
@@ -398,13 +399,14 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation10/range/1> .
 
 <http://www.async.ece.utah.edu/1/AF090832/reference0>
-        rdf:type         genbank:Reference , sbol:Identified;
-        sbol:displayId   "reference0";
-        genbank:authors  "Stronach,B.E., Renfranz,P.J., Lilly,B. and Beckerle,M.C.";
-        genbank:journal  "Mol. Biol. Cell 10 (7), 2329-2342 (1999)";
-        genbank:label    "1  (bases 1 to 5086)";
-        genbank:pubmed   "10397768";
-        genbank:title    "Muscle LIM proteins are associated with muscle sarcomeres and require dMEF2 for their expression during Drosophila myogenesis" .
+        rdf:type                      genbank:Reference , sbol:Identified;
+        sbol:displayId                "reference0";
+        genbank:authors               "Stronach,B.E., Renfranz,P.J., Lilly,B. and Beckerle,M.C.";
+        genbank:journal               "Mol. Biol. Cell 10 (7), 2329-2342 (1999)";
+        genbank:label                 "1  (bases 1 to 5086)";
+        genbank:pubmed                "10397768";
+        genbank:title                 "Muscle LIM proteins are associated with muscle sarcomeres and require dMEF2 for their expression during Drosophila myogenesis";
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/reference0> .
 
 <http://www.async.ece.utah.edu/1/AF090832/annotation13>
         rdf:type                      sbol:SequenceFeature;
@@ -435,7 +437,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
         gbConv:gene                   "Mlp84B";
         gbConv:multiRangeType         "join";
         sbol:displayId                "annotation4";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation4/range0> , <http://www.async.ece.utah.edu/1/AF090832/annotation4/range1>;
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation4/range1> , <http://www.async.ece.utah.edu/1/AF090832/annotation4/range0>;
         sbol:name                     "Mlp84B";
         sbol:role                     SO:0000204;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation4/1> .

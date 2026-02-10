@@ -13,7 +13,29 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/BBa_J61120_BBa_C0051/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/BBa_J61120_BBa_C0051/BBa_C0051> , <http://www.async.ece.utah.edu/BBa_J61120_BBa_C0051/BBa_J61120> .
+        sbol:nondirectional  <http://www.async.ece.utah.edu/BBa_J61120_BBa_C0051/BBa_J61120> , <http://www.async.ece.utah.edu/BBa_J61120_BBa_C0051/BBa_C0051> .
+
+<http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61130_BBa_E0040>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "BBa_J61130_BBa_E0040";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61130_BBa_E0040/range>;
+        sbol:instanceOf               <http://www.async.ece.utah.edu/BBa_J61130_BBa_E0040>;
+        prov:wasDerivedFrom           <http://www.eugenecad.org/pTAKRightCassette_2/annotation_3>;
+        backport2_3:sbol2OriginalSequenceAnnotationURI
+                <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61130_BBa_E0040_annotation>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61130_BBa_E0040_annotation> , <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61130_BBa_E0040> .
+
+<http://www.async.ece.utah.edu/BBa_J61107>
+        rdf:type                      sbol:Component;
+        sbol:description              "Ribosome Binding Site Family Member";
+        sbol:displayId                "BBa_J61107";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/BBa_J61107_sequence>;
+        sbol:name                     "BBa_J61107";
+        sbol:role                     SO:0000139;
+        sbol:type                     SO:0000987 , SBO:0000251;
+        prov:wasDerivedFrom           <http://partsregistry.org/part/BBa_J61107>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_J61107> .
 
 <http://www.async.ece.utah.edu/BBa_J61130_BBa_C0040>
         rdf:type                      sbol:Component;
@@ -28,47 +50,10 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasDerivedFrom           <http://www.eugenecad.org/device/BBa_J61130_BBa_C0040>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_J61130_BBa_C0040> .
 
-<http://www.async.ece.utah.edu/BBa_J61107>
-        rdf:type                      sbol:Component;
-        sbol:description              "Ribosome Binding Site Family Member";
-        sbol:displayId                "BBa_J61107";
-        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
-        sbol:hasSequence              <http://www.async.ece.utah.edu/BBa_J61107_sequence>;
-        sbol:name                     "BBa_J61107";
-        sbol:role                     SO:0000139;
-        sbol:type                     SO:0000987 , SBO:0000251;
-        prov:wasDerivedFrom           <http://partsregistry.org/part/BBa_J61107>;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_J61107> .
-
-<http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61130_BBa_E0040>
-        rdf:type                      sbol:SubComponent;
-        sbol:displayId                "BBa_J61130_BBa_E0040";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61130_BBa_E0040/range>;
-        sbol:instanceOf               <http://www.async.ece.utah.edu/BBa_J61130_BBa_E0040>;
-        prov:wasDerivedFrom           <http://www.eugenecad.org/pTAKRightCassette_2/annotation_3>;
-        backport2_3:sbol2OriginalSequenceAnnotationURI
-                <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61130_BBa_E0040_annotation>;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61130_BBa_E0040_annotation> , <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61130_BBa_E0040> .
-
 <http://www.async.ece.utah.edu/pIKELeftCassette_2/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-<<<<<<< HEAD
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKELeftCassette_2/BBa_J61104_BBa_C0012> , <http://www.async.ece.utah.edu/pIKELeftCassette_2/BBa_R0040> , <http://www.async.ece.utah.edu/pIKELeftCassette_2/ECK120033737> .
-=======
         sbol:nondirectional  <http://www.async.ece.utah.edu/pIKELeftCassette_2/ECK120033737> , <http://www.async.ece.utah.edu/pIKELeftCassette_2/BBa_R0040> , <http://www.async.ece.utah.edu/pIKELeftCassette_2/BBa_J61104_BBa_C0012> .
-
-<http://www.async.ece.utah.edu/pTAKRightCassette_3/ECK120033736/range>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range";
-        sbol:end                      "1747";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/pTAKRightCassette_3_sequence>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "1695";
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKRightCassette_3/ECK120033736_annotation/range> .
->>>>>>> feature/combder
 
 <http://www.async.ece.utah.edu/pIKELeftCassette_2/BBa_R0040/range>
         rdf:type                      sbol:Range;
@@ -95,11 +80,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pTAKRightCassette_2/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-<<<<<<< HEAD
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61120_BBa_C0051> , <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61053> , <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61130_BBa_E0040> , <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_R0010> .
-=======
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_R0010> , <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61130_BBa_E0040> , <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61120_BBa_C0051> , <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61053> .
->>>>>>> feature/combder
+        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61120_BBa_C0051> , <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61130_BBa_E0040> , <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_R0010> , <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61053> .
 
 <http://www.async.ece.utah.edu/pTAKRightCassette_4>
         rdf:type                      sbol:Component;
@@ -135,17 +116,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 <http://www.async.ece.utah.edu/pTAKLeftCassette_2/ECK120033737_annotation>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKLeftCassette_2/ECK120033737_annotation> , <http://www.async.ece.utah.edu/pTAKLeftCassette_2/ECK120033737> .
 
-<http://www.async.ece.utah.edu/pTAKLeftCassette_4/ECK120034435/range>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range";
-        sbol:end                      "1287";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/pTAKLeftCassette_4_sequence>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "1231";
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKLeftCassette_4/ECK120034435_annotation/range> .
-
 <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61120_BBa_E0040/range>
         rdf:type                      sbol:Range;
         sbol:displayId                "range";
@@ -156,6 +126,17 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61120_BBa_E0040_annotation/range> .
+
+<http://www.async.ece.utah.edu/pTAKLeftCassette_4/ECK120034435/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "1287";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pTAKLeftCassette_4_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1231";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKLeftCassette_4/ECK120034435_annotation/range> .
 
 <http://www.async.ece.utah.edu/BBa_J61115>
         rdf:type                      sbol:Component;
@@ -289,11 +270,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pTAKLeftCassette_3/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-<<<<<<< HEAD
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_J61107_BBa_C0012> , <http://www.async.ece.utah.edu/pTAKLeftCassette_3/pheA1> , <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_K121014> .
-=======
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_K121014> , <http://www.async.ece.utah.edu/pTAKLeftCassette_3/pheA1> , <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_J61107_BBa_C0012> .
->>>>>>> feature/combder
+        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_K121014> , <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_J61107_BBa_C0012> , <http://www.async.ece.utah.edu/pTAKLeftCassette_3/pheA1> .
 
 <http://www.async.ece.utah.edu/BBa_R0040_sequence>
         rdf:type                      sbol:Sequence;
@@ -318,7 +295,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pIKERightCassette_4/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61053> , <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61130_BBa_C0040> , <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_R0010> , <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61120_BBa_E0040> .
+        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61130_BBa_C0040> , <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61120_BBa_E0040> , <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61053> , <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_R0010> .
 
 <http://www.async.ece.utah.edu/pTAKLeftCassette_4/BBa_K121014>
         rdf:type                      sbol:SubComponent;
@@ -330,14 +307,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 <http://www.async.ece.utah.edu/pTAKLeftCassette_4/BBa_K121014_annotation>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKLeftCassette_4/BBa_K121014_annotation> , <http://www.async.ece.utah.edu/pTAKLeftCassette_4/BBa_K121014> .
 
-<<<<<<< HEAD
-<http://www.async.ece.utah.edu/pIKERightCassette_4/Interface1>
-        rdf:type             sbol:Interface;
-        sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61053> , <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61130_BBa_C0040> , <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_R0010> , <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61120_BBa_E0040> .
-
-=======
->>>>>>> feature/combder
 <http://www.async.ece.utah.edu/pTAKLeftCassette_1/BBa_K121014>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "BBa_K121014";
@@ -455,7 +424,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pTAKLeftCassette_1/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKLeftCassette_1/BBa_J61101_BBa_C0012> , <http://www.async.ece.utah.edu/pTAKLeftCassette_1/BBa_K121014> , <http://www.async.ece.utah.edu/pTAKLeftCassette_1/ECK120029600> .
+        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKLeftCassette_1/BBa_K121014> , <http://www.async.ece.utah.edu/pTAKLeftCassette_1/BBa_J61101_BBa_C0012> , <http://www.async.ece.utah.edu/pTAKLeftCassette_1/ECK120029600> .
 
 <http://www.async.ece.utah.edu/pIKELeftCassette_3/BBa_J61107_BBa_C0012>
         rdf:type                      sbol:SubComponent;
@@ -612,17 +581,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasDerivedFrom           <http://www.eugenecad.org/pIKELeftCassette_1_sequence>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKELeftCassette_1_sequence> .
 
-<http://www.async.ece.utah.edu/pTAKLeftCassette_2/ECK120033737/range>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range";
-        sbol:end                      "1287";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/pTAKLeftCassette_2_sequence>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "1231";
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKLeftCassette_2/ECK120033737_annotation/range> .
-
 <http://www.async.ece.utah.edu/BBa_J61115_BBa_C0012/BBa_C0012/range>
         rdf:type                      sbol:Range;
         sbol:displayId                "range";
@@ -633,6 +591,17 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_J61115_BBa_C0012/BBa_C0012_annotation/range> .
+
+<http://www.async.ece.utah.edu/pTAKLeftCassette_2/ECK120033737/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "1287";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pTAKLeftCassette_2_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1231";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKLeftCassette_2/ECK120033737_annotation/range> .
 
 <http://www.async.ece.utah.edu/BBa_J61120_sequence>
         rdf:type                      sbol:Sequence;
@@ -692,7 +661,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/BBa_J61130_BBa_C0051/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/BBa_J61130_BBa_C0051/BBa_C0051> , <http://www.async.ece.utah.edu/BBa_J61130_BBa_C0051/BBa_J61130> .
+        sbol:nondirectional  <http://www.async.ece.utah.edu/BBa_J61130_BBa_C0051/BBa_J61130> , <http://www.async.ece.utah.edu/BBa_J61130_BBa_C0051/BBa_C0051> .
 
 <http://www.async.ece.utah.edu/pIKERightCassette_2/BBa_J61053/range>
         rdf:type                      sbol:Range;
@@ -791,7 +760,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pIKELeftCassette_1/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKELeftCassette_1/BBa_R0040> , <http://www.async.ece.utah.edu/pIKELeftCassette_1/BBa_J61101_BBa_C0012> , <http://www.async.ece.utah.edu/pIKELeftCassette_1/ECK120029600> .
+        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKELeftCassette_1/BBa_J61101_BBa_C0012> , <http://www.async.ece.utah.edu/pIKELeftCassette_1/ECK120029600> , <http://www.async.ece.utah.edu/pIKELeftCassette_1/BBa_R0040> .
 
 <http://www.async.ece.utah.edu/pTAKRightCassette_4/BBa_J61130_BBa_C0051/range>
         rdf:type                      sbol:Range;
@@ -807,7 +776,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pTAKRightCassette_1/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKRightCassette_1/BBa_J61130_BBa_E0040> , <http://www.async.ece.utah.edu/pTAKRightCassette_1/BBa_R0010> , <http://www.async.ece.utah.edu/pTAKRightCassette_1/ECK120033736> , <http://www.async.ece.utah.edu/pTAKRightCassette_1/BBa_J61120_BBa_C0051> .
+        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKRightCassette_1/ECK120033736> , <http://www.async.ece.utah.edu/pTAKRightCassette_1/BBa_R0010> , <http://www.async.ece.utah.edu/pTAKRightCassette_1/BBa_J61130_BBa_E0040> , <http://www.async.ece.utah.edu/pTAKRightCassette_1/BBa_J61120_BBa_C0051> .
 
 <http://www.async.ece.utah.edu/pTAKLeftCassette_1/BBa_J61101_BBa_C0012>
         rdf:type                      sbol:SubComponent;
@@ -818,24 +787,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2OriginalSequenceAnnotationURI
                 <http://www.async.ece.utah.edu/pTAKLeftCassette_1/BBa_J61101_BBa_C0012_annotation>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKLeftCassette_1/BBa_J61101_BBa_C0012_annotation> , <http://www.async.ece.utah.edu/pTAKLeftCassette_1/BBa_J61101_BBa_C0012> .
-
-<<<<<<< HEAD
-<http://www.async.ece.utah.edu/pIKERightCassette_1/BBa_J61130_BBa_E0040/range>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range";
-        sbol:end                      "1604";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/pIKERightCassette_1_sequence>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "873";
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKERightCassette_1/BBa_J61130_BBa_E0040_annotation/range> .
-=======
-<http://www.async.ece.utah.edu/pTAKRightCassette_1/Interface1>
-        rdf:type             sbol:Interface;
-        sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKRightCassette_1/BBa_J61130_BBa_E0040> , <http://www.async.ece.utah.edu/pTAKRightCassette_1/BBa_J61120_BBa_C0051> , <http://www.async.ece.utah.edu/pTAKRightCassette_1/BBa_R0010> , <http://www.async.ece.utah.edu/pTAKRightCassette_1/ECK120033736> .
->>>>>>> feature/combder
 
 <http://www.async.ece.utah.edu/pTAKRightCassette_3/BBa_R0010/range>
         rdf:type                      sbol:Range;
@@ -909,16 +860,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasDerivedFrom           <http://partsregistry.org/part/BBa_J61130>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_J61130> .
 
-<http://www.async.ece.utah.edu/pIKERightCassette_3/BBa_J61120_BBa_E0040>
-        rdf:type                      sbol:SubComponent;
-        sbol:displayId                "BBa_J61120_BBa_E0040";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/pIKERightCassette_3/BBa_J61120_BBa_E0040/range>;
-        sbol:instanceOf               <http://www.async.ece.utah.edu/BBa_J61120_BBa_E0040>;
-        prov:wasDerivedFrom           <http://www.eugenecad.org/pIKERightCassette_3/annotation_3>;
-        backport2_3:sbol2OriginalSequenceAnnotationURI
-                <http://www.async.ece.utah.edu/pIKERightCassette_3/BBa_J61120_BBa_E0040_annotation>;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKERightCassette_3/BBa_J61120_BBa_E0040_annotation> , <http://www.async.ece.utah.edu/pIKERightCassette_3/BBa_J61120_BBa_E0040> .
-
 <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61120_BBa_E0040>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "BBa_J61120_BBa_E0040";
@@ -928,6 +869,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2OriginalSequenceAnnotationURI
                 <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61120_BBa_E0040_annotation>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61120_BBa_E0040_annotation> , <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61120_BBa_E0040> .
+
+<http://www.async.ece.utah.edu/pIKERightCassette_3/BBa_J61120_BBa_E0040>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "BBa_J61120_BBa_E0040";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pIKERightCassette_3/BBa_J61120_BBa_E0040/range>;
+        sbol:instanceOf               <http://www.async.ece.utah.edu/BBa_J61120_BBa_E0040>;
+        prov:wasDerivedFrom           <http://www.eugenecad.org/pIKERightCassette_3/annotation_3>;
+        backport2_3:sbol2OriginalSequenceAnnotationURI
+                <http://www.async.ece.utah.edu/pIKERightCassette_3/BBa_J61120_BBa_E0040_annotation>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKERightCassette_3/BBa_J61120_BBa_E0040_annotation> , <http://www.async.ece.utah.edu/pIKERightCassette_3/BBa_J61120_BBa_E0040> .
 
 <http://www.async.ece.utah.edu/pTAKRightCassette_3/BBa_J61130_BBa_C0051/range>
         rdf:type                      sbol:Range;
@@ -954,11 +905,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pIKERightCassette_3/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-<<<<<<< HEAD
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKERightCassette_3/BBa_J61120_BBa_E0040> , <http://www.async.ece.utah.edu/pIKERightCassette_3/BBa_R0010> , <http://www.async.ece.utah.edu/pIKERightCassette_3/ECK120033736> , <http://www.async.ece.utah.edu/pIKERightCassette_3/BBa_J61130_BBa_C0040> .
-=======
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKERightCassette_3/BBa_J61130_BBa_C0040> , <http://www.async.ece.utah.edu/pIKERightCassette_3/BBa_R0010> , <http://www.async.ece.utah.edu/pIKERightCassette_3/ECK120033736> , <http://www.async.ece.utah.edu/pIKERightCassette_3/BBa_J61120_BBa_E0040> .
->>>>>>> feature/combder
+        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKERightCassette_3/BBa_R0010> , <http://www.async.ece.utah.edu/pIKERightCassette_3/BBa_J61130_BBa_C0040> , <http://www.async.ece.utah.edu/pIKERightCassette_3/BBa_J61120_BBa_E0040> , <http://www.async.ece.utah.edu/pIKERightCassette_3/ECK120033736> .
 
 <http://www.async.ece.utah.edu/pIKERightCassette_2/BBa_J61120_BBa_C0040/range>
         rdf:type                      sbol:Range;
@@ -1000,17 +947,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasDerivedFrom           <http://partsregistry.org/part/BBa_J61104_sequence>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_J61104_sequence> .
 
-<http://www.async.ece.utah.edu/pTAKLeftCassette_1/BBa_K121014/range>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range";
-        sbol:end                      "90";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/pTAKLeftCassette_1_sequence>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "1";
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKLeftCassette_1/BBa_K121014_annotation/range> .
-
 <http://www.async.ece.utah.edu/BBa_J61130_BBa_E0040/BBa_J61130/range>
         rdf:type                      sbol:Range;
         sbol:displayId                "range";
@@ -1021,6 +957,17 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_J61130_BBa_E0040/BBa_J61130_annotation/range> .
+
+<http://www.async.ece.utah.edu/pTAKLeftCassette_1/BBa_K121014/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "90";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pTAKLeftCassette_1_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKLeftCassette_1/BBa_K121014_annotation/range> .
 
 <http://www.async.ece.utah.edu/BBa_J61101_BBa_C0012/BBa_J61101>
         rdf:type                      sbol:SubComponent;
@@ -1125,17 +1072,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasDerivedFrom           <http://www.eugenecad.org/parts/ECK120033736_sequence>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/ECK120033736_sequence> .
 
-<http://www.async.ece.utah.edu/pIKELeftCassette_3/BBa_J61107_BBa_C0012/range>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range";
-        sbol:end                      "1194";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/pIKELeftCassette_3_sequence>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "55";
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKELeftCassette_3/BBa_J61107_BBa_C0012_annotation/range> .
-
 <http://www.async.ece.utah.edu/pTAKLeftCassette_3/pheA1/range>
         rdf:type                      sbol:Range;
         sbol:displayId                "range";
@@ -1146,6 +1082,17 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKLeftCassette_3/pheA1_annotation/range> .
+
+<http://www.async.ece.utah.edu/pIKELeftCassette_3/BBa_J61107_BBa_C0012/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "1194";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pIKELeftCassette_3_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "55";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKELeftCassette_3/BBa_J61107_BBa_C0012_annotation/range> .
 
 <http://www.async.ece.utah.edu/BBa_J61115_BBa_C0012/BBa_J61115/range>
         rdf:type                      sbol:Range;
@@ -1162,7 +1109,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
         rdf:type                      sbol:Component;
         sbol:description              "pTAKLeftCassette_3";
         sbol:displayId                "pTAKLeftCassette_3";
-        sbol:hasFeature               <http://www.async.ece.utah.edu/pTAKLeftCassette_3/pheA1> , <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_J61107_BBa_C0012> , <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_K121014>;
+        sbol:hasFeature               <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_J61107_BBa_C0012> , <http://www.async.ece.utah.edu/pTAKLeftCassette_3/pheA1> , <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_K121014>;
         sbol:hasInterface             <http://www.async.ece.utah.edu/pTAKLeftCassette_3/Interface1>;
         sbol:hasNamespace             <http://www.async.ece.utah.edu>;
         sbol:hasSequence              <http://www.async.ece.utah.edu/pTAKLeftCassette_3_sequence>;
@@ -1203,11 +1150,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pIKERightCassette_1/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-<<<<<<< HEAD
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKERightCassette_1/ECK120033736> , <http://www.async.ece.utah.edu/pIKERightCassette_1/BBa_R0010> , <http://www.async.ece.utah.edu/pIKERightCassette_1/BBa_J61120_BBa_C0040> , <http://www.async.ece.utah.edu/pIKERightCassette_1/BBa_J61130_BBa_E0040> .
-=======
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKERightCassette_1/BBa_J61130_BBa_E0040> , <http://www.async.ece.utah.edu/pIKERightCassette_1/ECK120033736> , <http://www.async.ece.utah.edu/pIKERightCassette_1/BBa_J61120_BBa_C0040> , <http://www.async.ece.utah.edu/pIKERightCassette_1/BBa_R0010> .
->>>>>>> feature/combder
+        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKERightCassette_1/BBa_R0010> , <http://www.async.ece.utah.edu/pIKERightCassette_1/BBa_J61120_BBa_C0040> , <http://www.async.ece.utah.edu/pIKERightCassette_1/BBa_J61130_BBa_E0040> , <http://www.async.ece.utah.edu/pIKERightCassette_1/ECK120033736> .
 
 <http://www.async.ece.utah.edu/BBa_J61130_BBa_C0051>
         rdf:type                      sbol:Component;
@@ -1438,9 +1381,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/BBa_J61130_BBa_E0040/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/BBa_J61130_BBa_E0040/BBa_J61130> , <http://www.async.ece.utah.edu/BBa_J61130_BBa_E0040/BBa_E0040> .
-<<<<<<< HEAD
-=======
+        sbol:nondirectional  <http://www.async.ece.utah.edu/BBa_J61130_BBa_E0040/BBa_E0040> , <http://www.async.ece.utah.edu/BBa_J61130_BBa_E0040/BBa_J61130> .
 
 <http://www.async.ece.utah.edu/pTAKRightCassette_3/ECK120033736>
         rdf:type                      sbol:SubComponent;
@@ -1451,7 +1392,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2OriginalSequenceAnnotationURI
                 <http://www.async.ece.utah.edu/pTAKRightCassette_3/ECK120033736_annotation>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKRightCassette_3/ECK120033736_annotation> , <http://www.async.ece.utah.edu/pTAKRightCassette_3/ECK120033736> .
->>>>>>> feature/combder
 
 <http://www.async.ece.utah.edu/BBa_J61130_BBa_C0051_sequence>
         rdf:type                      sbol:Sequence;
@@ -1462,16 +1402,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasDerivedFrom           <http://www.eugenecad.org/device/BBa_J61130_BBa_C0051_sequence>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_J61130_BBa_C0051_sequence> .
 
-<http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_J61107_BBa_C0012>
-        rdf:type                      sbol:SubComponent;
-        sbol:displayId                "BBa_J61107_BBa_C0012";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_J61107_BBa_C0012/range>;
-        sbol:instanceOf               <http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012>;
-        prov:wasDerivedFrom           <http://www.eugenecad.org/pTAKLeftCassette_3/annotation_2>;
-        backport2_3:sbol2OriginalSequenceAnnotationURI
-                <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_J61107_BBa_C0012_annotation>;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_J61107_BBa_C0012_annotation> , <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_J61107_BBa_C0012> .
-
 <http://www.async.ece.utah.edu/BBa_C0040_sequence>
         rdf:type                      sbol:Sequence;
         sbol:displayId                "BBa_C0040_sequence";
@@ -1481,15 +1411,15 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasDerivedFrom           <http://partsregistry.org/part/BBa_C0040_sequence>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_C0040_sequence> .
 
-<http://www.async.ece.utah.edu/pTAKRightCassette_3/ECK120033736>
+<http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_J61107_BBa_C0012>
         rdf:type                      sbol:SubComponent;
-        sbol:displayId                "ECK120033736";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/pTAKRightCassette_3/ECK120033736/range>;
-        sbol:instanceOf               <http://www.async.ece.utah.edu/ECK120033736>;
-        prov:wasDerivedFrom           <http://www.eugenecad.org/pTAKRightCassette_3/annotation_4>;
+        sbol:displayId                "BBa_J61107_BBa_C0012";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_J61107_BBa_C0012/range>;
+        sbol:instanceOf               <http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012>;
+        prov:wasDerivedFrom           <http://www.eugenecad.org/pTAKLeftCassette_3/annotation_2>;
         backport2_3:sbol2OriginalSequenceAnnotationURI
-                <http://www.async.ece.utah.edu/pTAKRightCassette_3/ECK120033736_annotation>;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKRightCassette_3/ECK120033736_annotation> , <http://www.async.ece.utah.edu/pTAKRightCassette_3/ECK120033736> .
+                <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_J61107_BBa_C0012_annotation>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_J61107_BBa_C0012_annotation> , <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_J61107_BBa_C0012> .
 
 <http://www.async.ece.utah.edu/pTAKRightCassette_1/BBa_J61120_BBa_C0051>
         rdf:type                      sbol:SubComponent;
@@ -1511,17 +1441,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61120_BBa_C0051_annotation>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61120_BBa_C0051_annotation> , <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61120_BBa_C0051> .
 
-<http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61053/range>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range";
-        sbol:end                      "1656";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/pIKERightCassette_4_sequence>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "1605";
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61053_annotation/range> .
-
 <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_J61107_BBa_C0012/range>
         rdf:type                      sbol:Range;
         sbol:displayId                "range";
@@ -1532,6 +1451,17 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKLeftCassette_3/BBa_J61107_BBa_C0012_annotation/range> .
+
+<http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61053/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "1656";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pIKERightCassette_4_sequence>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1605";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61053_annotation/range> .
 
 <http://www.async.ece.utah.edu/pTAKLeftCassette_3/pheA1>
         rdf:type                      sbol:SubComponent;
@@ -1585,7 +1515,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/BBa_J61115_BBa_C0012/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/BBa_J61115_BBa_C0012/BBa_C0012> , <http://www.async.ece.utah.edu/BBa_J61115_BBa_C0012/BBa_J61115> .
+        sbol:nondirectional  <http://www.async.ece.utah.edu/BBa_J61115_BBa_C0012/BBa_J61115> , <http://www.async.ece.utah.edu/BBa_J61115_BBa_C0012/BBa_C0012> .
 
 <http://www.async.ece.utah.edu/pIKERightCassette_1/BBa_R0010>
         rdf:type                      sbol:SubComponent;
@@ -1614,7 +1544,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
         rdf:type                      sbol:Component;
         sbol:description              "pIKERightCassette_1";
         sbol:displayId                "pIKERightCassette_1";
-        sbol:hasFeature               <http://www.async.ece.utah.edu/pIKERightCassette_1/BBa_J61120_BBa_C0040> , <http://www.async.ece.utah.edu/pIKERightCassette_1/BBa_J61130_BBa_E0040> , <http://www.async.ece.utah.edu/pIKERightCassette_1/BBa_R0010> , <http://www.async.ece.utah.edu/pIKERightCassette_1/ECK120033736>;
+        sbol:hasFeature               <http://www.async.ece.utah.edu/pIKERightCassette_1/BBa_J61130_BBa_E0040> , <http://www.async.ece.utah.edu/pIKERightCassette_1/BBa_J61120_BBa_C0040> , <http://www.async.ece.utah.edu/pIKERightCassette_1/BBa_R0010> , <http://www.async.ece.utah.edu/pIKERightCassette_1/ECK120033736>;
         sbol:hasInterface             <http://www.async.ece.utah.edu/pIKERightCassette_1/Interface1>;
         sbol:hasNamespace             <http://www.async.ece.utah.edu>;
         sbol:hasSequence              <http://www.async.ece.utah.edu/pIKERightCassette_1_sequence>;
@@ -1699,11 +1629,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pIKERightCassette_2/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-<<<<<<< HEAD
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKERightCassette_2/BBa_J61053> , <http://www.async.ece.utah.edu/pIKERightCassette_2/BBa_R0010> , <http://www.async.ece.utah.edu/pIKERightCassette_2/BBa_J61130_BBa_E0040> , <http://www.async.ece.utah.edu/pIKERightCassette_2/BBa_J61120_BBa_C0040> .
-=======
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKERightCassette_2/BBa_J61053> , <http://www.async.ece.utah.edu/pIKERightCassette_2/BBa_J61120_BBa_C0040> , <http://www.async.ece.utah.edu/pIKERightCassette_2/BBa_J61130_BBa_E0040> , <http://www.async.ece.utah.edu/pIKERightCassette_2/BBa_R0010> .
->>>>>>> feature/combder
+        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKERightCassette_2/BBa_R0010> , <http://www.async.ece.utah.edu/pIKERightCassette_2/BBa_J61053> , <http://www.async.ece.utah.edu/pIKERightCassette_2/BBa_J61120_BBa_C0040> , <http://www.async.ece.utah.edu/pIKERightCassette_2/BBa_J61130_BBa_E0040> .
 
 <http://www.async.ece.utah.edu/pTAKLeftCassette_2>
         rdf:type                      sbol:Component;
@@ -1879,6 +1805,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 <http://www.async.ece.utah.edu/pIKELeftCassette_1/BBa_R0040_annotation>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKELeftCassette_1/BBa_R0040_annotation> , <http://www.async.ece.utah.edu/pIKELeftCassette_1/BBa_R0040> .
 
+<http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012/BBa_C0012>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "BBa_C0012";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012/BBa_C0012/range>;
+        sbol:instanceOf               <http://www.async.ece.utah.edu/BBa_C0012>;
+        prov:wasDerivedFrom           <http://www.eugenecad.org/pTAKLeftCassette_3/Repressor2/annotation_2>;
+        backport2_3:sbol2OriginalSequenceAnnotationURI
+                <http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012/BBa_C0012_annotation>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012/BBa_C0012_annotation> , <http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012/BBa_C0012> .
+
 <http://www.async.ece.utah.edu/BBa_R0010_sequence>
         rdf:type                      sbol:Sequence;
         sbol:displayId                "BBa_R0010_sequence";
@@ -1887,15 +1823,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:hasNamespace             <http://www.async.ece.utah.edu>;
         prov:wasDerivedFrom           <http://partsregistry.org/part/BBa_R0010_sequence>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_R0010_sequence> .
-
-<http://www.async.ece.utah.edu/pTAKLeftCassette_2_sequence>
-        rdf:type                      sbol:Sequence;
-        sbol:displayId                "pTAKLeftCassette_2_sequence";
-        sbol:elements                 "gcatgcacagataaccatctgcggtgataaattatctctggcggtgttgacataaataccactggcggttataatgagcacatcagcaggaaagaagggacaatggtgaatgtgaaaccagtaacgttatacgatgtcgcagagtatgccggtgtctcttatcagaccgtttcccgcgtggtgaaccaggccagccacgtttctgcgaaaacgcgggaaaaagtggaagcggcgatggcggagctgaattacattcccaaccgcgtggcacaacaactggcgggcaaacagtcgttgctgattggcgttgccacctccagtctggccctgcacgcgccgtcgcaaattgtcgcggcgattaaatctcgcgccgatcaactgggtgccagcgtggtggtgtcgatggtagaacgaagcggcgtcgaagcctgtaaagcggcggtgcacaatcttctcgcgcaacgcgtcagtgggctgatcattaactatccgctggatgaccaggatgccattgctgtggaagctgcctgcactaatgttccggcgttatttcttgatgtctctgaccagacacccatcaacagtattattttctcccatgaagacggtacgcgactgggcgtggagcatctggtcgcattgggtcaccagcaaatcgcgctgttagcgggcccattaagttctgtctcggcgcgtctgcgtctggctggctggcataaatatctcactcgcaatcaaattcagccgatagcggaacgggaaggcgactggagtgccatgtccggttttcaacaaaccatgcaaatgctgaatgagggcatcgttcccactgcgatgctggttgccaacgatcagatggcgctgggcgcaatgcgcgccattaccgagtccgggctgcgcgttggtgcggatatctcggtagtgggatacgacgataccgaagacagctcatgttatatcccgccgttaaccaccatcaaacaggattttcgcctgctggggcaaaccagcgtggaccgcttgctgcaactctctcagggccaggcggtgaagggcaatcagctgttgcccgtctcactggtgaaaagaaaaaccaccctggcgcccaatacgcaaaccgcctctccccgcgcgttggccgattcattaatgcagctggcacgacaggtttcccgactggaaagcgggcaggctgcaaacgacgaaaactacgctttagtagcttaataaggaaacacagaaaaaagcccgcacctgacagtgcgggctttttttttcgaccaaagg";
-        sbol:encoding                 EDAM:format_1207;
-        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
-        prov:wasDerivedFrom           <http://www.eugenecad.org/pTAKLeftCassette_2_sequence>;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKLeftCassette_2_sequence> .
 
 <http://www.async.ece.utah.edu/BBa_J61120_BBa_E0040/BBa_J61120>
         rdf:type                      sbol:SubComponent;
@@ -1907,15 +1834,14 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 <http://www.async.ece.utah.edu/BBa_J61120_BBa_E0040/BBa_J61120_annotation>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_J61120_BBa_E0040/BBa_J61120_annotation> , <http://www.async.ece.utah.edu/BBa_J61120_BBa_E0040/BBa_J61120> .
 
-<http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012/BBa_C0012>
-        rdf:type                      sbol:SubComponent;
-        sbol:displayId                "BBa_C0012";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012/BBa_C0012/range>;
-        sbol:instanceOf               <http://www.async.ece.utah.edu/BBa_C0012>;
-        prov:wasDerivedFrom           <http://www.eugenecad.org/pTAKLeftCassette_3/Repressor2/annotation_2>;
-        backport2_3:sbol2OriginalSequenceAnnotationURI
-                <http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012/BBa_C0012_annotation>;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012/BBa_C0012_annotation> , <http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012/BBa_C0012> .
+<http://www.async.ece.utah.edu/pTAKLeftCassette_2_sequence>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "pTAKLeftCassette_2_sequence";
+        sbol:elements                 "gcatgcacagataaccatctgcggtgataaattatctctggcggtgttgacataaataccactggcggttataatgagcacatcagcaggaaagaagggacaatggtgaatgtgaaaccagtaacgttatacgatgtcgcagagtatgccggtgtctcttatcagaccgtttcccgcgtggtgaaccaggccagccacgtttctgcgaaaacgcgggaaaaagtggaagcggcgatggcggagctgaattacattcccaaccgcgtggcacaacaactggcgggcaaacagtcgttgctgattggcgttgccacctccagtctggccctgcacgcgccgtcgcaaattgtcgcggcgattaaatctcgcgccgatcaactgggtgccagcgtggtggtgtcgatggtagaacgaagcggcgtcgaagcctgtaaagcggcggtgcacaatcttctcgcgcaacgcgtcagtgggctgatcattaactatccgctggatgaccaggatgccattgctgtggaagctgcctgcactaatgttccggcgttatttcttgatgtctctgaccagacacccatcaacagtattattttctcccatgaagacggtacgcgactgggcgtggagcatctggtcgcattgggtcaccagcaaatcgcgctgttagcgggcccattaagttctgtctcggcgcgtctgcgtctggctggctggcataaatatctcactcgcaatcaaattcagccgatagcggaacgggaaggcgactggagtgccatgtccggttttcaacaaaccatgcaaatgctgaatgagggcatcgttcccactgcgatgctggttgccaacgatcagatggcgctgggcgcaatgcgcgccattaccgagtccgggctgcgcgttggtgcggatatctcggtagtgggatacgacgataccgaagacagctcatgttatatcccgccgttaaccaccatcaaacaggattttcgcctgctggggcaaaccagcgtggaccgcttgctgcaactctctcagggccaggcggtgaagggcaatcagctgttgcccgtctcactggtgaaaagaaaaaccaccctggcgcccaatacgcaaaccgcctctccccgcgcgttggccgattcattaatgcagctggcacgacaggtttcccgactggaaagcgggcaggctgcaaacgacgaaaactacgctttagtagcttaataaggaaacacagaaaaaagcccgcacctgacagtgcgggctttttttttcgaccaaagg";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        prov:wasDerivedFrom           <http://www.eugenecad.org/pTAKLeftCassette_2_sequence>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKLeftCassette_2_sequence> .
 
 <http://www.async.ece.utah.edu/pTAKLeftCassette_1/ECK120029600>
         rdf:type                      sbol:SubComponent;
@@ -2166,11 +2092,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pIKELeftCassette_3/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-<<<<<<< HEAD
         sbol:nondirectional  <http://www.async.ece.utah.edu/pIKELeftCassette_3/BBa_J61107_BBa_C0012> , <http://www.async.ece.utah.edu/pIKELeftCassette_3/BBa_R0040> , <http://www.async.ece.utah.edu/pIKELeftCassette_3/pheA1> .
-=======
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKELeftCassette_3/BBa_R0040> , <http://www.async.ece.utah.edu/pIKELeftCassette_3/BBa_J61107_BBa_C0012> , <http://www.async.ece.utah.edu/pIKELeftCassette_3/pheA1> .
->>>>>>> feature/combder
 
 <http://www.async.ece.utah.edu/BBa_J61115_BBa_C0012/BBa_J61115>
         rdf:type                      sbol:SubComponent;
@@ -2195,11 +2117,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pTAKRightCassette_3/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-<<<<<<< HEAD
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKRightCassette_3/BBa_R0010> , <http://www.async.ece.utah.edu/pTAKRightCassette_3/BBa_J61130_BBa_C0051> , <http://www.async.ece.utah.edu/pTAKRightCassette_3/BBa_J61120_BBa_E0040> , <http://www.async.ece.utah.edu/pTAKRightCassette_3/ECK120033736> .
-=======
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKRightCassette_3/ECK120033736> , <http://www.async.ece.utah.edu/pTAKRightCassette_3/BBa_J61120_BBa_E0040> , <http://www.async.ece.utah.edu/pTAKRightCassette_3/BBa_R0010> , <http://www.async.ece.utah.edu/pTAKRightCassette_3/BBa_J61130_BBa_C0051> .
->>>>>>> feature/combder
+        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKRightCassette_3/ECK120033736> , <http://www.async.ece.utah.edu/pTAKRightCassette_3/BBa_R0010> , <http://www.async.ece.utah.edu/pTAKRightCassette_3/BBa_J61120_BBa_E0040> , <http://www.async.ece.utah.edu/pTAKRightCassette_3/BBa_J61130_BBa_C0051> .
 
 <http://www.async.ece.utah.edu/pIKELeftCassette_2/BBa_R0040>
         rdf:type                      sbol:SubComponent;
@@ -2265,6 +2183,11 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasDerivedFrom           <http://www.eugenecad.org/pIKELeftCassette_1>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKELeftCassette_1> .
 
+<http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012/Interface1>
+        rdf:type             sbol:Interface;
+        sbol:displayId       "Interface1";
+        sbol:nondirectional  <http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012/BBa_J61107> , <http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012/BBa_C0012> .
+
 <http://www.async.ece.utah.edu/BBa_C0012>
         rdf:type                      sbol:Component;
         sbol:description              "lacI repressor from E. coli (+LVA)";
@@ -2276,11 +2199,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:type                     SO:0000987 , SBO:0000251;
         prov:wasDerivedFrom           <http://partsregistry.org/part/BBa_C0012>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_C0012> .
-
-<http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012/Interface1>
-        rdf:type             sbol:Interface;
-        sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012/BBa_J61107> , <http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012/BBa_C0012> .
 
 <http://www.async.ece.utah.edu/BBa_J61120_BBa_C0040/BBa_J61120>
         rdf:type                      sbol:SubComponent;
@@ -2336,6 +2254,11 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasDerivedFrom           <http://partsregistry.org/part/BBa_R0040>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_R0040> .
 
+<http://www.async.ece.utah.edu/pTAKLeftCassette_4/Interface1>
+        rdf:type             sbol:Interface;
+        sbol:displayId       "Interface1";
+        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKLeftCassette_4/ECK120034435> , <http://www.async.ece.utah.edu/pTAKLeftCassette_4/BBa_K121014> , <http://www.async.ece.utah.edu/pTAKLeftCassette_4/BBa_J61115_BBa_C0012> .
+
 <http://www.async.ece.utah.edu/pTAKLeftCassette_1>
         rdf:type                      sbol:Component;
         sbol:description              "pTAKLeftCassette_1";
@@ -2348,15 +2271,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:type                     SO:0000987 , SBO:0000251;
         prov:wasDerivedFrom           <http://www.eugenecad.org/pTAKLeftCassette_1>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKLeftCassette_1> .
-
-<http://www.async.ece.utah.edu/pTAKLeftCassette_4/Interface1>
-        rdf:type             sbol:Interface;
-        sbol:displayId       "Interface1";
-<<<<<<< HEAD
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKLeftCassette_4/BBa_K121014> , <http://www.async.ece.utah.edu/pTAKLeftCassette_4/ECK120034435> , <http://www.async.ece.utah.edu/pTAKLeftCassette_4/BBa_J61115_BBa_C0012> .
-=======
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKLeftCassette_4/BBa_J61115_BBa_C0012> , <http://www.async.ece.utah.edu/pTAKLeftCassette_4/ECK120034435> , <http://www.async.ece.utah.edu/pTAKLeftCassette_4/BBa_K121014> .
->>>>>>> feature/combder
 
 <http://www.async.ece.utah.edu/pIKELeftCassette_4/ECK120034435>
         rdf:type                      sbol:SubComponent;
@@ -2534,12 +2448,12 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pTAKLeftCassette_2/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKLeftCassette_2/BBa_K121014> , <http://www.async.ece.utah.edu/pTAKLeftCassette_2/ECK120033737> , <http://www.async.ece.utah.edu/pTAKLeftCassette_2/BBa_J61104_BBa_C0012> .
+        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKLeftCassette_2/BBa_K121014> , <http://www.async.ece.utah.edu/pTAKLeftCassette_2/BBa_J61104_BBa_C0012> , <http://www.async.ece.utah.edu/pTAKLeftCassette_2/ECK120033737> .
 
 <http://www.async.ece.utah.edu/BBa_J61104_BBa_C0012/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/BBa_J61104_BBa_C0012/BBa_J61104> , <http://www.async.ece.utah.edu/BBa_J61104_BBa_C0012/BBa_C0012> .
+        sbol:nondirectional  <http://www.async.ece.utah.edu/BBa_J61104_BBa_C0012/BBa_C0012> , <http://www.async.ece.utah.edu/BBa_J61104_BBa_C0012/BBa_J61104> .
 
 <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_J61053>
         rdf:type                      sbol:SubComponent;
@@ -2617,11 +2531,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pIKELeftCassette_4/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-<<<<<<< HEAD
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKELeftCassette_4/BBa_R0040> , <http://www.async.ece.utah.edu/pIKELeftCassette_4/ECK120034435> , <http://www.async.ece.utah.edu/pIKELeftCassette_4/BBa_J61115_BBa_C0012> .
-=======
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKELeftCassette_4/BBa_R0040> , <http://www.async.ece.utah.edu/pIKELeftCassette_4/BBa_J61115_BBa_C0012> , <http://www.async.ece.utah.edu/pIKELeftCassette_4/ECK120034435> .
->>>>>>> feature/combder
+        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKELeftCassette_4/BBa_J61115_BBa_C0012> , <http://www.async.ece.utah.edu/pIKELeftCassette_4/BBa_R0040> , <http://www.async.ece.utah.edu/pIKELeftCassette_4/ECK120034435> .
 
 <http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012/BBa_J61107>
         rdf:type                      sbol:SubComponent;
@@ -2636,11 +2546,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pTAKRightCassette_4/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-<<<<<<< HEAD
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKRightCassette_4/BBa_R0010> , <http://www.async.ece.utah.edu/pTAKRightCassette_4/BBa_J61053> , <http://www.async.ece.utah.edu/pTAKRightCassette_4/BBa_J61120_BBa_E0040> , <http://www.async.ece.utah.edu/pTAKRightCassette_4/BBa_J61130_BBa_C0051> .
-=======
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKRightCassette_4/BBa_J61130_BBa_C0051> , <http://www.async.ece.utah.edu/pTAKRightCassette_4/BBa_R0010> , <http://www.async.ece.utah.edu/pTAKRightCassette_4/BBa_J61053> , <http://www.async.ece.utah.edu/pTAKRightCassette_4/BBa_J61120_BBa_E0040> .
->>>>>>> feature/combder
+        sbol:nondirectional  <http://www.async.ece.utah.edu/pTAKRightCassette_4/BBa_R0010> , <http://www.async.ece.utah.edu/pTAKRightCassette_4/BBa_J61130_BBa_C0051> , <http://www.async.ece.utah.edu/pTAKRightCassette_4/BBa_J61120_BBa_E0040> , <http://www.async.ece.utah.edu/pTAKRightCassette_4/BBa_J61053> .
 
 <http://www.async.ece.utah.edu/BBa_J61104_BBa_C0012_sequence>
         rdf:type                      sbol:Sequence;
@@ -2684,15 +2590,18 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61053_annotation>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61053_annotation> , <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61053> .
 
-<http://www.async.ece.utah.edu/BBa_J61120_BBa_E0040/BBa_E0040>
-        rdf:type                      sbol:SubComponent;
-        sbol:displayId                "BBa_E0040";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/BBa_J61120_BBa_E0040/BBa_E0040/range>;
-        sbol:instanceOf               <http://www.async.ece.utah.edu/BBa_E0040>;
-        prov:wasDerivedFrom           <http://www.eugenecad.org/pTAKRightCassette_3/Reporter/annotation_2>;
-        backport2_3:sbol2OriginalSequenceAnnotationURI
-                <http://www.async.ece.utah.edu/BBa_J61120_BBa_E0040/BBa_E0040_annotation>;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_J61120_BBa_E0040/BBa_E0040_annotation> , <http://www.async.ece.utah.edu/BBa_J61120_BBa_E0040/BBa_E0040> .
+<http://www.async.ece.utah.edu/pIKERightCassette_4>
+        rdf:type                      sbol:Component;
+        sbol:description              "pIKERightCassette_4";
+        sbol:displayId                "pIKERightCassette_4";
+        sbol:hasFeature               <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61053> , <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_R0010> , <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61120_BBa_E0040> , <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61130_BBa_C0040>;
+        sbol:hasInterface             <http://www.async.ece.utah.edu/pIKERightCassette_4/Interface1>;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pIKERightCassette_4_sequence>;
+        sbol:role                     SO:0000805;
+        sbol:type                     SBO:0000251 , SO:0000987;
+        prov:wasDerivedFrom           <http://www.eugenecad.org/pIKERightCassette_4>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKERightCassette_4> .
 
 <http://www.async.ece.utah.edu/BBa_J61130_BBa_E0040/BBa_E0040>
         rdf:type                      sbol:SubComponent;
@@ -2709,18 +2618,15 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:displayId       "Interface1";
         sbol:nondirectional  <http://www.async.ece.utah.edu/BBa_J61120_BBa_C0040/BBa_C0040> , <http://www.async.ece.utah.edu/BBa_J61120_BBa_C0040/BBa_J61120> .
 
-<http://www.async.ece.utah.edu/pIKERightCassette_4>
-        rdf:type                      sbol:Component;
-        sbol:description              "pIKERightCassette_4";
-        sbol:displayId                "pIKERightCassette_4";
-        sbol:hasFeature               <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61053> , <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_R0010> , <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61120_BBa_E0040> , <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_J61130_BBa_C0040>;
-        sbol:hasInterface             <http://www.async.ece.utah.edu/pIKERightCassette_4/Interface1>;
-        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
-        sbol:hasSequence              <http://www.async.ece.utah.edu/pIKERightCassette_4_sequence>;
-        sbol:role                     SO:0000805;
-        sbol:type                     SBO:0000251 , SO:0000987;
-        prov:wasDerivedFrom           <http://www.eugenecad.org/pIKERightCassette_4>;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKERightCassette_4> .
+<http://www.async.ece.utah.edu/BBa_J61120_BBa_E0040/BBa_E0040>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "BBa_E0040";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/BBa_J61120_BBa_E0040/BBa_E0040/range>;
+        sbol:instanceOf               <http://www.async.ece.utah.edu/BBa_E0040>;
+        prov:wasDerivedFrom           <http://www.eugenecad.org/pTAKRightCassette_3/Reporter/annotation_2>;
+        backport2_3:sbol2OriginalSequenceAnnotationURI
+                <http://www.async.ece.utah.edu/BBa_J61120_BBa_E0040/BBa_E0040_annotation>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_J61120_BBa_E0040/BBa_E0040_annotation> , <http://www.async.ece.utah.edu/BBa_J61120_BBa_E0040/BBa_E0040> .
 
 <http://www.async.ece.utah.edu/pTAKLeftCassette_4/BBa_J61115_BBa_C0012>
         rdf:type                      sbol:SubComponent;
@@ -2741,16 +2647,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
         prov:wasDerivedFrom           <http://www.eugenecad.org/parts/ECK120033737_sequence>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/ECK120033737_sequence> .
 
-<http://www.async.ece.utah.edu/pIKELeftCassette_3/pheA1/range>
+<http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_R0010/range>
         rdf:type                      sbol:Range;
         sbol:displayId                "range";
-        sbol:end                      "1246";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/pIKELeftCassette_3_sequence>;
+        sbol:end                      "200";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pTAKRightCassette_2_sequence>;
         sbol:orientation              SO:0001030;
-        sbol:start                    "1195";
+        sbol:start                    "1";
         backport2_3:sbol2LocationSequenceNull
                 true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKELeftCassette_3/pheA1_annotation/range> .
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_R0010_annotation/range> .
 
 <http://www.async.ece.utah.edu/pIKERightCassette_4/BBa_R0010>
         rdf:type                      sbol:SubComponent;
@@ -2783,16 +2689,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/BBa_J61107_BBa_C0012/BBa_C0012_annotation/range> .
 
-<http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_R0010/range>
+<http://www.async.ece.utah.edu/pIKELeftCassette_3/pheA1/range>
         rdf:type                      sbol:Range;
         sbol:displayId                "range";
-        sbol:end                      "200";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/pTAKRightCassette_2_sequence>;
+        sbol:end                      "1246";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pIKELeftCassette_3_sequence>;
         sbol:orientation              SO:0001030;
-        sbol:start                    "1";
+        sbol:start                    "1195";
         backport2_3:sbol2LocationSequenceNull
                 true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pTAKRightCassette_2/BBa_R0010_annotation/range> .
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKELeftCassette_3/pheA1_annotation/range> .
 
 <http://www.async.ece.utah.edu/BBa_J61101_BBa_C0012/Interface1>
         rdf:type             sbol:Interface;

@@ -19,6 +19,7 @@
             <genbank:title>Direct Submission</genbank:title>
             <genbank:authors>.</genbank:authors>
             <genbank:label>1  (bases 1 to 3563)</genbank:label>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Exported_File/reference0"/>
             <sbol:displayId>reference0</sbol:displayId>
             <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
          </genbank:Reference>

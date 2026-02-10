@@ -163,6 +163,7 @@
             <genbank:title>Direct Submission</genbank:title>
             <genbank:authors>Roemer,T.</genbank:authors>
             <genbank:label>2  (bases 1 to 5028)</genbank:label>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/U49845/reference1"/>
             <sbol:displayId>reference1</sbol:displayId>
             <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
          </genbank:Reference>
@@ -225,6 +226,7 @@
             <genbank:title>Selection of axial growth sites in yeast requires Axl2p, a novel plasma membrane glycoprotein</genbank:title>
             <genbank:authors>Roemer,T., Madden,K., Chang,J. and Snyder,M.</genbank:authors>
             <genbank:label>1  (bases 1 to 5028)</genbank:label>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/U49845/reference0"/>
             <sbol:displayId>reference0</sbol:displayId>
             <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
          </genbank:Reference>

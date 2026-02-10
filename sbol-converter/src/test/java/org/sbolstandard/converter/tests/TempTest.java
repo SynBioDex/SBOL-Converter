@@ -105,9 +105,14 @@ public class TempTest {
 
                 //createSortedNtriples(file, fileOutputNt, fileOutputNtSorted);
                 //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/sequence1.xml"), true, "output/tmp/sequence1.xml", true);
+                //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/AnnotationOutput.xml"), true, "output/tmp/AnnotationOutput.xml", true);
+                List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/test_source_location.xml"), true, "output/tmp/test_source_location.xml", true);
+
+                
+                
                 //Incomplete:
-                Configuration.getInstance().setCompleteDocument(false);
-                Configuration.getInstance().setValidateAfterSettingProperties(false);
+                //--Configuration.getInstance().setCompleteDocument(false);
+                //--Configuration.getInstance().setValidateAfterSettingProperties(false);
 
                 //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/ModuleDefinitionOutput_maps_md_mod.xml"), true, "output/tmp/ModuleDefinitionOutput_maps_md_mod.xml", true);                
                 //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/eukaryotic_transcriptional_cd_com_sa_sc_range_ann.xml"), true, "output/tmp/eukaryotic_transcriptional_cd_com_sa_sc_range_ann.xml", true);                
@@ -120,7 +125,7 @@ public class TempTest {
                // List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/gfp_reporter_act_ann.xml"), false, "output/tmp/gfp_reporter_act_ann.xml.xml", true);                
                 //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/act_assoc_example.xml"), false, "output/tmp/act_assoc_example.xml", true);                
                 //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/design_usa_assoc_act_ann.xml"), false, "output/tmp/design_usa_assoc_act_ann.xml", true);                
-                List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/design-build-test-learn6.xml"), false, "output/design-build-test-learn6.xml", true);                
+                //--List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2_ic/design-build-test-learn6.xml"), false, "output/design-build-test-learn6.xml", true);                
           
 
                 

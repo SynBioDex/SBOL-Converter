@@ -233,6 +233,7 @@
             <genbank:title>Direct Submission</genbank:title>
             <genbank:authors>Choi,Y.H., Choi,S.B. and Cho,S.H.</genbank:authors>
             <genbank:label>2  (bases 1 to 5485)</genbank:label>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/AF165912/reference1"/>
             <sbol:displayId>reference1</sbol:displayId>
             <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
          </genbank:Reference>
@@ -293,6 +294,7 @@
             <genbank:title>Structure of a CTP:Phosphocholine Cytidylyltransferase Gene from Arabidopsis thaliana</genbank:title>
             <genbank:authors>Choi,Y.H., Choi,S.B. and Cho,S.H.</genbank:authors>
             <genbank:label>1  (bases 1 to 5485)</genbank:label>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/AF165912/reference0"/>
             <sbol:displayId>reference0</sbol:displayId>
             <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
          </genbank:Reference>
