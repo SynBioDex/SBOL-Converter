@@ -31,6 +31,7 @@ import org.sbolstandard.core3.io.SBOLFormat;
 import org.sbolstandard.core3.io.SBOLIO;
 //import org.sbolstandard.core3.test.TestUtil;
 import org.sbolstandard.core3.util.SBOLGraphException;
+import org.sbolstandard.core3.util.URINameSpace;
 import org.sbolstandard.core3.validation.SBOLComparator;
 import org.sbolstandard.core3.vocabulary.ComponentType;
 import org.sbolstandard.core3.vocabulary.InteractionType;
@@ -52,8 +53,7 @@ public class GeneticMemory{
     @Test
     public void testPaperExample() throws SBOLGraphException, IOException, SBOLValidationException, SBOLConversionException
     {
-            //http://parts.igem.org/Part:BBa_F2620
-
+            
             // 1. write names from genbank (label)
             // Read SBOL3 document from local
             // For each component get labels and map names
@@ -71,80 +71,43 @@ public class GeneticMemory{
                 "-p", URI_prefix,
                 "-o", "output/datacuration/"+outputFileName
             };
-            //"-o", "src/test/java/org/sbolstandard/converter/tests/datacuration/paper_sbol3.xml"
+            
             App.main(args);
 
-            // Get the converted SBOL3 document
             SBOLDocument convertedDocument = SBOLIO.read(new File("output/datacuration/"+outputFileName), SBOLFormat.RDFXML);
-            //Component mainCompConvDoc = convertedDocument.getIdentified(URI.create(URI_prefix + "sequence_97289_e"), Component.class);
-            //System.out.println("Components Size: " + convertedDocument.getComponents().size());
-            //System.out.println("Component description: " + mainCompConvDoc.getDescription());
-            //List<SequenceFeature> sequenceFeatures = mainCompConvDoc.getSequenceFeatures();
 
-            //SBOLDocument newDocument = new SBOLDocument(URI.create("https://synbiohub.org/public/igem/"));
-            SBOLDocument newDocument = new SBOLDocument(URI.create(URI_prefix));
-            //SBOLDocument doc = new SBOLDocument();
-            
+            SBOLDocument newDocument = new SBOLDocument(URI.create(URI_prefix));            
             Component device = newDocument.createComponent("sequence_97289_e_pAND_I", Arrays.asList(ComponentType.DNA.getUri()));
-
             device.setName("sequence_97289_e_pAND_I");
 
-            // MU added on 2026-02-06 for the validation error sbol3-11302 - For every Location that is not an EntireSequence and t
-            //device.setSequences(convertedDocument.getSequences());
             Sequence seq = newDocument.createSequence("sequence_97289_e_pAND_I_sequence");
             seq.setElements(convertedDocument.getSequences().get(0).getElements());
             seq.setEncoding(org.sbolstandard.core3.vocabulary.Encoding.NucleicAcid);
             device.addSequence(seq);
-
-            System.out.println("Device Sequences: " + (device.getSequences()==null? 0 : device.getSequences().size()));
-            //Component device = SBOLAPI.createDnaComponent(newDocument, "BBa_F2620", "BBa_F2620", "PoPS Receiver", Role.EngineeredGene, ""); 
-            
-            
-
-            //Component prm_0 = SBOLAPI.createDnaComponent(newDocument, "p0", "p0_promoter", "promoter p0", Role.Promoter, "");
-            Component pLacI = createComponentWithSequence("pLacI", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.Promoter));
-        
-            //Component rbs_0 = SBOLAPI.createDnaComponent(newDocument, "rbs0", "rbs0", "rbs0", Role.RBS, "");
-            Component lacI_RBS = createComponentWithSequence("lacI_RBS", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.RBS));
-
-            //Component cds_LacI = SBOLAPI.createDnaComponent(newDocument, "LacI", "LacI_CDS", "LacI coding sequence", Role.CDS, "");
+                
+            Component pLacI = createComponentWithSequence("pLacI", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.Promoter));        
+            Component lacI_RBS = createComponentWithSequence("lacI_rbs", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.RBS));
             Component cds_LacI = createComponentWithSequence("lacI", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.CDS));
+            Component tetR_RBS = createComponentWithSequence("tetR_rbs", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.RBS));
+            Component cds_TetR = createComponentWithSequence("tetR", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.CDS));            
+            Component ter_tetR = createComponentWithSequence("ter_tetR", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.Terminator));            
             
-            //Component rbs_1 = SBOLAPI.createDnaComponent(newDocument, "rbs1", "rbs1", "rbs1", Role.RBS, "");
-            Component tetR_RBS = createComponentWithSequence("tetR_RBS", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.RBS));
-
-            Component cds_TetR = createComponentWithSequence("TetR", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.CDS));
-            
-            Component ter_0 = createComponentWithSequence("ter0", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.Terminator));
-            
-
-
-            Component prm_PTet = createComponentWithSequence("pTeT", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.Promoter));
-            //Component TetR=SBOLAPI.createProteinComponent(doc, "TetR", "TetR", "TetR Protein", Role.CDS, "");
-            
-            // UNKNOWN COMPONENT
-            Component ins_SccJ = createComponentWithSequence("SccJ_insulator", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(URI.create("http://identifiers.org/so/SO:0000627")));
-            
-            
-            Component srpr_RBS = createComponentWithSequence("srpr_RBS", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.RBS));
+            Component prm_PTet = createComponentWithSequence("pTet", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.Promoter));            
+            Component ins_SccJ = createComponentWithSequence("sccJ insulator", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(URINameSpace.SO.local("0000627")));                        
+            Component srpr_RBS = createComponentWithSequence("srpr_rbs", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.RBS));
             Component cds_SrpR = createComponentWithSequence("srpr", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.CDS));
             Component rrnB_T1_terminator = createComponentWithSequence("rrnB T1 terminator", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.Terminator));
-            Component prm_PTac = createComponentWithSequence("pTacPromoter", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.Promoter));
             
-            // UNKNOWN COMPONENT
-            Component ins_SarJ = createComponentWithSequence("SarJInsulator", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(URI.create("http://identifiers.org/so/SO:0000627")));
-
-            Component rbs_bm3r1 = createComponentWithSequence("bm3r1_rbs", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.RBS));
+            Component prm_PTac = createComponentWithSequence("pTac", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.Promoter));
+            Component ins_SarJ = createComponentWithSequence("sarJ insulator", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(URINameSpace.SO.local("0000627")));
+            Component rbs_bm3r1 = createComponentWithSequence("bm3R1_rbs", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.RBS));
             Component cds_BM3R1 = createComponentWithSequence("bm3R1", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.CDS));
             Component ter_2 = createComponentWithSequence("ter2", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.Terminator));
-            
-            Component prm_PSrpR = createComponentWithSequence("pSrpR", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.Promoter));
-            
+        
+            Component prm_PSrpR = createComponentWithSequence("pSrpR", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.Promoter));            
             Component prm_PBM3R1 = createComponentWithSequence("pBM3R1", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.Promoter));
-            // UNKNOWN COMPONENT
-            Component ins_LtsvJ = createComponentWithSequence("LtsvJ_insulator", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(URI.create("http://identifiers.org/so/SO:0000627")));
-
-            Component phlfRBS = createComponentWithSequence("phlfRBS", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.RBS));
+            Component ins_LtsvJ = createComponentWithSequence("LtsvJ_insulator", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(URINameSpace.SO.local("0000627")));
+            Component phlfRBS = createComponentWithSequence("phlf_rbs", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.RBS));
             Component cds_PhlF = createComponentWithSequence("phlf", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.CDS));
             
             // CHOICE 1
@@ -154,7 +117,7 @@ public class GeneticMemory{
            
             Component prm_PPhIF = createComponentWithSequence("pPhlF", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.Promoter));
            
-            Component int2_RBS = createComponentWithSequence("int2_RBS", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.RBS));
+            Component int2_RBS = createComponentWithSequence("int2_rbs", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.RBS));
             Component cds_Int2 = createComponentWithSequence("int2", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.CDS));
             Component ter_4 = createComponentWithSequence("ter4", newDocument, convertedDocument, device, URI_prefix, Arrays.asList(Role.Terminator));
             

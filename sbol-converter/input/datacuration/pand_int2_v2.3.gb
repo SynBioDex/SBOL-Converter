@@ -1,4 +1,4 @@
-LOCUS       sequence-97289-e_pAND_I 8576 bp ds-DNA     circular     05-FEB-2026
+LOCUS       sequence-97289-e_pAND_I 8576 bp ds-DNA     circular     15-FEB-2026
 DEFINITION  A transcriptional AND circuit constructed by layering NOR and NOT
             gates.
 SOURCE      synthetic DNA construct
@@ -33,7 +33,8 @@ FEATURES             Location/Qualifiers
                      /label="pENTR-R"
                      /note="pENTR vectors, reverse primer"
      promoter        1861..1934
-                     /label="pTeT"
+                     /label="pTet"
+                     /note="GM: Updated the name."
      protein_bind    1881..1899
                      /label="tet operator"
                      /note="bacterial operator O2 for the tetR and tetA genes"
@@ -45,9 +46,10 @@ FEATURES             Location/Qualifiers
                      /gene="tetO"
                      /bound_moiety="tetracycline repressor TetR"
      insulator       1935..2014
-                     /label="SccJ_insulator"
+                     /label="sccJ insulator"
+                     /note="GM: Updated the name"
      rbs             2015..2048
-                     /label="srpr_RBS"
+                     /label="srpr_rbs"
                      /note="Annotated by GM."
      CDS             2049..2690
                      /label="srpr"
@@ -59,7 +61,8 @@ FEATURES             Location/Qualifiers
                      /label="T7Te terminator"
                      /note="phage T7 early transcription terminator"
      promoter        2840..2895
-                     /label="pTacPromoter"
+                     /label="pTac"
+                     /note="GM: Updated the name"
      promoter        2842..2847
                      /label="tac promoter"
                      /note="strong E. coli promoter; hybrid between the trp and lac UV5 promoters"
@@ -74,9 +77,11 @@ FEATURES             Location/Qualifiers
                      /note="The lac repressor binds to the lac operator to inhibit transcription in E. coli. This inhibition can be relieved by adding lactose or isopropyl-beta-D-thiogalactopyranoside (IPTG). The symmetric lac operator was optimized for tight binding of lac repressor."
                      /bound_moiety="lac repressor encoded by lacI"
      insulator       2896..2974
-                     /label="SarJInsulator"
+                     /label="sarJ insulator"
+                     /note="GM: Updated the name"
      rbs             2975..2999
                      /label="bm3r1_rbs"
+                     /note="GM: Updated the name."
      CDS             3000..3578
                      /label="bm3R1"
                      /translation="MESTPTKQKAIFSASLLLFAERGFDATTMPMIAENAKVGAGTIYRYFKNKESLVNELFQQHVNEFLQCIESGLANERDGYRDGFHHIFEGMVTFTKNHPRALGFIKTHSQGTFLTEESRLAYQKLVEFVCTFFREGQKQGVIRNLPENALIAILFGSFMEVYEMIENDYLSLTDELLTGVEESLWAALSRQS*"
@@ -107,7 +112,7 @@ FEATURES             Location/Qualifiers
      promoter        4739..4804
                      /label="pPhlF"
      misc_feature    4805..4835
-                     /label="int2_RBS"
+                     /label="int2_rbs"
                      /note="Annotated by GM."
      CDS             5079..6362
                      /label="int2"
@@ -122,7 +127,7 @@ FEATURES             Location/Qualifiers
                      /label="pLacI"
                      /note="Annotated by GM."
      rbs             6577..6592
-                     /label="lacI_RBS"
+                     /label="lacI_rbs"
                      /note="Annotated by GM."
      CDS             6593..7675
                      /label="lacI"
@@ -134,10 +139,10 @@ FEATURES             Location/Qualifiers
                      /label="LacI-R"
                      /note="LacI, reverse primer"
      rbs             7676..7693
-                     /label="tetR_RBS"
+                     /label="tetR_rbs"
                      /note="Annotated by GM."
      CDS             7694..8317
-                     /label="TetR"
+                     /label="tetR"
                      /note="TetR binds to the tetracycline operator tetO to inhibit transcription. This inhibition can be relieved by adding tetracycline or doxycycline."
                      /gene="tetR from transposon Tn10"
                      /product="tetracycline repressor TetR"
@@ -145,6 +150,9 @@ FEATURES             Location/Qualifiers
      primer_bind     complement(7767..7786)
                      /label="Tet-R"
                      /note="Tetracycline resistance gene, reverse primer"
+     terminator      8318..8576
+                     /label="ter_tetR"
+                     /note="Annotated by GM."
      primer_bind     complement(8500..8519)
                      /label="pBRrevBam"
                      /note="pBR322 vectors, tet region, downstream of BamHI, reverse primer"
