@@ -2,9 +2,12 @@ package org.sbolstandard.converter.tests.datacuration;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.module.Configuration;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,6 +15,8 @@ import java.util.Map;
 import org.apache.commons.lang3.tuple.Pair;
 import org.junit.jupiter.api.Test;
 import org.sbolstandard.core3.entity.Component;
+import org.sbolstandard.core3.entity.Constraint;
+import org.sbolstandard.core3.entity.Feature;
 import org.sbolstandard.core3.entity.Location;
 import org.sbolstandard.core3.entity.Range;
 import org.sbolstandard.core3.entity.SBOLDocument;
@@ -21,9 +26,11 @@ import org.sbolstandard.core3.entity.SubComponent;
 import org.sbolstandard.core3.io.SBOLFormat;
 import org.sbolstandard.core3.io.SBOLIO;
 import org.sbolstandard.core3.util.SBOLGraphException;
+import org.sbolstandard.core3.util.SBOLUtil;
 import org.sbolstandard.core3.util.URINameSpace;
 import org.sbolstandard.core3.vocabulary.ComponentType;
 import org.sbolstandard.core3.vocabulary.Orientation;
+import org.sbolstandard.core3.vocabulary.RestrictionType;
 import org.sbolstandard.core3.vocabulary.Role;
 
 /**
@@ -206,9 +213,11 @@ public class GenBankComponentView {
         if (featureSequence == null || featureSequence.isEmpty()) {
             return; // Skip features without valid sequences
         }
-        
+        if (sequenceFeature.getOrientation() != null && sequenceFeature.getOrientation()==Orientation.reverseComplement) {
+            featureSequence = SBOLDesignUtil.getReverseComplement(featureSequence);
+        }
         // Check if we already have a component for this sequence
-        Component featureComponent = sequenceToComponentMap.get(featureSequence);
+        Component featureComponent = sequenceToComponentMap.get(featureSequence.toLowerCase());
         
         if (featureComponent == null) {
             // Create new component for this sequence
@@ -216,7 +225,7 @@ public class GenBankComponentView {
             if (featureComponent == null) {
                 return; // Feature was excluded
             }
-            sequenceToComponentMap.put(featureSequence, featureComponent);
+            sequenceToComponentMap.put(featureSequence.toLowerCase(), featureComponent);
         }
         
         // Create subcomponent in the output device
@@ -351,7 +360,7 @@ public class GenBankComponentView {
         }
         String subComponentId = "sc_" + featureComponent.getDisplayId() + "_" + index;
         SubComponent subComponent = outputDevice.createSubComponent(subComponentId, featureComponent);
-        
+        subComponent.setOrientation(sequenceFeature.getOrientation());
         // Add location information to the subcomponent
         List<Location> locations = sequenceFeature.getLocations();
         if (locations != null && !locations.isEmpty()) {
@@ -467,6 +476,28 @@ public class GenBankComponentView {
         
         // Optional: Print document structure
         printDocumentStructure(outputDocument);
+        SBOLIO.write(outputDocument, System.out, SBOLFormat.TURTLE);
+        printOrderedComponents(outputDocument);
+        System.out.println(inputDocument.getComponents().get(0).getSequenceFeatures().size());
+        System.out.println(outputDocument.getComponents().size());
+
+        Component sampleDevice=outputDocument.getIdentified(URI.create("https://example.com/test/test_device_converted"), Component.class);
+        Component cdsFeature=outputDocument.getIdentified(URI.create("https://example.com/test/GFP_CDS"), Component.class);
+        Component rbsFeature=outputDocument.getIdentified(URI.create("https://example.com/test/RBS"), Component.class);
+        
+        //SBOLDesignUtil.extractComponent(outputDocument, sampleDevice, cdsFeature, rbsFeature);
+        SBOLDesignUtil.extractComponent(outputDocument, sampleDevice, 21, 50);
+        
+        printDocumentStructure(outputDocument);
+        printOrderedComponents(outputDocument);
+        //org.sbolstandard.core3.util.Configuration.getInstance().setValidateBeforeSaving(false);
+        SBOLIO.write(outputDocument, System.out, SBOLFormat.TURTLE);
+
+        SBOLDesignUtil.extractComponent(outputDocument, sampleDevice, 21, 120);
+        
+        printOrderedComponents(outputDocument);
+        printOrderedRegions(outputDocument);
+        
     }
     
     /**
@@ -487,15 +518,15 @@ public class GenBankComponentView {
         // Design sequence with repeated promoter and RBS sequences for testing reuse
         String promoterSeq = "ATGGCTAGCGAATTCCTGCA";     // 20bp promoter sequence
         String rbsSeq = "AGGAGGTTAA";                     // 10bp RBS sequence  
-        String cdsSeq = "ATGAAACGCATTGATGCACCC";          // 20bp CDS sequence
+        String cdsSeq = "ATGAAACGCATTGATGCACC";          // 20bp CDS sequence
         String terminatorSeq = "TTTTTTGCGC";              // 10bp terminator sequence
         String spacerSeq = "NNNNNNNNNN";                  // 10bp spacer
-        
+        String reversePromoterSeq ="TGCAGGAATTCGCTAGCCAT";
         // Construct sequence: promoter + RBS + CDS + terminator + spacer + promoter(again) + RBS(again) + different_CDS + terminator
         String dnaSequence = promoterSeq + rbsSeq + cdsSeq + terminatorSeq + spacerSeq + 
-                           promoterSeq + rbsSeq + "ATGCCCGAAATTGATGCACCC" + terminatorSeq;
+                           promoterSeq + rbsSeq + "ATGCCCGAAATTGATGCACC" + terminatorSeq + reversePromoterSeq;
         // Total length: 20+10+20+10+10+20+10+20+10 = 130bp
-        
+//ATGGCTAGCGAATTCCTGCAAGGAGGTTAAATGAAACGCATTGATGCACC      
         mainSequence.setElements(dnaSequence);
         mainSequence.setEncoding(org.sbolstandard.core3.vocabulary.Encoding.NucleicAcid);
         device.addSequence(mainSequence);
@@ -557,7 +588,16 @@ public class GenBankComponentView {
         terminator2.setDescription("Another copy of terminator sequence - should reuse component");
         terminator2.setRoles(Arrays.asList(Role.Terminator));
         terminator2.createRange(121, 130, mainSequence); // Same sequence as positions 51-60
-        
+
+        // Feature 9: Reverse promoter (positions 131-150) - TESTS REUSE
+        SequenceFeature revPromoter = device.createSequenceFeature("revPromoter");
+        revPromoter.setName("Reverse Promoter");
+        revPromoter.setDescription("Another copy of reverse promoter sequence - should reuse component");
+        revPromoter.setRoles(Arrays.asList(Role.Promoter));
+        revPromoter.createRange(131, 150, mainSequence); // Same sequence as positions 131-150
+        revPromoter.setOrientation(Orientation.reverseComplement);
+
+
         return doc;
     }
     
@@ -669,6 +709,14 @@ public class GenBankComponentView {
         Map<String, List<SubComponentWithLocation>> orderedComponents = getOrderedComponents(document);
         printOrderedComponentsData(orderedComponents);
     }
+
+      /**
+     * Prints regions ordered by their location information for parents that have subcomponents.
+     */
+    public void printOrderedRegions(SBOLDocument document) throws SBOLGraphException {
+        Map<String, List<RegionWithLocation>> orderedRegions = getOrderedFeatures2(document);
+        printOrderedRegions(orderedRegions);
+    }
     
     /**
      * Returns components ordered by their location information for parents that have subcomponents.
@@ -726,7 +774,9 @@ public class GenBankComponentView {
                                         effectivePosition, 
                                         start, 
                                         end, 
-                                        isReverse
+                                        isReverse,
+                                        sc,
+                                        instanceOf
                                     ));
                                 }
                             }
@@ -742,6 +792,242 @@ public class GenBankComponentView {
         }
         
         return result;
+    }
+    
+    /**
+     * Returns features ordered by their location information for components that have features.
+     * @return Map where keys are component displayIds and values are ordered lists of features
+     */
+    public Map<String, List<RegionWithLocation>> getOrderedFeatures(SBOLDocument document) throws SBOLGraphException {
+        Map<String, List<RegionWithLocation>> result = new HashMap<>();
+        
+        List<Component> components = document.getComponents();
+        if (components != null) {
+            for (Component comp : components) {
+                List<Feature> features = comp.getFeatures();
+                if (features != null && !features.isEmpty()) {
+                    
+                    // Create a list of features with their positions and orientations for sorting
+                    List<RegionWithLocation> featuresWithLoc = new ArrayList<>();
+                    
+                    for (Feature feature : features) {
+                        org.sbolstandard.core3.entity.FeatureWithLocation featureWithLoc = (org.sbolstandard.core3.entity.FeatureWithLocation) feature;
+                        List<Location> locations = featureWithLoc.getLocations();
+                        if (locations != null && !locations.isEmpty()) {
+                            
+                            // Count how many Range locations this feature has
+                            List<Range> ranges = new ArrayList<>();
+                            for (Location loc : locations) {
+                                if (loc instanceof Range) {
+                                    ranges.add((Range) loc);
+                                }
+                            }
+                            
+                            // Process each Range location separately
+                            for (Range rangeObj : ranges) {
+                                int start = rangeObj.getStart().get();
+                                int end = rangeObj.getEnd().get();
+                                
+                                // Check orientation
+                                URI orientation = rangeObj.getOrientation() != null ? 
+                                    rangeObj.getOrientation().getUri() : Orientation.inline.getUri();
+                                boolean isReverse = (orientation != null && orientation.equals(Orientation.reverseComplement.getUri()));
+                                
+                                // Use appropriate position for sorting based on orientation
+                                int effectivePosition = isReverse ? end : start;
+                                
+                                // Format display ID based on number of ranges
+                                String displayId;
+                                if (ranges.size() > 1) {
+                                    displayId = feature.getDisplayId() + " [" + start + "-" + end + "]";
+                                } else {
+                                    displayId = feature.getDisplayId();
+                                }
+                                
+                                // Get feature name if available
+                                String featureName = feature.getName();
+                                String featureType = feature.getClass().getSimpleName();
+                                
+                                featuresWithLoc.add(new RegionWithLocation(
+                                    displayId, 
+                                    effectivePosition, 
+                                    start, 
+                                    end, 
+                                    isReverse,
+                                    featureName,
+                                    featureType,
+                                    feature.getUri(),
+                                    feature
+                                ));
+                            }
+                        }
+                    }
+                    
+                    // Sort by effective position (considering orientation)
+                    featuresWithLoc.sort((a, b) -> Integer.compare(a.effectivePosition, b.effectivePosition));
+                    
+                    result.put(comp.getDisplayId(), featuresWithLoc);
+                }
+            }
+        }
+        
+        return result;
+    }
+    
+    /**
+     * Gets ordered features from an SBOL document using Collections.sort with constraint-based ordering.
+     * Uses sequence constraints to determine precedence relationships between features.
+     * @param document the SBOL document containing features to order
+     * @return map of component display IDs to their ordered features
+     * @throws SBOLGraphException if there's an error accessing SBOL graph
+     */
+    public Map<String, List<RegionWithLocation>> getOrderedFeatures2(SBOLDocument document) throws SBOLGraphException {
+        Map<String, List<RegionWithLocation>> result = new HashMap<>();
+        
+        for (Component comp : document.getComponents()) {
+            if (comp.getFeatures() != null) {
+                List<RegionWithLocation> featuresWithLoc = buildFeatureLocationList(comp);
+                
+                // Sort using Collections.sort with constraint-aware comparator
+                Collections.sort(featuresWithLoc, new Comparator<RegionWithLocation>() {
+                    @Override
+                    public int compare(RegionWithLocation a, RegionWithLocation b) {
+                        try {
+                            return compareUsingConstraints(comp, a, b);
+                        } catch (SBOLGraphException e) {
+                            // If we can't access constraint data, fall back to position comparison
+                            //return compareByEffectivePosition(a, b);
+                            throw new RuntimeException("Error comparing features: " + e.getMessage(), e);
+                        }
+                    }
+                });
+                
+                result.put(comp.getDisplayId(), featuresWithLoc);
+            }
+        }
+        
+        return result;
+    }
+    
+    /**
+     * Builds a list of FeatureWithLocation objects from a component's features.
+     * @param comp the component containing features
+     * @return list of features with their location data
+     * @throws SBOLGraphException if there's an error accessing feature locations
+     */
+    private List<RegionWithLocation> buildFeatureLocationList(Component comp) throws SBOLGraphException {
+        List<RegionWithLocation> features = new ArrayList<>();
+        
+        for (Feature feature : comp.getFeatures()) {
+            int start=-1;
+            int end=-1;
+            if (feature instanceof org.sbolstandard.core3.entity.FeatureWithLocation) {
+                org.sbolstandard.core3.entity.FeatureWithLocation featureWithLoc = (org.sbolstandard.core3.entity.FeatureWithLocation) feature;
+                Pair<Integer, Integer> range = Location.getStartEnd(featureWithLoc.getLocations());
+                start=range.getLeft();
+                end=range.getRight();                
+            }
+            boolean isReverse = feature.getOrientation()!=null && feature.getOrientation().equals(Orientation.reverseComplement);
+            int effectivePosition = isReverse ? end : start;   
+            RegionWithLocation featureLoc = new RegionWithLocation(feature.getDisplayId(), effectivePosition, start, end, isReverse, feature.getName(), feature.getClass().getSimpleName(), feature.getUri(),feature);
+            features.add(featureLoc);
+        }
+        
+        return features;
+    }
+    
+    /**
+     * Compares two features using sequence constraints for ordering.
+     * If constraints exist, uses precedence relationships; otherwise falls back to position.
+     * @param comp the parent component containing the constraints
+     * @param a the first feature to compare
+     * @param b the second feature to compare
+     * @return negative if a < b, positive if a > b, zero if equal
+     */
+    private int compareUsingConstraints(Component comp, RegionWithLocation a, RegionWithLocation b) throws SBOLGraphException {
+        // First, check if there's a sequence constraint defining precedence
+        if (comp.getConstraints()!=null) {
+            for (Constraint constraint : comp.getConstraints()) {
+                if (hasConstraintBetweenFeatures(constraint, a, b)) {
+                    return getConstraintComparison(constraint, a, b);
+                }
+            }
+        }
+        
+        // If no constraint found, fall back to location-based comparison
+        return compareByEffectivePosition(a, b);
+    }
+    
+    /**
+     * Creates a FeatureWithLocation object for a feature and location.
+     * @param feature the feature 
+     * @param location the location of the feature
+     * @return FeatureWithLocation object or null if location type not supported
+     * @throws SBOLGraphException if there's an error accessing location data
+     */
+    /*private FeatureWithLocation createFeatureWithLocation(Feature feature, Location location) throws SBOLGraphException {
+        if (location instanceof Range) {
+            Range range = (Range) location;
+            int start = range.getStart().get();
+            int end = range.getEnd().get();
+            boolean isReverse = range.getOrientation()!=null && range.getOrientation().equals(Orientation.reverseComplement);
+            int effectivePosition = isReverse ? end : start;            
+            return new FeatureWithLocation(feature.getDisplayId(), effectivePosition, start, end, isReverse, feature.getName(), feature.getClass().getSimpleName());
+        }
+        
+        // Handle other location types if needed
+        return null;
+    }
+    */
+
+    /**
+     * Checks if a sequence constraint applies to the relationship between two features.
+     * @param constraint the sequence constraint to check
+     * @param a the first feature
+     * @param b the second feature
+     * @return true if the constraint defines a relationship between these features
+     */
+    private boolean hasConstraintBetweenFeatures(Constraint constraint, RegionWithLocation a, RegionWithLocation b) throws SBOLGraphException{
+            if (constraint.getSubject()!=null && constraint.getObject()!=null) {
+                URI subjectUri = constraint.getSubject().getUri();
+                URI objectUri = constraint.getObject().getUri();
+                
+                return (subjectUri.equals(a.featureURI) && objectUri.equals(b.featureURI)) ||
+                       (subjectUri.equals(b.featureURI) && objectUri.equals(a.featureURI));
+            }        
+        return false;
+    }
+    
+    /**
+     * Gets the comparison result based on a sequence constraint.
+     * @param constraint the sequence constraint
+     * @param a the first feature
+     * @param b the second feature
+     * @return negative if a precedes b, positive if b precedes a, zero if no precedence
+     */
+    private int getConstraintComparison(Constraint constraint, RegionWithLocation a, RegionWithLocation b) throws SBOLGraphException{
+            if (constraint.getRestriction() != null && constraint.getRestriction().equals(RestrictionType.SequentialRestriction.precedes.getUri())) {
+                URI subjectURI = constraint.getSubject().getUri();
+                URI objectURI = constraint.getObject().getUri();
+                
+                if (subjectURI.equals(a.featureURI) && objectURI.equals(b.featureURI)) {
+                    return -1; // a precedes b
+                } else if (subjectURI.equals(b.featureURI) && objectURI.equals(a.featureURI)) {
+                    return 1;  // b precedes a
+                }
+            }
+        
+        return compareByEffectivePosition(a, b);
+    }
+    
+    /**
+     * Compares features by their effective positions.
+     * @param a the first feature
+     * @param b the second feature
+     * @return comparison result based on effective positions
+     */
+    private int compareByEffectivePosition(RegionWithLocation a, RegionWithLocation b) {
+        return Integer.compare(a.effectivePosition, b.effectivePosition);
     }
     
     /**
@@ -761,6 +1047,61 @@ public class GenBankComponentView {
             System.out.println();
         }
     }
+
+    public void printOrderedRegions(Map<String, List<RegionWithLocation>> orderedComponents) throws SBOLGraphException {
+        System.out.println("\n=== Ordered Regions by Location ===");
+        
+        for (Map.Entry<String, List<RegionWithLocation>> entry : orderedComponents.entrySet()) {
+            if (entry.getValue().isEmpty()) continue; // Skip if no features
+            System.out.println(entry.getKey() + ":");
+            
+            for (RegionWithLocation regionLoc : entry.getValue()) {
+                Feature feature=regionLoc.feature;
+                String displayId = regionLoc.featureDisplayId;
+                if (feature instanceof SubComponent){
+                    Component instanceOf = ((SubComponent) feature).getInstanceOf();
+                    if (instanceOf != null) {
+                        displayId = instanceOf.getDisplayId() + " --> " + displayId;
+                    }
+                }
+                displayId +=  (regionLoc.isReverse ? "(r)" : "");
+                System.out.println("\t" + displayId + 
+                    " (position: " + regionLoc.startPosition + "-" + regionLoc.endPosition + ")");
+            }
+            System.out.println();
+        }
+    }
+
+
+    
+    /**
+     * Helper class to store feature display ID with its location and orientation.
+     */
+    public static class RegionWithLocation {
+        public final String featureDisplayId;
+        public final int effectivePosition;  // Position used for sorting (start for forward, end for reverse)
+        public final int startPosition;      // Actual start position
+        public final int endPosition;        // Actual end position
+        public final boolean isReverse;      // Whether feature is on reverse strand
+        public final String featureName;     // Feature name
+        public final String featureType;     // Feature type (class name)
+        public final URI featureURI;     // Feature type (class name)
+        public final Feature feature;     // The actual Feature instance
+        
+        public RegionWithLocation(String featureDisplayId, int effectivePosition, 
+                               int startPosition, int endPosition, boolean isReverse,
+                               String featureName, String featureType, URI featureURI, Feature feature) {
+            this.featureDisplayId = featureDisplayId;
+            this.effectivePosition = effectivePosition;
+            this.startPosition = startPosition;
+            this.endPosition = endPosition;
+            this.isReverse = isReverse;
+            this.featureName = featureName;
+            this.featureType = featureType;
+            this.featureURI = featureURI;
+            this.feature=feature;
+        }
+    }
     
     /**
      * Helper class to store component display ID with its location and orientation.
@@ -771,14 +1112,18 @@ public class GenBankComponentView {
         public final int startPosition;      // Actual start position
         public final int endPosition;        // Actual end position
         public final boolean isReverse;      // Whether component is on reverse strand
+        public final Component component;    // The actual Component instance referenced by instanceOf
+        public final SubComponent subComponent;    // The actual SubComponent instance
         
         public SubComponentWithLocation(String componentDisplayId, int effectivePosition, 
-                               int startPosition, int endPosition, boolean isReverse) {
+                               int startPosition, int endPosition, boolean isReverse, SubComponent subComponent, Component component) {
             this.componentDisplayId = componentDisplayId;
             this.effectivePosition = effectivePosition;
             this.startPosition = startPosition;
             this.endPosition = endPosition;
             this.isReverse = isReverse;
+            this.subComponent= subComponent;
+            this.component = component;
         }
     }
 }
