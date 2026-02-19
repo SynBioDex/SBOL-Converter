@@ -11,7 +11,11 @@ public class ConverterVocabulary {
         public static final URI sbol2LocationSequenceNull = ConverterNameSpace.BackPort_2_3.local("sbol2LocationSequenceNull");
         public static final URI sbol2OriginalURI = ConverterNameSpace.BackPort_2_3.local("sbol2OriginalURI");
         public static final URI sbol2OriginatesFromModule = ConverterNameSpace.BackPort_2_3.local("sbol2OriginatesFromModule");
+        public static final URI sbol2Entity = ConverterNameSpace.BackPort_2_3.local("sbol2Entity");
+        public static final URI sbol2GenericLocation = ConverterNameSpace.BackPort_2_3.local("sbol2GenericLocation");
         
+
+
         
     }
 		

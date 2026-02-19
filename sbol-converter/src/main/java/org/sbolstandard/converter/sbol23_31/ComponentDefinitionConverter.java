@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.sbolstandard.converter.Util;
+import org.sbolstandard.converter.sbol31_23.LocalComponentToAnnotationConverter;
+import org.sbolstandard.converter.sbol31_23.SubComponentToAnnotationConverter;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core2.SequenceAnnotation;
@@ -52,6 +54,11 @@ public class ComponentDefinitionConverter implements EntityConverter<ComponentDe
         		satoscConverter.convert(doc, comp, input, sa, parameters);
         		
         	} 
+			else if (SequenceAnnotationToLocalSubComponent.isLocalSubComponent(sa)){
+				// If the SequenceAnnotation is a local sub-component, convert it to a SequenceAnnotation with generic location
+				SequenceAnnotationToLocalSubComponent satolscConverter = new SequenceAnnotationToLocalSubComponent();
+				satolscConverter.convert(doc, comp, input, sa, parameters);
+			}
 			else {
     			// If the SequenceAnnotation is not a subComponent, convert it to a Feature
         		SequenceAnnotationToFeatureConverter satosfConverter = new SequenceAnnotationToFeatureConverter();

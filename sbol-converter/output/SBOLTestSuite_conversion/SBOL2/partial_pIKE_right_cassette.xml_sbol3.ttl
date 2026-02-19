@@ -317,14 +317,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/Reporter/rbsB_annotation/genericLocation> .
 
-<http://www.async.ece.utah.edu/pIKERightCasette/Reporter_cons_Terminator>
-        rdf:type                      sbol:Constraint;
-        sbol:displayId                "Reporter_cons_Terminator";
-        sbol:object                   <http://www.async.ece.utah.edu/pIKERightCasette/Terminator>;
-        sbol:restriction              sbol:precedes;
-        sbol:subject                  <http://www.async.ece.utah.edu/pIKERightCasette/Reporter>;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKERightCasette/Reporter_cons_Terminator> .
-
 <http://www.async.ece.utah.edu/pIKERightCasette/Reporter>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "Reporter";
@@ -334,6 +326,14 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2OriginalSequenceAnnotationURI
                 <http://www.async.ece.utah.edu/pIKERightCasette/Reporter_annotation>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKERightCasette/Reporter_annotation> , <http://www.async.ece.utah.edu/pIKERightCasette/Reporter> .
+
+<http://www.async.ece.utah.edu/pIKERightCasette/Reporter_cons_Terminator>
+        rdf:type                      sbol:Constraint;
+        sbol:displayId                "Reporter_cons_Terminator";
+        sbol:object                   <http://www.async.ece.utah.edu/pIKERightCasette/Terminator>;
+        sbol:restriction              sbol:precedes;
+        sbol:subject                  <http://www.async.ece.utah.edu/pIKERightCasette/Reporter>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pIKERightCasette/Reporter_cons_Terminator> .
 
 <http://www.async.ece.utah.edu/partseq_185>
         rdf:type                      sbol:Sequence;
@@ -356,11 +356,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pIKERightCasette/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-<<<<<<< HEAD
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKERightCasette/Reporter> , <http://www.async.ece.utah.edu/pIKERightCasette/Terminator> , <http://www.async.ece.utah.edu/pIKERightCasette/BBa_R0010> , <http://www.async.ece.utah.edu/pIKERightCasette/Repressor1> .
-=======
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKERightCasette/BBa_R0010> , <http://www.async.ece.utah.edu/pIKERightCasette/Reporter> , <http://www.async.ece.utah.edu/pIKERightCasette/Repressor1> , <http://www.async.ece.utah.edu/pIKERightCasette/Terminator> .
->>>>>>> feature/combder
+        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKERightCasette/Terminator> , <http://www.async.ece.utah.edu/pIKERightCasette/Repressor1> , <http://www.async.ece.utah.edu/pIKERightCasette/BBa_R0010> , <http://www.async.ece.utah.edu/pIKERightCasette/Reporter> .
 
 <http://www.async.ece.utah.edu/Repressor1/Interface1>
         rdf:type             sbol:Interface;

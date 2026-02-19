@@ -1,13 +1,16 @@
 package org.sbolstandard.converter.tests.datacuration;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.sbolstandard.converter.App;
+import org.sbolstandard.converter.sbol23_31.SBOLDocumentConverter;
 import org.sbolstandard.core2.SBOLConversionException;
+import org.sbolstandard.core2.SBOLReader;
 import org.sbolstandard.core2.SBOLValidationException;
 import org.sbolstandard.core3.api.SBOLAPI;
 import org.sbolstandard.core3.entity.Component;
@@ -17,6 +20,7 @@ import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.entity.SubComponent;
 import org.sbolstandard.core3.io.SBOLFormat;
 import org.sbolstandard.core3.io.SBOLIO;
+import org.sbolstandard.core3.util.Configuration;
 import org.sbolstandard.core3.util.SBOLGraphException;
 import org.sbolstandard.core3.vocabulary.InteractionType;
 import org.sbolstandard.core3.vocabulary.ParticipationRole;
@@ -40,6 +44,8 @@ public class GeneticMemory_v2 {
         };
 
         App.main(args);
+        
+        convert_MD5();
 
         SBOLDocument docFromGenBank = SBOLIO.read(new File("output/datacuration/" + outputFileName), SBOLFormat.RDFXML);
         GenBankComponentView cvConverter = new GenBankComponentView();
@@ -91,6 +97,21 @@ public class GeneticMemory_v2 {
         
         printAndSave(docCompView3, new File("output/datacuration/" + outputFileName + "_compview_subcomponents.ttl"), cvConverter);
         
+    }
+
+    private void convert_MD5() throws FileNotFoundException, IOException, SBOLGraphException, SBOLValidationException, SBOLConversionException   {
+       boolean isComplete = Configuration.getInstance().isCompleteDocument();
+      Configuration.getInstance().setCompleteDocument(false);
+
+       SBOLDocumentConverter converter = new SBOLDocumentConverter();
+       String path="input/datacuration/md5_sc17_sbol2.xml";
+       org.sbolstandard.core2.SBOLDocument sbol2Doc = SBOLReader.read(path);
+
+		
+       SBOLDocument sbol3Doc=converter.convert(sbol2Doc);
+       SBOLIO.write(sbol3Doc, new File("output/datacuration/md5_sc17_sbol3.xml"), SBOLFormat.TURTLE);
+       SBOLIO.write(sbol3Doc, new File("output/datacuration/md5_sc17_sbol3.xml"), SBOLFormat.RDFXML);       		
+       Configuration.getInstance().setCompleteDocument(isComplete );
     }
 
     private void printAndSave(SBOLDocument docCompView, File outputFile, GenBankComponentView cvConverter) throws SBOLGraphException, IOException {

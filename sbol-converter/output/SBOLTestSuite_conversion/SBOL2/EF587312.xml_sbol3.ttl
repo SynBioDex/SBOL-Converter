@@ -84,14 +84,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         genbank:pubmed   "17704231";
         genbank:title    "Yeast-plant coupled vector system for identification of nuclear proteins" .
 
-<http://www.async.ece.utah.edu/1/EF587312_seq>
-        rdf:type                      sbol:Sequence;
-        sbol:displayId                "EF587312_seq";
-        sbol:elements                 "gtgattaagcacacaaaggcagcttggagtatgtctgttattaatttcacaggtagttctggtccattggtgaaagtttgcggcttgcagagcacagaggccgcagaatgtgctctagattccgatgctgacttgctgggtattatatgtgtgcccaatagaaagagaacaattgacccggttattgcaaggaaaatttcaagtcttgtaaaagcatataaaaatagttcaggcactccgaaatacttggttggcgtgtttcgtaatcaacctaaggaggatgttttggctctggtcaatgattacggcattgatatcgtccaactgcatggagatgagtcgtggcaagaataccaagagttcctcggtttgccagttattaaaagactcgtatttccaaaagactgcaacatactactcagtgcagcttcacagaaacctcattcgtttattcccttgtttgattcagaagcaggtgggacaggtgaacttttggattggaactcgatttctgactgggttggaaggcaagagagccccgaaagcttacattttatgttagctggtggactgacgccagaaaatgttggtgatgcgcttagattaaatggcgttattggtgttgatgtaagcggaggtgtggagacaaatggtgtaaaagactctaacaaaatagcaaatttcgtcaaaaatgctaagaaatag";
-        sbol:encoding                 EDAM:format_1207;
-        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/EF587312_seq/1> .
-
 <http://www.async.ece.utah.edu/1/EF587312/annotation1>
         rdf:type                      sbol:SequenceFeature;
         gbConv:codon_start            "1";
@@ -104,3 +96,11 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:name                     "TRP1";
         sbol:role                     SO:0000316;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/EF587312/annotation1/1> .
+
+<http://www.async.ece.utah.edu/1/EF587312_seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "EF587312_seq";
+        sbol:elements                 "gtgattaagcacacaaaggcagcttggagtatgtctgttattaatttcacaggtagttctggtccattggtgaaagtttgcggcttgcagagcacagaggccgcagaatgtgctctagattccgatgctgacttgctgggtattatatgtgtgcccaatagaaagagaacaattgacccggttattgcaaggaaaatttcaagtcttgtaaaagcatataaaaatagttcaggcactccgaaatacttggttggcgtgtttcgtaatcaacctaaggaggatgttttggctctggtcaatgattacggcattgatatcgtccaactgcatggagatgagtcgtggcaagaataccaagagttcctcggtttgccagttattaaaagactcgtatttccaaaagactgcaacatactactcagtgcagcttcacagaaacctcattcgtttattcccttgtttgattcagaagcaggtgggacaggtgaacttttggattggaactcgatttctgactgggttggaaggcaagagagccccgaaagcttacattttatgttagctggtggactgacgccagaaaatgttggtgatgcgcttagattaaatggcgttattggtgttgatgtaagcggaggtgtggagacaaatggtgtaaaagactctaacaaaatagcaaatttcgtcaaaaatgctaagaaatag";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/EF587312_seq/1> .

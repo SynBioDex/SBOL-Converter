@@ -130,16 +130,12 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/Repressor2/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/Repressor2/RBS> , <http://www.async.ece.utah.edu/Repressor2/BBa_C0012> .
+        sbol:nondirectional  <http://www.async.ece.utah.edu/Repressor2/BBa_C0012> , <http://www.async.ece.utah.edu/Repressor2/RBS> .
 
 <http://www.async.ece.utah.edu/pIKELeftCasette/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-<<<<<<< HEAD
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKELeftCasette/Repressor2> , <http://www.async.ece.utah.edu/pIKELeftCasette/BBa_R0040> , <http://www.async.ece.utah.edu/pIKELeftCasette/Terminator> .
-=======
-        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKELeftCasette/Terminator> , <http://www.async.ece.utah.edu/pIKELeftCasette/BBa_R0040> , <http://www.async.ece.utah.edu/pIKELeftCasette/Repressor2> .
->>>>>>> feature/combder
+        sbol:nondirectional  <http://www.async.ece.utah.edu/pIKELeftCasette/Repressor2> , <http://www.async.ece.utah.edu/pIKELeftCasette/Terminator> , <http://www.async.ece.utah.edu/pIKELeftCasette/BBa_R0040> .
 
 <http://www.async.ece.utah.edu/pIKELeftCasette/BBa_R0040>
         rdf:type                      sbol:SubComponent;

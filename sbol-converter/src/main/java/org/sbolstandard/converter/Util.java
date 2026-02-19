@@ -649,6 +649,7 @@ public class Util {
 			for (Pair<URI, Object> annotation : annotations) {
 				// Convert SBOL3 Annotation to Metadata
 				String property = annotation.getLeft().toString();
+
 				//If the annotation was added during the conversion from v2 to v3, then remove it when converting it back to v2
 				if (property.toLowerCase().startsWith(ConverterNameSpace.BackPort_2_3.getUri().toString().toLowerCase())){				
 					continue;
@@ -1079,6 +1080,31 @@ public class Util {
 			return null;
 		}
 	}
+
+	public static URI getSBOL2OrientationURI(org.sbolstandard.core2.OrientationType sbol2Orientation) throws SBOLGraphException {
+		if (sbol2Orientation == org.sbolstandard.core2.OrientationType.INLINE) {
+			return URI.create("http://sbols.org/v2#inline");
+		} 
+		else if (sbol2Orientation == org.sbolstandard.core2.OrientationType.REVERSECOMPLEMENT) {
+			return URI.create("http://sbols.org/v2#reverseComplement");
+		}
+		else{
+			return null;
+		}
+	}
+
+	public static org.sbolstandard.core2.OrientationType getSBOL2OrientationType(String sbol2OrientationURI) throws SBOLGraphException {
+		if (sbol2OrientationURI.toLowerCase().equals("http://sbols.org/v2#inline".toLowerCase())) {
+			return org.sbolstandard.core2.OrientationType.INLINE;
+		} 
+		else if (sbol2OrientationURI.toLowerCase().equals("http://sbols.org/v2#reversecomplement".toLowerCase())) {
+			return org.sbolstandard.core2.OrientationType.REVERSECOMPLEMENT;
+		}
+		else{
+			return null;
+		}
+	}
+	
 
 	public static org.sbolstandard.core2.OrientationType toSBOL2OrientationType( org.sbolstandard.core3.vocabulary.Orientation sbol3Orientation) throws SBOLGraphException {
 		if (sbol3Orientation!=null){

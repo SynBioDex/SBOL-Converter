@@ -28,7 +28,7 @@ public class SequenceAnnotationToFeatureConverter implements ChildEntityConverte
 	private SequenceFeature getSequenceFeature(org.sbolstandard.core3.entity.SBOLDocument document,
 			Component sbol3ParentComp, ComponentDefinition sbol2ParentCompDef, SequenceAnnotation seqa, Parameters parameters)
 			throws SBOLGraphException {
-
+		
 		// Get the SBOL2 Sequence associated with the ComponentDefinition of the SequenceAnnotation.
 		URI seqType = Util.getSBOL2SequenceType(sbol2ParentCompDef);
 		Sequence sbol3Sequence = Util.getSBOL3SequenceFromSBOl2Parent(document, sbol2ParentCompDef, parameters);
