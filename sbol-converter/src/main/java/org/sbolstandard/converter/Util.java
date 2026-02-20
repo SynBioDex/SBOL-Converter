@@ -60,6 +60,9 @@ public class Util {
 	}
 
 	public static <T> Set<T> toSet(List<T> list) {
+		if (list==null){
+			return new HashSet<>();
+		}
 		return new HashSet<>(list);
 	}
 

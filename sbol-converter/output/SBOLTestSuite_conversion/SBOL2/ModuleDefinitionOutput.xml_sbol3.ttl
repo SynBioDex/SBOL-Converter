@@ -129,7 +129,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbolstandard.org/example/tetr_inverter/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://sbolstandard.org/example/tetr_inverter/promoter> , <http://sbolstandard.org/example/tetr_inverter/TF> .
+        sbol:nondirectional  <http://sbolstandard.org/example/tetr_inverter/TF> , <http://sbolstandard.org/example/tetr_inverter/promoter> .
 
 <http://sbolstandard.org/example/toggle_switch>
         rdf:type                      sbol:Component;
@@ -186,18 +186,18 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:displayId       "Interface1";
         sbol:nondirectional  <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKELeftCassette_1> , <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKERightCassette_1> .
 
-<http://sbolstandard.org/example/tetr_inverter/promoter>
-        rdf:type                      sbol:SubComponent;
-        sbol:displayId                "promoter";
-        sbol:instanceOf               <http://www.partsregistry.org/BBa_R0040>;
-        backport2_3:sbol2OriginalURI  <http://sbolstandard.org/example/tetr_inverter/promoter> .
-
 <http://sbolstandard.org/example/toggle_switch/laci_inverter>
         rdf:type         sbol:SubComponent;
         sbol:displayId   "laci_inverter";
         sbol:instanceOf  <http://sbolstandard.org/example/laci_inverter>;
         backport2_3:sbol2OriginatesFromModule
                 "true" .
+
+<http://sbolstandard.org/example/tetr_inverter/promoter>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "promoter";
+        sbol:instanceOf               <http://www.partsregistry.org/BBa_R0040>;
+        backport2_3:sbol2OriginalURI  <http://sbolstandard.org/example/tetr_inverter/promoter> .
 
 <http://www.virtualparts.org/part/BBa_J61120>
         rdf:type                      sbol:Sequence;
@@ -236,7 +236,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.virtualparts.org/part/pIKERightCassette_1/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_R0010> , <http://www.virtualparts.org/part/pIKERightCassette_1/ECK120033736> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61130> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_E0040> .
+        sbol:nondirectional  <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_E0040> , <http://www.virtualparts.org/part/pIKERightCassette_1/ECK120033736> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61130> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_R0010> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040> .
 
 <http://www.partsregistry.org/BBa_J61130>
         rdf:type                      sbol:Component;
@@ -252,7 +252,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.virtualparts.org/part/pIKELeftCassette_1/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_C0012> , <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_J61101> , <http://www.virtualparts.org/part/pIKELeftCassette_1/ECK120029600> , <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_R0040> .
+        sbol:nondirectional  <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_R0040> , <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_J61101> , <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_C0012> , <http://www.virtualparts.org/part/pIKELeftCassette_1/ECK120029600> .
 
 <http://www.virtualparts.org/part/pIKELeftCassette_1/ECK120029600/location4>
         rdf:type                      sbol:Range;
@@ -592,7 +592,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbolstandard.org/example/toggle_switch/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://sbolstandard.org/example/toggle_switch/TetR> , <http://sbolstandard.org/example/toggle_switch/LacI> .
+        sbol:nondirectional  <http://sbolstandard.org/example/toggle_switch/LacI> , <http://sbolstandard.org/example/toggle_switch/TetR> .
 
 <http://sbolstandard.org/example/laci_inverter>
         rdf:type                      sbol:Component;
@@ -637,7 +637,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
         rdf:type                      sbol:Component;
         sbol:description              "LacI Inverter";
         sbol:displayId                "pIKERightCassette_1";
-        sbol:hasFeature               <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61130> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_R0010> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_E0040> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040> , <http://www.virtualparts.org/part/pIKERightCassette_1/ECK120033736>;
+        sbol:hasFeature               <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61130> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_R0010> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_E0040> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120> , <http://www.virtualparts.org/part/pIKERightCassette_1/ECK120033736> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040>;
         sbol:hasInterface             <http://www.virtualparts.org/part/pIKERightCassette_1/Interface1>;
         sbol:hasNamespace             <http://www.virtualparts.org/part>;
         sbol:hasSequence              <http://www.virtualparts.org/part/pIKERightCassette_1_seq>;
@@ -724,4 +724,4 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbolstandard.org/example/laci_inverter/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://sbolstandard.org/example/laci_inverter/promoter> , <http://sbolstandard.org/example/laci_inverter/TF> .
+        sbol:nondirectional  <http://sbolstandard.org/example/laci_inverter/TF> , <http://sbolstandard.org/example/laci_inverter/promoter> .

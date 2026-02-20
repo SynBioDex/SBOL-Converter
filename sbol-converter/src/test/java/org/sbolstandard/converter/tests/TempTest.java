@@ -82,8 +82,13 @@ public class TempTest {
                 // ERROR: due to the SBOL2 issues
                 //List<String> errors=TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/toggle.xml"));
                 //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/ComponentDefinitionOutput_gl_cd_sa_comp.xml"));
-                List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/ComponentDefinitionOutput_gl_cd_sa_comp.xml"), true, "output/tmp/ComponentDefinitionOutput_gl_cd_sa_comp.xml", true);                
-          
+                //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/ComponentDefinitionOutput_gl_cd_sa_comp.xml"), true, "output/tmp/ComponentDefinitionOutput_gl_cd_sa_comp.xml", true);                
+                
+                boolean isComplete=Configuration.getInstance().isCompleteDocument();
+                Configuration.getInstance().setCompleteDocument(false);                
+                List<String> errors = TestUtil.roundTripConvert(new File("input/datacuration/md5_sc17_sbol2.xml"), true, "output/tmp/md5_sc17_sbol2.xml", true);                
+                Configuration.getInstance().setCompleteDocument(isComplete);
+                
                 /*
                  * https://github.com/SynBioDex/SBOLTestSuite/blob/master/SBOL2/
                  * test_source_location.xml
