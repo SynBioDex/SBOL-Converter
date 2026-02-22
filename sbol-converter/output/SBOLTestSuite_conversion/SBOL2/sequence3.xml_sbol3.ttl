@@ -24,17 +24,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation6/range/1> .
 
-<http://www.async.ece.utah.edu/1/AF090832/annotation13/range>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range";
-        sbol:end                      "4638";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "4629";
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation13/range/1> .
-
 <http://www.async.ece.utah.edu/1/AF090832/annotation9/range>
         rdf:type                      sbol:Range;
         sbol:displayId                "range";
@@ -45,6 +34,17 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation9/range/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation13/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "4638";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "4629";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation13/range/1> .
 
 <http://www.async.ece.utah.edu/1/AF090832/annotation2/range>
         rdf:type                      sbol:Range;
@@ -186,17 +186,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:role                     SO:0002206;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation0/1> .
 
-<http://www.async.ece.utah.edu/1/AF090832/annotation15/range>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range";
-        sbol:end                      "5010";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "5001";
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation15/range/1> .
-
 <http://www.async.ece.utah.edu/1/AF090832/annotation8/range>
         rdf:type                      sbol:Range;
         sbol:displayId                "range";
@@ -207,6 +196,17 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation8/range/1> .
+
+<http://www.async.ece.utah.edu/1/AF090832/annotation15/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "5010";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF090832_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "5001";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation15/range/1> .
 
 <http://www.async.ece.utah.edu/1/AF090832/annotation3/range0>
         rdf:type                      sbol:Range;
@@ -435,7 +435,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
         gbConv:gene                   "Mlp84B";
         gbConv:multiRangeType         "join";
         sbol:displayId                "annotation4";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation4/range1> , <http://www.async.ece.utah.edu/1/AF090832/annotation4/range0>;
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF090832/annotation4/range0> , <http://www.async.ece.utah.edu/1/AF090832/annotation4/range1>;
         sbol:name                     "Mlp84B";
         sbol:role                     SO:0000204;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF090832/annotation4/1> .

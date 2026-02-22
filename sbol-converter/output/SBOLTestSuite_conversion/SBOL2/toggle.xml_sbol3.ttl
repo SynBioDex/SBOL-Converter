@@ -192,7 +192,7 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
 <http://www.virtualparts.org/part/pIKE_Toggle_1/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKELeftCassette_1> , <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKERightCassette_1> .
+        sbol:nondirectional  <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKERightCassette_1> , <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKELeftCassette_1> .
 
 <http://sbolstandard.org/example/toggle_switch/laci_inverter>
         rdf:type         sbol:SubComponent;
@@ -244,7 +244,7 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
 <http://www.virtualparts.org/part/pIKERightCassette_1/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120> , <http://www.virtualparts.org/part/pIKERightCassette_1/ECK120033736> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_E0040> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_R0010> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61130> .
+        sbol:nondirectional  <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_R0010> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040> , <http://www.virtualparts.org/part/pIKERightCassette_1/ECK120033736> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_E0040> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61130> .
 
 <http://www.partsregistry.org/BBa_J61130>
         rdf:type                      sbol:Component;
@@ -260,7 +260,7 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
 <http://www.virtualparts.org/part/pIKELeftCassette_1/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.virtualparts.org/part/pIKELeftCassette_1/ECK120029600> , <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_R0040> , <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_C0012> , <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_J61101> .
+        sbol:nondirectional  <http://www.virtualparts.org/part/pIKELeftCassette_1/ECK120029600> , <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_C0012> , <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_J61101> , <http://www.virtualparts.org/part/pIKELeftCassette_1/BBa_R0040> .
 
 <http://www.virtualparts.org/part/pIKE_Toggle_1_seq>
         rdf:type           sbol:Sequence;
@@ -653,7 +653,7 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         rdf:type                      sbol:Component;
         sbol:description              "LacI Inverter";
         sbol:displayId                "pIKERightCassette_1";
-        sbol:hasFeature               <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61130> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_R0010> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_E0040> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040> , <http://www.virtualparts.org/part/pIKERightCassette_1/ECK120033736>;
+        sbol:hasFeature               <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61130> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_R0010> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_E0040> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_J61120> , <http://www.virtualparts.org/part/pIKERightCassette_1/ECK120033736> , <http://www.virtualparts.org/part/pIKERightCassette_1/BBa_C0040>;
         sbol:hasInterface             <http://www.virtualparts.org/part/pIKERightCassette_1/Interface1>;
         sbol:hasNamespace             <http://www.virtualparts.org/part>;
         sbol:hasSequence              <http://www.virtualparts.org/part/pIKERightCassette_1_seq>;
@@ -694,7 +694,7 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         rdf:type                      sbol:Component;
         sbol:description              "LacI/TetR Toggle Switch";
         sbol:displayId                "pIKE_Toggle_1";
-        sbol:hasFeature               <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKERightCassette_1> , <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKELeftCassette_1>;
+        sbol:hasFeature               <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKELeftCassette_1> , <http://www.virtualparts.org/part/pIKE_Toggle_1/pIKERightCassette_1>;
         sbol:hasInterface             <http://www.virtualparts.org/part/pIKE_Toggle_1/Interface1>;
         sbol:hasNamespace             <http://www.virtualparts.org/part>;
         sbol:hasSequence              <http://www.virtualparts.org/part/pIKE_Toggle_1_seq>;
@@ -740,7 +740,7 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
 <http://sbolstandard.org/example/laci_inverter/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://sbolstandard.org/example/laci_inverter/promoter> , <http://sbolstandard.org/example/laci_inverter/TF> .
+        sbol:nondirectional  <http://sbolstandard.org/example/laci_inverter/TF> , <http://sbolstandard.org/example/laci_inverter/promoter> .
 
 <http://sbolhub.org/gen/james_test_sbol2_061015155208>
         rdf:type                      sbol:TopLevel , sbolhub:UploadData;

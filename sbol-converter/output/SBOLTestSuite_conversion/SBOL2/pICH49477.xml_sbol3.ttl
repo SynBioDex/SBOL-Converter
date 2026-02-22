@@ -37,16 +37,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
         genbank:molecule              "DNA";
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH49477> .
 
-<http://www.async.ece.utah.edu/pICH49477/annotation2/range>
+<http://www.async.ece.utah.edu/pICH49477/annotation6/range>
         rdf:type                      sbol:Range;
         sbol:displayId                "range";
-        sbol:end                      "1208";
+        sbol:end                      "2926";
         sbol:hasSequence              <http://www.async.ece.utah.edu/pICH49477_seq>;
         sbol:orientation              SO:0001030;
-        sbol:start                    "1208";
+        sbol:start                    "2249";
         backport2_3:sbol2LocationSequenceNull
                 true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH49477/annotation2/range> .
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH49477/annotation6/range> .
 
 <http://www.async.ece.utah.edu/pICH49477/annotation1>
         rdf:type                      sbol:SequenceFeature;
@@ -69,16 +69,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH49477/annotation1/range> .
 
-<http://www.async.ece.utah.edu/pICH49477/annotation6/range>
+<http://www.async.ece.utah.edu/pICH49477/annotation2/range>
         rdf:type                      sbol:Range;
         sbol:displayId                "range";
-        sbol:end                      "2926";
+        sbol:end                      "1208";
         sbol:hasSequence              <http://www.async.ece.utah.edu/pICH49477_seq>;
         sbol:orientation              SO:0001030;
-        sbol:start                    "2249";
+        sbol:start                    "1208";
         backport2_3:sbol2LocationSequenceNull
                 true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH49477/annotation6/range> .
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH49477/annotation2/range> .
 
 <http://www.async.ece.utah.edu/pICH49477/annotation3>
         rdf:type                      sbol:SequenceFeature;

@@ -296,21 +296,6 @@
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/AF090832/annotation4">
             <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF090832/annotation4/range1">
-                  <gbConv:position>position1</gbConv:position>
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/AF090832/annotation4/range1/1"/>
-                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
-                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>2946</sbol:end>
-                  <sbol:start>2868</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/AF090832_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range1</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF090832/annotation4/range0">
                   <gbConv:position>position0</gbConv:position>
                   <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/AF090832/annotation4/range0/1"/>
@@ -323,6 +308,21 @@
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/AF090832_seq"/>
                   </sbol:hasSequence>
                   <sbol:displayId>range0</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF090832/annotation4/range1">
+                  <gbConv:position>position1</gbConv:position>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/AF090832/annotation4/range1/1"/>
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>2946</sbol:end>
+                  <sbol:start>2868</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/AF090832_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range1</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
             <gbConv:gene>Mlp84B</gbConv:gene>

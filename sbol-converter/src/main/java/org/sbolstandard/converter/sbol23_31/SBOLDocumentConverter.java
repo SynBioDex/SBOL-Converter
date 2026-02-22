@@ -4,6 +4,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.apache.jena.riot.RDFFormat;
 import org.apache.jena.riot.RiotException;
@@ -42,6 +44,11 @@ import org.sbolstandard.core3.util.SBOLGraphException;
 
 public class SBOLDocumentConverter {
 
+    static {
+        Logger.getLogger("org.hibernate.validator")
+              .setLevel(Level.SEVERE);
+    }
+	 
     /* 
 	private static boolean isCompliant=false;
 	

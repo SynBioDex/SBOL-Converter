@@ -30,6 +30,25 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation0">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30005/annotation0"/>
+        <sbol:displayId>annotation0</sbol:displayId>
+        <dcterms:title>Sm/Sp no DraIII</dcterms:title>
+        <gbConv:vntifkey>4</gbConv:vntifkey>
+        <gbConv:label>Sm/Sp no DraIII</gbConv:label>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation0/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30005/annotation0/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>160</sbol:start>
+            <sbol:end>1170</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#reverseComplement"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
       <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation1">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30005/annotation1"/>
         <sbol:displayId>annotation1</sbol:displayId>
@@ -70,44 +89,6 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation2">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30005/annotation2"/>
-        <sbol:displayId>annotation2</sbol:displayId>
-        <dcterms:title>NT-3xFLAG</dcterms:title>
-        <gbConv:featureType>Golden_Gate_Par</gbConv:featureType>
-        <gbConv:label>NT-3xFLAG</gbConv:label>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation2/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30005/annotation2/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>1395</sbol:start>
-            <sbol:end>1483</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation0">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30005/annotation0"/>
-        <sbol:displayId>annotation0</sbol:displayId>
-        <dcterms:title>Sm/Sp no DraIII</dcterms:title>
-        <gbConv:vntifkey>4</gbConv:vntifkey>
-        <gbConv:label>Sm/Sp no DraIII</gbConv:label>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation0/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30005/annotation0/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>160</sbol:start>
-            <sbol:end>1170</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#reverseComplement"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
       <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation5">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30005/annotation5"/>
         <sbol:displayId>annotation5</sbol:displayId>
@@ -123,6 +104,25 @@
             <sbol:displayId>range</sbol:displayId>
             <sbol:start>1730</sbol:start>
             <sbol:end>1730</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation2">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30005/annotation2"/>
+        <sbol:displayId>annotation2</sbol:displayId>
+        <dcterms:title>NT-3xFLAG</dcterms:title>
+        <gbConv:featureType>Golden_Gate_Par</gbConv:featureType>
+        <gbConv:label>NT-3xFLAG</gbConv:label>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICSL30005/annotation2/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pICSL30005/annotation2/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>1395</sbol:start>
+            <sbol:end>1483</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>

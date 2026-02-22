@@ -1,6 +1,10 @@
 package org.sbolstandard.converter.tests;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.logging.ConsoleHandler;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
 import java.util.logging.Logger;
 import org.junit.jupiter.api.Test;
 import org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter;
@@ -8,6 +12,7 @@ import org.sbolstandard.core2.SBOLWriter;
 import org.sbolstandard.core3.entity.SBOLDocument;
 import org.sbolstandard.core3.io.SBOLFormat;
 import org.sbolstandard.core3.io.SBOLIO;
+import org.sbolstandard.core3.util.SBOLGraphException;
 
 /**
  * Unit test for simple App.
@@ -15,15 +20,37 @@ import org.sbolstandard.core3.io.SBOLIO;
 public class SBOL3_to_2_Test {
 	@Test
 	public void TestSBOL2AllFiles() throws Exception {
-		Logger logger = TestUtil.getLogger("AllFilesTest.log");	
-		File sbol3FileRDFSource=new File ("../../libSBOLj3/output/usecase/toggleswitch.xml");
+		//Logger.getLogger("org.hibernate.validator").setLevel(Level.SEVERE);
 
-		File sbol2File=new File ("output/tmp/toggleswitch.xml_sbol3_sbol2_from_sbol3.xml");
+		LogManager.getLogManager().reset();
+        ConsoleHandler handler = new ConsoleHandler();
+        handler.setLevel(Level.INFO);
+        Logger.getLogger("").addHandler(handler);
+
+        Logger.getLogger("org.hibernate.validator").setLevel(Level.SEVERE);
+
+		Logger logger = TestUtil.getLogger("AllFilesTest.log");	
+		logger.info("GMGMGMGM");
+		
+		convertFile(new File("output/tmp/"), new File ("../../libSBOLj3/libSBOLj3/output/toggle_switch/toggle_switch.rdf"));
+		//convertFile(new File("output/tmp/"), new File ("../../libSBOLj3/libSBOLj3/output/toggle_switch_v2/toggle_switch_v2.rdf"));
+	
+	}
+
+	private void convertFile(File outputFolder,File file) throws Exception
+	{
+
+		/*File sbol2File=new File ("output/tmp/toggleswitch.xml_sbol3_sbol2_from_sbol3.xml");
 		File tmpSbol3FileRDF=new File ("output/tmp/toggleswitch.xml_sbol3.xml");
-		File tmpSbol3FileTTL=new File ("output/tmp/toggleswitch.xml_sbol3.ttl");
+		File tmpSbol3FileTTL=new File ("output/tmp/toggleswitch.xml_sbol3.ttl");*/
 		
+		String dest=outputFolder.getPath() + file.getName();
+		File sbol2File=new File (dest + "_sbol3_to_sbol2");
+		File tmpSbol3FileRDF=new File (dest + "_sbol3.xml");
+		File tmpSbol3FileTTL=new File (dest + "_sbol3.ttl");
 		
-		SBOLDocument sbol3Doc=SBOLIO.read(sbol3FileRDFSource);
+
+		SBOLDocument sbol3Doc=SBOLIO.read(file);
 		SBOLIO.write(sbol3Doc,tmpSbol3FileRDF,  SBOLFormat.RDFXML);
 		SBOLIO.write(sbol3Doc,tmpSbol3FileTTL,  SBOLFormat.TURTLE);
 
@@ -31,6 +58,5 @@ public class SBOL3_to_2_Test {
 		org.sbolstandard.core2.SBOLDocument sbol2Doc = converter.convert(sbol3Doc);
 		
 		SBOLWriter.write(sbol2Doc, sbol2File);
-	
 	}
 }

@@ -143,6 +143,12 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:type                     SBO:0000251;
         backport2_3:sbol2OriginalURI  <http://sbols.org/CRISPR_Example/gRNA_b_gene/1.0> .
 
+<http://sbols.org/CRISPR_Example/1.0/EYFP_gene/EYFP_cds>
+        rdf:type                      sbol:SubComponent;
+        sbol:displayId                "EYFP_cds";
+        sbol:instanceOf               <http://sbols.org/CRISPR_Example/1.0/EYFP_cds>;
+        backport2_3:sbol2OriginalURI  <http://sbols.org/CRISPR_Example/EYFP_gene/EYFP_cds/1.0> .
+
 <http://sbols.org/CRISPR_Example/1.0/CRa_U6>
         rdf:type                      sbol:Component;
         sbol:displayId                "CRa_U6";
@@ -151,12 +157,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:role                     SO:0000167;
         sbol:type                     SBO:0000251;
         backport2_3:sbol2OriginalURI  <http://sbols.org/CRISPR_Example/CRa_U6/1.0> .
-
-<http://sbols.org/CRISPR_Example/1.0/EYFP_gene/EYFP_cds>
-        rdf:type                      sbol:SubComponent;
-        sbol:displayId                "EYFP_cds";
-        sbol:instanceOf               <http://sbols.org/CRISPR_Example/1.0/EYFP_cds>;
-        backport2_3:sbol2OriginalURI  <http://sbols.org/CRISPR_Example/EYFP_gene/EYFP_cds/1.0> .
 
 <http://sbols.org/CRISPR_Example/1.0/cas9_gRNA_complex>
         rdf:type                      sbol:Component;
@@ -195,9 +195,9 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/Constraint1>
         rdf:type          sbol:Constraint;
         sbol:displayId    "Constraint1";
-        sbol:object       <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_gene_map>;
+        sbol:object       <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_map>;
         sbol:restriction  sbol:replaces;
-        sbol:subject      <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_gene> .
+        sbol:subject      <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP> .
 
 <http://sbols.org/CRISPR_Example/1.0/CRP_b_seq>
         rdf:type                      sbol:Sequence;
@@ -378,7 +378,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbols.org/CRISPR_Example/1.0/Gal4VP16_gene/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://sbols.org/CRISPR_Example/1.0/Gal4VP16_gene/pConst> , <http://sbols.org/CRISPR_Example/1.0/Gal4VP16_gene/Gal4VP16_cds> .
+        sbol:nondirectional  <http://sbols.org/CRISPR_Example/1.0/Gal4VP16_gene/Gal4VP16_cds> , <http://sbols.org/CRISPR_Example/1.0/Gal4VP16_gene/pConst> .
 
 <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/Gal4VP16>
         rdf:type                      sbol:SubComponent;
@@ -478,7 +478,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbols.org/CRISPR_Example/1.0/gRNA_b_gene/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://sbols.org/CRISPR_Example/1.0/gRNA_b_gene/gRNA_b_nc> , <http://sbols.org/CRISPR_Example/1.0/gRNA_b_gene/CRa_U6> , <http://sbols.org/CRISPR_Example/1.0/gRNA_b_gene/gRNA_b_terminator> .
+        sbol:nondirectional  <http://sbols.org/CRISPR_Example/1.0/gRNA_b_gene/gRNA_b_nc> , <http://sbols.org/CRISPR_Example/1.0/gRNA_b_gene/gRNA_b_terminator> , <http://sbols.org/CRISPR_Example/1.0/gRNA_b_gene/CRa_U6> .
 
 <http://sbols.org/CRISPR_Example/1.0/gRNA_b_gene/gRNA_b_nc>
         rdf:type                      sbol:SubComponent;
@@ -489,9 +489,9 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/Constraint5>
         rdf:type          sbol:Constraint;
         sbol:displayId    "Constraint5";
-        sbol:object       <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_map>;
+        sbol:object       <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP_map>;
         sbol:restriction  sbol:replaces;
-        sbol:subject      <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP> .
+        sbol:subject      <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP> .
 
 <http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/target_production>
         rdf:type                      sbol:Interaction;
@@ -634,7 +634,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/cas9_gRNA_complex> , <http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/cas9_generic> , <http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/target_gene> , <http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/gRNA_generic> , <http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/target> .
+        sbol:nondirectional  <http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/target> , <http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/target_gene> , <http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/gRNA_generic> , <http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/cas9_generic> , <http://sbols.org/CRISPR_Example/1.0/CRISPR_Template/cas9_gRNA_complex> .
 
 <http://sbols.org/CRISPR_Example/1.0/EYFP_gene/CRP_b>
         rdf:type                      sbol:SubComponent;
@@ -673,9 +673,9 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/Constraint2>
         rdf:type          sbol:Constraint;
         sbol:displayId    "Constraint2";
-        sbol:object       <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/gRNA_b_map>;
+        sbol:object       <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_gene_map>;
         sbol:restriction  sbol:replaces;
-        sbol:subject      <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/gRNA_b> .
+        sbol:subject      <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/EYFP_gene> .
 
 <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP_gRNA_b>
         rdf:type                      sbol:SubComponent;
@@ -845,6 +845,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/Constraint4>
         rdf:type          sbol:Constraint;
         sbol:displayId    "Constraint4";
-        sbol:object       <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP_map>;
+        sbol:object       <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/gRNA_b_map>;
         sbol:restriction  sbol:replaces;
-        sbol:subject      <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/cas9m_BFP> .
+        sbol:subject      <http://sbols.org/CRISPR_Example/1.0/CRPb_characterization_Circuit/gRNA_b> .

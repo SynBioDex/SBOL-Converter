@@ -18,7 +18,7 @@ public class MapsToMainConverter {
 			for (org.sbolstandard.core3.entity.ComponentReference componentReference : sbol3Component.getComponentReferences()) {
 				SubComponent subComponentInChildOf = componentReference.getInChildOf();
 				org.sbolstandard.core2.Component componentSbol2Parent = sbol2ComponentDefinition.getComponent(subComponentInChildOf.getDisplayId());
-				compRefToMapsToConverter.convert(sbol2Doc, componentSbol2Parent, sbol3Component, componentReference);
+				compRefToMapsToConverter.convert(sbol2Doc, componentSbol2Parent, sbol3Component, componentReference, sbol2ComponentDefinition);
 			}
 		}            
     }
@@ -38,12 +38,12 @@ public class MapsToMainConverter {
 				if (placeCompRefInFC)
 				{
 					org.sbolstandard.core2.FunctionalComponent fcSbol2Parent = sbol2ModuleDefinition.getFunctionalComponent(subComponentInChildOf.getDisplayId());
-					compRefToMapsToConverter.convert(sbol2Doc, fcSbol2Parent, sbol3Component, componentReference);
+					compRefToMapsToConverter.convert(sbol2Doc, fcSbol2Parent, sbol3Component, componentReference, sbol2ModuleDefinition);
 				}
 				//As default, convert CompRef to MapsTo.
 				else{
 					org.sbolstandard.core2.Module moduleSbol2Parent = sbol2ModuleDefinition.getModule(subComponentInChildOf.getDisplayId());						
-					compRefToMapsToConverter.convert(sbol2Doc, moduleSbol2Parent, sbol3Component, componentReference);
+					compRefToMapsToConverter.convert(sbol2Doc, moduleSbol2Parent, sbol3Component, componentReference, sbol2ModuleDefinition);
 
 				}
 			}

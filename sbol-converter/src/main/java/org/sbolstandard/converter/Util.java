@@ -1269,9 +1269,25 @@ public class Util {
 	public static boolean isModuleDefinition(Component component) throws SBOLGraphException {
 		if(component!=null && component.getInteractions() != null && !component.getInteractions().isEmpty()) {
 			return true;			
-		} else if (component!=null && component.getTypes().contains(ComponentType.FunctionalEntity.getUri())) {
+		} 
+		/*else if (component.getComponentReferences()!=null && !component.getComponentReferences().isEmpty())
+		{
+			return true;
+		}*/
+		else if (component!=null && component.getTypes().contains(ComponentType.FunctionalEntity.getUri())) {
 			return true;
 		}
+
+		if (component.getSubComponents() != null) {
+			for (SubComponent subComponent : component.getSubComponents()) {
+				Component childComponent = subComponent.getInstanceOf();
+				if (childComponent!=null){				
+					if (isModuleDefinition(childComponent)) {
+						return true;
+					}				
+				}
+			}
+		}	
 		return false;
 	}
 	
@@ -1405,6 +1421,8 @@ public class Util {
 			}
 			return false;
 		}
+
+
 
 		public static Sequence getEmptySequence(Component sbol3ParentComp, SBOLDocument document) throws SBOLGraphException
 		{
