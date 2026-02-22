@@ -1,5 +1,6 @@
 package org.sbolstandard.converter.sbol31_23;
 
+import org.sbolstandard.converter.ConverterVocabulary;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.ModuleDefinition;
 import org.sbolstandard.core2.SBOLDocument;
@@ -28,8 +29,23 @@ public class MapsToMainConverter {
         if (sbol3Component.getComponentReferences() != null){
 			for (org.sbolstandard.core3.entity.ComponentReference componentReference : sbol3Component.getComponentReferences()) {					
 				SubComponent subComponentInChildOf = componentReference.getInChildOf();						
-				org.sbolstandard.core2.Module moduleSbol2Parent = sbol2ModuleDefinition.getModule(subComponentInChildOf.getDisplayId());						
-				compRefToMapsToConverter.convert(sbol2Doc, moduleSbol2Parent, sbol3Component, componentReference);
+				boolean placeCompRefInFC=false;
+				Object objectValue=org.sbolstandard.converter.Util.extractSBOL2AnnotationValue(componentReference, ConverterVocabulary.Two_to_Three.sbol2MapstoOriginInFC);
+				if (objectValue!=null && objectValue.toString().equalsIgnoreCase("true")){
+					placeCompRefInFC=true;
+				}
+				//Maps to can also be within FCs. If this was a conversion from SBOL2, follow the same steps and create an fc.MapsTo
+				if (placeCompRefInFC)
+				{
+					org.sbolstandard.core2.FunctionalComponent fcSbol2Parent = sbol2ModuleDefinition.getFunctionalComponent(subComponentInChildOf.getDisplayId());
+					compRefToMapsToConverter.convert(sbol2Doc, fcSbol2Parent, sbol3Component, componentReference);
+				}
+				//As default, convert CompRef to MapsTo.
+				else{
+					org.sbolstandard.core2.Module moduleSbol2Parent = sbol2ModuleDefinition.getModule(subComponentInChildOf.getDisplayId());						
+					compRefToMapsToConverter.convert(sbol2Doc, moduleSbol2Parent, sbol3Component, componentReference);
+
+				}
 			}
 		}                
     }

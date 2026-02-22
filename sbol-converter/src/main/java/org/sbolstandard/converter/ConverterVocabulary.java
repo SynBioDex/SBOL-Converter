@@ -13,6 +13,7 @@ public class ConverterVocabulary {
         public static final URI sbol2OriginatesFromModule = ConverterNameSpace.BackPort_2_3.local("sbol2OriginatesFromModule");
         public static final URI sbol2Entity = ConverterNameSpace.BackPort_2_3.local("sbol2Entity");
         public static final URI sbol2GenericLocation = ConverterNameSpace.BackPort_2_3.local("sbol2GenericLocation");
+        public static final URI sbol2MapstoOriginInFC = ConverterNameSpace.BackPort_2_3.local("sbol2MapstoOriginInFC");
         
 
 

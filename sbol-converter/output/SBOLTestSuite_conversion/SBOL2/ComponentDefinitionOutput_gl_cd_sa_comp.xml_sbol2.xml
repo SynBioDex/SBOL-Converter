@@ -48,11 +48,11 @@
       </sbol:Component>
     </sbol:component>
     <sbol:component>
-      <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_F2620/luxR">
-        <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/BBa_F2620/luxR"/>
-        <sbol:displayId>luxR</sbol:displayId>
+      <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_F2620/pTetR">
+        <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/BBa_F2620/pTetR"/>
+        <sbol:displayId>pTetR</sbol:displayId>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="http://partsregistry.org/cd/BBa_B0034"/>
+        <sbol:definition rdf:resource="http://partsregistry.org/cd/BBa_R0040"/>
       </sbol:Component>
     </sbol:component>
     <sbol:component>
@@ -64,11 +64,11 @@
       </sbol:Component>
     </sbol:component>
     <sbol:component>
-      <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_F2620/pTetR">
-        <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/BBa_F2620/pTetR"/>
-        <sbol:displayId>pTetR</sbol:displayId>
+      <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_F2620/luxR">
+        <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/BBa_F2620/luxR"/>
+        <sbol:displayId>luxR</sbol:displayId>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="http://partsregistry.org/cd/BBa_R0040"/>
+        <sbol:definition rdf:resource="http://partsregistry.org/cd/BBa_B0034"/>
       </sbol:Component>
     </sbol:component>
     <sbol:sequenceAnnotation>

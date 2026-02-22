@@ -67,15 +67,7 @@ public class SubComponentToAnnotationConverter implements ChildEntityConverter<S
 		return sbol2AnnotationId;
 	}
 
-	private static String extractSBOL2AnnotationURIValue(Identified identified, URI uri) throws SBOLGraphException{
-		String value= null;				
-		List<Object> backPorts=identified.getAnnotation(uri);
-		if (backPorts!=null && backPorts.size()>0){
-			URI uriValue= (URI) backPorts.get(0);
-			value= uriValue.toString();	
-		}
-		return value;
-	}
+	
 
 	public static SequenceAnnotation handleLocations(FeatureWithLocation sbol3SubComponent,
 			SequenceAnnotation sbol2SeqAnno, ComponentDefinition parentCompDef, SBOLDocument doc)
@@ -178,8 +170,7 @@ public class SubComponentToAnnotationConverter implements ChildEntityConverter<S
 								sbol2AnnotationDisplayId = sbol3SubComponent.getDisplayId();
 							}
 							OrientationType sbol2Orientation = null;
-							String value = extractSBOL2AnnotationURIValue(metadata,
-									URI.create("http://sbols.org/v2#orientation"));
+							String value = Util.extractSBOL2AnnotationURIValue(metadata, URI.create("http://sbols.org/v2#orientation"));
 							if (value != null) {
 								sbol2Orientation = Util.getSBOL2OrientationType(value);
 							}

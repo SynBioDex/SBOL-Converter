@@ -31,12 +31,21 @@
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://sbolcanvas.org/module1/GwXZZY8M_73">
-        <sbol:persistentIdentity rdf:resource="https://sbolcanvas.org/module1/GwXZZY8M_73"/>
-        <sbol:displayId>GwXZZY8M_73</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolcanvas.org/GwXZZY8M/1"/>
+      <sbol:FunctionalComponent rdf:about="https://sbolcanvas.org/module1/sNRMyx2j_148">
+        <sbol:persistentIdentity rdf:resource="https://sbolcanvas.org/module1/sNRMyx2j_148"/>
+        <sbol:displayId>sNRMyx2j_148</sbol:displayId>
+        <sbol:definition rdf:resource="https://sbolcanvas.org/sNRMyx2j/1"/>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
         <sbol:direction rdf:resource="http://sbols.org/v2#inout"/>
+        <sbol:mapsTo>
+          <sbol:MapsTo rdf:about="https://sbolcanvas.org/module1/sNRMyx2j_148/mapsTo_pJR11_11">
+            <sbol:persistentIdentity rdf:resource="https://sbolcanvas.org/module1/sNRMyx2j_148/mapsTo_pJR11_11"/>
+            <sbol:displayId>mapsTo_pJR11_11</sbol:displayId>
+            <sbol:refinement rdf:resource="http://sbols.org/v2#useRemote"/>
+            <sbol:remote rdf:resource="https://sbolcanvas.org/sNRMyx2j/pJR11_11/1"/>
+            <sbol:local rdf:resource="https://sbolcanvas.org/module1/pJR11_276"/>
+          </sbol:MapsTo>
+        </sbol:mapsTo>
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:functionalComponent>
@@ -44,15 +53,6 @@
         <sbol:persistentIdentity rdf:resource="https://sbolcanvas.org/module1/JR7_220"/>
         <sbol:displayId>JR7_220</sbol:displayId>
         <sbol:definition rdf:resource="https://synbiohub.org/public/Eco2C1G5T1/JR7/1"/>
-        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:direction rdf:resource="http://sbols.org/v2#inout"/>
-      </sbol:FunctionalComponent>
-    </sbol:functionalComponent>
-    <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://sbolcanvas.org/module1/sNRMyx2j_148">
-        <sbol:persistentIdentity rdf:resource="https://sbolcanvas.org/module1/sNRMyx2j_148"/>
-        <sbol:displayId>sNRMyx2j_148</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolcanvas.org/sNRMyx2j/1"/>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
         <sbol:direction rdf:resource="http://sbols.org/v2#inout"/>
       </sbol:FunctionalComponent>
@@ -85,6 +85,33 @@
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:functionalComponent>
+      <sbol:FunctionalComponent rdf:about="https://sbolcanvas.org/module1/GwXZZY8M_73">
+        <sbol:persistentIdentity rdf:resource="https://sbolcanvas.org/module1/GwXZZY8M_73"/>
+        <sbol:displayId>GwXZZY8M_73</sbol:displayId>
+        <sbol:definition rdf:resource="https://sbolcanvas.org/GwXZZY8M/1"/>
+        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
+        <sbol:direction rdf:resource="http://sbols.org/v2#inout"/>
+        <sbol:mapsTo>
+          <sbol:MapsTo rdf:about="https://sbolcanvas.org/module1/GwXZZY8M_73/mapsTo_pJR11_16">
+            <sbol:persistentIdentity rdf:resource="https://sbolcanvas.org/module1/GwXZZY8M_73/mapsTo_pJR11_16"/>
+            <sbol:displayId>mapsTo_pJR11_16</sbol:displayId>
+            <sbol:refinement rdf:resource="http://sbols.org/v2#useRemote"/>
+            <sbol:remote rdf:resource="https://sbolcanvas.org/GwXZZY8M/pJR11_16/1"/>
+            <sbol:local rdf:resource="https://sbolcanvas.org/module1/pJR11_256"/>
+          </sbol:MapsTo>
+        </sbol:mapsTo>
+        <sbol:mapsTo>
+          <sbol:MapsTo rdf:about="https://sbolcanvas.org/module1/GwXZZY8M_73/mapsTo_JR11_14">
+            <sbol:persistentIdentity rdf:resource="https://sbolcanvas.org/module1/GwXZZY8M_73/mapsTo_JR11_14"/>
+            <sbol:displayId>mapsTo_JR11_14</sbol:displayId>
+            <sbol:refinement rdf:resource="http://sbols.org/v2#useRemote"/>
+            <sbol:remote rdf:resource="https://sbolcanvas.org/GwXZZY8M/JR11_14/1"/>
+            <sbol:local rdf:resource="https://sbolcanvas.org/module1/JR11_254"/>
+          </sbol:MapsTo>
+        </sbol:mapsTo>
+      </sbol:FunctionalComponent>
+    </sbol:functionalComponent>
+    <sbol:functionalComponent>
       <sbol:FunctionalComponent rdf:about="https://sbolcanvas.org/module1/JR11_238">
         <sbol:persistentIdentity rdf:resource="https://sbolcanvas.org/module1/JR11_238"/>
         <sbol:displayId>JR11_238</sbol:displayId>
@@ -100,6 +127,33 @@
         <sbol:definition rdf:resource="https://sbolcanvas.org/DZEPwHU2/1"/>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
         <sbol:direction rdf:resource="http://sbols.org/v2#inout"/>
+        <sbol:mapsTo>
+          <sbol:MapsTo rdf:about="https://sbolcanvas.org/module1/DZEPwHU2_2/mapsTo_JR7_14">
+            <sbol:persistentIdentity rdf:resource="https://sbolcanvas.org/module1/DZEPwHU2_2/mapsTo_JR7_14"/>
+            <sbol:displayId>mapsTo_JR7_14</sbol:displayId>
+            <sbol:refinement rdf:resource="http://sbols.org/v2#useRemote"/>
+            <sbol:remote rdf:resource="https://sbolcanvas.org/DZEPwHU2/JR7_14/1"/>
+            <sbol:local rdf:resource="https://sbolcanvas.org/module1/JR7_220"/>
+          </sbol:MapsTo>
+        </sbol:mapsTo>
+        <sbol:mapsTo>
+          <sbol:MapsTo rdf:about="https://sbolcanvas.org/module1/DZEPwHU2_2/mapsTo_pJR7_16">
+            <sbol:persistentIdentity rdf:resource="https://sbolcanvas.org/module1/DZEPwHU2_2/mapsTo_pJR7_16"/>
+            <sbol:displayId>mapsTo_pJR7_16</sbol:displayId>
+            <sbol:refinement rdf:resource="http://sbols.org/v2#useRemote"/>
+            <sbol:remote rdf:resource="https://sbolcanvas.org/DZEPwHU2/pJR7_16/1"/>
+            <sbol:local rdf:resource="https://sbolcanvas.org/module1/pJR7_229"/>
+          </sbol:MapsTo>
+        </sbol:mapsTo>
+        <sbol:mapsTo>
+          <sbol:MapsTo rdf:about="https://sbolcanvas.org/module1/DZEPwHU2_2/mapsTo_JR11_19">
+            <sbol:persistentIdentity rdf:resource="https://sbolcanvas.org/module1/DZEPwHU2_2/mapsTo_JR11_19"/>
+            <sbol:displayId>mapsTo_JR11_19</sbol:displayId>
+            <sbol:refinement rdf:resource="http://sbols.org/v2#useRemote"/>
+            <sbol:remote rdf:resource="https://sbolcanvas.org/DZEPwHU2/JR11_19/1"/>
+            <sbol:local rdf:resource="https://sbolcanvas.org/module1/JR11_238"/>
+          </sbol:MapsTo>
+        </sbol:mapsTo>
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:interaction>

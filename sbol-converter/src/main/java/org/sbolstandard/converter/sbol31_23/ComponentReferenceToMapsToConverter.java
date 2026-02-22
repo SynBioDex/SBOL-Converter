@@ -22,66 +22,59 @@ public class ComponentReferenceToMapsToConverter implements ChildEntityConverter
             org.sbolstandard.core3.entity.Identified sbol3Parent, ComponentReference componentReference)
             throws SBOLGraphException, SBOLValidationException {
             
-
-                Component sbol3ParentComponent = (Component) sbol3Parent;
-
-                Feature remoteFeature = componentReference.getRefersTo();
-                
-                String displayId = componentReference.getDisplayId();
-                
-                RefinementType refinementType = null;
-
-                String sbol2RemoteFeatureDisplayId = remoteFeature.getDisplayId();
-
-                ConstraintToRefinementTypeConverter constraintToMapsToConverter = new ConstraintToRefinementTypeConverter();
-
-                Constraint currentConstraint = null;
-                
-				for (org.sbolstandard.core3.entity.Constraint constraint : sbol3ParentComponent.getConstraints()) {
-					if (Util.isMapstoConstraint(constraint)) {
-						if (constraint.getSubject().getUri().equals(componentReference.getUri()) || constraint.getObject().getUri().equals(componentReference.getUri())) {
-                            refinementType = constraintToMapsToConverter.convert(document, sbol2Parent, sbol3ParentComponent, constraint);
-                            currentConstraint = constraint;
-                        }
-					}
-				}
-
-                if (currentConstraint==null) {
-                    throw new SBOLGraphException("No constraint found for MapsTo conversion for ComponentReference: " + componentReference.getDisplayId());
+        Component sbol3ParentComponent = (Component) sbol3Parent;
+        Feature remoteFeature = componentReference.getRefersTo();                
+        String displayId = componentReference.getDisplayId();                
+        RefinementType refinementType = null;
+        String sbol2RemoteFeatureDisplayId = remoteFeature.getDisplayId();
+        ConstraintToRefinementTypeConverter constraintToMapsToConverter = new ConstraintToRefinementTypeConverter();
+        Constraint currentConstraint = null;                
+		for (org.sbolstandard.core3.entity.Constraint constraint : sbol3ParentComponent.getConstraints()) {
+			if (Util.isMapstoConstraint(constraint)) {
+				if (constraint.getSubject().getUri().equals(componentReference.getUri()) || constraint.getObject().getUri().equals(componentReference.getUri())) {
+                    refinementType = constraintToMapsToConverter.convert(document, sbol2Parent, sbol3ParentComponent, constraint);
+                    currentConstraint = constraint;
                 }
-                // Local will be decided using constarint
-                String sbol2LocalFuncCompDisplayId = getLocalFunctionalComponentDisplayId(currentConstraint);
-
-                MapsTo mapsTo = null;
-                if (sbol2Parent instanceof org.sbolstandard.core2.Module) {
-                    org.sbolstandard.core2.Module sbol2Module = (org.sbolstandard.core2.Module) sbol2Parent;
-                    System.out.println("Creating MapsTo for a Module: " + sbol2Module.getDisplayId() + " with refinement type: " + refinementType + " and local functional component: " + sbol2LocalFuncCompDisplayId + " and remote feature: " + sbol2RemoteFeatureDisplayId);
-                    mapsTo = sbol2Module.createMapsTo(displayId, refinementType, sbol2LocalFuncCompDisplayId, sbol2RemoteFeatureDisplayId);
-                
-                } else if (sbol2Parent instanceof org.sbolstandard.core2.Component) {
-                    org.sbolstandard.core2.Component sbol2Component = (org.sbolstandard.core2.Component) sbol2Parent;
-                    System.out.println("Creating MapsTo for a Component: " + sbol2Component.getDisplayId() + " with refinement type: " + refinementType + " and local functional component: " + sbol2LocalFuncCompDisplayId + " and remote feature: " + sbol2RemoteFeatureDisplayId);
-                    mapsTo = sbol2Component.createMapsTo(displayId, refinementType, sbol2LocalFuncCompDisplayId, sbol2RemoteFeatureDisplayId);
-                }
-                
-                Util.copyIdentified(componentReference, mapsTo,document);
-                return mapsTo;
+			}
+		}
+        
+        if (currentConstraint==null) {
+            throw new SBOLGraphException("No constraint found for MapsTo conversion for ComponentReference: " + componentReference.getDisplayId());
+        }
+        // Local will be decided using the constraint
+        String sbol2LocalFuncCompDisplayId = getLocalFunctionalComponentDisplayId(currentConstraint);
+    
+        MapsTo mapsTo = null;
+        if (sbol2Parent instanceof org.sbolstandard.core2.Module) {
+            org.sbolstandard.core2.Module sbol2Module = (org.sbolstandard.core2.Module) sbol2Parent;
+            System.out.println("Creating MapsTo for a Module: " + sbol2Module.getDisplayId() + " with refinement type: " + refinementType + " and local functional component: " + sbol2LocalFuncCompDisplayId + " and remote feature: " + sbol2RemoteFeatureDisplayId);
+            mapsTo = sbol2Module.createMapsTo(displayId, refinementType, sbol2LocalFuncCompDisplayId, sbol2RemoteFeatureDisplayId);                
+        } 
+        else if (sbol2Parent instanceof org.sbolstandard.core2.Component) {
+            org.sbolstandard.core2.Component sbol2Component = (org.sbolstandard.core2.Component) sbol2Parent;
+            System.out.println("Creating MapsTo for a Component: " + sbol2Component.getDisplayId() + " with refinement type: " + refinementType + " and local functional component: " + sbol2LocalFuncCompDisplayId + " and remote feature: " + sbol2RemoteFeatureDisplayId);
+            mapsTo = sbol2Component.createMapsTo(displayId, refinementType, sbol2LocalFuncCompDisplayId, sbol2RemoteFeatureDisplayId);
+        }
+        else if (sbol2Parent instanceof org.sbolstandard.core2.FunctionalComponent) {
+            org.sbolstandard.core2.FunctionalComponent sbol2Component = (org.sbolstandard.core2.FunctionalComponent) sbol2Parent;
+            System.out.println("Creating MapsTo for a Functional Component: " + sbol2Component.getDisplayId() + " with refinement type: " + refinementType + " and local functional component: " + sbol2LocalFuncCompDisplayId + " and remote feature: " + sbol2RemoteFeatureDisplayId);
+            mapsTo = sbol2Component.createMapsTo(displayId, refinementType, sbol2LocalFuncCompDisplayId, sbol2RemoteFeatureDisplayId);
+        }            
+        Util.copyIdentified(componentReference, mapsTo,document);
+        return mapsTo;
     }
     
     
     private String getLocalFunctionalComponentDisplayId(Constraint currentConstraint) throws SBOLGraphException {
-
-            Feature localFeatureForFuncComp= null;
-
-            if (currentConstraint.getSubject() instanceof org.sbolstandard.core3.entity.ComponentReference) {
-                localFeatureForFuncComp = currentConstraint.getObject();
-            } else if (currentConstraint.getObject() instanceof org.sbolstandard.core3.entity.ComponentReference) {
-                localFeatureForFuncComp = currentConstraint.getSubject();
-            } else {
-                throw new SBOLGraphException("Unknown constraint type for MapsTo conversion: " + currentConstraint);
-            }
-            return localFeatureForFuncComp.getDisplayId();
-        
+        Feature localFeatureForFuncComp = null;
+        if (currentConstraint.getSubject() instanceof org.sbolstandard.core3.entity.ComponentReference) {
+            localFeatureForFuncComp = currentConstraint.getObject();
+        } else if (currentConstraint.getObject() instanceof org.sbolstandard.core3.entity.ComponentReference) {
+            localFeatureForFuncComp = currentConstraint.getSubject();
+        } else {
+            throw new SBOLGraphException("Unknown constraint type for MapsTo conversion: " + currentConstraint);
+        }
+        return localFeatureForFuncComp.getDisplayId();
     }
 
     // private MapsTo convertOLD(SBOLDocument document, Identified sbol2parent,

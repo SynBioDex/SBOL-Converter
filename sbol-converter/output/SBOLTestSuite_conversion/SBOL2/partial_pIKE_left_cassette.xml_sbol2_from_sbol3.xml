@@ -28,12 +28,12 @@
     <sbol:type rdf:resource="http://identifiers.org/so/SO:0000987"/>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
     <sbol:component>
-      <sbol:Component rdf:about="http://www.async.ece.utah.edu/pIKELeftCasette/Terminator">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pIKELeftCasette/Terminator"/>
-        <sbol:displayId>Terminator</sbol:displayId>
-        <prov:wasDerivedFrom rdf:resource="urn:678f5ee4-ef38-4c8e-a235-145a459b2128"/>
+      <sbol:Component rdf:about="http://www.async.ece.utah.edu/pIKELeftCasette/Repressor2">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pIKELeftCasette/Repressor2"/>
+        <sbol:displayId>Repressor2</sbol:displayId>
+        <prov:wasDerivedFrom rdf:resource="urn:2bc8890b-9fc3-44e8-9606-6b5e7dd7a690"/>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="http://www.async.ece.utah.edu/Terminator"/>
+        <sbol:definition rdf:resource="http://www.async.ece.utah.edu/Repressor2"/>
       </sbol:Component>
     </sbol:component>
     <sbol:component>
@@ -46,12 +46,12 @@
       </sbol:Component>
     </sbol:component>
     <sbol:component>
-      <sbol:Component rdf:about="http://www.async.ece.utah.edu/pIKELeftCasette/Repressor2">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pIKELeftCasette/Repressor2"/>
-        <sbol:displayId>Repressor2</sbol:displayId>
-        <prov:wasDerivedFrom rdf:resource="urn:2bc8890b-9fc3-44e8-9606-6b5e7dd7a690"/>
+      <sbol:Component rdf:about="http://www.async.ece.utah.edu/pIKELeftCasette/Terminator">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pIKELeftCasette/Terminator"/>
+        <sbol:displayId>Terminator</sbol:displayId>
+        <prov:wasDerivedFrom rdf:resource="urn:678f5ee4-ef38-4c8e-a235-145a459b2128"/>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="http://www.async.ece.utah.edu/Repressor2"/>
+        <sbol:definition rdf:resource="http://www.async.ece.utah.edu/Terminator"/>
       </sbol:Component>
     </sbol:component>
     <sbol:sequenceAnnotation>

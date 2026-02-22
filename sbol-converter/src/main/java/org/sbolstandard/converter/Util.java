@@ -1477,4 +1477,22 @@ public class Util {
 		}
 		return false;
 	}
+
+	public static String extractSBOL2AnnotationURIValue(Identified identified, URI uri) throws SBOLGraphException{
+		String value= null;				
+		List<Object> backPorts=identified.getAnnotation(uri);
+		if (backPorts!=null && backPorts.size()>0){
+			URI uriValue= (URI) backPorts.get(0);
+			value= uriValue.toString();	
+		}
+		return value;
+	}
+
+	public static Object extractSBOL2AnnotationValue(Identified identified, URI uri) throws SBOLGraphException{
+		List<Object> backPorts=identified.getAnnotation(uri);
+		if (backPorts!=null && backPorts.size()>0){
+			return backPorts.get(0);
+		}
+		return null;
+	}
 }

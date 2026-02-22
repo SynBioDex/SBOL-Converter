@@ -2536,12 +2536,57 @@
       <sbol:displayId>SRS_D4XS</sbol:displayId>
    </sbol:Component>
    <sbol:Component rdf:about="https://sbolcanvas.org/module1">
+      <sbol:hasConstraint>
+         <sbol:Constraint rdf:about="https://sbolcanvas.org/module1/Constraint1">
+            <sbol:object>
+               <sbol:SubComponent rdf:about="https://sbolcanvas.org/module1/pJR11_276">
+                  <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/pJR11_276"/>
+                  <sbol:instanceOf rdf:resource="https://synbiohub.org/public/Eco2C1G5T1/1/pJR11"/>
+                  <sbol:displayId>pJR11_276</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:object>
+            <sbol:subject>
+               <sbol:ComponentReference rdf:about="https://sbolcanvas.org/module1/mapsTo_pJR11_11">
+                  <backport2_3:sbol2MapstoOriginInFC rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2MapstoOriginInFC>
+                  <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/sNRMyx2j_148/mapsTo_pJR11_11"/>
+                  <sbol:inChildOf>
+                     <sbol:SubComponent rdf:about="https://sbolcanvas.org/module1/sNRMyx2j_148">
+                        <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/sNRMyx2j_148"/>
+                        <sbol:instanceOf rdf:resource="https://sbolcanvas.org/1/sNRMyx2j"/>
+                        <sbol:displayId>sNRMyx2j_148</sbol:displayId>
+                     </sbol:SubComponent>
+                  </sbol:inChildOf>
+                  <sbol:refersTo rdf:resource="https://sbolcanvas.org/1/sNRMyx2j/pJR11_11"/>
+                  <sbol:displayId>mapsTo_pJR11_11</sbol:displayId>
+               </sbol:ComponentReference>
+            </sbol:subject>
+            <sbol:restriction rdf:resource="http://sbols.org/v3#replaces"/>
+            <sbol:displayId>Constraint1</sbol:displayId>
+         </sbol:Constraint>
+      </sbol:hasConstraint>
       <sbol:hasFeature>
          <sbol:SubComponent rdf:about="https://sbolcanvas.org/module1/JR7_protein_223">
             <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/JR7_protein_223"/>
             <sbol:instanceOf rdf:resource="https://synbiohub.org/public/Eco2C1G5T1/1/JR7_protein"/>
             <sbol:displayId>JR7_protein_223</sbol:displayId>
          </sbol:SubComponent>
+      </sbol:hasFeature>
+      <sbol:hasFeature>
+         <sbol:ComponentReference rdf:about="https://sbolcanvas.org/module1/mapsTo_JR11_14">
+            <backport2_3:sbol2MapstoOriginInFC rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >true</backport2_3:sbol2MapstoOriginInFC>
+            <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/GwXZZY8M_73/mapsTo_JR11_14"/>
+            <sbol:inChildOf>
+               <sbol:SubComponent rdf:about="https://sbolcanvas.org/module1/GwXZZY8M_73">
+                  <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/GwXZZY8M_73"/>
+                  <sbol:instanceOf rdf:resource="https://sbolcanvas.org/1/GwXZZY8M"/>
+                  <sbol:displayId>GwXZZY8M_73</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:inChildOf>
+            <sbol:refersTo rdf:resource="https://sbolcanvas.org/1/GwXZZY8M/JR11_14"/>
+            <sbol:displayId>mapsTo_JR11_14</sbol:displayId>
+         </sbol:ComponentReference>
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SubComponent rdf:about="https://sbolcanvas.org/module1/pJR7_229">
@@ -2556,13 +2601,7 @@
             <sbol:hasParticipation>
                <sbol:Participation rdf:about="https://sbolcanvas.org/module1/Interaction_o9AaCpnw/Interaction_o9AaCpnw_1">
                   <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/Interaction_o9AaCpnw/Interaction_o9AaCpnw_1"/>
-                  <sbol:participant>
-                     <sbol:SubComponent rdf:about="https://sbolcanvas.org/module1/pJR11_276">
-                        <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/pJR11_276"/>
-                        <sbol:instanceOf rdf:resource="https://synbiohub.org/public/Eco2C1G5T1/1/pJR11"/>
-                        <sbol:displayId>pJR11_276</sbol:displayId>
-                     </sbol:SubComponent>
-                  </sbol:participant>
+                  <sbol:participant rdf:resource="https://sbolcanvas.org/module1/pJR11_276"/>
                   <sbol:role rdf:resource="https://identifiers.org/SBO:0000642"/>
                   <sbol:displayId>Interaction_o9AaCpnw_1</sbol:displayId>
                </sbol:Participation>
@@ -2588,6 +2627,47 @@
          </sbol:Interaction>
       </sbol:hasInteraction>
       <sbol:hasFeature>
+         <sbol:ComponentReference rdf:about="https://sbolcanvas.org/module1/mapsTo_pJR7_16">
+            <backport2_3:sbol2MapstoOriginInFC rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >true</backport2_3:sbol2MapstoOriginInFC>
+            <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/DZEPwHU2_2/mapsTo_pJR7_16"/>
+            <sbol:inChildOf>
+               <sbol:SubComponent rdf:about="https://sbolcanvas.org/module1/DZEPwHU2_2">
+                  <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/DZEPwHU2_2"/>
+                  <sbol:instanceOf rdf:resource="https://sbolcanvas.org/1/DZEPwHU2"/>
+                  <sbol:displayId>DZEPwHU2_2</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:inChildOf>
+            <sbol:refersTo rdf:resource="https://sbolcanvas.org/1/DZEPwHU2/pJR7_16"/>
+            <sbol:displayId>mapsTo_pJR7_16</sbol:displayId>
+         </sbol:ComponentReference>
+      </sbol:hasFeature>
+      <sbol:hasConstraint>
+         <sbol:Constraint rdf:about="https://sbolcanvas.org/module1/Constraint4">
+            <sbol:object>
+               <sbol:SubComponent rdf:about="https://sbolcanvas.org/module1/JR7_220">
+                  <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/JR7_220"/>
+                  <sbol:instanceOf>
+                     <sbol:Component rdf:about="https://synbiohub.org/public/Eco2C1G5T1/1/JR7"/>
+                  </sbol:instanceOf>
+                  <sbol:displayId>JR7_220</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:object>
+            <sbol:subject>
+               <sbol:ComponentReference rdf:about="https://sbolcanvas.org/module1/mapsTo_JR7_14">
+                  <backport2_3:sbol2MapstoOriginInFC rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2MapstoOriginInFC>
+                  <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/DZEPwHU2_2/mapsTo_JR7_14"/>
+                  <sbol:inChildOf rdf:resource="https://sbolcanvas.org/module1/DZEPwHU2_2"/>
+                  <sbol:refersTo rdf:resource="https://sbolcanvas.org/1/DZEPwHU2/JR7_14"/>
+                  <sbol:displayId>mapsTo_JR7_14</sbol:displayId>
+               </sbol:ComponentReference>
+            </sbol:subject>
+            <sbol:restriction rdf:resource="http://sbols.org/v3#replaces"/>
+            <sbol:displayId>Constraint4</sbol:displayId>
+         </sbol:Constraint>
+      </sbol:hasConstraint>
+      <sbol:hasFeature>
          <sbol:SubComponent rdf:about="https://sbolcanvas.org/module1/JR11_254">
             <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/JR11_254"/>
             <sbol:instanceOf rdf:resource="https://synbiohub.org/public/Eco2C1G5T1/1/JR11"/>
@@ -2601,28 +2681,14 @@
             <sbol:displayId>JR11_238</sbol:displayId>
          </sbol:SubComponent>
       </sbol:hasFeature>
-      <sbol:hasFeature>
-         <sbol:SubComponent rdf:about="https://sbolcanvas.org/module1/GwXZZY8M_73">
-            <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/GwXZZY8M_73"/>
-            <sbol:instanceOf rdf:resource="https://sbolcanvas.org/1/GwXZZY8M"/>
-            <sbol:displayId>GwXZZY8M_73</sbol:displayId>
-         </sbol:SubComponent>
-      </sbol:hasFeature>
+      <sbol:hasFeature rdf:resource="https://sbolcanvas.org/module1/GwXZZY8M_73"/>
       <sbol:hasInteraction>
          <sbol:Interaction rdf:about="https://sbolcanvas.org/module1/Interaction_fsTPofTV">
             <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/Interaction_fsTPofTV"/>
             <sbol:hasParticipation>
                <sbol:Participation rdf:about="https://sbolcanvas.org/module1/Interaction_fsTPofTV/Interaction_fsTPofTV_0">
                   <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/Interaction_fsTPofTV/Interaction_fsTPofTV_0"/>
-                  <sbol:participant>
-                     <sbol:SubComponent rdf:about="https://sbolcanvas.org/module1/JR7_220">
-                        <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/JR7_220"/>
-                        <sbol:instanceOf>
-                           <sbol:Component rdf:about="https://synbiohub.org/public/Eco2C1G5T1/1/JR7"/>
-                        </sbol:instanceOf>
-                        <sbol:displayId>JR7_220</sbol:displayId>
-                     </sbol:SubComponent>
-                  </sbol:participant>
+                  <sbol:participant rdf:resource="https://sbolcanvas.org/module1/JR7_220"/>
                   <sbol:role rdf:resource="https://identifiers.org/SBO:0000645"/>
                   <sbol:displayId>Interaction_fsTPofTV_0</sbol:displayId>
                </sbol:Participation>
@@ -2639,13 +2705,16 @@
             <sbol:displayId>Interaction_fsTPofTV</sbol:displayId>
          </sbol:Interaction>
       </sbol:hasInteraction>
-      <sbol:hasFeature>
-         <sbol:SubComponent rdf:about="https://sbolcanvas.org/module1/sNRMyx2j_148">
-            <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/sNRMyx2j_148"/>
-            <sbol:instanceOf rdf:resource="https://sbolcanvas.org/1/sNRMyx2j"/>
-            <sbol:displayId>sNRMyx2j_148</sbol:displayId>
-         </sbol:SubComponent>
-      </sbol:hasFeature>
+      <sbol:hasFeature rdf:resource="https://sbolcanvas.org/module1/mapsTo_pJR11_11"/>
+      <sbol:hasConstraint>
+         <sbol:Constraint rdf:about="https://sbolcanvas.org/module1/Constraint3">
+            <sbol:object rdf:resource="https://sbolcanvas.org/module1/JR11_254"/>
+            <sbol:subject rdf:resource="https://sbolcanvas.org/module1/mapsTo_JR11_14"/>
+            <sbol:restriction rdf:resource="http://sbols.org/v3#replaces"/>
+            <sbol:displayId>Constraint3</sbol:displayId>
+         </sbol:Constraint>
+      </sbol:hasConstraint>
+      <sbol:hasFeature rdf:resource="https://sbolcanvas.org/module1/sNRMyx2j_148"/>
       <sbol:hasInteraction>
          <sbol:Interaction rdf:about="https://sbolcanvas.org/module1/Interaction_SqF0yySP">
             <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/Interaction_SqF0yySP"/>
@@ -2700,13 +2769,24 @@
          </sbol:Interaction>
       </sbol:hasInteraction>
       <sbol:hasFeature rdf:resource="https://sbolcanvas.org/module1/JR11_protein_287"/>
-      <sbol:hasFeature>
-         <sbol:SubComponent rdf:about="https://sbolcanvas.org/module1/DZEPwHU2_2">
-            <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/DZEPwHU2_2"/>
-            <sbol:instanceOf rdf:resource="https://sbolcanvas.org/1/DZEPwHU2"/>
-            <sbol:displayId>DZEPwHU2_2</sbol:displayId>
-         </sbol:SubComponent>
-      </sbol:hasFeature>
+      <sbol:hasFeature rdf:resource="https://sbolcanvas.org/module1/DZEPwHU2_2"/>
+      <sbol:hasConstraint>
+         <sbol:Constraint rdf:about="https://sbolcanvas.org/module1/Constraint6">
+            <sbol:object rdf:resource="https://sbolcanvas.org/module1/JR11_238"/>
+            <sbol:subject>
+               <sbol:ComponentReference rdf:about="https://sbolcanvas.org/module1/mapsTo_JR11_19">
+                  <backport2_3:sbol2MapstoOriginInFC rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2MapstoOriginInFC>
+                  <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/DZEPwHU2_2/mapsTo_JR11_19"/>
+                  <sbol:inChildOf rdf:resource="https://sbolcanvas.org/module1/DZEPwHU2_2"/>
+                  <sbol:refersTo rdf:resource="https://sbolcanvas.org/1/DZEPwHU2/JR11_19"/>
+                  <sbol:displayId>mapsTo_JR11_19</sbol:displayId>
+               </sbol:ComponentReference>
+            </sbol:subject>
+            <sbol:restriction rdf:resource="http://sbols.org/v3#replaces"/>
+            <sbol:displayId>Constraint6</sbol:displayId>
+         </sbol:Constraint>
+      </sbol:hasConstraint>
       <sbol:displayId>module1</sbol:displayId>
       <sbol:hasFeature rdf:resource="https://sbolcanvas.org/module1/JR7_220"/>
       <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1"/>
@@ -2749,7 +2829,35 @@
             <sbol:nondirectional rdf:resource="https://sbolcanvas.org/module1/pJR7_229"/>
          </sbol:Interface>
       </sbol:hasInterface>
+      <sbol:hasFeature>
+         <sbol:ComponentReference rdf:about="https://sbolcanvas.org/module1/mapsTo_pJR11_16">
+            <backport2_3:sbol2MapstoOriginInFC rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >true</backport2_3:sbol2MapstoOriginInFC>
+            <backport2_3:sbol2OriginalURI rdf:resource="https://sbolcanvas.org/module1/GwXZZY8M_73/mapsTo_pJR11_16"/>
+            <sbol:inChildOf rdf:resource="https://sbolcanvas.org/module1/GwXZZY8M_73"/>
+            <sbol:refersTo rdf:resource="https://sbolcanvas.org/1/GwXZZY8M/pJR11_16"/>
+            <sbol:displayId>mapsTo_pJR11_16</sbol:displayId>
+         </sbol:ComponentReference>
+      </sbol:hasFeature>
+      <sbol:hasConstraint>
+         <sbol:Constraint rdf:about="https://sbolcanvas.org/module1/Constraint2">
+            <sbol:object rdf:resource="https://sbolcanvas.org/module1/pJR11_256"/>
+            <sbol:subject rdf:resource="https://sbolcanvas.org/module1/mapsTo_pJR11_16"/>
+            <sbol:restriction rdf:resource="http://sbols.org/v3#replaces"/>
+            <sbol:displayId>Constraint2</sbol:displayId>
+         </sbol:Constraint>
+      </sbol:hasConstraint>
       <sbol:hasFeature rdf:resource="https://sbolcanvas.org/module1/pJR11_256"/>
+      <sbol:hasFeature rdf:resource="https://sbolcanvas.org/module1/mapsTo_JR7_14"/>
+      <sbol:hasConstraint>
+         <sbol:Constraint rdf:about="https://sbolcanvas.org/module1/Constraint5">
+            <sbol:object rdf:resource="https://sbolcanvas.org/module1/pJR7_229"/>
+            <sbol:subject rdf:resource="https://sbolcanvas.org/module1/mapsTo_pJR7_16"/>
+            <sbol:restriction rdf:resource="http://sbols.org/v3#replaces"/>
+            <sbol:displayId>Constraint5</sbol:displayId>
+         </sbol:Constraint>
+      </sbol:hasConstraint>
+      <sbol:hasFeature rdf:resource="https://sbolcanvas.org/module1/mapsTo_JR11_19"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
       <sbol:hasInteraction>
          <sbol:Interaction rdf:about="https://sbolcanvas.org/module1/Interaction_gYTeQhYg">

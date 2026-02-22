@@ -13,6 +13,13 @@ PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX sbh:         <http://wiki.synbiohub.org/wiki/Terms/synbiohub#>
 PREFIX sbol:        <http://sbols.org/v3#>
 
+<https://sbolcanvas.org/module1/Constraint2>
+        rdf:type          sbol:Constraint;
+        sbol:displayId    "Constraint2";
+        sbol:object       <https://sbolcanvas.org/module1/pJR11_256>;
+        sbol:restriction  sbol:replaces;
+        sbol:subject      <https://sbolcanvas.org/module1/mapsTo_pJR11_16> .
+
 SBOLCanvas:yfp_Layout
         rdf:type                      SBOLCanvas:Layout , sbol:TopLevel;
         sbol:displayId                "yfp_Layout";
@@ -291,6 +298,15 @@ SBOLCanvas:sNRMyx2j_Layout
         SBOLCanvas:tetA_Reference      SBOLCanvas:tetA_Layout;
         backport2_3:sbol2OriginalURI   SBOLCanvas:sNRMyx2j_Layout .
 
+<https://sbolcanvas.org/module1/mapsTo_JR11_19>
+        rdf:type                      sbol:ComponentReference;
+        sbol:displayId                "mapsTo_JR11_19";
+        sbol:inChildOf                <https://sbolcanvas.org/module1/DZEPwHU2_2>;
+        sbol:refersTo                 <https://sbolcanvas.org/1/DZEPwHU2/JR11_19>;
+        backport2_3:sbol2MapstoOriginInFC
+                true;
+        backport2_3:sbol2OriginalURI  <https://sbolcanvas.org/module1/DZEPwHU2_2/mapsTo_JR11_19> .
+
 <https://sbolcanvas.org/1/DZEPwHU2/R6K_4>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "R6K_4";
@@ -374,6 +390,13 @@ SBOLCanvas:CHRBS3c_Layout
         sbol:displayId                "JR7_protein_223";
         sbol:instanceOf               <https://synbiohub.org/public/Eco2C1G5T1/1/JR7_protein>;
         backport2_3:sbol2OriginalURI  <https://sbolcanvas.org/module1/JR7_protein_223> .
+
+<https://sbolcanvas.org/module1/Constraint1>
+        rdf:type          sbol:Constraint;
+        sbol:displayId    "Constraint1";
+        sbol:object       <https://sbolcanvas.org/module1/pJR11_276>;
+        sbol:restriction  sbol:replaces;
+        sbol:subject      <https://sbolcanvas.org/module1/mapsTo_pJR11_11> .
 
 <https://sbolcanvas.org/1/DZEPwHU2/DZEPwHU2Constraint1>
         rdf:type                      sbol:Constraint;
@@ -503,6 +526,15 @@ SBOLCanvas:Ter_vWjG_Layout
         sbol:hasNamespace             <https://sbolcanvas.org>;
         SBOLCanvas:objectRef          <https://sbolcanvas.org/Ter_vWjG/1>;
         backport2_3:sbol2OriginalURI  SBOLCanvas:Ter_vWjG_Layout .
+
+<https://sbolcanvas.org/module1/mapsTo_JR7_14>
+        rdf:type                      sbol:ComponentReference;
+        sbol:displayId                "mapsTo_JR7_14";
+        sbol:inChildOf                <https://sbolcanvas.org/module1/DZEPwHU2_2>;
+        sbol:refersTo                 <https://sbolcanvas.org/1/DZEPwHU2/JR7_14>;
+        backport2_3:sbol2MapstoOriginInFC
+                true;
+        backport2_3:sbol2OriginalURI  <https://sbolcanvas.org/module1/DZEPwHU2_2/mapsTo_JR7_14> .
 
 <https://sbolcanvas.org/1/GwXZZY8M/GwXZZY8MConstraint6>
         rdf:type                      sbol:Constraint;
@@ -1906,6 +1938,15 @@ SBOLCanvas:SRS_TopK_Layout
         SBOLCanvas:x          "700.0";
         SBOLCanvas:y          "0.0" .
 
+<https://sbolcanvas.org/module1/mapsTo_pJR11_11>
+        rdf:type                      sbol:ComponentReference;
+        sbol:displayId                "mapsTo_pJR11_11";
+        sbol:inChildOf                <https://sbolcanvas.org/module1/sNRMyx2j_148>;
+        sbol:refersTo                 <https://sbolcanvas.org/1/sNRMyx2j/pJR11_11>;
+        backport2_3:sbol2MapstoOriginInFC
+                true;
+        backport2_3:sbol2OriginalURI  <https://sbolcanvas.org/module1/sNRMyx2j_148/mapsTo_pJR11_11> .
+
 <https://synbiohub.org/public/Eco2C1G5T1/1/CelloUCF2sbol_Activity/association>
         rdf:type                      sbol:Identified , prov:Association;
         sbol:displayId                "association";
@@ -2325,7 +2366,8 @@ SBOLCanvas:Ter_XyGc_Layout
 
 SBOLCanvas:module1  rdf:type          sbol:Component;
         sbol:displayId                "module1";
-        sbol:hasFeature               <https://sbolcanvas.org/module1/JR7_protein_223> , <https://sbolcanvas.org/module1/pJR7_229> , <https://sbolcanvas.org/module1/JR11_254> , <https://sbolcanvas.org/module1/JR11_238> , <https://sbolcanvas.org/module1/GwXZZY8M_73> , <https://sbolcanvas.org/module1/sNRMyx2j_148> , <https://sbolcanvas.org/module1/pJR11_276> , <https://sbolcanvas.org/module1/JR11_protein_287> , <https://sbolcanvas.org/module1/DZEPwHU2_2> , <https://sbolcanvas.org/module1/JR7_220> , <https://sbolcanvas.org/module1/pJR11_256>;
+        sbol:hasConstraint            <https://sbolcanvas.org/module1/Constraint1> , <https://sbolcanvas.org/module1/Constraint4> , <https://sbolcanvas.org/module1/Constraint3> , <https://sbolcanvas.org/module1/Constraint6> , <https://sbolcanvas.org/module1/Constraint2> , <https://sbolcanvas.org/module1/Constraint5>;
+        sbol:hasFeature               <https://sbolcanvas.org/module1/JR7_protein_223> , <https://sbolcanvas.org/module1/mapsTo_JR11_14> , <https://sbolcanvas.org/module1/pJR7_229> , <https://sbolcanvas.org/module1/mapsTo_pJR7_16> , <https://sbolcanvas.org/module1/JR11_254> , <https://sbolcanvas.org/module1/JR11_238> , <https://sbolcanvas.org/module1/GwXZZY8M_73> , <https://sbolcanvas.org/module1/mapsTo_pJR11_11> , <https://sbolcanvas.org/module1/sNRMyx2j_148> , <https://sbolcanvas.org/module1/pJR11_276> , <https://sbolcanvas.org/module1/JR11_protein_287> , <https://sbolcanvas.org/module1/DZEPwHU2_2> , <https://sbolcanvas.org/module1/JR7_220> , <https://sbolcanvas.org/module1/mapsTo_pJR11_16> , <https://sbolcanvas.org/module1/pJR11_256> , <https://sbolcanvas.org/module1/mapsTo_JR7_14> , <https://sbolcanvas.org/module1/mapsTo_JR11_19>;
         sbol:hasInteraction           <https://sbolcanvas.org/module1/Interaction_o9AaCpnw> , <https://sbolcanvas.org/module1/Interaction_fsTPofTV> , <https://sbolcanvas.org/module1/Interaction_SqF0yySP> , <https://sbolcanvas.org/module1/Interaction_QByldsUn> , <https://sbolcanvas.org/module1/Interaction_Y08Xw4T7> , <https://sbolcanvas.org/module1/Interaction_gYTeQhYg>;
         sbol:hasInterface             <https://sbolcanvas.org/module1/Interface1>;
         sbol:hasNamespace             <https://sbolcanvas.org>;
@@ -2489,6 +2531,15 @@ SBOLCanvas:module1  rdf:type          sbol:Component;
                 <https://sbolcanvas.org/GwXZZY8M/GwXZZY8MAnnotation0/1>;
         backport2_3:sbol2OriginalURI  <https://sbolcanvas.org/GwXZZY8M/GwXZZY8MAnnotation0/1> , <https://sbolcanvas.org/GwXZZY8M/Ter_auVk_1/1> .
 
+<https://sbolcanvas.org/module1/mapsTo_JR11_14>
+        rdf:type                      sbol:ComponentReference;
+        sbol:displayId                "mapsTo_JR11_14";
+        sbol:inChildOf                <https://sbolcanvas.org/module1/GwXZZY8M_73>;
+        sbol:refersTo                 <https://sbolcanvas.org/1/GwXZZY8M/JR11_14>;
+        backport2_3:sbol2MapstoOriginInFC
+                true;
+        backport2_3:sbol2OriginalURI  <https://sbolcanvas.org/module1/GwXZZY8M_73/mapsTo_JR11_14> .
+
 <https://sbolcanvas.org/1/DZEPwHU2/DZEPwHU2Constraint10>
         rdf:type                      sbol:Constraint;
         sbol:displayId                "DZEPwHU2Constraint10";
@@ -2496,6 +2547,13 @@ SBOLCanvas:module1  rdf:type          sbol:Component;
         sbol:restriction              sbol:precedes;
         sbol:subject                  <https://sbolcanvas.org/1/DZEPwHU2/SRS_qogN_10>;
         backport2_3:sbol2OriginalURI  <https://sbolcanvas.org/DZEPwHU2/DZEPwHU2Constraint10/1> .
+
+<https://sbolcanvas.org/module1/Constraint6>
+        rdf:type          sbol:Constraint;
+        sbol:displayId    "Constraint6";
+        sbol:object       <https://sbolcanvas.org/module1/JR11_238>;
+        sbol:restriction  sbol:replaces;
+        sbol:subject      <https://sbolcanvas.org/module1/mapsTo_JR11_19> .
 
 <https://sbolcanvas.org/GwXZZY8M_Layout/NodeGlyph_74>
         rdf:type              SBOLCanvas:NodeGlyph , sbol:Identified;
@@ -2551,6 +2609,15 @@ SBOLCanvas:RBS_SzXL_Layout
         sbol:hasNamespace             <https://sbolcanvas.org>;
         SBOLCanvas:objectRef          <https://sbolcanvas.org/RBS_SzXL/1>;
         backport2_3:sbol2OriginalURI  SBOLCanvas:RBS_SzXL_Layout .
+
+<https://sbolcanvas.org/module1/mapsTo_pJR7_16>
+        rdf:type                      sbol:ComponentReference;
+        sbol:displayId                "mapsTo_pJR7_16";
+        sbol:inChildOf                <https://sbolcanvas.org/module1/DZEPwHU2_2>;
+        sbol:refersTo                 <https://sbolcanvas.org/1/DZEPwHU2/pJR7_16>;
+        backport2_3:sbol2MapstoOriginInFC
+                true;
+        backport2_3:sbol2OriginalURI  <https://sbolcanvas.org/module1/DZEPwHU2_2/mapsTo_pJR7_16> .
 
 <https://synbiohub.org/public/Eco2C1G5T1/1/PBad_sequence>
         rdf:type                      sbol:Sequence;
@@ -2958,6 +3025,13 @@ SBOLCanvas:oriT_Layout
         SBOLCanvas:objectRef          <https://synbiohub.org/public/Eco2C1G5T1/oriT/1>;
         backport2_3:sbol2OriginalURI  SBOLCanvas:oriT_Layout .
 
+<https://sbolcanvas.org/module1/Constraint5>
+        rdf:type          sbol:Constraint;
+        sbol:displayId    "Constraint5";
+        sbol:object       <https://sbolcanvas.org/module1/pJR7_229>;
+        sbol:restriction  sbol:replaces;
+        sbol:subject      <https://sbolcanvas.org/module1/mapsTo_pJR7_16> .
+
 <https://sbolcanvas.org/GwXZZY8M_Layout/NodeGlyph_73>
         rdf:type              SBOLCanvas:NodeGlyph , sbol:Identified;
         sbol:displayId        "NodeGlyph_73";
@@ -3336,6 +3410,13 @@ SBOLCanvas:R6K_Layout
         SBOLCanvas:width      "50.0";
         SBOLCanvas:x          "550.0";
         SBOLCanvas:y          "0.0" .
+
+<https://sbolcanvas.org/module1/Constraint4>
+        rdf:type          sbol:Constraint;
+        sbol:displayId    "Constraint4";
+        sbol:object       <https://sbolcanvas.org/module1/JR7_220>;
+        sbol:restriction  sbol:replaces;
+        sbol:subject      <https://sbolcanvas.org/module1/mapsTo_JR7_14> .
 
 <https://sbolcanvas.org/module1/pJR11_256>
         rdf:type                      sbol:SubComponent;
@@ -3755,6 +3836,13 @@ SBOLCanvas:PBad_Layout
         sbol:displayId           "location5";
         backport2_3:sbol2Entity  "true" .
 
+<https://sbolcanvas.org/module1/Constraint3>
+        rdf:type          sbol:Constraint;
+        sbol:displayId    "Constraint3";
+        sbol:object       <https://sbolcanvas.org/module1/JR11_254>;
+        sbol:restriction  sbol:replaces;
+        sbol:subject      <https://sbolcanvas.org/module1/mapsTo_JR11_14> .
+
 <https://synbiohub.org/public/Eco2C1G5T1/1/oriT_sequence>
         rdf:type                      sbol:Sequence;
         dcterms:created               "2026-02-03T02:34:18.165Z";
@@ -4017,6 +4105,15 @@ SBOLCanvas:SarJ_Layout
         backport2_3:sbol2OriginalSequenceAnnotationURI
                 <https://sbolcanvas.org/GwXZZY8M/GwXZZY8MAnnotation13/1>;
         backport2_3:sbol2OriginalURI  <https://sbolcanvas.org/GwXZZY8M/GwXZZY8MAnnotation13/1> , <https://sbolcanvas.org/GwXZZY8M/JR11_14/1> .
+
+<https://sbolcanvas.org/module1/mapsTo_pJR11_16>
+        rdf:type                      sbol:ComponentReference;
+        sbol:displayId                "mapsTo_pJR11_16";
+        sbol:inChildOf                <https://sbolcanvas.org/module1/GwXZZY8M_73>;
+        sbol:refersTo                 <https://sbolcanvas.org/1/GwXZZY8M/pJR11_16>;
+        backport2_3:sbol2MapstoOriginInFC
+                true;
+        backport2_3:sbol2OriginalURI  <https://sbolcanvas.org/module1/GwXZZY8M_73/mapsTo_pJR11_16> .
 
 <https://sbolcanvas.org/1/Ter_auVk>
         rdf:type                      sbol:Component;

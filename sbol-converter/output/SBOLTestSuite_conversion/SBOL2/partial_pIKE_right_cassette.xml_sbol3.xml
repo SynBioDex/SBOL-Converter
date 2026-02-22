@@ -286,6 +286,7 @@
       </sbol:hasConstraint>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://www.async.ece.utah.edu/pIKERightCasette/Interface1">
+            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/pIKERightCasette/Reporter"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/pIKERightCasette/BBa_R0010">
                   <sbol:hasLocation>
@@ -311,7 +312,6 @@
                   <sbol:displayId>BBa_R0010</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/pIKERightCasette/Repressor1"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/pIKERightCasette/Terminator">
                   <backport2_3:sbol2GenericLocation>
@@ -331,7 +331,7 @@
                   <sbol:displayId>Terminator</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
-            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/pIKERightCasette/Reporter"/>
+            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/pIKERightCasette/Repressor1"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>

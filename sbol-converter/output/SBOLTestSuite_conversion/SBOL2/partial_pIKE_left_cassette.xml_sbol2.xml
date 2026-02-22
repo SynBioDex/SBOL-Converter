@@ -28,11 +28,11 @@
     <sbol:type rdf:resource="http://identifiers.org/so/SO:0000987"/>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000110"/>
     <sbol:component>
-      <sbol:Component rdf:about="http://www.async.ece.utah.edu/pIKELeftCasette/Terminator">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pIKELeftCasette/Terminator"/>
-        <sbol:displayId>Terminator</sbol:displayId>
+      <sbol:Component rdf:about="http://www.async.ece.utah.edu/pIKELeftCasette/Repressor2">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pIKELeftCasette/Repressor2"/>
+        <sbol:displayId>Repressor2</sbol:displayId>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="http://www.async.ece.utah.edu/Terminator"/>
+        <sbol:definition rdf:resource="http://www.async.ece.utah.edu/Repressor2"/>
       </sbol:Component>
     </sbol:component>
     <sbol:component>
@@ -44,11 +44,11 @@
       </sbol:Component>
     </sbol:component>
     <sbol:component>
-      <sbol:Component rdf:about="http://www.async.ece.utah.edu/pIKELeftCasette/Repressor2">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pIKELeftCasette/Repressor2"/>
-        <sbol:displayId>Repressor2</sbol:displayId>
+      <sbol:Component rdf:about="http://www.async.ece.utah.edu/pIKELeftCasette/Terminator">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/pIKELeftCasette/Terminator"/>
+        <sbol:displayId>Terminator</sbol:displayId>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="http://www.async.ece.utah.edu/Repressor2"/>
+        <sbol:definition rdf:resource="http://www.async.ece.utah.edu/Terminator"/>
       </sbol:Component>
     </sbol:component>
     <sbol:sequenceAnnotation>

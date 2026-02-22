@@ -89,6 +89,7 @@
             <sbol:displayId>annotation36</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
+      <sbol:type rdf:resource="https://identifiers.org/SO:0000988"/>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="https://keele.ac.uk/scm/sequence_97289_e_pAND_I/annotation22">
             <sbol:hasLocation>
@@ -113,7 +114,6 @@
             <sbol:displayId>annotation22</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
-      <sbol:type rdf:resource="https://identifiers.org/SO:0000988"/>
       <genbank:source>synthetic DNA construct</genbank:source>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="https://keele.ac.uk/scm/sequence_97289_e_pAND_I/annotation28">
