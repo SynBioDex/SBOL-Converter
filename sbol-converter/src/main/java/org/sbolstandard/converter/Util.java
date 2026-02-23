@@ -5,6 +5,8 @@ import java.io.PrintStream;
 import java.net.URI;
 import java.util.*;
 import java.util.Map.Entry;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -1512,5 +1514,13 @@ public class Util {
 			return backPorts.get(0);
 		}
 		return null;
+	}
+
+	public static void turnOffHibernateInfo(){
+		setLoggerLevel("org.hibernate.validator", Level.WARNING);
+	}
+	public static void setLoggerLevel(String loggerId, Level level) {
+		Logger hvLogger = Logger.getLogger(loggerId);
+        hvLogger.setLevel(level);
 	}
 }

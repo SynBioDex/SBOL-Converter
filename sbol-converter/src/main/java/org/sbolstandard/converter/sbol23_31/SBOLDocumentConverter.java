@@ -45,8 +45,7 @@ import org.sbolstandard.core3.util.SBOLGraphException;
 public class SBOLDocumentConverter {
 
     static {
-        Logger.getLogger("org.hibernate.validator")
-              .setLevel(Level.SEVERE);
+       // Logger.getLogger("org.hibernate.validator").setLevel(Level.SEVERE);
     }
 	 
     /* 

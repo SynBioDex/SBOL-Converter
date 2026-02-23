@@ -25,10 +25,9 @@ import org.sbolstandard.core3.entity.Implementation;
 
 public class SBOLDocumentConverter {
 
-	 static {
-        Logger.getLogger("org.hibernate.validator")
-              .setLevel(Level.SEVERE);
-    }
+	 /*static {
+        Util.turnOffHibernateInfo();
+    }*/
 	 
 	public org.sbolstandard.core2.SBOLDocument convert(SBOLDocument sbol3Doc)
 			throws SBOLGraphException, SBOLValidationException {
