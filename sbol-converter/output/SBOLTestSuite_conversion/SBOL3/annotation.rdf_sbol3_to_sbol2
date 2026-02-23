@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<rdf:RDF xmlns="https://sbolstandard.org/examples/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:igem="http://parts.igem.org/" xmlns:sbol="http://sbols.org/v2#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
+  <sbol:ComponentDefinition rdf:about="https://sbolstandard.org/examples/BBa_J23119">
+    <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/BBa_J23119"/>
+    <sbol:displayId>BBa_J23119</sbol:displayId>
+    <dcterms:title>BBa_J23119 part</dcterms:title>
+    <dcterms:description>Parts J23100 through J23119 are a family of constitutive promoter parts isolated from a small combinatorial library.</dcterms:description>
+    <igem:group>iGEM2006_Berkeley</igem:group>
+    <igem:belongsTo rdf:resource="https://sbolstandard.org/examples/SynBioHubRepository"/>
+    <igem:hasInformation>
+      <igem:Information rdf:about="https://sbolstandard.org/examples/BBa_J23119/information1">
+        <igem:sigmaFactor>//rnap/prokaryote/ecoli/sigma70</igem:sigmaFactor>
+        <igem:regulation>//regulation/constitutive</igem:regulation>
+        <igem:regulation>//regulation/second_regulation</igem:regulation>
+        <igem:source rdf:resource="https://sbolstandard.org/examples/BBa_J23119"/>
+      </igem:Information>
+    </igem:hasInformation>
+    <igem:belongsTo rdf:resource="https://sbolstandard.org/examples/iGEMRepository"/>
+    <igem:hasUsage>
+      <igem:IGEMUsage rdf:about="https://sbolstandard.org/examples/BBa_J23119/usage1">
+        <igem:registryStar>1</igem:registryStar>
+        <igem:twins>7</igem:twins>
+        <igem:uses2>442</igem:uses2>
+        <igem:uses>442</igem:uses>
+        <igem:inStock>true</igem:inStock>
+        <igem:twinURLs>
+          <igem:TwinPartUsage rdf:about="https://sbolstandard.org/examples/BBa_J23119/usage1/twinParts">
+            <igem:twinURL rdf:resource="http://parts.igem.org/wiki/index.php?title=Part:BBa_J72073"/>
+            <igem:twinURL rdf:resource="http://parts.igem.org/wiki/index.php?title=Part:BBa_M1638"/>
+            <igem:twinURL rdf:resource="http://parts.igem.org/wiki/index.php?title=Part:BBa_M36800"/>
+          </igem:TwinPartUsage>
+        </igem:twinURLs>
+      </igem:IGEMUsage>
+    </igem:hasUsage>
+    <igem:experienceURL rdf:resource="http://parts.igem.org/Part:BBa_J23119:Experience"/>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
+  </sbol:ComponentDefinition>
+  <igem:Repository rdf:about="https://sbolstandard.org/examples/iGEMRepository">
+    <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/iGEMRepository"/>
+    <sbol:displayId>iGEMRepository</sbol:displayId>
+    <dcterms:title>iGEM Registry</dcterms:title>
+    <dcterms:description>Registry of Standard Biological Parts</dcterms:description>
+    <igem:website rdf:resource="http://parts.igem.org/Main_Page"/>
+  </igem:Repository>
+  <igem:Repository rdf:about="https://sbolstandard.org/examples/SynBioHubRepository">
+    <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/SynBioHubRepository"/>
+    <sbol:displayId>SynBioHubRepository</sbol:displayId>
+    <dcterms:title>SynBioHub</dcterms:title>
+  </igem:Repository>
+</rdf:RDF>

@@ -2,6 +2,8 @@ package org.sbolstandard.converter.tests;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Handler;
 import java.util.logging.Level;
@@ -50,41 +52,61 @@ public class SBOL3_to_2_Test {
 		
 		File outputFolder = new File("output/SBOLTestSuite_conversion/SBOL3/");
 		File inputFolder = new File("../../libSBOLj3/libSBOLj3/output/");
-		convertFile(outputFolder, new File(inputFolder.getPath() + "/combine2020/combine2020.rdf"));
+		//convertFile(outputFolder, new File(inputFolder.getPath() + "/combine2020/combine2020.rdf"));
 		// Process all .rdf files recursively
-		//processRDFFiles(outputFolder, inputFolder);
+		List<String> exclusionFolders = Arrays.asList("invalid", "component_urn_uri");
+		int[] counts = processRDFFiles(outputFolder, inputFolder, exclusionFolders);
+		System.out.println("Successfully converted " + counts[0] + " file(s).");
+		System.out.println("Failed to convert " + counts[1] + " file(s).");
 	}
 	
-	private void processRDFFiles(File outputFolder, File folder) throws Exception {
+	private int[] processRDFFiles(File outputFolder, File folder, List<String> exclusionFolders) throws Exception {
 		if (!folder.exists() || !folder.isDirectory()) {
-			return;
+			return new int[]{0, 0};
 		}
-		
+		// Check if folder name is in exclusion list
+		for (String exclusion : exclusionFolders) {
+			if (folder.getName().equalsIgnoreCase(exclusion)) {
+				return new int[]{0, 0};
+			}
+		}
 		File[] files = folder.listFiles();
 		if (files == null) {
-			return;
+			return new int[]{0, 0};
 		}
+		
+		int successCount = 0;
+		int failureCount = 0;
 		
 		for (File file : files) {
 			if (file.isDirectory()) {
 				// Recursively process subdirectories
-				processRDFFiles(outputFolder, file);
+				int[] subCounts = processRDFFiles(outputFolder, file, exclusionFolders);
+				successCount += subCounts[0];
+				failureCount += subCounts[1];
 			} else if (file.isFile() && file.getName().endsWith(".rdf")) {
 				// Process .rdf files
 				try {
 					convertFile(outputFolder, file);
+					successCount++;
 				} catch (Exception e) {
 					System.err.println("Failed to convert file: " + file.getPath());
+					System.err.println("	Error: " + e.getMessage());					
 					e.printStackTrace();
+					System.err.println("***************************************************");
+					System.err.println("");
+					failureCount++;
 				}
 			}
 		}
+		
+		return new int[]{successCount, failureCount};
 	}
 
 	private void convertFile(File outputFolder,File file) throws Exception
 	{
 		
-		String dest=outputFolder.getPath() + file.getName();
+		String dest=outputFolder.getPath() + File.separator +  file.getName();
 		File sbol2File=new File (dest + "_sbol3_to_sbol2");
 		File tmpSbol3FileRDF=new File (dest + "_sbol3.xml");
 		File tmpSbol3FileTTL=new File (dest + "_sbol3.ttl");

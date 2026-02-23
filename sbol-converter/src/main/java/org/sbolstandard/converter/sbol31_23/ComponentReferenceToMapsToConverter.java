@@ -33,16 +33,18 @@ public class ComponentReferenceToMapsToConverter //implements ChildEntityConvert
         String sbol2RemoteFeatureDisplayId = remoteFeature.getDisplayId();
 
         ConstraintToRefinementTypeConverter constraintToMapsToConverter = new ConstraintToRefinementTypeConverter();
-        Constraint currentConstraint = null;                
-		for (org.sbolstandard.core3.entity.Constraint constraint : sbol3ParentComponent.getConstraints()) {
-			if (Util.isMapstoConstraint(constraint)) {
-				if (constraint.getSubject().getUri().equals(componentReference.getUri()) || constraint.getObject().getUri().equals(componentReference.getUri())) {
-                    refinementType = constraintToMapsToConverter.convert(document, sbol2Parent, sbol3ParentComponent, constraint);
-                    currentConstraint = constraint;
-                    break;
+        Constraint currentConstraint = null;    
+        if (sbol3ParentComponent.getConstraints()!=null){
+            for (org.sbolstandard.core3.entity.Constraint constraint : sbol3ParentComponent.getConstraints()) {
+                if (Util.isMapstoConstraint(constraint)) {
+                    if (constraint.getSubject().getUri().equals(componentReference.getUri()) || constraint.getObject().getUri().equals(componentReference.getUri())) {
+                        refinementType = constraintToMapsToConverter.convert(document, sbol2Parent, sbol3ParentComponent, constraint);
+                        currentConstraint = constraint;
+                        break;
+                    }
                 }
-			}
-		}
+            }
+        }
         
         if (currentConstraint==null) {
             throw new SBOLGraphException("No constraint found for MapsTo conversion for ComponentReference: " + componentReference.getDisplayId());

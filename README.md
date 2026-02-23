@@ -250,11 +250,19 @@ Changed by the SBOL3 converter as
 
 ### SBOLTestSuite/SBOL2 conversion
 
-Number of files successfully converted and validated: 180/189
+Number of files successfully converted and roundtripped from SBOL2 to SBOL3 and back: 173/189. Twelve of the files with issues were converted successfully. However, due to the incorrect URIs in source files and inconsistent versioning of child entities causes very small data that could not contribute to 100% conversion.
+
+<strong>Progress: 92%</strong>
+<progress value="92" max="100"></progress>
+
+
+<br>
+Number of files successfully converted and validated: 184/189
 
 <strong>Progress: 95%</strong>
 <progress value="95" max="100"></progress>
 
+<br>
 Number of files successfully converted without validation : 189/189 (All files)
 
 <strong>Progress: 100%</strong><progress value="100" max="100"></progress>
@@ -311,9 +319,19 @@ Number of files successfully converted without validation : 189/189 (All files)
     - attachment.xml: Invalid SBOL2 source URI
 
 
-## To download the SBOLTestSuite as a dependency
+### SBOLTestSuite/SBOL3 conversion
+Currently, SBOL3-to-SBOL2 conversion is one way and does not store SBOL3 specific content within the converted SBOL2 files, excluding the folders for invalid and urn examples. 
 
-git submodule update --init --recursive
+Number of files successfully converted to SBOL2 : 26/30
+
+Failed cases:
+* combine2020.rdf: Includes interactions between ComponentReferences and could not be fully mapped to SBOL2 entities.
+* componentreference.rdf: The example is to demonstrate the use of a single component reference entity only and does not containt the constraints. Hence, it can't be converted, although the file is a valid SBOL3 file.
+* participation.rdf. This example also uses ComponentReferences as interaction participants and could not be converte.
+* constraint.rdf: The example is to demonstrate the use of a constraint entity. One of the component reference entity does not have a corresponding constraint. Hence, this example could not be converted to SBOL2, although the file is a valid SBOL3 file.
+
+
+<strong>Progress: 87%</strong><progress value="87" max="100"></progress>
 
 
 ## Conversion Annotations (Backport)
@@ -325,4 +343,6 @@ Backport annotations use two different namespaces from SBOL2 to SBOL3 and vice v
 * https://sbols.org/backport/2_3#sbol2OriginalSequenceAnnotationURI: Handles sbol2.SequenceAnnotations. The sbol2.SequenceAnnotation and sbol2.Component entities are merged into sbol3.SubComponent entities. During the conversion, an sbol2.SequenceAnnotation entity's URI is stored within the corresponding sbol3.Component entity.
 * https://sbols.org/backport/2_3#sbol3TempSequenceURI: Used to track the empty sequences created in SBOL3 documents during the conversion. sbol2:Location entities can have empty sequences while sbol3.Location entities must have a Sequence entity. Hence, during the SBOL2-to-3 conversion, an empty sequence is created.This annotation is used to remove the sequences marked as empty during the SBOL3-to-2 conversion.
 
-# Empty Sequences
+## To download the SBOLTestSuite as a dependency
+
+git submodule update --init --recursive
