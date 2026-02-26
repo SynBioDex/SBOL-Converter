@@ -36,7 +36,6 @@
       </backport2_3:sbol3TempSequenceURI>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/Interface1">
-            <sbol:nondirectional rdf:resource="https://synbiohub.org/public/igem/1/BBa_E0422/component942823"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/component942815">
                   <sbol:hasLocation>
@@ -70,6 +69,7 @@
                   <sbol:displayId>component942803</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
+            <sbol:nondirectional rdf:resource="https://synbiohub.org/public/igem/1/BBa_E0422/component942823"/>
             <sbol:nondirectional rdf:resource="https://synbiohub.org/public/igem/1/BBa_E0422/component942833"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
@@ -86,26 +86,26 @@
    </sbol:Component>
    <sbol:Component rdf:about="http://michael.zhang/1/Pro_GeneratedInstance82">
       <sbol:hasFeature>
-         <sbol:SubComponent rdf:about="http://michael.zhang/1/Pro_GeneratedInstance82/Op_Component">
-            <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Pro_GeneratedInstance82/Op_Component/1"/>
-            <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_I741109"/>
-            <sbol:displayId>Op_Component</sbol:displayId>
+         <sbol:SubComponent rdf:about="http://michael.zhang/1/Pro_GeneratedInstance82/Pro1_Component">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Pro_GeneratedInstance82/Pro1_Component/1"/>
+            <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_I712004"/>
+            <sbol:displayId>Pro1_Component</sbol:displayId>
          </sbol:SubComponent>
       </sbol:hasFeature>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://michael.zhang/1/Pro_GeneratedInstance82/Interface1">
-            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance82/Op_Component"/>
+            <sbol:nondirectional rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance82/Pro1_Component"/>
             <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://michael.zhang/1/Pro_GeneratedInstance82/Pro1_Component">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Pro_GeneratedInstance82/Pro1_Component/1"/>
-                  <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_I712004"/>
-                  <sbol:displayId>Pro1_Component</sbol:displayId>
+               <sbol:SubComponent rdf:about="http://michael.zhang/1/Pro_GeneratedInstance82/Op_Component">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Pro_GeneratedInstance82/Op_Component/1"/>
+                  <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/1/BBa_I741109"/>
+                  <sbol:displayId>Op_Component</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
-      <sbol:hasFeature rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance82/Pro1_Component"/>
+      <sbol:hasFeature rdf:resource="http://michael.zhang/1/Pro_GeneratedInstance82/Op_Component"/>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
       <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Pro_GeneratedInstance82/1"/>
       <sbol:hasNamespace rdf:resource="http://michael.zhang"/>

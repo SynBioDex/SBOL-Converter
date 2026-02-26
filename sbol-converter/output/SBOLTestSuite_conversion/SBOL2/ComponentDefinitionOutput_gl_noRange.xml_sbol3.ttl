@@ -68,8 +68,10 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://partsregistry.org/cd/BBa_F2620/rbs>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "rbs";
-        sbol:hasLocation              <http://partsregistry.org/cd/BBa_F2620/rbs/GenericLocation_anno2>;
         sbol:instanceOf               <http://partsregistry.org/cd/BBa_C0062>;
+        sbol:orientation              SO:0001030;
+        backport2_3:sbol2GenericLocation
+                <http://partsregistry.org/cd/BBa_F2620/rbs/GenericLocation_anno2>;
         backport2_3:sbol2OriginalSequenceAnnotationURI
                 <http://partsregistry.org/cd/BBa_F2620/anno2>;
         backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_F2620/anno2> , <http://partsregistry.org/cd/BBa_F2620/rbs> .
@@ -120,12 +122,8 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_F2620/pTetR> .
 
 <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/gl>
-        rdf:type                      sbol:EntireSequence;
-        sbol:displayId                "gl";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/GenericLocationComponent_seq>;
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/gl> .
+        rdf:type        <http://sbols.org/v2#GenericLocation> , sbol:Identified;
+        sbol:displayId  "gl" .
 
 <http://partsregistry.org/cd/BBa_F2620/ter>
         rdf:type                      sbol:SubComponent;
@@ -136,11 +134,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://partsregistry.org/cd/BBa_F2620/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-<<<<<<< HEAD
-        sbol:nondirectional  <http://partsregistry.org/cd/BBa_F2620/ter> , <http://partsregistry.org/cd/BBa_F2620/pLuxR> , <http://partsregistry.org/cd/BBa_F2620/luxR> , <http://partsregistry.org/cd/BBa_F2620/pTetR> , <http://partsregistry.org/cd/BBa_F2620/rbs> .
-=======
-        sbol:nondirectional  <http://partsregistry.org/cd/BBa_F2620/luxR> , <http://partsregistry.org/cd/BBa_F2620/pTetR> , <http://partsregistry.org/cd/BBa_F2620/ter> , <http://partsregistry.org/cd/BBa_F2620/pLuxR> , <http://partsregistry.org/cd/BBa_F2620/rbs> .
->>>>>>> feature/combder
+        sbol:nondirectional  <http://partsregistry.org/cd/BBa_F2620/rbs> , <http://partsregistry.org/cd/BBa_F2620/ter> , <http://partsregistry.org/cd/BBa_F2620/luxR> , <http://partsregistry.org/cd/BBa_F2620/pTetR> , <http://partsregistry.org/cd/BBa_F2620/pLuxR> .
 
 <http://partsregistry.org/cd/BBa_F2620/pLuxR>
         rdf:type                      sbol:SubComponent;
@@ -155,27 +149,27 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:hasNamespace  pr:cd .
 
 <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/GenericLocation>
-        rdf:type                      sbol:EntireSequence;
-        sbol:displayId                "GenericLocation";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/GenericLocationComponent_seq>;
-        sbol:orientation              SO:0001030;
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/GenericLocation> .
+        rdf:type                 <http://sbols.org/v2#GenericLocation> , sbol:Identified;
+        <http://sbols.org/v2#orientation>
+                <http://sbols.org/v2#inline>;
+        sbol:displayId           "GenericLocation";
+        backport2_3:sbol2Entity  "true" .
 
 <http://partsregistry.org/cd/BBa_F2620/rbs/GenericLocation_anno2>
-        rdf:type                      sbol:EntireSequence;
-        sbol:displayId                "GenericLocation_anno2";
-        sbol:hasSequence              <http://partsregistry.org/cd/BBa_F2620_seq>;
-        sbol:orientation              SO:0001030;
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_F2620/anno2/GenericLocation_anno2> .
+        rdf:type                 <http://sbols.org/v2#GenericLocation> , sbol:Identified;
+        <http://sbols.org/v2#orientation>
+                <http://sbols.org/v2#inline>;
+        sbol:displayId           "GenericLocation_anno2";
+        backport2_3:sbol2Entity  "true" .
 
 <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn>
-        rdf:type                      sbol:SequenceFeature;
+        rdf:type                      sbol:LocalSubComponent;
         sbol:displayId                "gl_seqAnn";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/GenericLocation> , <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/gl>;
+        sbol:orientation              SO:0001030;
+        sbol:role                     SO:0000804;
+        sbol:type                     SBO:0000251;
+        backport2_3:sbol2GenericLocation
+                <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/GenericLocation> , <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/gl>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn> .
 
 <http://partsregistry.org/cd/BBa_R0040>

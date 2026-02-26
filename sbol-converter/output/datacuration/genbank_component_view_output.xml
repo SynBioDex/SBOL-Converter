@@ -1,0 +1,277 @@
+<rdf:RDF
+    xmlns:SO="https://identifiers.org/SO:"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:EDAM="https://identifiers.org/edam:"
+    xmlns:sbol="http://sbols.org/v3#"
+    xmlns="https://example.com/test/"
+    xmlns:CHEBI="https://identifiers.org/CHEBI:"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:SBO="https://identifiers.org/SBO:"
+    xmlns:GO="https://identifiers.org/GO:"
+    xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/"
+   xml:base="https://example.com/test/">
+   <sbol:Component rdf:about="GFP_CDS">
+      <sbol:hasSequence>
+         <sbol:Sequence rdf:about="GFP_CDS_sequence"/>
+      </sbol:hasSequence>
+      <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+      <sbol:description>Green Fluorescent Protein coding sequence</sbol:description>
+      <sbol:name>GFP CDS</sbol:name>
+      <prov:wasDerivedFrom rdf:resource="/input/sample_device/cds_feature"/>
+      <sbol:hasNamespace rdf:resource="/test"/>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <sbol:displayId>GFP_CDS</sbol:displayId>
+   </sbol:Component>
+   <sbol:Component rdf:about="Terminator_Copy">
+      <sbol:hasSequence>
+         <sbol:Sequence rdf:about="Terminator_Copy_sequence"/>
+      </sbol:hasSequence>
+      <sbol:role rdf:resource="https://identifiers.org/SO:0000141"/>
+      <sbol:description>Another copy of terminator sequence - should reuse component</sbol:description>
+      <sbol:name>Terminator Copy</sbol:name>
+      <prov:wasDerivedFrom rdf:resource="/input/sample_device/terminator2_feature"/>
+      <sbol:hasNamespace rdf:resource="/test"/>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <sbol:displayId>Terminator_Copy</sbol:displayId>
+   </sbol:Component>
+   <sbol:Component rdf:about="test_device_converted">
+      <sbol:displayId>test_device_converted</sbol:displayId>
+      <sbol:hasFeature>
+         <sbol:SubComponent rdf:about="test_device_converted/sc_GFP_CDS_3">
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="test_device_converted/sc_GFP_CDS_3/Range1">
+                  <sbol:end>50</sbol:end>
+                  <sbol:start>31</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="test_device_converted_sequence"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>Range1</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:instanceOf rdf:resource="GFP_CDS"/>
+            <sbol:displayId>sc_GFP_CDS_3</sbol:displayId>
+         </sbol:SubComponent>
+      </sbol:hasFeature>
+      <sbol:name>Sample Genetic Device</sbol:name>
+      <sbol:hasFeature>
+         <sbol:SubComponent rdf:about="test_device_converted/sc_Different_CDS_7">
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="test_device_converted/sc_Different_CDS_7/Range1">
+                  <sbol:end>120</sbol:end>
+                  <sbol:start>101</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="test_device_converted_sequence"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>Range1</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:instanceOf>
+               <sbol:Component rdf:about="Different_CDS"/>
+            </sbol:instanceOf>
+            <sbol:displayId>sc_Different_CDS_7</sbol:displayId>
+         </sbol:SubComponent>
+      </sbol:hasFeature>
+      <sbol:hasFeature>
+         <sbol:SubComponent rdf:about="test_device_converted/sc_pLac_Promoter_5">
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="test_device_converted/sc_pLac_Promoter_5/Range1">
+                  <sbol:end>150</sbol:end>
+                  <sbol:start>131</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="test_device_converted_sequence"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>Range1</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:orientation rdf:resource="https://identifiers.org/SO:0001031"/>
+            <sbol:instanceOf>
+               <sbol:Component rdf:about="pLac_Promoter"/>
+            </sbol:instanceOf>
+            <sbol:displayId>sc_pLac_Promoter_5</sbol:displayId>
+         </sbol:SubComponent>
+      </sbol:hasFeature>
+      <sbol:hasFeature>
+         <sbol:SubComponent rdf:about="test_device_converted/sc_RBS_8">
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="test_device_converted/sc_RBS_8/Range1">
+                  <sbol:end>100</sbol:end>
+                  <sbol:start>91</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="test_device_converted_sequence"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>Range1</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:instanceOf>
+               <sbol:Component rdf:about="RBS"/>
+            </sbol:instanceOf>
+            <sbol:displayId>sc_RBS_8</sbol:displayId>
+         </sbol:SubComponent>
+      </sbol:hasFeature>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <sbol:hasFeature>
+         <sbol:SubComponent rdf:about="test_device_converted/sc_pLac_Promoter_4">
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="test_device_converted/sc_pLac_Promoter_4/Range1">
+                  <sbol:end>90</sbol:end>
+                  <sbol:start>71</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="test_device_converted_sequence"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>Range1</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:instanceOf>
+               <sbol:Component rdf:about="pLac_Promoter"/>
+            </sbol:instanceOf>
+            <sbol:displayId>sc_pLac_Promoter_4</sbol:displayId>
+         </sbol:SubComponent>
+      </sbol:hasFeature>
+      <sbol:description>A sample genetic device with multiple sequence features</sbol:description>
+      <sbol:hasSequence>
+         <sbol:Sequence rdf:about="test_device_converted_sequence"/>
+      </sbol:hasSequence>
+      <sbol:hasFeature>
+         <sbol:SubComponent rdf:about="test_device_converted/sc_Terminator_Copy_1">
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="test_device_converted/sc_Terminator_Copy_1/Range1">
+                  <sbol:end>130</sbol:end>
+                  <sbol:start>121</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="test_device_converted_sequence"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>Range1</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:instanceOf rdf:resource="Terminator_Copy"/>
+            <sbol:displayId>sc_Terminator_Copy_1</sbol:displayId>
+         </sbol:SubComponent>
+      </sbol:hasFeature>
+      <sbol:hasNamespace rdf:resource="/test"/>
+      <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
+      <sbol:hasFeature>
+         <sbol:SubComponent rdf:about="test_device_converted/sc_RBS_6">
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="test_device_converted/sc_RBS_6/Range1">
+                  <sbol:end>30</sbol:end>
+                  <sbol:start>21</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="test_device_converted_sequence"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>Range1</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:instanceOf>
+               <sbol:Component rdf:about="RBS"/>
+            </sbol:instanceOf>
+            <sbol:displayId>sc_RBS_6</sbol:displayId>
+         </sbol:SubComponent>
+      </sbol:hasFeature>
+      <sbol:hasFeature>
+         <sbol:SubComponent rdf:about="test_device_converted/sc_pLac_Promoter_2">
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="test_device_converted/sc_pLac_Promoter_2/Range1">
+                  <sbol:end>20</sbol:end>
+                  <sbol:start>1</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="test_device_converted_sequence"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>Range1</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:instanceOf>
+               <sbol:Component rdf:about="pLac_Promoter"/>
+            </sbol:instanceOf>
+            <sbol:displayId>sc_pLac_Promoter_2</sbol:displayId>
+         </sbol:SubComponent>
+      </sbol:hasFeature>
+      <sbol:hasFeature>
+         <sbol:SubComponent rdf:about="test_device_converted/sc_Terminator_Copy_9">
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="test_device_converted/sc_Terminator_Copy_9/Range1">
+                  <sbol:end>60</sbol:end>
+                  <sbol:start>51</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="test_device_converted_sequence"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>Range1</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:instanceOf rdf:resource="Terminator_Copy"/>
+            <sbol:displayId>sc_Terminator_Copy_9</sbol:displayId>
+         </sbol:SubComponent>
+      </sbol:hasFeature>
+   </sbol:Component>
+   <sbol:Component rdf:about="pLac_Promoter">
+      <sbol:hasSequence>
+         <sbol:Sequence rdf:about="pLac_Promoter_sequence"/>
+      </sbol:hasSequence>
+      <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
+      <sbol:description>Lac promoter sequence</sbol:description>
+      <sbol:name>pLac Promoter</sbol:name>
+      <prov:wasDerivedFrom rdf:resource="/input/sample_device/promoter_feature"/>
+      <sbol:hasNamespace rdf:resource="/test"/>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <sbol:displayId>pLac_Promoter</sbol:displayId>
+   </sbol:Component>
+   <sbol:Component rdf:about="Different_CDS">
+      <sbol:hasSequence>
+         <sbol:Sequence rdf:about="Different_CDS_sequence"/>
+      </sbol:hasSequence>
+      <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+      <sbol:description>Different coding sequence - should create new component</sbol:description>
+      <sbol:name>Different CDS</sbol:name>
+      <prov:wasDerivedFrom rdf:resource="/input/sample_device/cds2_feature"/>
+      <sbol:hasNamespace rdf:resource="/test"/>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <sbol:displayId>Different_CDS</sbol:displayId>
+   </sbol:Component>
+   <sbol:Component rdf:about="RBS">
+      <sbol:hasSequence>
+         <sbol:Sequence rdf:about="RBS_sequence"/>
+      </sbol:hasSequence>
+      <sbol:role rdf:resource="https://identifiers.org/SO:0000139"/>
+      <sbol:description>Ribosome binding site</sbol:description>
+      <sbol:name>RBS</sbol:name>
+      <prov:wasDerivedFrom rdf:resource="/input/sample_device/rbs_feature"/>
+      <sbol:hasNamespace rdf:resource="/test"/>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <sbol:displayId>RBS</sbol:displayId>
+   </sbol:Component>
+   <sbol:Sequence rdf:about="GFP_CDS_sequence">
+      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+      <sbol:elements>ATGAAACGCATTGATGCACC</sbol:elements>
+      <sbol:hasNamespace rdf:resource="/test"/>
+      <sbol:displayId>GFP_CDS_sequence</sbol:displayId>
+   </sbol:Sequence>
+   <sbol:Sequence rdf:about="pLac_Promoter_sequence">
+      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+      <sbol:elements>ATGGCTAGCGAATTCCTGCA</sbol:elements>
+      <sbol:hasNamespace rdf:resource="/test"/>
+      <sbol:displayId>pLac_Promoter_sequence</sbol:displayId>
+   </sbol:Sequence>
+   <sbol:Sequence rdf:about="Different_CDS_sequence">
+      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+      <sbol:elements>ATGCCCGAAATTGATGCACC</sbol:elements>
+      <sbol:hasNamespace rdf:resource="/test"/>
+      <sbol:displayId>Different_CDS_sequence</sbol:displayId>
+   </sbol:Sequence>
+   <sbol:Sequence rdf:about="test_device_converted_sequence">
+      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+      <sbol:elements>ATGGCTAGCGAATTCCTGCAAGGAGGTTAAATGAAACGCATTGATGCACCTTTTTTGCGCNNNNNNNNNNATGGCTAGCGAATTCCTGCAAGGAGGTTAAATGCCCGAAATTGATGCACCTTTTTTGCGCTGCAGGAATTCGCTAGCCAT</sbol:elements>
+      <sbol:hasNamespace rdf:resource="/test"/>
+      <sbol:displayId>test_device_converted_sequence</sbol:displayId>
+   </sbol:Sequence>
+   <sbol:Sequence rdf:about="Terminator_Copy_sequence">
+      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+      <sbol:elements>TTTTTTGCGC</sbol:elements>
+      <sbol:hasNamespace rdf:resource="/test"/>
+      <sbol:displayId>Terminator_Copy_sequence</sbol:displayId>
+   </sbol:Sequence>
+   <sbol:Sequence rdf:about="RBS_sequence">
+      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+      <sbol:elements>AGGAGGTTAA</sbol:elements>
+      <sbol:hasNamespace rdf:resource="/test"/>
+      <sbol:displayId>RBS_sequence</sbol:displayId>
+   </sbol:Sequence>
+</rdf:RDF>

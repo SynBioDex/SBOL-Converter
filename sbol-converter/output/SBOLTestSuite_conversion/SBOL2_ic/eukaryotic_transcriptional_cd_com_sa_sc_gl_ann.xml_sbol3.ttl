@@ -42,13 +42,11 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2OriginalURI  <http://michael.zhang/Pro_GeneratedInstance82/Pro1_Component/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_E0422/component942815/gl942815>
-        rdf:type                      sbol:EntireSequence;
-        sbol:displayId                "gl942815";
-        sbol:hasSequence              <https://synbiohub.org/public/igem/1/BBa_E0422_seq>;
-        sbol:orientation              SO:0001030;
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0422/annotation942815/gl942815/1> .
+        rdf:type                 <http://sbols.org/v2#GenericLocation> , sbol:Identified;
+        <http://sbols.org/v2#orientation>
+                <http://sbols.org/v2#inline>;
+        sbol:displayId           "gl942815";
+        backport2_3:sbol2Entity  "true" .
 
 <http://michael.zhang/1/Pro_GeneratedInstance82/Pro_SequenceConstraint>
         rdf:type                      sbol:Constraint;
@@ -61,7 +59,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <https://synbiohub.org/public/igem/1/BBa_E0422/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_E0422/component942803> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942823> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942833> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942815> .
+        sbol:nondirectional  <https://synbiohub.org/public/igem/1/BBa_E0422/component942823> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942803> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942815> , <https://synbiohub.org/public/igem/1/BBa_E0422/component942833> .
 
 <https://synbiohub.org/public/igem/1/BBa_E0422>
         rdf:type                      sbol:Component;
@@ -100,13 +98,15 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <https://synbiohub.org/public/igem/1/BBa_E0422/component942815>
         rdf:type                      sbol:SubComponent;
         sbol:displayId                "component942815";
-        sbol:hasLocation              <https://synbiohub.org/public/igem/1/BBa_E0422/component942815/gl942815>;
         sbol:instanceOf               <https://synbiohub.org/public/igem/1/BBa_E0022>;
         sbol:name                     "BBa_E0022";
+        sbol:orientation              SO:0001030;
         sbh:topLevel                  <https://synbiohub.org/public/igem/BBa_E0422/1>;
+        backport2_3:sbol2GenericLocation
+                <https://synbiohub.org/public/igem/1/BBa_E0422/component942815/gl942815>;
         backport2_3:sbol2OriginalSequenceAnnotationURI
                 <https://synbiohub.org/public/igem/BBa_E0422/annotation942815/1>;
-        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0422/annotation942815/1> , <https://synbiohub.org/public/igem/BBa_E0422/component942815/1> .
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/public/igem/BBa_E0422/component942815/1> , <https://synbiohub.org/public/igem/BBa_E0422/annotation942815/1> .
 
 <https://synbiohub.org/public/igem/1/BBa_E0422/component942833>
         rdf:type                      sbol:SubComponent;
@@ -138,4 +138,4 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://michael.zhang/1/Pro_GeneratedInstance82/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://michael.zhang/1/Pro_GeneratedInstance82/Op_Component> , <http://michael.zhang/1/Pro_GeneratedInstance82/Pro1_Component> .
+        sbol:nondirectional  <http://michael.zhang/1/Pro_GeneratedInstance82/Pro1_Component> , <http://michael.zhang/1/Pro_GeneratedInstance82/Op_Component> .

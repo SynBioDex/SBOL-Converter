@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-<rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:dcterms="http://purl.org/dc/terms/"
-    xmlns:SO="https://identifiers.org/SO:"
-    xmlns:EDAM="https://identifiers.org/edam:"
-    xmlns:sbol="http://sbols.org/v3#"
-    xmlns:pr="http://partsregistry.org/"
-    xmlns:CHEBI="https://identifiers.org/CHEBI:"
-    xmlns:prov="http://www.w3.org/ns/prov#"
-    xmlns:SBO="https://identifiers.org/SBO:"
-    xmlns:GO="https://identifiers.org/GO:"
-    xmlns:backport2_3="https://sbols.org/backport/2_3#"
-    xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
-   <sbol:TopLevel rdf:about="http://partsregistry.org/act/TEST_ACTIVITY">
-      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/act/TEST_ACTIVITY"/>
-      <prov:endedAtTime>2025-12-18T11:56:14Z</prov:endedAtTime>
-      <prov:startedAtTime>2025-12-08T11:56:14Z</prov:startedAtTime>
-      <sbol:hasNamespace rdf:resource="http://partsregistry.org/act"/>
-      <sbol:displayId>TEST_ACTIVITY</sbol:displayId>
-      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-   </sbol:TopLevel>
-</rdf:RDF>
-=======
 PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
 PREFIX EDAM:        <https://identifiers.org/edam:>
 PREFIX GO:          <https://identifiers.org/GO:>
@@ -39,7 +15,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         rdf:type                      sbol:TopLevel , prov:Activity;
         sbol:displayId                "TEST_ACTIVITY";
         sbol:hasNamespace             pr:act;
-        prov:endedAtTime              "2025-12-18T19:22:52.426Z";
-        prov:startedAtTime            "2025-12-08T19:22:52.426Z";
+        prov:endedAtTime              "2026-02-26T11:47:47.637Z";
+        prov:startedAtTime            "2026-02-16T11:47:47.637Z";
         backport2_3:sbol2OriginalURI  <http://partsregistry.org/act/TEST_ACTIVITY> .
->>>>>>> feature/combder

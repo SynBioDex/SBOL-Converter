@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<rdf:RDF xmlns="https://sbolstandard.org/examples/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sbol="http://sbols.org/v2#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
+  <sbol:Attachment rdf:about="https://sbolstandard.org/examples/attachment1">
+    <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/attachment1"/>
+    <sbol:displayId>attachment1</sbol:displayId>
+    <sbol:source rdf:resource="https://sbolstandard.org/attachment1"/>
+  </sbol:Attachment>
+  <sbol:Attachment rdf:about="https://sbolstandard.org/examples/attachment2">
+    <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/attachment2"/>
+    <sbol:displayId>attachment2</sbol:displayId>
+    <sbol:source rdf:resource="https://sbolstandard.org/attachment2"/>
+  </sbol:Attachment>
+  <sbol:Experiment rdf:about="https://sbolstandard.org/examples/exp1">
+    <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/exp1"/>
+    <sbol:displayId>exp1</sbol:displayId>
+    <sbol:experimentalData rdf:resource="https://sbolstandard.org/examples/attachment1"/>
+    <sbol:experimentalData rdf:resource="https://sbolstandard.org/examples/attachment2"/>
+  </sbol:Experiment>
+</rdf:RDF>

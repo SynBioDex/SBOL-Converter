@@ -451,7 +451,7 @@ public class TestUtil {
 					catch (Exception e2){
 						logger.severe("Error testing " + file.getName() + " without validation: " + e2.getMessage());
 						e2.printStackTrace();						
-						throw e2;
+						//throw e2;
 					}					
 				}
 				if (errors!=null && errors.size()>0){

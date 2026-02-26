@@ -2,6 +2,7 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:SO="https://identifiers.org/SO:"
     xmlns:sbol="http://sbols.org/v3#"
+    xmlns:j.0="http://sbols.org/v2#"
     xmlns:GO="https://identifiers.org/GO:"
     xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:dcterms="http://purl.org/dc/terms/"
@@ -17,24 +18,23 @@
       <sbh:ownedBy rdf:resource="https://synbiohub.org/user/myers"/>
       <prov:wasGeneratedBy rdf:resource="https://synbiohub.org/public/igem/igem2sbol/1"/>
       <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/annotation942815">
-            <sbol:hasLocation>
-               <sbol:EntireSequence rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/annotation942815/gl942815">
-                  <backport2_3:sbol2OriginalURI rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/annotation942815/gl942815/1"/>
-                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
-                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422_seq"/>
-                  </sbol:hasSequence>
+         <sbol:LocalSubComponent rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/annotation942815">
+            <backport2_3:sbol2GenericLocation>
+               <j.0:GenericLocation rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/annotation942815/gl942815">
+                  <backport2_3:sbol2Entity>true</backport2_3:sbol2Entity>
+                  <j.0:orientation rdf:resource="http://sbols.org/v2#inline"/>
                   <sbol:displayId>gl942815</sbol:displayId>
-               </sbol:EntireSequence>
-            </sbol:hasLocation>
+                  <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
+               </j.0:GenericLocation>
+            </backport2_3:sbol2GenericLocation>
+            <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
             <sbh:topLevel rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/1"/>
             <backport2_3:sbol2OriginalURI rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/annotation942815/1"/>
             <sbol:name>BBa_E0022</sbol:name>
+            <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
+            <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
             <sbol:displayId>annotation942815</sbol:displayId>
-         </sbol:SequenceFeature>
+         </sbol:LocalSubComponent>
       </sbol:hasFeature>
       <sbh:bookmark>false</sbh:bookmark>
       <igem:owning_group_id>7</igem:owning_group_id>

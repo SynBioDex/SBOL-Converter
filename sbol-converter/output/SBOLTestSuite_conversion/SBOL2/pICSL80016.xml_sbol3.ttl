@@ -12,16 +12,15 @@ PREFIX prov:        <http://www.w3.org/ns/prov#>
 PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX sbol:        <http://sbols.org/v3#>
 
-<http://www.async.ece.utah.edu/pICSL80016/annotation4/range>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range";
-        sbol:end                      "2000";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL80016_seq>;
-        sbol:orientation              SO:0001031;
-        sbol:start                    "2000";
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL80016/annotation4/range> .
+<http://www.async.ece.utah.edu/pICSL80016/annotation1>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:label                  "Sm/Sp no DraIII";
+        gbConv:vntifkey               "4";
+        sbol:displayId                "annotation1";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL80016/annotation1/range>;
+        sbol:name                     "Sm/Sp no DraIII";
+        sbol:role                     SO:0000316;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL80016/annotation1> .
 
 <http://www.async.ece.utah.edu/pICSL80016/annotation10>
         rdf:type                      sbol:SequenceFeature;
@@ -32,16 +31,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:name                     "Gus exon3";
         sbol:role                     SO:0000316;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL80016/annotation10> .
-
-<http://www.async.ece.utah.edu/pICSL80016/annotation1>
-        rdf:type                      sbol:SequenceFeature;
-        gbConv:label                  "Sm/Sp no DraIII";
-        gbConv:vntifkey               "4";
-        sbol:displayId                "annotation1";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL80016/annotation1/range>;
-        sbol:name                     "Sm/Sp no DraIII";
-        sbol:role                     SO:0000316;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL80016/annotation1> .
 
 <http://www.async.ece.utah.edu/pICSL80016/annotation7/range>
         rdf:type                      sbol:Range;
@@ -54,19 +43,17 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL80016/annotation7/range> .
 
-<<<<<<< HEAD
-=======
-<http://www.async.ece.utah.edu/pICSL80016/annotation1>
-        rdf:type                      sbol:SequenceFeature;
-        gbConv:label                  "Sm/Sp no DraIII";
-        gbConv:vntifkey               "4";
-        sbol:displayId                "annotation1";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL80016/annotation1/range>;
-        sbol:name                     "Sm/Sp no DraIII";
-        sbol:role                     SO:0000316;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL80016/annotation1> .
+<http://www.async.ece.utah.edu/pICSL80016/annotation4/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "2000";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL80016_seq>;
+        sbol:orientation              SO:0001031;
+        sbol:start                    "2000";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL80016/annotation4/range> .
 
->>>>>>> feature/combder
 <http://www.async.ece.utah.edu/pICSL80016>
         rdf:type                      sbol:Component;
         sbol:displayId                "pICSL80016";

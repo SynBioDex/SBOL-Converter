@@ -163,7 +163,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pICH87633>
         rdf:type                      sbol:Component;
         sbol:displayId                "pICH87633";
-        sbol:hasFeature               <http://www.async.ece.utah.edu/pICH87633/annotation3> , <http://www.async.ece.utah.edu/pICH87633/annotation2> , <http://www.async.ece.utah.edu/pICH87633/annotation1> , <http://www.async.ece.utah.edu/pICH87633/annotation7> , <http://www.async.ece.utah.edu/pICH87633/annotation5> , <http://www.async.ece.utah.edu/pICH87633/annotation0> , <http://www.async.ece.utah.edu/pICH87633/annotation4> , <http://www.async.ece.utah.edu/pICH87633/annotation6>;
+        sbol:hasFeature               <http://www.async.ece.utah.edu/pICH87633/annotation3> , <http://www.async.ece.utah.edu/pICH87633/annotation2> , <http://www.async.ece.utah.edu/pICH87633/annotation1> , <http://www.async.ece.utah.edu/pICH87633/annotation5> , <http://www.async.ece.utah.edu/pICH87633/annotation7> , <http://www.async.ece.utah.edu/pICH87633/annotation0> , <http://www.async.ece.utah.edu/pICH87633/annotation4> , <http://www.async.ece.utah.edu/pICH87633/annotation6>;
         sbol:hasNamespace             <http://www.async.ece.utah.edu>;
         sbol:hasSequence              <http://www.async.ece.utah.edu/pICH87633_seq>;
         sbol:role                     SO:0000804;

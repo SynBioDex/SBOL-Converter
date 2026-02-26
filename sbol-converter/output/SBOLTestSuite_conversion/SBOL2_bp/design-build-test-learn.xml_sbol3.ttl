@@ -23,7 +23,7 @@ PREFIX sys-bio:     <http://sys-bio.org#>
 <http://sys-bio.org/1.0.0/Attachment_raw_data>
         rdf:type                      sbol:Attachment;
         sbol:displayId                "Attachment_raw_data";
-        sbol:format                   <http://edamontology.org/format_3752>;
+        sbol:format                   <https://edamontology.org/format_3752>;
         sbol:hasNamespace             <http://sys-bio.org>;
         sbol:source                   <file://server.sys-bio.org/data/plate_reader_expt_012218.csv>;
         prov:wasDerivedFrom           <http://sys-bio.org/Implementation_build/1.0.0>;
@@ -179,7 +179,7 @@ PREFIX sys-bio:     <http://sys-bio.org#>
 <http://sys-bio.org/1.0.0/Attachment_model_fitting_script>
         rdf:type                      sbol:Attachment;
         sbol:displayId                "Attachment_model_fitting_script";
-        sbol:format                   <http://www.ebi.ac.uk/swo/SWO_0000147>;
+        sbol:format                   <https://www.ebi.ac.uk/swo/SWO_0000147>;
         sbol:hasNamespace             <http://sys-bio.org>;
         sbol:source                   <file://server.sys-bio.org/Dev/optimize.py>;
         backport2_3:sbol2OriginalURI  <http://sys-bio.org/Attachment_model_fitting_script/1.0.0> .

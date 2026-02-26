@@ -103,6 +103,15 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70005/annotation3/range> .
 
+<http://www.async.ece.utah.edu/pICSL70005/annotation7>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:label                  "Bar (phosphinothricin N-acetyltransferase)";
+        sbol:displayId                "annotation7";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL70005/annotation7/range>;
+        sbol:name                     "Bar (phosphinothricin N-acetyltransferase)";
+        sbol:role                     SO:0000316;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70005/annotation7> .
+
 <http://www.async.ece.utah.edu/pICSL70005/annotation6/range>
         rdf:type                      sbol:Range;
         sbol:displayId                "range";
@@ -113,15 +122,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70005/annotation6/range> .
-
-<http://www.async.ece.utah.edu/pICSL70005/annotation7>
-        rdf:type                      sbol:SequenceFeature;
-        gbConv:label                  "Bar (phosphinothricin N-acetyltransferase)";
-        sbol:displayId                "annotation7";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL70005/annotation7/range>;
-        sbol:name                     "Bar (phosphinothricin N-acetyltransferase)";
-        sbol:role                     SO:0000316;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL70005/annotation7> .
 
 <http://www.async.ece.utah.edu/pICSL70005/annotation2>
         rdf:type                      sbol:SequenceFeature;

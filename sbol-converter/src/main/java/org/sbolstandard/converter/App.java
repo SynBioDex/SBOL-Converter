@@ -8,6 +8,8 @@ import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.apache.commons.compress.utils.IOUtils;
 import org.apache.commons.io.FileUtils;
@@ -55,7 +57,7 @@ public class App {
 		System.err.println("\tjava --jar sbol-converter-<version>-.jar [options] <inputFile> [-o <outputFile> -e <compareFile>]");
 		System.err.println();
 		System.err.println("Options:");
-		System.err.println("\t-l  <language> specfies language (SBOL1/SBOL2/SBOL3/GenBank/FASTA/SnapGene/GFF3/CSV) for output (default=SBOL2)");
+		System.err.println("\t-l  <language> specifies language (SBOL1/SBOL2/SBOL3/GenBank/FASTA/SnapGene/GFF3/CSV) for output (default=SBOL2)");
 		System.err.println("\t-s  <topLevelURI> select only this object and those it references");
 		System.err.println("\t-p  <URIprefix> used for converted objects");
 		System.err.println("\t-c  change URI prefix to specified <URIprefix>");
@@ -126,6 +128,11 @@ public class App {
 	 * @throws SBOLGraphException 
 	 */
 	public static void main(String[] args) throws SBOLValidationException, IOException, SBOLConversionException, SBOLGraphException {
+		Logger hvLogger = Logger.getLogger("org.hibernate.validator");
+        hvLogger.setLevel(Level.WARNING);
+		System.setProperty("org.slf4j.simpleLogger.log.org.sbolstandard.converter", "error");
+		
+		
 		String fileName = "";
 		String outputFile = "";
 		String compareFile = "";
@@ -534,10 +541,7 @@ public class App {
             }
     }
 
-    private static List<String> sbol3ValidationOnlyRequiredParameters(String fileName, boolean complete,  boolean bestPractice, boolean noOutput) throws SBOLGraphException, IOException {
-
-            
-
+    private static List<String> sbol3ValidationOnlyRequiredParameters(String fileName, boolean complete,  boolean bestPractice, boolean noOutput) throws SBOLGraphException, IOException {            
             File file = new File(fileName);
             List<String> errorList = new ArrayList<>();
             try {

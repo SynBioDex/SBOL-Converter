@@ -6,7 +6,7 @@
 
 	<groupId>org.sbolstandard</groupId>
 	<artifactId>sbol-converter</artifactId>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.3-SNAPSHOT</version>
 	<name>sbol-converter</name>
 	<url>https://github.com/SynBioDex/SBOL-Converter</url>
 	<issueManagement>
@@ -48,7 +48,7 @@
 		<dependency>
     		<groupId>org.sbolstandard</groupId>
    			<artifactId>libsbolj3</artifactId>
-    		<version>1.0.5.1</version>
+    		<version>1.0.5.2</version>
   		</dependency>
 
 		
@@ -120,6 +120,11 @@
 					<artifactId>jaxb-api</artifactId>
 				</exclusion>
 			</exclusions>-->
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>2.0.17</version>
 		</dependency>
 	</dependencies>
 

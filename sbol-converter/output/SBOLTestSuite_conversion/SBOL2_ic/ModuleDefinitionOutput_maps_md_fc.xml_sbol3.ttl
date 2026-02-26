@@ -10,10 +10,11 @@ PREFIX prov:        <http://www.w3.org/ns/prov#>
 PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX sbol:        <http://sbols.org/v3#>
 
-<http://sbolstandard.org/example/toggle_switch/Interface1>
-        rdf:type             sbol:Interface;
-        sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://sbolstandard.org/example/toggle_switch/LacI> , <http://sbolstandard.org/example/toggle_switch/TetR> .
+<http://sbolstandard.org/example/toggle_switch/Constraint1>
+        rdf:type          sbol:Constraint;
+        sbol:displayId    "Constraint1";
+        sbol:object       <http://sbolstandard.org/example/toggle_switch/LacI>;
+        sbol:restriction  sbol:replaces .
 
 <http://sbolstandard.org/example/toggle_switch/LacI>
         rdf:type                      sbol:SubComponent;
@@ -27,10 +28,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:instanceOf               <http://identifiers.org/uniprot/Q6QR72>;
         backport2_3:sbol2OriginalURI  <http://sbolstandard.org/example/toggle_switch/TetR> .
 
+<http://sbolstandard.org/example/toggle_switch/Interface1>
+        rdf:type             sbol:Interface;
+        sbol:displayId       "Interface1";
+        sbol:nondirectional  <http://sbolstandard.org/example/toggle_switch/LacI> , <http://sbolstandard.org/example/toggle_switch/TetR> .
+
 <http://sbolstandard.org/example/toggle_switch>
         rdf:type                      sbol:Component;
         sbol:displayId                "toggle_switch";
-        sbol:hasFeature               <http://sbolstandard.org/example/toggle_switch/LacI> , <http://sbolstandard.org/example/toggle_switch/TetR>;
+        sbol:hasConstraint            <http://sbolstandard.org/example/toggle_switch/Constraint1>;
+        sbol:hasFeature               <http://sbolstandard.org/example/toggle_switch/TetR> , <http://sbolstandard.org/example/toggle_switch/LacI>;
         sbol:hasInterface             <http://sbolstandard.org/example/toggle_switch/Interface1>;
         sbol:hasNamespace             <http://sbolstandard.org/example>;
         sbol:role                     <https://sbolstandard.org/example/module_role/toggle_switch>;

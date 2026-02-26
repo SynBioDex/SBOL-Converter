@@ -5,6 +5,8 @@ import java.io.PrintStream;
 import java.net.URI;
 import java.util.*;
 import java.util.Map.Entry;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -17,6 +19,7 @@ import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.StmtIterator;
+import org.hibernate.validator.internal.util.logging.LoggerFactory;
 import org.sbolstandard.core2.Annotation;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.EDAMOntology;
@@ -60,6 +63,9 @@ public class Util {
 	}
 
 	public static <T> Set<T> toSet(List<T> list) {
+		if (list==null){
+			return new HashSet<>();
+		}
 		return new HashSet<>(list);
 	}
 
@@ -461,13 +467,19 @@ public class Util {
 
 	public static URI createSBOL3Uri(org.sbolstandard.core2.Identified input) {
 		String sbol3Uri = "";
-
-		sbol3Uri = Util.extractURIPrefixSBOL2Uri(input.getIdentity().toString());
+		String prefix = Util.extractURIPrefixSBOL2Uri(input.getIdentity().toString());
+		sbol3Uri = prefix;
 		if (input.isSetVersion()) {
 			sbol3Uri += "/" + input.getVersion();
 		}
 		if (input.isSetDisplayId()) {
 			sbol3Uri += "/" + input.getDisplayId();
+		}
+		if (sbol3Uri.equals(prefix))
+		{
+			String nonCompliantId=input.getIdentity().toString().replace(prefix, "");
+			String cleaned = nonCompliantId.replaceAll("[^a-zA-Z0-9_]", "");
+			sbol3Uri += "/" + cleaned;
 		}
 		return URI.create(sbol3Uri);
 	}
@@ -520,7 +532,14 @@ public class Util {
 	}
 
 	public static <T extends Identified> String inferDisplayId(URI uri, URI childEntityDataType, List<T> childEntities) throws SBOLGraphException {
-		String displayId=SBOLAPI.inferDisplayId(uri);
+		String displayId="";
+		try{
+			displayId=extractDisplayIdSBOL3Uri(uri.toString());
+		}
+		catch(Exception e){
+			String str="";
+			// Do nothing, and create the display id in the next step
+		}
 		if (StringUtils.isBlank(displayId)){
 			displayId=SBOLAPI.createLocalName(childEntityDataType,childEntities);
 		}
@@ -649,6 +668,7 @@ public class Util {
 			for (Pair<URI, Object> annotation : annotations) {
 				// Convert SBOL3 Annotation to Metadata
 				String property = annotation.getLeft().toString();
+
 				//If the annotation was added during the conversion from v2 to v3, then remove it when converting it back to v2
 				if (property.toLowerCase().startsWith(ConverterNameSpace.BackPort_2_3.getUri().toString().toLowerCase())){				
 					continue;
@@ -785,7 +805,15 @@ public class Util {
 				String annotationDataTypeString = annotation.getNestedQName().getNamespaceURI() + annotation.getNestedQName().getLocalPart();
 				URI annotationDataType = URI.create(annotationDataTypeString);
 				String displayId = inferDisplayId(annotationURI, URINameSpace.SBOL.local("Identified"), parent.getMetadataEntites());
-				Metadata metadata = parent.createMetadata(displayId, annotationDataType, property);
+				Metadata metadata=null;
+				try{
+					metadata = parent.createMetadata(displayId, annotationDataType, property);
+				}
+				catch(Exception e)
+				{
+					String str="";
+					throw e;
+				}
 				convertAnnotations_2_to3(annotation.getAnnotations(), metadata);
 			}
 			else if (annotation.isBooleanValue()){
@@ -1080,6 +1108,31 @@ public class Util {
 		}
 	}
 
+	public static URI getSBOL2OrientationURI(org.sbolstandard.core2.OrientationType sbol2Orientation) throws SBOLGraphException {
+		if (sbol2Orientation == org.sbolstandard.core2.OrientationType.INLINE) {
+			return URI.create("http://sbols.org/v2#inline");
+		} 
+		else if (sbol2Orientation == org.sbolstandard.core2.OrientationType.REVERSECOMPLEMENT) {
+			return URI.create("http://sbols.org/v2#reverseComplement");
+		}
+		else{
+			return null;
+		}
+	}
+
+	public static org.sbolstandard.core2.OrientationType getSBOL2OrientationType(String sbol2OrientationURI) throws SBOLGraphException {
+		if (sbol2OrientationURI.toLowerCase().equals("http://sbols.org/v2#inline".toLowerCase())) {
+			return org.sbolstandard.core2.OrientationType.INLINE;
+		} 
+		else if (sbol2OrientationURI.toLowerCase().equals("http://sbols.org/v2#reversecomplement".toLowerCase())) {
+			return org.sbolstandard.core2.OrientationType.REVERSECOMPLEMENT;
+		}
+		else{
+			return null;
+		}
+	}
+	
+
 	public static org.sbolstandard.core2.OrientationType toSBOL2OrientationType( org.sbolstandard.core3.vocabulary.Orientation sbol3Orientation) throws SBOLGraphException {
 		if (sbol3Orientation!=null){
 			if (sbol3Orientation == org.sbolstandard.core3.vocabulary.Orientation.inline) {
@@ -1240,9 +1293,25 @@ public class Util {
 	public static boolean isModuleDefinition(Component component) throws SBOLGraphException {
 		if(component!=null && component.getInteractions() != null && !component.getInteractions().isEmpty()) {
 			return true;			
-		} else if (component!=null && component.getTypes().contains(ComponentType.FunctionalEntity.getUri())) {
+		} 
+		/*else if (component.getComponentReferences()!=null && !component.getComponentReferences().isEmpty())
+		{
+			return true;
+		}*/
+		else if (component!=null && component.getTypes().contains(ComponentType.FunctionalEntity.getUri())) {
 			return true;
 		}
+
+		if (component!=null && component.getSubComponents() != null) {
+			for (SubComponent subComponent : component.getSubComponents()) {
+				Component childComponent = subComponent.getInstanceOf();
+				if (childComponent!=null){				
+					if (isModuleDefinition(childComponent)) {
+						return true;
+					}				
+				}
+			}
+		}	
 		return false;
 	}
 	
@@ -1278,7 +1347,7 @@ public class Util {
 		boolean changeURIPrefix = false;
 		boolean enumerate = false;
 		
-		System.out.println("VALIDATING SBOLDocument...");
+		Util.getLogger().debug("VALIDATING SBOLDocument...");
 
 		SBOLValidate.validate(outputStream, errorStream,
 				fileName, URIPrefix, null, complete, compliant, bestPractice,
@@ -1377,6 +1446,8 @@ public class Util {
 			return false;
 		}
 
+
+
 		public static Sequence getEmptySequence(Component sbol3ParentComp, SBOLDocument document) throws SBOLGraphException
 		{
 			Sequence sbol3Sequence = null;
@@ -1448,4 +1519,35 @@ public class Util {
 		}
 		return false;
 	}
+
+	public static String extractSBOL2AnnotationURIValue(Identified identified, URI uri) throws SBOLGraphException{
+		String value= null;				
+		List<Object> backPorts=identified.getAnnotation(uri);
+		if (backPorts!=null && backPorts.size()>0){
+			URI uriValue= (URI) backPorts.get(0);
+			value= uriValue.toString();	
+		}
+		return value;
+	}
+
+	public static Object extractSBOL2AnnotationValue(Identified identified, URI uri) throws SBOLGraphException{
+		List<Object> backPorts=identified.getAnnotation(uri);
+		if (backPorts!=null && backPorts.size()>0){
+			return backPorts.get(0);
+		}
+		return null;
+	}
+
+	public static void turnOffHibernateInfo(){
+		setLoggerLevel("org.hibernate.validator", Level.WARNING);
+	}
+	public static void setLoggerLevel(String loggerId, Level level) {
+		Logger hvLogger = Logger.getLogger(loggerId);
+        hvLogger.setLevel(level);
+	}
+
+	public static org.slf4j.Logger getLogger() {
+		return org.slf4j.LoggerFactory.getLogger(App.class);
+	}
+		
 }
