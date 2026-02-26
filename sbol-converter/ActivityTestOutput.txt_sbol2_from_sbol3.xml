@@ -3,7 +3,7 @@
   <prov:Activity rdf:about="http://partsregistry.org/act/TEST_ACTIVITY">
     <sbol:persistentIdentity rdf:resource="http://partsregistry.org/act/TEST_ACTIVITY"/>
     <sbol:displayId>TEST_ACTIVITY</sbol:displayId>
-    <prov:startedAtTime>2026-02-16T11:47:47.637Z</prov:startedAtTime>
-    <prov:endedAtTime>2026-02-26T11:47:47.637Z</prov:endedAtTime>
+    <prov:startedAtTime>2026-02-16T19:51:36.119Z</prov:startedAtTime>
+    <prov:endedAtTime>2026-02-26T19:51:36.119Z</prov:endedAtTime>
   </prov:Activity>
 </rdf:RDF>

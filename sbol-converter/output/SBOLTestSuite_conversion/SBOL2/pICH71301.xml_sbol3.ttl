@@ -115,17 +115,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation6/range> .
 
-<http://www.async.ece.utah.edu/pICH71301/annotation2>
-        rdf:type                      sbol:SequenceFeature;
-        gbConv:featureType            "Mutation";
-        gbConv:label                  "G to A";
-        gbConv:vntifkey               "62";
-        sbol:displayId                "annotation2";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH71301/annotation2/range>;
-        sbol:name                     "G to A";
-        sbol:role                     SO:0000110;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation2> .
-
 <http://www.async.ece.utah.edu/pICH71301/annotation9/range>
         rdf:type                      sbol:Range;
         sbol:displayId                "range";
@@ -136,6 +125,17 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation9/range> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation2>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "Mutation";
+        gbConv:label                  "G to A";
+        gbConv:vntifkey               "62";
+        sbol:displayId                "annotation2";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH71301/annotation2/range>;
+        sbol:name                     "G to A";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation2> .
 
 <http://www.async.ece.utah.edu/pICH71301/annotation2/range>
         rdf:type                      sbol:Range;

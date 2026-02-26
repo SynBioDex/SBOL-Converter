@@ -84,10 +84,10 @@ public class TempTest {
                 //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/ComponentDefinitionOutput_gl_cd_sa_comp.xml"));
                 //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/ComponentDefinitionOutput_gl_cd_sa_comp.xml"), true, "output/tmp/ComponentDefinitionOutput_gl_cd_sa_comp.xml", true);                
                 
-                boolean isComplete=Configuration.getInstance().isCompleteDocument();
-                Configuration.getInstance().setCompleteDocument(false);                
-                List<String> errors = TestUtil.roundTripConvert(new File("input/datacuration/md5_sc17_sbol2.xml"), true, "output/tmp/md5_sc17_sbol2.xml", true);                
-                Configuration.getInstance().setCompleteDocument(isComplete);
+                //boolean isComplete=Configuration.getInstance().isCompleteDocument();
+                //Configuration.getInstance().setCompleteDocument(false);                
+                //List<String> errors = TestUtil.roundTripConvert(new File("input/datacuration/md5_sc17_sbol2.xml"), true, "output/tmp/md5_sc17_sbol2.xml", true);                
+                //Configuration.getInstance().setCompleteDocument(isComplete);
                 
                 /*
                  * https://github.com/SynBioDex/SBOLTestSuite/blob/master/SBOL2/
@@ -111,6 +111,11 @@ public class TempTest {
 
                 //createSortedNtriples(file, fileOutputNt, fileOutputNtSorted);
                 //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/sequence1.xml"), true, "output/tmp/sequence1.xml", true);
+                //List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/AnnotationOutput.xml"), true, "output/tmp/AnnotationOutput.xml", true);
+                List<String> errors = TestUtil.roundTripConvert(new File("../SBOLTestSuite/SBOL2/test_source_location.xml"), true, "output/tmp/test_source_location.xml", true);
+
+                
+                
                 //Incomplete:
                 //Configuration.getInstance().setCompleteDocument(false);
                 //Configuration.getInstance().setValidateAfterSettingProperties(false);

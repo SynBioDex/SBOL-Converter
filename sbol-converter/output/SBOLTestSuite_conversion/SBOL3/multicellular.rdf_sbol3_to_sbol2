@@ -1,66 +1,82 @@
 <?xml version="1.0" ?>
 <rdf:RDF xmlns="https://sbolstandard.org/examples/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sbol="http://sbols.org/v2#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
-  <sbol:ModuleDefinition rdf:about="https://sbolstandard.org/examples/MulticellularSystem">
-    <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/MulticellularSystem"/>
-    <sbol:displayId>MulticellularSystem</sbol:displayId>
-    <dcterms:title>MulticellularSystem</dcterms:title>
-    <dcterms:description>Multicellular System</dcterms:description>
+  <sbol:ModuleDefinition rdf:about="https://sbolstandard.org/examples/ReceiverSystem">
+    <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/ReceiverSystem"/>
+    <sbol:displayId>ReceiverSystem</sbol:displayId>
+    <dcterms:title>ReceiverSystem</dcterms:title>
+    <dcterms:description>Receiver System</dcterms:description>
     <sbol:role rdf:resource="http://identifiers.org/SBO:0000289"/>
     <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/MulticellularSystem/ComponentReference1_mapsTo_ComponentReference2">
-        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/ComponentReference1_mapsTo_ComponentReference2"/>
-        <sbol:displayId>ComponentReference1_mapsTo_ComponentReference2</sbol:displayId>
-        <sbol:definition rdf:resource="https://github.com/SynBioDex/SBOLConverter#ComponentReference1_mapsTo_ComponentReference2_definition"/>
-        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:direction rdf:resource="http://sbols.org/v2#inout"/>
+      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/ReceiverSystem/SubComponent2">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/ReceiverSystem/SubComponent2"/>
+        <sbol:displayId>SubComponent2</sbol:displayId>
+        <sbol:definition rdf:resource="https://sbolstandard.org/examples/AHL"/>
+        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
+        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
+      </sbol:FunctionalComponent>
+    </sbol:functionalComponent>
+    <sbol:functionalComponent>
+      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/ReceiverSystem/SubComponent1">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/ReceiverSystem/SubComponent1"/>
+        <sbol:displayId>SubComponent1</sbol:displayId>
+        <sbol:definition rdf:resource="https://sbolstandard.org/examples/OrganismB"/>
+        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
+        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:module>
-      <sbol:Module rdf:about="https://sbolstandard.org/examples/MulticellularSystem/SubComponent2">
-        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/SubComponent2"/>
-        <sbol:displayId>SubComponent2</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolstandard.org/examples/ReceiverSystem"/>
+      <sbol:Module rdf:about="https://sbolstandard.org/examples/ReceiverSystem/SubComponent3">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/ReceiverSystem/SubComponent3"/>
+        <sbol:displayId>SubComponent3</sbol:displayId>
+        <sbol:definition rdf:resource="https://sbolstandard.org/examples/AHL_receiver"/>
         <sbol:mapsTo>
-          <sbol:MapsTo rdf:about="https://sbolstandard.org/examples/MulticellularSystem/SubComponent2/ComponentReference2">
-            <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/SubComponent2/ComponentReference2"/>
-            <sbol:displayId>ComponentReference2</sbol:displayId>
-            <sbol:refinement rdf:resource="http://sbols.org/v2#verifyIdentical"/>
-            <sbol:remote rdf:resource="https://sbolstandard.org/examples/ReceiverSystem/SubComponent2"/>
-            <sbol:local rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/ComponentReference1_mapsTo_ComponentReference2"/>
-          </sbol:MapsTo>
-        </sbol:mapsTo>
-        <sbol:mapsTo>
-          <sbol:MapsTo rdf:about="https://sbolstandard.org/examples/MulticellularSystem/SubComponent2/ComponentReference1">
-            <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/SubComponent2/ComponentReference1"/>
+          <sbol:MapsTo rdf:about="https://sbolstandard.org/examples/ReceiverSystem/SubComponent3/ComponentReference1">
+            <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/ReceiverSystem/SubComponent3/ComponentReference1"/>
             <sbol:displayId>ComponentReference1</sbol:displayId>
             <sbol:refinement rdf:resource="http://sbols.org/v2#verifyIdentical"/>
-            <sbol:remote rdf:resource="https://sbolstandard.org/examples/ReceiverSystem/SubComponent2"/>
-            <sbol:local rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/ComponentReference1_mapsTo_ComponentReference2"/>
+            <sbol:remote rdf:resource="https://sbolstandard.org/examples/AHL_receiver/SubComponent9"/>
+            <sbol:local rdf:resource="https://sbolstandard.org/examples/ReceiverSystem/SubComponent2"/>
           </sbol:MapsTo>
         </sbol:mapsTo>
       </sbol:Module>
     </sbol:module>
-    <sbol:module>
-      <sbol:Module rdf:about="https://sbolstandard.org/examples/MulticellularSystem/SubComponent1">
-        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/SubComponent1"/>
+  </sbol:ModuleDefinition>
+  <sbol:ModuleDefinition rdf:about="https://sbolstandard.org/examples/SenderSystem">
+    <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/SenderSystem"/>
+    <sbol:displayId>SenderSystem</sbol:displayId>
+    <dcterms:title>SenderSystem</dcterms:title>
+    <dcterms:description>Sender System</dcterms:description>
+    <sbol:role rdf:resource="http://identifiers.org/SBO:0000289"/>
+    <sbol:functionalComponent>
+      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/SenderSystem/SubComponent2">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/SenderSystem/SubComponent2"/>
+        <sbol:displayId>SubComponent2</sbol:displayId>
+        <sbol:definition rdf:resource="https://sbolstandard.org/examples/AHL"/>
+        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
+        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
+      </sbol:FunctionalComponent>
+    </sbol:functionalComponent>
+    <sbol:functionalComponent>
+      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/SenderSystem/SubComponent1">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/SenderSystem/SubComponent1"/>
         <sbol:displayId>SubComponent1</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolstandard.org/examples/SenderSystem"/>
+        <sbol:definition rdf:resource="https://sbolstandard.org/examples/OrganismA"/>
+        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
+        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
+      </sbol:FunctionalComponent>
+    </sbol:functionalComponent>
+    <sbol:module>
+      <sbol:Module rdf:about="https://sbolstandard.org/examples/SenderSystem/SubComponent3">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/SenderSystem/SubComponent3"/>
+        <sbol:displayId>SubComponent3</sbol:displayId>
+        <sbol:definition rdf:resource="https://sbolstandard.org/examples/AHL_producer"/>
         <sbol:mapsTo>
-          <sbol:MapsTo rdf:about="https://sbolstandard.org/examples/MulticellularSystem/SubComponent1/ComponentReference2">
-            <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/SubComponent1/ComponentReference2"/>
-            <sbol:displayId>ComponentReference2</sbol:displayId>
-            <sbol:refinement rdf:resource="http://sbols.org/v2#verifyIdentical"/>
-            <sbol:remote rdf:resource="https://sbolstandard.org/examples/SenderSystem/SubComponent2"/>
-            <sbol:local rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/ComponentReference1_mapsTo_ComponentReference2"/>
-          </sbol:MapsTo>
-        </sbol:mapsTo>
-        <sbol:mapsTo>
-          <sbol:MapsTo rdf:about="https://sbolstandard.org/examples/MulticellularSystem/SubComponent1/ComponentReference1">
-            <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/SubComponent1/ComponentReference1"/>
+          <sbol:MapsTo rdf:about="https://sbolstandard.org/examples/SenderSystem/SubComponent3/ComponentReference1">
+            <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/SenderSystem/SubComponent3/ComponentReference1"/>
             <sbol:displayId>ComponentReference1</sbol:displayId>
             <sbol:refinement rdf:resource="http://sbols.org/v2#verifyIdentical"/>
-            <sbol:remote rdf:resource="https://sbolstandard.org/examples/SenderSystem/SubComponent2"/>
-            <sbol:local rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/ComponentReference1_mapsTo_ComponentReference2"/>
+            <sbol:remote rdf:resource="https://sbolstandard.org/examples/AHL_producer/SubComponent5"/>
+            <sbol:local rdf:resource="https://sbolstandard.org/examples/SenderSystem/SubComponent2"/>
           </sbol:MapsTo>
         </sbol:mapsTo>
       </sbol:Module>
@@ -73,19 +89,10 @@
     <dcterms:description>AHL receiver</dcterms:description>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000704"/>
     <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_receiver/SubComponent7">
-        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_receiver/SubComponent7"/>
-        <sbol:displayId>SubComponent7</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolstandard.org/examples/gfp"/>
-        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
-        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
-      </sbol:FunctionalComponent>
-    </sbol:functionalComponent>
-    <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_receiver/SubComponent4">
-        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_receiver/SubComponent4"/>
-        <sbol:displayId>SubComponent4</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolstandard.org/examples/ter_luxR"/>
+      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_receiver/SubComponent11">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_receiver/SubComponent11"/>
+        <sbol:displayId>SubComponent11</sbol:displayId>
+        <sbol:definition rdf:resource="https://sbolstandard.org/examples/GFP_protein"/>
         <sbol:access rdf:resource="http://sbols.org/v2#private"/>
         <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
       </sbol:FunctionalComponent>
@@ -100,15 +107,6 @@
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_receiver/SubComponent1">
-        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_receiver/SubComponent1"/>
-        <sbol:displayId>SubComponent1</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolstandard.org/examples/pConstLuxR"/>
-        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
-        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
-      </sbol:FunctionalComponent>
-    </sbol:functionalComponent>
-    <sbol:functionalComponent>
       <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_receiver/SubComponent5">
         <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_receiver/SubComponent5"/>
         <sbol:displayId>SubComponent5</sbol:displayId>
@@ -118,28 +116,19 @@
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_receiver/SubComponent11">
-        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_receiver/SubComponent11"/>
-        <sbol:displayId>SubComponent11</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolstandard.org/examples/GFP_protein"/>
+      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_receiver/SubComponent8">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_receiver/SubComponent8"/>
+        <sbol:displayId>SubComponent8</sbol:displayId>
+        <sbol:definition rdf:resource="https://sbolstandard.org/examples/ter_gfp"/>
         <sbol:access rdf:resource="http://sbols.org/v2#private"/>
         <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_receiver/SubComponent10">
-        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_receiver/SubComponent10"/>
-        <sbol:displayId>SubComponent10</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolstandard.org/examples/LuxR_protein"/>
-        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
-        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
-      </sbol:FunctionalComponent>
-    </sbol:functionalComponent>
-    <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_receiver/SubComponent2">
-        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_receiver/SubComponent2"/>
-        <sbol:displayId>SubComponent2</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolstandard.org/examples/rbs_luxR"/>
+      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_receiver/SubComponent4">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_receiver/SubComponent4"/>
+        <sbol:displayId>SubComponent4</sbol:displayId>
+        <sbol:definition rdf:resource="https://sbolstandard.org/examples/ter_luxR"/>
         <sbol:access rdf:resource="http://sbols.org/v2#private"/>
         <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
       </sbol:FunctionalComponent>
@@ -149,6 +138,15 @@
         <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_receiver/SubComponent9"/>
         <sbol:displayId>SubComponent9</sbol:displayId>
         <sbol:definition rdf:resource="https://sbolstandard.org/examples/AHL"/>
+        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
+        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
+      </sbol:FunctionalComponent>
+    </sbol:functionalComponent>
+    <sbol:functionalComponent>
+      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_receiver/SubComponent10">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_receiver/SubComponent10"/>
+        <sbol:displayId>SubComponent10</sbol:displayId>
+        <sbol:definition rdf:resource="https://sbolstandard.org/examples/LuxR_protein"/>
         <sbol:access rdf:resource="http://sbols.org/v2#private"/>
         <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
       </sbol:FunctionalComponent>
@@ -172,10 +170,28 @@
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_receiver/SubComponent8">
-        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_receiver/SubComponent8"/>
-        <sbol:displayId>SubComponent8</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolstandard.org/examples/ter_gfp"/>
+      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_receiver/SubComponent1">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_receiver/SubComponent1"/>
+        <sbol:displayId>SubComponent1</sbol:displayId>
+        <sbol:definition rdf:resource="https://sbolstandard.org/examples/pConstLuxR"/>
+        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
+        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
+      </sbol:FunctionalComponent>
+    </sbol:functionalComponent>
+    <sbol:functionalComponent>
+      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_receiver/SubComponent2">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_receiver/SubComponent2"/>
+        <sbol:displayId>SubComponent2</sbol:displayId>
+        <sbol:definition rdf:resource="https://sbolstandard.org/examples/rbs_luxR"/>
+        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
+        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
+      </sbol:FunctionalComponent>
+    </sbol:functionalComponent>
+    <sbol:functionalComponent>
+      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_receiver/SubComponent7">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_receiver/SubComponent7"/>
+        <sbol:displayId>SubComponent7</sbol:displayId>
+        <sbol:definition rdf:resource="https://sbolstandard.org/examples/gfp"/>
         <sbol:access rdf:resource="http://sbols.org/v2#private"/>
         <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
       </sbol:FunctionalComponent>
@@ -281,83 +297,67 @@
       </sbol:Interaction>
     </sbol:interaction>
   </sbol:ModuleDefinition>
-  <sbol:ModuleDefinition rdf:about="https://sbolstandard.org/examples/SenderSystem">
-    <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/SenderSystem"/>
-    <sbol:displayId>SenderSystem</sbol:displayId>
-    <dcterms:title>SenderSystem</dcterms:title>
-    <dcterms:description>Sender System</dcterms:description>
+  <sbol:ModuleDefinition rdf:about="https://sbolstandard.org/examples/MulticellularSystem">
+    <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/MulticellularSystem"/>
+    <sbol:displayId>MulticellularSystem</sbol:displayId>
+    <dcterms:title>MulticellularSystem</dcterms:title>
+    <dcterms:description>Multicellular System</dcterms:description>
     <sbol:role rdf:resource="http://identifiers.org/SBO:0000289"/>
     <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/SenderSystem/SubComponent2">
-        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/SenderSystem/SubComponent2"/>
-        <sbol:displayId>SubComponent2</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolstandard.org/examples/AHL"/>
-        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
-        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
-      </sbol:FunctionalComponent>
-    </sbol:functionalComponent>
-    <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/SenderSystem/SubComponent1">
-        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/SenderSystem/SubComponent1"/>
-        <sbol:displayId>SubComponent1</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolstandard.org/examples/OrganismA"/>
-        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
-        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
+      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/MulticellularSystem/ComponentReference1_mapsTo_ComponentReference2">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/ComponentReference1_mapsTo_ComponentReference2"/>
+        <sbol:displayId>ComponentReference1_mapsTo_ComponentReference2</sbol:displayId>
+        <sbol:definition rdf:resource="https://github.com/SynBioDex/SBOLConverter#ComponentReference1_mapsTo_ComponentReference2_definition"/>
+        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
+        <sbol:direction rdf:resource="http://sbols.org/v2#inout"/>
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:module>
-      <sbol:Module rdf:about="https://sbolstandard.org/examples/SenderSystem/SubComponent3">
-        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/SenderSystem/SubComponent3"/>
-        <sbol:displayId>SubComponent3</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolstandard.org/examples/AHL_producer"/>
+      <sbol:Module rdf:about="https://sbolstandard.org/examples/MulticellularSystem/SubComponent2">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/SubComponent2"/>
+        <sbol:displayId>SubComponent2</sbol:displayId>
+        <sbol:definition rdf:resource="https://sbolstandard.org/examples/ReceiverSystem"/>
         <sbol:mapsTo>
-          <sbol:MapsTo rdf:about="https://sbolstandard.org/examples/SenderSystem/SubComponent3/ComponentReference1">
-            <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/SenderSystem/SubComponent3/ComponentReference1"/>
+          <sbol:MapsTo rdf:about="https://sbolstandard.org/examples/MulticellularSystem/SubComponent2/ComponentReference2">
+            <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/SubComponent2/ComponentReference2"/>
+            <sbol:displayId>ComponentReference2</sbol:displayId>
+            <sbol:refinement rdf:resource="http://sbols.org/v2#verifyIdentical"/>
+            <sbol:remote rdf:resource="https://sbolstandard.org/examples/ReceiverSystem/SubComponent2"/>
+            <sbol:local rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/ComponentReference1_mapsTo_ComponentReference2"/>
+          </sbol:MapsTo>
+        </sbol:mapsTo>
+        <sbol:mapsTo>
+          <sbol:MapsTo rdf:about="https://sbolstandard.org/examples/MulticellularSystem/SubComponent2/ComponentReference1">
+            <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/SubComponent2/ComponentReference1"/>
             <sbol:displayId>ComponentReference1</sbol:displayId>
             <sbol:refinement rdf:resource="http://sbols.org/v2#verifyIdentical"/>
-            <sbol:remote rdf:resource="https://sbolstandard.org/examples/AHL_producer/SubComponent5"/>
-            <sbol:local rdf:resource="https://sbolstandard.org/examples/SenderSystem/SubComponent2"/>
+            <sbol:remote rdf:resource="https://sbolstandard.org/examples/ReceiverSystem/SubComponent2"/>
+            <sbol:local rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/ComponentReference1_mapsTo_ComponentReference2"/>
           </sbol:MapsTo>
         </sbol:mapsTo>
       </sbol:Module>
     </sbol:module>
-  </sbol:ModuleDefinition>
-  <sbol:ModuleDefinition rdf:about="https://sbolstandard.org/examples/ReceiverSystem">
-    <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/ReceiverSystem"/>
-    <sbol:displayId>ReceiverSystem</sbol:displayId>
-    <dcterms:title>ReceiverSystem</dcterms:title>
-    <dcterms:description>Receiver System</dcterms:description>
-    <sbol:role rdf:resource="http://identifiers.org/SBO:0000289"/>
-    <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/ReceiverSystem/SubComponent1">
-        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/ReceiverSystem/SubComponent1"/>
-        <sbol:displayId>SubComponent1</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolstandard.org/examples/OrganismB"/>
-        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
-        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
-      </sbol:FunctionalComponent>
-    </sbol:functionalComponent>
-    <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/ReceiverSystem/SubComponent2">
-        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/ReceiverSystem/SubComponent2"/>
-        <sbol:displayId>SubComponent2</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolstandard.org/examples/AHL"/>
-        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
-        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
-      </sbol:FunctionalComponent>
-    </sbol:functionalComponent>
     <sbol:module>
-      <sbol:Module rdf:about="https://sbolstandard.org/examples/ReceiverSystem/SubComponent3">
-        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/ReceiverSystem/SubComponent3"/>
-        <sbol:displayId>SubComponent3</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolstandard.org/examples/AHL_receiver"/>
+      <sbol:Module rdf:about="https://sbolstandard.org/examples/MulticellularSystem/SubComponent1">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/SubComponent1"/>
+        <sbol:displayId>SubComponent1</sbol:displayId>
+        <sbol:definition rdf:resource="https://sbolstandard.org/examples/SenderSystem"/>
         <sbol:mapsTo>
-          <sbol:MapsTo rdf:about="https://sbolstandard.org/examples/ReceiverSystem/SubComponent3/ComponentReference1">
-            <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/ReceiverSystem/SubComponent3/ComponentReference1"/>
+          <sbol:MapsTo rdf:about="https://sbolstandard.org/examples/MulticellularSystem/SubComponent1/ComponentReference2">
+            <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/SubComponent1/ComponentReference2"/>
+            <sbol:displayId>ComponentReference2</sbol:displayId>
+            <sbol:refinement rdf:resource="http://sbols.org/v2#verifyIdentical"/>
+            <sbol:remote rdf:resource="https://sbolstandard.org/examples/SenderSystem/SubComponent2"/>
+            <sbol:local rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/ComponentReference1_mapsTo_ComponentReference2"/>
+          </sbol:MapsTo>
+        </sbol:mapsTo>
+        <sbol:mapsTo>
+          <sbol:MapsTo rdf:about="https://sbolstandard.org/examples/MulticellularSystem/SubComponent1/ComponentReference1">
+            <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/SubComponent1/ComponentReference1"/>
             <sbol:displayId>ComponentReference1</sbol:displayId>
             <sbol:refinement rdf:resource="http://sbols.org/v2#verifyIdentical"/>
-            <sbol:remote rdf:resource="https://sbolstandard.org/examples/AHL_receiver/SubComponent9"/>
-            <sbol:local rdf:resource="https://sbolstandard.org/examples/ReceiverSystem/SubComponent2"/>
+            <sbol:remote rdf:resource="https://sbolstandard.org/examples/SenderSystem/SubComponent2"/>
+            <sbol:local rdf:resource="https://sbolstandard.org/examples/MulticellularSystem/ComponentReference1_mapsTo_ComponentReference2"/>
           </sbol:MapsTo>
         </sbol:mapsTo>
       </sbol:Module>
@@ -379,10 +379,19 @@
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_producer/SubComponent4">
-        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_producer/SubComponent4"/>
-        <sbol:displayId>SubComponent4</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolstandard.org/examples/ter_luxI"/>
+      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_producer/SubComponent2">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_producer/SubComponent2"/>
+        <sbol:displayId>SubComponent2</sbol:displayId>
+        <sbol:definition rdf:resource="https://sbolstandard.org/examples/rbs_luxI"/>
+        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
+        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
+      </sbol:FunctionalComponent>
+    </sbol:functionalComponent>
+    <sbol:functionalComponent>
+      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_producer/SubComponent3">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_producer/SubComponent3"/>
+        <sbol:displayId>SubComponent3</sbol:displayId>
+        <sbol:definition rdf:resource="https://sbolstandard.org/examples/luxI"/>
         <sbol:access rdf:resource="http://sbols.org/v2#private"/>
         <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
       </sbol:FunctionalComponent>
@@ -397,19 +406,10 @@
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_producer/SubComponent2">
-        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_producer/SubComponent2"/>
-        <sbol:displayId>SubComponent2</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolstandard.org/examples/rbs_luxI"/>
-        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
-        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
-      </sbol:FunctionalComponent>
-    </sbol:functionalComponent>
-    <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_producer/SubComponent3">
-        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_producer/SubComponent3"/>
-        <sbol:displayId>SubComponent3</sbol:displayId>
-        <sbol:definition rdf:resource="https://sbolstandard.org/examples/luxI"/>
+      <sbol:FunctionalComponent rdf:about="https://sbolstandard.org/examples/AHL_producer/SubComponent4">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/AHL_producer/SubComponent4"/>
+        <sbol:displayId>SubComponent4</sbol:displayId>
+        <sbol:definition rdf:resource="https://sbolstandard.org/examples/ter_luxI"/>
         <sbol:access rdf:resource="http://sbols.org/v2#private"/>
         <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
       </sbol:FunctionalComponent>

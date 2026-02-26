@@ -107,21 +107,6 @@
             <gbConv:translation>MSNVIGDRTEDGLSTAAAASGSTAVQSSPPTDRPVRVYADGIYDLFHFGHARSLEQAKLAFPNNTYLLVGCCNDETTHKYKGRTVMTAEERYESLRHCKWVDEVIPDAPWVVNQEFLDKHQIDYVAHDSLPYADSSGAGKDVYEFVKKVGRFKETQRTEGISTSDIIMRIVKDYNQYVMRNLDRGYSREDLGVSFVKEKRLRVNMRLKKLQERVKEQQERVGEKIQTVKMLRNEWVENADRWVAGFLEIFEEGCHKMGTAIVDSIQERLMRQKSAERLENGQDDDTDDQFYEEYFDHDMGSDDDEDEKFYDEEEVKEEETEKTVMTDAKDNK</gbConv:translation>
             <gbConv:multiRangeType>join</gbConv:multiRangeType>
             <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation6/range2">
-                  <gbConv:position>position2</gbConv:position>
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/AF165912/annotation6/range2/1"/>
-                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
-                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>2633</sbol:end>
-                  <sbol:start>2538</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/AF165912_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range2</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation6/range7">
                   <gbConv:position>position7</gbConv:position>
                   <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/AF165912/annotation6/range7/1"/>
@@ -134,6 +119,21 @@
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/AF165912_seq"/>
                   </sbol:hasSequence>
                   <sbol:displayId>range7</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF165912/annotation6/range2">
+                  <gbConv:position>position2</gbConv:position>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/AF165912/annotation6/range2/1"/>
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>2633</sbol:end>
+                  <sbol:start>2538</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/AF165912_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range2</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
             <sbol:hasLocation>
@@ -233,6 +233,7 @@
             <genbank:title>Direct Submission</genbank:title>
             <genbank:authors>Choi,Y.H., Choi,S.B. and Cho,S.H.</genbank:authors>
             <genbank:label>2  (bases 1 to 5485)</genbank:label>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/AF165912/reference1"/>
             <sbol:displayId>reference1</sbol:displayId>
             <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
          </genbank:Reference>
@@ -293,6 +294,7 @@
             <genbank:title>Structure of a CTP:Phosphocholine Cytidylyltransferase Gene from Arabidopsis thaliana</genbank:title>
             <genbank:authors>Choi,Y.H., Choi,S.B. and Cho,S.H.</genbank:authors>
             <genbank:label>1  (bases 1 to 5485)</genbank:label>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/AF165912/reference0"/>
             <sbol:displayId>reference0</sbol:displayId>
             <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
          </genbank:Reference>

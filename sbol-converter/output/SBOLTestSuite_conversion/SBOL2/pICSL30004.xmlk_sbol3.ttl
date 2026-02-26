@@ -154,17 +154,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:role                     SO:0000110;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL30004/annotation6> .
 
-<http://www.async.ece.utah.edu/pICSL30004/annotation1/range>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range";
-        sbol:end                      "193";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL30004_seq>;
-        sbol:orientation              SO:0001031;
-        sbol:start                    "193";
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL30004/annotation1/range> .
-
 <http://www.async.ece.utah.edu/pICSL30004/annotation5/range>
         rdf:type                      sbol:Range;
         sbol:displayId                "range";
@@ -175,6 +164,17 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL30004/annotation5/range> .
+
+<http://www.async.ece.utah.edu/pICSL30004/annotation1/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "193";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICSL30004_seq>;
+        sbol:orientation              SO:0001031;
+        sbol:start                    "193";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL30004/annotation1/range> .
 
 <http://www.async.ece.utah.edu/pICSL30004/annotation0/range>
         rdf:type                      sbol:Range;

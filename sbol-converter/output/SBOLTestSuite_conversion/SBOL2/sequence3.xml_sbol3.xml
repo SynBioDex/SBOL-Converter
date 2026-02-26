@@ -98,6 +98,7 @@
             <genbank:title>Muscle LIM proteins are associated with muscle sarcomeres and require dMEF2 for their expression during Drosophila myogenesis</genbank:title>
             <genbank:authors>Stronach,B.E., Renfranz,P.J., Lilly,B. and Beckerle,M.C.</genbank:authors>
             <genbank:label>1  (bases 1 to 5086)</genbank:label>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/AF090832/reference0"/>
             <sbol:displayId>reference0</sbol:displayId>
             <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
          </genbank:Reference>
@@ -296,21 +297,6 @@
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/AF090832/annotation4">
             <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF090832/annotation4/range1">
-                  <gbConv:position>position1</gbConv:position>
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/AF090832/annotation4/range1/1"/>
-                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
-                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>2946</sbol:end>
-                  <sbol:start>2868</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/AF090832_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range1</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF090832/annotation4/range0">
                   <gbConv:position>position0</gbConv:position>
                   <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/AF090832/annotation4/range0/1"/>
@@ -323,6 +309,21 @@
                      <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/AF090832_seq"/>
                   </sbol:hasSequence>
                   <sbol:displayId>range0</sbol:displayId>
+               </sbol:Range>
+            </sbol:hasLocation>
+            <sbol:hasLocation>
+               <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/AF090832/annotation4/range1">
+                  <gbConv:position>position1</gbConv:position>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/AF090832/annotation4/range1/1"/>
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <sbol:end>2946</sbol:end>
+                  <sbol:start>2868</sbol:start>
+                  <sbol:hasSequence>
+                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/AF090832_seq"/>
+                  </sbol:hasSequence>
+                  <sbol:displayId>range1</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
             <gbConv:gene>Mlp84B</gbConv:gene>
@@ -464,6 +465,7 @@
             <genbank:title>Direct Submission</genbank:title>
             <genbank:authors>Stronach,B.E., Renfranz,P.J., Lilly,B. and Beckerle,M.C.</genbank:authors>
             <genbank:label>2  (bases 1 to 5086)</genbank:label>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/AF090832/reference1"/>
             <sbol:displayId>reference1</sbol:displayId>
             <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
          </genbank:Reference>

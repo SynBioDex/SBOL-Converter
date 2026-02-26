@@ -267,60 +267,66 @@ Number of files successfully converted without validation : 189/189 (All files)
 
 <strong>Progress: 100%</strong><progress value="100" max="100"></progress>
 
-- Could not be converted
+- Could not be converted:
 
-  - Due to Incorrect range values. these examples also included locations with no sequences.
+  - Due to incorrect range values. these examples also included locations with no sequences.
     - ComponentDefinitionOutput.xml
     - ModuleDefinitionOutput.xml
     - ComponentDefinitionOutput_gl.xml
     - toggle.xml
-  - Incorrect AminoAcid sequence, which includes the . character
-    - CreateAndRemoveModel.xml
-    - multipleSequences.xml
-    - singleCompDef_withSeq.xml
-    - singleSequence.xml
-    - memberAnnotations.xml
 
-- Converted with adjustments: Location entities exist with no sequence entity - converted by creating empty sequences
-
-  - partial_pIKE_right_casette.xml
-  - partial_pTAK_left_cassette.xml
-  - partial_pIKE_right_casette.xml
-  - memberAnnotations.xml
-  - ComponentDefinitionOutput_gl_noRange.xml
-  - partial_pIKE_left_cassette.xml
-  - partial_pIKE_right_cassette.xml
-  - eukaryotic_transcriptional_cd_sa_gl.xml
-  - ComponentDefinitionOutput_gl.xml
-  - ComponentDefinitionOutput_gl_cd_sa_comp.xml
-  - partial_pTAK_right_cassette.xml
 
 - Files with minor differences due to the conversion process:
 
-  - Different URIs for annotation entities
-
+  - Incorrect URIs for annotation entities in some of the SBOL2 source files. Thse incorrect URIs are fixed during the conversion.
     - AnnotationOutput.xml: The content is exactly the same. However, the resulting child entity's URI has two fragments after the parent. SBOL3 requires one fragment after the parent. Hence, the resulting URIs are different.
-    - SBOL2 parent entity URI: .../BBa_J23119
-    - SBOL2 child entity URI: ...BBa_J23119/anno/information
-    - The new SBOL3 child entity URI: ...BBa_J23119/information
-
-  - Not using version numbers in child entities although parent entities have versions
-
-    - sequence4.xml: The content is the same. However, In SBOL2, the child entities' URIs for annotations do not use version numbers although all child entities use. As a result, SBOL3 annotation entities are created with version numbers cauing URI differences only.
-    - EF587312.xml: Same reason as above (see sequence4.xml)
-    - sequence1.xml: Same reason as above (see sequence4.xml)
-    - sequence2.xml: Same reason as above (see sequence4.xml)
-
-  - Incorrect URIs are fixed. SBOL2 Files include incorrect resource URIs. The converter fixes them during the conversion.
+      - SBOL2 parent entity URI: .../BBa_J23119
+      - SBOL2 child entity URI: ...BBa_J23119/anno/information
+      - The new SBOL3 child entity URI: ...BBa_J23119/information
     - simple_attachment_plan_ann.xml: Invalid SBOL2 annotation URI
+    - memberAnnotations.xml: Invalid SBOL2 model source
     - singleModel.xml: Invalid SBOL2 model source
     - attachment_ann.xml: Invalid SBOL2 source URI
     - simple_attachment_ref.xml: Invalid SBOL2 source URI
     - attachment.xml: Invalid SBOL2 source URI
 
 
+<<<<<<< HEAD
 ### SBOLTestSuite/SBOL3 conversion
 Currently, SBOL3-to-SBOL2 conversion is one way and does not store SBOL3 specific content within the converted SBOL2 files, excluding the folders for invalid and urn examples. 
+=======
+  - Not using version numbers in child entities although parent entities have versions
+    - sequence4.xml: The content is the same. However, In SBOL2, the child entities' URIs for annotations do not use version numbers although all child entities use. As a result, SBOL3 annotation entities are created with version numbers causing URI differences only.
+    - EF587312.xml: Same reason as above (see sequence4.xml)
+    - sequence1.xml: Same reason as above (see sequence4.xml)
+    - sequence2.xml: Same reason as above (see sequence4.xml)
+    - sequence3.xml: Same reason as above (see sequence4.xml)
+    
+
+- Converted with adjustments: 
+  - Location entities exist with no sequence entity - converted by creating empty sequences.
+
+    - partial_pIKE_right_casette.xml
+    - partial_pTAK_left_cassette.xml
+    - partial_pIKE_right_casette.xml
+    - memberAnnotations.xml
+    - ComponentDefinitionOutput_gl_noRange.xml
+    - partial_pIKE_left_cassette.xml
+    - partial_pIKE_right_cassette.xml
+    - eukaryotic_transcriptional_cd_sa_gl.xml
+    - ComponentDefinitionOutput_gl.xml
+    - ComponentDefinitionOutput_gl_cd_sa_comp.xml
+    - partial_pTAK_right_cassette.xml
+
+  - Allowed the . character in sequences after discussions with the community.
+    - CreateAndRemoveModel.xml
+    - multipleSequences.xml
+    - singleCompDef_withSeq.xml
+    - singleSequence.xml
+    - memberAnnotations.xml
+
+## To download the SBOLTestSuite as a dependency
+>>>>>>> feature/sbol2all
 
 Number of files successfully converted to SBOL2 : 26/30
 

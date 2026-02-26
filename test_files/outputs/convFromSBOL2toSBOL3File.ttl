@@ -31,12 +31,6 @@
       <sbol:hasFeature>
          <sbol:LocalSubComponent rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn">
             <backport2_3:sbol2GenericLocation>
-               <j.0:GenericLocation rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/gl">
-                  <sbol:displayId>gl</sbol:displayId>
-                  <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
-               </j.0:GenericLocation>
-            </backport2_3:sbol2GenericLocation>
-            <backport2_3:sbol2GenericLocation>
                <j.0:GenericLocation rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/GenericLocation">
                   <backport2_3:sbol2Entity>true</backport2_3:sbol2Entity>
                   <j.0:orientation rdf:resource="http://sbols.org/v2#inline"/>
@@ -45,6 +39,12 @@
                </j.0:GenericLocation>
             </backport2_3:sbol2GenericLocation>
             <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+            <backport2_3:sbol2GenericLocation>
+               <j.0:GenericLocation rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/gl">
+                  <sbol:displayId>gl</sbol:displayId>
+                  <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
+               </j.0:GenericLocation>
+            </backport2_3:sbol2GenericLocation>
             <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn"/>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
             <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
@@ -127,9 +127,9 @@
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://partsregistry.org/cd/BBa_F2620/Interface1">
             <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/ter"/>
+            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/pLuxR"/>
             <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/luxR"/>
             <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/pTetR"/>
-            <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/pLuxR"/>
             <sbol:nondirectional rdf:resource="http://partsregistry.org/cd/BBa_F2620/rbs"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>

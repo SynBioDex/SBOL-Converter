@@ -30,6 +30,13 @@ public class SubComponentToComponentConverter implements ChildEntityConverter<Su
 			}
 		}
 
+		if(input.getSourceLocations()!=null) {
+			SourceLocationConverter sourceLocationConverter = new SourceLocationConverter();
+			for (org.sbolstandard.core3.entity.Location sbol3SourceLocation : input.getSourceLocations()) {
+				sourceLocationConverter.convert(document, sbol2Comp, input, sbol3SourceLocation);
+			}
+		}
+
 		Util.copyIdentified(input, sbol2Comp, document);
         return sbol2Comp;	
 	}

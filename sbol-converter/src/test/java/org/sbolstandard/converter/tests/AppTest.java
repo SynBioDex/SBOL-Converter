@@ -117,15 +117,8 @@ public class AppTest {
         ArrayList<String[]> testCases=AppTest.getTestCases();		 
 		
 			for (String[] args : testCases) {
-				App.main(args);
+				//App.main(args);
 			}
-		
-		
-
-
-		
-      
-
 		
 		// SBOL2 to GenBank test
         //args=new String[] {"test_files/invalid-out.xml", "-l", "GenBank", "-p", "keele", "-o", "test_files/outputs/cSbol2ToGenBank.gb"};

@@ -102,7 +102,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/Repressor2/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://www.async.ece.utah.edu/Repressor2/RBS> , <http://www.async.ece.utah.edu/Repressor2/BBa_C0012> .
+        sbol:nondirectional  <http://www.async.ece.utah.edu/Repressor2/BBa_C0012> , <http://www.async.ece.utah.edu/Repressor2/RBS> .
 
 <http://www.async.ece.utah.edu/pTAKLeftCassete/BBa_K121014/range>
         rdf:type                      sbol:Range;

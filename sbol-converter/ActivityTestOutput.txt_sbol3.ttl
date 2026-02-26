@@ -15,6 +15,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         rdf:type                      sbol:TopLevel , prov:Activity;
         sbol:displayId                "TEST_ACTIVITY";
         sbol:hasNamespace             pr:act;
-        prov:endedAtTime              "2026-02-26T11:47:47.637Z";
-        prov:startedAtTime            "2026-02-16T11:47:47.637Z";
+        prov:endedAtTime              "2026-02-26T19:51:36.119Z";
+        prov:startedAtTime            "2026-02-16T19:51:36.119Z";
         backport2_3:sbol2OriginalURI  <http://partsregistry.org/act/TEST_ACTIVITY> .

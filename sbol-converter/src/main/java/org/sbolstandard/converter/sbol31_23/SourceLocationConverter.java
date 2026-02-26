@@ -3,7 +3,8 @@ import org.sbolstandard.converter.Util;
 import org.sbolstandard.core2.OrientationType;
 import org.sbolstandard.core2.SBOLDocument;
 import org.sbolstandard.core2.SBOLValidationException;
-
+import org.sbolstandard.core3.entity.Cut;
+import org.sbolstandard.core3.entity.EntireSequence;
 import org.sbolstandard.core3.entity.Identified;
 
 import org.sbolstandard.core3.util.SBOLGraphException;
@@ -18,35 +19,37 @@ public class SourceLocationConverter
 
 	@Override
 	public org.sbolstandard.core2.Location convert(SBOLDocument document, org.sbolstandard.core2.Identified sbol2Parent,
-			Identified sbol3Parent, Location sbol3SourceLocation)
+			Identified sbol3Parent, Location loc)
 			throws SBOLGraphException, SBOLValidationException {	
 
 			org.sbolstandard.core2.Component sbol2ParentComponent = (org.sbolstandard.core2.Component) sbol2Parent;
-			SubComponent sbol3ParentSubComponent = (SubComponent) sbol3Parent;
-
+			
 			org.sbolstandard.core2.Location sbol2Loc = null;
 
-			Orientation orientation = sbol3SourceLocation.getOrientation();
+			Orientation orientation = loc.getOrientation();
 			OrientationType orientationType = null;
 			if (orientation != null) {
 				orientationType = Util.toSBOL2OrientationType(orientation);
 			}
-			// Range
-			// if (sbol3SourceLocation instanceof Range) {
-			// 		Range sbol3Range = (Range) sbol3SourceLocation;
-			// 		if (sbol3SourceLocation.getDisplayId() != null) {
-			// 			sbol2Loc = sbol2ParentComponent.addSourceRange(sbol3SourceLocation.getDisplayId(),  sbol3Range.getStart().get(), sbol3Range.getEnd().get(), orientationType);
-						
-			// 		} else {
-			// 			sbol2Loc = sbol2ParentComponent.addSourceRange(sbol3Range.getStart().get(), sbol3Range.getEnd().get(), orientationType);
-			// 		}
-			// 	}
 			
+			// Handle Range location (with start and end coordinates)
+			if (loc instanceof Range) {
+				Range range = (Range) loc;
+				sbol2Loc = sbol2ParentComponent.addSourceRange(loc.getDisplayId(), range.getStart().get(),range.getEnd().get(), orientationType);					
+			}
+			// Handle Cut location (single position)
+			else if (loc instanceof Cut) {
+				Cut cut = (Cut) loc;
+				sbol2Loc = sbol2ParentComponent.addSourceCut(loc.getDisplayId(), cut.getAt().get(), orientationType);					
+			}
+			// Handle EntireSequence location (refers to the whole sequence)
+			else if (loc instanceof EntireSequence) {
+				sbol2Loc = sbol2ParentComponent.addGenericSourceLocation(loc.getDisplayId(), orientationType);					
+			}			
 
-
-
-
-
-		return null; // TODO: Implement SourceLocation conversion from SBOL3 to SBOL2
+			if (!Util.isFrom2To3(null)) {
+				//TODO: Add the order and hasSequence properties as annotations
+			}
+		return sbol2Loc;
 	}
 }
