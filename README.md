@@ -31,7 +31,7 @@ mvn install -DskipTests=true
 The jar file can be found under the target file:
 
 ```
-java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar
+java -jar target/sbol-converter-1.0.3-SNAPSHOT-jar-with-dependencies.jar
 ```
 
 Then include it as a Maven dependency in your project's POM file.
@@ -42,7 +42,7 @@ Then include it as a Maven dependency in your project's POM file.
    <dependency>
       <groupId>org.sbolstandard</groupId>
       <artifactId>sbol-converter</artifactId>
-      <version>1.0.2-SNAPSHOT</version>
+      <version>1.0.3-SNAPSHOT</version>
    </dependency>
    ...
 </dependencies>
@@ -58,7 +58,7 @@ The library provides separete converters from SBOL2-to-SBOL3 and SBOL3-to-SBOL2.
 The converter can be used with the following command
 
 ```
-java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar <inputFile> [options]  [-o <outputFile>]
+java -jar target/sbol-converter-1.0.3-SNAPSHOT-jar-with-dependencies.jar <inputFile> [options]  [-o <outputFile>]
 ```
 
 Convertion Options:
@@ -95,7 +95,7 @@ Examples:
 1. Converting from SBOL2 to SBOL3 and displaying the result in CLI:
 
 ```
-java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+java -jar target/sbol-converter-1.0.3-SNAPSHOT-jar-with-dependencies.jar \
  ../test_files/sbol2TestFile.xml \
 -l SBOL3
 ```
@@ -103,7 +103,7 @@ java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
 2. Converting from SBOL2 to SBOL3 and writing the result in a file:
 
 ```
-java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+java -jar target/sbol-converter-1.0.3-SNAPSHOT-jar-with-dependencies.jar \
 ../test_files/sbol2TestFile.xml \
 -l SBOL3 \
 -o ../test_files/outputs/convFromSBOL2toSBOL3File.ttl
@@ -112,7 +112,7 @@ java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
 3. Converting from SBOL3 to SBOL2 and writing the result in a file:
 
 ```
-java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+java -jar target/sbol-converter-1.0.3-SNAPSHOT-jar-with-dependencies.jar \
 ../test_files/sbol3TestFile.ttl \
 -l SBOL2 \
 -o ../test_files/outputs/convFromSBOL3toSBOL2File.xml
@@ -121,7 +121,7 @@ java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
 4. Converting from SBOL3 to GenBank (providing a prefix URI is required)
 
 ```
-java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+java -jar target/sbol-converter-1.0.3-SNAPSHOT-jar-with-dependencies.jar \
 ../test_files/sbol3ShortTest.ttl \
 -l GenBank \
 -p https://keele.ac.uk \
@@ -131,7 +131,7 @@ java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
 5. Converting from GenBank to SBOL3 (providing a prefix URI is required)
 
 ```
-java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+java -jar target/sbol-converter-1.0.3-SNAPSHOT-jar-with-dependencies.jar \
 ../test_files/genBankTestFile.gb \
  -l SBOL3 -p https://keele.ac.uk  \
  -o ../test_files/outputs/convFromGenBanktoSBOL3File.ttl;
@@ -181,7 +181,7 @@ java -jar target/sbol-converter-1.0.3-SNAPSHOT-jar-with-dependencies.jar \
 6. Validating an SBOL2 file:
 
 ```
-java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+java -jar target/sbol-converter-1.0.3-SNAPSHOT-jar-with-dependencies.jar \
 ../test_files/sbol2TestFile.xml
 ```
 
@@ -190,7 +190,7 @@ java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
 1. Converting from GenBank/FASTA/... to SBOL2 (providing a prefix URI is required)
 
 ```
-java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+java -jar target/sbol-converter-1.0.3-SNAPSHOT-jar-with-dependencies.jar \
   ../test_files/genBankTestFile.gb \
   -l SBOL2 \
   -p https://keele.ac.uk/scm \
