@@ -11,31 +11,38 @@
     xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://sbolstandard.org/example/toggle_switch">
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
       <sbol:hasFeature>
-         <sbol:SubComponent rdf:about="http://sbolstandard.org/example/toggle_switch/LacI">
-            <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/toggle_switch/LacI"/>
-            <sbol:instanceOf rdf:resource="http://identifiers.org/uniprot/P03023"/>
-            <sbol:displayId>LacI</sbol:displayId>
+         <sbol:SubComponent rdf:about="http://sbolstandard.org/example/toggle_switch/TetR">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/toggle_switch/TetR"/>
+            <sbol:instanceOf rdf:resource="http://identifiers.org/uniprot/Q6QR72"/>
+            <sbol:displayId>TetR</sbol:displayId>
          </sbol:SubComponent>
       </sbol:hasFeature>
+      <sbol:role rdf:resource="https://sbolstandard.org/example/module_role/toggle_switch"/>
+      <sbol:hasConstraint>
+         <sbol:Constraint rdf:about="http://sbolstandard.org/example/toggle_switch/Constraint1">
+            <sbol:object>
+               <sbol:SubComponent rdf:about="http://sbolstandard.org/example/toggle_switch/LacI">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/toggle_switch/LacI"/>
+                  <sbol:instanceOf rdf:resource="http://identifiers.org/uniprot/P03023"/>
+                  <sbol:displayId>LacI</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:object>
+            <sbol:restriction rdf:resource="http://sbols.org/v3#replaces"/>
+            <sbol:displayId>Constraint1</sbol:displayId>
+         </sbol:Constraint>
+      </sbol:hasConstraint>
+      <sbol:hasNamespace rdf:resource="http://sbolstandard.org/example"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/toggle_switch"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbolstandard.org/example/toggle_switch/Interface1">
             <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/toggle_switch/LacI"/>
-            <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://sbolstandard.org/example/toggle_switch/TetR">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/toggle_switch/TetR"/>
-                  <sbol:instanceOf rdf:resource="http://identifiers.org/uniprot/Q6QR72"/>
-                  <sbol:displayId>TetR</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
+            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/toggle_switch/TetR"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
-      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/toggle_switch/TetR"/>
-      <sbol:role rdf:resource="https://sbolstandard.org/example/module_role/toggle_switch"/>
-      <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/toggle_switch"/>
-      <sbol:hasNamespace rdf:resource="http://sbolstandard.org/example"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
       <sbol:displayId>toggle_switch</sbol:displayId>
+      <sbol:hasFeature rdf:resource="http://sbolstandard.org/example/toggle_switch/LacI"/>
    </sbol:Component>
 </rdf:RDF>

@@ -28,7 +28,7 @@ public class MapstoToComponentReferenceConverter {
 		}
 		else{
 			String message="***CONVERSION ERROR***: Not converting the sbol2:MapsTo into an sbol:ComponentReference. An sbol3:Feature as a child entity of a sbol:Component is required to create an sbol3:ComponentReference. However, there is no sbol3:Component for" +  sbol3ChildComponentURI + ". Can't refer to a child entity if it is not included.";
-			System.out.println(message);
+			Util.getLogger().error(message);
 		}
 		return sbol3CompRef;
 	}
@@ -37,12 +37,18 @@ public class MapstoToComponentReferenceConverter {
 			Component sbol3ParentComponent, MapsTo mapsTo, SubComponent sbol3SubComponentForModule, Parameters parameters)	
 			throws SBOLGraphException, SBOLValidationException {
 
-		ComponentDefinition childModuleDefinition = sbol2ComponentInstance.getDefinition();		
-		URI childComponentURI = Util.createSBOL3Uri(childModuleDefinition);
+		URI childModuleDefinitionURI = sbol2ComponentInstance.getDefinitionURI();		
+		URI childComponentURI = Util.createSBOL3Uri(childModuleDefinitionURI, parameters);
 		Component childComponent=document.getIdentified(childComponentURI, Component.class);					
-		SubComponent sbol3RemoteSubComponent = Util.getSBOL3Entity(childComponent.getSubComponents(), mapsTo.getRemote(), parameters);
-		ComponentReference sbol3CompRef = sbol3ParentComponent.createComponentReference(mapsTo.getDisplayId(), sbol3RemoteSubComponent,sbol3SubComponentForModule);		
-		Util.copyIdentified(mapsTo, sbol3CompRef, parameters);
+		ComponentReference sbol3CompRef=null;
+		if (childComponent!=null){
+			SubComponent sbol3RemoteSubComponent = Util.getSBOL3Entity(childComponent.getSubComponents(), mapsTo.getRemoteURI(), parameters);
+			sbol3CompRef = sbol3ParentComponent.createComponentReference(mapsTo.getDisplayId(), sbol3RemoteSubComponent,sbol3SubComponentForModule);		
+			Util.copyIdentified(mapsTo, sbol3CompRef, parameters);
+		}
+		else{
+			String str="";
+		}
 		return sbol3CompRef;
 	}
 	

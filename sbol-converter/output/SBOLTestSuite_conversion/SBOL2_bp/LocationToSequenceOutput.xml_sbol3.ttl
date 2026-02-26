@@ -12,13 +12,11 @@ PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX sbol:        <http://sbols.org/v3#>
 
 <http://partsregistry.org/cd/BBa_J23119/someSequenceAnnotation/generic_location>
-        rdf:type                      sbol:EntireSequence;
-        sbol:displayId                "generic_location";
-        sbol:hasSequence              <http://partsregistry.org/seq/BBa_J23120>;
-        sbol:orientation              SO:0001030;
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_J23119/someSequenceAnnotation/generic_location> .
+        rdf:type                 <http://sbols.org/v2#GenericLocation> , sbol:Identified;
+        <http://sbols.org/v2#orientation>
+                <http://sbols.org/v2#inline>;
+        sbol:displayId           "generic_location";
+        backport2_3:sbol2Entity  "true" .
 
 <http://partsregistry.org/cd/BBa_J23119/someSequenceAnnotation/range>
         rdf:type                      sbol:Range;
@@ -61,7 +59,10 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://partsregistry.org/cd/BBa_J23119/someSequenceAnnotation>
         rdf:type                      sbol:SequenceFeature;
         sbol:displayId                "someSequenceAnnotation";
-        sbol:hasLocation              <http://partsregistry.org/cd/BBa_J23119/someSequenceAnnotation/range> , <http://partsregistry.org/cd/BBa_J23119/someSequenceAnnotation/generic_location>;
+        sbol:hasLocation              <http://partsregistry.org/cd/BBa_J23119/someSequenceAnnotation/range>;
+        sbol:orientation              SO:0001030;
+        backport2_3:sbol2GenericLocation
+                <http://partsregistry.org/cd/BBa_J23119/someSequenceAnnotation/generic_location>;
         backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_J23119/someSequenceAnnotation> .
 
 <http://partsregistry.org/seq/BBa_J23120>

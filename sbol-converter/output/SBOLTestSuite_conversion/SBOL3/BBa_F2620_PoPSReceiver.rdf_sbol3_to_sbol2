@@ -16,6 +16,15 @@
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:functionalComponent>
+      <sbol:FunctionalComponent rdf:about="https://synbiohub.org/public/igem/BBa_F2620/SubComponent2">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_F2620/SubComponent2"/>
+        <sbol:displayId>SubComponent2</sbol:displayId>
+        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/TetR_protein"/>
+        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
+        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
+      </sbol:FunctionalComponent>
+    </sbol:functionalComponent>
+    <sbol:functionalComponent>
       <sbol:FunctionalComponent rdf:about="https://synbiohub.org/public/igem/BBa_F2620/SubComponent7">
         <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_F2620/SubComponent7"/>
         <sbol:displayId>SubComponent7</sbol:displayId>
@@ -43,15 +52,6 @@
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://synbiohub.org/public/igem/BBa_F2620/SubComponent1">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_F2620/SubComponent1"/>
-        <sbol:displayId>SubComponent1</sbol:displayId>
-        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_C0062_protein"/>
-        <sbol:access rdf:resource="http://sbols.org/v2#private"/>
-        <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
-      </sbol:FunctionalComponent>
-    </sbol:functionalComponent>
-    <sbol:functionalComponent>
       <sbol:FunctionalComponent rdf:about="https://synbiohub.org/public/igem/BBa_F2620/SubComponent5">
         <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_F2620/SubComponent5"/>
         <sbol:displayId>SubComponent5</sbol:displayId>
@@ -61,10 +61,10 @@
       </sbol:FunctionalComponent>
     </sbol:functionalComponent>
     <sbol:functionalComponent>
-      <sbol:FunctionalComponent rdf:about="https://synbiohub.org/public/igem/BBa_F2620/SubComponent2">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_F2620/SubComponent2"/>
-        <sbol:displayId>SubComponent2</sbol:displayId>
-        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/TetR_protein"/>
+      <sbol:FunctionalComponent rdf:about="https://synbiohub.org/public/igem/BBa_F2620/SubComponent1">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_F2620/SubComponent1"/>
+        <sbol:displayId>SubComponent1</sbol:displayId>
+        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_C0062_protein"/>
         <sbol:access rdf:resource="http://sbols.org/v2#private"/>
         <sbol:direction rdf:resource="http://sbols.org/v2#none"/>
       </sbol:FunctionalComponent>
@@ -157,33 +157,6 @@
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
     <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_C0062_Sequence1"/>
   </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_R0040">
-    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_R0040"/>
-    <sbol:displayId>BBa_R0040</sbol:displayId>
-    <dcterms:title>pTetR</dcterms:title>
-    <dcterms:description>TetR repressible promoter</dcterms:description>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
-    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
-    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_Sequence1"/>
-  </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_C0062_protein">
-    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_C0062_protein"/>
-    <sbol:displayId>BBa_C0062_protein</sbol:displayId>
-    <dcterms:title>LuxR</dcterms:title>
-    <dcterms:description>LuxR protein</dcterms:description>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Protein"/>
-    <sbol:role rdf:resource="http://identifiers.org/GO:0003700"/>
-    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_C0062_protein_Sequence1"/>
-  </sbol:ComponentDefinition>
-  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_B0012">
-    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0012"/>
-    <sbol:displayId>BBa_B0012</sbol:displayId>
-    <dcterms:title>BBa_B0012</dcterms:title>
-    <dcterms:description>Double terminator consisting of BBa_B0010 and BBa_B0012</dcterms:description>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
-    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000141"/>
-    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_B0012_Sequence1"/>
-  </sbol:ComponentDefinition>
   <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_B0015">
     <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0015"/>
     <sbol:displayId>BBa_B0015</sbol:displayId>
@@ -242,6 +215,33 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_B0015_Sequence1"/>
+  </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_R0040">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_R0040"/>
+    <sbol:displayId>BBa_R0040</sbol:displayId>
+    <dcterms:title>pTetR</dcterms:title>
+    <dcterms:description>TetR repressible promoter</dcterms:description>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
+    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_Sequence1"/>
+  </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_C0062_protein">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_C0062_protein"/>
+    <sbol:displayId>BBa_C0062_protein</sbol:displayId>
+    <dcterms:title>LuxR</dcterms:title>
+    <dcterms:description>LuxR protein</dcterms:description>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Protein"/>
+    <sbol:role rdf:resource="http://identifiers.org/GO:0003700"/>
+    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_C0062_protein_Sequence1"/>
+  </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_B0012">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_B0012"/>
+    <sbol:displayId>BBa_B0012</sbol:displayId>
+    <dcterms:title>BBa_B0012</dcterms:title>
+    <dcterms:description>Double terminator consisting of BBa_B0010 and BBa_B0012</dcterms:description>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000141"/>
+    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_B0012_Sequence1"/>
   </sbol:ComponentDefinition>
   <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_R0062">
     <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_R0062"/>

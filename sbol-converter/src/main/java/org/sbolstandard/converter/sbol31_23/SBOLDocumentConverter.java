@@ -32,6 +32,7 @@ public class SBOLDocumentConverter {
 	public org.sbolstandard.core2.SBOLDocument convert(SBOLDocument sbol3Doc)
 			throws SBOLGraphException, SBOLValidationException {
 		org.sbolstandard.core2.SBOLDocument sbol2Doc = new org.sbolstandard.core2.SBOLDocument();
+		try{
 
 		Util.copyNamespacesFrom3_to_2(sbol3Doc, sbol2Doc);
         		
@@ -152,5 +153,10 @@ public class SBOLDocumentConverter {
 		}
 		
 		return sbol2Doc;
+		}
+		catch (Exception e) {
+			Util.getLogger().error("SBOL3-to-2 converter is still under development and could not perform the conversion for this use case. The development team appreciates if you could please share the error details and the design file with them (Email: g.misirli@keele.ac.uk, m.unal@keele.ac.uk). Error during SBOL3 to SBOL2 conversion: " + e.getMessage(), e);
+			throw new RuntimeException("Error during SBOL3 to SBOL2 conversion: " + e.getMessage(), e);
+		}
 	}
 }

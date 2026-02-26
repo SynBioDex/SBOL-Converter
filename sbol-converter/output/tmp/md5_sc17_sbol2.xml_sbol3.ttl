@@ -16,9 +16,9 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <https://sbolcanvas.org/module1/Constraint2>
         rdf:type          sbol:Constraint;
         sbol:displayId    "Constraint2";
-        sbol:object       <https://sbolcanvas.org/module1/pJR11_256>;
+        sbol:object       <https://sbolcanvas.org/module1/JR7_220>;
         sbol:restriction  sbol:replaces;
-        sbol:subject      <https://sbolcanvas.org/module1/mapsTo_pJR11_16> .
+        sbol:subject      <https://sbolcanvas.org/module1/mapsTo_JR7_14> .
 
 SBOLCanvas:yfp_Layout
         rdf:type                      SBOLCanvas:Layout , sbol:TopLevel;
@@ -1124,7 +1124,7 @@ SBOLCanvas:SRS_ukpz_Layout
 <https://sbolcanvas.org/1/sNRMyx2j/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <https://sbolcanvas.org/1/sNRMyx2j/oriT_5> , <https://sbolcanvas.org/1/sNRMyx2j/pJR11_11> , <https://sbolcanvas.org/1/sNRMyx2j/LuxI_14> , <https://sbolcanvas.org/1/sNRMyx2j/SRS_D4XS_10> , <https://sbolcanvas.org/1/sNRMyx2j/Ter_vWjG_6> , <https://sbolcanvas.org/1/sNRMyx2j/SRS_rcHc_3> , <https://sbolcanvas.org/1/sNRMyx2j/Ter_R745_17> , <https://sbolcanvas.org/1/sNRMyx2j/Pro_LUdG_9> , <https://sbolcanvas.org/1/sNRMyx2j/CHRBS3c_13> , <https://sbolcanvas.org/1/sNRMyx2j/R6K_4> , <https://sbolcanvas.org/1/sNRMyx2j/SRS_OMsl_16> , <https://sbolcanvas.org/1/sNRMyx2j/B0015_15> , <https://sbolcanvas.org/1/sNRMyx2j/tetA_7> , <https://sbolcanvas.org/1/sNRMyx2j/RBS_FthO_8> , <https://sbolcanvas.org/1/sNRMyx2j/SRS_g19T_2> , <https://sbolcanvas.org/1/sNRMyx2j/Ter_VpRr_1> , <https://sbolcanvas.org/1/sNRMyx2j/RiboJ_12> .
+        sbol:nondirectional  <https://sbolcanvas.org/1/sNRMyx2j/oriT_5> , <https://sbolcanvas.org/1/sNRMyx2j/pJR11_11> , <https://sbolcanvas.org/1/sNRMyx2j/SRS_D4XS_10> , <https://sbolcanvas.org/1/sNRMyx2j/LuxI_14> , <https://sbolcanvas.org/1/sNRMyx2j/Ter_vWjG_6> , <https://sbolcanvas.org/1/sNRMyx2j/SRS_rcHc_3> , <https://sbolcanvas.org/1/sNRMyx2j/Ter_R745_17> , <https://sbolcanvas.org/1/sNRMyx2j/Pro_LUdG_9> , <https://sbolcanvas.org/1/sNRMyx2j/CHRBS3c_13> , <https://sbolcanvas.org/1/sNRMyx2j/SRS_OMsl_16> , <https://sbolcanvas.org/1/sNRMyx2j/R6K_4> , <https://sbolcanvas.org/1/sNRMyx2j/B0015_15> , <https://sbolcanvas.org/1/sNRMyx2j/tetA_7> , <https://sbolcanvas.org/1/sNRMyx2j/RBS_FthO_8> , <https://sbolcanvas.org/1/sNRMyx2j/SRS_g19T_2> , <https://sbolcanvas.org/1/sNRMyx2j/Ter_VpRr_1> , <https://sbolcanvas.org/1/sNRMyx2j/RiboJ_12> .
 
 <https://sbolcanvas.org/1/sNRMyx2j/LuxI_14/location13>
         rdf:type                      sbol:Range;
@@ -1762,7 +1762,7 @@ SBOLCanvas:Ter_19In_Layout
 <https://sbolcanvas.org/1/GwXZZY8M/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <https://sbolcanvas.org/1/GwXZZY8M/RBS_E26w_8> , <https://sbolcanvas.org/1/GwXZZY8M/PBad_11> , <https://sbolcanvas.org/1/GwXZZY8M/yfp_19> , <https://sbolcanvas.org/1/GwXZZY8M/SRS_k8oa_10> , <https://sbolcanvas.org/1/GwXZZY8M/SRS_Y0db_3> , <https://sbolcanvas.org/1/GwXZZY8M/Pro_E15p_9> , <https://sbolcanvas.org/1/GwXZZY8M/SRS_ukpz_2> , <https://sbolcanvas.org/1/GwXZZY8M/Ter_WI2B_6> , <https://sbolcanvas.org/1/GwXZZY8M/SRS_bJmR_21> , <https://sbolcanvas.org/1/GwXZZY8M/Ter_auVk_1> , <https://sbolcanvas.org/1/GwXZZY8M/B0034_18> , <https://sbolcanvas.org/1/GwXZZY8M/ampr_7> , <https://sbolcanvas.org/1/GwXZZY8M/oriT_5> , <https://sbolcanvas.org/1/GwXZZY8M/R6K_4> , <https://sbolcanvas.org/1/GwXZZY8M/Ter_19In_22> , <https://sbolcanvas.org/1/GwXZZY8M/DT65_20> , <https://sbolcanvas.org/1/GwXZZY8M/RiboJ_17> , <https://sbolcanvas.org/1/GwXZZY8M/SarJ_12> , <https://sbolcanvas.org/1/GwXZZY8M/JR11_14> , <https://sbolcanvas.org/1/GwXZZY8M/pJR11_16> , <https://sbolcanvas.org/1/GwXZZY8M/DT19_15> , <https://sbolcanvas.org/1/GwXZZY8M/Rj111_13> .
+        sbol:nondirectional  <https://sbolcanvas.org/1/GwXZZY8M/RBS_E26w_8> , <https://sbolcanvas.org/1/GwXZZY8M/PBad_11> , <https://sbolcanvas.org/1/GwXZZY8M/yfp_19> , <https://sbolcanvas.org/1/GwXZZY8M/SRS_k8oa_10> , <https://sbolcanvas.org/1/GwXZZY8M/SRS_Y0db_3> , <https://sbolcanvas.org/1/GwXZZY8M/Pro_E15p_9> , <https://sbolcanvas.org/1/GwXZZY8M/Ter_WI2B_6> , <https://sbolcanvas.org/1/GwXZZY8M/SRS_ukpz_2> , <https://sbolcanvas.org/1/GwXZZY8M/SRS_bJmR_21> , <https://sbolcanvas.org/1/GwXZZY8M/Ter_auVk_1> , <https://sbolcanvas.org/1/GwXZZY8M/B0034_18> , <https://sbolcanvas.org/1/GwXZZY8M/ampr_7> , <https://sbolcanvas.org/1/GwXZZY8M/R6K_4> , <https://sbolcanvas.org/1/GwXZZY8M/oriT_5> , <https://sbolcanvas.org/1/GwXZZY8M/Ter_19In_22> , <https://sbolcanvas.org/1/GwXZZY8M/DT65_20> , <https://sbolcanvas.org/1/GwXZZY8M/RiboJ_17> , <https://sbolcanvas.org/1/GwXZZY8M/SarJ_12> , <https://sbolcanvas.org/1/GwXZZY8M/JR11_14> , <https://sbolcanvas.org/1/GwXZZY8M/pJR11_16> , <https://sbolcanvas.org/1/GwXZZY8M/DT19_15> , <https://sbolcanvas.org/1/GwXZZY8M/Rj111_13> .
 
 <https://sbolcanvas.org/1/GwXZZY8M/Ter_WI2B_6/location5>
         rdf:type                 <http://sbols.org/v2#GenericLocation> , sbol:Identified;
@@ -2170,7 +2170,7 @@ SBOLCanvas:Ter_R745_Layout
 <https://sbolcanvas.org/1/DZEPwHU2/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <https://sbolcanvas.org/1/DZEPwHU2/DT19_20> , <https://sbolcanvas.org/1/DZEPwHU2/SarJ_17> , <https://sbolcanvas.org/1/DZEPwHU2/Ter_7eMj_22> , <https://sbolcanvas.org/1/DZEPwHU2/Ter_XNMO_6> , <https://sbolcanvas.org/1/DZEPwHU2/SRS_nmD9_3> , <https://sbolcanvas.org/1/DZEPwHU2/pPhlF_11> , <https://sbolcanvas.org/1/DZEPwHU2/oriT_5> , <https://sbolcanvas.org/1/DZEPwHU2/SRS_60UJ_21> , <https://sbolcanvas.org/1/DZEPwHU2/JR11_19> , <https://sbolcanvas.org/1/DZEPwHU2/PlmJ_12> , <https://sbolcanvas.org/1/DZEPwHU2/Ter_XyGc_1> , <https://sbolcanvas.org/1/DZEPwHU2/R6K_4> , <https://sbolcanvas.org/1/DZEPwHU2/Rj72_13> , <https://sbolcanvas.org/1/DZEPwHU2/SRS_TopK_2> , <https://sbolcanvas.org/1/DZEPwHU2/RBS_SzXL_8> , <https://sbolcanvas.org/1/DZEPwHU2/Rj111_18> , <https://sbolcanvas.org/1/DZEPwHU2/JR7_14> , <https://sbolcanvas.org/1/DZEPwHU2/SRS_qogN_10> , <https://sbolcanvas.org/1/DZEPwHU2/DT36_15> , <https://sbolcanvas.org/1/DZEPwHU2/pJR7_16> , <https://sbolcanvas.org/1/DZEPwHU2/Pro_Hsbo_9> , <https://sbolcanvas.org/1/DZEPwHU2/kanr_7> .
+        sbol:nondirectional  <https://sbolcanvas.org/1/DZEPwHU2/SarJ_17> , <https://sbolcanvas.org/1/DZEPwHU2/DT19_20> , <https://sbolcanvas.org/1/DZEPwHU2/Ter_7eMj_22> , <https://sbolcanvas.org/1/DZEPwHU2/Ter_XNMO_6> , <https://sbolcanvas.org/1/DZEPwHU2/SRS_nmD9_3> , <https://sbolcanvas.org/1/DZEPwHU2/pPhlF_11> , <https://sbolcanvas.org/1/DZEPwHU2/SRS_60UJ_21> , <https://sbolcanvas.org/1/DZEPwHU2/oriT_5> , <https://sbolcanvas.org/1/DZEPwHU2/JR11_19> , <https://sbolcanvas.org/1/DZEPwHU2/PlmJ_12> , <https://sbolcanvas.org/1/DZEPwHU2/Ter_XyGc_1> , <https://sbolcanvas.org/1/DZEPwHU2/R6K_4> , <https://sbolcanvas.org/1/DZEPwHU2/Rj72_13> , <https://sbolcanvas.org/1/DZEPwHU2/SRS_TopK_2> , <https://sbolcanvas.org/1/DZEPwHU2/RBS_SzXL_8> , <https://sbolcanvas.org/1/DZEPwHU2/Rj111_18> , <https://sbolcanvas.org/1/DZEPwHU2/JR7_14> , <https://sbolcanvas.org/1/DZEPwHU2/SRS_qogN_10> , <https://sbolcanvas.org/1/DZEPwHU2/DT36_15> , <https://sbolcanvas.org/1/DZEPwHU2/pJR7_16> , <https://sbolcanvas.org/1/DZEPwHU2/kanr_7> , <https://sbolcanvas.org/1/DZEPwHU2/Pro_Hsbo_9> .
 
 <https://sbolcanvas.org/1/DZEPwHU2/JR7_14>
         rdf:type                      sbol:SubComponent;
@@ -2551,9 +2551,9 @@ SBOLCanvas:module1  rdf:type          sbol:Component;
 <https://sbolcanvas.org/module1/Constraint6>
         rdf:type          sbol:Constraint;
         sbol:displayId    "Constraint6";
-        sbol:object       <https://sbolcanvas.org/module1/JR11_238>;
+        sbol:object       <https://sbolcanvas.org/module1/pJR11_256>;
         sbol:restriction  sbol:replaces;
-        sbol:subject      <https://sbolcanvas.org/module1/mapsTo_JR11_19> .
+        sbol:subject      <https://sbolcanvas.org/module1/mapsTo_pJR11_16> .
 
 <https://sbolcanvas.org/GwXZZY8M_Layout/NodeGlyph_74>
         rdf:type              SBOLCanvas:NodeGlyph , sbol:Identified;
@@ -3028,9 +3028,9 @@ SBOLCanvas:oriT_Layout
 <https://sbolcanvas.org/module1/Constraint5>
         rdf:type          sbol:Constraint;
         sbol:displayId    "Constraint5";
-        sbol:object       <https://sbolcanvas.org/module1/pJR7_229>;
+        sbol:object       <https://sbolcanvas.org/module1/JR11_254>;
         sbol:restriction  sbol:replaces;
-        sbol:subject      <https://sbolcanvas.org/module1/mapsTo_pJR7_16> .
+        sbol:subject      <https://sbolcanvas.org/module1/mapsTo_JR11_14> .
 
 <https://sbolcanvas.org/GwXZZY8M_Layout/NodeGlyph_73>
         rdf:type              SBOLCanvas:NodeGlyph , sbol:Identified;
@@ -3414,9 +3414,9 @@ SBOLCanvas:R6K_Layout
 <https://sbolcanvas.org/module1/Constraint4>
         rdf:type          sbol:Constraint;
         sbol:displayId    "Constraint4";
-        sbol:object       <https://sbolcanvas.org/module1/JR7_220>;
+        sbol:object       <https://sbolcanvas.org/module1/pJR7_229>;
         sbol:restriction  sbol:replaces;
-        sbol:subject      <https://sbolcanvas.org/module1/mapsTo_JR7_14> .
+        sbol:subject      <https://sbolcanvas.org/module1/mapsTo_pJR7_16> .
 
 <https://sbolcanvas.org/module1/pJR11_256>
         rdf:type                      sbol:SubComponent;
@@ -3839,9 +3839,9 @@ SBOLCanvas:PBad_Layout
 <https://sbolcanvas.org/module1/Constraint3>
         rdf:type          sbol:Constraint;
         sbol:displayId    "Constraint3";
-        sbol:object       <https://sbolcanvas.org/module1/JR11_254>;
+        sbol:object       <https://sbolcanvas.org/module1/JR11_238>;
         sbol:restriction  sbol:replaces;
-        sbol:subject      <https://sbolcanvas.org/module1/mapsTo_JR11_14> .
+        sbol:subject      <https://sbolcanvas.org/module1/mapsTo_JR11_19> .
 
 <https://synbiohub.org/public/Eco2C1G5T1/1/oriT_sequence>
         rdf:type                      sbol:Sequence;

@@ -106,21 +106,21 @@ public class ComponentReferenceToMapsToConverter //implements ChildEntityConvert
         if (sbol2Parent instanceof org.sbolstandard.core2.Module) {
             org.sbolstandard.core2.Module sbol2Module = (org.sbolstandard.core2.Module) sbol2Parent;
             if (sbol2Module.getMapsTo(displayId)==null){
-                System.out.println("Creating MapsTo for a Module: " + sbol2Module.getDisplayId() + " with refinement type: " + refinementType + " and local functional component: " + sbol2LocalFuncCompDisplayId + " and remote feature: " + sbol2RemoteFeatureDisplayId);
+                Util.getLogger().debug("Creating MapsTo for a Module: " + sbol2Module.getDisplayId() + " with refinement type: " + refinementType + " and local functional component: " + sbol2LocalFuncCompDisplayId + " and remote feature: " + sbol2RemoteFeatureDisplayId);
                 mapsTo = sbol2Module.createMapsTo(displayId, refinementType, sbol2LocalFuncCompDisplayId, sbol2RemoteFeatureDisplayId);                
             }
         } 
         else if (sbol2Parent instanceof org.sbolstandard.core2.Component) {
             org.sbolstandard.core2.Component sbol2Component = (org.sbolstandard.core2.Component) sbol2Parent;
             if (sbol2Component.getMapsTo(displayId)==null){
-                System.out.println("Creating MapsTo for a Component: " + sbol2Component.getDisplayId() + " with refinement type: " + refinementType + " and local functional component: " + sbol2LocalFuncCompDisplayId + " and remote feature: " + sbol2RemoteFeatureDisplayId);
+                Util.getLogger().debug("Creating MapsTo for a Component: " + sbol2Component.getDisplayId() + " with refinement type: " + refinementType + " and local functional component: " + sbol2LocalFuncCompDisplayId + " and remote feature: " + sbol2RemoteFeatureDisplayId);
                 mapsTo = sbol2Component.createMapsTo(displayId, refinementType, sbol2LocalFuncCompDisplayId, sbol2RemoteFeatureDisplayId);
             }
         }
         else if (sbol2Parent instanceof org.sbolstandard.core2.FunctionalComponent) {
             org.sbolstandard.core2.FunctionalComponent sbol2Component = (org.sbolstandard.core2.FunctionalComponent) sbol2Parent;
             if (sbol2Component.getMapsTo(displayId)==null){
-                System.out.println("Creating MapsTo for a Functional Component: " + sbol2Component.getDisplayId() + " with refinement type: " + refinementType + " and local functional component: " + sbol2LocalFuncCompDisplayId + " and remote feature: " + sbol2RemoteFeatureDisplayId);
+                Util.getLogger().debug("Creating MapsTo for a Functional Component: " + sbol2Component.getDisplayId() + " with refinement type: " + refinementType + " and local functional component: " + sbol2LocalFuncCompDisplayId + " and remote feature: " + sbol2RemoteFeatureDisplayId);
                 mapsTo = sbol2Component.createMapsTo(displayId, refinementType, sbol2LocalFuncCompDisplayId, sbol2RemoteFeatureDisplayId);
             }
         }            

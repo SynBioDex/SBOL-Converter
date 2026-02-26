@@ -19,6 +19,7 @@ import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.StmtIterator;
+import org.hibernate.validator.internal.util.logging.LoggerFactory;
 import org.sbolstandard.core2.Annotation;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.EDAMOntology;
@@ -466,13 +467,19 @@ public class Util {
 
 	public static URI createSBOL3Uri(org.sbolstandard.core2.Identified input) {
 		String sbol3Uri = "";
-
-		sbol3Uri = Util.extractURIPrefixSBOL2Uri(input.getIdentity().toString());
+		String prefix = Util.extractURIPrefixSBOL2Uri(input.getIdentity().toString());
+		sbol3Uri = prefix;
 		if (input.isSetVersion()) {
 			sbol3Uri += "/" + input.getVersion();
 		}
 		if (input.isSetDisplayId()) {
 			sbol3Uri += "/" + input.getDisplayId();
+		}
+		if (sbol3Uri.equals(prefix))
+		{
+			String nonCompliantId=input.getIdentity().toString().replace(prefix, "");
+			String cleaned = nonCompliantId.replaceAll("[^a-zA-Z0-9_]", "");
+			sbol3Uri += "/" + cleaned;
 		}
 		return URI.create(sbol3Uri);
 	}
@@ -525,7 +532,14 @@ public class Util {
 	}
 
 	public static <T extends Identified> String inferDisplayId(URI uri, URI childEntityDataType, List<T> childEntities) throws SBOLGraphException {
-		String displayId=SBOLAPI.inferDisplayId(uri);
+		String displayId="";
+		try{
+			displayId=extractDisplayIdSBOL3Uri(uri.toString());
+		}
+		catch(Exception e){
+			String str="";
+			// Do nothing, and create the display id in the next step
+		}
 		if (StringUtils.isBlank(displayId)){
 			displayId=SBOLAPI.createLocalName(childEntityDataType,childEntities);
 		}
@@ -791,7 +805,15 @@ public class Util {
 				String annotationDataTypeString = annotation.getNestedQName().getNamespaceURI() + annotation.getNestedQName().getLocalPart();
 				URI annotationDataType = URI.create(annotationDataTypeString);
 				String displayId = inferDisplayId(annotationURI, URINameSpace.SBOL.local("Identified"), parent.getMetadataEntites());
-				Metadata metadata = parent.createMetadata(displayId, annotationDataType, property);
+				Metadata metadata=null;
+				try{
+					metadata = parent.createMetadata(displayId, annotationDataType, property);
+				}
+				catch(Exception e)
+				{
+					String str="";
+					throw e;
+				}
 				convertAnnotations_2_to3(annotation.getAnnotations(), metadata);
 			}
 			else if (annotation.isBooleanValue()){
@@ -1280,7 +1302,7 @@ public class Util {
 			return true;
 		}
 
-		if (component.getSubComponents() != null) {
+		if (component!=null && component.getSubComponents() != null) {
 			for (SubComponent subComponent : component.getSubComponents()) {
 				Component childComponent = subComponent.getInstanceOf();
 				if (childComponent!=null){				
@@ -1325,7 +1347,7 @@ public class Util {
 		boolean changeURIPrefix = false;
 		boolean enumerate = false;
 		
-		System.out.println("VALIDATING SBOLDocument...");
+		Util.getLogger().debug("VALIDATING SBOLDocument...");
 
 		SBOLValidate.validate(outputStream, errorStream,
 				fileName, URIPrefix, null, complete, compliant, bestPractice,
@@ -1523,4 +1545,9 @@ public class Util {
 		Logger hvLogger = Logger.getLogger(loggerId);
         hvLogger.setLevel(level);
 	}
+
+	public static org.slf4j.Logger getLogger() {
+		return org.slf4j.LoggerFactory.getLogger(App.class);
+	}
+		
 }

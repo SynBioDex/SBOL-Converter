@@ -44,7 +44,7 @@ public class CombinatorialDerivationConverter implements EntityConverter<org.sbo
     {
     	if (cDerivation.getTemplate()==null)
 		{
-			System.out.println("*****CONVERSION ERROR:*****: Template is not set for CombinatorialDerivation " + cDerivation.getUri() +  ". Can't proceed to create the VariableFeature.");
+			Util.getLogger().error("*****CONVERSION ERROR:*****: Template is not set for CombinatorialDerivation " + cDerivation.getUri() +  ". Can't proceed to create the VariableFeature.");
 			return null;
 		}
 		List<Feature> sbol3Features = cDerivation.getTemplate().getFeatures();

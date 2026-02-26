@@ -24,17 +24,17 @@
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbolstandard.org/example/laci_inverter/Interface1">
             <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://sbolstandard.org/example/laci_inverter/TF">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/laci_inverter/TF"/>
-                  <sbol:instanceOf rdf:resource="http://identifiers.org/uniprot/P03023"/>
-                  <sbol:displayId>TF</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://sbolstandard.org/example/laci_inverter/promoter">
                   <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/laci_inverter/promoter"/>
                   <sbol:instanceOf rdf:resource="http://www.partsregistry.org/BBa_R0010"/>
                   <sbol:displayId>promoter</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:nondirectional>
+            <sbol:nondirectional>
+               <sbol:SubComponent rdf:about="http://sbolstandard.org/example/laci_inverter/TF">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/laci_inverter/TF"/>
+                  <sbol:instanceOf rdf:resource="http://identifiers.org/uniprot/P03023"/>
+                  <sbol:displayId>TF</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:displayId>Interface1</sbol:displayId>
@@ -59,7 +59,6 @@
       <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/toggle_switch"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbolstandard.org/example/toggle_switch/Interface1">
-            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/toggle_switch/TetR"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://sbolstandard.org/example/toggle_switch/LacI">
                   <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/toggle_switch/LacI"/>
@@ -67,6 +66,7 @@
                   <sbol:displayId>LacI</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
+            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/toggle_switch/TetR"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -90,17 +90,17 @@
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbolstandard.org/example/tetr_inverter/Interface1">
             <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://sbolstandard.org/example/tetr_inverter/TF">
-                  <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/tetr_inverter/TF"/>
-                  <sbol:instanceOf rdf:resource="http://identifiers.org/uniprot/Q6QR72"/>
-                  <sbol:displayId>TF</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://sbolstandard.org/example/tetr_inverter/promoter">
                   <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/tetr_inverter/promoter"/>
                   <sbol:instanceOf rdf:resource="http://www.partsregistry.org/BBa_R0040"/>
                   <sbol:displayId>promoter</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:nondirectional>
+            <sbol:nondirectional>
+               <sbol:SubComponent rdf:about="http://sbolstandard.org/example/tetr_inverter/TF">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/tetr_inverter/TF"/>
+                  <sbol:instanceOf rdf:resource="http://identifiers.org/uniprot/Q6QR72"/>
+                  <sbol:displayId>TF</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:displayId>Interface1</sbol:displayId>

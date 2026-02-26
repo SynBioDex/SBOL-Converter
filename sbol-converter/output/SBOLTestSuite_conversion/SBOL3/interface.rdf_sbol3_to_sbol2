@@ -1,13 +1,5 @@
 <?xml version="1.0" ?>
 <rdf:RDF xmlns="https://sbolstandard.org/examples/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sbol="http://sbols.org/v2#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
-  <sbol:ComponentDefinition rdf:about="https://sbolstandard.org/examples/TetR_protein">
-    <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/TetR_protein"/>
-    <sbol:displayId>TetR_protein</sbol:displayId>
-    <dcterms:title>TetR</dcterms:title>
-    <dcterms:description>TetR protein</dcterms:description>
-    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Protein"/>
-    <sbol:role rdf:resource="http://identifiers.org/GO:0003700"/>
-  </sbol:ComponentDefinition>
   <sbol:ComponentDefinition rdf:about="https://sbolstandard.org/examples/LacI_producer">
     <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/LacI_producer"/>
     <sbol:displayId>LacI_producer</sbol:displayId>
@@ -39,6 +31,14 @@
         <sbol:definition rdf:resource="https://sbolstandard.org/examples/LacI_protein"/>
       </sbol:Component>
     </sbol:component>
+  </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="https://sbolstandard.org/examples/TetR_protein">
+    <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/TetR_protein"/>
+    <sbol:displayId>TetR_protein</sbol:displayId>
+    <dcterms:title>TetR</dcterms:title>
+    <dcterms:description>TetR protein</dcterms:description>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Protein"/>
+    <sbol:role rdf:resource="http://identifiers.org/GO:0003700"/>
   </sbol:ComponentDefinition>
   <sbol:ComponentDefinition rdf:about="https://sbolstandard.org/examples/LacI_protein">
     <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/LacI_protein"/>

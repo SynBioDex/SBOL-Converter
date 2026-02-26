@@ -26,8 +26,8 @@ PREFIX sbol:  <http://sbols.org/v3#>
         igem:belongsTo       :SynBioHubRepository , :iGEMRepository;
         igem:experienceURL   igem:Part:BBa_J23119:Experience;
         igem:group           "iGEM2006_Berkeley";
-        igem:hasInformation  <BBa_J23119/information1>;
-        igem:hasUsage        <BBa_J23119/usage1>;
+        igem:hasInformation  <BBa_J23119/information1> , <BBa_J23119/information3> , <BBa_J23119/information2>;
+        igem:hasUsage        <BBa_J23119/usage1> , <BBa_J23119/usage2> , <BBa_J23119/usage3>;
         sbol:description     "Parts J23100 through J23119 are a family of constitutive promoter parts isolated from a small combinatorial library.";
         sbol:displayId       "BBa_J23119";
         sbol:hasNamespace    </examples>;
@@ -35,7 +35,7 @@ PREFIX sbol:  <http://sbols.org/v3#>
         sbol:role            SO:0000167;
         sbol:type            SBO:0000251 .
 
-<BBa_J23119/usage1>  rdf:type  sbol:Identified , igem:IGEMUsage;
+<BBa_J23119/usage1>  rdf:type  sbol:Identified , igem:iGEMUsage;
         igem:inStock       "true";
         igem:registryStar  "1";
         igem:twinURLs      <BBa_J23119/usage1/twinParts>;
@@ -55,9 +55,28 @@ PREFIX sbol:  <http://sbols.org/v3#>
         sbol:displayId    "information1";
         sbol:name         "BBa_J23119_experience" .
 
+<BBa_J23119/usage3>  rdf:type  sbol:Identified , igem:Z_iGEMUsage;
+        sbol:displayId  "usage3";
+        sbol:name       "BBa_J23119_usage_3" .
+
+<BBa_J23119/information3>
+        rdf:type        sbol:Identified , igem:Z_Information;
+        sbol:displayId  "information3";
+        sbol:name       "BBa_J23119_experience3" .
+
 :iGEMRepository  rdf:type  sbol:TopLevel , igem:Repository;
         igem:website       igem:Main_Page;
         sbol:description   "Registry of Standard Biological Parts";
         sbol:displayId     "iGEMRepository";
         sbol:hasNamespace  </examples>;
         sbol:name          "iGEM Registry" .
+
+<BBa_J23119/usage2>  rdf:type  sbol:Identified , igem:A_iGEMUsage;
+        igem:twins      "7";
+        sbol:displayId  "usage2";
+        sbol:name       "BBa_J23119_usage_2" .
+
+<BBa_J23119/information2>
+        rdf:type        sbol:Identified , igem:A_Information;
+        sbol:displayId  "information2";
+        sbol:name       "BBa_J23119_experience2" .

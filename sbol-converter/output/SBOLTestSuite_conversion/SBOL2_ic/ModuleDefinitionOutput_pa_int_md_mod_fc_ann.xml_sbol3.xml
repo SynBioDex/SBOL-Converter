@@ -51,8 +51,8 @@
       <sbol:hasNamespace rdf:resource="http://sbolstandard.org/example"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbolstandard.org/example/laci_inverter/Interface1">
-            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/laci_inverter/TF"/>
             <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/laci_inverter/promoter"/>
+            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/laci_inverter/TF"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -119,7 +119,6 @@
       <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/toggle_switch"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbolstandard.org/example/toggle_switch/Interface1">
-            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/toggle_switch/TetR"/>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://sbolstandard.org/example/toggle_switch/LacI">
                   <backport2_3:sbol2OriginalURI rdf:resource="http://sbolstandard.org/example/toggle_switch/LacI"/>
@@ -127,6 +126,7 @@
                   <sbol:displayId>LacI</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
+            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/toggle_switch/TetR"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -177,8 +177,8 @@
       </sbol:hasInteraction>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://sbolstandard.org/example/tetr_inverter/Interface1">
-            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/tetr_inverter/TF"/>
             <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/tetr_inverter/promoter"/>
+            <sbol:nondirectional rdf:resource="http://sbolstandard.org/example/tetr_inverter/TF"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>

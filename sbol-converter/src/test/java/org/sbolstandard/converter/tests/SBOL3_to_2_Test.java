@@ -10,6 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 import org.junit.jupiter.api.Test;
+import org.sbolstandard.converter.ConverterLogger;
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.converter.sbol31_23.SBOLDocumentConverter;
 import org.sbolstandard.core2.SBOLWriter;
@@ -24,32 +25,7 @@ import org.slf4j.LoggerFactory;
  */
 public class SBOL3_to_2_Test {
 	@Test
-	public void TestSBOL3AllFiles() throws Exception {
-		//Util.turnOffHibernateInfo();
-		//LoggerFactory.getLogger(SBOLDocumentConverter.class);
-
-		//Logger.getLogger("org.hibernate.validator").setLevel(Level.SEVERE);
-
-		/*Logger hvLogger = Logger.getLogger("org.hibernate.validator");
-        	hvLogger.setLevel(Level.WARNING);
-		*/
-        // Also raise levels of existing handlers
-        /*Logger rootLogger = Logger.getLogger("");
-        for (Handler handler : rootLogger.getHandlers()) {
-            handler.setLevel(Level.SEVERE);
-        }*/
-		
-		/* 
-		LogManager.getLogManager().reset();
-        ConsoleHandler handler = new ConsoleHandler();
-        handler.setLevel(Level.INFO);
-        Logger.getLogger("").addHandler(handler);
-
-        Logger.getLogger("org.hibernate.validator").setLevel(Level.SEVERE);
-		*/
-		//Logger logger = TestUtil.getLogger("AllFilesTest.log");	
-		//logger.info("GMGMGMGM");
-		
+	public void TestSBOL3AllFiles() throws Exception {				
 		File outputFolder = new File("output/SBOLTestSuite_conversion/SBOL3/");
 		File inputFolder = new File("../../libSBOLj3/libSBOLj3/output/");
 		//convertFile(outputFolder, new File(inputFolder.getPath() + "/combine2020/combine2020.rdf"));
@@ -57,7 +33,7 @@ public class SBOL3_to_2_Test {
 		List<String> exclusionFolders = Arrays.asList("invalid", "component_urn_uri");
 		int[] counts = processRDFFiles(outputFolder, inputFolder, exclusionFolders);
 		System.out.println("Successfully converted " + counts[0] + " file(s).");
-		System.out.println("Failed to convert " + counts[1] + " file(s).");
+		System.out.println("Failed to convert " + counts[1] + " file(s).");	
 	}
 	
 	private int[] processRDFFiles(File outputFolder, File folder, List<String> exclusionFolders) throws Exception {

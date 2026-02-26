@@ -228,7 +228,7 @@
       <sbol:displayId>Attachment_characterization_protocol</sbol:displayId>
    </sbol:Attachment>
    <sbol:Attachment rdf:about="http://sys-bio.org/1.0.0/Attachment_raw_data">
-      <sbol:format rdf:resource="http://edamontology.org/format_3752"/>
+      <sbol:format rdf:resource="https://edamontology.org/format_3752"/>
       <backport2_3:sbol2OriginalURI rdf:resource="http://sys-bio.org/Attachment_raw_data/1.0.0"/>
       <prov:wasGeneratedBy rdf:resource="http://sys-bio.org/Activity_raw_data_generation/1.0.0"/>
       <prov:wasDerivedFrom rdf:resource="http://sys-bio.org/Implementation_build/1.0.0"/>
@@ -237,7 +237,7 @@
       <sbol:displayId>Attachment_raw_data</sbol:displayId>
    </sbol:Attachment>
    <sbol:Attachment rdf:about="http://sys-bio.org/1.0.0/Attachment_model_fitting_script">
-      <sbol:format rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000147"/>
+      <sbol:format rdf:resource="https://www.ebi.ac.uk/swo/SWO_0000147"/>
       <backport2_3:sbol2OriginalURI rdf:resource="http://sys-bio.org/Attachment_model_fitting_script/1.0.0"/>
       <sbol:source rdf:resource="file://server.sys-bio.org/Dev/optimize.py"/>
       <sbol:hasNamespace rdf:resource="http://sys-bio.org"/>

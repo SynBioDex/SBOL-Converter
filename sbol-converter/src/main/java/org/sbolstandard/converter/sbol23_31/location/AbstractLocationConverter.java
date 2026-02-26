@@ -80,7 +80,7 @@ public abstract class AbstractLocationConverter {
                 sbol3LocationSequence = Util.getEmptySequence(sbol3ParentComp, sbol3Doc);
             }
         }*/
-        System.out.println("SourceLocationConverter: using sequence " + sbol3LocationSequence.getDisplayId() + " for location " + sbol2Loc.getDisplayId());
+        Util.getLogger().debug("SourceLocationConverter: using sequence " + sbol3LocationSequence.getDisplayId() + " for location " + sbol2Loc.getDisplayId());
         // Convert orientation SBOL2 -> SBOL3.
         org.sbolstandard.core3.vocabulary.Orientation sbol3Ori = Util.toSBOL3Orientation(sbol2Loc.getOrientation());
 
@@ -91,7 +91,7 @@ public abstract class AbstractLocationConverter {
         
         // Apply orientation and preserve metadata.
         if (sbol3Loc != null) {
-            System.out.println("SourceLocationConverter: converted location " + sbol2Loc.getIdentity() + " to " + sbol3Loc.getDisplayId());
+            Util.getLogger().debug("SourceLocationConverter: converted location " + sbol2Loc.getIdentity() + " to " + sbol3Loc.getDisplayId());
             sbol3Loc.setOrientation(sbol3Ori);
 
             // Keep an annotation to indicate SBOL2 had null sequenceURI (useful for debugging round-trips).

@@ -38,8 +38,8 @@
          <sbol:Identified rdf:about="BBa_J23119/usage1">
             <sbol:description>BBa_J23119 usage statistics</sbol:description>
             <sbol:name>BBa_J23119_usage</sbol:name>
+            <rdf:type rdf:resource="http://parts.igem.org/iGEMUsage"/>
             <sbol:displayId>usage1</sbol:displayId>
-            <rdf:type rdf:resource="http://parts.igem.org/IGEMUsage"/>
             <igem:registryStar>1</igem:registryStar>
             <igem:twins>7</igem:twins>
             <igem:uses2 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
@@ -59,9 +59,38 @@
          </sbol:Identified>
       </igem:hasUsage>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
+      <igem:hasUsage>
+         <sbol:Identified rdf:about="BBa_J23119/usage2">
+            <sbol:displayId>usage2</sbol:displayId>
+            <sbol:name>BBa_J23119_usage_2</sbol:name>
+            <igem:twins>7</igem:twins>
+            <rdf:type rdf:resource="http://parts.igem.org/A_iGEMUsage"/>
+         </sbol:Identified>
+      </igem:hasUsage>
       <sbol:name>BBa_J23119 part</sbol:name>
+      <igem:hasInformation>
+         <sbol:Identified rdf:about="BBa_J23119/information3">
+            <sbol:displayId>information3</sbol:displayId>
+            <sbol:name>BBa_J23119_experience3</sbol:name>
+            <rdf:type rdf:resource="http://parts.igem.org/Z_Information"/>
+         </sbol:Identified>
+      </igem:hasInformation>
+      <igem:hasUsage>
+         <sbol:Identified rdf:about="BBa_J23119/usage3">
+            <sbol:displayId>usage3</sbol:displayId>
+            <sbol:name>BBa_J23119_usage_3</sbol:name>
+            <rdf:type rdf:resource="http://parts.igem.org/Z_iGEMUsage"/>
+         </sbol:Identified>
+      </igem:hasUsage>
       <igem:experienceURL rdf:resource="http://parts.igem.org/Part:BBa_J23119:Experience"/>
       <sbol:hasNamespace rdf:resource="/examples"/>
+      <igem:hasInformation>
+         <sbol:Identified rdf:about="BBa_J23119/information2">
+            <sbol:displayId>information2</sbol:displayId>
+            <sbol:name>BBa_J23119_experience2</sbol:name>
+            <rdf:type rdf:resource="http://parts.igem.org/A_Information"/>
+         </sbol:Identified>
+      </igem:hasInformation>
    </sbol:Component>
    <sbol:TopLevel rdf:about="SynBioHubRepository">
       <sbol:displayId>SynBioHubRepository</sbol:displayId>

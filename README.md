@@ -142,22 +142,22 @@ java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
 1. Validating an SBOL3 file:
 
 ```
-java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+java -jar target/sbol-converter-1.0.3-SNAPSHOT-jar-with-dependencies.jar \
 ../test_files/sbol3TestFile.ttl
 ```
 
 2. Validating an SBOL3 file checking best practices:
 
 ```
-java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+java -jar target/sbol-converter-1.0.3-SNAPSHOT-jar-with-dependencies.jar \
 ../test_files/sbol3TestFile.ttl \
 -b
 ```
 
-3. Validating an SBOL3 file allowing incomlete documents:
+3. Validating an SBOL3 file allowing incomplete documents:
 
 ```
-java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+java -jar target/sbol-converter-1.0.3-SNAPSHOT-jar-with-dependencies.jar \
 ../test_files/sbol3TestFile.ttl \
 -i
 ```
@@ -165,7 +165,7 @@ java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
 4. Validating an SBOL3 file without output:
 
 ```
-java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+java -jar target/sbol-converter-1.0.3-SNAPSHOT-jar-with-dependencies.jar \
 ../test_files/sbol3TestFile.ttl \
 -no
 ```
@@ -173,7 +173,7 @@ java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
 5. To see the error of an invalid SBOL3 file that do not follow best practices:
 
 ```
-java -jar target/sbol-converter-1.0.2-SNAPSHOT-jar-with-dependencies.jar \
+java -jar target/sbol-converter-1.0.3-SNAPSHOT-jar-with-dependencies.jar \
 ../test_files/invalid.ttl \
 -b
 ```

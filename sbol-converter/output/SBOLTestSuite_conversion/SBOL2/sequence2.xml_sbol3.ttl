@@ -177,17 +177,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF165912/annotation6/range7/1> .
 
-<http://www.async.ece.utah.edu/1/AF165912/annotation1/range>
-        rdf:type                      sbol:Range;
-        sbol:displayId                "range";
-        sbol:end                      "4637";
-        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF165912_seq>;
-        sbol:orientation              SO:0001030;
-        sbol:start                    "1";
-        backport2_3:sbol2LocationSequenceNull
-                true;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF165912/annotation1/range/1> .
-
 <http://www.async.ece.utah.edu/1/AF165912/annotation4/range4>
         rdf:type                      sbol:Range;
         gbConv:position               "position4";
@@ -199,6 +188,17 @@ PREFIX sbol:        <http://sbols.org/v3#>
         backport2_3:sbol2LocationSequenceNull
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF165912/annotation4/range4/1> .
+
+<http://www.async.ece.utah.edu/1/AF165912/annotation1/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "4637";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/AF165912_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF165912/annotation1/range/1> .
 
 <http://www.async.ece.utah.edu/1/AF165912/annotation6/range2>
         rdf:type                      sbol:Range;
@@ -300,7 +300,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
         gbConv:protein_id             "AAD45922.1";
         gbConv:translation            "MSNVIGDRTEDGLSTAAAASGSTAVQSSPPTDRPVRVYADGIYDLFHFGHARSLEQAKLAFPNNTYLLVGCCNDETTHKYKGRTVMTAEERYESLRHCKWVDEVIPDAPWVVNQEFLDKHQIDYVAHDSLPYADSSGAGKDVYEFVKKVGRFKETQRTEGISTSDIIMRIVKDYNQYVMRNLDRGYSREDLGVSFVKEKRLRVNMRLKKLQERVKEQQERVGEKIQTVKMLRNEWVENADRWVAGFLEIFEEGCHKMGTAIVDSIQERLMRQKSAERLENGQDDDTDDQFYEEYFDHDMGSDDDEDEKFYDEEEVKEEETEKTVMTDAKDNK";
         sbol:displayId                "annotation6";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF165912/annotation6/range1> , <http://www.async.ece.utah.edu/1/AF165912/annotation6/range6> , <http://www.async.ece.utah.edu/1/AF165912/annotation6/range7> , <http://www.async.ece.utah.edu/1/AF165912/annotation6/range2> , <http://www.async.ece.utah.edu/1/AF165912/annotation6/range4> , <http://www.async.ece.utah.edu/1/AF165912/annotation6/range3> , <http://www.async.ece.utah.edu/1/AF165912/annotation6/range5> , <http://www.async.ece.utah.edu/1/AF165912/annotation6/range0>;
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/AF165912/annotation6/range1> , <http://www.async.ece.utah.edu/1/AF165912/annotation6/range6> , <http://www.async.ece.utah.edu/1/AF165912/annotation6/range2> , <http://www.async.ece.utah.edu/1/AF165912/annotation6/range7> , <http://www.async.ece.utah.edu/1/AF165912/annotation6/range4> , <http://www.async.ece.utah.edu/1/AF165912/annotation6/range3> , <http://www.async.ece.utah.edu/1/AF165912/annotation6/range5> , <http://www.async.ece.utah.edu/1/AF165912/annotation6/range0>;
         sbol:name                     "CTP:phosphocholine cytidylyltransferase";
         sbol:role                     SO:0000316;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/AF165912/annotation6/1> .

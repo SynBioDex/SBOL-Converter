@@ -36,7 +36,6 @@ public class MapstoToMainConverter {
 		ComponentReference sbol3CompRef = MapstoToComponentReferenceConverter.convertForComponent(document, sbol2Component, sbol3ParentComponent, mapsTo, sbol3SubComponentForModule, parameters);				
 		Constraint sbol3Constraint = MapstoToConstraintConverter.convert(sbol3ParentComponent, mapsTo, sbol3CompRef, parameters);				
 		if (sbol3Constraint == null) {
-			System.out.println("Constraint is null for " + mapsTo.getIdentity() + "!");
 			throw new SBOLGraphException("SBOL3 Constraint is null for " + mapsTo.getIdentity() + "!");
 		}				
 		return sbol3CompRef;
@@ -54,12 +53,12 @@ public class MapstoToMainConverter {
 					Constraint sbol3Constraint = MapstoToConstraintConverter.convert(sbol3ParentComponent, mapsTo, sbol3CompRef, parameters);				
 					if (sbol3Constraint == null) {
 						String message="***CONVERSION ERROR***: sbol2:MapsTo_sbol3:Constraint conversion could not be completed for MapsTo:"+ mapsTo.getIdentity() + ".";
-						System.out.println(message);
+						Util.getLogger().error(message);
 					}
 				}
 				else{
 					String message="***CONVERSION ERROR***: sbol2:MapsTo_sbol3:ComponentReference conversion could not be completed for MapsTo:"+ mapsTo.getIdentity() + ".";
-					System.out.println(message);
+					Util.getLogger().error(message);
 				}				
 			}		
 		}
@@ -68,10 +67,10 @@ public class MapstoToMainConverter {
 			SubComponent sbol3SubComponentForModule = Util.getSBOL3Entity(sbol3ParentComponent.getSubComponents(), sbol2FunctionalComponent, parameters);								
 			for(MapsTo mapsTo: sbol2FunctionalComponent.getMapsTos()) {				
 				ComponentReference compRef= convertFromComponentInstance(document, sbol2FunctionalComponent, sbol3ParentComponent, sbol3SubComponentForModule, mapsTo, parameters);
-				compRef.addAnnotation(ConverterVocabulary.Two_to_Three.sbol2MapstoOriginInFC, true);
+				if (compRef!=null){
+					compRef.addAnnotation(ConverterVocabulary.Two_to_Three.sbol2MapstoOriginInFC, true);
+				}
 			}
 		}
-
 	}
-	
 }

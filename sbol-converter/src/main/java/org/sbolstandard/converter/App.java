@@ -130,6 +130,8 @@ public class App {
 	public static void main(String[] args) throws SBOLValidationException, IOException, SBOLConversionException, SBOLGraphException {
 		Logger hvLogger = Logger.getLogger("org.hibernate.validator");
         hvLogger.setLevel(Level.WARNING);
+		System.setProperty("org.slf4j.simpleLogger.log.org.sbolstandard.converter", "error");
+		
 		
 		String fileName = "";
 		String outputFile = "";
@@ -539,10 +541,7 @@ public class App {
             }
     }
 
-    private static List<String> sbol3ValidationOnlyRequiredParameters(String fileName, boolean complete,  boolean bestPractice, boolean noOutput) throws SBOLGraphException, IOException {
-
-            
-
+    private static List<String> sbol3ValidationOnlyRequiredParameters(String fileName, boolean complete,  boolean bestPractice, boolean noOutput) throws SBOLGraphException, IOException {            
             File file = new File(fileName);
             List<String> errorList = new ArrayList<>();
             try {
