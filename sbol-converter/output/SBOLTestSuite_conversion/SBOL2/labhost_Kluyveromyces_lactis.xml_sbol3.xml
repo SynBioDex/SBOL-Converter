@@ -8,6 +8,7 @@
     xmlns:prov="http://www.w3.org/ns/prov#"
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Collection rdf:about="http://www.async.ece.utah.edu/Kluyveromyces_lactis">
       <sbol:member>
@@ -53,6 +54,7 @@
       <sbol:member>
          <sbol:Component rdf:about="http://www.async.ece.utah.edu/LAC4_terminator_001"/>
       </sbol:member>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Kluyveromyces_lactis"/>
       <sbol:member>
          <sbol:Component rdf:about="http://www.async.ece.utah.edu/ori_013"/>
       </sbol:member>
@@ -66,6 +68,7 @@
       <sbol:description>confers ability to process acetamide for selection in fungal cells</sbol:description>
       <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:amdS-002"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/amdS_002"/>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
       <sbol:name>amdS-002</sbol:name>
       <sbol:hasSequence>
@@ -75,6 +78,7 @@
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
    </sbol:Component>
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/f1_ori_008">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/f1_ori_008"/>
       <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
       <sbol:name>f1 ori-008</sbol:name>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
@@ -91,6 +95,7 @@
       <sbol:displayId>amdS_001</sbol:displayId>
       <sbol:description>confers ability to process acetamide for selection in fungal cells</sbol:description>
       <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/amdS_001"/>
       <sbol:name>amdS-001</sbol:name>
       <sbol:hasSequence>
          <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_amdS_001_seq"/>
@@ -102,6 +107,7 @@
    </sbol:Component>
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/LAC4_terminator_002">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000141"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/LAC4_terminator_002"/>
       <sbol:displayId>LAC4_terminator_002</sbol:displayId>
       <sbol:name>LAC4 terminator-002</sbol:name>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
@@ -119,6 +125,7 @@
       <sbol:hasSequence>
          <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_LAC4_terminator_001_seq"/>
       </sbol:hasSequence>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/LAC4_terminator_001"/>
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:LAC4_terminator-001"/>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000141"/>
       <sbol:name>LAC4 terminator-001</sbol:name>
@@ -137,12 +144,14 @@
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
       <sbol:name>LAC4 promoter (3')-002</sbol:name>
       <sbol:description>3' portion of a modified Kluyveromyces lactis LAC4 promoter</sbol:description>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/LAC4_promoter__3___002"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
    </sbol:Component>
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/LAC4_promoter__5__">
       <sbol:hasSequence>
          <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_LAC4_promoter__5___seq"/>
       </sbol:hasSequence>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/LAC4_promoter__5__"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:description>5' portion of a modified Kluyveromyces lactis LAC4 promoter</sbol:description>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
@@ -153,10 +162,11 @@
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:LAC4_promoter_(5&apos;)"/>
    </sbol:Component>
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/MCS_113">
+      <sbol:name>MCS-113</sbol:name>
       <sbol:hasSequence>
          <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_MCS_113_seq"/>
       </sbol:hasSequence>
-      <sbol:name>MCS-113</sbol:name>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/MCS_113"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
       <sbol:displayId>MCS_113</sbol:displayId>
@@ -166,6 +176,7 @@
       <sbol:description>multiple cloning site</sbol:description>
    </sbol:Component>
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/AmpR_013">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/AmpR_013"/>
       <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
       <sbol:displayId>AmpR_013</sbol:displayId>
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:AmpR-013"/>
@@ -179,16 +190,17 @@
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
    </sbol:Component>
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/AmpR_promoter_009">
+      <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:AmpR_promoter-009"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/AmpR_promoter_009"/>
+      <sbol:displayId>AmpR_promoter_009</sbol:displayId>
+      <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
+      <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
       <sbol:hasSequence>
          <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_AmpR_promoter_009_seq"/>
       </sbol:hasSequence>
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
-      <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:AmpR_promoter-009"/>
-      <sbol:name>AmpR promoter-009</sbol:name>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
-      <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
+      <sbol:name>AmpR promoter-009</sbol:name>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:displayId>AmpR_promoter_009</sbol:displayId>
    </sbol:Component>
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/MCS_105">
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
@@ -201,6 +213,7 @@
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:MCS-105"/>
       <sbol:name>MCS-105</sbol:name>
       <sbol:description>multiple cloning site</sbol:description>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/MCS_105"/>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000001"/>
    </sbol:Component>
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/LAC4_promoter__3___001">
@@ -213,6 +226,7 @@
       </sbol:hasSequence>
       <sbol:displayId>LAC4_promoter__3___001</sbol:displayId>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/LAC4_promoter__3___001"/>
       <sbol:description>3' portion of a modified Kluyveromyces lactis LAC4 promoter</sbol:description>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
    </sbol:Component>
@@ -227,9 +241,11 @@
       <sbol:displayId>alpha_factor_secretion_signal_005</sbol:displayId>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/alpha_factor_secretion_signal_005"/>
       <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
    </sbol:Component>
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/ADH1_promoter_002">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/ADH1_promoter_002"/>
       <sbol:hasSequence>
          <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_ADH1_promoter_002_seq"/>
       </sbol:hasSequence>
@@ -244,6 +260,7 @@
    </sbol:Component>
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/ori_013">
       <sbol:description>high-copy-number ColE1/pMB1/pBR322/pUC origin of replication</sbol:description>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/ori_013"/>
       <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000296"/>
@@ -258,6 +275,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_LAC4_promoter__3___002_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>ggggatcgactcataaaatagtaaccttctaatgcgtatctattgactaccaaccattagtgtggttgcagaaggcggaattttcccttcttcgaatttagcttgctttttcattttttattttccatttttcagtttttgtttgtgtcgaatttagccagttgcttctccaagatgaaaaaaacccctgcgcagtttctgtgctgcaagatcctaatcgacttttccaccccccacaaaagtaaatgttcttttgttacattcgcgtgggtagctagctccccgaatcttcaaaggacttagggactgcactacatcagagtgtgttcacctggtttgctgcctggtttgaaagaaaagagcagggaactcgcgggttcccggcgaataatcatgcgatagtcctttggccttccaagtcgcatgtagagtagacaacagacagggagggcaggaaggatctttcactgagatcctgtatcttgttgggtaagtcggatgaaaggggaatcgtatgagattggagaggatgcggaagaggtaacgccttttgttaacttgtttaattattatggggcaggcgagagggggaggaatgtatgtgtgtgaggcgggcgagacggagccatccaggccaggtagaaatagagaaagccgaatgttagacaatatggcagcgtagtagagtaggtaggtaggcaagtactgctagcaaagaggagaagggtaagctcactcttcgcattccacaccgttagtgtgtcagtttgaacaaaaaaacaatcatcataccaattgatggactgtggactggcttttggaacggcttttcggactgcgattattcgtgaggaatcaaggtaggaatttggtcatatttacggacaacagtgggtgattcccatatcgagtaggaaaacgagatcatggtatcctcagatatgttgcggaaatctgttcaccgcaaagttcagggtgctctggtgggtttcggttggtctttgctttgcttctcccttgtcttgcatgttaataatagcctagcctgtgagccgaaacttagggtaggcttagtgttggaacgtacatatctatcacgttgacttggtttaaccaggcgacctggtagccagccatacccacacacgttttttgtatcttcagtatagttgtgaaaagtgtagcggaaatttgtggtccgagcaacagcgtctttttctagtagtgcggtcggttacttggttgacattggtatttggactttgttgctacaccattcactacttgaagtcgagtgtgaagggtatgatttctagtggtgaacacctttagttacgtaatgttttcattgctgttttacttgagatttcgattgagaaaaaggtatttaatagctcgaatcaatgtgagaacagagagaagatgttcttccctaactcgaaaggtatatgaggcttgtgtttcttaggagaattattattcttttgttatgttgcgcttgtagttggaaaaggtgaagagacaaaagc</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Part_LAC4_promoter__3___002_seq"/>
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:LAC4_promoter_(3&apos;)-002#seq"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>Part_LAC4_promoter__3___002_seq</sbol:displayId>
@@ -265,6 +283,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_LAC4_promoter__5___seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>ctagtaaccaaaggaaaggaacagatagataaaattccgagactgtcaaattaggtttttttctttttttttggcgggagtcagtgggccgaaatatgttcttggcctagaacttaatctggtttgatcatgccaatacttgcctgagtgcccgactttttgcccaccctcttgccttctgtcatccttcaaaacccacctgttttccagccgtatcttcgctcgcatctacacatactgtgccatatcttgtgtgtagccggacgtgactatgaccaaaaacaaacaaggagaactgttcgccgatttgtaacactcctgcatccatccaagtgggtatgcgctatgcaatgttaagctaggtcaggtcagaccaggtccaaggacagcaacttgactgtatgcaacctttaccatctttgcacagaacatacttgtagctagctagttacacttatggaccgaaaaggcaccccaccatgtctgtccggctttagagtacggccgcagaccgctgatttgccttgccaagcagtagtcacaatgcatcgcatgagcacacgggcacgggcacgggcacaggaaccattggcaaaaataccagatacactataccgacgtatatcaagcccaagtttaaaattcctaaatttccgc</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Part_LAC4_promoter__5___seq"/>
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:LAC4_promoter_(5&apos;)#seq"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>Part_LAC4_promoter__5___seq</sbol:displayId>
@@ -272,6 +291,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_LAC4_terminator_002_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>tttatacttagataagtatgtacttacaggtatatttctatgagatactgatgtatacatgcatgataatatttaaacggttattagtgccgattgtcttgtgcgataatgacgttcctatcaaagcaatacacttaccacctattacatgggccaagaaaatattttcgaacttgtttagaatattagcacagagtatatgatgttatccgttagattatgcatgattcattcctacaactttttcgtagcataaggattaattacttggatgccaataaaaaaaaaaaacatcgagaaaatttcagcatgctcagaaacaattgcagtgtatcaaagtaaaaaaaagattttcactacatgttccttttgaagaaagaaaatcatggaacattagatttacaaaaatttaaccaccgctgattaacgattagaccgttaagcgcacaacaggttattagtacagagaaagcattctgtggtgttgccccggactttcttttgcgacataggtaaatcgaataccatcatactatcttttccaatgactccctaaagaaagactcttcttcgatgttgtatacgttggagcatagggcaagaattgtggcttgagatc</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Part_LAC4_terminator_002_seq"/>
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:LAC4_terminator-002#seq"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>Part_LAC4_terminator_002_seq</sbol:displayId>
@@ -279,6 +299,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_MCS_105_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>ctcgagaaaagagaggctgaagctagaagagctagatctcctaggggtaccgtcgacggcgcgcctgcggccgcttaattaaggcct</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Part_MCS_105_seq"/>
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:MCS-105#seq"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>Part_MCS_105_seq</sbol:displayId>
@@ -286,6 +307,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_amdS_001_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>atgcctcaatcctgggaagaactggccgctgataagcgcgcccgcctcgcaaaaaccatccctgatgaatggaaagtccagacgctgcctgcggaagacagcgttattgatttcccaaagaaatcggggatcctttcagaggccgaactgaagatcacagaggcttccgctgcggatcttgtgtccaagctggcggccggagagttgacctcggtggaagttacgctagcattctgtaaacgggcagcaatcgcccagcagttaacaaactgcgcccacgagttcttccctgacgccgctctcgcgcaggcaagggaactcgatgaatactacgcaaagcacaagagacccgttggtccactccatggcctccccatctctctcaaagaccagcttcgagtcaagggctacgaaacatcaatgggctacatctcatggctaaacaagtacgacgaaggggactcggttctgacaaccatgctccgcaaagccggtgccgtcttctacgtcaagacctctgtcccgcagaccctgatggtctgcgagacagtcaacaacatcatcgggcgcaccgtcaacccacgcaacaagaactggtcgtgcggcggcagttctggtggtgagggtgcgatcgttgggattcgtggtggcgtcatcggtgtaggaacggatatcggtggctcgattcgagtgccggccgcgttcaacttcctgtacggtctaaggccgagtcatgggcggctgccgtatgcaaagatggcgaacagcatggagggtcaggagacggtgcacagcgttgtcgggccgattacgcactctgttgaggacctccgcctcttcaccaaatccgtcctcggtcaggagccatggaaatacgactccaaggtcatccccatgccctggcgccagtccgagtcggacattattgcctccaagatcaagaacggcgggctcaatatcggctactacaacttcgacggcaatgtccttccacaccctcctatcctgcgcggcgtggaaactaccgtcgccgcactcgccaaagccggtcacaccgtgaccccgtggacgccatacaagcacgatttcggccacgatctcatctcccatatctacgcggctgacggcagcgccgacgtaatgcgcgatatcagtgcatccggcgagccggcgattccaaatatcaaagacctactgaacccgaacatcaaagctgttaacatgaacgagctctgggacacgcatctccagaagtggaattaccagatggagtaccttgagaaatggcgggaggctgaagaaaaggccgggaaggaactggacgccatcatcgcgccgattacgcctaccgctgcggtacggcatgaccagttccggtactatgggtatgcctctgtgatcaacctgctggatttcacgagcgtggttgttccggttacctttgcggataagaacatcgataagaagaatgagagtttcaaggcggttagtgagcttgatgccctcgtgcaggaagagtatgatccggaggcgtaccatggggcaccggttgcagtgcaggttatcggacggagactcagtgaagagaggacgttggcgattgcagaggaagtggggaagttgctgggaaatgtggtgactccatag</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Part_amdS_001_seq"/>
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:amdS-001#seq"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>Part_amdS_001_seq</sbol:displayId>
@@ -293,6 +315,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_LAC4_terminator_001_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>tttatacttagataagtatgtacttacaggtatatttctatgagatactgatgtatacatgcatgataatatttaaacggttattagtgccgattgtcttgtgcgataatgacgttcctatcaaagcaatacacttaccacctattacatgggccaagaaaatattttcgaacttgtttagaatattagcacagagtatatgatgatatccgttagattatgcatgattcattcctacaactttttcgtagcataaggattaattacttggatgccaataaaaaaaaaaaacatcgagaaaatttcagcatgctcagaaacaattgcagtgtatcaaagtaaaaaaaagattttcactacatgttccttttgaagaaagaaaatcatggaacattagatttacaaaaatttaaccaccgctgattaacgattagaccgttaagcgcacaacaggttattagtacagagaaagcattctgtggtgttgccccggactttcttttgcgacataggtaaatcgaataccatcatactatcttttccaatgactccctaaagaaagactcttcttcgatgttgtatacgttggagcatagggcaagaattgtggcttgagatc</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Part_LAC4_terminator_001_seq"/>
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:LAC4_terminator-001#seq"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>Part_LAC4_terminator_001_seq</sbol:displayId>
@@ -300,6 +323,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_alpha_factor_secretion_signal_005_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>atgaaattctctactatattagccgcatctactgctttaatttccgttgttatggctgctccagtttctaccgaaactgacatcgacgatcttccaatatcggttccagaagaagccttgattggattcattgacttaaccggggatgaagtttccttgttgcctgttaataacggaacccacactggtattctattcttaaacaccaccatcgctgaagctgctttcgctgacaaggatgatctcgagaaaagagaggctgaagct</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Part_alpha_factor_secretion_signal_005_seq"/>
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:alpha-factor_secretion_signal-005#seq"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>Part_alpha_factor_secretion_signal_005_seq</sbol:displayId>
@@ -307,6 +331,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_AmpR_013_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>atgagtattcaacatttccgtgtcgcccttattcccttttttgcggcattttgccttcctgtttttgctcacccagaaacgctggtgaaagtaaaagatgctgaagatcagttgggtgcacgagtgggttacatcgaactggatctcaacagcggtaagatccttgagagttttcgccccgaagaacgttttccaatgatgagcacttttaaagttctgctatgtggcgcggtattatcccgtattgacgccgggcaagagcaactcggtcgccgcatacactattctcagaatgacttggttgagtactcaccagtcacagaaaagcatcttacggatggcatgacagtaagagaattatgcagtgctgccataaccatgagtgataacactgcggccaacttacttctgacaacgatcggaggaccgaaggagctaaccgcttttttgcacaacatgggggatcatgtaactcgccttgatcgttgggaaccggagctgaatgaagccataccaaacgacgagcgtgacaccacgatgcctgtagcaatggcaacaacgttgcgcaaactattaactggcgaactacttactctagcttcccggcaacaattaatagactggatggaggcggataaagttgcaggaccacttctgcgctcggcccttccggctggctggtttattgctgataaatctggagccggtgagcgtgggtctcgcggtatcattgcagcactggggccagatggtaagccctcccgtatcgtagttatctacacgacggggagtcaggcaactatggatgaacgaaatagacagatcgctgagataggtgcctcactgattaagcattggtaa</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Part_AmpR_013_seq"/>
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:AmpR-013#seq"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>Part_AmpR_013_seq</sbol:displayId>
@@ -314,6 +339,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_ori_013_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>ttgagatcctttttttctgcgcgtaatctgctgcttgcaaacaaaaaaaccaccgctaccagcggtggtttgtttgccggatcaagagctaccaactctttttccgaaggtaactggcttcagcagagcgcagataccaaatactgttcttctagtgtagccgtagttaggccaccacttcaagaactctgtagcaccgcctacatacctcgctctgctaatcctgttaccagtggctgctgccagtggcgataagtcgtgtcttaccgggttggactcaagacgatagttaccggataaggcgcagcggtcgggctgaacggggggttcgtgcacacagcccagcttggagcgaacgacctacaccgaactgagatacctacagcgtgagctatgagaaagcgccacgcttcccgaagggagaaaggcggacaggtatccggtaagcggcagggtcggaacaggagagcgcacgagggagcttccagggggaaacgcctggtatctttatagtcctgtcgggtttcgccacctctgacttgagcgtcgatttttgtgatgctcgtcaggggggcggagcctatggaaa</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Part_ori_013_seq"/>
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:ori-013#seq"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>Part_ori_013_seq</sbol:displayId>
@@ -321,6 +347,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_LAC4_promoter__3___001_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>ggggatcgactcataaaatagtaaccttctaatgcgtatctattgactaccaaccattagtgtggttgcagaaggcggaattctcccttcttcgaattcagcttgctttttcattttttattttccatttttcagtttttgtttgtgtcgaatttagccagttgcttctccaagatgaaaaaaacccctgcgcagtttctgtgctgcaagatcctaatcgacttttccaccccccacaaaagtaaatgttcttttgttacattcgcgtgggtagctagctccccgaatcttcaaaggacttagggactgcactacatcagagtgtgttcacctggtttgctgcctggtttgaaagaaaagagcagggaactcgcgggttcccggcgaataatcatgcgatagtcctttggccttccaagtcgcatgtagagtagacaacagacagggagggcaggaaggatctttcactgagatcctgtatcttgttgggtaagtcggatgaaaggggaatcgtatgagattggagaggatgcggaagaggtaacgccttttgttaacttgtttaattattatggggcaggcgagagggggaggaatgtatgtgtgtgaggcgggcgagacggagccatccaggccaggtagaaatagagaaagccgaatgttagacaatatggcagcgtagtagagtaggtaggtaggcaagtactgctagcaaagaggagaagggtaagctcactcttcgcattccacaccgttagtgtgtcagtttgaacaaaaaaacaatcatcataccaattgatggactgtggactggcttttggaacggcttttcggactgcgattattcgtgaggaatcaaggtaggaatttggtcatatttacggacaacagtgggtgattcccatatggagtaggaaaacgagatcatggtatcctcagatatgttgcggaattctgttcaccgcaaagttcagggtgctctggtgggtttcggttggtctttgctttgcttctcccttgtcttgcatgttaataatagcctagcctgtgagccgaaacttagggtaggcttagtgttggaacgtacatatgtatcacgttgacttggtttaaccaggcgacctggtagccagccatacccacacacgttttttgtatcttcagtatagttgtgaaaagtgtagcggaaatttgtggtccgagcaacagcgtctttttctagtagtgcggtcggttacttggttgacattggtatttggactttgttgctacaccattcactacttgaagtcgagtgtgaagggtatgatttctagtggtgaacacctttagttacgtaatgttttcattgctgttttacttgagatttcgattgagaaaaaggtatttaatagctcgaatcaatgtgagaacagagagaagatgttcttccctaactcgaaaggtatatgaggcttgtgtttcttaggagaattattattcttttgttatgttgcgcttgtagttggaaaaggtgaagagacaaaagc</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Part_LAC4_promoter__3___001_seq"/>
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:LAC4_promoter_(3&apos;)-001#seq"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>Part_LAC4_promoter__3___001_seq</sbol:displayId>
@@ -328,6 +355,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_amdS_002_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>atgcctcaatcctgggaagaactggccgctgataagcgcgcccgcctcgcaaaaaccatccctgatgaatggaaagtccagacgctgcctgcggaagacagcgttattgatttcccaaagaaatcgggcatcctttcagaggccgaactgaagatcacagaggcttccgctgcggatcttgtgtccaagctggcggccggagagttgacctcggtggaagttacgctagcattctgtaaacgggcagcaatcgcccagcagttaacaaactgcgcccacgagttcttccctgacgccgctctcgcgcaggcaagggaactcgatgaatactacgcaaagcacaagagacccgttggtccacttcatggcctccccatctctctcaaagaccagcttcgagtcaagggctacgaaacatcaatgggctacatctcatggctaaacaagtacgacgaaggggactcggttctgacaaccatgctccgcaaagccggtgccgtcttctacgtcaagacctctgtcccgcagaccctgatggtctgcgagacagtcaacaacatcatcgggcgcaccgtcaacccacgcaacaagaactggtcgtgcggcggcagttctggtggtgagggtgcgatcgttgggattcgtggtggcgtcatcggtgtaggaacggacatcggtggctcgattcgagtgccggccgcgttcaacttcctgtacggtctaaggccgagtcatgggcggctgccgtatgcaaagatggcgaacagcatggagggtcaggagacggtgcacagcgttgtcgggccgattacgcactctgttgaggacctccgcctcttcaccaaatccgtcctcggtcaggagccttggaaatacgactccaaggtcatccccatgccctggcgccagtccgagtcggacattattgcctccaagatcaagaacggcgggctcaatatcggctactacaacttcgacggcaatgtccttccacaccctcctatcctgcgcggcgtggaaactaccgtcgccgcactcgccaaagccggtcacaccgtgaccccgtggacgccatacaagcacgatttcggccacgatctcatctcccatatctacgcggctgacggcagcgccgacgtaatgcgcgacatcagtgcatccggcgagccggcgattccaaatatcaaagacctactgaacccgaacatcaaagctgttaacatgaacgagctctgggacacgcatctccagaagtggaattaccagatggagtaccttgagaaatggcgggaggctgaagaaaaggccgggaaggaactggacgccatcatcgcgccgattacgcctaccgctgcggtacggcatgaccagttccggtactatgggtatgcctctgtgatcaacctgctggatttcacgagcgtggttgttccggttacctttgcggataagaacatcgataagaagaatgagagtttcaaggcggttagtgagcttgatgccctcgtgcaggaagagtatgatccggaggcgtatcatggggcaccggttgcagtgcaggttatcggacggagactcagtgaagagaggacgttggcgattgcagaggaagtggggaagttgctgggaaatgtggtgactccatag</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Part_amdS_002_seq"/>
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:amdS-002#seq"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>Part_amdS_002_seq</sbol:displayId>
@@ -335,6 +363,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_f1_ori_008_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>acgcgccctgtagcggcgcattaagcgcggcgggtgtggtggttacgcgcagcgtgaccgctacacttgccagcgccctagcgcccgctcctttcgctttcttcccttcctttctcgccacgttcgccggctttccccgtcaagctctaaatcgggggctccctttagggttccgatttagtgctttacggcacctcgaccccaaaaaacttgattagggtgatggttcacgtagtgggccatcgccctgatagacggtttttcgccctttgacgttggagtccacgttctttaatagtggactcttgttccaaactggaacaacactcaaccctatctcggtctattcttttgatttataagggattttgccgatttcggcctattggttaaaaaatgagctgatttaacaaaaatttaacgcgaattttaacaaaatattaacgcttacaattt</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Part_f1_ori_008_seq"/>
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:f1_ori-008#seq"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>Part_f1_ori_008_seq</sbol:displayId>
@@ -342,6 +371,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_MCS_113_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>ctcgagaaaagagaggctgaagctagaagagctcatatgtccatgggcggccgcgatatcgtcgacggatccgaattccctgcaggtaattaaataaaggcct</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Part_MCS_113_seq"/>
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:MCS-113#seq"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>Part_MCS_113_seq</sbol:displayId>
@@ -349,6 +379,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_AmpR_promoter_009_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>cgcggaacccctatttgtttatttttctaaatacattcaaatatgtatccgctcatgagacaataaccctgataaatgcttcaataatattgaaaaaggaagagt</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Part_AmpR_promoter_009_seq"/>
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:AmpR_promoter-009#seq"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>Part_AmpR_promoter_009_seq</sbol:displayId>
@@ -356,6 +387,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Part_ADH1_promoter_002_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>atccttttgttgtttccgggtgtacaatatggacttcctcttttctggcaaccaaacccatacatcgggattcctataataccttcgttggtctccctaacatgtaggtggcggaggggagatatacaatagaacagataccagacaagacataatgggctaaacaagactacaccaattacactgcctcattgatggtggtacataacgaactaatactgtagccctagacttgatagccatcatcatatcgaagtttcactaccctttttccatttgccatctattgaagtaataataggcgcatgcaacttcttttctttttttttcttttctctctcccccgttgttgtctcaccatatccgcaatgacaaaaaaatgatggaagacactaaaggaaaaaattaacgacaaagacagcaccaacagatgtcgttgttccagagctgatgaggggtatctcgaagcacacgaaactttttccttccttcattcacgcacactactctctaatgagcaacggtatacggccttccttccagttacttgaatttgaaataaaaaaaagtttgctgtcttgctatcaagtataaatagacctgcaattattaatcttttgtttcctcgtcattgttctcgttccctttcttccttgtttctttttctgcacaatatttcaagctataccaagcatacaatcaa</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Part_ADH1_promoter_002_seq"/>
       <prov:wasDerivedFrom rdf:resource="http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:ADH1_promoter-002#seq"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>Part_ADH1_promoter_002_seq</sbol:displayId>

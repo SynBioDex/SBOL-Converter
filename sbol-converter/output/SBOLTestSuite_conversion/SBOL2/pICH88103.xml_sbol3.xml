@@ -1,15 +1,16 @@
 <rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:gbConv="http://sbols.org/genBankConversion#"
-    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:SO="https://identifiers.org/SO:"
-    xmlns:EDAM="https://identifiers.org/edam:"
     xmlns:sbol="http://sbols.org/v3#"
+    xmlns:genbank="http://www.ncbi.nlm.nih.gov/genbank#"
+    xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:EDAM="https://identifiers.org/edam:"
     xmlns:CHEBI="https://identifiers.org/CHEBI:"
     xmlns:prov="http://www.w3.org/ns/prov#"
-    xmlns:genbank="http://www.ncbi.nlm.nih.gov/genbank#"
     xmlns:SBO="https://identifiers.org/SBO:"
-    xmlns:GO="https://identifiers.org/GO:"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/pICH88103">
       <genbank:division>UNA</genbank:division>
@@ -20,6 +21,9 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH88103/annotation1">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH88103/annotation1/range">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pICH88103/annotation1/range"/>
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>1241</sbol:end>
                   <sbol:start>231</sbol:start>
@@ -31,6 +35,7 @@
             </sbol:hasLocation>
             <gbConv:label>Sm/Sp no DraIII</gbConv:label>
             <gbConv:vntifkey>4</gbConv:vntifkey>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pICH88103/annotation1"/>
             <sbol:name>Sm/Sp no DraIII</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
             <sbol:displayId>annotation1</sbol:displayId>
@@ -40,6 +45,9 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH88103/annotation0">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH88103/annotation0/range">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pICH88103/annotation0/range"/>
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>4</sbol:end>
                   <sbol:start>1</sbol:start>
@@ -51,6 +59,7 @@
             </sbol:hasLocation>
             <gbConv:label>AATG 4bp overhang</gbConv:label>
             <gbConv:featureType>Misc._Feature</gbConv:featureType>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pICH88103/annotation0"/>
             <sbol:name>AATG 4bp overhang</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
             <sbol:displayId>annotation0</sbol:displayId>
@@ -62,6 +71,9 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH88103/annotation5">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH88103/annotation5/range">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pICH88103/annotation5/range"/>
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>2251</sbol:end>
                   <sbol:start>2248</sbol:start>
@@ -73,6 +85,7 @@
             </sbol:hasLocation>
             <gbConv:label>GGAG 4bp overhang</gbConv:label>
             <gbConv:featureType>Misc._Feature</gbConv:featureType>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pICH88103/annotation5"/>
             <sbol:name>GGAG 4bp overhang</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
             <sbol:displayId>annotation5</sbol:displayId>
@@ -81,11 +94,15 @@
       <sbol:hasSequence>
          <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH88103_seq"/>
       </sbol:hasSequence>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pICH88103"/>
       <sbol:type rdf:resource="https://identifiers.org/SO:0000988"/>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH88103/annotation2">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH88103/annotation2/range">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pICH88103/annotation2/range"/>
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>1208</sbol:end>
                   <sbol:start>1208</sbol:start>
@@ -98,6 +115,7 @@
             <gbConv:label>G to A</gbConv:label>
             <gbConv:vntifkey>62</gbConv:vntifkey>
             <gbConv:featureType>Mutation</gbConv:featureType>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pICH88103/annotation2"/>
             <sbol:name>G to A</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
             <sbol:displayId>annotation2</sbol:displayId>
@@ -107,6 +125,9 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH88103/annotation6">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH88103/annotation6/range">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pICH88103/annotation6/range"/>
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>2610</sbol:end>
                   <sbol:start>2252</sbol:start>
@@ -118,6 +139,7 @@
             </sbol:hasLocation>
             <gbConv:label>ocs- octopine synthase promoter and 5' UTR (Agrobacterium tumefaciens)</gbConv:label>
             <gbConv:featureType>Promoter</gbConv:featureType>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pICH88103/annotation6"/>
             <sbol:name>ocs- octopine synthase promoter and 5' UTR (Agrobacterium tumefaciens)</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
             <sbol:displayId>annotation6</sbol:displayId>
@@ -127,6 +149,9 @@
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH88103/annotation3">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH88103/annotation3/range">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pICH88103/annotation3/range"/>
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>2015</sbol:end>
                   <sbol:start>1401</sbol:start>
@@ -139,6 +164,7 @@
             <gbConv:label>rep (pMB1)</gbConv:label>
             <gbConv:vntifkey>21</gbConv:vntifkey>
             <gbConv:featureType>Misc._feature</gbConv:featureType>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pICH88103/annotation3"/>
             <sbol:name>rep (pMB1)</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
             <sbol:displayId>annotation3</sbol:displayId>
@@ -146,8 +172,14 @@
       </sbol:hasFeature>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH88103/annotation4">
+            <gbConv:featureType>Replication_ori</gbConv:featureType>
+            <gbConv:label>ORI</gbConv:label>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pICH88103/annotation4"/>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH88103/annotation4/range">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pICH88103/annotation4/range"/>
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001031"/>
                   <sbol:end>2000</sbol:end>
                   <sbol:start>2000</sbol:start>
@@ -157,13 +189,11 @@
                   <sbol:displayId>range</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
-            <gbConv:note>RNaseH cleavage point</gbConv:note>
-            <gbConv:label>ORI</gbConv:label>
             <gbConv:vntifkey>33</gbConv:vntifkey>
-            <gbConv:featureType>Replication_ori</gbConv:featureType>
-            <sbol:name>ORI</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
+            <sbol:name>ORI</sbol:name>
             <sbol:displayId>annotation4</sbol:displayId>
+            <gbConv:note>RNaseH cleavage point</gbConv:note>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
@@ -173,6 +203,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH88103_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>AATGTGAGACCACGAAGTGGCTCTTCAGTGGACGAAAGGGCCTCGTGATACGCCTATTTTTATAGGTTAATGTCATGATAATAATGGTTTCTTAGACGTCAGGTGGCACTTTTCGGGGAAATGTGCGCGGAACCCCTATTTGTTTATTTTTCTAAATACATTCAAATATGTATCCGCTCATGAGACAATAACCCTGATAAATGCTTCAATAATATTGAAAAAGGAAGAGTATGCGCTCACGCAACTGGTCCAGAACCTTGACCGAACGCAGCGGTGGTAACGGCGCAGTGGCGGTTTTCATGGCTTGTTATGACTGTTTTTTTGGGGTACAGTCTATGCCTCGGGCATCCAAGCAGCAAGCGCGTTACGCCGTGGGTCGATGTTTGATGTTATGGAGCAGCAACGATGTTACGCAGCAGGGCAGTCGCCCTAAAACAAAGTTAAACATCATGAGGGAAGCGGTGATCGCCGAAGTATCGACTCAACTATCAGAGGTAGTTGGCGTCATCGAGCGCCATCTCGAACCGACGTTGCTGGCCGTACATTTGTACGGCTCCGCAGTGGATGGCGGCCTGAAGCCACACAGCGATATTGATTTGCTGGTTACGGTGACCGTAAGGCTTGATGAAACAACGCGGCGAGCTTTGATCAACGACCTTTTGGAAACTTCGGCTTCCCCTGGAGAGAGCGAGATTCTCCGCGCTGTAGAAGTCACCATTGTTGTGCACGACGACATCATTCCGTGGCGTTATCCAGCTAAGCGCGAACTGCAATTTGGAGAATGGCAGCGCAATGACATTCTTGCAGGTATCTTCGAGCCAGCCACGATCGACATTGATCTGGCTATCTTGCTGACAAAAGCAAGAGAACATAGCGTTGCCTTGGTAGGTCCAGCGGCGGAGGAACTCTTTGATCCGGTTCCTGAACAGGATCTATTTGAGGCGCTAAATGAAACCTTAACGCTATGGAACTCGCCGCCCGACTGGGCTGGCGATGAGCGAAATGTAGTGCTTACGTTGTCCCGCATTTGGTACAGCGCAGTAACCGGCAAAATCGCGCCGAAGGATGTCGCTGCCGACTGGGCAATGGAGCGCCTGCCGGCCCAGTATCAGCCCGTCATACTTGAAGCTAGACAGGCTTATCTTGGACAAGAAGAAGATCGCTTGGCCTCGCGCGCAGATCAGTTGGAAGAATTTGTCCATTACGTAAAAGGCGAGATCACCAAGGTAGTCGGCAAATAACTGTCAGACCAAGTTTACTCATATATACTTTAGATTGATTTAAAACTTCATTTTTAATTTAAAAGGATCTAGGTGAAGATCCTTTTTGATAATCTCATGACCAAAATCCCTTAACGTGAGTTTTCGTTCCACTGAGCGTCAGACCCCGTAGAAAAGATCAAAGGATCTTCTTGAGATCCTTTTTTTCTGCGCGTAATCTGCTGCTTGCAAACAAAAAAACCACCGCTACCAGCGGTGGTTTGTTTGCCGGATCAAGAGCTACCAACTCTTTTTCCGAAGGTAACTGGCTTCAGCAGAGCGCAGATACCAAATACTGTCCTTCTAGTGTAGCCGTAGTTAGGCCACCACTTCAAGAACTCTGTAGCACCGCCTACATACCTCGCTCTGCTAATCCTGTTACCAGTGGCTGCTGCCAGTGGCGATAAGTCGTGTCTTACCGGGTTGGACTCAAGACGATAGTTACCGGATAAGGCGCAGCGGTCGGGCTGAACGGGGGGTTCGTGCACACAGCCCAGCTTGGAGCGAACGACCTACACCGAACTGAGATACCTACAGCGTGAGCTATGAGAAAGCGCCACGCTTCCCGAAGGGAGAAAGGCGGACAGGTATCCGGTAAGCGGCAGGGTCGGAACAGGAGAGCGCACGAGGGAGCTTCCAGGGGGAAACGCCTGGTATCTTTATAGTCCTGTCGGGTTTCGCCACCTCTGACTTGAGCGTCGATTTTTGTGATGCTCGTCAGGGGGGCGGAGCCTATGGAAAAACGCCAGCAACGCGGCCTTTTTACGGTTCCTGGCCTTTTGCTGGCCTTTTGCTCACATGTTCTTTCCTGCGTTATCCCCTGATTCTGTGGATAACCGTATTACCGCCTTTGAGTGAGCTGATACCGCTCGCCGCAGCCGAACGACCGAGCGCAGCGAGTCAGTGAGCGAGGAAGCGGAAGAGCGCCCAATACGCAAACCGCCTCTCCCCGCGCGTTGGCCGATTCATTAATCACTCTGTGGTCTCAGGAGCTGAAAGCGACGTTGGATGTTAACATCTACAAATTGCCTTTTCTTATCGACCATGTACGTAAGCGCTTACGTTTTTGGTGGACCCTTGAGGAAACTGGTAGCTGTTGTGGGCCTGTGCTCTCAAGATGGATCATTAATTTCCACCTTCACCTACGATGGGGGGCATCGCACCGGTGAGTAATATTGTACGGCTAAGAGCGAATTTGGCCTGTAAGATCCTTTTTACCGACAACTCATCCACATTGATGGTAGGCAGAAAGTTAAAGGATTATCGCAAGTCAATACTTGCCCATTCATTGATCTATTTAAAGGTGTGGCCTCAAGGATAATCGCCAAACCATTATATTTGCAATCTACCA</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pICH88103_seq"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>pICH88103_seq</sbol:displayId>
    </sbol:Sequence>

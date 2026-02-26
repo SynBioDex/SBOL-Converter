@@ -55,9 +55,9 @@ public class ModuleDefinitionToComponentConverter implements EntityConverter<Mod
 			moduleToSubComponentConverter.convert(doc, sbol3Component, sbol2ModuleDefinition, sbol2Module, parameters);
 		}
 		
-		if (sbol2ModuleDefinition.getModels()!=null){
-			for (Model model: sbol2ModuleDefinition.getModels()) {
-				sbol3Component.addModel(Util.createSBOL3Uri(model));
+		if (sbol2ModuleDefinition.getModelURIs()!=null){
+			for (URI model: sbol2ModuleDefinition.getModelURIs()) {
+				sbol3Component.addModel(Util.createSBOL3Uri(model, parameters));
 			}	
 		}
 		return sbol3Component;

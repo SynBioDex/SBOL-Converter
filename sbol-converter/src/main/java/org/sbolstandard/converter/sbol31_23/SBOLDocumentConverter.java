@@ -1,5 +1,8 @@
 package org.sbolstandard.converter.sbol31_23;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import org.sbolstandard.converter.Util;
 import org.sbolstandard.converter.sbol31_23.provenance.ActivityConverter;
 import org.sbolstandard.converter.sbol31_23.provenance.AgentConverter;
@@ -22,9 +25,14 @@ import org.sbolstandard.core3.entity.Implementation;
 
 public class SBOLDocumentConverter {
 
+	 /*static {
+        Util.turnOffHibernateInfo();
+    }*/
+	 
 	public org.sbolstandard.core2.SBOLDocument convert(SBOLDocument sbol3Doc)
 			throws SBOLGraphException, SBOLValidationException {
 		org.sbolstandard.core2.SBOLDocument sbol2Doc = new org.sbolstandard.core2.SBOLDocument();
+		try{
 
 		Util.copyNamespacesFrom3_to_2(sbol3Doc, sbol2Doc);
         		
@@ -39,7 +47,6 @@ public class SBOLDocumentConverter {
 			ComponentConverter comConverter = new ComponentConverter();
 			ComponentToModuleDefinitionConverter comToModuleConverter = new ComponentToModuleDefinitionConverter();
 
-			
 			for (Component c : sbol3Doc.getComponents()) {
 				if (Util.isModuleDefinition(c)) {
 					comToModuleConverter.convert(sbol2Doc, c);
@@ -60,7 +67,6 @@ public class SBOLDocumentConverter {
 			ExperimentalDataConverter edConverter = new ExperimentalDataConverter();
 			for (ExperimentalData ed : sbol3Doc.getExperimentalData()) {
 				edConverter.convert(sbol2Doc, ed);
-
 			}
 		}
 
@@ -95,26 +101,25 @@ public class SBOLDocumentConverter {
 		// Mapsto conversion
 		if (sbol3Doc.getComponents()!=null){
 			for (Component component : sbol3Doc.getComponents()) {
-				
-				// WE NEED TO CHECK IF THIS IS A MODULE DEFINITION OR COMPONENT DEFINITION
-				if (Util.isModuleDefinition(component)) {
-					// Module Definition
-					ModuleDefinition moduleDefinition = sbol2Doc.getModuleDefinition(Util.createSBOL2Uri(component.getUri()));
-					MapsToMainConverter.convertForModuleDefinition(sbol2Doc, component, moduleDefinition);
-					
-				} else {
-					// Component Definition 
-					ComponentDefinition componentDefinition = sbol2Doc.getComponentDefinition(Util.createSBOL2Uri(component.getUri()));
-					MapsToMainConverter.convertForComponentDefinition(sbol2Doc, component, componentDefinition);
-				}				
+				if (component.getComponentReferences() != null && !component.getComponentReferences().isEmpty()) {
+					// WE NEED TO CHECK IF THIS IS A MODULE DEFINITION OR COMPONENT DEFINITION
+					if (Util.isModuleDefinition(component)) {
+						// Module Definition
+						ModuleDefinition moduleDefinition = sbol2Doc.getModuleDefinition(Util.createSBOL2Uri(component.getUri()));
+						MapsToMainConverter.convertForModuleDefinition(sbol2Doc, component, moduleDefinition);
+						
+					} else {
+						// Component Definition 
+						ComponentDefinition componentDefinition = sbol2Doc.getComponentDefinition(Util.createSBOL2Uri(component.getUri()));
+						MapsToMainConverter.convertForComponentDefinition(sbol2Doc, component, componentDefinition);
+					}			
+				}	
 			}
 		}
 
 		if (sbol3Doc.getTopLevelMetadataList() != null) {
 			TopLevelMetaDataConverter tlmConverter = new TopLevelMetaDataConverter();
 			for (TopLevelMetadata tlm : sbol3Doc.getTopLevelMetadataList()) {
-				
-
 				tlmConverter.convert(sbol2Doc, tlm);
 			}
 		}
@@ -139,8 +144,19 @@ public class SBOLDocumentConverter {
 				activityConverter.convert(sbol2Doc, activity);
 			}
 		}
-		
+
+		if (sbol3Doc.getCombinatorialDerivations() != null) {
+			CombinatorialDerivationConverter combinatorialDerivationConverter = new CombinatorialDerivationConverter();
+			for (org.sbolstandard.core3.entity.CombinatorialDerivation combinatorialDerivation : sbol3Doc.getCombinatorialDerivations()) {
+				combinatorialDerivationConverter.convert(sbol2Doc, combinatorialDerivation);
+			}
+		}
 		
 		return sbol2Doc;
+		}
+		catch (Exception e) {
+			Util.getLogger().error("SBOL3-to-2 converter is still under development and could not perform the conversion for this use case. The development team appreciates if you could please share the error details and the design file with them (Email: g.misirli@keele.ac.uk, m.unal@keele.ac.uk). Error during SBOL3 to SBOL2 conversion: " + e.getMessage(), e);
+			throw new RuntimeException("Error during SBOL3 to SBOL2 conversion: " + e.getMessage(), e);
+		}
 	}
 }

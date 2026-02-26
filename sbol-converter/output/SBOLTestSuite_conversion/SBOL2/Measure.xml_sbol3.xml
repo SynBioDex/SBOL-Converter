@@ -8,14 +8,17 @@
     xmlns:prov="http://www.w3.org/ns/prov#"
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/cd">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/cd"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:type rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17634"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000247"/>
       <sbol:displayId>cd</sbol:displayId>
    </sbol:Component>
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/empty_md">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/empty_md"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
       <sbol:displayId>empty_md</sbol:displayId>
@@ -23,8 +26,10 @@
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/md">
       <sbol:hasFeature>
          <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/md/m">
+            <backport2_3:sbol2OriginatesFromModule>true</backport2_3:sbol2OriginatesFromModule>
             <sbol:hasMeasure>
                <sbol:Identified rdf:about="http://www.async.ece.utah.edu/md/m/md_measure">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/md/m/md_measure"/>
                   <om:hasUnit rdf:resource="http://purl.obolibrary.org/obo/UO_0000175"/>
                   <om:hasNumericalValue>11.28</om:hasNumericalValue>
                   <sbol:displayId>md_measure</sbol:displayId>
@@ -37,8 +42,10 @@
       </sbol:hasFeature>
       <sbol:hasInteraction>
          <sbol:Interaction rdf:about="http://www.async.ece.utah.edu/md/i">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/md/i"/>
             <sbol:hasMeasure>
                <sbol:Identified rdf:about="http://www.async.ece.utah.edu/md/i/i_measure">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/md/i/i_measure"/>
                   <om:hasUnit rdf:resource="http://purl.obolibrary.org/obo/UO_0000077"/>
                   <om:hasNumericalValue>0.04</om:hasNumericalValue>
                   <sbol:displayId>i_measure</sbol:displayId>
@@ -47,8 +54,10 @@
             </sbol:hasMeasure>
             <sbol:hasParticipation>
                <sbol:Participation rdf:about="http://www.async.ece.utah.edu/md/i/p">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/md/i/p"/>
                   <sbol:hasMeasure>
                      <sbol:Identified rdf:about="http://www.async.ece.utah.edu/md/i/p/pMeasure">
+                        <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/md/i/p/pMeasure"/>
                         <om:hasUnit rdf:resource="http://purl.obolibrary.org/obo/UO_0000021"/>
                         <om:hasNumericalValue>1.23</om:hasNumericalValue>
                         <sbol:displayId>pMeasure</sbol:displayId>
@@ -57,8 +66,10 @@
                   </sbol:hasMeasure>
                   <sbol:participant>
                      <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/md/fc">
+                        <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/md/fc"/>
                         <sbol:hasMeasure>
                            <sbol:Identified rdf:about="http://www.async.ece.utah.edu/md/fc/fc_measure">
+                              <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/md/fc/fc_measure"/>
                               <sbol:type rdf:resource="https://identifiers.org/SBO:0000610"/>
                               <om:hasUnit rdf:resource="http://purl.obolibrary.org/obo/UO_0000021"/>
                               <om:hasNumericalValue>0.04</om:hasNumericalValue>
@@ -85,6 +96,7 @@
          </sbol:Interface>
       </sbol:hasInterface>
       <sbol:hasFeature rdf:resource="http://www.async.ece.utah.edu/md/fc"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/md"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
       <sbol:displayId>md</sbol:displayId>

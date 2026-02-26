@@ -1,0 +1,304 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/AmpR_promoter_009>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "AmpR_promoter_009";
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        sbol:hasSequence              <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartAmpR_promoter009seq>;
+        sbol:name                     "AmpR promoter-009";
+        sbol:role                     SO:0000167;
+        sbol:type                     SO:0000987 , SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:AmpR_promoter-009> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartLAC4_terminator002seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "PartLAC4_terminator002seq";
+        sbol:elements                 "tttatacttagataagtatgtacttacaggtatatttctatgagatactgatgtatacatgcatgataatatttaaacggttattagtgccgattgtcttgtgcgataatgacgttcctatcaaagcaatacacttaccacctattacatgggccaagaaaatattttcgaacttgtttagaatattagcacagagtatatgatgttatccgttagattatgcatgattcattcctacaactttttcgtagcataaggattaattacttggatgccaataaaaaaaaaaaacatcgagaaaatttcagcatgctcagaaacaattgcagtgtatcaaagtaaaaaaaagattttcactacatgttccttttgaagaaagaaaatcatggaacattagatttacaaaaatttaaccaccgctgattaacgattagaccgttaagcgcacaacaggttattagtacagagaaagcattctgtggtgttgccccggactttcttttgcgacataggtaaatcgaataccatcatactatcttttccaatgactccctaaagaaagactcttcttcgatgttgtatacgttggagcatagggcaagaattgtggcttgagatc";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:LAC4_terminator-002#seq> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/ADH1_promoter_002>
+        rdf:type                      sbol:Component;
+        sbol:description              "promoter for alcohol dehydrogenase 1";
+        sbol:displayId                "ADH1_promoter_002";
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        sbol:hasSequence              <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartADH1_promoter002seq>;
+        sbol:name                     "ADH1 promoter-002";
+        sbol:role                     SO:0000167;
+        sbol:type                     SBO:0000251 , SO:0000987;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:ADH1_promoter-002> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/MCS_105>
+        rdf:type                      sbol:Component;
+        sbol:description              "multiple cloning site";
+        sbol:displayId                "MCS_105";
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        sbol:hasSequence              <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartMCS105seq>;
+        sbol:name                     "MCS-105";
+        sbol:role                     SO:0000001;
+        sbol:type                     SBO:0000251 , SO:0000987;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:MCS-105> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Partori013seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "Partori013seq";
+        sbol:elements                 "ttgagatcctttttttctgcgcgtaatctgctgcttgcaaacaaaaaaaccaccgctaccagcggtggtttgtttgccggatcaagagctaccaactctttttccgaaggtaactggcttcagcagagcgcagataccaaatactgttcttctagtgtagccgtagttaggccaccacttcaagaactctgtagcaccgcctacatacctcgctctgctaatcctgttaccagtggctgctgccagtggcgataagtcgtgtcttaccgggttggactcaagacgatagttaccggataaggcgcagcggtcgggctgaacggggggttcgtgcacacagcccagcttggagcgaacgacctacaccgaactgagatacctacagcgtgagctatgagaaagcgccacgcttcccgaagggagaaaggcggacaggtatccggtaagcggcagggtcggaacaggagagcgcacgagggagcttccagggggaaacgcctggtatctttatagtcctgtcgggtttcgccacctctgacttgagcgtcgatttttgtgatgctcgtcaggggggcggagcctatggaaa";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:ori-013#seq> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/LAC4_terminator_001>
+        rdf:type                      sbol:Component;
+        sbol:description              "transcription terminator for Kluyveromyces lactis LAC4";
+        sbol:displayId                "LAC4_terminator_001";
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        sbol:hasSequence              <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartLAC4_terminator001seq>;
+        sbol:name                     "LAC4 terminator-001";
+        sbol:role                     SO:0000141;
+        sbol:type                     SO:0000987 , SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:LAC4_terminator-001> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/amdS_001>
+        rdf:type                      sbol:Component;
+        sbol:description              "confers ability to process acetamide for selection in fungal cells";
+        sbol:displayId                "amdS_001";
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        sbol:hasSequence              <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartamdS001seq>;
+        sbol:name                     "amdS-001";
+        sbol:role                     SO:0000316;
+        sbol:type                     SO:0000987 , SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:amdS-001> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Partf1_ori008seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "Partf1_ori008seq";
+        sbol:elements                 "acgcgccctgtagcggcgcattaagcgcggcgggtgtggtggttacgcgcagcgtgaccgctacacttgccagcgccctagcgcccgctcctttcgctttcttcccttcctttctcgccacgttcgccggctttccccgtcaagctctaaatcgggggctccctttagggttccgatttagtgctttacggcacctcgaccccaaaaaacttgattagggtgatggttcacgtagtgggccatcgccctgatagacggtttttcgccctttgacgttggagtccacgttctttaatagtggactcttgttccaaactggaacaacactcaaccctatctcggtctattcttttgatttataagggattttgccgatttcggcctattggttaaaaaatgagctgatttaacaaaaatttaacgcgaattttaacaaaatattaacgcttacaattt";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:f1_ori-008#seq> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/AmpR_013>
+        rdf:type                      sbol:Component;
+        sbol:description              "confers resistance to ampicillin, carbenicillin, and related antibiotics";
+        sbol:displayId                "AmpR_013";
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        sbol:hasSequence              <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartAmpR013seq>;
+        sbol:name                     "AmpR-013";
+        sbol:role                     SO:0000316;
+        sbol:type                     SBO:0000251 , SO:0000987;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:AmpR-013> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartamdS001seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "PartamdS001seq";
+        sbol:elements                 "atgcctcaatcctgggaagaactggccgctgataagcgcgcccgcctcgcaaaaaccatccctgatgaatggaaagtccagacgctgcctgcggaagacagcgttattgatttcccaaagaaatcggggatcctttcagaggccgaactgaagatcacagaggcttccgctgcggatcttgtgtccaagctggcggccggagagttgacctcggtggaagttacgctagcattctgtaaacgggcagcaatcgcccagcagttaacaaactgcgcccacgagttcttccctgacgccgctctcgcgcaggcaagggaactcgatgaatactacgcaaagcacaagagacccgttggtccactccatggcctccccatctctctcaaagaccagcttcgagtcaagggctacgaaacatcaatgggctacatctcatggctaaacaagtacgacgaaggggactcggttctgacaaccatgctccgcaaagccggtgccgtcttctacgtcaagacctctgtcccgcagaccctgatggtctgcgagacagtcaacaacatcatcgggcgcaccgtcaacccacgcaacaagaactggtcgtgcggcggcagttctggtggtgagggtgcgatcgttgggattcgtggtggcgtcatcggtgtaggaacggatatcggtggctcgattcgagtgccggccgcgttcaacttcctgtacggtctaaggccgagtcatgggcggctgccgtatgcaaagatggcgaacagcatggagggtcaggagacggtgcacagcgttgtcgggccgattacgcactctgttgaggacctccgcctcttcaccaaatccgtcctcggtcaggagccatggaaatacgactccaaggtcatccccatgccctggcgccagtccgagtcggacattattgcctccaagatcaagaacggcgggctcaatatcggctactacaacttcgacggcaatgtccttccacaccctcctatcctgcgcggcgtggaaactaccgtcgccgcactcgccaaagccggtcacaccgtgaccccgtggacgccatacaagcacgatttcggccacgatctcatctcccatatctacgcggctgacggcagcgccgacgtaatgcgcgatatcagtgcatccggcgagccggcgattccaaatatcaaagacctactgaacccgaacatcaaagctgttaacatgaacgagctctgggacacgcatctccagaagtggaattaccagatggagtaccttgagaaatggcgggaggctgaagaaaaggccgggaaggaactggacgccatcatcgcgccgattacgcctaccgctgcggtacggcatgaccagttccggtactatgggtatgcctctgtgatcaacctgctggatttcacgagcgtggttgttccggttacctttgcggataagaacatcgataagaagaatgagagtttcaaggcggttagtgagcttgatgccctcgtgcaggaagagtatgatccggaggcgtaccatggggcaccggttgcagtgcaggttatcggacggagactcagtgaagagaggacgttggcgattgcagaggaagtggggaagttgctgggaaatgtggtgactccatag";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:amdS-001#seq> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/alpha_factor_secretion_signal_005>
+        rdf:type                      sbol:Component;
+        sbol:description              "Cleavage by the Kex2 protease occurs after the dibasic KR sequence. The EA dipeptides are then removed by";
+        sbol:displayId                "alpha_factor_secretion_signal_005";
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        sbol:hasSequence              <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Partalphafactor_secretion_signal005seq>;
+        sbol:name                     "alpha-factor secretion signal-005";
+        sbol:role                     SO:0000316;
+        sbol:type                     SO:0000987 , SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:alpha-factor_secretion_signal-005> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/LAC4_promoter__3___001>
+        rdf:type                      sbol:Component;
+        sbol:description              "3' portion of a modified Kluyveromyces lactis LAC4 promoter";
+        sbol:displayId                "LAC4_promoter__3___001";
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        sbol:hasSequence              <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartLAC4_promoter_3001seq>;
+        sbol:name                     "LAC4 promoter (3')-001";
+        sbol:role                     SO:0000167;
+        sbol:type                     SBO:0000251 , SO:0000987;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:LAC4_promoter_(3')-001> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartamdS002seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "PartamdS002seq";
+        sbol:elements                 "atgcctcaatcctgggaagaactggccgctgataagcgcgcccgcctcgcaaaaaccatccctgatgaatggaaagtccagacgctgcctgcggaagacagcgttattgatttcccaaagaaatcgggcatcctttcagaggccgaactgaagatcacagaggcttccgctgcggatcttgtgtccaagctggcggccggagagttgacctcggtggaagttacgctagcattctgtaaacgggcagcaatcgcccagcagttaacaaactgcgcccacgagttcttccctgacgccgctctcgcgcaggcaagggaactcgatgaatactacgcaaagcacaagagacccgttggtccacttcatggcctccccatctctctcaaagaccagcttcgagtcaagggctacgaaacatcaatgggctacatctcatggctaaacaagtacgacgaaggggactcggttctgacaaccatgctccgcaaagccggtgccgtcttctacgtcaagacctctgtcccgcagaccctgatggtctgcgagacagtcaacaacatcatcgggcgcaccgtcaacccacgcaacaagaactggtcgtgcggcggcagttctggtggtgagggtgcgatcgttgggattcgtggtggcgtcatcggtgtaggaacggacatcggtggctcgattcgagtgccggccgcgttcaacttcctgtacggtctaaggccgagtcatgggcggctgccgtatgcaaagatggcgaacagcatggagggtcaggagacggtgcacagcgttgtcgggccgattacgcactctgttgaggacctccgcctcttcaccaaatccgtcctcggtcaggagccttggaaatacgactccaaggtcatccccatgccctggcgccagtccgagtcggacattattgcctccaagatcaagaacggcgggctcaatatcggctactacaacttcgacggcaatgtccttccacaccctcctatcctgcgcggcgtggaaactaccgtcgccgcactcgccaaagccggtcacaccgtgaccccgtggacgccatacaagcacgatttcggccacgatctcatctcccatatctacgcggctgacggcagcgccgacgtaatgcgcgacatcagtgcatccggcgagccggcgattccaaatatcaaagacctactgaacccgaacatcaaagctgttaacatgaacgagctctgggacacgcatctccagaagtggaattaccagatggagtaccttgagaaatggcgggaggctgaagaaaaggccgggaaggaactggacgccatcatcgcgccgattacgcctaccgctgcggtacggcatgaccagttccggtactatgggtatgcctctgtgatcaacctgctggatttcacgagcgtggttgttccggttacctttgcggataagaacatcgataagaagaatgagagtttcaaggcggttagtgagcttgatgccctcgtgcaggaagagtatgatccggaggcgtatcatggggcaccggttgcagtgcaggttatcggacggagactcagtgaagagaggacgttggcgattgcagaggaagtggggaagttgctgggaaatgtggtgactccatag";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:amdS-002#seq> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/ori_013>
+        rdf:type                      sbol:Component;
+        sbol:description              "high-copy-number ColE1/pMB1/pBR322/pUC origin of replication";
+        sbol:displayId                "ori_013";
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        sbol:hasSequence              <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Partori013seq>;
+        sbol:name                     "ori-013";
+        sbol:role                     SO:0000296;
+        sbol:type                     SBO:0000251 , SO:0000987;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:ori-013> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/MCS_113>
+        rdf:type                      sbol:Component;
+        sbol:description              "multiple cloning site";
+        sbol:displayId                "MCS_113";
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        sbol:hasSequence              <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartMCS113seq>;
+        sbol:name                     "MCS-113";
+        sbol:role                     SO:0000001;
+        sbol:type                     SBO:0000251 , SO:0000987;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:MCS-113> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartADH1_promoter002seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "PartADH1_promoter002seq";
+        sbol:elements                 "atccttttgttgtttccgggtgtacaatatggacttcctcttttctggcaaccaaacccatacatcgggattcctataataccttcgttggtctccctaacatgtaggtggcggaggggagatatacaatagaacagataccagacaagacataatgggctaaacaagactacaccaattacactgcctcattgatggtggtacataacgaactaatactgtagccctagacttgatagccatcatcatatcgaagtttcactaccctttttccatttgccatctattgaagtaataataggcgcatgcaacttcttttctttttttttcttttctctctcccccgttgttgtctcaccatatccgcaatgacaaaaaaatgatggaagacactaaaggaaaaaattaacgacaaagacagcaccaacagatgtcgttgttccagagctgatgaggggtatctcgaagcacacgaaactttttccttccttcattcacgcacactactctctaatgagcaacggtatacggccttccttccagttacttgaatttgaaataaaaaaaagtttgctgtcttgctatcaagtataaatagacctgcaattattaatcttttgtttcctcgtcattgttctcgttccctttcttccttgtttctttttctgcacaatatttcaagctataccaagcatacaatcaa";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:ADH1_promoter-002#seq> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Partalphafactor_secretion_signal005seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "Partalphafactor_secretion_signal005seq";
+        sbol:elements                 "atgaaattctctactatattagccgcatctactgctttaatttccgttgttatggctgctccagtttctaccgaaactgacatcgacgatcttccaatatcggttccagaagaagccttgattggattcattgacttaaccggggatgaagtttccttgttgcctgttaataacggaacccacactggtattctattcttaaacaccaccatcgctgaagctgctttcgctgacaaggatgatctcgagaaaagagaggctgaagct";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:alpha-factor_secretion_signal-005#seq> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartLAC4_promoter_3001seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "PartLAC4_promoter_3001seq";
+        sbol:elements                 "ggggatcgactcataaaatagtaaccttctaatgcgtatctattgactaccaaccattagtgtggttgcagaaggcggaattctcccttcttcgaattcagcttgctttttcattttttattttccatttttcagtttttgtttgtgtcgaatttagccagttgcttctccaagatgaaaaaaacccctgcgcagtttctgtgctgcaagatcctaatcgacttttccaccccccacaaaagtaaatgttcttttgttacattcgcgtgggtagctagctccccgaatcttcaaaggacttagggactgcactacatcagagtgtgttcacctggtttgctgcctggtttgaaagaaaagagcagggaactcgcgggttcccggcgaataatcatgcgatagtcctttggccttccaagtcgcatgtagagtagacaacagacagggagggcaggaaggatctttcactgagatcctgtatcttgttgggtaagtcggatgaaaggggaatcgtatgagattggagaggatgcggaagaggtaacgccttttgttaacttgtttaattattatggggcaggcgagagggggaggaatgtatgtgtgtgaggcgggcgagacggagccatccaggccaggtagaaatagagaaagccgaatgttagacaatatggcagcgtagtagagtaggtaggtaggcaagtactgctagcaaagaggagaagggtaagctcactcttcgcattccacaccgttagtgtgtcagtttgaacaaaaaaacaatcatcataccaattgatggactgtggactggcttttggaacggcttttcggactgcgattattcgtgaggaatcaaggtaggaatttggtcatatttacggacaacagtgggtgattcccatatggagtaggaaaacgagatcatggtatcctcagatatgttgcggaattctgttcaccgcaaagttcagggtgctctggtgggtttcggttggtctttgctttgcttctcccttgtcttgcatgttaataatagcctagcctgtgagccgaaacttagggtaggcttagtgttggaacgtacatatgtatcacgttgacttggtttaaccaggcgacctggtagccagccatacccacacacgttttttgtatcttcagtatagttgtgaaaagtgtagcggaaatttgtggtccgagcaacagcgtctttttctagtagtgcggtcggttacttggttgacattggtatttggactttgttgctacaccattcactacttgaagtcgagtgtgaagggtatgatttctagtggtgaacacctttagttacgtaatgttttcattgctgttttacttgagatttcgattgagaaaaaggtatttaatagctcgaatcaatgtgagaacagagagaagatgttcttccctaactcgaaaggtatatgaggcttgtgtttcttaggagaattattattcttttgttatgttgcgcttgtagttggaaaaggtgaagagacaaaagc";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:LAC4_promoter_(3')-001#seq> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/amdS_002>
+        rdf:type                      sbol:Component;
+        sbol:description              "confers ability to process acetamide for selection in fungal cells";
+        sbol:displayId                "amdS_002";
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        sbol:hasSequence              <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartamdS002seq>;
+        sbol:name                     "amdS-002";
+        sbol:role                     SO:0000316;
+        sbol:type                     SBO:0000251 , SO:0000987;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:amdS-002> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/LAC4_terminator_002>
+        rdf:type                      sbol:Component;
+        sbol:description              "transcription terminator for Kluyveromyces lactis LAC4";
+        sbol:displayId                "LAC4_terminator_002";
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        sbol:hasSequence              <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartLAC4_terminator002seq>;
+        sbol:name                     "LAC4 terminator-002";
+        sbol:role                     SO:0000141;
+        sbol:type                     SO:0000987 , SBO:0000251;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:LAC4_terminator-002> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartLAC4_promoter_5seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "PartLAC4_promoter_5seq";
+        sbol:elements                 "ctagtaaccaaaggaaaggaacagatagataaaattccgagactgtcaaattaggtttttttctttttttttggcgggagtcagtgggccgaaatatgttcttggcctagaacttaatctggtttgatcatgccaatacttgcctgagtgcccgactttttgcccaccctcttgccttctgtcatccttcaaaacccacctgttttccagccgtatcttcgctcgcatctacacatactgtgccatatcttgtgtgtagccggacgtgactatgaccaaaaacaaacaaggagaactgttcgccgatttgtaacactcctgcatccatccaagtgggtatgcgctatgcaatgttaagctaggtcaggtcagaccaggtccaaggacagcaacttgactgtatgcaacctttaccatctttgcacagaacatacttgtagctagctagttacacttatggaccgaaaaggcaccccaccatgtctgtccggctttagagtacggccgcagaccgctgatttgccttgccaagcagtagtcacaatgcatcgcatgagcacacgggcacgggcacgggcacaggaaccattggcaaaaataccagatacactataccgacgtatatcaagcccaagtttaaaattcctaaatttccgc";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:LAC4_promoter_(5')#seq> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Kluyveromyces_lactis>
+        rdf:type                      sbol:Collection;
+        sbol:description              "This is a collection of features that have been associated with Kluyveromyces lactis plasmids downloaded from the SnapGene Resources repository (http://www.snapgene.com).";
+        sbol:displayId                "Kluyveromyces_lactis";
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        sbol:member                   <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/alpha_factor_secretion_signal_005> , <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/AmpR_013> , <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/AmpR_promoter_009> , <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/ori_013> , <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/LAC4_promoter__5__> , <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/MCS_113> , <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/LAC4_promoter__3___002> , <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/amdS_002> , <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/MCS_105> , <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/LAC4_terminator_002> , <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/ADH1_promoter_002> , <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/LAC4_promoter__3___001> , <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/f1_ori_008> , <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/LAC4_terminator_001> , <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/amdS_001>;
+        sbol:name                     "Collection of Kluyveromyces lactis features";
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Collection:Kluyveromyces_lactis> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/f1_ori_008>
+        rdf:type                      sbol:Component;
+        sbol:description              "f1 bacteriophage origin of replication; arrow indicates direction of (+) strand synthesis";
+        sbol:displayId                "f1_ori_008";
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        sbol:hasSequence              <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Partf1_ori008seq>;
+        sbol:name                     "f1 ori-008";
+        sbol:role                     SO:0000296;
+        sbol:type                     SBO:0000251 , SO:0000987;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:f1_ori-008> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartAmpR013seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "PartAmpR013seq";
+        sbol:elements                 "atgagtattcaacatttccgtgtcgcccttattcccttttttgcggcattttgccttcctgtttttgctcacccagaaacgctggtgaaagtaaaagatgctgaagatcagttgggtgcacgagtgggttacatcgaactggatctcaacagcggtaagatccttgagagttttcgccccgaagaacgttttccaatgatgagcacttttaaagttctgctatgtggcgcggtattatcccgtattgacgccgggcaagagcaactcggtcgccgcatacactattctcagaatgacttggttgagtactcaccagtcacagaaaagcatcttacggatggcatgacagtaagagaattatgcagtgctgccataaccatgagtgataacactgcggccaacttacttctgacaacgatcggaggaccgaaggagctaaccgcttttttgcacaacatgggggatcatgtaactcgccttgatcgttgggaaccggagctgaatgaagccataccaaacgacgagcgtgacaccacgatgcctgtagcaatggcaacaacgttgcgcaaactattaactggcgaactacttactctagcttcccggcaacaattaatagactggatggaggcggataaagttgcaggaccacttctgcgctcggcccttccggctggctggtttattgctgataaatctggagccggtgagcgtgggtctcgcggtatcattgcagcactggggccagatggtaagccctcccgtatcgtagttatctacacgacggggagtcaggcaactatggatgaacgaaatagacagatcgctgagataggtgcctcactgattaagcattggtaa";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:AmpR-013#seq> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartLAC4_promoter_3002seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "PartLAC4_promoter_3002seq";
+        sbol:elements                 "ggggatcgactcataaaatagtaaccttctaatgcgtatctattgactaccaaccattagtgtggttgcagaaggcggaattttcccttcttcgaatttagcttgctttttcattttttattttccatttttcagtttttgtttgtgtcgaatttagccagttgcttctccaagatgaaaaaaacccctgcgcagtttctgtgctgcaagatcctaatcgacttttccaccccccacaaaagtaaatgttcttttgttacattcgcgtgggtagctagctccccgaatcttcaaaggacttagggactgcactacatcagagtgtgttcacctggtttgctgcctggtttgaaagaaaagagcagggaactcgcgggttcccggcgaataatcatgcgatagtcctttggccttccaagtcgcatgtagagtagacaacagacagggagggcaggaaggatctttcactgagatcctgtatcttgttgggtaagtcggatgaaaggggaatcgtatgagattggagaggatgcggaagaggtaacgccttttgttaacttgtttaattattatggggcaggcgagagggggaggaatgtatgtgtgtgaggcgggcgagacggagccatccaggccaggtagaaatagagaaagccgaatgttagacaatatggcagcgtagtagagtaggtaggtaggcaagtactgctagcaaagaggagaagggtaagctcactcttcgcattccacaccgttagtgtgtcagtttgaacaaaaaaacaatcatcataccaattgatggactgtggactggcttttggaacggcttttcggactgcgattattcgtgaggaatcaaggtaggaatttggtcatatttacggacaacagtgggtgattcccatatcgagtaggaaaacgagatcatggtatcctcagatatgttgcggaaatctgttcaccgcaaagttcagggtgctctggtgggtttcggttggtctttgctttgcttctcccttgtcttgcatgttaataatagcctagcctgtgagccgaaacttagggtaggcttagtgttggaacgtacatatctatcacgttgacttggtttaaccaggcgacctggtagccagccatacccacacacgttttttgtatcttcagtatagttgtgaaaagtgtagcggaaatttgtggtccgagcaacagcgtctttttctagtagtgcggtcggttacttggttgacattggtatttggactttgttgctacaccattcactacttgaagtcgagtgtgaagggtatgatttctagtggtgaacacctttagttacgtaatgttttcattgctgttttacttgagatttcgattgagaaaaaggtatttaatagctcgaatcaatgtgagaacagagagaagatgttcttccctaactcgaaaggtatatgaggcttgtgtttcttaggagaattattattcttttgttatgttgcgcttgtagttggaaaaggtgaagagacaaaagc";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:LAC4_promoter_(3')-002#seq> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/LAC4_promoter__3___002>
+        rdf:type                      sbol:Component;
+        sbol:description              "3' portion of a modified Kluyveromyces lactis LAC4 promoter";
+        sbol:displayId                "LAC4_promoter__3___002";
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        sbol:hasSequence              <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartLAC4_promoter_3002seq>;
+        sbol:name                     "LAC4 promoter (3')-002";
+        sbol:role                     SO:0000167;
+        sbol:type                     SBO:0000251 , SO:0000987;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:LAC4_promoter_(3')-002> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartAmpR_promoter009seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "PartAmpR_promoter009seq";
+        sbol:elements                 "cgcggaacccctatttgtttatttttctaaatacattcaaatatgtatccgctcatgagacaataaccctgataaatgcttcaataatattgaaaaaggaagagt";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:AmpR_promoter-009#seq> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartMCS105seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "PartMCS105seq";
+        sbol:elements                 "ctcgagaaaagagaggctgaagctagaagagctagatctcctaggggtaccgtcgacggcgcgcctgcggccgcttaattaaggcct";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:MCS-105#seq> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/LAC4_promoter__5__>
+        rdf:type                      sbol:Component;
+        sbol:description              "5' portion of a modified Kluyveromyces lactis LAC4 promoter";
+        sbol:displayId                "LAC4_promoter__5__";
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        sbol:hasSequence              <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartLAC4_promoter_5seq>;
+        sbol:name                     "LAC4 promoter (5')";
+        sbol:role                     SO:0000167;
+        sbol:type                     SBO:0000251 , SO:0000987;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:LAC4_promoter_(5')> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartMCS113seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "PartMCS113seq";
+        sbol:elements                 "ctcgagaaaagagaggctgaagctagaagagctcatatgtccatgggcggccgcgatatcgtcgacggatccgaattccctgcaggtaattaaataaaggcct";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:MCS-113#seq> .
+
+<http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/PartLAC4_terminator001seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "PartLAC4_terminator001seq";
+        sbol:elements                 "tttatacttagataagtatgtacttacaggtatatttctatgagatactgatgtatacatgcatgataatatttaaacggttattagtgccgattgtcttgtgcgataatgacgttcctatcaaagcaatacacttaccacctattacatgggccaagaaaatattttcgaacttgtttagaatattagcacagagtatatgatgatatccgttagattatgcatgattcattcctacaactttttcgtagcataaggattaattacttggatgccaataaaaaaaaaaaacatcgagaaaatttcagcatgctcagaaacaattgcagtgtatcaaagtaaaaaaaagattttcactacatgttccttttgaagaaagaaaatcatggaacattagatttacaaaaatttaaccaccgctgattaacgattagaccgttaagcgcacaacaggttattagtacagagaaagcattctgtggtgttgccccggactttcttttgcgacataggtaaatcgaataccatcatactatcttttccaatgactccctaaagaaagactcttcttcgatgttgtatacgttggagcatagggcaagaattgtggcttgagatc";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038>;
+        backport2_3:sbol2OriginalURI  <http://genocad.org/SBOL/doi:10.6084/m9.figshare.1159038/Part:LAC4_terminator-001#seq> .

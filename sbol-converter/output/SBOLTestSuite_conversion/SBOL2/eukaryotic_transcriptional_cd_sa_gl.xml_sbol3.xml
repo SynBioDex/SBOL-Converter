@@ -2,7 +2,9 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:SO="https://identifiers.org/SO:"
     xmlns:sbol="http://sbols.org/v3#"
+    xmlns:j.0="http://sbols.org/v2#"
     xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:EDAM="https://identifiers.org/edam:"
@@ -13,31 +15,39 @@
     xmlns:sbh="http://wiki.synbiohub.org/wiki/Terms/synbiohub#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422">
+      <sbol:hasFeature>
+         <sbol:LocalSubComponent rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/annotation942815">
+            <backport2_3:sbol2GenericLocation>
+               <j.0:GenericLocation rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/annotation942815/gl942815">
+                  <backport2_3:sbol2Entity>true</backport2_3:sbol2Entity>
+                  <j.0:orientation rdf:resource="http://sbols.org/v2#inline"/>
+                  <sbol:displayId>gl942815</sbol:displayId>
+                  <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
+               </j.0:GenericLocation>
+            </backport2_3:sbol2GenericLocation>
+            <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+            <backport2_3:sbol2OriginalURI rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/annotation942815/1"/>
+            <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
+            <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+            <sbol:displayId>annotation942815</sbol:displayId>
+         </sbol:LocalSubComponent>
+      </sbol:hasFeature>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="https://synbiohub.org/public/igem/BBa_E0422/1"/>
+      <backport2_3:sbol3TempSequenceURI>
+         <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422_seq"/>
+      </backport2_3:sbol3TempSequenceURI>
       <sbol:hasSequence>
          <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422_seq"/>
       </sbol:hasSequence>
-      <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/annotation942815">
-            <sbol:hasLocation>
-               <sbol:EntireSequence rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422/annotation942815/gl942815">
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/1/BBa_E0422_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>gl942815</sbol:displayId>
-               </sbol:EntireSequence>
-            </sbol:hasLocation>
-            <sbol:displayId>annotation942815</sbol:displayId>
-         </sbol:SequenceFeature>
-      </sbol:hasFeature>
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
-      <sbol:role rdf:resource="https://wiki.synbiohub.org/wiki/Terms/igem#partType/Reporter"/>
       <sbol:hasNamespace rdf:resource="https://synbiohub.org/public/igem"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <sbol:role rdf:resource="https://wiki.synbiohub.org/wiki/Terms/igem#partType/Reporter"/>
+      <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
       <sbol:displayId>BBa_E0422</sbol:displayId>
    </sbol:Component>
    <sbol:Component rdf:about="http://michael.zhang/1/Pro_GeneratedInstance82">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/Pro_GeneratedInstance82/1"/>
       <sbol:hasNamespace rdf:resource="http://michael.zhang"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:displayId>Pro_GeneratedInstance82</sbol:displayId>

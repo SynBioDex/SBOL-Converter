@@ -16,16 +16,9 @@ public class UsageConverter implements ChildEntityConverter<org.sbolstandard.cor
 
 		Activity sbol3ParentActivity = (Activity) parent;
 		
-		System.out.println("Usage Entity: " + sbol2Usage.getEntity());
 		if (sbol2Usage.getEntityURI() == null) {
 			throw new SBOLGraphException("Usage entity is null: " + sbol2Usage.getDisplayId());
 		}
-		System.out.println("Usage Display ID: " + sbol2Usage.getDisplayId());
-
-		// TODO: Entity CONVERTER
-	
-
-		//Usage sbol3Usage = sbol3ParentActivity.createUsage(Util.createSBOL3Uri(sbol2Usage), Util.createSBOL3Uri(sbol2Usage.getEntityURI(),parameters));
 		Usage sbol3Usage = null;
 		if (sbol2Usage.getDisplayId()!=null){
 			sbol3Usage = sbol3ParentActivity.createUsage(sbol2Usage.getDisplayId(), Util.createSBOL3Uri(sbol2Usage.getEntityURI(),parameters));
@@ -35,7 +28,7 @@ public class UsageConverter implements ChildEntityConverter<org.sbolstandard.cor
 			parameters.addMapping(sbol2Usage.getIdentity(), sbol3Usage.getUri());
 		}
 		sbol3Usage.setRoles(Util.toList(sbol2Usage.getRoles()));
-
+		
 		Util.copyIdentified(sbol2Usage, sbol3Usage, parameters);
 
 		return sbol3Usage;

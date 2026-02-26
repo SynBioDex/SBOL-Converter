@@ -8,6 +8,7 @@
     xmlns:prov="http://www.w3.org/ns/prov#"
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_J23119">
       <prov:wasDerivedFrom rdf:resource="http://partsregistry.org/Part:BBa_J23119"/>
@@ -16,12 +17,19 @@
       </sbol:hasSequence>
       <sbol:displayId>BBa_J23119</sbol:displayId>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_J23119"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:name>J23119 promoter</sbol:name>
+      <backport2_3:sbol3TempSequenceURI>
+         <sbol:Sequence rdf:about="http://partsregistry.org/cd/BBa_J23119_seq"/>
+      </backport2_3:sbol3TempSequenceURI>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://partsregistry.org/cd/BBa_J23119/rangeAt12">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://partsregistry.org/cd/BBa_J23119/rangeAt12/location3">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_J23119/rangeAt12/location3"/>
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>1197</sbol:end>
                   <sbol:start>69</sbol:start>
@@ -31,6 +39,7 @@
                   <sbol:displayId>location3</sbol:displayId>
                </sbol:Range>
             </sbol:hasLocation>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_J23119/rangeAt12"/>
             <sbol:displayId>rangeAt12</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>

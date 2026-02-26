@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<rdf:RDF xmlns="https://sbolstandard.org/examples/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sbol="http://sbols.org/v2#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
+  <sbol:ComponentDefinition rdf:about="https://sbolstandard.org/examples/E0040">
+    <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/E0040"/>
+    <sbol:displayId>E0040</sbol:displayId>
+    <dcterms:title>E0040</dcterms:title>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="https://sbolstandard.org/examples/E0040/SequenceFeature1">
+        <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/E0040/SequenceFeature1"/>
+        <sbol:displayId>SequenceFeature1</sbol:displayId>
+        <sbol:location>
+          <sbol:Range rdf:about="https://sbolstandard.org/examples/E0040/SequenceFeature1/Range1">
+            <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/E0040/SequenceFeature1/Range1"/>
+            <sbol:displayId>Range1</sbol:displayId>
+            <sbol:start>1</sbol:start>
+            <sbol:end>3</sbol:end>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequence rdf:resource="https://sbolstandard.org/examples/E0040_Sequence1"/>
+  </sbol:ComponentDefinition>
+  <sbol:Sequence rdf:about="https://sbolstandard.org/examples/E0040_Sequence1">
+    <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/E0040_Sequence1"/>
+    <sbol:displayId>E0040_Sequence1</sbol:displayId>
+    <dcterms:title>Sequence1</dcterms:title>
+    <dcterms:description>E0040 sequence</dcterms:description>
+    <sbol:elements>atgcgtaaaggagaagaacttttcactggagttgtcccaattcttgttgaattagatggtgatgttaatgggcacaaattttctgtcagtggagagggtgaaggtgatgcaacatacggaaaacttacccttaaatttatttgcactactggaaaactacctgttccatggccaacacttgtcactactttcggttatggtgttcaatgctttgcgagatacccagatcatatgaaacagcatgactttttcaagagtgccatgcccgaaggttatgtacaggaaagaactatatttttcaaagatgacgggaactacaagacacgtgctgaagtcaagtttgaaggtgatacccttgttaatagaatcgagttaaaaggtattgattttaaagaagatggaaacattcttggacacaaattggaatacaactataactcacacaatgtatacatcatggcagacaaacaaaagaatggaatcaaagttaacttcaaaattagacacaacattgaagatggaagcgttcaactagcagaccattatcaacaaaatactccaattggcgatggccctgtccttttaccagacaaccattacctgtccacacaatctgccctttcgaaagatcccaacgaaaagagagaccacatggtccttcttgagtttgtaacagctgctgggattacacatggcatggatgaactatacaaataataa</sbol:elements>
+    <sbol:encoding rdf:resource="http://www.chem.qmul.ac.uk/iubmb/misc/naseq.html"/>
+  </sbol:Sequence>
+</rdf:RDF>

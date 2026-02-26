@@ -13,6 +13,8 @@ import org.sbolstandard.core3.entity.Sequence;
 
 import java.net.URI;
 
+import org.sbolstandard.converter.ConverterNameSpace;
+import org.sbolstandard.converter.ConverterVocabulary;
 import org.sbolstandard.converter.Util;
 
 public class SequenceAnnotationToSubComponentConverter
@@ -26,6 +28,7 @@ public class SequenceAnnotationToSubComponentConverter
 		ComponentDefinition sbol2ParentCompDef = (ComponentDefinition) sbol2ParentSeqAnno;		
 		URI sbol3ComponentURI=parameters.getMapping(sbol2SeqAnno.getComponent().getIdentity());
 		SubComponent sbol3SubComponent = document.getIdentified(sbol3ComponentURI, SubComponent.class);
+		sbol3SubComponent.addAnnotation(ConverterVocabulary.Two_to_Three.sbol2SequenceAnnotationURI, sbol2SeqAnno.getIdentity());
 		
 		//Roles also come from Component entities
 		if (sbol3SubComponent.getRoles()==null){ 

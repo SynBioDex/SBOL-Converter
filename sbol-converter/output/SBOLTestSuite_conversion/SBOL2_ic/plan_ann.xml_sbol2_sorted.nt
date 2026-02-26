@@ -1,0 +1,6 @@
+<http://sys-bio.org/Plan/characterization_protocol/1.0.0> <http://purl.org/dc/terms/created> "2003-12-04T12:00:00Z" .
+<http://sys-bio.org/Plan/characterization_protocol/1.0.0> <http://sbols.org/v2#attachment> <http://sys-bio.org/Attachment/characterization_protocol/1.0.0> .
+<http://sys-bio.org/Plan/characterization_protocol/1.0.0> <http://sbols.org/v2#displayId> "characterization_protocol" .
+<http://sys-bio.org/Plan/characterization_protocol/1.0.0> <http://sbols.org/v2#persistentIdentity> <http://sys-bio.org/Plan/characterization_protocol> .
+<http://sys-bio.org/Plan/characterization_protocol/1.0.0> <http://sbols.org/v2#version> "1.0.0" .
+<http://sys-bio.org/Plan/characterization_protocol/1.0.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Plan> .

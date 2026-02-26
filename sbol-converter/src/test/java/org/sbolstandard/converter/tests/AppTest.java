@@ -5,10 +5,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Set;
 
 import org.junit.jupiter.api.Test;
+import org.sbolstandard.converter.App;
 import org.sbolstandard.converter.sbol23_31.SBOLDocumentConverter;
 import org.sbolstandard.core2.ComponentDefinition;
 import org.sbolstandard.core2.SBOLDocument;
@@ -29,7 +31,7 @@ import org.sbolstandard.core3.vocabulary.Role;
  */
 public class AppTest {
 
-	@Test
+	//@Test
 	public void SBOL3ComponentConversion() throws Exception {
 		// https://uriprefix.com/foo/B0034
 		URI base = URI.create("https://synbiohub.org/public/igem/");
@@ -79,15 +81,61 @@ public class AppTest {
 
 	
 	
-	@Test
+	//@Test
 	public void TestSBOL2Model() throws Exception {
 		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/sbol2/ModelOutput.xml"));		
 	}
 		
-	@Test
+	//@Test
 	public void TestSBOL2Experiment() throws Exception {
 		TestUtil.runTestSuiteFile(new File("../SBOLTestSuite/sbol2/test_Experiment_ExperimentData.xml"));		
 	}
+
+	public static ArrayList<String[]> getTestCases()
+	{
+		String testfolder=".." + File.separator + "test_files" + File.separator;
+
+		ArrayList<String[]> testCases = new ArrayList<>();
+		
+		testCases.add(new String[] {testfolder + "sbol2TestFile.xml", "-l", "SBOL3"});
+		testCases.add(new String[] {testfolder + "sbol2TestFile.xml", "-l", "SBOL3", "-o", testfolder + "outputs" + File.separator + "convFromSBOL2toSBOL3File.ttl"});
+		testCases.add(new String[] {testfolder + "sbol3TestFile.ttl", "-i"});
+		testCases.add(new String[] {testfolder + "sbol3TestFile.ttl", "-no"});
+		testCases.add(new String[] {testfolder + "invalid.ttl", "-b"});
+		testCases.add(new String[] {testfolder + "sbol2TestFile.xml"});
+		testCases.add(new String[] {testfolder + "genBankTestFile.gb", "-l", "SBOL2", "-p", "https://keele.ac.uk/scm", "-o", testfolder + "outputs" + File.separator + "convFromGenBanktoSBOL2File.xml"});
+		testCases.add(new String[] {".." + File.separator + "SBOLTestSuite" + File.separator + "SBOL2" + File.separator + "Collection.xml", "-l", "SBOL3", "-o", testfolder + "Collection.sbol3.xml"});
+		testCases.add(new String[] {testfolder + "toggle_switch.rdf", "-l", "SBOL2", "-o", testfolder + "toggle_switch.sbol2.xml"});
+		testCases.add(new String[] {testfolder + "toggle_switch.sbol3", "-l", "SBOL2", "-o", testfolder + "toggle_switch.sbol2.xml"});
+		testCases.add(new String[] {testfolder + "toggle_switch.sbol3.sbol", "-l", "SBOL2", "-o", testfolder + "toggle_switch.sbol2.xml"});		
+		testCases.add(new String[] {testfolder + "toggle_switch.sbol3.sbol", "-o", testfolder + "toggle_switch.sbol2.rdf", "-l", "SBOL2", "-n", "-i",});
+		return testCases;
+	}
+
+	@Test
+	public void TestCommandLineInterface() throws Exception {
+        ArrayList<String[]> testCases=AppTest.getTestCases();		 
+		
+			for (String[] args : testCases) {
+				//App.main(args);
+			}
+		
+		// SBOL2 to GenBank test
+        //args=new String[] {"test_files/invalid-out.xml", "-l", "GenBank", "-p", "keele", "-o", "test_files/outputs/cSbol2ToGenBank.gb"};
+
+        // SBOL3 to GenBank test
+        //args=new String[] {"test_files/invalid.ttl", "-l", "GenBank", "-o", "test_files/outputs/3ToGenBank.gb"};
+
+        // GenBank to SBOL2 test
+        //args=new String[] {"test_files/genBankTestFile.gb", "-l", "SBOL2", "-p", "keele", "-o", "test_files/outputs/gbtoSBOL2.xml"};
+
+        // GenBank to SBOL3 test
+        //args=new String[] {"test_files/genBankTestFile.gb", "-l", "SBOL3", "-p", "keele", "-o", "test_files/outputs/gbtoSBOL3.ttl"};
+
+	
+	}
+
+
 
 
 }

@@ -1,0 +1,970 @@
+BASE   <https://keele.ac.uk/scm/updated/>
+PREFIX :      <https://keele.ac.uk/scm/updated/>
+PREFIX CHEBI: <https://identifiers.org/CHEBI:>
+PREFIX EDAM:  <https://identifiers.org/edam:>
+PREFIX GO:    <https://identifiers.org/GO:>
+PREFIX SBO:   <https://identifiers.org/SBO:>
+PREFIX SO:    <https://identifiers.org/SO:>
+PREFIX om:    <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:  <http://www.w3.org/ns/prov#>
+PREFIX sbol:  <http://sbols.org/v3#>
+
+:extracted_1861_2839  a    sbol:Component;
+        sbol:displayId     "extracted_1861_2839";
+        sbol:hasFeature    <extracted_1861_2839/sccJ_insulator> , <extracted_1861_2839/rrnB_T1_terminator> , <extracted_1861_2839/pTet> , <extracted_1861_2839/T7Te_terminator> , <extracted_1861_2839/srpr_rbs> , <extracted_1861_2839/srpr>;
+        sbol:hasNamespace  <../updated>;
+        sbol:hasSequence   :extracted_1861_2839_sequence;
+        sbol:name          "extracted_1861_2839";
+        sbol:role          SO:0000804;
+        sbol:type          SBO:0000251 .
+
+<pAND_Int2/sc_bm3R1_28>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_bm3R1_28";
+        sbol:hasLocation  <pAND_Int2/sc_bm3R1_28/Range1>;
+        sbol:instanceOf   :bm3R1 .
+
+:bm3r1_rbs  a                sbol:Component;
+        sbol:displayId       "bm3r1_rbs";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :bm3r1_rbs_sequence;
+        sbol:name            "bm3r1_rbs";
+        sbol:role            SO:0000110;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation20> .
+
+:pAND_Int2_sequence  a     sbol:Sequence;
+        sbol:displayId     "pAND_Int2_sequence";
+        sbol:elements      "gcttcctcgctcactgactcgctgcacgaggcagacctcagcgctagcggagtgtatactggcttactatgttggcactgatgagggtgtcagtgaagtgcttcatgtggcaggagaaaaaaggctgcaccggtgcgtcagcagaatatgtgatacaggatatattccgcttcctcgctcactgactcgctacgctcggtcgttcgactgcggcgagcggaaatggcttacgaacggggcggagatttcctggaagatgccaggaagatacttaacagggaagtgagagggccgcggcaaagccgtttttccataggctccgcccccctgacaagcatcacgaaatctgacgctcaaatcagtggtggcgaaacccgacaggactataaagataccaggcgtttcccctggcggctccctcgtgcgctctcctgttcctgcctttcggtttaccggtgtcattccgctgttatggccgcgtttgtctcattccacgcctgacactcagttccgggtaggcagttcgctccaagctggactgtatgcacgaaccccccgttcagtccgaccgctgcgccttatccggtaactatcgtcttgagtccaacccggaaagacatgcaaaagcaccactggcagcagccactggtaattgatttagaggagttagtcttgaagtcatgcgccggttaaggctaaactgaaaggacaagttttggtgactgcgctcctccaagccagttacctcggttcaaagagttggtagctcagagaaccttcgaaaaaccgccctgcaaggcggttttttcgttttcagagcaagagattacgcgcagaccaaaacgatctcaagaagatcatcttattaaggggtctgacgctcagtggaacgaaaaatcaatctaaagtatatatgagtaaacttggtctgacagttaccttagaaaaactcatcgagcatcaaatgaaactgcaatttattcatatcaggattatcaataccatatttttgaaaaagccgtttctgtaatgaaggagaaaactcaccgaggcagttccataggatggcaagatcctggtatcggtctgcgattccgactcgtccaacatcaatacaacctattaatttcccctcgtcaaaaataaggttatcaagtgagaaatcaccatgagtgacgactgaatccggtgagaatggcaaaagcttatgcatttctttccagacttgttcaacaggccagccattacgctcgtcatcaaaatcactcgcatcaaccaaaccgttattcattcgtgattgcgcctgagcgagacgaaatacgcgatcgctgttaaaaggacaattacaaacaggaatcgaatgcaaccggcgcaggaacactgccagcgcatcaacaatattttcacctgaatcaggatattcttctaatacctggaatgctgttttcccggggatcgcagtggtgagtaaccatgcatcatcaggagtacggataaaatgcttgatggtcggaagaggcataaattccgtcagccagtttagtctgaccatctcatctgtaacatcattggcaacgctacctttgccatgtttcagaaacaactctggcgcatcgggcttcccatacaatcgatagattgtcgcacctgattgcccgacattatcgcgagcccatttatacccatataaatcagcatccatgttggaatttaatcgcggcctcgagcaagacgtttcccgttgaatatggctcataacaccccttgtattactgtttatgtaagcagacagttttattgttcatgatgatatatttttatcttgtgcaatgtacatcagagattttgagacacaagctttactccaccgttggcttttttccctatcagtgatagagattgacatccctatcagtgatagagataatgagcacagatgctgtagtgggatgtgtgtctcacctgaagagtacaaaagtccgaaacggtatcctctacaaataattttgtttaactatggactatgttttcacacaggaaataccaggatggcacgtaaaaccgcagcagaagcagaagaaacccgtcagcgtattattgatgcagcactggaagtttttgttgcacagggtgttagtgatgcaaccctggatcagattgcacgtaaagccggtgttacccgtggtgcagtttattggcattttaatggtaaactggaagttctgcaggcagttctggcaagccgtcagcatccgctggaactggattttacaccggatctgggtattgaacgtagctgggaagcagttgttgttgcaatgctggatgcagttcatagtccgcagagcaaacagtttagcgaaattctgatttatcagggtctggatgaaagcggtctgattcataatcgtatggttcaggcaagcgatcgttttctgcagtatattcatcaggttctgcgtcatgcagttacccagggtgaactgccgattaatctggatctgcagaccagcattggtgtttttaaaggtctgattaccggtctgctgtatgaaggtctgcgtagcaaagatcagcaggcacagattatcaaagttgcactgggtagcttttgggcactgctgcgtgaaccgcctcgttttctgctgtgtgaagaagcacagattaaacaggtgaaatccttcgaataactagggcccataccccccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctactagagtcacactggctcaccttcgggtgggcctttctgcgtttatacgcttgttgacaattaatcatcggctcgtataatgtgtggaattgtgagcgctcacaattagactgtcgccggatgtgtatccgacctgacgatggcccaaaagggccgaaacagtcctctacaaataattttgtttaactatggactatgttttaactactagatggaaagcaccccgaccaaacagaaagcaatttttagcgcaagcctgctgctgtttgcagaacgtggttttgatgcaaccaccatgccgatgattgcagaaaatgcaaaagttggtgcaggcaccatttatcgctatttcaaaaacaaagaaagcctggtgaacgaactgtttcagcagcatgttaatgaatttctgcagtgtattgaaagcggtctggcaaatgaacgtgatggttatcgtgatggctttcatcacatttttgaaggtatggtgacctttaccaaaaatcatccgcgtgcactgggttttatcaaaacccatagccagggcacctttctgaccgaagaaagccgtctggcatatcagaaactggttgaatttgtgtgcaccttttttcgtgaaggtcagaaacagggtgtgattcgtaatctgccggaaaatgcactgattgcaattctgtttggcagctttatggaagtgtatgaaatgatcgagaacgattatctgagcctgaccgatgaactgctgaccggtgttgaagaaagcctgtgggcagcactgagccgtcagagctaactagggcccatacccccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctactagagtcacactggctcaccttcgggtgggcctttctgcgtttataggagtctatgattggtccagattcgttaccaattgacagctagctcagtcctaggtatatacatacatgcttgtttgtttgtaaacaatccgcgtgataggtctgattcgttaccaattgacggaatgaacgttcattccgataatgctagcagtacgtctgagcgtgatacccgctcactgaagatggcccggtagggccgaaacgtacctctacaaataattttgtttaactatggactatgtttgaaagggagaaatactagatggcacgtaccccgagccgtagcagcattggtagcctgcgtagtccgcatacccataaagcaattctgaccagcaccattgaaatcctgaaagaatgtggttatagcggtctgagcattgaaagcgttgcacgtcgtgccggtgcaagcaaaccgaccatttatcgttggtggaccaataaagcagcactgattgccgaagtgtatgaaaatgaaagcgaacaggtgcgtaaatttccggatctgggtagctttaaagccgatctggattttctgctgcgtaatctgtggaaagtttggcgtgaaaccatttgtggtgaagcatttcgttgtgttattgcagaagcacagctggaccctgcaaccctgacccagctgaaagatcagtttatggaacgtcgtcgtgagatgccgaaaaaactggttgaaaatgccattagcaatggtgaactgccgaaagataccaatcgtgaactgctgctggatatgatttttggtttttgttggtatcgcctgctgaccgaacagctgaccgttgaacaggatattgaagaatttaccttcctgctgattaatggtgtttgtccgggtacacagcgttaactagggcccatacccccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctactagagtcacactggctcaccttcgggtgggcctttctgcgtttatatacgcgacgtacggtggaatctgattcgttaccaattgacatgatacgaaacgtaccgtatcgttaaggtaacatagcgaatcgtaaggagttaaaagatgccgattgcaccggaatttctgagcctggcatatccgggtcaagaatttccggcatatctgtatggtcgtgcaagccgtgatccgaaacgtaaaggtcgtagcgttcagagccagctggatgaaggtcgtgccacctgtctggatgcaggttggccgattgccggtgaatttaaagatgttgatcgtagcgcaagcgcatatgcacgtcgtacccgtgatgaatttgaagaaatgattgcaggtattcaggcaggcgaatgtcgtattctggttgcatttgaagcaagccgttattatcgtgatctggaagcatatgttcgtctgcgtcgtgtttgtcgtgaagccggtgttctgctgtgttataatggtcaggtttatgatctgagcaaaagcgcagatcgtaaagcaaccgcacaggatgcagttaatgccgaaggtgaagcagatgatattcgtgaacgtaatctgcgtaccacccgtctgaatgcaaaacgtggtggtgcacatggtccggttccggatggttataaacgtcgttatgatccggatagcggtgatctggttgatcagattccgcatcctgatcgtgcaggtctgattaccgaaatttttcgtcgtgcagcagcagccgaaccgctggcagcaatttgccgtgatctgaatgaacgtggtgaaaccacccatcgtggtaaagcatggcagcgtcatcatctgcatgcaattctgcgtaatcctgcatatattggtcatcgtcgtcatctgggtgttgataccggtaaaggtatgtgggcaccgatttgtgatgatgaagattttgcagaaacctttcaggccgttcaagaaattctgagtctgcctggtcgtcagctgagtccgggtccggaagcacagcatctgcagaccggtattgcactgtgtggtgaacatcctgatgaaccgcctctgcgtagcgttaccgttcgtggtcgtaccaattataactgtagcacccgttatgatgttgccatgcgtgaagatcgtatggatgcatttgttgaagaaagcgtgattacctggctggcaagtgatgaagcagttgcagcctttgaagataacaccgatgatgaacgtacccgtaaagcacgtattcgtctgaaagttctggaagaacagctggaagcagcacagaaacaggcacgtaccctgcgtccggatggcatgggtatgctgctgagcattgatagcctggcaggtctggaagccgaactgacaccgcagattgataaagcccgtcaagaaagccgtagcctgcatgttccggcactgctgcgtgatctgctgggtaaaccgcgtgcagatgtggatcgtgcatggaatgaagcactgaccctgccgcagcgtcgcatgattctgcgcatggttgttaccattcgtctgtttaaagcaggtagccgtggtgttcgtgcaattgaaccgggtcgtattaccctgagctatgttggcgaaccgggttttaaaccggttggtggtaatcgtgcaaaacagtaactagggcccatacccccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctactagagtcacactggctcaccttcgggtgggcctttctgcgtttataaatggcggcgcgccatcgaatggcgcaaaacctttcgcggtatggcatgatagcgcccggaagagagtcaattcagggtggtgaatatgaaaccagtaacgttatacgatgtcgcagagtatgccggtgtctcttatcagaccgtttcccgcgtggtgaaccaggccagccacgtttctgcgaaaacgcgggaaaaagtggaagcggcgatggcggagctgaattacattcccaaccgcgtggcacaacaactggcgggcaaacagtcgttgctgattggcgttgccacctccagtctggccctgcacgcgccgtcgcaaattgtcgcggcgattaaatctcgcgccgatcaactgggtgccagcgtggtggtgtcgatggtagaacgaagcggcgtcgaagcctgtaaagcggcggtgcacaatcttctcgcgcaacgcgtcagtgggctgatcattaactatccgctggatgaccaggatgccattgctgtggaagctgcctgcactaatgttccggcgttatttcttgatgtctctgaccagacacccatcaacagtattattttctcccatgaggacggtacgcgactgggcgtggagcatctggtcgcattgggtcaccagcaaatcgcgctgttagcgggcccattaagttctgtctcggcgcgtctgcgtctggctggctggcataaatatctcactcgcaatcaaattcagccgatagcggaacgggaaggcgactggagtgccatgtccggttttcaacaaaccatgcaaatgctgaatgagggcatcgttcccactgcgatgctggttgccaacgatcagatggcgctgggcgcaatgcgcgccattaccgagtccgggctgcgcgttggtgcggatatctcggtagtgggatacgacgataccgaagatagctcatgttatatcccgccgttaaccaccatcaaacaggattttcgcctgctggggcaaaccagcgtggaccgcttgctgcaactctctcagggccaggcggtgaagggcaatcagctgttgccagtctcactggtgaaaagaaaaaccaccctggcgcccaatacgcaaaccgcctctccccgcgcgttggccgattcattaatgcagctggcacgacaggtttcccgactggaaagcgggcagtgataatccaggaggaaaaaaatgtccagattagataaaagtaaagtgattaacagcgcattagagctgcttaatgaggtcggaatcgaaggtttaacaacccgtaaactcgcccagaagctaggtgtagagcagcctacattgtattggcatgtaaaaaataagcgggctttgctcgacgccttagccattgagatgttagataggcaccatactcacttttgccctttagaaggggaaagctggcaagattttttacgtaataacgctaaaagttttagatgtgctttactaagtcatcgcgatggagcaaaagtacatttaggtacacggcctacagaaaaacagtatgaaactctcgaaaatcaattagcctttttatgccaacaaggtttttcactagagaatgcattatatgcactcagcgctgtggggcattttactttaggttgcgtattggaagatcaagagcatcaagtcgctaaagaagaaagggaaacacctactactgatagtatgccgccattattacgacaagctatcgaattatttgatcaccaaggtgcagagccagccttcttattcggccttgaattgatcatatgcggattagaaaaacaacttaaatgtgaaagtgggtcctaataattggtaacgaatcagacaattgacggctcgagggagtagcatagggtttgcagaatccctgcttcgtccatttgacaggcacattatgcatcgatgataagctgtcaaacatgagcagatcctctacgccggacgcatcgtggccggcatcaccggcgccacaggtgcggttgctggcgcctatatcgccgacatcaccgatggggaagatcgggctcgccacttcgggctcatgagcaaatattttatctgaggt";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+<pAND_Int2/sc_rrnB_T1_terminator_9/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "4685";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "4614" .
+
+:int2_sequence  a          sbol:Sequence;
+        sbol:displayId     "int2_sequence";
+        sbol:elements      "attcaggcaggcgaatgtcgtattctggttgcatttgaagcaagccgttattatcgtgatctggaagcatatgttcgtctgcgtcgtgtttgtcgtgaagccggtgttctgctgtgttataatggtcaggtttatgatctgagcaaaagcgcagatcgtaaagcaaccgcacaggatgcagttaatgccgaaggtgaagcagatgatattcgtgaacgtaatctgcgtaccacccgtctgaatgcaaaacgtggtggtgcacatggtccggttccggatggttataaacgtcgttatgatccggatagcggtgatctggttgatcagattccgcatcctgatcgtgcaggtctgattaccgaaatttttcgtcgtgcagcagcagccgaaccgctggcagcaatttgccgtgatctgaatgaacgtggtgaaaccacccatcgtggtaaagcatggcagcgtcatcatctgcatgcaattctgcgtaatcctgcatatattggtcatcgtcgtcatctgggtgttgataccggtaaaggtatgtgggcaccgatttgtgatgatgaagattttgcagaaacctttcaggccgttcaagaaattctgagtctgcctggtcgtcagctgagtccgggtccggaagcacagcatctgcagaccggtattgcactgtgtggtgaacatcctgatgaaccgcctctgcgtagcgttaccgttcgtggtcgtaccaattataactgtagcacccgttatgatgttgccatgcgtgaagatcgtatggatgcatttgttgaagaaagcgtgattacctggctggcaagtgatgaagcagttgcagcctttgaagataacaccgatgatgaacgtacccgtaaagcacgtattcgtctgaaagttctggaagaacagctggaagcagcacagaaacaggcacgtaccctgcgtccggatggcatgggtatgctgctgagcattgatagcctggcaggtctggaagccgaactgacaccgcagattgataaagcccgtcaagaaagccgtagcctgcatgttccggcactgctgcgtgatctgctgggtaaaccgcgtgcagatgtggatcgtgcatggaatgaagcactgaccctgccgcagcgtcgcatgattctgcgcatggttgttaccattcgtctgtttaaagcaggtagccgtggtgttcgtgcaattgaaccgggtcgtattaccctgagctatgttggcgaaccgggttttaaaccggttggtggtaatcgtgcaaaacagtaa";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+:pTac_sequence  a          sbol:Sequence;
+        sbol:displayId     "pTac_sequence";
+        sbol:elements      "tgttgacaattaatcatcggctcgtataatgtgtggaattgtgagcgctcacaatt";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+<extracted_1861_2839/srpr_rbs>
+        a                 sbol:SubComponent;
+        sbol:displayId    "srpr_rbs";
+        sbol:hasLocation  <extracted_1861_2839/srpr_rbs/Range1>;
+        sbol:instanceOf   :srpr_rbs .
+
+<pAND_Int2/sc_phlf_rbs_29>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_phlf_rbs_29";
+        sbol:hasLocation  <pAND_Int2/sc_phlf_rbs_29/Range1>;
+        sbol:instanceOf   :phlf_rbs .
+
+<extracted_1861_2839/pTet>
+        a                 sbol:SubComponent;
+        sbol:displayId    "pTet";
+        sbol:hasLocation  <extracted_1861_2839/pTet/Range1>;
+        sbol:instanceOf   :pTet .
+
+:LtsvJ_insulator  a          sbol:Component;
+        sbol:displayId       "LtsvJ_insulator";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :LtsvJ_insulator_sequence;
+        sbol:name            "LtsvJ_insulator";
+        sbol:role            SO:0000110;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation26> .
+
+<pAND_Int2/sc_rrnB_T1_terminator_3/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "3673";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "3602" .
+
+<extracted_1861_2839/sccJ_insulator/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "154";
+        sbol:hasSequence  :extracted_1861_2839_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "75" .
+
+:pBR322ori_F_sequence
+        a                  sbol:Sequence;
+        sbol:displayId     "pBR322ori_F_sequence";
+        sbol:elements      "aaagataccaggcgtttccc";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+<pAND_Int2/sc_extracted_1861_2839>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_extracted_1861_2839";
+        sbol:hasLocation  <pAND_Int2/sc_extracted_1861_2839/Range1>;
+        sbol:instanceOf   :extracted_1861_2839 .
+
+<pAND_Int2/Interaction2/Participation2>
+        a                 sbol:Participation;
+        sbol:displayId    "Participation2";
+        sbol:participant  <pAND_Int2/SubComponent27>;
+        sbol:role         SBO:0000642 .
+
+<pAND_Int2/sc_bm3r1_rbs_8>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_bm3r1_rbs_8";
+        sbol:hasLocation  <pAND_Int2/sc_bm3r1_rbs_8/Range1>;
+        sbol:instanceOf   :bm3r1_rbs .
+
+<pAND_Int2/Interaction4/Participation1>
+        a                 sbol:Participation;
+        sbol:displayId    "Participation1";
+        sbol:participant  <pAND_Int2/sc_bm3R1_28>;
+        sbol:role         SBO:0000020 .
+
+<extracted_1861_2839/pTet/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "74";
+        sbol:hasSequence  :extracted_1861_2839_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "1" .
+
+:bm3r1_rbs_sequence  a     sbol:Sequence;
+        sbol:displayId     "bm3r1_rbs_sequence";
+        sbol:elements      "ctatggactatgttttaactactag";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+:ter_tetR_sequence  a      sbol:Sequence;
+        sbol:displayId     "ter_tetR_sequence";
+        sbol:elements      "taattggtaacgaatcagacaattgacggctcgagggagtagcatagggtttgcagaatccctgcttcgtccatttgacaggcacattatgcatcgatgataagctgtcaaacatgagcagatcctctacgccggacgcatcgtggccggcatcaccggcgccacaggtgcggttgctggcgcctatatcgccgacatcaccgatggggaagatcgggctcgccacttcgggctcatgagcaaatattttatctgaggt";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+<pAND_Int2/Interaction4>
+        a                      sbol:Interaction;
+        sbol:displayId         "Interaction4";
+        sbol:hasParticipation  <pAND_Int2/Interaction4/Participation2> , <pAND_Int2/Interaction4/Participation1>;
+        sbol:type              SBO:0000169 .
+
+<pAND_Int2/sc_bm3r1_rbs_8/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "2999";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "2975" .
+
+<pAND_Int2/sc_T7Te_terminator_7>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_T7Te_terminator_7";
+        sbol:hasLocation  <pAND_Int2/sc_T7Te_terminator_7/Range1>;
+        sbol:instanceOf   :T7Te_terminator .
+
+:bm3R1_sequence  a         sbol:Sequence;
+        sbol:displayId     "bm3R1_sequence";
+        sbol:elements      "atggaaagcaccccgaccaaacagaaagcaatttttagcgcaagcctgctgctgtttgcagaacgtggttttgatgcaaccaccatgccgatgattgcagaaaatgcaaaagttggtgcaggcaccatttatcgctatttcaaaaacaaagaaagcctggtgaacgaactgtttcagcagcatgttaatgaatttctgcagtgtattgaaagcggtctggcaaatgaacgtgatggttatcgtgatggctttcatcacatttttgaaggtatggtgacctttaccaaaaatcatccgcgtgcactgggttttatcaaaacccatagccagggcacctttctgaccgaagaaagccgtctggcatatcagaaactggttgaatttgtgtgcaccttttttcgtgaaggtcagaaacagggtgtgattcgtaatctgccggaaaatgcactgattgcaattctgtttggcagctttatggaagtgtatgaaatgatcgagaacgattatctgagcctgaccgatgaactgctgaccggtgttgaagaaagcctgtgggcagcactgagccgtcagagctaa";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+<pAND_Int2/sc_KanR_11>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_KanR_11";
+        sbol:hasLocation  <pAND_Int2/sc_KanR_11/Range1>;
+        sbol:instanceOf   :KanR .
+
+:srpr_rbs_sequence  a      sbol:Sequence;
+        sbol:displayId     "srpr_rbs_sequence";
+        sbol:elements      "ctatggactatgttttcacacaggaaataccagg";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+<pAND_Int2/sc_pPhlF_21>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_pPhlF_21";
+        sbol:hasLocation  <pAND_Int2/sc_pPhlF_21/Range1>;
+        sbol:instanceOf   :pPhlF .
+
+:phlf_sequence  a          sbol:Sequence;
+        sbol:displayId     "phlf_sequence";
+        sbol:elements      "atggcacgtaccccgagccgtagcagcattggtagcctgcgtagtccgcatacccataaagcaattctgaccagcaccattgaaatcctgaaagaatgtggttatagcggtctgagcattgaaagcgttgcacgtcgtgccggtgcaagcaaaccgaccatttatcgttggtggaccaataaagcagcactgattgccgaagtgtatgaaaatgaaagcgaacaggtgcgtaaatttccggatctgggtagctttaaagccgatctggattttctgctgcgtaatctgtggaaagtttggcgtgaaaccatttgtggtgaagcatttcgttgtgttattgcagaagcacagctggaccctgcaaccctgacccagctgaaagatcagtttatggaacgtcgtcgtgagatgccgaaaaaactggttgaaaatgccattagcaatggtgaactgccgaaagataccaatcgtgaactgctgctggatatgatttttggtttttgttggtatcgcctgctgaccgaacagctgaccgttgaacaggatattgaagaatttaccttcctgctgattaatggtgtttgtccgggtacacagcgttaa";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+<extracted_1861_2839/srpr_rbs/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "188";
+        sbol:hasSequence  :extracted_1861_2839_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "155" .
+
+<pAND_Int2/SubComponent27>
+        a                sbol:SubComponent;
+        sbol:displayId   "SubComponent27";
+        sbol:instanceOf  :pTet .
+
+<pAND_Int2/sc_pBR322ori_F_6>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_pBR322ori_F_6";
+        sbol:hasLocation  <pAND_Int2/sc_pBR322ori_F_6/Range1>;
+        sbol:instanceOf   :pBR322ori_F .
+
+<pAND_Int2/sc_int2_16/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "6362";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "5079" .
+
+<pAND_Int2/sc_int2_16>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_int2_16";
+        sbol:hasLocation  <pAND_Int2/sc_int2_16/Range1>;
+        sbol:instanceOf   :int2 .
+
+<pAND_Int2/sc_pSrpR_14>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_pSrpR_14";
+        sbol:hasLocation  <pAND_Int2/sc_pSrpR_14/Range1>;
+        sbol:instanceOf   :pSrpR .
+
+:lacI_sequence  a          sbol:Sequence;
+        sbol:displayId     "lacI_sequence";
+        sbol:elements      "atgaaaccagtaacgttatacgatgtcgcagagtatgccggtgtctcttatcagaccgtttcccgcgtggtgaaccaggccagccacgtttctgcgaaaacgcgggaaaaagtggaagcggcgatggcggagctgaattacattcccaaccgcgtggcacaacaactggcgggcaaacagtcgttgctgattggcgttgccacctccagtctggccctgcacgcgccgtcgcaaattgtcgcggcgattaaatctcgcgccgatcaactgggtgccagcgtggtggtgtcgatggtagaacgaagcggcgtcgaagcctgtaaagcggcggtgcacaatcttctcgcgcaacgcgtcagtgggctgatcattaactatccgctggatgaccaggatgccattgctgtggaagctgcctgcactaatgttccggcgttatttcttgatgtctctgaccagacacccatcaacagtattattttctcccatgaggacggtacgcgactgggcgtggagcatctggtcgcattgggtcaccagcaaatcgcgctgttagcgggcccattaagttctgtctcggcgcgtctgcgtctggctggctggcataaatatctcactcgcaatcaaattcagccgatagcggaacgggaaggcgactggagtgccatgtccggttttcaacaaaccatgcaaatgctgaatgagggcatcgttcccactgcgatgctggttgccaacgatcagatggcgctgggcgcaatgcgcgccattaccgagtccgggctgcgcgttggtgcggatatctcggtagtgggatacgacgataccgaagatagctcatgttatatcccgccgttaaccaccatcaaacaggattttcgcctgctggggcaaaccagcgtggaccgcttgctgcaactctctcagggccaggcggtgaagggcaatcagctgttgccagtctcactggtgaaaagaaaaaccaccctggcgcccaatacgcaaaccgcctctccccgcgcgttggccgattcattaatgcagctggcacgacaggtttcccgactggaaagcgggcagtga";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+:pLacI_sequence  a         sbol:Sequence;
+        sbol:displayId     "pLacI_sequence";
+        sbol:elements      "gcggcgcgccatcgaatggcgcaaaacctttcgcggtatggcatgatagcgcccggaagagagtca";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+<pAND_Int2/sc_sarJ_insulator_31/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "2974";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "2896" .
+
+:pTet   a                    sbol:Component;
+        sbol:displayId       "pTet";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :pTet_sequence;
+        sbol:name            "pTet";
+        sbol:role            SO:0000167;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation6> .
+
+:pBM3R1  a                   sbol:Component;
+        sbol:displayId       "pBM3R1";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :pBM3R1_sequence;
+        sbol:name            "pBM3R1";
+        sbol:role            SO:0000167;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation25> .
+
+:sccJ_insulator_sequence
+        a                  sbol:Sequence;
+        sbol:displayId     "sccJ_insulator_sequence";
+        sbol:elements      "agatgctgtagtgggatgtgtgtctcacctgaagagtacaaaagtccgaaacggtatcctctacaaataattttgtttaa";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+<pAND_Int2/Interaction3/Participation2>
+        a                 sbol:Participation;
+        sbol:displayId    "Participation2";
+        sbol:participant  <pAND_Int2/sc_pSrpR_14>;
+        sbol:role         SBO:0000642 .
+
+:pBM3R1_sequence  a        sbol:Sequence;
+        sbol:displayId     "pBM3R1_sequence";
+        sbol:elements      "aatccgcgtgataggtctgattcgttaccaattgacggaatgaacgttcattccgataatgctagc";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+<pAND_Int2/Interaction5/Participation1>
+        a                 sbol:Participation;
+        sbol:displayId    "Participation1";
+        sbol:participant  <pAND_Int2/sc_phlf_4>;
+        sbol:role         SBO:0000020 .
+
+<pAND_Int2/sc_LtsvJ_insulator_22/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "3954";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "3875" .
+
+<pAND_Int2/sc_phlf_4/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "4590";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "3988" .
+
+<pAND_Int2/sc_tetR_rbs_26/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "7693";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "7676" .
+
+<pAND_Int2/sc_KanR_11/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "1756";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001031;
+        sbol:start        "941" .
+
+<pAND_Int2/Interaction1/Participation1>
+        a                 sbol:Participation;
+        sbol:displayId    "Participation1";
+        sbol:participant  <pAND_Int2/sc_lacI_13>;
+        sbol:role         SBO:0000020 .
+
+:phlf   a                    sbol:Component;
+        sbol:displayId       "phlf";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :phlf_sequence;
+        sbol:name            "phlf";
+        sbol:role            SO:0000316;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation28> .
+
+:pLacI  a                    sbol:Component;
+        sbol:displayId       "pLacI";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :pLacI_sequence;
+        sbol:name            "pLacI";
+        sbol:role            SO:0000167;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation36> .
+
+<pAND_Int2/sc_pTac_5>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_pTac_5";
+        sbol:hasLocation  <pAND_Int2/sc_pTac_5/Range1>;
+        sbol:instanceOf   :pTac .
+
+<pAND_Int2/sc_T7Te_terminator_7/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "3716";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "3689" .
+
+:bm3R1  a                    sbol:Component;
+        sbol:displayId       "bm3R1";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :bm3R1_sequence;
+        sbol:name            "bm3R1";
+        sbol:role            SO:0000316;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation21> .
+
+<pAND_Int2/sc_bm3R1_28/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "3578";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "3000" .
+
+<pAND_Int2/sc_T7Te_terminator_27/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "6500";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "6473" .
+
+:phlf_rbs_sequence  a      sbol:Sequence;
+        sbol:displayId     "phlf_rbs_sequence";
+        sbol:elements      "ctatggactatgtttgaaagggagaaatactag";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+<pAND_Int2/Interaction1>
+        a                      sbol:Interaction;
+        sbol:displayId         "Interaction1";
+        sbol:hasParticipation  <pAND_Int2/Interaction1/Participation2> , <pAND_Int2/Interaction1/Participation1>;
+        sbol:type              SBO:0000169 .
+
+<pAND_Int2/sc_pBR322ori_F_6/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "407";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001031;
+        sbol:start        "388" .
+
+<pAND_Int2/sc_rrnB_T1_terminator_3>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_rrnB_T1_terminator_3";
+        sbol:hasLocation  <pAND_Int2/sc_rrnB_T1_terminator_3/Range1>;
+        sbol:instanceOf   :rrnB_T1_terminator .
+
+<pAND_Int2/sc_T7Te_terminator_17>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_T7Te_terminator_17";
+        sbol:hasLocation  <pAND_Int2/sc_T7Te_terminator_17/Range1>;
+        sbol:instanceOf   :T7Te_terminator .
+
+<pAND_Int2/sc_pLacI_2>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_pLacI_2";
+        sbol:hasLocation  <pAND_Int2/sc_pLacI_2/Range1>;
+        sbol:instanceOf   :pLacI .
+
+:tetR_rbs  a                 sbol:Component;
+        sbol:displayId       "tetR_rbs";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :tetR_rbs_sequence;
+        sbol:name            "tetR_rbs";
+        sbol:role            SO:0000110;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation40> .
+
+:sccJ_insulator  a           sbol:Component;
+        sbol:displayId       "sccJ_insulator";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :sccJ_insulator_sequence;
+        sbol:name            "sccJ insulator";
+        sbol:role            SO:0000110;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation9> .
+
+<pAND_Int2/sc_pLacI_2/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "6576";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "6511" .
+
+:ter_tetR  a                 sbol:Component;
+        sbol:displayId       "ter_tetR";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :ter_tetR_sequence;
+        sbol:name            "ter_tetR";
+        sbol:role            SO:0000141;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation43> .
+
+:lacI   a                    sbol:Component;
+        sbol:displayId       "lacI";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :lacI_sequence;
+        sbol:name            "lacI";
+        sbol:role            SO:0000316;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation38> .
+
+<pAND_Int2/sc_phlf_rbs_29/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "3987";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "3955" .
+
+<pAND_Int2/sc_phlf_4>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_phlf_4";
+        sbol:hasLocation  <pAND_Int2/sc_phlf_4/Range1>;
+        sbol:instanceOf   :phlf .
+
+:KanR   a                    sbol:Component;
+        sbol:displayId       "KanR";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :KanR_sequence;
+        sbol:name            "KanR";
+        sbol:role            SO:0000316;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation3> .
+
+:pPhlF  a                    sbol:Component;
+        sbol:displayId       "pPhlF";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :pPhlF_sequence;
+        sbol:name            "pPhlF";
+        sbol:role            SO:0000167;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation31> .
+
+<pAND_Int2/sc_rrnB_T1_terminator_20/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "6457";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "6386" .
+
+<pAND_Int2/sc_lacI_13/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "7675";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "6593" .
+
+:phlf_rbs  a                 sbol:Component;
+        sbol:displayId       "phlf_rbs";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :phlf_rbs_sequence;
+        sbol:name            "phlf_rbs";
+        sbol:role            SO:0000139;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation27> .
+
+<pAND_Int2/Interaction2/Participation1>
+        a                 sbol:Participation;
+        sbol:displayId    "Participation1";
+        sbol:participant  <pAND_Int2/sc_tetR_1>;
+        sbol:role         SBO:0000020 .
+
+<pAND_Int2/sc_pBM3R1_18>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_pBM3R1_18";
+        sbol:hasLocation  <pAND_Int2/sc_pBM3R1_18/Range1>;
+        sbol:instanceOf   :pBM3R1 .
+
+<extracted_1861_2839/srpr>
+        a                 sbol:SubComponent;
+        sbol:displayId    "srpr";
+        sbol:hasLocation  <extracted_1861_2839/srpr/Range1>;
+        sbol:instanceOf   :srpr .
+
+<pAND_Int2/sc_tetR_1>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_tetR_1";
+        sbol:hasLocation  <pAND_Int2/sc_tetR_1/Range1>;
+        sbol:instanceOf   :tetR .
+
+<pAND_Int2/Interaction3>
+        a                      sbol:Interaction;
+        sbol:displayId         "Interaction3";
+        sbol:hasParticipation  <pAND_Int2/Interaction3/Participation2> , <pAND_Int2/Interaction3/Participation1>;
+        sbol:type              SBO:0000169 .
+
+:pAND_Int2  a                sbol:Component;
+        sbol:description     "A transcriptional AND circuit constructed by layering NOR and NOT gates.";
+        sbol:displayId       "pAND_Int2";
+        sbol:hasFeature      <pAND_Int2/sc_rrnB_T1_terminator_3> , <pAND_Int2/sc_pLacI_2> , <pAND_Int2/sc_rrnB_T1_terminator_20> , <pAND_Int2/sc_bm3r1_rbs_8> , <pAND_Int2/sc_int2_16> , <pAND_Int2/SubComponent28> , <pAND_Int2/sc_lacI_13> , <pAND_Int2/sc_phlf_rbs_29> , <pAND_Int2/sc_T7Te_terminator_7> , <pAND_Int2/sc_T7Te_terminator_27> , <pAND_Int2/sc_int2_rbs_12> , <pAND_Int2/SubComponent27> , <pAND_Int2/sc_KanR_11> , <pAND_Int2/sc_tetR_1> , <pAND_Int2/sc_extracted_1861_2839> , <pAND_Int2/sc_T7Te_terminator_17> , <pAND_Int2/sc_pSrpR_14> , <pAND_Int2/sc_ter_tetR_25> , <pAND_Int2/sc_phlf_4> , <pAND_Int2/sc_pBM3R1_18> , <pAND_Int2/sc_sarJ_insulator_31> , <pAND_Int2/sc_pBR322ori_F_6> , <pAND_Int2/sc_rrnB_T1_terminator_9> , <pAND_Int2/sc_pTac_5> , <pAND_Int2/sc_LtsvJ_insulator_22> , <pAND_Int2/sc_bm3R1_28> , <pAND_Int2/sc_pPhlF_21> , <pAND_Int2/sc_tetR_rbs_26>;
+        sbol:hasInteraction  <pAND_Int2/Interaction5> , <pAND_Int2/Interaction4> , <pAND_Int2/Interaction3> , <pAND_Int2/Interaction2> , <pAND_Int2/Interaction1>;
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :pAND_Int2_sequence;
+        sbol:role            SO:0000804;
+        sbol:type            SBO:0000251 .
+
+<pAND_Int2/sc_lacI_13>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_lacI_13";
+        sbol:hasLocation  <pAND_Int2/sc_lacI_13/Range1>;
+        sbol:instanceOf   :lacI .
+
+<pAND_Int2/sc_T7Te_terminator_27>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_T7Te_terminator_27";
+        sbol:hasLocation  <pAND_Int2/sc_T7Te_terminator_27/Range1>;
+        sbol:instanceOf   :T7Te_terminator .
+
+:pBR322ori_F  a              sbol:Component;
+        sbol:displayId       "pBR322ori_F";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :pBR322ori_F_sequence;
+        sbol:name            "pBR322ori-F";
+        sbol:role            SO:0005850;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation2> .
+
+<pAND_Int2/sc_rrnB_T1_terminator_20>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_rrnB_T1_terminator_20";
+        sbol:hasLocation  <pAND_Int2/sc_rrnB_T1_terminator_20/Range1>;
+        sbol:instanceOf   :rrnB_T1_terminator .
+
+:rrnB_T1_terminator_sequence
+        a                  sbol:Sequence;
+        sbol:displayId     "rrnB_T1_terminator_sequence";
+        sbol:elements      "caaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctc";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+:int2_rbs  a                 sbol:Component;
+        sbol:displayId       "int2_rbs";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :int2_rbs_sequence;
+        sbol:name            "int2_rbs";
+        sbol:role            SO:0001411;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation32> .
+
+:T7Te_terminator_sequence
+        a                  sbol:Sequence;
+        sbol:displayId     "T7Te_terminator_sequence";
+        sbol:elements      "ggctcaccttcgggtgggcctttctgcg";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+<pAND_Int2/sc_T7Te_terminator_17/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "4728";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "4701" .
+
+:pTac   a                    sbol:Component;
+        sbol:displayId       "pTac";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :pTac_sequence;
+        sbol:name            "pTac";
+        sbol:role            SO:0000167;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation14> .
+
+:sarJ_insulator_sequence
+        a                  sbol:Sequence;
+        sbol:displayId     "sarJ_insulator_sequence";
+        sbol:elements      "agactgtcgccggatgtgtatccgacctgacgatggcccaaaagggccgaaacagtcctctacaaataattttgtttaa";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+<pAND_Int2/sc_sarJ_insulator_31>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_sarJ_insulator_31";
+        sbol:hasLocation  <pAND_Int2/sc_sarJ_insulator_31/Range1>;
+        sbol:instanceOf   :sarJ_insulator .
+
+:KanR_sequence  a          sbol:Sequence;
+        sbol:displayId     "KanR_sequence";
+        sbol:elements      "ttagaaaaactcatcgagcatcaaatgaaactgcaatttattcatatcaggattatcaataccatatttttgaaaaagccgtttctgtaatgaaggagaaaactcaccgaggcagttccataggatggcaagatcctggtatcggtctgcgattccgactcgtccaacatcaatacaacctattaatttcccctcgtcaaaaataaggttatcaagtgagaaatcaccatgagtgacgactgaatccggtgagaatggcaaaagcttatgcatttctttccagacttgttcaacaggccagccattacgctcgtcatcaaaatcactcgcatcaaccaaaccgttattcattcgtgattgcgcctgagcgagacgaaatacgcgatcgctgttaaaaggacaattacaaacaggaatcgaatgcaaccggcgcaggaacactgccagcgcatcaacaatattttcacctgaatcaggatattcttctaatacctggaatgctgttttcccggggatcgcagtggtgagtaaccatgcatcatcaggagtacggataaaatgcttgatggtcggaagaggcataaattccgtcagccagtttagtctgaccatctcatctgtaacatcattggcaacgctacctttgccatgtttcagaaacaactctggcgcatcgggcttcccatacaatcgatagattgtcgcacctgattgcccgacattatcgcgagcccatttatacccatataaatcagcatccatgttggaatttaatcgcggcctcgagcaagacgtttcccgttgaatatggctcat";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+<pAND_Int2/sc_pPhlF_21/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "4804";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "4739" .
+
+<extracted_1861_2839/T7Te_terminator/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "969";
+        sbol:hasSequence  :extracted_1861_2839_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "942" .
+
+:pTet_sequence  a          sbol:Sequence;
+        sbol:displayId     "pTet_sequence";
+        sbol:elements      "tactccaccgttggcttttttccctatcagtgatagagattgacatccctatcagtgatagagataatgagcac";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+<extracted_1861_2839/rrnB_T1_terminator>
+        a                 sbol:SubComponent;
+        sbol:displayId    "rrnB_T1_terminator";
+        sbol:hasLocation  <extracted_1861_2839/rrnB_T1_terminator/Range1>;
+        sbol:instanceOf   :rrnB_T1_terminator .
+
+:srpr_sequence  a          sbol:Sequence;
+        sbol:displayId     "srpr_sequence";
+        sbol:elements      "atggcacgtaaaaccgcagcagaagcagaagaaacccgtcagcgtattattgatgcagcactggaagtttttgttgcacagggtgttagtgatgcaaccctggatcagattgcacgtaaagccggtgttacccgtggtgcagtttattggcattttaatggtaaactggaagttctgcaggcagttctggcaagccgtcagcatccgctggaactggattttacaccggatctgggtattgaacgtagctgggaagcagttgttgttgcaatgctggatgcagttcatagtccgcagagcaaacagtttagcgaaattctgatttatcagggtctggatgaaagcggtctgattcataatcgtatggttcaggcaagcgatcgttttctgcagtatattcatcaggttctgcgtcatgcagttacccagggtgaactgccgattaatctggatctgcagaccagcattggtgtttttaaaggtctgattaccggtctgctgtatgaaggtctgcgtagcaaagatcagcaggcacagattatcaaagttgcactgggtagcttttgggcactgctgcgtgaaccgcctcgttttctgctgtgtgaagaagcacagattaaacaggtgaaatccttcgaataa";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+<extracted_1861_2839/sccJ_insulator>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sccJ_insulator";
+        sbol:hasLocation  <extracted_1861_2839/sccJ_insulator/Range1>;
+        sbol:instanceOf   :sccJ_insulator .
+
+<pAND_Int2/Interaction3/Participation1>
+        a                 sbol:Participation;
+        sbol:displayId    "Participation1";
+        sbol:participant  <pAND_Int2/SubComponent28>;
+        sbol:role         SBO:0000020 .
+
+<extracted_1861_2839/T7Te_terminator>
+        a                 sbol:SubComponent;
+        sbol:displayId    "T7Te_terminator";
+        sbol:hasLocation  <extracted_1861_2839/T7Te_terminator/Range1>;
+        sbol:instanceOf   :T7Te_terminator .
+
+<pAND_Int2/sc_int2_rbs_12/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "4835";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "4805" .
+
+<pAND_Int2/sc_ter_tetR_25/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "8576";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "8318" .
+
+<pAND_Int2/Interaction4/Participation2>
+        a                 sbol:Participation;
+        sbol:displayId    "Participation2";
+        sbol:participant  <pAND_Int2/sc_pBM3R1_18>;
+        sbol:role         SBO:0000642 .
+
+:srpr   a                    sbol:Component;
+        sbol:displayId       "srpr";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :srpr_sequence;
+        sbol:name            "srpr";
+        sbol:role            SO:0000316;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation11> .
+
+<pAND_Int2/Interaction5>
+        a                      sbol:Interaction;
+        sbol:displayId         "Interaction5";
+        sbol:hasParticipation  <pAND_Int2/Interaction5/Participation2> , <pAND_Int2/Interaction5/Participation1>;
+        sbol:type              SBO:0000169 .
+
+:T7Te_terminator  a          sbol:Component;
+        sbol:displayId       "T7Te_terminator";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :T7Te_terminator_sequence;
+        sbol:name            "T7Te terminator";
+        sbol:role            SO:0000141;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation23> .
+
+:rrnB_T1_terminator  a       sbol:Component;
+        sbol:displayId       "rrnB_T1_terminator";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :rrnB_T1_terminator_sequence;
+        sbol:name            "rrnB T1 terminator";
+        sbol:role            SO:0000141;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation22> .
+
+:int2   a                    sbol:Component;
+        sbol:displayId       "int2";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :int2_sequence;
+        sbol:name            "int2";
+        sbol:role            SO:0000316;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation33> .
+
+:tetR_sequence  a          sbol:Sequence;
+        sbol:displayId     "tetR_sequence";
+        sbol:elements      "atgtccagattagataaaagtaaagtgattaacagcgcattagagctgcttaatgaggtcggaatcgaaggtttaacaacccgtaaactcgcccagaagctaggtgtagagcagcctacattgtattggcatgtaaaaaataagcgggctttgctcgacgccttagccattgagatgttagataggcaccatactcacttttgccctttagaaggggaaagctggcaagattttttacgtaataacgctaaaagttttagatgtgctttactaagtcatcgcgatggagcaaaagtacatttaggtacacggcctacagaaaaacagtatgaaactctcgaaaatcaattagcctttttatgccaacaaggtttttcactagagaatgcattatatgcactcagcgctgtggggcattttactttaggttgcgtattggaagatcaagagcatcaagtcgctaaagaagaaagggaaacacctactactgatagtatgccgccattattacgacaagctatcgaattatttgatcaccaaggtgcagagccagccttcttattcggccttgaattgatcatatgcggattagaaaaacaacttaaatgtgaaagtgggtcctaa";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+:pPhlF_sequence  a         sbol:Sequence;
+        sbol:displayId     "pPhlF_sequence";
+        sbol:elements      "cgacgtacggtggaatctgattcgttaccaattgacatgatacgaaacgtaccgtatcgttaaggt";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+<pAND_Int2/sc_LtsvJ_insulator_22>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_LtsvJ_insulator_22";
+        sbol:hasLocation  <pAND_Int2/sc_LtsvJ_insulator_22/Range1>;
+        sbol:instanceOf   :LtsvJ_insulator .
+
+<pAND_Int2/sc_int2_rbs_12>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_int2_rbs_12";
+        sbol:hasLocation  <pAND_Int2/sc_int2_rbs_12/Range1>;
+        sbol:instanceOf   :int2_rbs .
+
+<pAND_Int2/SubComponent28>
+        a                sbol:SubComponent;
+        sbol:displayId   "SubComponent28";
+        sbol:instanceOf  :srpr .
+
+:int2_rbs_sequence  a      sbol:Sequence;
+        sbol:displayId     "int2_rbs_sequence";
+        sbol:elements      "aacatagcgaatcgtaaggagttaaaagatg";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+:tetR_rbs_sequence  a      sbol:Sequence;
+        sbol:displayId     "tetR_rbs_sequence";
+        sbol:elements      "taatccaggaggaaaaaa";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+:tetR   a                    sbol:Component;
+        sbol:displayId       "tetR";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :tetR_sequence;
+        sbol:name            "tetR";
+        sbol:role            SO:0000316;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation41> .
+
+<pAND_Int2/sc_pSrpR_14/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "3808";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "3727" .
+
+:extracted_1861_2839_sequence
+        a                  sbol:Sequence;
+        sbol:displayId     "extracted_1861_2839_sequence";
+        sbol:elements      "tactccaccgttggcttttttccctatcagtgatagagattgacatccctatcagtgatagagataatgagcacagatgctgtagtgggatgtgtgtctcacctgaagagtacaaaagtccgaaacggtatcctctacaaataattttgtttaactatggactatgttttcacacaggaaataccaggatggcacgtaaaaccgcagcagaagcagaagaaacccgtcagcgtattattgatgcagcactggaagtttttgttgcacagggtgttagtgatgcaaccctggatcagattgcacgtaaagccggtgttacccgtggtgcagtttattggcattttaatggtaaactggaagttctgcaggcagttctggcaagccgtcagcatccgctggaactggattttacaccggatctgggtattgaacgtagctgggaagcagttgttgttgcaatgctggatgcagttcatagtccgcagagcaaacagtttagcgaaattctgatttatcagggtctggatgaaagcggtctgattcataatcgtatggttcaggcaagcgatcgttttctgcagtatattcatcaggttctgcgtcatgcagttacccagggtgaactgccgattaatctggatctgcagaccagcattggtgtttttaaaggtctgattaccggtctgctgtatgaaggtctgcgtagcaaagatcagcaggcacagattatcaaagttgcactgggtagcttttgggcactgctgcgtgaaccgcctcgttttctgctgtgtgaagaagcacagattaaacaggtgaaatccttcgaataactagggcccataccccccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctactagagtcacactggctcaccttcgggtgggcctttctgcgtttatacgct";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+<pAND_Int2/sc_pTac_5/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "2895";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "2840" .
+
+:sarJ_insulator  a           sbol:Component;
+        sbol:displayId       "sarJ_insulator";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :sarJ_insulator_sequence;
+        sbol:name            "sarJ insulator";
+        sbol:role            SO:0000110;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation19> .
+
+<pAND_Int2/sc_tetR_rbs_26>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_tetR_rbs_26";
+        sbol:hasLocation  <pAND_Int2/sc_tetR_rbs_26/Range1>;
+        sbol:instanceOf   :tetR_rbs .
+
+:pSrpR  a                    sbol:Component;
+        sbol:displayId       "pSrpR";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :pSrpR_sequence;
+        sbol:name            "pSrpR";
+        sbol:role            SO:0000167;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation24> .
+
+<pAND_Int2/sc_extracted_1861_2839/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "2839";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:start        "1861" .
+
+<pAND_Int2/Interaction5/Participation2>
+        a                 sbol:Participation;
+        sbol:displayId    "Participation2";
+        sbol:participant  <pAND_Int2/sc_pPhlF_21>;
+        sbol:role         SBO:0000642 .
+
+<pAND_Int2/sc_tetR_1/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "8317";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "7694" .
+
+<extracted_1861_2839/rrnB_T1_terminator/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "926";
+        sbol:hasSequence  :extracted_1861_2839_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "855" .
+
+<pAND_Int2/sc_rrnB_T1_terminator_9>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_rrnB_T1_terminator_9";
+        sbol:hasLocation  <pAND_Int2/sc_rrnB_T1_terminator_9/Range1>;
+        sbol:instanceOf   :rrnB_T1_terminator .
+
+<pAND_Int2/Interaction1/Participation2>
+        a                 sbol:Participation;
+        sbol:displayId    "Participation2";
+        sbol:participant  <pAND_Int2/sc_pTac_5>;
+        sbol:role         SBO:0000642 .
+
+:pSrpR_sequence  a         sbol:Sequence;
+        sbol:displayId     "pSrpR_sequence";
+        sbol:elements      "tctatgattggtccagattcgttaccaattgacagctagctcagtcctaggtatatacatacatgcttgtttgtttgtaaac";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+:srpr_rbs  a                 sbol:Component;
+        sbol:displayId       "srpr_rbs";
+        sbol:hasNamespace    <../updated>;
+        sbol:hasSequence     :srpr_rbs_sequence;
+        sbol:name            "srpr_rbs";
+        sbol:role            SO:0000110;
+        sbol:type            SBO:0000251;
+        prov:wasDerivedFrom  <../sequence_97289_e_pAND_I/annotation10> .
+
+<extracted_1861_2839/srpr/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "830";
+        sbol:hasSequence  :extracted_1861_2839_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "189" .
+
+<pAND_Int2/Interaction2>
+        a                      sbol:Interaction;
+        sbol:displayId         "Interaction2";
+        sbol:hasParticipation  <pAND_Int2/Interaction2/Participation2> , <pAND_Int2/Interaction2/Participation1>;
+        sbol:type              SBO:0000169 .
+
+:LtsvJ_insulator_sequence
+        a                  sbol:Sequence;
+        sbol:displayId     "LtsvJ_insulator_sequence";
+        sbol:elements      "agtacgtctgagcgtgatacccgctcactgaagatggcccggtagggccgaaacgtacctctacaaataattttgtttaa";
+        sbol:encoding      EDAM:format_1207;
+        sbol:hasNamespace  <../updated> .
+
+<pAND_Int2/sc_pBM3R1_18/Range1>
+        a                 sbol:Range;
+        sbol:displayId    "Range1";
+        sbol:end          "3874";
+        sbol:hasSequence  :pAND_Int2_sequence;
+        sbol:orientation  SO:0001030;
+        sbol:start        "3809" .
+
+<pAND_Int2/sc_ter_tetR_25>
+        a                 sbol:SubComponent;
+        sbol:displayId    "sc_ter_tetR_25";
+        sbol:hasLocation  <pAND_Int2/sc_ter_tetR_25/Range1>;
+        sbol:instanceOf   :ter_tetR .

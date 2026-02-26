@@ -11,7 +11,9 @@ public class Parameters {
 	private Model model=null;
 	
 	public void addMapping(URI sbol2, URI sbol3)	{
-		mappings.put(sbol2, sbol3);
+		if (!mappings.containsKey(sbol2)) {
+			mappings.put(sbol2, sbol3);
+		}
 	}
 	
 	public URI getMapping(URI sbol2)	{

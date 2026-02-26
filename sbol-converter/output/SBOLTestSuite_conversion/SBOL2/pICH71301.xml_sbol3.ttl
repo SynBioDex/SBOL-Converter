@@ -1,243 +1,254 @@
-<rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:gbConv="http://sbols.org/genBankConversion#"
-    xmlns:dcterms="http://purl.org/dc/terms/"
-    xmlns:SO="https://identifiers.org/SO:"
-    xmlns:EDAM="https://identifiers.org/edam:"
-    xmlns:sbol="http://sbols.org/v3#"
-    xmlns:CHEBI="https://identifiers.org/CHEBI:"
-    xmlns:prov="http://www.w3.org/ns/prov#"
-    xmlns:genbank="http://www.ncbi.nlm.nih.gov/genbank#"
-    xmlns:SBO="https://identifiers.org/SBO:"
-    xmlns:GO="https://identifiers.org/GO:"
-    xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
-   <sbol:Component rdf:about="http://www.async.ece.utah.edu/pICH71301">
-      <genbank:date>12-APR-2011</genbank:date>
-      <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation1">
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation1/range">
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>1241</sbol:end>
-                  <sbol:start>231</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH71301_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <gbConv:label>Sm/Sp no DraIII</gbConv:label>
-            <gbConv:vntifkey>4</gbConv:vntifkey>
-            <sbol:name>Sm/Sp no DraIII</sbol:name>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
-            <sbol:displayId>annotation1</sbol:displayId>
-         </sbol:SequenceFeature>
-      </sbol:hasFeature>
-      <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation5">
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation5/range">
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>2251</sbol:end>
-                  <sbol:start>2248</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH71301_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <gbConv:label>GGAG 4 bp overhang</gbConv:label>
-            <gbConv:featureType>Misc._Feature</gbConv:featureType>
-            <sbol:name>GGAG 4 bp overhang</sbol:name>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
-            <sbol:displayId>annotation5</sbol:displayId>
-         </sbol:SequenceFeature>
-      </sbol:hasFeature>
-      <sbol:type rdf:resource="https://identifiers.org/SO:0000988"/>
-      <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation9">
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation9/range">
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>2936</sbol:end>
-                  <sbol:start>2926</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH71301_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <gbConv:label>TATA_Signal_1</gbConv:label>
-            <gbConv:vntifkey>41</gbConv:vntifkey>
-            <gbConv:featureType>TATA_box</gbConv:featureType>
-            <sbol:name>TATA_Signal_1</sbol:name>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
-            <sbol:displayId>annotation9</sbol:displayId>
-         </sbol:SequenceFeature>
-      </sbol:hasFeature>
-      <genbank:locus>pICH71301</genbank:locus>
-      <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation0">
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation0/range">
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>4</sbol:end>
-                  <sbol:start>1</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH71301_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <gbConv:label>AATG 4 bp overhang</gbConv:label>
-            <gbConv:featureType>Misc._Feature</gbConv:featureType>
-            <sbol:name>AATG 4 bp overhang</sbol:name>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
-            <sbol:displayId>annotation0</sbol:displayId>
-         </sbol:SequenceFeature>
-      </sbol:hasFeature>
-      <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation4">
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation4/range">
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001031"/>
-                  <sbol:end>2000</sbol:end>
-                  <sbol:start>2000</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH71301_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <gbConv:note>RNaseH cleavage point</gbConv:note>
-            <gbConv:label>ORI</gbConv:label>
-            <gbConv:vntifkey>33</gbConv:vntifkey>
-            <gbConv:featureType>Replication_ori</gbConv:featureType>
-            <sbol:name>ORI</sbol:name>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
-            <sbol:displayId>annotation4</sbol:displayId>
-         </sbol:SequenceFeature>
-      </sbol:hasFeature>
-      <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation8">
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation8/range">
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>2849</sbol:end>
-                  <sbol:start>2845</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH71301_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <gbConv:label>CAAT_1</gbConv:label>
-            <gbConv:vntifkey>3</gbConv:vntifkey>
-            <gbConv:featureType>CAAT_box</gbConv:featureType>
-            <sbol:name>CAAT_1</sbol:name>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
-            <sbol:displayId>annotation8</sbol:displayId>
-         </sbol:SequenceFeature>
-      </sbol:hasFeature>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <genbank:comment>This file is created by Vector NTI http://www.invitrogen.com/</genbank:comment>
-      <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation3">
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation3/range">
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>2015</sbol:end>
-                  <sbol:start>1401</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH71301_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <gbConv:label>rep (pMB1)</gbConv:label>
-            <gbConv:vntifkey>21</gbConv:vntifkey>
-            <gbConv:featureType>Misc._feature</gbConv:featureType>
-            <sbol:name>rep (pMB1)</sbol:name>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
-            <sbol:displayId>annotation3</sbol:displayId>
-         </sbol:SequenceFeature>
-      </sbol:hasFeature>
-      <sbol:displayId>pICH71301</sbol:displayId>
-      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
-      <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation7">
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation7/range">
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>2836</sbol:end>
-                  <sbol:start>2826</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH71301_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <gbConv:label>Enhancer_1</gbConv:label>
-            <gbConv:vntifkey>9</gbConv:vntifkey>
-            <gbConv:featureType>Enhancer</gbConv:featureType>
-            <sbol:name>Enhancer_1</sbol:name>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
-            <sbol:displayId>annotation7</sbol:displayId>
-         </sbol:SequenceFeature>
-      </sbol:hasFeature>
-      <sbol:hasSequence>
-         <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH71301_seq"/>
-      </sbol:hasSequence>
-      <genbank:division>UNA</genbank:division>
-      <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation2">
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation2/range">
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>1208</sbol:end>
-                  <sbol:start>1208</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH71301_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <gbConv:label>G to A</gbConv:label>
-            <gbConv:vntifkey>62</gbConv:vntifkey>
-            <gbConv:featureType>Mutation</gbConv:featureType>
-            <sbol:name>G to A</sbol:name>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
-            <sbol:displayId>annotation2</sbol:displayId>
-         </sbol:SequenceFeature>
-      </sbol:hasFeature>
-      <sbol:hasFeature>
-         <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation6">
-            <sbol:hasLocation>
-               <sbol:Range rdf:about="http://www.async.ece.utah.edu/pICH71301/annotation6/range">
-                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                  <sbol:end>2990</sbol:end>
-                  <sbol:start>2252</sbol:start>
-                  <sbol:hasSequence>
-                     <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH71301_seq"/>
-                  </sbol:hasSequence>
-                  <sbol:displayId>range</sbol:displayId>
-               </sbol:Range>
-            </sbol:hasLocation>
-            <gbConv:label>RbcS2 promoter (S. lycopersicum)</gbConv:label>
-            <gbConv:vntifkey>29</gbConv:vntifkey>
-            <gbConv:featureType>Promoter</gbConv:featureType>
-            <sbol:name>RbcS2 promoter (S. lycopersicum)</sbol:name>
-            <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
-            <sbol:displayId>annotation6</sbol:displayId>
-         </sbol:SequenceFeature>
-      </sbol:hasFeature>
-      <genbank:molecule>DNA</genbank:molecule>
-   </sbol:Component>
-   <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pICH71301_seq">
-      <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
-      <sbol:elements>AATGTGAGACCACGAAGTGGCTCTTCAGTGGACGAAAGGGCCTCGTGATACGCCTATTTTTATAGGTTAATGTCATGATAATAATGGTTTCTTAGACGTCAGGTGGCACTTTTCGGGGAAATGTGCGCGGAACCCCTATTTGTTTATTTTTCTAAATACATTCAAATATGTATCCGCTCATGAGACAATAACCCTGATAAATGCTTCAATAATATTGAAAAAGGAAGAGTATGCGCTCACGCAACTGGTCCAGAACCTTGACCGAACGCAGCGGTGGTAACGGCGCAGTGGCGGTTTTCATGGCTTGTTATGACTGTTTTTTTGGGGTACAGTCTATGCCTCGGGCATCCAAGCAGCAAGCGCGTTACGCCGTGGGTCGATGTTTGATGTTATGGAGCAGCAACGATGTTACGCAGCAGGGCAGTCGCCCTAAAACAAAGTTAAACATCATGAGGGAAGCGGTGATCGCCGAAGTATCGACTCAACTATCAGAGGTAGTTGGCGTCATCGAGCGCCATCTCGAACCGACGTTGCTGGCCGTACATTTGTACGGCTCCGCAGTGGATGGCGGCCTGAAGCCACACAGCGATATTGATTTGCTGGTTACGGTGACCGTAAGGCTTGATGAAACAACGCGGCGAGCTTTGATCAACGACCTTTTGGAAACTTCGGCTTCCCCTGGAGAGAGCGAGATTCTCCGCGCTGTAGAAGTCACCATTGTTGTGCACGACGACATCATTCCGTGGCGTTATCCAGCTAAGCGCGAACTGCAATTTGGAGAATGGCAGCGCAATGACATTCTTGCAGGTATCTTCGAGCCAGCCACGATCGACATTGATCTGGCTATCTTGCTGACAAAAGCAAGAGAACATAGCGTTGCCTTGGTAGGTCCAGCGGCGGAGGAACTCTTTGATCCGGTTCCTGAACAGGATCTATTTGAGGCGCTAAATGAAACCTTAACGCTATGGAACTCGCCGCCCGACTGGGCTGGCGATGAGCGAAATGTAGTGCTTACGTTGTCCCGCATTTGGTACAGCGCAGTAACCGGCAAAATCGCGCCGAAGGATGTCGCTGCCGACTGGGCAATGGAGCGCCTGCCGGCCCAGTATCAGCCCGTCATACTTGAAGCTAGACAGGCTTATCTTGGACAAGAAGAAGATCGCTTGGCCTCGCGCGCAGATCAGTTGGAAGAATTTGTCCATTACGTAAAAGGCGAGATCACCAAGGTAGTCGGCAAATAACTGTCAGACCAAGTTTACTCATATATACTTTAGATTGATTTAAAACTTCATTTTTAATTTAAAAGGATCTAGGTGAAGATCCTTTTTGATAATCTCATGACCAAAATCCCTTAACGTGAGTTTTCGTTCCACTGAGCGTCAGACCCCGTAGAAAAGATCAAAGGATCTTCTTGAGATCCTTTTTTTCTGCGCGTAATCTGCTGCTTGCAAACAAAAAAACCACCGCTACCAGCGGTGGTTTGTTTGCCGGATCAAGAGCTACCAACTCTTTTTCCGAAGGTAACTGGCTTCAGCAGAGCGCAGATACCAAATACTGTCCTTCTAGTGTAGCCGTAGTTAGGCCACCACTTCAAGAACTCTGTAGCACCGCCTACATACCTCGCTCTGCTAATCCTGTTACCAGTGGCTGCTGCCAGTGGCGATAAGTCGTGTCTTACCGGGTTGGACTCAAGACGATAGTTACCGGATAAGGCGCAGCGGTCGGGCTGAACGGGGGGTTCGTGCACACAGCCCAGCTTGGAGCGAACGACCTACACCGAACTGAGATACCTACAGCGTGAGCTATGAGAAAGCGCCACGCTTCCCGAAGGGAGAAAGGCGGACAGGTATCCGGTAAGCGGCAGGGTCGGAACAGGAGAGCGCACGAGGGAGCTTCCAGGGGGAAACGCCTGGTATCTTTATAGTCCTGTCGGGTTTCGCCACCTCTGACTTGAGCGTCGATTTTTGTGATGCTCGTCAGGGGGGCGGAGCCTATGGAAAAACGCCAGCAACGCGGCCTTTTTACGGTTCCTGGCCTTTTGCTGGCCTTTTGCTCACATGTTCTTTCCTGCGTTATCCCCTGATTCTGTGGATAACCGTATTACCGCCTTTGAGTGAGCTGATACCGCTCGCCGCAGCCGAACGACCGAGCGCAGCGAGTCAGTGAGCGAGGAAGCGGAAGAGCGCCCAATACGCAAACCGCCTCTCCCCGCGCGTTGGCCGATTCATTAATCACTCTGTGGTCTCAGGAGAATTCATGGGGCATTACAATTAATTAGTAATACTAATTTTAATAACACTAAATCATATTAGTCTCTATAGGTATAATATATAACTCTGGAGTCACTATCTGTATTTGGGATCAACAGTTACAAAGGTACGAGTAAAGTCTCTGATCCGACAAACAATCCGTATATCCTACCTTCCCGAAATTTCATGTATAAAATTATACTAAAATATTATTTTTCTTGTATTATCCGATTGAAAATTATGCGAATTCAACATAAAACTCTAAAAAAAGAAAATAATGAAAATTACAACTTAAAAGAGTGTCTAAGTTGGAATCATGGTATTACATAAAGTTGAGGACAATATAAGCAAGCAAACAAGTACTCTAGCTATCAATTTACTTTGGACTACTATATGATAAATATTTCAACCCCCCTCCTCCCCCACCAAAAAAAAATTAAAATAACAAGTTGAAGGACTCAAAAAAAAAAAAAAAAAAAACTCAAAACCAACCTCAATCATACATTCATATCCTCTTCCTACCCCCATCTTGGATGAGATAAGATTAACGAGGTGCTTACACGTGTCACCTCTATTGTGGTGACTTAAAAAAAATTCCAACCTTTCATATGTAGATATTAAGTAATTGTATAATGTTATCAAGAACCACATAACATATCAAAAACCTTATCATTTCATTATATAAAAGGATAGTGGACATCAAAAGGTTCATATTGAACCAAAAAAAGAGAGAAGAAGCAA</sbol:elements>
-      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
-      <sbol:displayId>pICH71301_seq</sbol:displayId>
-   </sbol:Sequence>
-</rdf:RDF>
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX gbConv:      <http://sbols.org/genBankConversion#>
+PREFIX genbank:     <http://www.ncbi.nlm.nih.gov/genbank#>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+
+<http://www.async.ece.utah.edu/pICH71301/annotation6>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "Promoter";
+        gbConv:label                  "RbcS2 promoter (S. lycopersicum)";
+        gbConv:vntifkey               "29";
+        sbol:displayId                "annotation6";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH71301/annotation6/range>;
+        sbol:name                     "RbcS2 promoter (S. lycopersicum)";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation6> .
+
+<http://www.async.ece.utah.edu/pICH71301>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "pICH71301";
+        sbol:hasFeature               <http://www.async.ece.utah.edu/pICH71301/annotation1> , <http://www.async.ece.utah.edu/pICH71301/annotation5> , <http://www.async.ece.utah.edu/pICH71301/annotation9> , <http://www.async.ece.utah.edu/pICH71301/annotation0> , <http://www.async.ece.utah.edu/pICH71301/annotation4> , <http://www.async.ece.utah.edu/pICH71301/annotation8> , <http://www.async.ece.utah.edu/pICH71301/annotation3> , <http://www.async.ece.utah.edu/pICH71301/annotation7> , <http://www.async.ece.utah.edu/pICH71301/annotation2> , <http://www.async.ece.utah.edu/pICH71301/annotation6>;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICH71301_seq>;
+        sbol:role                     SO:0000804;
+        sbol:type                     SO:0000988 , SBO:0000251;
+        genbank:comment               "This file is created by Vector NTI http://www.invitrogen.com/";
+        genbank:date                  "12-APR-2011";
+        genbank:division              "UNA";
+        genbank:locus                 "pICH71301";
+        genbank:molecule              "DNA";
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation1>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:label                  "Sm/Sp no DraIII";
+        gbConv:vntifkey               "4";
+        sbol:displayId                "annotation1";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH71301/annotation1/range>;
+        sbol:name                     "Sm/Sp no DraIII";
+        sbol:role                     SO:0000316;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation1> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation0/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "4";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICH71301_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation0/range> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation3/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "2015";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICH71301_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1401";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation3/range> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation9>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "TATA_box";
+        gbConv:label                  "TATA_Signal_1";
+        gbConv:vntifkey               "41";
+        sbol:displayId                "annotation9";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH71301/annotation9/range>;
+        sbol:name                     "TATA_Signal_1";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation9> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation4>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "Replication_ori";
+        gbConv:label                  "ORI";
+        gbConv:note                   "RNaseH cleavage point";
+        gbConv:vntifkey               "33";
+        sbol:displayId                "annotation4";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH71301/annotation4/range>;
+        sbol:name                     "ORI";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation4> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation7>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "Enhancer";
+        gbConv:label                  "Enhancer_1";
+        gbConv:vntifkey               "9";
+        sbol:displayId                "annotation7";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH71301/annotation7/range>;
+        sbol:name                     "Enhancer_1";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation7> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation6/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "2990";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICH71301_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "2252";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation6/range> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation9/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "2936";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICH71301_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "2926";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation9/range> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation2>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "Mutation";
+        gbConv:label                  "G to A";
+        gbConv:vntifkey               "62";
+        sbol:displayId                "annotation2";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH71301/annotation2/range>;
+        sbol:name                     "G to A";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation2> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation2/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "1208";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICH71301_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1208";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation2/range> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation5/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "2251";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICH71301_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "2248";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation5/range> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation5>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "Misc._Feature";
+        gbConv:label                  "GGAG 4 bp overhang";
+        sbol:displayId                "annotation5";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH71301/annotation5/range>;
+        sbol:name                     "GGAG 4 bp overhang";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation5> .
+
+<http://www.async.ece.utah.edu/pICH71301_seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "pICH71301_seq";
+        sbol:elements                 "AATGTGAGACCACGAAGTGGCTCTTCAGTGGACGAAAGGGCCTCGTGATACGCCTATTTTTATAGGTTAATGTCATGATAATAATGGTTTCTTAGACGTCAGGTGGCACTTTTCGGGGAAATGTGCGCGGAACCCCTATTTGTTTATTTTTCTAAATACATTCAAATATGTATCCGCTCATGAGACAATAACCCTGATAAATGCTTCAATAATATTGAAAAAGGAAGAGTATGCGCTCACGCAACTGGTCCAGAACCTTGACCGAACGCAGCGGTGGTAACGGCGCAGTGGCGGTTTTCATGGCTTGTTATGACTGTTTTTTTGGGGTACAGTCTATGCCTCGGGCATCCAAGCAGCAAGCGCGTTACGCCGTGGGTCGATGTTTGATGTTATGGAGCAGCAACGATGTTACGCAGCAGGGCAGTCGCCCTAAAACAAAGTTAAACATCATGAGGGAAGCGGTGATCGCCGAAGTATCGACTCAACTATCAGAGGTAGTTGGCGTCATCGAGCGCCATCTCGAACCGACGTTGCTGGCCGTACATTTGTACGGCTCCGCAGTGGATGGCGGCCTGAAGCCACACAGCGATATTGATTTGCTGGTTACGGTGACCGTAAGGCTTGATGAAACAACGCGGCGAGCTTTGATCAACGACCTTTTGGAAACTTCGGCTTCCCCTGGAGAGAGCGAGATTCTCCGCGCTGTAGAAGTCACCATTGTTGTGCACGACGACATCATTCCGTGGCGTTATCCAGCTAAGCGCGAACTGCAATTTGGAGAATGGCAGCGCAATGACATTCTTGCAGGTATCTTCGAGCCAGCCACGATCGACATTGATCTGGCTATCTTGCTGACAAAAGCAAGAGAACATAGCGTTGCCTTGGTAGGTCCAGCGGCGGAGGAACTCTTTGATCCGGTTCCTGAACAGGATCTATTTGAGGCGCTAAATGAAACCTTAACGCTATGGAACTCGCCGCCCGACTGGGCTGGCGATGAGCGAAATGTAGTGCTTACGTTGTCCCGCATTTGGTACAGCGCAGTAACCGGCAAAATCGCGCCGAAGGATGTCGCTGCCGACTGGGCAATGGAGCGCCTGCCGGCCCAGTATCAGCCCGTCATACTTGAAGCTAGACAGGCTTATCTTGGACAAGAAGAAGATCGCTTGGCCTCGCGCGCAGATCAGTTGGAAGAATTTGTCCATTACGTAAAAGGCGAGATCACCAAGGTAGTCGGCAAATAACTGTCAGACCAAGTTTACTCATATATACTTTAGATTGATTTAAAACTTCATTTTTAATTTAAAAGGATCTAGGTGAAGATCCTTTTTGATAATCTCATGACCAAAATCCCTTAACGTGAGTTTTCGTTCCACTGAGCGTCAGACCCCGTAGAAAAGATCAAAGGATCTTCTTGAGATCCTTTTTTTCTGCGCGTAATCTGCTGCTTGCAAACAAAAAAACCACCGCTACCAGCGGTGGTTTGTTTGCCGGATCAAGAGCTACCAACTCTTTTTCCGAAGGTAACTGGCTTCAGCAGAGCGCAGATACCAAATACTGTCCTTCTAGTGTAGCCGTAGTTAGGCCACCACTTCAAGAACTCTGTAGCACCGCCTACATACCTCGCTCTGCTAATCCTGTTACCAGTGGCTGCTGCCAGTGGCGATAAGTCGTGTCTTACCGGGTTGGACTCAAGACGATAGTTACCGGATAAGGCGCAGCGGTCGGGCTGAACGGGGGGTTCGTGCACACAGCCCAGCTTGGAGCGAACGACCTACACCGAACTGAGATACCTACAGCGTGAGCTATGAGAAAGCGCCACGCTTCCCGAAGGGAGAAAGGCGGACAGGTATCCGGTAAGCGGCAGGGTCGGAACAGGAGAGCGCACGAGGGAGCTTCCAGGGGGAAACGCCTGGTATCTTTATAGTCCTGTCGGGTTTCGCCACCTCTGACTTGAGCGTCGATTTTTGTGATGCTCGTCAGGGGGGCGGAGCCTATGGAAAAACGCCAGCAACGCGGCCTTTTTACGGTTCCTGGCCTTTTGCTGGCCTTTTGCTCACATGTTCTTTCCTGCGTTATCCCCTGATTCTGTGGATAACCGTATTACCGCCTTTGAGTGAGCTGATACCGCTCGCCGCAGCCGAACGACCGAGCGCAGCGAGTCAGTGAGCGAGGAAGCGGAAGAGCGCCCAATACGCAAACCGCCTCTCCCCGCGCGTTGGCCGATTCATTAATCACTCTGTGGTCTCAGGAGAATTCATGGGGCATTACAATTAATTAGTAATACTAATTTTAATAACACTAAATCATATTAGTCTCTATAGGTATAATATATAACTCTGGAGTCACTATCTGTATTTGGGATCAACAGTTACAAAGGTACGAGTAAAGTCTCTGATCCGACAAACAATCCGTATATCCTACCTTCCCGAAATTTCATGTATAAAATTATACTAAAATATTATTTTTCTTGTATTATCCGATTGAAAATTATGCGAATTCAACATAAAACTCTAAAAAAAGAAAATAATGAAAATTACAACTTAAAAGAGTGTCTAAGTTGGAATCATGGTATTACATAAAGTTGAGGACAATATAAGCAAGCAAACAAGTACTCTAGCTATCAATTTACTTTGGACTACTATATGATAAATATTTCAACCCCCCTCCTCCCCCACCAAAAAAAAATTAAAATAACAAGTTGAAGGACTCAAAAAAAAAAAAAAAAAAAACTCAAAACCAACCTCAATCATACATTCATATCCTCTTCCTACCCCCATCTTGGATGAGATAAGATTAACGAGGTGCTTACACGTGTCACCTCTATTGTGGTGACTTAAAAAAAATTCCAACCTTTCATATGTAGATATTAAGTAATTGTATAATGTTATCAAGAACCACATAACATATCAAAAACCTTATCATTTCATTATATAAAAGGATAGTGGACATCAAAAGGTTCATATTGAACCAAAAAAAGAGAGAAGAAGCAA";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301_seq> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation0>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "Misc._Feature";
+        gbConv:label                  "AATG 4 bp overhang";
+        sbol:displayId                "annotation0";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH71301/annotation0/range>;
+        sbol:name                     "AATG 4 bp overhang";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation0> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation8>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "CAAT_box";
+        gbConv:label                  "CAAT_1";
+        gbConv:vntifkey               "3";
+        sbol:displayId                "annotation8";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH71301/annotation8/range>;
+        sbol:name                     "CAAT_1";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation8> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation3>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "Misc._feature";
+        gbConv:label                  "rep (pMB1)";
+        gbConv:vntifkey               "21";
+        sbol:displayId                "annotation3";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH71301/annotation3/range>;
+        sbol:name                     "rep (pMB1)";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation3> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation8/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "2849";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICH71301_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "2845";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation8/range> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation1/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "1241";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICH71301_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "231";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation1/range> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation4/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "2000";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICH71301_seq>;
+        sbol:orientation              SO:0001031;
+        sbol:start                    "2000";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation4/range> .
+
+<http://www.async.ece.utah.edu/pICH71301/annotation7/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "2836";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/pICH71301_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "2826";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH71301/annotation7/range> .

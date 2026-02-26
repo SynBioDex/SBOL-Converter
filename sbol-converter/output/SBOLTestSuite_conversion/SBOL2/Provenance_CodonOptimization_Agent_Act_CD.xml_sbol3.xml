@@ -8,15 +8,18 @@
     xmlns:prov="http://www.w3.org/ns/prov#"
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:myapp="http://myapp.com/"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:TopLevel rdf:about="http://myapp.com/codon_optimization_activity">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://myapp.com/codon_optimization_activity"/>
       <sbol:name>Codon Optimization Activity</sbol:name>
       <sbol:hasNamespace rdf:resource="http://myapp.com"/>
       <sbol:displayId>codon_optimization_activity</sbol:displayId>
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
    </sbol:TopLevel>
    <sbol:TopLevel rdf:about="http://myapp.com/codon_optimization_software">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://myapp.com/codon_optimization_software"/>
       <sbol:name>Codon Optimization Software</sbol:name>
       <sbol:hasNamespace rdf:resource="http://myapp.com"/>
       <sbol:displayId>codon_optimization_software</sbol:displayId>

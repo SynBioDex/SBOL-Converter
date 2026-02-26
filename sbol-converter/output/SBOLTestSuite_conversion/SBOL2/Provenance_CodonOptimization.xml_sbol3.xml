@@ -8,10 +8,15 @@
     xmlns:prov="http://www.w3.org/ns/prov#"
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:myapp="http://myapp.com/"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://myapp.com/codon_optimized">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://myapp.com/codon_optimized"/>
+      <prov:wasGeneratedBy>
+         <sbol:TopLevel rdf:about="http://myapp.com/codon_optimization_activity"/>
+      </prov:wasGeneratedBy>
       <prov:wasDerivedFrom>
          <sbol:Component rdf:about="http://myapp.com/non_codon_optimized"/>
       </prov:wasDerivedFrom>
@@ -22,15 +27,18 @@
    </sbol:Component>
    <sbol:Component rdf:about="http://myapp.com/non_codon_optimized">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://myapp.com/non_codon_optimized"/>
       <sbol:name>Non Codon optimised CDS</sbol:name>
       <sbol:hasNamespace rdf:resource="http://myapp.com"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
       <sbol:displayId>non_codon_optimized</sbol:displayId>
    </sbol:Component>
    <sbol:TopLevel rdf:about="http://myapp.com/codon_optimization_activity">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://myapp.com/codon_optimization_activity"/>
       <sbol:name>Codon Optimization Activity</sbol:name>
       <prov:qualifiedUsage>
          <sbol:Identified rdf:about="http://myapp.com/codon_optimization_activity/usage">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://myapp.com/codon_optimization_activity/usage"/>
             <prov:hadRole rdf:resource="http://sbols.org/v2#source"/>
             <prov:entity rdf:resource="http://myapp.com/non_codon_optimized"/>
             <sbol:displayId>usage</sbol:displayId>
@@ -39,6 +47,7 @@
       </prov:qualifiedUsage>
       <prov:qualifiedAssociation>
          <sbol:Identified rdf:about="http://myapp.com/codon_optimization_activity/association">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://myapp.com/codon_optimization_activity/association"/>
             <prov:hadRole rdf:resource="http://myapp.com/codonoptimiser"/>
             <prov:agent>
                <sbol:TopLevel rdf:about="http://myapp.com/codon_optimization_software"/>
@@ -52,6 +61,7 @@
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
    </sbol:TopLevel>
    <sbol:TopLevel rdf:about="http://myapp.com/codon_optimization_software">
+      <backport2_3:sbol2OriginalURI rdf:resource="http://myapp.com/codon_optimization_software"/>
       <sbol:name>Codon Optimization Software</sbol:name>
       <sbol:hasNamespace rdf:resource="http://myapp.com"/>
       <sbol:displayId>codon_optimization_software</sbol:displayId>

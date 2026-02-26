@@ -5,6 +5,7 @@
     xmlns:sbol="http://sbols.org/v3#"
     xmlns:genbank="http://www.ncbi.nlm.nih.gov/genbank#"
     xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:EDAM="https://identifiers.org/edam:"
     xmlns:obo="http://purl.obolibrary.org/obo/"
@@ -32,16 +33,21 @@
             <genbank:title>Yeast-plant coupled vector system for identification of nuclear proteins</genbank:title>
             <genbank:authors>Zaltsman,A., Yi,B.Y., Krichevsky,A., Gafni,Y. and Citovsky,V.</genbank:authors>
             <genbank:label>1  (bases 1 to 705)</genbank:label>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/EF587312/reference0"/>
             <sbol:displayId>reference0</sbol:displayId>
             <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
          </genbank:Reference>
       </genbank:reference>
       <sbol:description>Yeast expression vector pNIA-Cb, complete sequence.</sbol:description>
       <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/EF587312/1"/>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://www.async.ece.utah.edu/1/EF587312/annotation0">
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/EF587312/annotation0/range">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/EF587312/annotation0/range/1"/>
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>705</sbol:end>
                   <sbol:start>1</sbol:start>
@@ -54,6 +60,7 @@
             <gbConv:db_xref>taxon:443237</gbConv:db_xref>
             <gbConv:mol_type>other DNA</gbConv:mol_type>
             <gbConv:organism>Yeast expression vector pNIA-Cb</gbConv:organism>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/EF587312/annotation0/1"/>
             <sbol:name>Yeast expression vector pNIA-Cb</sbol:name>
             <sbol:role rdf:resource="https://identifiers.org/SO:0002206"/>
             <sbol:displayId>annotation0</sbol:displayId>
@@ -65,6 +72,7 @@
             <genbank:title>Direct Submission</genbank:title>
             <genbank:authors>Zaltsman,A.A. and Citovsky,V.</genbank:authors>
             <genbank:label>2  (bases 1 to 705)</genbank:label>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/EF587312/reference1"/>
             <sbol:displayId>reference1</sbol:displayId>
             <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
          </genbank:Reference>
@@ -79,8 +87,12 @@
             <gbConv:transl_table>11</gbConv:transl_table>
             <gbConv:codon_start>1</gbConv:codon_start>
             <sbol:displayId>annotation1</sbol:displayId>
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/EF587312/annotation1/1"/>
             <sbol:hasLocation>
                <sbol:Range rdf:about="http://www.async.ece.utah.edu/1/EF587312/annotation1/range">
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/EF587312/annotation1/range/1"/>
+                  <backport2_3:sbol2LocationSequenceNull rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#boolean">true</backport2_3:sbol2LocationSequenceNull>
                   <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                   <sbol:end>705</sbol:end>
                   <sbol:start>1</sbol:start>
@@ -100,6 +112,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/1/EF587312_seq">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>gtgattaagcacacaaaggcagcttggagtatgtctgttattaatttcacaggtagttctggtccattggtgaaagtttgcggcttgcagagcacagaggccgcagaatgtgctctagattccgatgctgacttgctgggtattatatgtgtgcccaatagaaagagaacaattgacccggttattgcaaggaaaatttcaagtcttgtaaaagcatataaaaatagttcaggcactccgaaatacttggttggcgtgtttcgtaatcaacctaaggaggatgttttggctctggtcaatgattacggcattgatatcgtccaactgcatggagatgagtcgtggcaagaataccaagagttcctcggtttgccagttattaaaagactcgtatttccaaaagactgcaacatactactcagtgcagcttcacagaaacctcattcgtttattcccttgtttgattcagaagcaggtgggacaggtgaacttttggattggaactcgatttctgactgggttggaaggcaagagagccccgaaagcttacattttatgttagctggtggactgacgccagaaaatgttggtgatgcgcttagattaaatggcgttattggtgttgatgtaagcggaggtgtggagacaaatggtgtaaaagactctaacaaaatagcaaatttcgtcaaaaatgctaagaaatag</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/EF587312_seq/1"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>EF587312_seq</sbol:displayId>
    </sbol:Sequence>

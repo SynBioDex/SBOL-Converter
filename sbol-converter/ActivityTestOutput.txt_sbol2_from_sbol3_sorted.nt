@@ -1,0 +1,5 @@
+<http://partsregistry.org/act/TEST_ACTIVITY> <http://sbols.org/v2#displayId> "TEST_ACTIVITY" .
+<http://partsregistry.org/act/TEST_ACTIVITY> <http://sbols.org/v2#persistentIdentity> <http://partsregistry.org/act/TEST_ACTIVITY> .
+<http://partsregistry.org/act/TEST_ACTIVITY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://partsregistry.org/act/TEST_ACTIVITY> <http://www.w3.org/ns/prov#endedAtTime> "2026-02-26T19:51:36.119Z" .
+<http://partsregistry.org/act/TEST_ACTIVITY> <http://www.w3.org/ns/prov#startedAtTime> "2026-02-16T19:51:36.119Z" .

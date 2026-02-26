@@ -1,0 +1,223 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+PREFIX sys-bio:     <http://sys-bio.org#>
+
+<http://sys-bio.org/1.0.0/ModuleDefinition_design>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "ModuleDefinition_design";
+        sbol:hasNamespace             <http://sys-bio.org>;
+        sbol:type                     SBO:0000241;
+        prov:wasDerivedFrom           <http://sys-bio.org/Model_predicted/1.0.0>;
+        prov:wasGeneratedBy           <http://sys-bio.org/Activity_design_generation/1.0.0>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/ModuleDefinition_design/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Attachment_raw_data>
+        rdf:type                      sbol:Attachment;
+        sbol:displayId                "Attachment_raw_data";
+        sbol:format                   <https://edamontology.org/format_3752>;
+        sbol:hasNamespace             <http://sys-bio.org>;
+        sbol:source                   <file://server.sys-bio.org/data/plate_reader_expt_012218.csv>;
+        prov:wasDerivedFrom           <http://sys-bio.org/Implementation_build/1.0.0>;
+        prov:wasGeneratedBy           <http://sys-bio.org/Activity_raw_data_generation/1.0.0>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Attachment_raw_data/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Model_predicted>
+        rdf:type                      sbol:Model;
+        sbol:displayId                "Model_predicted";
+        sbol:framework                SBO:0000062;
+        sbol:hasNamespace             <http://sys-bio.org>;
+        sbol:language                 EDAM:format_2585;
+        sbol:source                   <file://server.sys-bio.org/circuit_simulation.xml>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Model_predicted/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Activity_raw_data_generation>
+        rdf:type                      sbol:TopLevel , prov:Activity;
+        sbol:displayId                "Activity_raw_data_generation";
+        sbol:hasNamespace             <http://sys-bio.org>;
+        prov:qualifiedAssociation     <http://sys-bio.org/1.0.0/Activity_raw_data_generation/raw_data_generation_association>;
+        prov:qualifiedUsage           <http://sys-bio.org/1.0.0/Activity_raw_data_generation/build_usage>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Activity_raw_data_generation/1.0.0> .
+
+<http://www.async.ece.utah.edu/1.0.0/ibiosim>
+        rdf:type                      sbol:TopLevel , prov:Agent;
+        sbol:description              "Software application for the modeling, analysis, and design of genetic circuits";
+        sbol:displayId                "ibiosim";
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/ibiosim/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Activity_design_generation/predicted_usage>
+        rdf:type                      sbol:Identified , prov:Usage;
+        sbol:displayId                "predicted_usage";
+        prov:entity                   <http://sys-bio.org/1.0.0/Model_predicted>;
+        prov:hadRole                  <http://sbols.org/v2#learn>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Activity_design_generation/predicted_usage/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Activity_fit_model_generation/raw_data_usage>
+        rdf:type                      sbol:Identified , prov:Usage;
+        sbol:displayId                "raw_data_usage";
+        prov:entity                   <http://sys-bio.org/1.0.0/Attachment_raw_data>;
+        prov:hadRole                  <http://sbols.org/v2#test>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Activity_fit_model_generation/raw_data_usage/1.0.0> .
+
+<https://synbiohub.org/1.0.0/jdoe>
+        rdf:type                      sbol:TopLevel , prov:Agent;
+        sbol:description              "Lab Technician";
+        sbol:displayId                "jdoe";
+        sbol:hasNamespace             <https://synbiohub.org>;
+        sbol:name                     "John Doe";
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/jdoe/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Plan_characterization_protocol>
+        rdf:type                      sbol:TopLevel , prov:Plan;
+        sbol:displayId                "Plan_characterization_protocol";
+        sbol:hasAttachment            <http://sys-bio.org/1.0.0/Attachment_characterization_protocol>;
+        sbol:hasNamespace             <http://sys-bio.org>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Plan_characterization_protocol/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Implementation_build>
+        rdf:type                      sbol:Implementation;
+        sbol:displayId                "Implementation_build";
+        sbol:hasNamespace             <http://sys-bio.org>;
+        prov:wasDerivedFrom           <http://sys-bio.org/ModuleDefinition_design/1.0.0>;
+        prov:wasGeneratedBy           <http://sys-bio.org/Activity_build_generation/1.0.0>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Implementation_build/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Activity_build_generation>
+        rdf:type                      sbol:TopLevel , prov:Activity;
+        sbol:displayId                "Activity_build_generation";
+        sbol:hasNamespace             <http://sys-bio.org>;
+        prov:qualifiedAssociation     <http://sys-bio.org/1.0.0/Activity_build_generation/build_generation_association>;
+        prov:qualifiedUsage           <http://sys-bio.org/1.0.0/Activity_build_generation/design_usage>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Activity_build_generation/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Activity_build_generation/design_usage>
+        rdf:type                      sbol:Identified , prov:Usage;
+        sbol:displayId                "design_usage";
+        prov:entity                   <http://sys-bio.org/1.0.0/ModuleDefinition_design>;
+        prov:hadRole                  <http://sbols.org/v2#design>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Activity_build_generation/design_usage/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Model_fit_model>
+        rdf:type                      sbol:Model;
+        sbol:displayId                "Model_fit_model";
+        sbol:framework                SBO:0000062;
+        sbol:hasNamespace             <http://sys-bio.org>;
+        sbol:language                 EDAM:format_2585;
+        sbol:source                   <file://server.sys-bio.org/models/model_fit.xml>;
+        prov:wasDerivedFrom           <http://sys-bio.org/Attachment_raw_data/1.0.0>;
+        prov:wasGeneratedBy           <http://sys-bio.org/Activity_fit_model_generation/1.0.0>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Model_fit_model/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Activity_raw_data_generation/build_usage>
+        rdf:type                      sbol:Identified , prov:Usage;
+        sbol:displayId                "build_usage";
+        prov:entity                   <http://sys-bio.org/1.0.0/Implementation_build>;
+        prov:hadRole                  <http://sbols.org/v2#build>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Activity_raw_data_generation/build_usage/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Plan_gibson_assembly>
+        rdf:type                      sbol:TopLevel , prov:Plan;
+        sbol:description              "DNA assembly";
+        sbol:displayId                "Plan_gibson_assembly";
+        sbol:hasNamespace             <http://sys-bio.org>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Plan_gibson_assembly/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Plan_conversion>
+        rdf:type                      sbol:TopLevel , prov:Plan;
+        sbol:description              "SBML to SBOL conversion";
+        sbol:displayId                "Plan_conversion";
+        sbol:hasNamespace             <http://sys-bio.org>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Plan_conversion/1.0.0> .
+
+<http://sys-bio.org/1.0.0/plate_reader_1>
+        rdf:type                      sbol:TopLevel , prov:Agent;
+        sbol:displayId                "plate_reader_1";
+        sbol:hasNamespace             <http://sys-bio.org>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/plate_reader_1/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Activity_design_generation/design_generation_association>
+        rdf:type                      sbol:Identified , prov:Association;
+        sbol:displayId                "design_generation_association";
+        prov:agent                    <http://www.async.ece.utah.edu/1.0.0/ibiosim>;
+        prov:hadPlan                  <http://sys-bio.org/1.0.0/Plan_conversion>;
+        prov:hadRole                  <http://sbols.org/v2#design>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Activity_design_generation/design_generation_association/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Activity_fit_model_generation>
+        rdf:type                      sbol:TopLevel , prov:Activity;
+        sbol:displayId                "Activity_fit_model_generation";
+        sbol:hasNamespace             <http://sys-bio.org>;
+        prov:qualifiedAssociation     <http://sys-bio.org/1.0.0/Activity_fit_model_generation/fit_model_generation_association>;
+        prov:qualifiedUsage           <http://sys-bio.org/1.0.0/Activity_fit_model_generation/raw_data_usage>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Activity_fit_model_generation/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Activity_raw_data_generation/raw_data_generation_association>
+        rdf:type                      sbol:Identified , prov:Association;
+        sbol:displayId                "raw_data_generation_association";
+        prov:agent                    <http://sys-bio.org/1.0.0/plate_reader_1>;
+        prov:hadPlan                  <http://sys-bio.org/1.0.0/Plan_characterization_protocol>;
+        prov:hadRole                  <http://sbols.org/v2#test>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Activity_raw_data_generation/raw_data_generation_association/1.0.0> .
+
+<https://synbiohub.org/1.0.0/jschmoe>
+        rdf:type                      sbol:TopLevel , prov:Agent;
+        sbol:description              "Research Fellow";
+        sbol:displayId                "jschmoe";
+        sbol:hasNamespace             <https://synbiohub.org>;
+        sbol:name                     "Joe Schmoe";
+        backport2_3:sbol2OriginalURI  <https://synbiohub.org/jschmoe/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Attachment_model_fitting_script>
+        rdf:type                      sbol:Attachment;
+        sbol:displayId                "Attachment_model_fitting_script";
+        sbol:format                   <https://www.ebi.ac.uk/swo/SWO_0000147>;
+        sbol:hasNamespace             <http://sys-bio.org>;
+        sbol:source                   <file://server.sys-bio.org/Dev/optimize.py>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Attachment_model_fitting_script/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Plan_model_fitting>
+        rdf:type                      sbol:TopLevel , prov:Plan;
+        sbol:displayId                "Plan_model_fitting";
+        sbol:hasAttachment            <http://sys-bio.org/1.0.0/Attachment_model_fitting_script>;
+        sbol:hasNamespace             <http://sys-bio.org>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Plan_model_fitting/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Activity_build_generation/build_generation_association>
+        rdf:type                      sbol:Identified , prov:Association;
+        sbol:displayId                "build_generation_association";
+        prov:agent                    <https://synbiohub.org/1.0.0/jdoe>;
+        prov:hadPlan                  <http://sys-bio.org/1.0.0/Plan_gibson_assembly>;
+        prov:hadRole                  <http://sbols.org/v2#build>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Activity_build_generation/build_generation_association/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Attachment_characterization_protocol>
+        rdf:type                      sbol:Attachment;
+        sbol:displayId                "Attachment_characterization_protocol";
+        sbol:hasNamespace             <http://sys-bio.org>;
+        sbol:source                   <https://sbolstandard.org/SBOL3-Converter/dynamic_measurement.mdx>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Attachment_characterization_protocol/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Activity_fit_model_generation/fit_model_generation_association>
+        rdf:type                      sbol:Identified , prov:Association;
+        sbol:displayId                "fit_model_generation_association";
+        prov:agent                    <https://synbiohub.org/1.0.0/jschmoe>;
+        prov:hadPlan                  <http://sys-bio.org/1.0.0/Plan_model_fitting>;
+        prov:hadRole                  <http://sbols.org/v2#learn>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Activity_fit_model_generation/fit_model_generation_association/1.0.0> .
+
+<http://sys-bio.org/1.0.0/Activity_design_generation>
+        rdf:type                      sbol:TopLevel , prov:Activity;
+        sbol:displayId                "Activity_design_generation";
+        sbol:hasNamespace             <http://sys-bio.org>;
+        prov:qualifiedAssociation     <http://sys-bio.org/1.0.0/Activity_design_generation/design_generation_association>;
+        prov:qualifiedUsage           <http://sys-bio.org/1.0.0/Activity_design_generation/predicted_usage>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Activity_design_generation/1.0.0> .

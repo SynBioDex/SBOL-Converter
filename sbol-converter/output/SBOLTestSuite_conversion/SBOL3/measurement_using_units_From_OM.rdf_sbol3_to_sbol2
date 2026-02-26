@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<rdf:RDF xmlns="https://sbolstandard.org/examples/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sbol="http://sbols.org/v2#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
+  <sbol:ModuleDefinition rdf:about="https://sbolstandard.org/examples/M9_Glucose_CAA">
+    <sbol:persistentIdentity rdf:resource="https://sbolstandard.org/examples/M9_Glucose_CAA"/>
+    <sbol:displayId>M9_Glucose_CAA</sbol:displayId>
+    <dcterms:title>M9 Glucose CAA</dcterms:title>
+    <dcterms:description>M9 Glucose CAA growth media</dcterms:description>
+  </sbol:ModuleDefinition>
+</rdf:RDF>

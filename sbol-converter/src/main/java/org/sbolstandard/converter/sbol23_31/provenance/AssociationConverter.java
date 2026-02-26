@@ -23,7 +23,7 @@ public class AssociationConverter implements ChildEntityConverter<org.sbolstanda
 		
 		Association sbol3Association = sbol3ParentActivity.createAssociation(sbol2Association.getDisplayId(), sbol3AgentURI);
 		
-		if(sbol2Association.getPlan() != null) {
+		if(sbol2Association.getPlanURI() != null) {
 			URI sbol3PlanURI = Util.createSBOL3Uri(sbol2Association.getPlanURI(), parameters);
 			sbol3Association.setPlan(sbol3PlanURI);
 		}

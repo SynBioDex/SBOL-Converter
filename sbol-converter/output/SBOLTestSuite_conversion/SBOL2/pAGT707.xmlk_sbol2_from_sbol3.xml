@@ -65,27 +65,6 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation5">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation5"/>
-        <sbol:displayId>annotation5</sbol:displayId>
-        <dcterms:title>ORI</dcterms:title>
-        <gbConv:note>color: #3366cc</gbConv:note>
-        <gbConv:note>RNaseH cleavage point</gbConv:note>
-        <gbConv:note>ORI</gbConv:note>
-        <gbConv:label>ORI</gbConv:label>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000296"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation5/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation5/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>2000</sbol:start>
-            <sbol:end>2000</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
       <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation6">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation6"/>
         <sbol:displayId>annotation6</sbol:displayId>
@@ -100,26 +79,6 @@
             <sbol:displayId>range</sbol:displayId>
             <sbol:start>2248</sbol:start>
             <sbol:end>2332</sbol:end>
-            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
-          </sbol:Range>
-        </sbol:location>
-      </sbol:SequenceAnnotation>
-    </sbol:sequenceAnnotation>
-    <sbol:sequenceAnnotation>
-      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation1">
-        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation1"/>
-        <sbol:displayId>annotation1</sbol:displayId>
-        <dcterms:title>CCAT</dcterms:title>
-        <gbConv:note>color: #3366cc</gbConv:note>
-        <gbConv:note>CCAT</gbConv:note>
-        <gbConv:label>CCAT</gbConv:label>
-        <sbol:role rdf:resource="http://identifiers.org/so/SO:0001411"/>
-        <sbol:location>
-          <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation1/range">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation1/range"/>
-            <sbol:displayId>range</sbol:displayId>
-            <sbol:start>1</sbol:start>
-            <sbol:end>4</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>
@@ -145,6 +104,27 @@
       </sbol:SequenceAnnotation>
     </sbol:sequenceAnnotation>
     <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation5">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation5"/>
+        <sbol:displayId>annotation5</sbol:displayId>
+        <dcterms:title>ORI</dcterms:title>
+        <gbConv:note>color: #3366cc</gbConv:note>
+        <gbConv:note>ORI</gbConv:note>
+        <gbConv:note>RNaseH cleavage point</gbConv:note>
+        <gbConv:label>ORI</gbConv:label>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000296"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation5/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation5/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>2000</sbol:start>
+            <sbol:end>2000</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
       <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation4">
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation4"/>
         <sbol:displayId>annotation4</sbol:displayId>
@@ -159,6 +139,26 @@
             <sbol:displayId>range</sbol:displayId>
             <sbol:start>1401</sbol:start>
             <sbol:end>2015</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation1">
+        <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation1"/>
+        <sbol:displayId>annotation1</sbol:displayId>
+        <dcterms:title>CCAT</dcterms:title>
+        <gbConv:note>color: #3366cc</gbConv:note>
+        <gbConv:note>CCAT</gbConv:note>
+        <gbConv:label>CCAT</gbConv:label>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0001411"/>
+        <sbol:location>
+          <sbol:Range rdf:about="http://www.async.ece.utah.edu/Exported_File/annotation1/range">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/Exported_File/annotation1/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:start>1</sbol:start>
+            <sbol:end>4</sbol:end>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
           </sbol:Range>
         </sbol:location>

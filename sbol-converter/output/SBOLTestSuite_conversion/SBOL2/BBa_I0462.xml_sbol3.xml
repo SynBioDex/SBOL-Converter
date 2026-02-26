@@ -8,9 +8,11 @@
     xmlns:prov="http://www.w3.org/ns/prov#"
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/BBa_B0034">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000139"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/BBa_B0034"/>
       <prov:wasDerivedFrom rdf:resource="http://partsregistry.org/Part:BBa_B0034"/>
       <sbol:name>B0034</sbol:name>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
@@ -20,6 +22,7 @@
    </sbol:Component>
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/BBa_C0062">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/BBa_C0062"/>
       <prov:wasDerivedFrom rdf:resource="http://partsregistry.org/Part:BBa_C0062"/>
       <sbol:name>luxR</sbol:name>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
@@ -29,6 +32,7 @@
    </sbol:Component>
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/BBa_B0015">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000141"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/BBa_B0015"/>
       <prov:wasDerivedFrom rdf:resource="http://partsregistry.org/Part:BBa_B0015"/>
       <sbol:name>B0015</sbol:name>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
@@ -43,27 +47,13 @@
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://www.async.ece.utah.edu/BBa_I0462/Interface1">
             <sbol:nondirectional>
-               <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/BBa_I0462/BBa_C0062">
-                  <sbol:hasLocation>
-                     <sbol:Range rdf:about="http://www.async.ece.utah.edu/BBa_I0462/BBa_C0062/range">
-                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                        <sbol:end>774</sbol:end>
-                        <sbol:start>19</sbol:start>
-                        <sbol:hasSequence>
-                           <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/seq_d23749adb3a7e0e2f09168cb7267a6113b238973"/>
-                        </sbol:hasSequence>
-                        <sbol:displayId>range</sbol:displayId>
-                     </sbol:Range>
-                  </sbol:hasLocation>
-                  <prov:wasDerivedFrom rdf:resource="http://sbols.org/anot#2345678"/>
-                  <sbol:instanceOf rdf:resource="http://www.async.ece.utah.edu/BBa_C0062"/>
-                  <sbol:displayId>BBa_C0062</sbol:displayId>
-               </sbol:SubComponent>
-            </sbol:nondirectional>
-            <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0015">
                   <sbol:hasLocation>
                      <sbol:Range rdf:about="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0015/range">
+                        <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0015_annotation/range"/>
+                        <backport2_3:sbol2LocationSequenceNull
+                         rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</backport2_3:sbol2LocationSequenceNull>
                         <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                         <sbol:end>936</sbol:end>
                         <sbol:start>808</sbol:start>
@@ -73,15 +63,47 @@
                         <sbol:displayId>range</sbol:displayId>
                      </sbol:Range>
                   </sbol:hasLocation>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0015_annotation"/>
                   <prov:wasDerivedFrom rdf:resource="http://sbols.org/anot#3456789"/>
+                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0015_annotation"/>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0015"/>
                   <sbol:instanceOf rdf:resource="http://www.async.ece.utah.edu/BBa_B0015"/>
                   <sbol:displayId>BBa_B0015</sbol:displayId>
+               </sbol:SubComponent>
+            </sbol:nondirectional>
+            <sbol:nondirectional>
+               <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/BBa_I0462/BBa_C0062">
+                  <sbol:hasLocation>
+                     <sbol:Range rdf:about="http://www.async.ece.utah.edu/BBa_I0462/BBa_C0062/range">
+                        <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/BBa_I0462/BBa_C0062_annotation/range"/>
+                        <backport2_3:sbol2LocationSequenceNull
+                         rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</backport2_3:sbol2LocationSequenceNull>
+                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                        <sbol:end>774</sbol:end>
+                        <sbol:start>19</sbol:start>
+                        <sbol:hasSequence>
+                           <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/seq_d23749adb3a7e0e2f09168cb7267a6113b238973"/>
+                        </sbol:hasSequence>
+                        <sbol:displayId>range</sbol:displayId>
+                     </sbol:Range>
+                  </sbol:hasLocation>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/BBa_I0462/BBa_C0062_annotation"/>
+                  <prov:wasDerivedFrom rdf:resource="http://sbols.org/anot#2345678"/>
+                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.async.ece.utah.edu/BBa_I0462/BBa_C0062_annotation"/>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/BBa_I0462/BBa_C0062"/>
+                  <sbol:instanceOf rdf:resource="http://www.async.ece.utah.edu/BBa_C0062"/>
+                  <sbol:displayId>BBa_C0062</sbol:displayId>
                </sbol:SubComponent>
             </sbol:nondirectional>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0034">
                   <sbol:hasLocation>
                      <sbol:Range rdf:about="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0034/range">
+                        <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0034_annotation/range"/>
+                        <backport2_3:sbol2LocationSequenceNull
+                         rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</backport2_3:sbol2LocationSequenceNull>
                         <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                         <sbol:end>12</sbol:end>
                         <sbol:start>1</sbol:start>
@@ -91,7 +113,10 @@
                         <sbol:displayId>range</sbol:displayId>
                      </sbol:Range>
                   </sbol:hasLocation>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0034_annotation"/>
                   <prov:wasDerivedFrom rdf:resource="http://sbols.org/anot#1234567"/>
+                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0034_annotation"/>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/BBa_I0462/BBa_B0034"/>
                   <sbol:instanceOf rdf:resource="http://www.async.ece.utah.edu/BBa_B0034"/>
                   <sbol:displayId>BBa_B0034</sbol:displayId>
                </sbol:SubComponent>
@@ -105,6 +130,7 @@
          <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/seq_d23749adb3a7e0e2f09168cb7267a6113b238973"/>
       </sbol:hasSequence>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/BBa_I0462"/>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
       <sbol:description>LuxR protein generator</sbol:description>
       <sbol:name>I0462</sbol:name>
@@ -114,6 +140,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/seq_d23749adb3a7e0e2f09168cb7267a6113b238973">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>aaagaggagaaatactagatgaaaaacataaatgccgacgacacatacagaataattaataaaattaaagcttgtagaagcaataatgatattaatcaatgcttatctgatatgactaaaatggtacattgtgaatattatttactcgcgatcatttatcctcattctatggttaaatctgatatttcaatcctagataattaccctaaaaaatggaggcaatattatgatgacgctaatttaataaaatatgatcctatagtagattattctaactccaatcattcaccaattaattggaatatatttgaaaacaatgctgtaaataaaaaatctccaaatgtaattaaagaagcgaaaacatcaggtcttatcactgggtttagtttccctattcatacggctaacaatggcttcggaatgcttagttttgcacattcagaaaaagacaactatatagatagtttatttttacatgcgtgtatgaacataccattaattgttccttctctagttgataattatcgaaaaataaatatagcaaataataaatcaaacaacgatttaaccaaaagagaaaaagaatgtttagcgtgggcatgcgaaggaaaaagctcttgggatatttcaaaaatattaggttgcagtgagcgtactgtcactttccatttaaccaatgcgcaaatgaaactcaatacaacaaaccgctgccaaagtatttctaaagcaattttaacaggagcaattgattgcccatactttaaaaattaataacactgatagtgctagtgtagatcactactagagccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctactagagtcacactggctcaccttcgggtgggcctttctgcgtttata</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/seq_d23749adb3a7e0e2f09168cb7267a6113b238973"/>
       <prov:wasDerivedFrom rdf:resource="http://sbols.org/seq#d23749adb3a7e0e2f09168cb7267a6113b238973"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>seq_d23749adb3a7e0e2f09168cb7267a6113b238973</sbol:displayId>

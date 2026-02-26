@@ -9,10 +9,12 @@
     xmlns:prov="http://www.w3.org/ns/prov#"
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:TopLevel rdf:about="http://partsregistry.org/act/TEST_ACTIVITY">
-      <prov:endedAtTime>2025-10-23T11:20:40Z</prov:endedAtTime>
-      <prov:startedAtTime>2025-10-13T11:20:40Z</prov:startedAtTime>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/act/TEST_ACTIVITY"/>
+      <prov:endedAtTime>2026-02-26T19:51:36.119Z</prov:endedAtTime>
+      <prov:startedAtTime>2026-02-16T19:51:36.119Z</prov:startedAtTime>
       <sbol:hasNamespace rdf:resource="http://partsregistry.org/act"/>
       <sbol:displayId>TEST_ACTIVITY</sbol:displayId>
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>

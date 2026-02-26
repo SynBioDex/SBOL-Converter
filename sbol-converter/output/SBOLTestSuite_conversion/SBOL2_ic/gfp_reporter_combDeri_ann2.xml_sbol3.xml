@@ -1,0 +1,24 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:SO="https://identifiers.org/SO:"
+    xmlns:sbol="http://sbols.org/v3#"
+    xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:EDAM="https://identifiers.org/edam:"
+    xmlns:CHEBI="https://identifiers.org/CHEBI:"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:igem="http://wiki.synbiohub.org/wiki/Terms/igem#"
+    xmlns:SBO="https://identifiers.org/SBO:"
+    xmlns:sbh="http://wiki.synbiohub.org/wiki/Terms/synbiohub#"
+    xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
+   <sbol:CombinatorialDerivation rdf:about="http://michael.zhang/1/GFP_Reporter_Template_CombinatorialDerivation_Sample">
+      <sbol:strategy rdf:resource="http://sbols.org/v3#sample"/>
+      <dcterms:created>2003-12-04T12:00:00Z</dcterms:created>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://michael.zhang/GFP_Reporter_Template_CombinatorialDerivation_Sample/1"/>
+      <sbol:hasNamespace rdf:resource="http://michael.zhang"/>
+      <sbol:template rdf:resource="http://michael.zhang/1/GFP_Reporter_Template"/>
+      <sbol:displayId>GFP_Reporter_Template_CombinatorialDerivation_Sample</sbol:displayId>
+   </sbol:CombinatorialDerivation>
+</rdf:RDF>

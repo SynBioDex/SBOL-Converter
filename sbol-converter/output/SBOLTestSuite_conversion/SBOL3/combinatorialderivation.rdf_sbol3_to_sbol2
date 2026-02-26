@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<rdf:RDF xmlns="https://synbiohub.org/public/igem/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sbol="http://sbols.org/v2#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
+  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_R0040_start">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_start"/>
+    <sbol:displayId>BBa_R0040_start</sbol:displayId>
+    <dcterms:title>pTetR_start</dcterms:title>
+    <dcterms:description>promoter_start</dcterms:description>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000804"/>
+    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_start_Sequence1"/>
+  </sbol:ComponentDefinition>
+  <sbol:ComponentDefinition rdf:about="https://synbiohub.org/public/igem/BBa_R0040">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_R0040"/>
+    <sbol:displayId>BBa_R0040</sbol:displayId>
+    <dcterms:title>pTetR</dcterms:title>
+    <dcterms:description>TetR repressible promoter</dcterms:description>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
+    <sbol:component>
+      <sbol:Component rdf:about="https://synbiohub.org/public/igem/BBa_R0040/SubComponent2">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_R0040/SubComponent2"/>
+        <sbol:displayId>SubComponent2</sbol:displayId>
+        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
+        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_start"/>
+      </sbol:Component>
+    </sbol:component>
+    <sbol:component>
+      <sbol:Component rdf:about="https://synbiohub.org/public/igem/BBa_R0040/SubComponent1">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_R0040/SubComponent1"/>
+        <sbol:displayId>SubComponent1</sbol:displayId>
+        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
+        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_start"/>
+      </sbol:Component>
+    </sbol:component>
+    <sbol:component>
+      <sbol:Component rdf:about="https://synbiohub.org/public/igem/BBa_R0040/SubComponent3">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_R0040/SubComponent3"/>
+        <sbol:displayId>SubComponent3</sbol:displayId>
+        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
+        <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_start"/>
+      </sbol:Component>
+    </sbol:component>
+    <sbol:sequence rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_Sequence1"/>
+  </sbol:ComponentDefinition>
+  <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/BBa_R0040_start_Sequence1">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_start_Sequence1"/>
+    <sbol:displayId>BBa_R0040_start_Sequence1</sbol:displayId>
+    <dcterms:title>Sequence1</dcterms:title>
+    <dcterms:description>BBa_R0040_start sequence</dcterms:description>
+    <sbol:elements>tccctat</sbol:elements>
+    <sbol:encoding rdf:resource="http://www.chem.qmul.ac.uk/iubmb/misc/naseq.html"/>
+  </sbol:Sequence>
+  <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/BBa_R0040_Sequence1">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_Sequence1"/>
+    <sbol:displayId>BBa_R0040_Sequence1</sbol:displayId>
+    <dcterms:title>Sequence1</dcterms:title>
+    <dcterms:description>BBa_R0040 sequence</dcterms:description>
+    <sbol:elements>tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcac</sbol:elements>
+    <sbol:encoding rdf:resource="http://www.chem.qmul.ac.uk/iubmb/misc/naseq.html"/>
+  </sbol:Sequence>
+  <sbol:CombinatorialDerivation rdf:about="https://synbiohub.org/public/igem/cs1">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/cs1"/>
+    <sbol:displayId>cs1</sbol:displayId>
+    <sbol:template rdf:resource="https://synbiohub.org/public/igem/BBa_R0040"/>
+  </sbol:CombinatorialDerivation>
+</rdf:RDF>

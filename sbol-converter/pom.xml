@@ -6,7 +6,7 @@
 
 	<groupId>org.sbolstandard</groupId>
 	<artifactId>sbol-converter</artifactId>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.3-SNAPSHOT</version>
 	<name>sbol-converter</name>
 	<url>https://github.com/SynBioDex/SBOL-Converter</url>
 	<issueManagement>
@@ -15,11 +15,10 @@
 	</issueManagement>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<!--<maven.compiler.release>23</maven.compiler.release>-->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>16</maven.compiler.source>
-		<maven.compiler.target>16</maven.compiler.target>
-		<java.version>16</java.version>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>21</maven.compiler.target>
+		<maven.compiler.release>21</maven.compiler.release>
+		<java.version>21</java.version>
 	</properties>
 
 	<dependencyManagement>
@@ -49,7 +48,7 @@
 		<dependency>
     		<groupId>org.sbolstandard</groupId>
    			<artifactId>libsbolj3</artifactId>
-    		<version>1.0.4.1-SNAPSHOT</version>
+    		<version>1.0.5.2</version>
   		</dependency>
 
 		
@@ -122,6 +121,11 @@
 				</exclusion>
 			</exclusions>-->
 		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>2.0.17</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -138,9 +142,9 @@
 				<plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.13.0</version>
-					<!--<configuration>
-				        <release>23</release>
-				      </configuration>-->
+					<configuration>
+						<release>21</release>
+					</configuration>
 				</plugin>
 				<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
@@ -198,14 +202,19 @@
 	</build>
 
 	<repositories>
-		<repository>
+	    <repository>
+            <id>github</id>
+            <name>GitHub Packages (Releases)</name>
+			<url>https://maven.pkg.github.com/SynBioDex/libSBOLj3</url>
+        </repository>
+		<!--<repository>
 			<id>oss-sonatype</id>
 			<name>oss-sonatype</name>
 			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
-		</repository>
+		</repository>-->
 		<!-- <repository>
     		<id>github</id>
 			<name>GitHub Packages</name>

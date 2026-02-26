@@ -36,7 +36,6 @@ public class ComponentConverter implements ChildEntityConverter<org.sbolstandard
 		}
 		parameters.addMapping(input.getIdentity(), resultSC.getUri());
 			
-		// TODO Add measures
 		resultSC.setRoles(Util.toList(input.getRoles()));
 
 		RoleIntegrationType ri = input.getRoleIntegration();

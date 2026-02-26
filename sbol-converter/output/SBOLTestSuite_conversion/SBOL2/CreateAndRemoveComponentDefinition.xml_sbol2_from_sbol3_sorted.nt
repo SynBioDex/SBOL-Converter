@@ -1,0 +1,5 @@
+<http://www.async.ece.utah.edu/someCompDef/1.0> <http://sbols.org/v2#displayId> "someCompDef" .
+<http://www.async.ece.utah.edu/someCompDef/1.0> <http://sbols.org/v2#persistentIdentity> <http://www.async.ece.utah.edu/someCompDef> .
+<http://www.async.ece.utah.edu/someCompDef/1.0> <http://sbols.org/v2#type> <http://www.biopax.org/release/biopax-level3.owl#Protein> .
+<http://www.async.ece.utah.edu/someCompDef/1.0> <http://sbols.org/v2#version> "1.0" .
+<http://www.async.ece.utah.edu/someCompDef/1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v2#ComponentDefinition> .

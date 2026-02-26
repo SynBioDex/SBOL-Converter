@@ -1,0 +1,143 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX myapp:       <http://www.myapp.org/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+PREFIX sys-bio:     <http://sys-bio.org#>
+
+<https://dummy.org/public/ACS_SynBio/attachment_00009Les8pDTQCmKA7A5T6>
+        rdf:type                      sbol:Attachment;
+        sbol:displayId                "attachment_00009Les8pDTQCmKA7A5T6";
+        sbol:format                   EDAM:format_3603;
+        sbol:hasAttachment            <http://sys-bio.org/Attachment/1.0.0/characterization_protocol>;
+        sbol:hasNamespace             <https://dummy.org/public/ACS_SynBio>;
+        sbol:hash                     "404966a5062857f63edb5c3ba16bb581d7fb6a1e";
+        sbol:hashAlgorithm            "sha-256";
+        sbol:name                     "NicePlot.png";
+        sbol:size                     "31399";
+        sbol:source                   <https://dummy.org/public/ACS_SynBio/attachment_00009Les8pDTQCmKA7A5T6/1/download>;
+        backport2_3:sbol2OriginalURI  <https://dummy.org/public/ACS_SynBio/attachment_00009Les8pDTQCmKA7A5T6> .
+
+<http://www.sbolstandard.org/examples/pIKE_Toggle_1>
+        rdf:type                      sbol:Model;
+        sbol:displayId                "pIKE_Toggle_1";
+        sbol:framework                SBO:0000062;
+        sbol:hasAttachment            <http://sys-bio.org/Attachment/1.0.0/characterization_protocol>;
+        sbol:hasNamespace             <http://www.sbolstandard.org/examples>;
+        sbol:language                 EDAM:format_2585;
+        sbol:name                     "pIKE_Toggle_1 toggle switch";
+        sbol:source                   <http://virtualparts.org/part/pIKE_Toggle_1>;
+        backport2_3:sbol2OriginalURI  <http://www.sbolstandard.org/examples/pIKE_Toggle_1> .
+
+<http://sbolstandard.org/example/md/GFP_expression>
+        rdf:type                      sbol:Component;
+        sbol:displayId                "GFP_expression";
+        sbol:hasAttachment            <http://sys-bio.org/Attachment/1.0.0/characterization_protocol>;
+        sbol:hasNamespace             <http://sbolstandard.org/example/md>;
+        sbol:type                     SBO:0000241;
+        backport2_3:sbol2OriginalURI  <http://sbolstandard.org/example/md/GFP_expression> .
+
+<http://myapp.com/codon_optimization_activity/usage>
+        rdf:type                      sbol:Identified , prov:Usage;
+        sbol:displayId                "usage";
+        prov:entity                   <http://myapp.com/non_codon_optimized>;
+        prov:hadRole                  <http://sbols.org/v2#source>;
+        backport2_3:sbol2OriginalURI  <http://myapp.com/codon_optimization_activity/usage> .
+
+<http://partsregistry.org/seq/BBa_J23119>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "BBa_J23119";
+        sbol:elements                 "ttgacagctagctcagtcctaggtataatgctagc";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasAttachment            <http://sys-bio.org/Attachment/1.0.0/characterization_protocol>;
+        sbol:hasNamespace             <http://partsregistry.org/seq>;
+        prov:wasDerivedFrom           <http://parts.igem.org/Part:BBa_J23119:Design>;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/seq/BBa_J23119> .
+
+<http://www.partsregistry.org/gen/datasheet1>
+        rdf:type                      myapp:Datasheet , sbol:TopLevel;
+        sbol:displayId                "datasheet1";
+        sbol:hasAttachment            <http://sys-bio.org/Attachment/1.0.0/characterization_protocol>;
+        sbol:hasNamespace             <http://www.partsregistry.org/gen>;
+        sbol:name                     "Datasheet 1";
+        myapp:characterizationData    <http://www.myapp.org//measurement/1>;
+        myapp:transcriptionRate       "1";
+        backport2_3:sbol2OriginalURI  <http://www.partsregistry.org/gen/datasheet1> .
+
+<http://partsregistry.org/cd/BBa_J23119>
+        rdf:type                      sbol:Component;
+        sbol:description              "Constitutive promoter";
+        sbol:displayId                "BBa_J23119";
+        sbol:hasAttachment            <http://sys-bio.org/Attachment/1.0.0/characterization_protocol>;
+        sbol:hasNamespace             <http://partsregistry.org/cd>;
+        sbol:hasSequence              <http://partsregistry.org/seq/BBa_J23119>;
+        sbol:name                     "J23119 promoter";
+        sbol:role                     SO:0000613 , SO:0000167;
+        sbol:type                     SO:0000987 , SBO:0000251;
+        prov:wasDerivedFrom           <http://partsregistry.org/Part:BBa_J23119>;
+        backport2_3:sbol2OriginalURI  <http://partsregistry.org/cd/BBa_J23119> .
+
+<http://sys-bio.org/Attachment/1.0.0/characterization_protocol>
+        rdf:type                      sbol:Attachment;
+        sbol:displayId                "characterization_protocol";
+        sbol:hasNamespace             <http://sys-bio.org/Attachment>;
+        sbol:source                   <https://sbolstandard.org/SBOL3-Converter/dynamic_measurement.mdx>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Attachment/characterization_protocol/1.0.0> .
+
+<http://myapp.com/codon_optimization_activity/association>
+        rdf:type                      sbol:Identified , prov:Association;
+        sbol:displayId                "association";
+        prov:agent                    <http://myapp.com/codon_optimization_software>;
+        prov:hadRole                  <http://myapp.com/codonoptimiser>;
+        backport2_3:sbol2OriginalURI  <http://myapp.com/codon_optimization_activity/association> .
+
+<http://parts.igem.org/Promoters/Catalog/Anderson>
+        rdf:type                      sbol:Collection;
+        sbol:description              "The Anderson promoter collection";
+        sbol:displayId                "Anderson";
+        sbol:hasAttachment            <http://sys-bio.org/Attachment/1.0.0/characterization_protocol>;
+        sbol:hasNamespace             <http://parts.igem.org/Promoters/Catalog>;
+        sbol:member                   <http://partsregistry.org/Part:BBa_J23118> , <http://partsregistry.org/Part:BBa_J23119>;
+        sbol:name                     "Anderson promoters";
+        backport2_3:sbol2OriginalURI  <http://parts.igem.org/Promoters/Catalog/Anderson> .
+
+<http://sys-bio.org/Plan/1.0.0/characterization_protocol>
+        rdf:type                      sbol:TopLevel , prov:Plan;
+        sbol:displayId                "characterization_protocol";
+        sbol:hasAttachment            <http://sys-bio.org/Attachment/1.0.0/characterization_protocol>;
+        sbol:hasNamespace             <http://sys-bio.org/Plan>;
+        backport2_3:sbol2OriginalURI  <http://sys-bio.org/Plan/characterization_protocol/1.0.0> .
+
+<http://examples.org/Implementation/1.0.0/build>
+        rdf:type                      sbol:Implementation;
+        sbol:built                    <http://examples.org/ComponentDefinition/1.0.0/mutant>;
+        sbol:displayId                "build";
+        sbol:hasAttachment            <http://sys-bio.org/Attachment/1.0.0/characterization_protocol>;
+        sbol:hasNamespace             <http://examples.org/Implementation>;
+        prov:wasDerivedFrom           <http://examples.org/ComponentDefinition/design/1.0.0>;
+        backport2_3:sbol2OriginalURI  <http://examples.org/Implementation/build/1.0.0> .
+
+<http://myapp.com/codon_optimization_activity>
+        rdf:type                      sbol:TopLevel , prov:Activity;
+        sbol:displayId                "codon_optimization_activity";
+        sbol:hasAttachment            <http://sys-bio.org/Attachment/1.0.0/characterization_protocol>;
+        sbol:hasNamespace             <http://myapp.com>;
+        sbol:name                     "Codon Optimization Activity";
+        prov:qualifiedAssociation     <http://myapp.com/codon_optimization_activity/association>;
+        prov:qualifiedUsage           <http://myapp.com/codon_optimization_activity/usage>;
+        backport2_3:sbol2OriginalURI  <http://myapp.com/codon_optimization_activity> .
+
+<http://myapp.com/x_ray>
+        rdf:type                      sbol:TopLevel , prov:Agent;
+        sbol:displayId                "x_ray";
+        sbol:hasAttachment            <http://sys-bio.org/Attachment/1.0.0/characterization_protocol>;
+        sbol:hasNamespace             <http://myapp.com>;
+        sbol:name                     "X-ray";
+        backport2_3:sbol2OriginalURI  <http://myapp.com/x_ray> .

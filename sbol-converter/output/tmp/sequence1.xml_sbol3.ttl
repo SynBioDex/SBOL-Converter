@@ -1,0 +1,271 @@
+PREFIX CHEBI:       <https://identifiers.org/CHEBI:>
+PREFIX EDAM:        <https://identifiers.org/edam:>
+PREFIX GO:          <https://identifiers.org/GO:>
+PREFIX SBO:         <https://identifiers.org/SBO:>
+PREFIX SO:          <https://identifiers.org/SO:>
+PREFIX backport2_3: <https://sbols.org/backport/2_3#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX gbConv:      <http://sbols.org/genBankConversion#>
+PREFIX genbank:     <http://www.ncbi.nlm.nih.gov/genbank#>
+PREFIX obo:         <http://purl.obolibrary.org/obo/>
+PREFIX om:          <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX prov:        <http://www.w3.org/ns/prov#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sbol:        <http://sbols.org/v3#>
+
+<http://www.async.ece.utah.edu/1/U49845/annotation3/range>
+        rdf:type                      sbol:Range;
+        gbConv:endGreaterThan         "true";
+        gbConv:startLessThan          "true";
+        sbol:displayId                "range";
+        sbol:end                      "3158";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/U49845_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "687";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation3/range/1> .
+
+<http://www.async.ece.utah.edu/1/U49845/reference0>
+        rdf:type         genbank:Reference , sbol:Identified;
+        sbol:displayId   "reference0";
+        genbank:authors  "Roemer,T., Madden,K., Chang,J. and Snyder,M.";
+        genbank:journal  "Genes Dev. 10 (7), 777-793 (1996)";
+        genbank:label    "1  (bases 1 to 5028)";
+        genbank:pubmed   "8846915";
+        genbank:title    "Selection of axial growth sites in yeast requires Axl2p, a novel plasma membrane glycoprotein" .
+
+<http://www.async.ece.utah.edu/1/U49845/annotation4>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:gene                   "AXL2";
+        gbConv:product                "Axl2p";
+        sbol:displayId                "annotation4";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/U49845/annotation4/range>;
+        sbol:name                     "Axl2p";
+        sbol:role                     SO:0000234;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation4/1> .
+
+<http://www.async.ece.utah.edu/1/U49845/annotation7>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:gene                   "REV7";
+        gbConv:product                "Rev7p";
+        sbol:displayId                "annotation7";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/U49845/annotation7/range>;
+        sbol:name                     "Rev7p";
+        sbol:role                     SO:0000234;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation7/1> .
+
+<http://www.async.ece.utah.edu/1/U49845/annotation6/range>
+        rdf:type                      sbol:Range;
+        gbConv:endGreaterThan         "true";
+        gbConv:startLessThan          "true";
+        sbol:displayId                "range";
+        sbol:end                      "4037";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/U49845_seq>;
+        sbol:orientation              SO:0001031;
+        sbol:start                    "3300";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation6/range/1> .
+
+<http://www.async.ece.utah.edu/1/U49845/annotation2>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:codon_start            "3";
+        gbConv:db_xref                "GI:1293614";
+        gbConv:product                "TCP1-beta";
+        gbConv:protein_id             "AAA98665.1";
+        gbConv:translation            "SSIYNGISTSGLDLNNGTIADMRQLGIVESYKLKRAVVSSASEAAEVLLRVDNIIRARPRTANRQHM";
+        sbol:displayId                "annotation2";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/U49845/annotation2/range>;
+        sbol:name                     "TCP1-beta";
+        sbol:role                     SO:0000316;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation2/1> .
+
+<http://www.async.ece.utah.edu/1/U49845/reference1>
+        rdf:type         genbank:Reference , sbol:Identified;
+        sbol:displayId   "reference1";
+        genbank:authors  "Roemer,T.";
+        genbank:journal  "Submitted (22-FEB-1996) Biology, Yale University, New Haven, CT 06520, USA";
+        genbank:label    "2  (bases 1 to 5028)";
+        genbank:title    "Direct Submission" .
+
+<http://www.async.ece.utah.edu/1/U49845/annotation2/range>
+        rdf:type                      sbol:Range;
+        gbConv:startLessThan          "true";
+        sbol:displayId                "range";
+        sbol:end                      "206";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/U49845_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation2/range/1> .
+
+<http://www.async.ece.utah.edu/1/U49845/annotation5/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "3158";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/U49845_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "687";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation5/range/1> .
+
+<http://www.async.ece.utah.edu/1/U49845/annotation5>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:codon_start            "1";
+        gbConv:db_xref                "GI:1293615";
+        gbConv:gene                   "AXL2";
+        gbConv:note                   "plasma membrane glycoprotein";
+        gbConv:product                "Axl2p";
+        gbConv:protein_id             "AAA98666.1";
+        gbConv:translation            "MTQLQISLLLTATISLLHLVVATPYEAYPIGKQYPPVARVNESFTFQISNDTYKSSVDKTAQITYNCFDLPSWLSFDSSSRTFSGEPSSDLLSDANTTLYFNVILEGTDSADSTSLNNTYQFVVTNRPSISLSSDFNLLALLKNYGYTNGKNALKLDPNEVFNVTFDRSMFTNEESIVSYYGRSQLYNAPLPNWLFFDSGELKFTGTAPVINSAIAPETSYSFVIIATDIEGFSAVEVEFELVIGAHQLTTSIQNSLIINVTDTGNVSYDLPLNYVYLDDDPISSDKLGSINLLDAPDWVALDNATISGSVPDELLGKNSNPANFSVSIYDTYGDVIYFNFEVVSTTDLFAISSLPNINATRGEWFSYYFLPSQFTDYVNTNVSLEFTNSSQDHDWVKFQSSNLTLAGEVPKNFDKLSLGLKANQGSQSQELYFNIIGMDSKITHSNHSANATSTRSSHHSTSTSSYTSSTYTAKISSTSAAATSSAPAALPAANKTSSHNKKAVAIACGVAIPLGVILVALICFLIFWRRRRENPDDENLPHAISGPDLNNPANKPNQENATPLNNPFDDDASSYDDTSIARRLAALNTLKLDNHSATESDISSVDEKRDSLSGMNTYNDQFQSQSKEELLAKPPVQPPESPFFDPQNRSSSVYMDSEPAVNKSWRYTGNLSPVSDIVRDSYGSQKTVDTEKLFDLEAPEKEKRTSRDVTMSSLDPWNSNISPSPVRKSVTPSPYNVTKHRNRHLQNIQDSQSGKNGITPTTMSTSSSDDFVPVKDGENFCWVHSMEPDRRPSKKRLVDFSNKSNVNVGQVKDIHGRIPEML";
+        sbol:displayId                "annotation5";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/U49845/annotation5/range>;
+        sbol:name                     "Axl2p";
+        sbol:role                     SO:0000316;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation5/1> .
+
+<http://www.async.ece.utah.edu/1/U49845/annotation1/range>
+        rdf:type                      sbol:Range;
+        gbConv:endGreaterThan         "true";
+        gbConv:startLessThan          "true";
+        sbol:displayId                "range";
+        sbol:end                      "206";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/U49845_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation1/range/1> .
+
+<http://www.async.ece.utah.edu/1/U49845/annotation0>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:chromosome             "IX";
+        gbConv:db_xref                "taxon:4932";
+        gbConv:mol_type               "genomic DNA";
+        gbConv:organism               "Saccharomyces cerevisiae";
+        sbol:displayId                "annotation0";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/U49845/annotation0/range>;
+        sbol:name                     "Saccharomyces cerevisiae";
+        sbol:role                     SO:0002206;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation0/1> .
+
+<http://www.async.ece.utah.edu/1/U49845/annotation8>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:codon_start            "1";
+        gbConv:db_xref                "GI:1293616";
+        gbConv:gene                   "REV7";
+        gbConv:product                "Rev7p";
+        gbConv:protein_id             "AAA98667.1";
+        gbConv:translation            "MNRWVEKWLRVYLKCYINLILFYRNVYPPQSFDYTTYQSFNLPQFVPINRHPALIDYIEELILDVLSKLTHVYRFSICIINKKNDLCIEKYVLDFSELQHVDKDDQIITETEVFDEFRSSLNSLIMHLEKLPKVNDDTITFEAVINAIELELGHKLDRNRRVDSLEEKAEIERDSNWVKCQEDENLPDNNGFQPPKIKLTSLVGSDVGPLIIHQFSEKLISGDDKILNGVYSQYEEGESIFGSLF";
+        sbol:displayId                "annotation8";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/U49845/annotation8/range>;
+        sbol:name                     "Rev7p";
+        sbol:role                     SO:0000316;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation8/1> .
+
+<http://www.async.ece.utah.edu/1/U49845>
+        rdf:type                      sbol:Component;
+        obo:OBI_0001617               "8846915";
+        sbol:description              "Saccharomyces cerevisiae TCP1-beta gene, partial cds; and Axl2p (AXL2) and Rev7p (REV7) genes, complete cds.";
+        sbol:displayId                "U49845";
+        sbol:hasFeature               <http://www.async.ece.utah.edu/1/U49845/annotation4> , <http://www.async.ece.utah.edu/1/U49845/annotation8> , <http://www.async.ece.utah.edu/1/U49845/annotation3> , <http://www.async.ece.utah.edu/1/U49845/annotation7> , <http://www.async.ece.utah.edu/1/U49845/annotation2> , <http://www.async.ece.utah.edu/1/U49845/annotation6> , <http://www.async.ece.utah.edu/1/U49845/annotation1> , <http://www.async.ece.utah.edu/1/U49845/annotation5> , <http://www.async.ece.utah.edu/1/U49845/annotation0>;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/U49845_seq>;
+        sbol:role                     SO:0000804;
+        sbol:type                     SO:0000987 , SBO:0000251;
+        genbank:GInumber              "GI:1293613";
+        genbank:date                  "23-MAR-2010";
+        genbank:division              "PLN";
+        genbank:keywords              ".";
+        genbank:locus                 "SCU49845";
+        genbank:molecule              "DNA";
+        genbank:organism              "Saccharomyces cerevisiae Eukaryota; Fungi; Dikarya; Ascomycota; Saccharomycotina; Saccharomycetes; Saccharomycetales; Saccharomycetaceae; Saccharomyces.";
+        genbank:reference             <http://www.async.ece.utah.edu/1/U49845/reference1> , <http://www.async.ece.utah.edu/1/U49845/reference0>;
+        genbank:source                "Saccharomyces cerevisiae (baker's yeast)";
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/1> .
+
+<http://www.async.ece.utah.edu/1/U49845/annotation3>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:gene                   "AXL2";
+        sbol:displayId                "annotation3";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/U49845/annotation3/range>;
+        sbol:name                     "AXL2";
+        sbol:role                     SO:0000704;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation3/1> .
+
+<http://www.async.ece.utah.edu/1/U49845/annotation8/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "4037";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/U49845_seq>;
+        sbol:orientation              SO:0001031;
+        sbol:start                    "3300";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation8/range/1> .
+
+<http://www.async.ece.utah.edu/1/U49845_seq>
+        rdf:type                      sbol:Sequence;
+        sbol:displayId                "U49845_seq";
+        sbol:elements                 "gatcctccatatacaacggtatctccacctcaggtttagatctcaacaacggaaccattgccgacatgagacagttaggtatcgtcgagagttacaagctaaaacgagcagtagtcagctctgcatctgaagccgctgaagttctactaagggtggataacatcatccgtgcaagaccaagaaccgccaatagacaacatatgtaacatatttaggatatacctcgaaaataataaaccgccacactgtcattattataattagaaacagaacgcaaaaattatccactatataattcaaagacgcgaaaaaaaaagaacaacgcgtcatagaacttttggcaattcgcgtcacaaataaattttggcaacttatgtttcctcttcgagcagtactcgagccctgtctcaagaatgtaataatacccatcgtaggtatggttaaagatagcatctccacaacctcaaagctccttgccgagagtcgccctcctttgtcgagtaattttcacttttcatatgagaacttattttcttattctttactctcacatcctgtagtgattgacactgcaacagccaccatcactagaagaacagaacaattacttaatagaaaaattatatcttcctcgaaacgatttcctgcttccaacatctacgtatatcaagaagcattcacttaccatgacacagcttcagatttcattattgctgacagctactatatcactactccatctagtagtggccacgccctatgaggcatatcctatcggaaaacaataccccccagtggcaagagtcaatgaatcgtttacatttcaaatttccaatgatacctataaatcgtctgtagacaagacagctcaaataacatacaattgcttcgacttaccgagctggctttcgtttgactctagttctagaacgttctcaggtgaaccttcttctgacttactatctgatgcgaacaccacgttgtatttcaatgtaatactcgagggtacggactctgccgacagcacgtctttgaacaatacataccaatttgttgttacaaaccgtccatccatctcgctatcgtcagatttcaatctattggcgttgttaaaaaactatggttatactaacggcaaaaacgctctgaaactagatcctaatgaagtcttcaacgtgacttttgaccgttcaatgttcactaacgaagaatccattgtgtcgtattacggacgttctcagttgtataatgcgccgttacccaattggctgttcttcgattctggcgagttgaagtttactgggacggcaccggtgataaactcggcgattgctccagaaacaagctacagttttgtcatcatcgctacagacattgaaggattttctgccgttgaggtagaattcgaattagtcatcggggctcaccagttaactacctctattcaaaatagtttgataatcaacgttactgacacaggtaacgtttcatatgacttacctctaaactatgtttatctcgatgacgatcctatttcttctgataaattgggttctataaacttattggatgctccagactgggtggcattagataatgctaccatttccgggtctgtcccagatgaattactcggtaagaactccaatcctgccaatttttctgtgtccatttatgatacttatggtgatgtgatttatttcaacttcgaagttgtctccacaacggatttgtttgccattagttctcttcccaatattaacgctacaaggggtgaatggttctcctactattttttgccttctcagtttacagactacgtgaatacaaacgtttcattagagtttactaattcaagccaagaccatgactgggtgaaattccaatcatctaatttaacattagctggagaagtgcccaagaatttcgacaagctttcattaggtttgaaagcgaaccaaggttcacaatctcaagagctatattttaacatcattggcatggattcaaagataactcactcaaaccacagtgcgaatgcaacgtccacaagaagttctcaccactccacctcaacaagttcttacacatcttctacttacactgcaaaaatttcttctacctccgctgctgctacttcttctgctccagcagcgctgccagcagccaataaaacttcatctcacaataaaaaagcagtagcaattgcgtgcggtgttgctatcccattaggcgttatcctagtagctctcatttgcttcctaatattctggagacgcagaagggaaaatccagacgatgaaaacttaccgcatgctattagtggacctgatttgaataatcctgcaaataaaccaaatcaagaaaacgctacacctttgaacaacccctttgatgatgatgcttcctcgtacgatgatacttcaatagcaagaagattggctgctttgaacactttgaaattggataaccactctgccactgaatctgatatttccagcgtggatgaaaagagagattctctatcaggtatgaatacatacaatgatcagttccaatcccaaagtaaagaagaattattagcaaaacccccagtacagcctccagagagcccgttctttgacccacagaataggtcttcttctgtgtatatggatagtgaaccagcagtaaataaatcctggcgatatactggcaacctgtcaccagtctctgatattgtcagagacagttacggatcacaaaaaactgttgatacagaaaaacttttcgatttagaagcaccagagaaggaaaaacgtacgtcaagggatgtcactatgtcttcactggacccttggaacagcaatattagcccttctcccgtaagaaaatcagtaacaccatcaccatataacgtaacgaagcatcgtaaccgccacttacaaaatattcaagactctcaaagcggtaaaaacggaatcactcccacaacaatgtcaacttcatcttctgacgattttgttccggttaaagatggtgaaaatttttgctgggtccatagcatggaaccagacagaagaccaagtaagaaaaggttagtagatttttcaaataagagtaatgtcaatgttggtcaagttaaggacattcacggacgcatcccagaaatgctgtgattatacgcaacgatattttgcttaattttattttcctgttttattttttattagtggtttacagataccctatattttatttagtttttatacttagagacatttaattttaattccattcttcaaatttcatttttgcacttaaaacaaagatccaaaaatgctctcgccctcttcatattgagaatacactccattcaaaattttgtcgtcaccgctgattaatttttcactaaactgatgaataatcaaaggccccacgtcagaaccgactaaagaagtgagttttattttaggaggttgaaaaccattattgtctggtaaattttcatcttcttgacatttaacccagtttgaatccctttcaatttctgctttttcctccaaactatcgaccctcctgtttctgtccaacttatgtcctagttccaattcgatcgcattaataactgcttcaaatgttattgtgtcatcgttgactttaggtaatttctccaaatgcataatcaaactatttaaggaagatcggaattcgtcgaacacttcagtttccgtaatgatctgatcgtctttatccacatgttgtaattcactaaaatctaaaacgtatttttcaatgcataaatcgttctttttattaataatgcagatggaaaatctgtaaacgtgcgttaatttagaaagaacatccagtataagttcttctatatagtcaattaaagcaggatgcctattaatgggaacgaactgcggcaagttgaatgactggtaagtagtgtagtcgaatgactgaggtgggtatacatttctataaaataaaatcaaattaatgtagcattttaagtataccctcagccacttctctacccatctattcataaagctgacgcaacgattactattttttttttcttcttggatctcagtcgtcgcaaaaacgtataccttctttttccgaccttttttttagctttctggaaaagtttatattagttaaacagggtctagtcttagtgtgaaagctagtggtttcgattgactgatattaagaaagtggaaattaaattagtagtgtagacgtatatgcatatgtatttctcgcctgtttatgtttctacgtacttttgatttatagcaaggggaaaagaaatacatactattttttggtaaaggtgaaagcataatgtaaaagctagaataaaatggacgaaataaagagaggcttagttcatcttttttccaaaaagcacccaatgataataactaaaatgaaaaggatttgccatctgtcagcaacatcagttgtgtgagcaataataaaatcatcacctccgttgcctttagcgcgtttgtcgtttgtatcttccgtaattttagtcttatcaatgggaatcataaattttccaatgaattagcaatttcgtccaattctttttgagcttcttcatatttgctttggaattcttcgcacttcttttcccattcatctctttcttcttccaaagcaacgatccttctacccatttgctcagagttcaaatcggcctctttcagtttatccattgcttccttcagtttggcttcactgtcttctagctgttgttctagatcctggtttttcttggtgtagttctcattattagatctcaagttattggagtcttcagccaattgctttgtatcagacaattgactctctaacttctccacttcactgtcgagttgctcgtttttagcggacaaagatttaatctcgttttctttttcagtgttagattgctctaattctttgagctgttctctcagctcctcatatttttcttgccatgactcagattctaattttaagctattcaatttctctttgatc";
+        sbol:encoding                 EDAM:format_1207;
+        sbol:hasNamespace             <http://www.async.ece.utah.edu>;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845_seq/1> .
+
+<http://www.async.ece.utah.edu/1/U49845/annotation4/range>
+        rdf:type                      sbol:Range;
+        gbConv:endGreaterThan         "true";
+        gbConv:startLessThan          "true";
+        sbol:displayId                "range";
+        sbol:end                      "3158";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/U49845_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "687";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation4/range/1> .
+
+<http://www.async.ece.utah.edu/1/U49845/annotation6>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:gene                   "REV7";
+        sbol:displayId                "annotation6";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/U49845/annotation6/range>;
+        sbol:name                     "REV7";
+        sbol:role                     SO:0000704;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation6/1> .
+
+<http://www.async.ece.utah.edu/1/U49845/annotation7/range>
+        rdf:type                      sbol:Range;
+        gbConv:endGreaterThan         "true";
+        gbConv:startLessThan          "true";
+        sbol:displayId                "range";
+        sbol:end                      "4037";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/U49845_seq>;
+        sbol:orientation              SO:0001031;
+        sbol:start                    "3300";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation7/range/1> .
+
+<http://www.async.ece.utah.edu/1/U49845/annotation1>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:product                "TCP1-beta";
+        sbol:displayId                "annotation1";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/1/U49845/annotation1/range>;
+        sbol:name                     "TCP1-beta";
+        sbol:role                     SO:0000234;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation1/1> .
+
+<http://www.async.ece.utah.edu/1/U49845/annotation0/range>
+        rdf:type                      sbol:Range;
+        sbol:displayId                "range";
+        sbol:end                      "5028";
+        sbol:hasSequence              <http://www.async.ece.utah.edu/1/U49845_seq>;
+        sbol:orientation              SO:0001030;
+        sbol:start                    "1";
+        backport2_3:sbol2LocationSequenceNull
+                true;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/U49845/annotation0/range/1> .

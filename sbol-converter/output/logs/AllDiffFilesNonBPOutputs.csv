@@ -1,0 +1,2 @@
+1, design-build-test-learn.xml, DIFF, [Attachment http://sys-bio.org/Attachment_characterization_protocol/1.0.0 differ.]
+2, LocationToSequenceOutput.xml, DIFF, [ComponentDefinition http://partsregistry.org/cd/BBa_J23119 differ., ->SequenceAnnotation http://partsregistry.org/cd/BBa_J23119/someSequenceAnnotation differ., --->Location http://partsregistry.org/cd/BBa_J23119/someSequenceAnnotation/generic_location not found in SBOL2out, --->Location http://partsregistry.org/cd/BBa_J23119/someSequenceAnnotation/range differ.]

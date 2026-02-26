@@ -4,13 +4,16 @@
     xmlns:SO="https://identifiers.org/SO:"
     xmlns:EDAM="https://identifiers.org/edam:"
     xmlns:sbol="http://sbols.org/v3#"
+    xmlns:j.0="http://sbols.org/v2#"
     xmlns:CHEBI="https://identifiers.org/CHEBI:"
     xmlns:prov="http://www.w3.org/ns/prov#"
     xmlns:SBO="https://identifiers.org/SBO:"
     xmlns:GO="https://identifiers.org/GO:"
+    xmlns:backport2_3="https://sbols.org/backport/2_3#"
     xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/RBS">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000139"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/RBS"/>
       <prov:wasDerivedFrom rdf:resource="urn:c26b0115-3c37-4aa7-9e98-c491b3db9a53"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
@@ -21,16 +24,18 @@
       <sbol:hasSequence>
          <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/partseq_12077"/>
       </sbol:hasSequence>
-      <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
-      <prov:wasDerivedFrom rdf:resource="http://partsregistry.org/part/BBa_K121014"/>
-      <sbol:description>promoter (lambda cI regulated)</sbol:description>
-      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
+      <sbol:description>promoter (lambda cI regulated)</sbol:description>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/BBa_K121014"/>
       <sbol:displayId>BBa_K121014</sbol:displayId>
+      <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
+      <prov:wasDerivedFrom rdf:resource="http://partsregistry.org/part/BBa_K121014"/>
    </sbol:Component>
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/Terminator">
       <sbol:role rdf:resource="https://identifiers.org/SO:0000141"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Terminator"/>
       <prov:wasDerivedFrom rdf:resource="urn:bcb44a78-ed3e-485b-b4a4-ec5cff683588"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
@@ -43,16 +48,19 @@
          <sbol:Interface rdf:about="http://www.async.ece.utah.edu/Repressor2/Interface1">
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/Repressor2/BBa_C0012">
-                  <sbol:hasLocation>
-                     <sbol:EntireSequence rdf:about="http://www.async.ece.utah.edu/Repressor2/BBa_C0012/genericLocation">
-                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                        <sbol:hasSequence>
-                           <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Repressor2_seq"/>
-                        </sbol:hasSequence>
+                  <backport2_3:sbol2GenericLocation>
+                     <j.0:GenericLocation rdf:about="http://www.async.ece.utah.edu/Repressor2/BBa_C0012/genericLocation">
+                        <backport2_3:sbol2Entity>true</backport2_3:sbol2Entity>
+                        <j.0:orientation rdf:resource="http://sbols.org/v2#inline"/>
                         <sbol:displayId>genericLocation</sbol:displayId>
-                     </sbol:EntireSequence>
-                  </sbol:hasLocation>
+                        <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
+                     </j.0:GenericLocation>
+                  </backport2_3:sbol2GenericLocation>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Repressor2/BBa_C0012_annotation"/>
                   <prov:wasDerivedFrom rdf:resource="urn:8c0016f6-eaef-4290-a4d6-761bdd3da3d8"/>
+                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.async.ece.utah.edu/Repressor2/BBa_C0012_annotation"/>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Repressor2/BBa_C0012"/>
                   <sbol:instanceOf>
                      <sbol:Component rdf:about="http://www.async.ece.utah.edu/BBa_C0012"/>
                   </sbol:instanceOf>
@@ -61,16 +69,19 @@
             </sbol:nondirectional>
             <sbol:nondirectional>
                <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/Repressor2/RBS">
-                  <sbol:hasLocation>
-                     <sbol:EntireSequence rdf:about="http://www.async.ece.utah.edu/Repressor2/RBS/genericLocation">
-                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                        <sbol:hasSequence>
-                           <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Repressor2_seq"/>
-                        </sbol:hasSequence>
+                  <backport2_3:sbol2GenericLocation>
+                     <j.0:GenericLocation rdf:about="http://www.async.ece.utah.edu/Repressor2/RBS/genericLocation">
+                        <backport2_3:sbol2Entity>true</backport2_3:sbol2Entity>
+                        <j.0:orientation rdf:resource="http://sbols.org/v2#inline"/>
                         <sbol:displayId>genericLocation</sbol:displayId>
-                     </sbol:EntireSequence>
-                  </sbol:hasLocation>
+                        <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
+                     </j.0:GenericLocation>
+                  </backport2_3:sbol2GenericLocation>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Repressor2/RBS_annotation"/>
                   <prov:wasDerivedFrom rdf:resource="urn:ecb1d4c8-653c-4c03-b647-71c839bb28e7"/>
+                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.async.ece.utah.edu/Repressor2/RBS_annotation"/>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Repressor2/RBS"/>
                   <sbol:instanceOf rdf:resource="http://www.async.ece.utah.edu/RBS"/>
                   <sbol:displayId>RBS</sbol:displayId>
                </sbol:SubComponent>
@@ -79,10 +90,14 @@
          </sbol:Interface>
       </sbol:hasInterface>
       <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <backport2_3:sbol3TempSequenceURI>
+         <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Repressor2_seq"/>
+      </backport2_3:sbol3TempSequenceURI>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>Repressor2</sbol:displayId>
       <sbol:hasConstraint>
          <sbol:Constraint rdf:about="http://www.async.ece.utah.edu/Repressor2/RBS_cons_BBa_C0012">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Repressor2/RBS_cons_BBa_C0012"/>
             <sbol:object rdf:resource="http://www.async.ece.utah.edu/Repressor2/BBa_C0012"/>
             <sbol:subject rdf:resource="http://www.async.ece.utah.edu/Repressor2/RBS"/>
             <sbol:restriction rdf:resource="http://sbols.org/v3#precedes"/>
@@ -94,11 +109,13 @@
          <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/Repressor2_seq"/>
       </sbol:hasSequence>
       <sbol:hasFeature rdf:resource="http://www.async.ece.utah.edu/Repressor2/BBa_C0012"/>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/Repressor2"/>
       <sbol:hasFeature rdf:resource="http://www.async.ece.utah.edu/Repressor2/RBS"/>
       <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
    </sbol:Component>
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/BBa_C0012">
       <sbol:displayId>BBa_C0012</sbol:displayId>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/BBa_C0012"/>
       <sbol:hasSequence>
          <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/partseq_153"/>
       </sbol:hasSequence>
@@ -111,20 +128,28 @@
       <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
    </sbol:Component>
    <sbol:Component rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete">
+      <backport2_3:sbol3TempSequenceURI>
+         <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete_seq"/>
+      </backport2_3:sbol3TempSequenceURI>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete"/>
       <sbol:hasConstraint>
          <sbol:Constraint rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/BBa_K121014_cons_Repressor2">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/BBa_K121014_cons_Repressor2"/>
             <sbol:object>
                <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2">
-                  <sbol:hasLocation>
-                     <sbol:EntireSequence rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2/genericLocation">
-                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                        <sbol:hasSequence>
-                           <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete_seq"/>
-                        </sbol:hasSequence>
+                  <backport2_3:sbol2GenericLocation>
+                     <j.0:GenericLocation rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2/genericLocation">
+                        <backport2_3:sbol2Entity>true</backport2_3:sbol2Entity>
+                        <j.0:orientation rdf:resource="http://sbols.org/v2#inline"/>
                         <sbol:displayId>genericLocation</sbol:displayId>
-                     </sbol:EntireSequence>
-                  </sbol:hasLocation>
+                        <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
+                     </j.0:GenericLocation>
+                  </backport2_3:sbol2GenericLocation>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2_annotation"/>
                   <prov:wasDerivedFrom rdf:resource="urn:53de82c6-ecf9-4899-8e06-0179ab03a9a0"/>
+                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2_annotation"/>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2"/>
                   <sbol:instanceOf rdf:resource="http://www.async.ece.utah.edu/Repressor2"/>
                   <sbol:displayId>Repressor2</sbol:displayId>
                </sbol:SubComponent>
@@ -133,6 +158,10 @@
                <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/BBa_K121014">
                   <sbol:hasLocation>
                      <sbol:Range rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/BBa_K121014/range">
+                        <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/BBa_K121014_annotation/range"/>
+                        <backport2_3:sbol2LocationSequenceNull
+                         rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</backport2_3:sbol2LocationSequenceNull>
                         <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
                         <sbol:end>90</sbol:end>
                         <sbol:start>1</sbol:start>
@@ -142,7 +171,10 @@
                         <sbol:displayId>range</sbol:displayId>
                      </sbol:Range>
                   </sbol:hasLocation>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/BBa_K121014_annotation"/>
                   <prov:wasDerivedFrom rdf:resource="urn:032c2f83-39a5-44ee-a9cb-9b7be51d52ec"/>
+                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/BBa_K121014_annotation"/>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/BBa_K121014"/>
                   <sbol:instanceOf rdf:resource="http://www.async.ece.utah.edu/BBa_K121014"/>
                   <sbol:displayId>BBa_K121014</sbol:displayId>
                </sbol:SubComponent>
@@ -154,18 +186,22 @@
       <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
       <sbol:hasConstraint>
          <sbol:Constraint rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2_cons_Terminator">
+            <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2_cons_Terminator"/>
             <sbol:object>
                <sbol:SubComponent rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/Terminator">
-                  <sbol:hasLocation>
-                     <sbol:EntireSequence rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/Terminator/genericLocation">
-                        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
-                        <sbol:hasSequence>
-                           <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete_seq"/>
-                        </sbol:hasSequence>
+                  <backport2_3:sbol2GenericLocation>
+                     <j.0:GenericLocation rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/Terminator/genericLocation">
+                        <backport2_3:sbol2Entity>true</backport2_3:sbol2Entity>
+                        <j.0:orientation rdf:resource="http://sbols.org/v2#inline"/>
                         <sbol:displayId>genericLocation</sbol:displayId>
-                     </sbol:EntireSequence>
-                  </sbol:hasLocation>
+                        <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
+                     </j.0:GenericLocation>
+                  </backport2_3:sbol2GenericLocation>
+                  <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/Terminator_annotation"/>
                   <prov:wasDerivedFrom rdf:resource="urn:c73c9f89-a174-43fc-9aa9-d250b3de02aa"/>
+                  <backport2_3:sbol2OriginalSequenceAnnotationURI rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/Terminator_annotation"/>
+                  <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/Terminator"/>
                   <sbol:instanceOf rdf:resource="http://www.async.ece.utah.edu/Terminator"/>
                   <sbol:displayId>Terminator</sbol:displayId>
                </sbol:SubComponent>
@@ -186,9 +222,9 @@
       <sbol:role rdf:resource="https://identifiers.org/SO:0000110"/>
       <sbol:hasInterface>
          <sbol:Interface rdf:about="http://www.async.ece.utah.edu/pTAKLeftCassete/Interface1">
-            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2"/>
             <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/Terminator"/>
             <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/BBa_K121014"/>
+            <sbol:nondirectional rdf:resource="http://www.async.ece.utah.edu/pTAKLeftCassete/Repressor2"/>
             <sbol:displayId>Interface1</sbol:displayId>
          </sbol:Interface>
       </sbol:hasInterface>
@@ -199,6 +235,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/partseq_12077">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>gcatgcacagataaccatctgcggtgataaattatctctggcggtgttgacataaataccactggcggttataatgagcacatcagcagg</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/partseq_12077"/>
       <prov:wasDerivedFrom rdf:resource="http://partsregistry.org/seq/partseq_12077"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>partseq_12077</sbol:displayId>
@@ -206,6 +243,7 @@
    <sbol:Sequence rdf:about="http://www.async.ece.utah.edu/partseq_153">
       <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
       <sbol:elements>atggtgaatgtgaaaccagtaacgttatacgatgtcgcagagtatgccggtgtctcttatcagaccgtttcccgcgtggtgaaccaggccagccacgtttctgcgaaaacgcgggaaaaagtggaagcggcgatggcggagctgaattacattcccaaccgcgtggcacaacaactggcgggcaaacagtcgttgctgattggcgttgccacctccagtctggccctgcacgcgccgtcgcaaattgtcgcggcgattaaatctcgcgccgatcaactgggtgccagcgtggtggtgtcgatggtagaacgaagcggcgtcgaagcctgtaaagcggcggtgcacaatcttctcgcgcaacgcgtcagtgggctgatcattaactatccgctggatgaccaggatgccattgctgtggaagctgcctgcactaatgttccggcgttatttcttgatgtctctgaccagacacccatcaacagtattattttctcccatgaagacggtacgcgactgggcgtggagcatctggtcgcattgggtcaccagcaaatcgcgctgttagcgggcccattaagttctgtctcggcgcgtctgcgtctggctggctggcataaatatctcactcgcaatcaaattcagccgatagcggaacgggaaggcgactggagtgccatgtccggttttcaacaaaccatgcaaatgctgaatgagggcatcgttcccactgcgatgctggttgccaacgatcagatggcgctgggcgcaatgcgcgccattaccgagtccgggctgcgcgttggtgcggatatctcggtagtgggatacgacgataccgaagacagctcatgttatatcccgccgttaaccaccatcaaacaggattttcgcctgctggggcaaaccagcgtggaccgcttgctgcaactctctcagggccaggcggtgaagggcaatcagctgttgcccgtctcactggtgaaaagaaaaaccaccctggcgcccaatacgcaaaccgcctctccccgcgcgttggccgattcattaatgcagctggcacgacaggtttcccgactggaaagcgggcaggctgcaaacgacgaaaactacgctttagtagcttaataa</sbol:elements>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://www.async.ece.utah.edu/partseq_153"/>
       <prov:wasDerivedFrom rdf:resource="http://partsregistry.org/seq/partseq_153"/>
       <sbol:hasNamespace rdf:resource="http://www.async.ece.utah.edu"/>
       <sbol:displayId>partseq_153</sbol:displayId>

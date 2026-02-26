@@ -2,6 +2,7 @@ package org.sbolstandard.converter.tests;
 
 import java.io.File;
 import org.junit.jupiter.api.Test;
+import org.sbolstandard.core3.util.Configuration;
 
 
 /**
