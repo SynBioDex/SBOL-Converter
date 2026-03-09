@@ -48,7 +48,7 @@
 		<dependency>
     		<groupId>org.sbolstandard</groupId>
    			<artifactId>libsbolj3</artifactId>
-    		<version>1.0.5.2</version>
+    		<version>1.0.5.3</version>
   		</dependency>
 
 		
