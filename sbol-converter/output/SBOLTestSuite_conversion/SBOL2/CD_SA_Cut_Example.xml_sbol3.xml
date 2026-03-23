@@ -36,9 +36,6 @@
       </sbol:hasSequence>
       <sbol:displayId>BBa_J23119</sbol:displayId>
       <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
-      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_J23119"/>
-      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
-      <sbol:name>J23119 promoter</sbol:name>
       <sbol:hasFeature>
          <sbol:SequenceFeature rdf:about="http://partsregistry.org/cd/BBa_J23119/cutat12">
             <sbol:hasLocation>
@@ -58,6 +55,9 @@
             <sbol:displayId>cutat12</sbol:displayId>
          </sbol:SequenceFeature>
       </sbol:hasFeature>
+      <backport2_3:sbol2OriginalURI rdf:resource="http://partsregistry.org/cd/BBa_J23119"/>
+      <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+      <sbol:name>J23119 promoter</sbol:name>
       <backport2_3:sbol3TempSequenceURI>
          <sbol:Sequence rdf:about="http://partsregistry.org/cd/BBa_J23119_seq"/>
       </backport2_3:sbol3TempSequenceURI>

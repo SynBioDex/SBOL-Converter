@@ -106,6 +106,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:role                     SO:0000110;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL50012/annotation2> .
 
+<http://www.async.ece.utah.edu/pICSL50012/annotation4>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "MIsc._Feature";
+        gbConv:label                  "TTCG 4bp overhang";
+        sbol:displayId                "annotation4";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL50012/annotation4/range>;
+        sbol:name                     "TTCG 4bp overhang";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL50012/annotation4> .
+
 <http://www.async.ece.utah.edu/pICSL50012>
         rdf:type                      sbol:Component;
         sbol:displayId                "pICSL50012";
@@ -120,16 +130,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         genbank:locus                 "pICSL50012";
         genbank:molecule              "DNA";
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL50012> .
-
-<http://www.async.ece.utah.edu/pICSL50012/annotation4>
-        rdf:type                      sbol:SequenceFeature;
-        gbConv:featureType            "MIsc._Feature";
-        gbConv:label                  "TTCG 4bp overhang";
-        sbol:displayId                "annotation4";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL50012/annotation4/range>;
-        sbol:name                     "TTCG 4bp overhang";
-        sbol:role                     SO:0000110;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL50012/annotation4> .
 
 <http://www.async.ece.utah.edu/pICSL50012/annotation2/range>
         rdf:type                      sbol:Range;
