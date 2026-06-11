@@ -86,17 +86,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:role                     SO:0000316;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH44222/annotation1> .
 
-<http://www.async.ece.utah.edu/pICH44222/annotation3>
-        rdf:type                      sbol:SequenceFeature;
-        gbConv:featureType            "Misc._feature";
-        gbConv:label                  "rep (pMB1)";
-        gbConv:vntifkey               "21";
-        sbol:displayId                "annotation3";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH44222/annotation3/range>;
-        sbol:name                     "rep (pMB1)";
-        sbol:role                     SO:0000110;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH44222/annotation3> .
-
 <http://www.async.ece.utah.edu/pICH44222>
         rdf:type                      sbol:Component;
         sbol:displayId                "pICH44222";
@@ -111,6 +100,17 @@ PREFIX sbol:        <http://sbols.org/v3#>
         genbank:locus                 "pICH44222";
         genbank:molecule              "DNA";
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH44222> .
+
+<http://www.async.ece.utah.edu/pICH44222/annotation3>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:featureType            "Misc._feature";
+        gbConv:label                  "rep (pMB1)";
+        gbConv:vntifkey               "21";
+        sbol:displayId                "annotation3";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH44222/annotation3/range>;
+        sbol:name                     "rep (pMB1)";
+        sbol:role                     SO:0000110;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH44222/annotation3> .
 
 <http://www.async.ece.utah.edu/pICH44222/annotation2/range>
         rdf:type                      sbol:Range;
