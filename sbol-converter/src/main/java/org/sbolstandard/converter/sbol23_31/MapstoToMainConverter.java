@@ -20,7 +20,7 @@ import org.sbolstandard.core3.util.SBOLGraphException;
 public class MapstoToMainConverter {
 
 	
-	public static void convertFromComponentDefinition(SBOLDocument document, ComponentDefinition sbol2ComponentDefinition, Parameters parameters) throws SBOLGraphException, SBOLValidationException {
+	public static void convertFromComponentDefinitionGM(SBOLDocument document, ComponentDefinition sbol2ComponentDefinition, Parameters parameters) throws SBOLGraphException, SBOLValidationException {
 		URI sbol3ParentComponentURI = Util.createSBOL3Uri(sbol2ComponentDefinition);
 		Component sbol3ParentComponent=document.getIdentified(sbol3ParentComponentURI, Component.class);
 			

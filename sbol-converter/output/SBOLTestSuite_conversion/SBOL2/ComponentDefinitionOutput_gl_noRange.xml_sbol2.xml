@@ -17,6 +17,14 @@
     <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
     <sbol:role rdf:resource="http://identifiers.org/so/SO:0001411"/>
     <sbol:component>
+      <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_F2620/rbs">
+        <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/BBa_F2620/rbs"/>
+        <sbol:displayId>rbs</sbol:displayId>
+        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
+        <sbol:definition rdf:resource="http://partsregistry.org/cd/BBa_C0062"/>
+      </sbol:Component>
+    </sbol:component>
+    <sbol:component>
       <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_F2620/luxR">
         <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/BBa_F2620/luxR"/>
         <sbol:displayId>luxR</sbol:displayId>
@@ -33,11 +41,11 @@
       </sbol:Component>
     </sbol:component>
     <sbol:component>
-      <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_F2620/rbs">
-        <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/BBa_F2620/rbs"/>
-        <sbol:displayId>rbs</sbol:displayId>
+      <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_F2620/pLuxR">
+        <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/BBa_F2620/pLuxR"/>
+        <sbol:displayId>pLuxR</sbol:displayId>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="http://partsregistry.org/cd/BBa_C0062"/>
+        <sbol:definition rdf:resource="http://partsregistry.org/cd/BBa_R0062"/>
       </sbol:Component>
     </sbol:component>
     <sbol:component>
@@ -46,14 +54,6 @@
         <sbol:displayId>ter</sbol:displayId>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
         <sbol:definition rdf:resource="http://partsregistry.org/cd/BBa_B0015"/>
-      </sbol:Component>
-    </sbol:component>
-    <sbol:component>
-      <sbol:Component rdf:about="http://partsregistry.org/cd/BBa_F2620/pLuxR">
-        <sbol:persistentIdentity rdf:resource="http://partsregistry.org/cd/BBa_F2620/pLuxR"/>
-        <sbol:displayId>pLuxR</sbol:displayId>
-        <sbol:access rdf:resource="http://sbols.org/v2#public"/>
-        <sbol:definition rdf:resource="http://partsregistry.org/cd/BBa_R0062"/>
       </sbol:Component>
     </sbol:component>
     <sbol:sequenceAnnotation>
@@ -90,16 +90,16 @@
         <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn"/>
         <sbol:displayId>gl_seqAnn</sbol:displayId>
         <sbol:location>
-          <sbol:GenericLocation rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/gl">
-            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/gl"/>
-            <sbol:displayId>gl</sbol:displayId>
-          </sbol:GenericLocation>
-        </sbol:location>
-        <sbol:location>
           <sbol:GenericLocation rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/GenericLocation">
             <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/GenericLocation"/>
             <sbol:displayId>GenericLocation</sbol:displayId>
             <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:GenericLocation>
+        </sbol:location>
+        <sbol:location>
+          <sbol:GenericLocation rdf:about="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/gl">
+            <sbol:persistentIdentity rdf:resource="http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/gl"/>
+            <sbol:displayId>gl</sbol:displayId>
           </sbol:GenericLocation>
         </sbol:location>
       </sbol:SequenceAnnotation>

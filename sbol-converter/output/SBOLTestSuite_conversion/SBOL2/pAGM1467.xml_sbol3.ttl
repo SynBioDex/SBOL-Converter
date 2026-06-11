@@ -99,7 +99,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://www.async.ece.utah.edu/pAGM1467>
         rdf:type                      sbol:Component;
         sbol:displayId                "pAGM1467";
-        sbol:hasFeature               <http://www.async.ece.utah.edu/pAGM1467/annotation5> , <http://www.async.ece.utah.edu/pAGM1467/annotation7> , <http://www.async.ece.utah.edu/pAGM1467/annotation0> , <http://www.async.ece.utah.edu/pAGM1467/annotation4> , <http://www.async.ece.utah.edu/pAGM1467/annotation6> , <http://www.async.ece.utah.edu/pAGM1467/annotation3> , <http://www.async.ece.utah.edu/pAGM1467/annotation2> , <http://www.async.ece.utah.edu/pAGM1467/annotation1>;
+        sbol:hasFeature               <http://www.async.ece.utah.edu/pAGM1467/annotation7> , <http://www.async.ece.utah.edu/pAGM1467/annotation5> , <http://www.async.ece.utah.edu/pAGM1467/annotation0> , <http://www.async.ece.utah.edu/pAGM1467/annotation4> , <http://www.async.ece.utah.edu/pAGM1467/annotation6> , <http://www.async.ece.utah.edu/pAGM1467/annotation3> , <http://www.async.ece.utah.edu/pAGM1467/annotation2> , <http://www.async.ece.utah.edu/pAGM1467/annotation1>;
         sbol:hasNamespace             <http://www.async.ece.utah.edu>;
         sbol:hasSequence              <http://www.async.ece.utah.edu/pAGM1467_seq>;
         sbol:role                     SO:0000804;
