@@ -23,16 +23,6 @@ PREFIX sbol:        <http://sbols.org/v3#>
                 true;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH44188/annotation0/range> .
 
-<http://www.async.ece.utah.edu/pICH44188/annotation1>
-        rdf:type                      sbol:SequenceFeature;
-        gbConv:label                  "Sm/Sp no DraIII";
-        gbConv:vntifkey               "4";
-        sbol:displayId                "annotation1";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH44188/annotation1/range>;
-        sbol:name                     "Sm/Sp no DraIII";
-        sbol:role                     SO:0000316;
-        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH44188/annotation1> .
-
 <http://www.async.ece.utah.edu/pICH44188>
         rdf:type                      sbol:Component;
         sbol:displayId                "pICH44188";
@@ -47,6 +37,16 @@ PREFIX sbol:        <http://sbols.org/v3#>
         genbank:locus                 "pICH44188";
         genbank:molecule              "DNA";
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH44188> .
+
+<http://www.async.ece.utah.edu/pICH44188/annotation1>
+        rdf:type                      sbol:SequenceFeature;
+        gbConv:label                  "Sm/Sp no DraIII";
+        gbConv:vntifkey               "4";
+        sbol:displayId                "annotation1";
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICH44188/annotation1/range>;
+        sbol:name                     "Sm/Sp no DraIII";
+        sbol:role                     SO:0000316;
+        backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICH44188/annotation1> .
 
 <http://www.async.ece.utah.edu/pICH44188/annotation3>
         rdf:type                      sbol:SequenceFeature;

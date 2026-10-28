@@ -6,7 +6,7 @@
 
 	<groupId>org.sbolstandard</groupId>
 	<artifactId>sbol-converter</artifactId>
-	<version>1.0.4-SNAPSHOT</version>
+	<version>1.0.5</version>
 	<name>sbol-converter</name>
 	<url>https://github.com/SynBioDex/SBOL-Converter</url>
 	<issueManagement>
@@ -48,7 +48,7 @@
 		<dependency>
     		<groupId>org.sbolstandard</groupId>
    			<artifactId>libsbolj3</artifactId>
-    		<version>1.0.5.3</version>
+    		<version>1.0.5.5</version>
   		</dependency>
 
 		
