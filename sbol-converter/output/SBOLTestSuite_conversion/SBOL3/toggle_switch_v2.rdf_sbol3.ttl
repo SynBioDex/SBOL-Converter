@@ -20,7 +20,7 @@ PREFIX sbol:  <http://sbols.org/v3#>
         rdf:type          sbol:Constraint;
         sbol:displayId    "Constraint1";
         sbol:object       <toggle_switch/SubComponent1>;
-        sbol:restriction  sbol:verifyIdentical;
+        sbol:restriction  sbol:replaces;
         sbol:subject      <toggle_switch/ComponentReference1> .
 
 <TetR_producer/SubComponent6>
@@ -146,7 +146,7 @@ PREFIX sbol:  <http://sbols.org/v3#>
         rdf:type          sbol:Constraint;
         sbol:displayId    "Constraint3";
         sbol:object       <toggle_switch/SubComponent2>;
-        sbol:restriction  sbol:verifyIdentical;
+        sbol:restriction  sbol:replaces;
         sbol:subject      <toggle_switch/ComponentReference3> .
 
 <TetR_producer/SubComponent8>
@@ -326,7 +326,7 @@ PREFIX sbol:  <http://sbols.org/v3#>
         rdf:type          sbol:Constraint;
         sbol:displayId    "Constraint2";
         sbol:object       <toggle_switch/SubComponent1>;
-        sbol:restriction  sbol:verifyIdentical;
+        sbol:restriction  sbol:replaces;
         sbol:subject      <toggle_switch/ComponentReference2> .
 
 <TetR_producer/SubComponent7>
@@ -422,7 +422,7 @@ PREFIX sbol:  <http://sbols.org/v3#>
         rdf:type          sbol:Constraint;
         sbol:displayId    "Constraint4";
         sbol:object       <toggle_switch/SubComponent2>;
-        sbol:restriction  sbol:verifyIdentical;
+        sbol:restriction  sbol:replaces;
         sbol:subject      <toggle_switch/ComponentReference4> .
 
 :aTC    rdf:type           sbol:Component;

@@ -25,17 +25,17 @@
       </sbol:Component>
     </sbol:component>
     <sbol:component>
-      <sbol:Component rdf:about="https://synbiohub.org/public/igem/BBa_R0040/SubComponent1">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_R0040/SubComponent1"/>
-        <sbol:displayId>SubComponent1</sbol:displayId>
+      <sbol:Component rdf:about="https://synbiohub.org/public/igem/BBa_R0040/SubComponent3">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_R0040/SubComponent3"/>
+        <sbol:displayId>SubComponent3</sbol:displayId>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
         <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_start"/>
       </sbol:Component>
     </sbol:component>
     <sbol:component>
-      <sbol:Component rdf:about="https://synbiohub.org/public/igem/BBa_R0040/SubComponent3">
-        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_R0040/SubComponent3"/>
-        <sbol:displayId>SubComponent3</sbol:displayId>
+      <sbol:Component rdf:about="https://synbiohub.org/public/igem/BBa_R0040/SubComponent1">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.org/public/igem/BBa_R0040/SubComponent1"/>
+        <sbol:displayId>SubComponent1</sbol:displayId>
         <sbol:access rdf:resource="http://sbols.org/v2#public"/>
         <sbol:definition rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_start"/>
       </sbol:Component>
