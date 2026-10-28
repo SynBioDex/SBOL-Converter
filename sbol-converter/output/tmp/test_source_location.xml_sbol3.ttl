@@ -75,7 +75,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://partsregistry.org/cd/cd_comp/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://partsregistry.org/cd/cd_comp/base1> , <http://partsregistry.org/cd/cd_comp/base2> .
+        sbol:nondirectional  <http://partsregistry.org/cd/cd_comp/base2> , <http://partsregistry.org/cd/cd_comp/base1> .
 
 <http://partsregistry.org/cd/cd_comp/base2/base_c2>
         rdf:type                      sbol:Range;

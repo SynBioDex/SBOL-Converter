@@ -134,7 +134,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
 <http://partsregistry.org/cd/BBa_F2620/Interface1>
         rdf:type             sbol:Interface;
         sbol:displayId       "Interface1";
-        sbol:nondirectional  <http://partsregistry.org/cd/BBa_F2620/ter> , <http://partsregistry.org/cd/BBa_F2620/pTetR> , <http://partsregistry.org/cd/BBa_F2620/rbs> , <http://partsregistry.org/cd/BBa_F2620/luxR> , <http://partsregistry.org/cd/BBa_F2620/pLuxR> .
+        sbol:nondirectional  <http://partsregistry.org/cd/BBa_F2620/pTetR> , <http://partsregistry.org/cd/BBa_F2620/rbs> , <http://partsregistry.org/cd/BBa_F2620/luxR> , <http://partsregistry.org/cd/BBa_F2620/ter> , <http://partsregistry.org/cd/BBa_F2620/pLuxR> .
 
 <http://partsregistry.org/cd/BBa_F2620/pLuxR>
         rdf:type                      sbol:SubComponent;
@@ -169,7 +169,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
         sbol:role                     SO:0000804;
         sbol:type                     SBO:0000251;
         backport2_3:sbol2GenericLocation
-                <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/gl> , <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/GenericLocation>;
+                <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/GenericLocation> , <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn/gl>;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/GenericLocationComponent/gl_seqAnn> .
 
 <http://partsregistry.org/cd/BBa_R0040>

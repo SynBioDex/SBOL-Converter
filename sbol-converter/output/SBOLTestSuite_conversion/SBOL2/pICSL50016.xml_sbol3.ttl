@@ -170,7 +170,7 @@ PREFIX sbol:        <http://sbols.org/v3#>
         gbConv:label                  "turbo GFP (Pontellina plumata)";
         gbConv:multiRangeType         "join";
         sbol:displayId                "annotation5";
-        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL50016/annotation5/range1> , <http://www.async.ece.utah.edu/pICSL50016/annotation5/range0>;
+        sbol:hasLocation              <http://www.async.ece.utah.edu/pICSL50016/annotation5/range0> , <http://www.async.ece.utah.edu/pICSL50016/annotation5/range1>;
         sbol:name                     "turbo GFP (Pontellina plumata)";
         sbol:role                     SO:0000316;
         backport2_3:sbol2OriginalURI  <http://www.async.ece.utah.edu/pICSL50016/annotation5> .
