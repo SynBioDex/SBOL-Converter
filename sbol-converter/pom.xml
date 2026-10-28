@@ -6,7 +6,7 @@
 
 	<groupId>org.sbolstandard</groupId>
 	<artifactId>sbol-converter</artifactId>
-	<version>1.0.5</version>
+	<version>1.0.6</version>
 	<name>sbol-converter</name>
 	<url>https://github.com/SynBioDex/SBOL-Converter</url>
 	<issueManagement>
@@ -221,5 +221,12 @@
     		<url>https://maven.pkg.github.com/SynBioDex</url>
   		</repository>-->
 	</repositories>
+	<distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages (Releases)</name>
+			<url>https://maven.pkg.github.com/SynBioDex/SBOL-Converter</url>
+        </repository>
+    </distributionManagement>
 
 </project>
